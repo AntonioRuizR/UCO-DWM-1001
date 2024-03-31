@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>DWM1001.ico</file>
+        <file>epsc.png</file>
+        <file>prinia_logo.jpg</file>
+        <file>refresh_icon.png</file>
+        <file>uco.png</file>
+    </qresource>
+    <qresource prefix="/languages">
+        <file>languages/en.png</file>
+        <file>languages/es.png</file>
+        <file>languages/UCO_DWM1001_DEV_en.qm</file>
+        <file>languages/UCO_DWM1001_DEV_es.qm</file>
+    </qresource>
+</RCC>
