@@ -1,4 +1,4 @@
-# DWM1001-DEV: GUI
+# UCO DWM1001-DEV GUI
 
 <p align="justify">
 An open-source, standalone GUI for control, processing and data recording of the DWM1001-DEV development boards developed by Qorvo company.
@@ -43,7 +43,7 @@ To debug and build this source code into a executable binary, Qt for open source
 
 <h2 name="Usage">Usage</h2>
 
-Detailed documentation, including a user guide with some usage examples is available [here](https://github.com/Antoi11/DWM1001-DEV-GUI/blob/main/User%20Guide.pdf).
+Detailed documentation, including a user guide with some usage examples is available [here](https://github.com/AntonioRuizR/UCO-DWM1001-DEV/blob/main/User%20Guide.pdf).
 
 <h2 name="LicenseContributing">License and contributing</h2>
 
