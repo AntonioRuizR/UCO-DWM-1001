@@ -61,13 +61,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    UCO_DWM1001_DEV_es_SP.ts \
-    epsc.png \
-    prinia_logo.jpg \
-    languages/UCO_DWM1001_DEV_en.qm \
-    languages/UCO_DWM1001_DEV_es.qm \
-    languages/en.png \
-    languages/es.png \
-    refresh_icon.png \
-    resources.qrc \
-    uco.png
+    resources.qrc
