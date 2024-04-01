@@ -1505,7 +1505,7 @@ void MainWindow::on_actionAbout_triggered()
 
 void MainWindow::on_actionHelp_triggered()
 {
-    QDesktopServices::openUrl(QUrl("https://github.com/Antoi11/DWM1001-DEV-GUI/blob/main/User%20Guide.pdf", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://github.com/AntonioRuizR/UCO-DWM1001-DEV/blob/main/User%20Guide.pdf", QUrl::TolerantMode));
 }
 
 /**************************************
