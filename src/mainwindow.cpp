@@ -20,10 +20,10 @@
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
 **             Date: 10.03.24                                                     **
-**          Version: 1.0.0                                                        **
+**          Version: 0.9.0                                                        **
 ************************************************************************************/
 
-//Included classes
+//Classes
 
 #include "mainwindow.h"
 #include "dialog_alarm_dist.h"
@@ -97,6 +97,7 @@ MainWindow::MainWindow(QWidget *parent)
     //Labels
     ui->label_connection->setText(tr("<b><FONT COLOR='red' FONT SIZE = 4>DESCONECTADO</b></font>"));
     ui->label_alarm_dist->setText("");
+    ui->label_alarm_dist->raise();
     ui->label_alarm_pos->setText("");
     ui->label_alarm_dist->setFrameStyle(QFrame::NoFrame);
     ui->label_alarm_pos->setFrameStyle(QFrame::NoFrame);
@@ -113,7 +114,7 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowTitle(tr("UCO DWM1001-DEV"));
 
     //Terminal/console initial settings
-    ui->p_console->setEnabled(false);     //Terminal disabled until connection with the device
+    ui->p_console->setEnabled(false);     //Terminal disabled until connection with the device is established
 
     //Serial port initial settings:
     p_serie = new QSerialPort;
@@ -147,7 +148,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&tem_gpio9, SIGNAL(timeout()), this, SLOT(timer_gpio9()));      //Timer linked with GPIO 9 activation
     connect(&tem_gpio10, SIGNAL(timeout()), this, SLOT(timer_gpio10()));    //Timer linked with GPIO 10 activation
     connect(&tem_gpio12, SIGNAL(timeout()), this, SLOT(timer_gpio12()));    //Timer linked with GPIO 12 activation
-    connect(&timer_alarmdelay, SIGNAL(timeout()), this, SLOT(alarm_duration_f()));  //Timer associated with alarm duration
+    connect(&timer_alarmduration, SIGNAL(timeout()), this, SLOT(alarm_duration_f()));  //Timer associated with alarm duration
     connect(&timer_infofailure, SIGNAL(timeout()), this, SLOT(receive_info_failure()));       //If initial info  is not retrieved, a new attempt is made
     connect(&timer_opmodechange,SIGNAL(timeout()),this,SLOT(change_devicemode_wait()));                 //Waiting time while new operation mode is set
     connect(&timer_gpioclear, SIGNAL(timeout()), this, SLOT(gpio_clear_wait()));//While GPIO deactivation is in progress, read and clear serial port buffer.
@@ -234,7 +235,7 @@ void MainWindow::readData()
     }
 }
 
-//Function in GUI which sends data through serial port
+//Function in GUI which sends commands through serial port
 //Each message is split up by sending the characters one by one
 void MainWindow::send_message(QString command)
 {
@@ -639,7 +640,7 @@ void MainWindow::on_plot_distance_toggled(bool checked)
         ui->label_41->setText("ID 3: ");
         ui->label_42->setText("ID 4: ");
 
-        double key = QDateTime::currentDateTime().toMSecsSinceEpoch()/1000.0;
+        //double key = QDateTime::currentDateTime().toMSecsSinceEpoch()/1000.0;
         ui->customPlot->graph(0)->data()->clear();
         ui->customPlot->graph(1)->data()->clear();
         ui->customPlot->graph(2)->data()->clear();
@@ -1014,7 +1015,7 @@ void MainWindow::on_pushButton_clicked()
     dialog.exec();
 
     if (dialog.result()==1){
-        double last_value_copy=distance_value_1;
+        //double last_value_copy=distance_value_1;
         QList<float> new_alarm_data = dialog.alarm_data();
 
         max_value_alarm = new_alarm_data[0];
@@ -1491,6 +1492,7 @@ void MainWindow::on_actionStatistics_triggered()
 
         if(dialog.reset_variables()==1){
             reset_stats();
+            enable_statistics=0;
         }
     }
 }
@@ -1929,9 +1931,9 @@ void MainWindow::distance_analysis(const QByteArray &data)
             }
         }
         if(mean_enable==1){
-            media_calc(id_label_1, id_label_2, id_label_3, id_label_4);
+            media_calc();
         }
-        distance_data_processing(id_dist_1, id_dist_2, id_dist_3, id_dist_4, id_label_1, id_label_2, id_label_3, id_label_4);
+        distance_data_processing(id_dist_1, id_dist_2, id_dist_3, id_dist_4);
         if(alarm_activated==0 and distance_alarm_plot==1){
             check_distance_alarm();
         }
@@ -1939,7 +1941,7 @@ void MainWindow::distance_analysis(const QByteArray &data)
     enable_statistics=1;
 }
 
-void MainWindow::media_calc(int id_label_1, int id_label_2, int id_label_3, int id_label_4)
+void MainWindow::media_calc()
 {
     if(operation_mode==0){
         int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
@@ -2125,14 +2127,14 @@ void MainWindow::position_analysis(const QByteArray &data2){
     }
     if(mean_enable==1){
         media_calc_pos();
-        ui->label_56->setText(QString::number(bufer_media_x,'g',3));
-        ui->label_57->setText(QString::number(bufer_media_y,'g',3));
-        ui->label_58->setText(QString::number(bufer_media_z,'g',3));
+        ui->label_56->setText(QString::number(bufer_media_x,'f',2));
+        ui->label_57->setText(QString::number(bufer_media_y,'f',2));
+        ui->label_58->setText(QString::number(bufer_media_z,'f',2));
     }
     else{
-        ui->label_56->setText(QString::number(position_x,'g',3));
-        ui->label_57->setText(QString::number(position_y,'g',3));
-        ui->label_58->setText(QString::number(position_z,'g',3));
+        ui->label_56->setText(QString::number(position_x,'f',2));
+        ui->label_57->setText(QString::number(position_y,'f',2));
+        ui->label_58->setText(QString::number(position_z,'f',2));
     }
 
     position_data_samples++;
@@ -2144,7 +2146,7 @@ void MainWindow::position_analysis(const QByteArray &data2){
     }
 
     if(savedata==1){
-        save_position_data(QDateTime::currentDateTime(), position_x, bufer_media_x, position_y, bufer_media_y, position_z, bufer_media_z);
+        save_position_data(QDateTime::currentDateTime());
     }
 }
 
@@ -2184,7 +2186,7 @@ void MainWindow::position_data_processing()
 
 //Distance processing values needed to calculate statistics
 
-void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, double id_dist_3, double id_dist_4, int id_label_1, int id_label_2, int id_label_3, int id_label_4)
+void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, double id_dist_3, double id_dist_4)
 {
     int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
     double id_distances[4]={id_dist_1, id_dist_2, id_dist_3, id_dist_4};
@@ -2192,10 +2194,10 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
         switch(id_labels[i]){
         case 1:
             distance_list_1.append(id_distances[i]);
-            ui->label_dist_value_1->setText(QString::number(id_distances[i]));
+            ui->label_dist_value_1->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_1++;
             if(mean_enable==1){
-                ui->label_mediafilter_1->setText(QString::number(bufer_media,'g',3)); //Comprobar funcionamiento al mirar la función de filtromedia.
+                ui->label_mediafilter_1->setText(QString::number(bufer_media,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
             if(id_distances[i]>max_value_1){
                 max_value_1=id_distances[i];
@@ -2209,10 +2211,10 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
 
         case 2:
             distance_list_2.append(id_distances[i]);
-            ui->label_dist_value_2->setText(QString::number(id_distances[i]));
+            ui->label_dist_value_2->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_2++;
             if(mean_enable==1){
-                ui->label_mediafilter_2->setText(QString::number(bufer_media_2,'g',3)); //Comprobar funcionamiento al mirar la función de filtromedia.
+                ui->label_mediafilter_2->setText(QString::number(bufer_media_2,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
             if(id_distances[i]>max_value_2){
                 max_value_2=id_distances[i];
@@ -2226,10 +2228,10 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
 
         case 3:
             distance_list_3.append(id_distances[i]);
-            ui->label_dist_value_3->setText(QString::number(id_distances[i]));
+            ui->label_dist_value_3->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_3++;
             if(mean_enable==1){
-                ui->label_mediafilter_3->setText(QString::number(bufer_media_3,'g',3)); //Comprobar funcionamiento al mirar la función de filtromedia.
+                ui->label_mediafilter_3->setText(QString::number(bufer_media_3,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
             if(id_distances[i]>max_value_3){
                 max_value_3=id_distances[i];
@@ -2243,10 +2245,10 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
 
         case 4:
             distance_list_4.append(id_distances[i]);
-            ui->label_dist_value_4->setText(QString::number(id_distances[i]));
+            ui->label_dist_value_4->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_4++;
             if(mean_enable==1){
-                ui->label_mediafilter_4->setText(QString::number(bufer_media_4,'g',3)); //Comprobar funcionamiento al mirar la función de filtromedia.
+                ui->label_mediafilter_4->setText(QString::number(bufer_media_4,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
             if(id_distances[i]>max_value_4){
                 max_value_4=id_distances[i];
@@ -2658,7 +2660,7 @@ void MainWindow::position_stats_calc()
 **************************************/
 
 //Data recording for 1 position value
-void MainWindow::save_position_data(QDateTime hora, double position_x, double media_x, double position_y, double media_y, double position_z, double media_z)
+void MainWindow::save_position_data(QDateTime hora)
 {
     position_samples++;
     QString date = hora.toString("dd/MM/yyyy h:mm:ss.zzz");
@@ -2793,42 +2795,35 @@ void MainWindow::setupRealtimeDataDemo(QCustomPlot *customPlot)
     //Graph style config
 
     //Graph style distance 1
-    //QPen graphPen;
     graphPen.setColor(Qt::red);
     graphPen.setWidthF(graph0_size);
 
     //Graph style distance 2
-    //QPen graphPen_3;
 
     graphPen_3.setColor(Qt::blue);
     graphPen_3.setWidthF(graph0_size);
 
     //Graph style distance 3
-    //QPen graphPen_4;
 
     graphPen_4.setColor(Qt::green);
     graphPen_4.setWidthF(graph0_size);
 
     //Graph style distance 4
-    //QPen graphPen_5;
 
     graphPen_5.setColor(Qt::magenta);
     graphPen_5.setWidthF(graph0_size);
 
     //Graph style distance 5
-    //QPen graphPen_6;
 
     graphPen_6.setColor(Qt::cyan);
     graphPen_6.setWidthF(graph0_size);
 
     //Graph style media filter (only for 1 distance)
-    //QPen graphPen_2;
 
     graphPen_2.setColor(Qt::black);
     graphPen_2.setWidthF(graph1_size);
 
     //Graph style Alarm
-    //QPen graphPenmaxmin;
     graphPenmaxmin.setColor(Qt::gray);
     graphPenmaxmin.setWidthF(graph0_size);
 
@@ -3062,8 +3057,8 @@ void MainWindow::realtimeDataSlot()
 
                 if(multiple_measures==0){
                     ui->customPlot->graph(graph_index_1)->addData(key, id_value_1);
-                    if (mean_enable==1){
-                        ui->customPlot->graph(graph_index_1)->addData(key, id_media_1);
+                    if (mean_enable==1 and  max_detected_devices<2){
+                        ui->customPlot->graph(1)->addData(key, id_media_1);
                     }
                 }
                 else if(multiple_measures==1){
@@ -3352,10 +3347,10 @@ void MainWindow::draw_alarm_pos()
 //Alarm activation function - GPIO activation
 void MainWindow::alarm_graph()
 {
-
     previous_alarm = chosen_alarm;
 
     if(operation_mode==0){
+        qDebug() << "Entra en label alarm";
         ui->label_alarm_dist->setText(tr("<b><FONT COLOR='green' FONT SIZE = 4>Alarma activada</b></font>"));
         ui->label_alarm_dist->setFrameStyle(QFrame::Box | QFrame::Raised);
     }
@@ -3419,10 +3414,10 @@ void MainWindow::alarm_graph()
     timer_alarmdelay.stop();
 
     if(distance_alarm_plot==1){
-        timer_alarmdelay.start(alarm_duration);
+        timer_alarmduration.start(alarm_duration);
     }
     else if(position_alarm_pos==1){
-        timer_alarmdelay.start(pos_alarm_duration);
+        timer_alarmduration.start(pos_alarm_duration);
     }
     p_serie->waitForReadyRead(10);
     p_serie->waitForBytesWritten(10);
@@ -3431,10 +3426,11 @@ void MainWindow::alarm_graph()
 //When alarm timer ends, deactivates alarm
 void MainWindow::alarm_duration_f()
 {
-    timer_alarmdelay.stop();
+    timer_alarmduration.stop();
     clear_gpio();
     alarm_activated=0;
     if(operation_mode==0){
+        qDebug() << "Se desactiva el gpio";
         ui->label_alarm_dist->setFrameStyle(QFrame::NoFrame);
         ui->label_alarm_dist->setText("");
     }

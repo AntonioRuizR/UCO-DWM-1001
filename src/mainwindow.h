@@ -98,17 +98,17 @@ private slots:
     void position_analysis(const QByteArray &data2);
     void realtimeDataSlot();
 
-    void media_calc(int, int, int, int);
+    void media_calc();
     void media_calc_pos();
 
-    void distance_data_processing(double, double, double, double, int, int, int, int);
+    void distance_data_processing(double, double, double, double);
     void position_data_processing();
     void distance_stats_calc();
     void position_stats_calc();
     void reset_stats();
 
     void save_distance_data(QDateTime hora);
-    void save_position_data(QDateTime hora, double posicion_x, double media_x, double posicion_y, double media_y, double posicion_z, double media_z);
+    void save_position_data(QDateTime hora);
     void save_stats_data();
 
     void check_distance_alarm();
