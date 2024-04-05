@@ -1539,7 +1539,6 @@ void MainWindow::distance_analysis(const QByteArray &data)
             if(detected_devices>max_detected_devices){
                 max_detected_devices = detected_devices;
             }
-
             id_1 = comma_separated_message[3];
             if(info_ids_1==0){
                 if(info_ids_2==0 and info_ids_3==0 and info_ids_4==0){
@@ -2944,7 +2943,7 @@ void MainWindow::realtimeDataSlot()
         QDateTime current_time = QDateTime::currentDateTime();
         key = current_time.toMSecsSinceEpoch() / 1000.0;
 
-        static double lastPointKey = 0;
+        //static double lastPointKey = 0;
         if(true)
         {
             if (ui->plot_distance->isChecked()==true){
@@ -3105,7 +3104,7 @@ void MainWindow::realtimeDataSlot()
                         }
                     }
                 }
-                lastPointKey = key;
+                //lastPointKey = key;
             }
         }
         // make key axis range scroll with the data (at a constant range size):
