@@ -16,6 +16,7 @@ SOURCES += \
     dialog_csv.cpp \
     dialog_deviceconfig.cpp \
     dialog_dist_graph_config.cpp \
+    dialog_graph_history.cpp \
     dialog_mediafilter.cpp \
     dialog_pos_graph_config.cpp \
     dialog_stats.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     dialog_csv.h \
     dialog_deviceconfig.h \
     dialog_dist_graph_config.h \
+    dialog_graph_history.h \
     dialog_mediafilter.h \
     dialog_pos_graph_config.h \
     dialog_stats.h \
@@ -44,6 +46,7 @@ FORMS += \
     dialog_csv.ui \
     dialog_deviceconfig.ui \
     dialog_dist_graph_config.ui \
+    dialog_graph_history.ui \
     dialog_mediafilter.ui \
     dialog_pos_graph_config.ui \
     dialog_stats.ui \

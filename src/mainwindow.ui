@@ -1969,7 +1969,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="title">
      <string>Datos</string>
     </property>
+    <addaction name="actionHistogram"/>
     <addaction name="actionStatistics"/>
+    <addaction name="actionReiniciar_los_datos_recibidos"/>
     <addaction name="separator"/>
     <addaction name="actionDataSavingSettings"/>
     <addaction name="actionStartDataSaving"/>
@@ -2070,6 +2072,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <action name="actionEspa_ol">
    <property name="text">
     <string>Español</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="text">
+    <string>Historial de medida</string>
+   </property>
+  </action>
+  <action name="actionReiniciar_los_datos_recibidos">
+   <property name="text">
+    <string>Reiniciar los datos recibidos</string>
    </property>
   </action>
  </widget>

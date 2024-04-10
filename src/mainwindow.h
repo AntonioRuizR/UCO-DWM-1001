@@ -256,6 +256,10 @@ private slots:
 
     void on_actionHelp_triggered();
 
+    void on_actionHistogram_triggered();
+
+    void on_actionReiniciar_los_datos_recibidos_triggered();
+
 private:
     // loads a language by the given language shortcur (e.g. de, en)
     void loadLanguage(const QString& rLanguage);

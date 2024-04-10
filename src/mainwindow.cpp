@@ -35,6 +35,7 @@
 #include "dialog_pos_graph_config.h"
 #include "dialog_stats.h"
 #include "dialog_about.h"
+#include "dialog_graph_history.h"
 #include "ui_mainwindow.h"
 
 #include <QSerialPort>
@@ -93,6 +94,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->actionFactory_Reset->setEnabled(false);
     ui->actionPositionGraphSettings->setEnabled(false);
     ui->actionStatistics->setEnabled(false);
+    ui->actionHistogram->setEnabled(false);
 
     //Labels
     ui->label_connection->setText(tr("<b><FONT COLOR='red' FONT SIZE = 4>DESCONECTADO</b></font>"));
@@ -588,6 +590,7 @@ void MainWindow::on_plot_distance_toggled(bool checked)
                 }
             }
             ui->actionStatistics->setEnabled(true);
+            ui->actionHistogram->setEnabled(true);
         }
     }
     else{
@@ -625,7 +628,7 @@ void MainWindow::on_plot_distance_toggled(bool checked)
         ui->actionReset->setEnabled(true);
         ui->actionFactory_Reset->setEnabled(true);
         ui->actionExit->setEnabled(true);
-        max_detected_devices=0;
+        //max_detected_devices=0;
 
         ui->label_dist_value_1->setText("N/A");
         ui->label_dist_value_2->setText("N/A");
@@ -1353,7 +1356,7 @@ void MainWindow::on_actionStatistics_triggered()
         QList<double> info_stats_d3;
         QList<double> info_stats_d4;
         int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
-        for(int i = 0; i < detected_devices; i++) {
+        for(int i = 0; i < max_detected_devices; i++) { //ACABO DE CAMBIAR detected_devices POR max_detected_devices
             switch(id_labels[i]){
             case 1:
 
@@ -2276,6 +2279,7 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
 
 void MainWindow::reset_stats()
 {
+    max_detected_devices=0;
     distance_list_1.clear();
     mediafilter_value_1=0;
     accumulated_dist_1=0;
@@ -2357,6 +2361,7 @@ void MainWindow::reset_stats()
     received_data_quantity_2=0;
     received_data_quantity_3=0;
     received_data_quantity_4=0;
+    enable_statistics=0;
 }
 
 //Statistics calculation
@@ -3907,5 +3912,63 @@ void MainWindow::changeEvent(QEvent* event) {
     ui->label_alarm_pos->setText("");
     ui->label_alarm_dist->setFrameStyle(QFrame::NoFrame);
     ui->label_alarm_pos->setFrameStyle(QFrame::NoFrame);
+}
+
+
+void MainWindow::on_actionHistogram_triggered()
+{
+    if(enable_statistics==0){
+        QMessageBox::information(this, tr("información"), tr("No se disponen los datos necesarios para esta operación"));
+        return;
+    }
+    Dialog_graph_history dialog;
+
+    dialog.setupRealtimeDataDemo();
+    dialog.setupRealtimeDataDemo3(range_pos_y_min, range_pos_y_max, range_pos_x_min, range_pos_x_max);
+
+    if(operation_mode==0){
+        int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
+        for(int i = 0; i < max_detected_devices; i++) {
+            switch(id_labels[i]){
+            case 1:
+                dialog.load_distances_1(distance_list_1, max_value_1, initial_id_1, received_data_quantity_1);
+                break;
+            case 2:
+                dialog.load_distances_2(distance_list_2, max_value_2, initial_id_2, received_data_quantity_2);
+                break;
+            case 3:
+                dialog.load_distances_3(distance_list_3, max_value_3, initial_id_3, received_data_quantity_3);
+                break;
+            case 4:
+                dialog.load_distances_4(distance_list_4, max_value_4, initial_id_4, received_data_quantity_4);
+                break;
+            }
+        }
+        dialog.max_range_graph(max_value_1,max_value_2,max_value_3,max_value_4, received_data_quantity_1, received_data_quantity_2, received_data_quantity_3, received_data_quantity_4);
+    }
+    else{
+        dialog.load_anchors(anchor_1_x, anchor_1_y, anchor_2_x, anchor_2_y, anchor_3_x, anchor_3_y, anchor_4_x, anchor_4_y);
+        dialog.load_coordinates(position_list_x, position_list_y, position_list_z);
+    }
+    dialog.setModal(true);
+    dialog.exec();
+    if (dialog.result()==1){
+        if(dialog.reset_variables()==1){
+            reset_stats();
+            enable_statistics=0;
+        }
+    }
+}
+
+
+void MainWindow::on_actionReiniciar_los_datos_recibidos_triggered()
+{
+    if(ui->plot_distance->isChecked()){
+        QMessageBox::information(this, tr("información"), tr("Desactive la recepción de datos para reiniciar/borrar el historial de datos recibidos y dispositivos detectados"));
+        return;
+    }
+    else{
+        reset_stats();
+    }
 }
 
