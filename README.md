@@ -34,6 +34,7 @@ This repository contains the source code required to build and run this software
 - Media filtering of the received data
 - Capable of saving data in a 'csv' file.
 - Statistics estimation from received data.
+- Graphical representation of all received data in a window.
 - Possibility to assign an alarm to different distance or position values and associating it with the activation of a DWM1001-DEV's GPIO.
 - Terminal to provide a direct communication with the device through UART Shell mode.
 
