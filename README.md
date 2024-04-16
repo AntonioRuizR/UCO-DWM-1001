@@ -29,7 +29,7 @@ This repository contains the source code required to build and run this software
   
 - No DWM1001-DEV firmware modification required.
   
-- DWM1001-DEV configuration options available.
+- DWM1001-DEV and GUI configuration options available.
 
   <p align="center">
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/config_wind.png" alt="DWM1001-DEV: GUI main window example"/>
@@ -78,6 +78,15 @@ This repository contains the source code required to build and run this software
   </p>
 
 - Possibility to assign an alarm to different distance or position values and associating it with the activation of a DWM1001-DEV's GPIO.
+
+  <p align="center">
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/alarm_dist.gif" alt="Data history example"/>
+  </p>
+  <p align="center">
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/alarm_pos.gif" alt="Data history example (video)"/>
+  </p>
+
+
 - Terminal to provide a direct communication with the device through UART Shell mode.
 
 <h2 name="Installation">Installation</h2>
