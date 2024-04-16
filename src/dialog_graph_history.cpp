@@ -1,3 +1,28 @@
+/***********************************************************************************
+**                                                                                **
+** UCO DWM-GUI, a software for the control of the DWM1001-DEV board               **
+**    Copyright (C) 2024  Antonio Ruiz Ruiz                                       **
+**                                                                                **
+**    This program is free software: you can redistribute it and/or modify        **
+**    it under the terms of the GNU General Public License as published by        **
+**    the Free Software Foundation, either version 3 of the License, or any       **
+**    later version.                                                              **
+**                                                                                **
+**    This program is distributed in the hope that it will be useful,             **
+**    but WITHOUT ANY WARRANTY; without even the implied warranty of              **
+**    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               **
+**    GNU General Public License for more details.                                **
+**                                                                                **
+**    You should have received a copy of the GNU General Public License           **
+**    along with this program.  If not, see <https://www.gnu.org/licenses/>.      **
+**                                                                                **
+************************************************************************************
+**           Author: Antonio Ruiz Ruiz                                            **
+**  Contact: antonioruizrruiz@gmail.com                                           **
+**             Date: 15.04.24                                                     **
+**          Version: 0.9.2                                                        **
+************************************************************************************/
+
 #include "dialog_graph_history.h"
 #include "ui_dialog_graph_history.h"
 
@@ -79,6 +104,11 @@ void Dialog_graph_history::setupRealtimeDataDemo()
     ui->graph_h->graph(1)->setSelectable(QCP::stDataRange);
     ui->graph_h->graph(2)->setSelectable(QCP::stDataRange);
     ui->graph_h->graph(3)->setSelectable(QCP::stDataRange);
+
+    ui->graph_h->graph(0)->selectionDecorator()->setPen(QPen(Qt::black));
+    ui->graph_h->graph(1)->selectionDecorator()->setPen(QPen(Qt::black));
+    ui->graph_h->graph(2)->selectionDecorator()->setPen(QPen(Qt::black));
+    ui->graph_h->graph(3)->selectionDecorator()->setPen(QPen(Qt::black));
 
     //Interactions
 
@@ -293,18 +323,23 @@ void Dialog_graph_history::on_checkBox_4_toggled(bool checked)
 
 void Dialog_graph_history::graph_interaction()
 {
+    int selection_g=0;
     QCPDataSelection selection;
     if(ui->graph_h->graph(0)->selected()){
         selection = ui->graph_h->graph(0)->selection();
+        selection_g = 0;
     }
     else if(ui->graph_h->graph(1)->selected()){
         selection = ui->graph_h->graph(1)->selection();
+        selection_g = 1;
     }
     else if(ui->graph_h->graph(2)->selected()){
         selection = ui->graph_h->graph(2)->selection();
+        selection_g = 2;
     }
     else if(ui->graph_h->graph(3)->selected()){
         selection = ui->graph_h->graph(3)->selection();
+        selection_g = 3;
     }
 
     double sum = 0;
@@ -313,8 +348,8 @@ void Dialog_graph_history::graph_interaction()
 
     foreach (QCPDataRange dataRange, selection.dataRanges())
     {
-        QCPGraphDataContainer::const_iterator begin = ui->graph_h->graph(0)->data()->at(dataRange.begin()); // get range begin iterator from index
-        QCPGraphDataContainer::const_iterator end = ui->graph_h->graph(0)->data()->at(dataRange.end()); // get range end iterator from index
+        QCPGraphDataContainer::const_iterator begin = ui->graph_h->graph(selection_g)->data()->at(dataRange.begin()); // get range begin iterator from index
+        QCPGraphDataContainer::const_iterator end = ui->graph_h->graph(selection_g)->data()->at(dataRange.end()); // get range end iterator from index
         for (QCPGraphDataContainer::const_iterator it=begin; it!=end; ++it)
         {
             // iterator "it" will go through all selected data points, as an example, we calculate the value average

@@ -1,6 +1,6 @@
 /***********************************************************************************
 **                                                                                **
-** UCO DWM1001-DEV, a software for the control of the DWM1001-DEV board           **
+** UCO DWM-GUI, a software for the control of the DWM1001-DEV board               **
 **    Copyright (C) 2024  Antonio Ruiz Ruiz                                       **
 **                                                                                **
 **    This program is free software: you can redistribute it and/or modify        **
@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 10.03.24                                                     **
-**          Version: 0.9.0                                                        **
+**             Date: 15.04.24                                                     **
+**          Version: 0.9.2                                                        **
 ************************************************************************************/
 
 //Classes
@@ -113,7 +113,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton_USBportrefresh->setIconSize(QSize(width_refreshB, height_refreshB)); // Ajusta este tamaño al que necesites
 
     //Window title
-    setWindowTitle(tr("UCO DWM1001-DEV"));
+    setWindowTitle(tr("UCO DWM-GUI"));
 
     //Terminal/console initial settings
     ui->p_console->setEnabled(false);     //Terminal disabled until connection with the device is established
@@ -1356,11 +1356,13 @@ void MainWindow::on_actionStatistics_triggered()
         QList<double> info_stats_d3;
         QList<double> info_stats_d4;
         int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
+        //int id_labels[4]={initial_id_1,initial_id_2,initial_id_3,initial_id_4};
+        info_ids.append(QString::number(max_detected_devices));
         for(int i = 0; i < max_detected_devices; i++) { //ACABO DE CAMBIAR detected_devices POR max_detected_devices
             switch(id_labels[i]){
             case 1:
 
-                info_ids.append("1");
+                //info_ids.append("1");
                 info_ids.append(initial_id_1);
 
                 info_stats_d1.append(mediafilter_value_1);
@@ -1377,9 +1379,9 @@ void MainWindow::on_actionStatistics_triggered()
 
             case 2:
 
-                info_ids.clear();
-                info_ids.append("2");
-                info_ids.append(initial_id_1);
+                //info_ids.clear();
+                //info_ids.append("2");
+                //info_ids.append(initial_id_1);
                 info_ids.append(initial_id_2);
                 info_stats_d2.append(mediafilter_value_2);
                 info_stats_d2.append(mode_2);
@@ -1396,10 +1398,10 @@ void MainWindow::on_actionStatistics_triggered()
 
             case 3:
 
-                info_ids.clear();
-                info_ids.append("3");
-                info_ids.append(initial_id_1);
-                info_ids.append(initial_id_2);
+                //info_ids.clear();
+                //info_ids.append("3");
+                //info_ids.append(initial_id_1);
+                //info_ids.append(initial_id_2);
                 info_ids.append(initial_id_3);
 
 
@@ -1417,11 +1419,11 @@ void MainWindow::on_actionStatistics_triggered()
                 break;
             case 4:
 
-                info_ids.clear();
+                /*info_ids.clear();
                 info_ids.append("4");
                 info_ids.append(initial_id_1);
                 info_ids.append(initial_id_2);
-                info_ids.append(initial_id_3);
+                info_ids.append(initial_id_3);*/
                 info_ids.append(initial_id_4);
 
 
@@ -1756,7 +1758,7 @@ void MainWindow::distance_analysis(const QByteArray &data)
                 }
             }
             if(max_detected_devices==4){
-                qDebug() << max_detected_devices;
+                //qDebug() << max_detected_devices;
                 if (id_1==initial_id_4){
                     distance_value_4 = comma_separated_message[7].toDouble();
                     id_dist_1=distance_value_4;
@@ -3354,7 +3356,7 @@ void MainWindow::alarm_graph()
     previous_alarm = chosen_alarm;
 
     if(operation_mode==0){
-        qDebug() << "Entra en label alarm";
+        //qDebug() << "Entra en label alarm";
         ui->label_alarm_dist->setText(tr("<b><FONT COLOR='green' FONT SIZE = 4>Alarma activada</b></font>"));
         ui->label_alarm_dist->setFrameStyle(QFrame::Box | QFrame::Raised);
     }
@@ -3434,7 +3436,7 @@ void MainWindow::alarm_duration_f()
     clear_gpio();
     alarm_activated=0;
     if(operation_mode==0){
-        qDebug() << "Se desactiva el gpio";
+        //qDebug() << "Se desactiva el gpio";
         ui->label_alarm_dist->setFrameStyle(QFrame::NoFrame);
         ui->label_alarm_dist->setText("");
     }

@@ -1,6 +1,6 @@
 /***********************************************************************************
 **                                                                                **
-** UCO DWM1001-DEV, a software for the control of the DWM1001-DEV board           **
+** UCO DWM-GUI, a software for the control of the DWM1001-DEV board               **
 **    Copyright (C) 2024  Antonio Ruiz Ruiz                                       **
 **                                                                                **
 **    This program is free software: you can redistribute it and/or modify        **
@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 10.03.24                                                     **
-**          Version: 1.0.0                                                        **
+**             Date: 15.04.24                                                     **
+**          Version: 0.9.2                                                        **
 ************************************************************************************/
 
 #include "dialog_about.h"

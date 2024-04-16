@@ -1,7 +1,7 @@
 /***********************************************************************************
 **                                                                                **
-** <DWM1001-DEV APP, a GUI for the control of the DWM1001-DEV development board>  **
-**    Copyright (C) <2024>  <Antonio Ruiz Ruiz>                                   **
+** UCO DWM-GUI, a software for the control of the DWM1001-DEV board               **
+**    Copyright (C) 2024  Antonio Ruiz Ruiz                                       **
 **                                                                                **
 **    This program is free software: you can redistribute it and/or modify        **
 **    it under the terms of the GNU General Public License as published by        **
@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 10.03.24                                                     **
-**          Version: 1.0.0                                                        **
+**             Date: 15.04.24                                                     **
+**          Version: 0.9.2                                                        **
 ************************************************************************************/
 
 #ifndef DIALOG_DIST_GRAPH_CONFIG_H

@@ -180,7 +180,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="dialog_alarm_dist.ui" line="56"/>
         <location filename="dialog_alarm_dist.ui" line="75"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> s</translation>
     </message>
     <message>
         <location filename="dialog_alarm_dist.ui" line="94"/>
@@ -195,22 +195,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <message>
         <location filename="dialog_alarm_dist.ui" line="121"/>
         <source>GPIO 8</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 8</translation>
     </message>
     <message>
         <location filename="dialog_alarm_dist.ui" line="126"/>
         <source>GPIO 9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 9</translation>
     </message>
     <message>
         <location filename="dialog_alarm_dist.ui" line="131"/>
         <source>GPIO 10</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 10</translation>
     </message>
     <message>
         <location filename="dialog_alarm_dist.ui" line="136"/>
         <source>GPIO 12</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 12</translation>
     </message>
     <message>
         <location filename="dialog_alarm_dist.ui" line="141"/>
@@ -285,7 +285,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="dialog_alarm_pos.ui" line="56"/>
         <location filename="dialog_alarm_pos.ui" line="75"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> s</translation>
     </message>
     <message>
         <location filename="dialog_alarm_pos.ui" line="94"/>
@@ -302,22 +302,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <message>
         <location filename="dialog_alarm_pos.ui" line="121"/>
         <source>GPIO 8</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 8</translation>
     </message>
     <message>
         <location filename="dialog_alarm_pos.ui" line="126"/>
         <source>GPIO 9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 9</translation>
     </message>
     <message>
         <location filename="dialog_alarm_pos.ui" line="131"/>
         <source>GPIO 10</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 10</translation>
     </message>
     <message>
         <location filename="dialog_alarm_pos.ui" line="136"/>
         <source>GPIO 12</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GPIO 12</translation>
     </message>
     <message>
         <location filename="dialog_alarm_pos.ui" line="141"/>
@@ -1039,7 +1039,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <message>
         <location filename="dialog_graph_history.ui" line="26"/>
         <source>Dialog</source>
-        <translation>Histogram</translation>
+        <translation>Data history</translation>
     </message>
     <message>
         <location filename="dialog_graph_history.ui" line="42"/>
@@ -1118,35 +1118,35 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Reset data</translation>
     </message>
     <message>
-        <location filename="dialog_graph_history.cpp" line="9"/>
+        <location filename="dialog_graph_history.cpp" line="34"/>
         <source>Historial de mediciones</source>
-        <translation>Histogram</translation>
+        <translation>Data history</translation>
     </message>
     <message>
-        <location filename="dialog_graph_history.cpp" line="69"/>
+        <location filename="dialog_graph_history.cpp" line="94"/>
         <source>Número de medidas</source>
         <translation>Number of measurements</translation>
     </message>
     <message>
-        <location filename="dialog_graph_history.cpp" line="70"/>
+        <location filename="dialog_graph_history.cpp" line="95"/>
         <source>Distancia estimada</source>
         <translation>Estimated distance</translation>
     </message>
     <message>
-        <location filename="dialog_graph_history.cpp" line="97"/>
+        <location filename="dialog_graph_history.cpp" line="122"/>
         <source>Eje x</source>
         <translation>X Axis</translation>
     </message>
     <message>
-        <location filename="dialog_graph_history.cpp" line="98"/>
+        <location filename="dialog_graph_history.cpp" line="123"/>
         <source>Eje y</source>
         <translation>Y Axis</translation>
     </message>
     <message>
-        <location filename="dialog_graph_history.cpp" line="158"/>
-        <location filename="dialog_graph_history.cpp" line="172"/>
-        <location filename="dialog_graph_history.cpp" line="185"/>
-        <location filename="dialog_graph_history.cpp" line="198"/>
+        <location filename="dialog_graph_history.cpp" line="183"/>
+        <location filename="dialog_graph_history.cpp" line="197"/>
+        <location filename="dialog_graph_history.cpp" line="210"/>
+        <location filename="dialog_graph_history.cpp" line="223"/>
         <source>Medidas:  </source>
         <translation>Measurements:  </translation>
     </message>
@@ -1268,7 +1268,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="dialog_pos_graph_config.cpp" line="9"/>
+        <location filename="dialog_pos_graph_config.cpp" line="34"/>
         <source>Configuración: Gráfica de posicionamiento</source>
         <translation>Positioning graph configuration</translation>
     </message>
@@ -1646,7 +1646,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <message>
         <location filename="mainwindow.ui" line="20"/>
         <source>MainWindow</source>
-        <translation>UCO DWM1001-DEV</translation>
+        <translation>UCO DWM-GUI</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="73"/>
@@ -1864,7 +1864,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="mainwindow.ui" line="1272"/>
-        <location filename="mainwindow.cpp" line="1096"/>
+        <location filename="mainwindow.cpp" line="1097"/>
         <source>Desactivado</source>
         <translation>Not activated</translation>
     </message>
@@ -1968,14 +1968,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="mainwindow.ui" line="1872"/>
         <location filename="mainwindow.ui" line="1891"/>
         <location filename="mainwindow.ui" line="1910"/>
-        <location filename="mainwindow.cpp" line="1252"/>
-        <location filename="mainwindow.cpp" line="1278"/>
-        <location filename="mainwindow.cpp" line="1304"/>
-        <location filename="mainwindow.cpp" line="1330"/>
-        <location filename="mainwindow.cpp" line="3774"/>
-        <location filename="mainwindow.cpp" line="3785"/>
-        <location filename="mainwindow.cpp" line="3796"/>
-        <location filename="mainwindow.cpp" line="3807"/>
+        <location filename="mainwindow.cpp" line="1253"/>
+        <location filename="mainwindow.cpp" line="1279"/>
+        <location filename="mainwindow.cpp" line="1305"/>
+        <location filename="mainwindow.cpp" line="1331"/>
+        <location filename="mainwindow.cpp" line="3777"/>
+        <location filename="mainwindow.cpp" line="3788"/>
+        <location filename="mainwindow.cpp" line="3799"/>
+        <location filename="mainwindow.cpp" line="3810"/>
         <source>Activar</source>
         <translation>ON</translation>
     </message>
@@ -2017,7 +2017,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <message>
         <location filename="mainwindow.ui" line="2079"/>
         <source>Historial de medida</source>
-        <translation>Histogram</translation>
+        <translation>Data history</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2084"/>
@@ -2105,7 +2105,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="mainwindow.cpp" line="273"/>
-        <location filename="mainwindow.cpp" line="766"/>
+        <location filename="mainwindow.cpp" line="767"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;CONECTADO&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;CONNECTED&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
@@ -2120,10 +2120,10 @@ Setting up GPIO, please wait a moment</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="281"/>
-        <location filename="mainwindow.cpp" line="722"/>
-        <location filename="mainwindow.cpp" line="1340"/>
-        <location filename="mainwindow.cpp" line="3920"/>
-        <location filename="mainwindow.cpp" line="3966"/>
+        <location filename="mainwindow.cpp" line="723"/>
+        <location filename="mainwindow.cpp" line="1341"/>
+        <location filename="mainwindow.cpp" line="3923"/>
+        <location filename="mainwindow.cpp" line="3969"/>
         <source>información</source>
         <translation>Information</translation>
     </message>
@@ -2157,19 +2157,19 @@ Try another USB port or check if serial port connection with the device is block
     </message>
     <message>
         <location filename="mainwindow.cpp" line="362"/>
-        <location filename="mainwindow.cpp" line="3751"/>
+        <location filename="mainwindow.cpp" line="3754"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;TAG&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;TAG&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="372"/>
-        <location filename="mainwindow.cpp" line="3740"/>
+        <location filename="mainwindow.cpp" line="3743"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;red&apos; FONT SIZE = 4&gt;Ancla Iniciadora&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;red&apos; FONT SIZE = 4&gt;Initiator Anchor&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="380"/>
-        <location filename="mainwindow.cpp" line="3726"/>
+        <location filename="mainwindow.cpp" line="3729"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;blue&apos; FONT SIZE = 4&gt;Ancla&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;blue&apos; FONT SIZE = 4&gt;Anchor&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
@@ -2213,7 +2213,7 @@ Se comienza a representar los valores recibidos</source>
 Plotting received values</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1698"/>
+        <location filename="mainwindow.cpp" line="1701"/>
         <source><byte value="xd"/>
 Detectados 3 módulos a representar<byte value="xd"/>
 </source>
@@ -2222,17 +2222,17 @@ Detectados 3 módulos a representar<byte value="xd"/>
 </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="2894"/>
+        <location filename="mainwindow.cpp" line="2897"/>
         <source>Eje x</source>
         <translation>X Axis</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="2895"/>
+        <location filename="mainwindow.cpp" line="2898"/>
         <source>Eje y</source>
         <translation>Y Axis</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3347"/>
+        <location filename="mainwindow.cpp" line="3350"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Zona segura establecida en el gráfico</source>
@@ -2241,13 +2241,13 @@ Zona segura establecida en el gráfico</source>
 Safe zone linked with alarm established</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3357"/>
-        <location filename="mainwindow.cpp" line="3362"/>
+        <location filename="mainwindow.cpp" line="3360"/>
+        <location filename="mainwindow.cpp" line="3365"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;Alarma activada&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;Alarm ON&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="715"/>
+        <location filename="mainwindow.cpp" line="716"/>
         <source>¿Estas seguro de restaurar valores de fábrica?
 Se perderá toda configuración guardada</source>
         <translation>Confirm factory settings restoration
@@ -2262,17 +2262,17 @@ Current settings will be lost</translation>
         <translation type="vanished">Factory reset requested, please wait a moment...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="722"/>
+        <location filename="mainwindow.cpp" line="723"/>
         <source>Recuerde configurar el dispositivo como TAG y asignar el ID de la red correctamente</source>
         <translation>Remember: If necessary, set device ID and operation mode</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="730"/>
+        <location filename="mainwindow.cpp" line="731"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="730"/>
+        <location filename="mainwindow.cpp" line="731"/>
         <source>Desactive la grabación de los datos para configurar el archivo .txt</source>
         <translation>Turn off data recording to change its settings</translation>
     </message>
@@ -2281,7 +2281,7 @@ Current settings will be lost</translation>
         <translation type="vanished">Saving data</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="754"/>
+        <location filename="mainwindow.cpp" line="755"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;blue&apos; FONT SIZE = 4&gt;GRABANDO&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;blue&apos; FONT SIZE = 4&gt;Saving data&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
@@ -2290,7 +2290,7 @@ Current settings will be lost</translation>
         <translation type="vanished">Data recording stopped</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3662"/>
+        <location filename="mainwindow.cpp" line="3665"/>
         <source><byte value="xd"/>
 -------------<byte value="xd"/>
 CONFIGURACIÓN FINALIZADA</source>
@@ -2299,7 +2299,7 @@ CONFIGURACIÓN FINALIZADA</source>
 CONFIGURATION COMPLETE</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3673"/>
+        <location filename="mainwindow.cpp" line="3676"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 GPIO configurados.</source>
@@ -2308,7 +2308,7 @@ GPIO configurados.</source>
 GPIO configuration finished.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3696"/>
+        <location filename="mainwindow.cpp" line="3699"/>
         <source>Módulo configurado como ANCHOR PASIVO</source>
         <translation>Device configured as passive anchor</translation>
     </message>
@@ -2317,22 +2317,22 @@ GPIO configuration finished.</translation>
         <translation type="vanished">&lt;b&gt;&lt;FONT COLOR=&apos;red&apos; FONT SIZE = 4&gt;Anchor&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3723"/>
+        <location filename="mainwindow.cpp" line="3726"/>
         <source>Módulo configurado como ANCHOR</source>
         <translation>Device configured as Anchor</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3739"/>
+        <location filename="mainwindow.cpp" line="3742"/>
         <source>Módulo configurado como INITIATOR ANCHOR</source>
         <translation>Device configured as Initiator Anchor</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3750"/>
+        <location filename="mainwindow.cpp" line="3753"/>
         <source>Módulo configurado como TAG</source>
         <translation>Device configured as TAG</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1099"/>
+        <location filename="mainwindow.cpp" line="1100"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;Activado&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;green&apos; FONT SIZE = 4&gt;Activated&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
@@ -2345,9 +2345,9 @@ Make sure that the data reception of the DWM1001-DEV board is deactivated before
     </message>
     <message>
         <location filename="mainwindow.cpp" line="116"/>
-        <source>UCO DWM1001-DEV</source>
-        <oldsource>DWM1001-DEV GUI</oldsource>
-        <translation>UCO DWM1001-DEV</translation>
+        <source>UCO DWM-GUI</source>
+        <oldsource>UCO DWM1001-DEV</oldsource>
+        <translation type="unfinished">UCO DWM1001-DEV</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="307"/>
@@ -2448,7 +2448,7 @@ Starting data representation</translation>
         <translation>To receive distance data, set up the device as TAG</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="614"/>
+        <location filename="mainwindow.cpp" line="615"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Recepción de datos desactivada</source>
@@ -2457,12 +2457,12 @@ Recepción de datos desactivada</source>
 Data reception disabled</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="699"/>
+        <location filename="mainwindow.cpp" line="700"/>
         <source>Desactive la recepción y graficación de los datos para reiniciar el dispositivo</source>
         <translation>Turn off data reception to reboot the device</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="704"/>
+        <location filename="mainwindow.cpp" line="705"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Reiniciando el dispositivo...</source>
@@ -2471,12 +2471,12 @@ Reiniciando el dispositivo...</source>
 Restarting the device...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="712"/>
+        <location filename="mainwindow.cpp" line="713"/>
         <source>Desactive la recepción y graficación de los datos para continuar</source>
         <translation>Turn off data reception to continue</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="719"/>
+        <location filename="mainwindow.cpp" line="720"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 REALIZANDO REINICIO DE FÁBRICA, ESPERE UN MOMENTO...</source>
@@ -2485,7 +2485,7 @@ REALIZANDO REINICIO DE FÁBRICA, ESPERE UN MOMENTO...</source>
 FACTORY RESET IN PROGRESS, PLEASE WAIT A FEW SECONDS...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="740"/>
+        <location filename="mainwindow.cpp" line="741"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Configuración de datos csv finalizada. El archivo se guardará en la siguiente ruta:<byte value="xd"/>
@@ -2496,14 +2496,14 @@ CSV data recording set up. File will be saved in:
 </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="750"/>
+        <location filename="mainwindow.cpp" line="751"/>
         <source><byte value="xd"/><byte value="xd"/>Grabando Valores</source>
         <translation>
 
 Saving data in created csv file</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="755"/>
+        <location filename="mainwindow.cpp" line="756"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Ha comenzado el grabado de los datos recibidos.<byte value="xd"/>
@@ -2514,14 +2514,14 @@ Starting data recording in csv format.
 </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="762"/>
+        <location filename="mainwindow.cpp" line="763"/>
         <source><byte value="xd"/>
 Se ha desactivado grabado de valores.</source>
         <translation>
 Data recording disabled.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="998"/>
+        <location filename="mainwindow.cpp" line="999"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Filtro de media activado.</source>
@@ -2530,7 +2530,7 @@ Filtro de media activado.</source>
 Media filter enabled.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1032"/>
+        <location filename="mainwindow.cpp" line="1033"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Alarma activada.</source>
@@ -2539,12 +2539,12 @@ Alarma activada.</source>
 Alarm enabled.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1045"/>
+        <location filename="mainwindow.cpp" line="1046"/>
         <source>Desactive la recepción y graficación de los datos para configurar</source>
         <translation>Disbale data reception to configure the device</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1063"/>
+        <location filename="mainwindow.cpp" line="1064"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Nuevo ID de red establecido</source>
@@ -2553,27 +2553,27 @@ Nuevo ID de red establecido</source>
 New network ID established</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1068"/>
+        <location filename="mainwindow.cpp" line="1069"/>
         <source><byte value="xd"/>
 Modo de funcionamiento establecido</source>
         <translation>
 New operation mode set</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1236"/>
-        <location filename="mainwindow.cpp" line="1262"/>
-        <location filename="mainwindow.cpp" line="1288"/>
-        <location filename="mainwindow.cpp" line="1314"/>
+        <location filename="mainwindow.cpp" line="1237"/>
+        <location filename="mainwindow.cpp" line="1263"/>
+        <location filename="mainwindow.cpp" line="1289"/>
+        <location filename="mainwindow.cpp" line="1315"/>
         <source>Desactivar</source>
         <translation>Turn off</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1340"/>
+        <location filename="mainwindow.cpp" line="1341"/>
         <source>No se disponen los datos necesarios para el cálculo estadístico</source>
         <translation>No data to show statistics</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1442"/>
+        <location filename="mainwindow.cpp" line="1445"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Se han calculado las estadísticas relativas a la recepción de datos de distancia. Pulse el botón de reiniciar valores para calcularestadísticas a partir de este instante.</source>
@@ -2582,7 +2582,7 @@ Se han calculado las estadísticas relativas a la recepción de datos de distanc
 Distance data statistics calculated. Click reset button to calculate statistics from this point.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1478"/>
+        <location filename="mainwindow.cpp" line="1481"/>
         <source><byte value="xd"/>
 <byte value="xd"/>
 Se han calculado las estadísticas relativas a la recepción de datos de posición. Pulse el botón de reiniciar valores para calcularestadísticas a partir de este instante.</source>
@@ -2591,7 +2591,7 @@ Se han calculado las estadísticas relativas a la recepción de datos de posici�
 Position data statistics calculated. Click reset button to calculate statistics from this point.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1602"/>
+        <location filename="mainwindow.cpp" line="1605"/>
         <source><byte value="xd"/>
 Detectados 2 módulos a representar<byte value="xd"/>
 </source>
@@ -2600,7 +2600,7 @@ Detectados 2 módulos a representar<byte value="xd"/>
 </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1829"/>
+        <location filename="mainwindow.cpp" line="1832"/>
         <source><byte value="xd"/>
 Detectados 4 módulos a representar<byte value="xd"/>
 </source>
@@ -2609,24 +2609,24 @@ Detectados 4 módulos a representar<byte value="xd"/>
 </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1831"/>
+        <location filename="mainwindow.cpp" line="1834"/>
         <source>No se ha podido obtener la posición estimada<byte value="xd"/>
 </source>
         <translation>Estimated position could not be obtained
 </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3699"/>
+        <location filename="mainwindow.cpp" line="3702"/>
         <source>&lt;b&gt;&lt;FONT COLOR=&apos;blue&apos; FONT SIZE = 4&gt;Ancla Pasiva&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;FONT COLOR=&apos;blue&apos; FONT SIZE = 4&gt;Pasive Anchor&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3920"/>
+        <location filename="mainwindow.cpp" line="3923"/>
         <source>No se disponen los datos necesarios para esta operación</source>
         <translation>Required data for this operation is not avalaible</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="3966"/>
+        <location filename="mainwindow.cpp" line="3969"/>
         <source>Desactive la recepción de datos para reiniciar/borrar el historial de datos recibidos y dispositivos detectados</source>
         <translation>Disable data reception to reset/erase previous received data and detected devices</translation>
     </message>
