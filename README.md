@@ -43,6 +43,11 @@ This repository contains the source code required to build and run this software
 
 - Real time positioning graphical representation from a tag connected to the users PC.
 - Real time positioning graphical representation from a Passive Anchor connected to the users PC.
+
+  <p align="center">
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/Graph_position.gif" alt="Position data representation example (video)"/>
+  </p>
+
 - Media filtering of the received data
 - Capable of saving data in a 'csv' file.
 - Statistics estimation from received data.
