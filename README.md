@@ -70,6 +70,7 @@ This repository contains the source code required to build and run this software
   
 - Graphical representation of all received data in a window.
 
+  -- Distance
   <p align="center">
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history.png" alt="Data history example"/>
   </p>
@@ -77,6 +78,7 @@ This repository contains the source code required to build and run this software
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history_video.gif" alt="Data history example (video)"/>
   </p>
 
+  -- Position
   <p align="center">
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history_pos.gif" alt="Data history example (video)"/>
   </p>
