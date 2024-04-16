@@ -80,10 +80,10 @@ This repository contains the source code required to build and run this software
 - Possibility to assign an alarm to different distance or position values and associating it with the activation of a DWM1001-DEV's GPIO.
 
   <p align="center">
-    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/alarm_dist.gif" alt="Data history example"/>
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/alarm_dist.gif" alt="Distance alarm example"/>
   </p>
   <p align="center">
-    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/alarm_pos.gif" alt="Data history example (video)"/>
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/alarm_pos.gif" alt="Position alarm example (video)"/>
   </p>
 
 
