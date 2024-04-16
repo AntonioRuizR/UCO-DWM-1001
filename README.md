@@ -77,6 +77,10 @@ This repository contains the source code required to build and run this software
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history_video.gif" alt="Data history example (video)"/>
   </p>
 
+  <p align="center">
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history_pos.gif" alt="Data history example (video)"/>
+  </p>
+
 - Possibility to assign an alarm to different distance or position values and associating it with the activation of a DWM1001-DEV's GPIO.
 
   <p align="center">
