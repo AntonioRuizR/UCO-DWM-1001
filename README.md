@@ -50,7 +50,7 @@ This repository contains the source code required to build and run this software
 
 - Media filtering of the received data and its graphical representation.
   
-- Capable of saving data in a 'csv' file (Index | Date and time | Device ID | Distance)
+- Capable of saving data in a 'csv' file (Index | Date and time | Device ID | Distance).
 
     |1,16/04/2024 12:29:50.108,8889,1.44,C7AD,0.94,5A1E,3.83,569A,3.34,0  
     |2,16/04/2024 12:29:50.201,8889,1.46,C7AD,1.02,5A1E,3.82,569A,3.42,0  
@@ -63,6 +63,11 @@ This repository contains the source code required to build and run this software
 
 
 - Statistics estimation from received data.
+
+  <p align="center">
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/stats.png" alt="Distance statistics example (video)"/>
+  </p>
+  
 - Graphical representation of all received data in a window.
 
   <p align="center">
