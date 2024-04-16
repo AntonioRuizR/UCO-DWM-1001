@@ -30,7 +30,7 @@ This repository contains the source code required to build and run this software
 - DWM1001-DEV configuration options available.
 - Real time distance graphical representation up to four ranging anchors in the network.
 <p align="center">
-  <img src="[https://github.com/Antoi11/DWM1001-DEV-GUI/blob/main/media/mainwindow_example.png](https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/Graph_4_distances.gif)" alt="Data representation: 4 distances"/>
+  <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/Graph_4_distances.gif" alt="DWM1001-DEV: GUI main window example"/>
 </p>
 - Real time positioning graphical representation from a tag connected to the users PC.
 - Real time positioning graphical representation from a Passive Anchor connected to the users PC.
