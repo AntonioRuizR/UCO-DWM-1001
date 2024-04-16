@@ -70,11 +70,17 @@ This repository contains the source code required to build and run this software
   
 - Graphical representation of all received data in a window.
 
+  -- Distance
   <p align="center">
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history.png" alt="Data history example"/>
   </p>
   <p align="center">
     <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history_video.gif" alt="Data history example (video)"/>
+  </p>
+
+  -- Position
+  <p align="center">
+    <img src="https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/media/graph_history_pos.gif" alt="Data history example (video)"/>
   </p>
 
 - Possibility to assign an alarm to different distance or position values and associating it with the activation of a DWM1001-DEV's GPIO.
@@ -91,7 +97,7 @@ This repository contains the source code required to build and run this software
 
 <h2 name="Installation">Installation</h2>
 
-To debug and build this source code into a executable binary, Qt for open source development is available in https://www.qt.io/download-open-source . As the project has been developed in Qt version 6.6.1, this version is recommended.
+To debug and build the source code into a executable binary, Qt for open source development is available in https://www.qt.io/download-open-source . As the project has been developed in Qt version 6.6.1, this version is recommended.
 
 <h2 name="Usage">Usage</h2>
 
