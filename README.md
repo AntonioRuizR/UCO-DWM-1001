@@ -4,7 +4,7 @@
 An open-source, standalone GUI for control, processing and data recording of the DWM1001-DEV development boards developed by Qorvo company.
 This GUI has been developed in c++ using Qt 6.6.1 framework and Qt Creator 12.0.1 for open source development.
 
-This repository contains the source code required to build and run this software.
+This repository contains the source code required to build and run this software. Also, in 'releases' section, windows executable for 64 bits is available.
 
 </p>
 </p>
