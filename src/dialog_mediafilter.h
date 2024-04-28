@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 #ifndef DIALOG_MEDIAFILTER_H
@@ -40,19 +40,14 @@ public:
     explicit Dialog_mediafilter(QWidget *parent = nullptr);
     ~Dialog_mediafilter();
 
-    //bool alarma_vinculada=0;
     bool alarm_linked=0;
 
-    //bool media_activada=0;
     bool media_enabled=0;
 
-    //QList<float> datos_bufer();
     QList<float> bufer_data();
 
-    //bool vincular_alarma();
     bool link_alarm();
 
-    //bool activar_filtro();
     bool enable_mediafilter();
 
     void load_data_bufer(QList<float>);

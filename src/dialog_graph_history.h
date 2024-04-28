@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 #ifndef DIALOG_GRAPH_HISTORY_H
@@ -43,7 +43,6 @@ public:
 
     void setupRealtimeDataDemo();
     void setupRealtimeDataDemo3(double, double, double, double);
-    //void setupRealtimeDataDemo2(QCustomPlot *customPlot);
     void load_distances_1(QList<double>, double, QString, double);
     void load_distances_2(QList<double>, double, QString, double);
     void load_distances_3(QList<double>, double, QString, double);
@@ -56,6 +55,7 @@ public:
     //void mousePress();
 
 private slots:
+
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
@@ -79,11 +79,6 @@ private:
     QPen graphPen_3;
     QPen graphPen_4;
     QPen graphPen_selected;
-
-    //QVector<double> received_data_quantity_1;
-    //QVector<double> received_data_quantity_2;
-    //QVector<double> received_data_quantity_3;
-    //QVector<double> received_data_quantity_4;
 
     QVector<double> data_list_d1;
     QList<double> data_list_d2;

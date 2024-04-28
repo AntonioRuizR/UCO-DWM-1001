@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 //Classes
@@ -355,7 +355,7 @@ void MainWindow::change_devicemode_wait()
     ui->textEdit->append(tr("\r\n\r\nMódulo Reiniciado."));
 }
 
-//Function that receives and process information about the connected device
+//Function that receives and process initial information about the connected device
 void MainWindow::receive_info()
 {
     if(info_message.contains(" tn ")){
@@ -420,7 +420,7 @@ void MainWindow::receive_info()
     ui->textEdit->append(tr("\r\n\r\nRecepción de información sobre el dispositivo completada"));
 }
 
-//When information is not received correctly. A new request is done
+//When information of the device is not received correctly. A new request is done
 void MainWindow::receive_info_failure()
 {
     if(receive_initial_info==1){
@@ -435,7 +435,7 @@ void MainWindow::receive_info_failure()
     FUNCTIONS ASSOCIATED WITH GUI ELEMENTS
 ********************************************/
 
-//When refresh button clicked, available USB ports are retrieved
+//When refresh is clicked, available USB ports are retrieved
 void MainWindow::on_pushButton_USBportrefresh_clicked()
 {
     ui->comboBox->clear();
@@ -765,9 +765,9 @@ void MainWindow::on_actionStopDataSaving_triggered()
     ui->actionStopDataSaving->setEnabled(false);
     ui->actionDataSavingSettings->setEnabled(true);
     ui->label_connection->setText(tr("<b><FONT COLOR='green' FONT SIZE = 4>CONECTADO</b></font>"));
-    distance_samples_ID1=0;
-    distance_samples_ID2=0;
-    distance_samples_ID3=0;
+    //distance_samples_ID1=0;
+    //distance_samples_ID2=0;
+    //distance_samples_ID3=0;
     distance_samples_ID4=0;
     position_samples=0;
 }
@@ -819,7 +819,6 @@ void MainWindow::on_actionPositionGraphSettings_triggered()
         if(passive==1){
             passive_config();
         }
-
     }
 }
 
@@ -950,7 +949,7 @@ void MainWindow::on_actionDistanceGraphSettings_triggered()
     }
 }
 
-//Distance media filter settings
+//Media filter settings
 void MainWindow::on_pushButton_2_clicked()
 {
     QList<float> info_bufer;
@@ -1356,15 +1355,12 @@ void MainWindow::on_actionStatistics_triggered()
         QList<double> info_stats_d3;
         QList<double> info_stats_d4;
         int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
-        //int id_labels[4]={initial_id_1,initial_id_2,initial_id_3,initial_id_4};
         info_ids.append(QString::number(max_detected_devices));
-        for(int i = 0; i < max_detected_devices; i++) { //ACABO DE CAMBIAR detected_devices POR max_detected_devices
+        for(int i = 0; i < max_detected_devices; i++) {
             switch(id_labels[i]){
             case 1:
 
-                //info_ids.append("1");
                 info_ids.append(initial_id_1);
-
                 info_stats_d1.append(mediafilter_value_1);
                 info_stats_d1.append(mode_1);
                 info_stats_d1.append(std_1);
@@ -1379,9 +1375,6 @@ void MainWindow::on_actionStatistics_triggered()
 
             case 2:
 
-                //info_ids.clear();
-                //info_ids.append("2");
-                //info_ids.append(initial_id_1);
                 info_ids.append(initial_id_2);
                 info_stats_d2.append(mediafilter_value_2);
                 info_stats_d2.append(mode_2);
@@ -1398,13 +1391,7 @@ void MainWindow::on_actionStatistics_triggered()
 
             case 3:
 
-                //info_ids.clear();
-                //info_ids.append("3");
-                //info_ids.append(initial_id_1);
-                //info_ids.append(initial_id_2);
                 info_ids.append(initial_id_3);
-
-
                 info_stats_d3.append(mediafilter_value_3);
                 info_stats_d3.append(mode_3);
                 info_stats_d3.append(std_3);
@@ -1419,14 +1406,7 @@ void MainWindow::on_actionStatistics_triggered()
                 break;
             case 4:
 
-                /*info_ids.clear();
-                info_ids.append("4");
-                info_ids.append(initial_id_1);
-                info_ids.append(initial_id_2);
-                info_ids.append(initial_id_3);*/
                 info_ids.append(initial_id_4);
-
-
                 info_stats_d4.append(mediafilter_value_4);
                 info_stats_d4.append(mode_4);
                 info_stats_d4.append(std_4);
@@ -1515,6 +1495,63 @@ void MainWindow::on_actionHelp_triggered()
     QDesktopServices::openUrl(QUrl("https://github.com/AntonioRuizR/UCO-DWM1001-DEV/blob/main/User%20Guide.pdf", QUrl::TolerantMode));
 }
 
+void MainWindow::on_actionHistogram_triggered()
+{
+    if(enable_statistics==0){
+        QMessageBox::information(this, tr("información"), tr("No se disponen los datos necesarios para esta operación"));
+        return;
+    }
+    Dialog_graph_history dialog;
+
+    dialog.setupRealtimeDataDemo();
+    dialog.setupRealtimeDataDemo3(range_pos_y_min, range_pos_y_max, range_pos_x_min, range_pos_x_max);
+
+    if(operation_mode==0){
+        int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
+        for(int i = 0; i < max_detected_devices; i++) {
+            switch(id_labels[i]){
+            case 1:
+                dialog.load_distances_1(distance_list_1, max_value_1, initial_id_1, received_data_quantity_1);
+                break;
+            case 2:
+                dialog.load_distances_2(distance_list_2, max_value_2, initial_id_2, received_data_quantity_2);
+                break;
+            case 3:
+                dialog.load_distances_3(distance_list_3, max_value_3, initial_id_3, received_data_quantity_3);
+                break;
+            case 4:
+                dialog.load_distances_4(distance_list_4, max_value_4, initial_id_4, received_data_quantity_4);
+                break;
+            }
+        }
+        dialog.max_range_graph(max_value_1,max_value_2,max_value_3,max_value_4, received_data_quantity_1, received_data_quantity_2, received_data_quantity_3, received_data_quantity_4);
+    }
+    else{
+        dialog.load_anchors(anchor_1_x, anchor_1_y, anchor_2_x, anchor_2_y, anchor_3_x, anchor_3_y, anchor_4_x, anchor_4_y);
+        dialog.load_coordinates(position_list_x, position_list_y, position_list_z);
+    }
+    dialog.setModal(true);
+    dialog.exec();
+    if (dialog.result()==1){
+        if(dialog.reset_variables()==1){
+            reset_stats();
+            enable_statistics=0;
+        }
+    }
+}
+
+
+void MainWindow::on_actionReiniciar_los_datos_recibidos_triggered()
+{
+    if(ui->plot_distance->isChecked()){
+        QMessageBox::information(this, tr("información"), tr("Desactive la recepción de datos para reiniciar/borrar el historial de datos recibidos y dispositivos detectados"));
+        return;
+    }
+    else{
+        reset_stats();
+    }
+}
+
 /**************************************
     DATA PROCESSING FUNCTIONS
 ***************************************/
@@ -1523,7 +1560,6 @@ void MainWindow::on_actionHelp_triggered()
 //obtaining relevant values, and calling alarm, media filter or data recording if requested
 void MainWindow::distance_analysis(const QByteArray &data)
 {
-    //qDebug() << "Analisis distancia";
     QStringList received_message;
     QString DataAsString = QTextCodec::codecForMib(106)->toUnicode(data);
     received_message = DataAsString.split("\r\n");
@@ -1657,7 +1693,6 @@ void MainWindow::distance_analysis(const QByteArray &data)
                     id_label_2=4;
                 }
             }
-
             if(savedata==1){
                 save_distance_data(QDateTime::currentDateTime());
             }
@@ -1758,7 +1793,6 @@ void MainWindow::distance_analysis(const QByteArray &data)
                 }
             }
             if(max_detected_devices==4){
-                //qDebug() << max_detected_devices;
                 if (id_1==initial_id_4){
                     distance_value_4 = comma_separated_message[7].toDouble();
                     id_dist_1=distance_value_4;
@@ -1937,7 +1971,9 @@ void MainWindow::distance_analysis(const QByteArray &data)
         if(mean_enable==1){
             media_calc();
         }
+
         distance_data_processing(id_dist_1, id_dist_2, id_dist_3, id_dist_4);
+
         if(alarm_activated==0 and distance_alarm_plot==1){
             check_distance_alarm();
         }
@@ -2050,7 +2086,6 @@ void MainWindow::media_calc_pos()
         for (k=0; k<bufer_x.size();k++) bufer_media_x+=bufer_x[k];
         bufer_media_x = bufer_media_x/k;
     }
-
     if(true){
         int j;
         if (bufer_y.size()<bufer_size){
@@ -2069,7 +2104,6 @@ void MainWindow::media_calc_pos()
         for (j=0; j<bufer_y.size();j++) bufer_media_y+=bufer_y[j];
         bufer_media_y = bufer_media_y/j;
     }
-
     if(true){
         int h;
         if (bufer_z.size()<bufer_size){
@@ -2140,15 +2174,12 @@ void MainWindow::position_analysis(const QByteArray &data2){
         ui->label_57->setText(QString::number(position_y,'f',2));
         ui->label_58->setText(QString::number(position_z,'f',2));
     }
-
     position_data_samples++;
     position_data_processing();
     enable_statistics=1;
-
     if((alarm_activated == 0) and (position_alarm_pos == 1)){
         check_position_alarm();
     }
-
     if(savedata==1){
         save_position_data(QDateTime::currentDateTime());
     }
@@ -2166,7 +2197,6 @@ void MainWindow::position_data_processing()
     }
     accumulated_pos_x = accumulated_pos_x + position_x;
     mean_total_x = (accumulated_pos_x)/position_data_samples;
-
     position_list_y.append(position_y);
     if(position_y > max_y){
         max_y = position_y;
@@ -2197,7 +2227,18 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
     for(int i = 0; i < detected_devices; i++) {
         switch(id_labels[i]){
         case 1:
-            distance_list_1.append(id_distances[i]);
+            if(alarm_activated==0){
+                distance_list_1.append(id_distances[i]);
+            }
+            else{
+                if(distance_list_1.last()!=0 and id_distances[i]==0 and alarm_issue_check_1<6){
+                    distance_list_1.append(distance_list_1.last());
+                    alarm_issue_check_1++;
+                }
+                else{
+                    distance_list_1.append(id_distances[i]);
+                }
+            }
             ui->label_dist_value_1->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_1++;
             if(mean_enable==1){
@@ -2214,7 +2255,21 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
             break;
 
         case 2:
-            distance_list_2.append(id_distances[i]);
+
+            if(alarm_activated==0){
+                distance_list_2.append(id_distances[i]);
+            }
+            else{
+                if(distance_list_2.last()!=0 and id_distances[i]==0 and alarm_issue_check_2<6){
+                    distance_list_2.append(distance_list_2.last());
+                    alarm_issue_check_2++;
+                }
+                else{
+                    distance_list_2.append(id_distances[i]);
+                }
+            }
+
+            //distance_list_2.append(id_distances[i]);
             ui->label_dist_value_2->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_2++;
             if(mean_enable==1){
@@ -2231,7 +2286,21 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
             break;
 
         case 3:
-            distance_list_3.append(id_distances[i]);
+
+            if(alarm_activated==0){
+                distance_list_3.append(id_distances[i]);
+            }
+            else{
+                if(distance_list_3.last()!=0 and id_distances[i]==0 and alarm_issue_check_3<6){
+                    distance_list_3.append(distance_list_3.last());
+                    alarm_issue_check_3++;
+                }
+                else{
+                    distance_list_3.append(id_distances[i]);
+                }
+            }
+
+            //distance_list_3.append(id_distances[i]);
             ui->label_dist_value_3->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_3++;
             if(mean_enable==1){
@@ -2248,7 +2317,21 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
             break;
 
         case 4:
-            distance_list_4.append(id_distances[i]);
+
+            if(alarm_activated==0){
+                distance_list_4.append(id_distances[i]);
+            }
+            else{
+                if(distance_list_4.last()!=0 and id_distances[i]==0 and alarm_issue_check_4<6){
+                    distance_list_4.append(distance_list_4.last());
+                    alarm_issue_check_4++;
+                }
+                else{
+                    distance_list_4.append(id_distances[i]);
+                }
+            }
+
+            //distance_list_4.append(id_distances[i]);
             ui->label_dist_value_4->setText(QString::number(id_distances[i],'f',2));
             received_data_quantity_4++;
             if(mean_enable==1){
@@ -2378,7 +2461,6 @@ void MainWindow::distance_stats_calc()
             mode_1 = distance_list_1[i];
         }
     }
-
     //STD D1
     for (int i = 0; i < distance_list_1.count(); i++) {
         std_1 += pow(distance_list_1[i] - mediafilter_value_1, 2);
@@ -3356,7 +3438,6 @@ void MainWindow::alarm_graph()
     previous_alarm = chosen_alarm;
 
     if(operation_mode==0){
-        //qDebug() << "Entra en label alarm";
         ui->label_alarm_dist->setText(tr("<b><FONT COLOR='green' FONT SIZE = 4>Alarma activada</b></font>"));
         ui->label_alarm_dist->setFrameStyle(QFrame::Box | QFrame::Raised);
     }
@@ -3435,8 +3516,13 @@ void MainWindow::alarm_duration_f()
     timer_alarmduration.stop();
     clear_gpio();
     alarm_activated=0;
+
+    alarm_issue_check_1=0;
+    alarm_issue_check_2=0;
+    alarm_issue_check_3=0;
+    alarm_issue_check_4=0;
+
     if(operation_mode==0){
-        //qDebug() << "Se desactiva el gpio";
         ui->label_alarm_dist->setFrameStyle(QFrame::NoFrame);
         ui->label_alarm_dist->setText("");
     }
@@ -3914,63 +4000,5 @@ void MainWindow::changeEvent(QEvent* event) {
     ui->label_alarm_pos->setText("");
     ui->label_alarm_dist->setFrameStyle(QFrame::NoFrame);
     ui->label_alarm_pos->setFrameStyle(QFrame::NoFrame);
-}
-
-
-void MainWindow::on_actionHistogram_triggered()
-{
-    if(enable_statistics==0){
-        QMessageBox::information(this, tr("información"), tr("No se disponen los datos necesarios para esta operación"));
-        return;
-    }
-    Dialog_graph_history dialog;
-
-    dialog.setupRealtimeDataDemo();
-    dialog.setupRealtimeDataDemo3(range_pos_y_min, range_pos_y_max, range_pos_x_min, range_pos_x_max);
-
-    if(operation_mode==0){
-        int id_labels[4]={id_label_1,id_label_2,id_label_3,id_label_4};
-        for(int i = 0; i < max_detected_devices; i++) {
-            switch(id_labels[i]){
-            case 1:
-                dialog.load_distances_1(distance_list_1, max_value_1, initial_id_1, received_data_quantity_1);
-                break;
-            case 2:
-                dialog.load_distances_2(distance_list_2, max_value_2, initial_id_2, received_data_quantity_2);
-                break;
-            case 3:
-                dialog.load_distances_3(distance_list_3, max_value_3, initial_id_3, received_data_quantity_3);
-                break;
-            case 4:
-                dialog.load_distances_4(distance_list_4, max_value_4, initial_id_4, received_data_quantity_4);
-                break;
-            }
-        }
-        dialog.max_range_graph(max_value_1,max_value_2,max_value_3,max_value_4, received_data_quantity_1, received_data_quantity_2, received_data_quantity_3, received_data_quantity_4);
-    }
-    else{
-        dialog.load_anchors(anchor_1_x, anchor_1_y, anchor_2_x, anchor_2_y, anchor_3_x, anchor_3_y, anchor_4_x, anchor_4_y);
-        dialog.load_coordinates(position_list_x, position_list_y, position_list_z);
-    }
-    dialog.setModal(true);
-    dialog.exec();
-    if (dialog.result()==1){
-        if(dialog.reset_variables()==1){
-            reset_stats();
-            enable_statistics=0;
-        }
-    }
-}
-
-
-void MainWindow::on_actionReiniciar_los_datos_recibidos_triggered()
-{
-    if(ui->plot_distance->isChecked()){
-        QMessageBox::information(this, tr("información"), tr("Desactive la recepción de datos para reiniciar/borrar el historial de datos recibidos y dispositivos detectados"));
-        return;
-    }
-    else{
-        reset_stats();
-    }
 }
 

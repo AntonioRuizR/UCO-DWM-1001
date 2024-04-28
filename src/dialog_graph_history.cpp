@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 #include "dialog_graph_history.h"
@@ -348,11 +348,10 @@ void Dialog_graph_history::graph_interaction()
 
     foreach (QCPDataRange dataRange, selection.dataRanges())
     {
-        QCPGraphDataContainer::const_iterator begin = ui->graph_h->graph(selection_g)->data()->at(dataRange.begin()); // get range begin iterator from index
-        QCPGraphDataContainer::const_iterator end = ui->graph_h->graph(selection_g)->data()->at(dataRange.end()); // get range end iterator from index
+        QCPGraphDataContainer::const_iterator begin = ui->graph_h->graph(selection_g)->data()->at(dataRange.begin());
+        QCPGraphDataContainer::const_iterator end = ui->graph_h->graph(selection_g)->data()->at(dataRange.end());
         for (QCPGraphDataContainer::const_iterator it=begin; it!=end; ++it)
         {
-            // iterator "it" will go through all selected data points, as an example, we calculate the value average
             sum += it->value;
             if(it->value > max){
                 max = it->value;

@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 #ifndef MAINWINDOW_H
@@ -69,13 +69,6 @@ public:
     void closeEvent (QCloseEvent *event);
 
 private slots:
-
-    // GUI objects:
-
-    //void on_pushButton_clicked();
-    //void on_pushButton_2_clicked();
-    //void on_pushButton_3_clicked();
-    //void on_spinBox_3_valueChanged(int arg1);
 
     // Connection:
 
@@ -130,134 +123,38 @@ private slots:
     void timer_gpio12();
     void pos_anchors();
 
-    //    void on_comboBox_3_currentIndexChanged(int index);
-
-    //void on_plot_distancia_toggled(bool checked);
-
-    //void on_pushButton_3_clicked();
-
-    //void on_tabWidget_tabBarClicked(int index);
-
-    //void on_pushButton_reiniciovalores_clicked();
-
-    //void on_actionConfiguraci_n_CSV_triggered();
-
-    //void on_actionFactory_Reset_triggered();
-
-    //void on_comboBox_GPIO8_activated(int index);
-
-    //void on_comboBox_GPIO9_activated(int index);
-
-    //void on_comboBox_GPIO10_activated(int index);
-
-    //void on_comboBox_GPIO12_activated(int index);
-
-    //void on_pushButton_GPIO8_clicked();
-
-    //void on_pushButton_GPIO9_clicked();
-
-    //void on_pushButton_GPIO10_clicked();
-
-    //void on_pushButton_GPIO12_clicked();
-
-    //void on_checkBox_2_stateChanged(int arg1);
-
-    //void on_checkBox_2_toggled(bool checked);
-
-    //void on_plotAlarma_toggled(bool checked);
-
-    //void on_plotAlarma_clicked(bool checked);
-
-    //void on_doubleSpinBox_alarmmax_valueChanged(double arg1);
-
-    //void on_doubleSpinBox_alarmmin_valueChanged(double arg1);
-
-    //void on_actionReset_2_triggered();
-
-    //void on_pushButton_4_clicked();
-
-    //void on_pushButton_5_clicked();
-
-    //void on_pushButton_6_clicked();
-
-    //void on_actionAcerca_de_triggered();
-
-    //void on_plotAlarma_2_clicked(bool checked);
-
-    //void on_pushButton_4_clicked();
-
-    //void on_comboBox_4_currentIndexChanged(int index);
-
-    //void on_checkBox_3_clicked(bool checked);
-
     void on_pushButton_USBportrefresh_clicked();
-
     void on_pushButton_connect_clicked();
-
     void on_pushButton_disconnect_clicked();
-
     void on_pushButton_distancemode_clicked();
-
     void on_pushButton_positionmode_clicked();
-
     void on_actionExit_triggered();
-
     void on_plot_distance_toggled(bool checked);
-
     void on_spinBox_sampletime_valueChanged(int arg1);
-
     void on_actionDistanceGraphSettings_triggered();
-
     void on_pushButton_2_clicked();
-
     void on_pushButton_clicked();
-
     void on_actionReset_triggered();
-
     void on_actionFactory_Reset_triggered();
-
     void on_actionDataSavingSettings_triggered();
-
     void on_actionStartDataSaving_triggered();
-
     void on_actionStopDataSaving_triggered();
-
     void on_actionPositionGraphSettings_triggered();
-
     void on_actionDeviceSettings_triggered();
-
     void on_pushButton_6_clicked();
-
     void on_pushButton_5_clicked();
-
     void on_comboBox_GPIO8_activated(int index);
-
     void on_comboBox_GPIO9_activated(int index);
-
     void on_comboBox_GPIO10_activated(int index);
-
     void on_comboBox_GPIO12_activated(int index);
-
     void on_pushButton_GPIO8_clicked();
-
     void on_pushButton_GPIO9_clicked();
-
     void on_pushButton_GPIO10_clicked();
-
     void on_pushButton_GPIO12_clicked();
-
     void on_actionStatistics_triggered();
-
-    //void on_comboBox_nummedidas_activated(int index);
-
     void on_actionAbout_triggered();
-
-    //void on_pushButton_3_clicked();
-
     void on_actionHelp_triggered();
-
     void on_actionHistogram_triggered();
-
     void on_actionReiniciar_los_datos_recibidos_triggered();
 
 private:
@@ -276,12 +173,10 @@ private:
 
     QSerialPort *p_serie;
 
-    // Inicializar variables
+    // Initialise variables
 
-    //bool grabar=0;
     bool savedata=0;
 
-    //bool multiples_mediciones=0;
     bool multiple_measures=0;
 
     bool info_ids_1=0;
@@ -289,18 +184,13 @@ private:
     bool info_ids_3=0;
     bool info_ids_4=0;
 
-    //QByteArray mensaje_serie;
     QByteArray serial_message;
     QByteArray position_message;
-    //QByteArray mensaje_bienvenida;
     bool receive_initial_info=0;
     QByteArray info_message;
-    QString filename="A:/Documentos/valores_csv.txt";
+    QString filename="C:/";
     QString filename_est;
-    //QStringList Mensaje_info;
-    //QByteArray mensaje_info;
     QString chosenPort;
-    //Console *p_consola = nullptr;
     QString network;
 
     QTimer timer_sampletime;
@@ -314,15 +204,11 @@ private:
     QTimer timer_gpioclear;
     bool deactivate_GPIO=0;
 
-    int distance_samples_ID1=0; //Esto parece que no hace nada
-    int distance_samples_ID2=0;
-    int distance_samples_ID3=0;
+    //int distance_samples_ID1=0; //Esto parece que no hace nada
+    //int distance_samples_ID2=0;
+    //int distance_samples_ID3=0;
     int distance_samples_ID4=0; //Sólo se usa esta variable (analizar)
     int position_samples=0;
-    //int tiempo_activacion;
-    //int fallo_mensaje=0;
-
-    //QElapsedTimer timer_medida;
 
     QTimer tem_gpio8;
     QTimer tem_gpio9;
@@ -330,24 +216,17 @@ private:
     QTimer tem_gpio12;
     int desac_gpio=0;
 
-    //bool escala_tiempo=0;
     bool datareception_enabled;
-    //bool solicitud_info;
-    //bool modo=0;
-    //bool modo_anterior=0;
-    bool passive_positioning=0; //NUEVO
-    bool tag_positioning=0; //NUEVO
+    bool passive_positioning=0;
+    bool tag_positioning=0;
 
     bool operation_mode=0;
 
     bool enable_statistics=0;
-    //QList<float> valor_distancia_actual;
     double distance_value_1;
     double distance_value_2;
     double distance_value_3;
     double distance_value_4;
-    //double valor_distancia_5;
-    //double valor_distancia_6;
     double mediafilter_value_1;
     double mediafilter_value_2;
     double mediafilter_value_3;
@@ -394,9 +273,6 @@ private:
     double percentil_25_4=0;
     double percentil_75_4=0;
 
-    //double media_total_x=0;
-    //double media_total_y=0;
-    //double media_total_z=0;
     double mode_x=0;
     double mode_y=0;
     double mode_z=0;
@@ -435,20 +311,12 @@ private:
     QList<double> position_list_y;
     QList<double> position_list_z;
 
-    //double valor_filtro_max=0;
-    //double valor_filtro_min=100;
-    //double numero_muestras_filtro=0;
-    //double valor_filtro_suma=0;
-    //double valor_filtro_media;
     int detected_devices = 0;
     int max_detected_devices = 0;
 
-    //bool espera_m=0;
     bool gpio_init_config=1;
-    //bool men_bienvenida=1;
     bool alarm_activation=0;
     bool alarm_activated=0;
-    //bool cambio_ui=0;
     int previous_alarm=0;
     int chosen_alarm=0;
     bool distance_alarm_plot=0;
@@ -467,7 +335,6 @@ private:
     double bufer_media_5;
     double bufer_media_6;
 
-    //float bufer_tam=0;
     bool mean_enable=0;
     QList<double> bufer;
     QList<double> bufer_2;
@@ -492,12 +359,20 @@ private:
     QString initial_id_3;
     QString initial_id_4;
 
+    int alarm_issue_check_1=0;
+    int alarm_issue_check_2=0;
+    int alarm_issue_check_3=0;
+    int alarm_issue_check_4=0;
+    double prev_id_dist_1;
+    double prev_id_dist_2;
+    double prev_id_dist_3;
+    double prev_id_dist_4;
+
     int id_label_1=0;
     int id_label_2=0;
     int id_label_3=0;
     int id_label_4=0;
 
-    //double posicion_total;
     double position_x;
     double position_y;
     double position_z;
@@ -521,14 +396,12 @@ private:
     float axisYmax;
     float max_value_alarm;
     float min_value_alarm;
-    //bool start_alarm=0;
     int alarm_delay=0;
     int alarm_duration=0;
 
     float graph0_size=1.50;
     float graph1_size=1.50;
     float graph2_size=1.50;
-    //float graph3_size=1.50;
     float graph4_size=1.50;
     float graph5_size=1.50;
     float graph6_size=1.50;
@@ -549,10 +422,6 @@ private:
     QString chosen_color_d3="darkgreen";
     QString chosen_color_d4="magenta";
 
-    //int index_color_d1;
-    //int indice_color_d2;
-    //int indice_color_d3;
-    //int indice_color_d4;
     int indice_color_fm;
     int indice_color_al;
 

@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 #include "dialog_about.h"
@@ -48,13 +48,13 @@ Dialog_about::Dialog_about(QWidget *parent)
     ui->label_logoepsc->setPixmap(logo_epsc.scaled(width_logo_epsc,height_logo_epsc,Qt::KeepAspectRatio));
     ui->label_5->setPixmap(logo_prinia.scaled(width_logo_prinia,height_logo_prinia,Qt::KeepAspectRatio));
 
-    ui->label_3->setText("<a href=\"https://www.researchgate.net/profile/Mario-Ruz-2\">Mario L. Ruz Ruiz</a>"); // El enlace que quieres abrir
+    ui->label_3->setText("<a href=\"https://www.researchgate.net/profile/Mario-Ruz-2\">Mario L. Ruz Ruiz</a>");
     ui->label_3->setOpenExternalLinks(true);
 
-    ui->label_2->setText("<a href=\"https://www.researchgate.net/profile/Antonio-Ruiz-Ruiz-3\">Antonio Ruiz Ruiz</a>"); // El enlace que quieres abrir
+    ui->label_2->setText("<a href=\"https://www.researchgate.net/profile/Antonio-Ruiz-Ruiz-3\">Antonio Ruiz Ruiz</a>");
     ui->label_2->setOpenExternalLinks(true);
 
-    ui->label_4->setText("<a href=\"https://www.researchgate.net/profile/Juan-Garrido-26\">Juan Garrido Jurado</a>"); // El enlace que quieres abrir
+    ui->label_4->setText("<a href=\"https://www.researchgate.net/profile/Juan-Garrido-26\">Juan Garrido Jurado</a>");
     ui->label_4->setOpenExternalLinks(true);
 
     ui->label->setText(tr("Aplicación desarrollada en la Escuela Politécnica Superior de Córdoba de la " "<a href=\"https://www.uco.es\">Universidad de Córdoba</a> (España)."));

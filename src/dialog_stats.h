@@ -19,8 +19,8 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 15.04.24                                                     **
-**          Version: 0.9.2                                                        **
+**             Date: 25.04.24                                                     **
+**          Version: 1.0.0                                                        **
 ************************************************************************************/
 
 #ifndef DIALOG_STATS_H
@@ -42,7 +42,6 @@ public:
     explicit Dialog_stats(QWidget *parent = nullptr);
     ~Dialog_stats();
 
-    //void load_data_estadisticas_d1(QList<double>);
     void load_data_statistics_d1(QList<double>);
     void load_data_statistics_d2(QList<double>);
     void load_data_statistics_d3(QList<double>);
