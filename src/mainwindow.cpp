@@ -19,7 +19,7 @@
 ************************************************************************************
 **           Author: Antonio Ruiz Ruiz                                            **
 **  Contact: antonioruizrruiz@gmail.com                                           **
-**             Date: 25.04.24                                                     **
+**             Date: 29.04.24                                                     **
 **          Version: 1.0.0                                                        **
 ************************************************************************************/
 
@@ -2234,24 +2234,9 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
     for(int i = 0; i < detected_devices; i++) {
         switch(id_labels[i]){
         case 1:
-
             if(distance_alarm_plot==0){
-                /*if(alarm_activated==0){
                 distance_list_1.append(id_distances[i]);
-            }
-            else{
-                if(distance_list_1.last()!=0 and id_distances[i]==0 and alarm_issue_check_1<6){
-                    //distance_list_1.append(distance_list_1.last());
-                    alarm_issue_check_1++;
-                }
-                else{
-                    distance_list_1.append(id_distances[i]);
-                }
-            }*/
-                distance_list_1.append(id_distances[i]);
-
                 received_data_quantity_1++;
-
                 if(id_distances[i]>max_value_1){
                     max_value_1=id_distances[i];
                 }
@@ -2270,22 +2255,7 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
 
         case 2:
             if(distance_alarm_plot==0){
-
-            /*if(alarm_activated==0){
                 distance_list_2.append(id_distances[i]);
-            }
-            else{
-                if(distance_list_2.last()!=0 and id_distances[i]==0 and alarm_issue_check_2<6){
-                    distance_list_2.append(distance_list_2.last());
-                    alarm_issue_check_2++;
-                }
-                else{
-                    distance_list_2.append(id_distances[i]);
-                }
-            }*/
-
-                distance_list_2.append(id_distances[i]);
-
                 received_data_quantity_2++;
 
                 if(id_distances[i]>max_value_2){
@@ -2304,23 +2274,8 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
             break;
 
         case 3:
-
             if(distance_alarm_plot==0){
-            /*if(alarm_activated==0){
                 distance_list_3.append(id_distances[i]);
-            }
-            else{
-                if(distance_list_3.last()!=0 and id_distances[i]==0 and alarm_issue_check_3<6){
-                    distance_list_3.append(distance_list_3.last());
-                    alarm_issue_check_3++;
-                }
-                else{
-                    distance_list_3.append(id_distances[i]);
-                }
-            }*/
-
-                distance_list_3.append(id_distances[i]);
-
                 received_data_quantity_3++;
 
                 if(id_distances[i]>max_value_3){
@@ -2339,23 +2294,8 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
             break;
 
         case 4:
-
             if(distance_alarm_plot==0){
-            /*if(alarm_activated==0){
                 distance_list_4.append(id_distances[i]);
-            }
-            else{
-                if(distance_list_4.last()!=0 and id_distances[i]==0 and alarm_issue_check_4<6){
-                    distance_list_4.append(distance_list_4.last());
-                    alarm_issue_check_4++;
-                }
-                else{
-                    distance_list_4.append(id_distances[i]);
-                }
-            }*/
-
-                distance_list_4.append(id_distances[i]);
-
                 received_data_quantity_4++;
 
                 if(id_distances[i]>max_value_4){
