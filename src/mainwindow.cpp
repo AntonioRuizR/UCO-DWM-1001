@@ -1340,6 +1340,9 @@ void MainWindow::on_actionStatistics_triggered()
         QMessageBox::information(this, tr("información"), tr("No se disponen los datos necesarios para el cálculo estadístico"));
         return;
     }
+    if(distance_alarm_plot==1){
+        QMessageBox::information(this, tr("Recuerde: "), tr("El historial de datos y el cálculo estadístico no se lleva a cabo mientras la solicitud de alarma está activada"));
+    }
     disconnect(p_serie, &QSerialPort::readyRead, this, &MainWindow::readData);
     if(operation_mode==0){
         distance_stats_calc();
@@ -1347,6 +1350,7 @@ void MainWindow::on_actionStatistics_triggered()
     else{
         position_stats_calc();
     }
+
     Dialog_stats dialog;
     if(operation_mode==0){
         QList<QString> info_ids;
@@ -1500,6 +1504,9 @@ void MainWindow::on_actionHistogram_triggered()
     if(enable_statistics==0){
         QMessageBox::information(this, tr("información"), tr("No se disponen los datos necesarios para esta operación"));
         return;
+    }
+    if(distance_alarm_plot==1){
+        QMessageBox::information(this, tr("Recuerde: "), tr("El historial de datos y el cálculo estadístico no se lleva a cabo mientras la solicitud de alarma está activada"));
     }
     Dialog_graph_history dialog;
 
@@ -2227,36 +2234,44 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
     for(int i = 0; i < detected_devices; i++) {
         switch(id_labels[i]){
         case 1:
-            if(alarm_activated==0){
+
+            if(distance_alarm_plot==0){
+                /*if(alarm_activated==0){
                 distance_list_1.append(id_distances[i]);
             }
             else{
                 if(distance_list_1.last()!=0 and id_distances[i]==0 and alarm_issue_check_1<6){
-                    distance_list_1.append(distance_list_1.last());
+                    //distance_list_1.append(distance_list_1.last());
                     alarm_issue_check_1++;
                 }
                 else{
                     distance_list_1.append(id_distances[i]);
                 }
+            }*/
+                distance_list_1.append(id_distances[i]);
+
+                received_data_quantity_1++;
+
+                if(id_distances[i]>max_value_1){
+                    max_value_1=id_distances[i];
+                }
+                if(id_distances[i]<min_value_1){
+                    min_value_1=id_distances[i];
+                }
+                accumulated_dist_1=accumulated_dist_1+id_distances[i];
+                mediafilter_value_1=(accumulated_dist_1)/received_data_quantity_1;  //Crear un numero_muestras para cada ID.
             }
             ui->label_dist_value_1->setText(QString::number(id_distances[i],'f',2));
-            received_data_quantity_1++;
             if(mean_enable==1){
                 ui->label_mediafilter_1->setText(QString::number(bufer_media,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
-            if(id_distances[i]>max_value_1){
-                max_value_1=id_distances[i];
-            }
-            if(id_distances[i]<min_value_1){
-                min_value_1=id_distances[i];
-            }
-            accumulated_dist_1=accumulated_dist_1+id_distances[i];
-            mediafilter_value_1=(accumulated_dist_1)/received_data_quantity_1;  //Crear un numero_muestras para cada ID.
+
             break;
 
         case 2:
+            if(distance_alarm_plot==0){
 
-            if(alarm_activated==0){
+            /*if(alarm_activated==0){
                 distance_list_2.append(id_distances[i]);
             }
             else{
@@ -2267,27 +2282,31 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
                 else{
                     distance_list_2.append(id_distances[i]);
                 }
-            }
+            }*/
 
-            //distance_list_2.append(id_distances[i]);
+                distance_list_2.append(id_distances[i]);
+
+                received_data_quantity_2++;
+
+                if(id_distances[i]>max_value_2){
+                    max_value_2=id_distances[i];
+                }
+                if(id_distances[i]<min_value_2){
+                    min_value_2=id_distances[i];
+                }
+                accumulated_dist_2=accumulated_dist_2+id_distances[i];
+                mediafilter_value_2=(accumulated_dist_2)/received_data_quantity_2;  //Crear un numero_muestras para cada ID.
+            }
             ui->label_dist_value_2->setText(QString::number(id_distances[i],'f',2));
-            received_data_quantity_2++;
             if(mean_enable==1){
                 ui->label_mediafilter_2->setText(QString::number(bufer_media_2,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
-            if(id_distances[i]>max_value_2){
-                max_value_2=id_distances[i];
-            }
-            if(id_distances[i]<min_value_2){
-                min_value_2=id_distances[i];
-            }
-            accumulated_dist_2=accumulated_dist_2+id_distances[i];
-            mediafilter_value_2=(accumulated_dist_2)/received_data_quantity_2;  //Crear un numero_muestras para cada ID.
             break;
 
         case 3:
 
-            if(alarm_activated==0){
+            if(distance_alarm_plot==0){
+            /*if(alarm_activated==0){
                 distance_list_3.append(id_distances[i]);
             }
             else{
@@ -2298,27 +2317,31 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
                 else{
                     distance_list_3.append(id_distances[i]);
                 }
-            }
+            }*/
 
-            //distance_list_3.append(id_distances[i]);
+                distance_list_3.append(id_distances[i]);
+
+                received_data_quantity_3++;
+
+                if(id_distances[i]>max_value_3){
+                    max_value_3=id_distances[i];
+                }
+                if(id_distances[i]<min_value_3){
+                    min_value_3=id_distances[i];
+                }
+                accumulated_dist_3=accumulated_dist_3+id_distances[i];
+                mediafilter_value_3=(accumulated_dist_3)/received_data_quantity_3;  //Crear un numero_muestras para cada ID.
+            }
             ui->label_dist_value_3->setText(QString::number(id_distances[i],'f',2));
-            received_data_quantity_3++;
             if(mean_enable==1){
                 ui->label_mediafilter_3->setText(QString::number(bufer_media_3,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
-            if(id_distances[i]>max_value_3){
-                max_value_3=id_distances[i];
-            }
-            if(id_distances[i]<min_value_3){
-                min_value_3=id_distances[i];
-            }
-            accumulated_dist_3=accumulated_dist_3+id_distances[i];
-            mediafilter_value_3=(accumulated_dist_3)/received_data_quantity_3;  //Crear un numero_muestras para cada ID.
             break;
 
         case 4:
 
-            if(alarm_activated==0){
+            if(distance_alarm_plot==0){
+            /*if(alarm_activated==0){
                 distance_list_4.append(id_distances[i]);
             }
             else{
@@ -2329,22 +2352,25 @@ void MainWindow::distance_data_processing(double id_dist_1, double id_dist_2, do
                 else{
                     distance_list_4.append(id_distances[i]);
                 }
-            }
+            }*/
 
-            //distance_list_4.append(id_distances[i]);
+                distance_list_4.append(id_distances[i]);
+
+                received_data_quantity_4++;
+
+                if(id_distances[i]>max_value_4){
+                    max_value_4=id_distances[i];
+                }
+                if(id_distances[i]<min_value_4){
+                    min_value_4=id_distances[i];
+                }
+                accumulated_dist_4=accumulated_dist_4+id_distances[i];
+                mediafilter_value_4=(accumulated_dist_4)/received_data_quantity_4;  //Crear un numero_muestras para cada ID.
+            }
             ui->label_dist_value_4->setText(QString::number(id_distances[i],'f',2));
-            received_data_quantity_4++;
             if(mean_enable==1){
                 ui->label_mediafilter_4->setText(QString::number(bufer_media_4,'f',2)); //Comprobar funcionamiento al mirar la función de filtromedia.
             }
-            if(id_distances[i]>max_value_4){
-                max_value_4=id_distances[i];
-            }
-            if(id_distances[i]<min_value_4){
-                min_value_4=id_distances[i];
-            }
-            accumulated_dist_4=accumulated_dist_4+id_distances[i];
-            mediafilter_value_4=(accumulated_dist_4)/received_data_quantity_4;  //Crear un numero_muestras para cada ID.
             break;
         }
         if(auto_range==1){
