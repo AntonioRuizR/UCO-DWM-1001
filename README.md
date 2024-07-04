@@ -1,8 +1,8 @@
-# UCO DWM-GUI
+# UCO DWM-1001
 
 <p align="justify">
-An open-source, standalone GUI for control, processing and data recording of the DWM1001-DEV development boards developed by Qorvo company.
-This GUI has been developed in c++ using Qt 6.6.1 framework and Qt Creator 12.0.1 for open source development.
+An open-source, standalone tool for control, processing and data recording of the DWM1001-DEV development boards developed by Qorvo company.
+This application has been developed in c++ using Qt 6.6.1 framework and Qt Creator 12.0.1 for open source development.
 
 This repository contains the source code required to build and run this software. Also, in 'releases' section, a windows build for 64 bits is available.
 
@@ -25,7 +25,7 @@ This repository contains the source code required to build and run this software
 
 <h2 name="MainFeatures">Main features</h2>
 
-- Ready to use graphical user interface.
+- Ready to use application.
   
 - No DWM1001-DEV firmware modification required.
   
