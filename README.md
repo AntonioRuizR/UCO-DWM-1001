@@ -1,4 +1,4 @@
-# UCO DWM-1001
+# UCO DWM1001
 
 <p align="justify">
 An open-source, standalone tool for control, processing and data recording of the DWM1001-DEV development boards developed by Qorvo company.
@@ -19,6 +19,7 @@ This repository contains the source code required to build and run this software
 <li><a href="#MainFeatures">Main features</a></li>
 <li><a href="#Installation">Installation</a></li>
 <li><a href="#Usage">Usage</a></li>
+<li><a href="#CodeDocumentation">Code documentation</a></li>
 <li><a href="#LicenseContributing">License and contributing</a></li>
 </ul>
 </p>
@@ -102,6 +103,10 @@ To debug and build the source code into a executable binary, Qt for open source 
 <h2 name="Usage">Usage</h2>
 
 Detailed documentation, including a user guide with some usage examples is available [here](https://github.com/AntonioRuizR/UCO-DWM-GUI/blob/main/User%20Guide.pdf).
+
+<h2 name="CodeDocumentation">Code documentation</h2>
+
+A Doxygen code documentation has been generated and is avilable [here](https://antonioruizr.github.io/UCO-DWM-1001/doc/index.html).
 
 <h2 name="LicenseContributing">License and contributing</h2>
 
