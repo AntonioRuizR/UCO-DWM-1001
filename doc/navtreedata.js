@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "UCO-DWM-1001", "index.html", [
+  [ "UCO-DWM1001", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
