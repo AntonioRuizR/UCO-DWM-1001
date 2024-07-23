@@ -1,0 +1,1992 @@
+\doxysection{QCPPolar\+Axis\+Angular Class Reference}
+\hypertarget{class_q_c_p_polar_axis_angular}{}\label{class_q_c_p_polar_axis_angular}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+
+
+{\ttfamily \#include $<$qcustomplot.\+h$>$}
+
+Inheritance diagram for QCPPolar\+Axis\+Angular\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_q_c_p_polar_axis_angular}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416}{Selectable\+Part}} \{ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416a4cde0e8357b4ed68dd516694a347b232}{sp\+None}} = 0
+, \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416ab9b6df5346d143a9dca613dd392b4dc9}{sp\+Axis}} = 0x001
+, \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416a1e3a22b6fbffd2b0c4e561b31cce97c5}{sp\+Tick\+Labels}} = 0x002
+, \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416ad78c53954aaca5647d0ce10f843601f8}{sp\+Axis\+Label}} = 0x004
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}{Label\+Mode}} \{ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397ae99da54da989991a5d65752e11b7bf5a}{lm\+Upright}}
+, \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397a3af21615eee30b393c3c7a1891f073c0}{lm\+Rotated}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_q_c_p_layout_element}{QCPLayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_layout_element_a0d83360e05735735aaf6d7983c56374d}{Update\+Phase}} \{ \mbox{\hyperlink{class_q_c_p_layout_element_a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3}{up\+Preparation}}
+, \mbox{\hyperlink{class_q_c_p_layout_element_a0d83360e05735735aaf6d7983c56374da288cb59a92280e47261a341f2813e676}{up\+Margins}}
+, \mbox{\hyperlink{class_q_c_p_layout_element_a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045}{up\+Layout}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_layout_element_a0afb3e5773529e4bd20e448f81be4d2a}{Size\+Constraint\+Rect}} \{ \mbox{\hyperlink{class_q_c_p_layout_element_a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c}{scr\+Inner\+Rect}}
+, \mbox{\hyperlink{class_q_c_p_layout_element_a0afb3e5773529e4bd20e448f81be4d2aabe2745b41a6131ed194e13591b08e04d}{scr\+Outer\+Rect}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a70f1f41494d189693e0e12f8cdd103b4}{range\+Changed}} (const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&new\+Range)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af770dc3ea8fc17963439ee729725dca6}{range\+Changed}} (const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&new\+Range, const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&old\+Range)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa20dfb49bdfae700a08c9280ccb0d2c9}{selection\+Changed}} (const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&parts)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6131a9972658c62810fc0b646691a895}{selectable\+Changed}} (const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&parts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals inherited from \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_c_p_layerable_abbf8657cedea73ac1c3499b521c90eba}{layer\+Changed}} (\mbox{\hyperlink{class_q_c_p_layer}{QCPLayer}} \texorpdfstring{$\ast$}{*}new\+Layer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_axis_angular_afd2ca3525663193c15bc876a293ceb24}{QCPPolar\+Axis\+Angular}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_a36ed5b292b90934b524a4e5866a3526c}{parent\+Plot}})
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4c05ef0912dec61eeac72068904b3ddd}{\texorpdfstring{$\sim$}{\string~}\+QCPPolar\+Axis\+Angular}} ()
+\item 
+QPixmap \mbox{\hyperlink{class_q_c_p_polar_axis_angular_acc9363fce1ca7bd40605e0f3c8cc54a4}{background}} () const
+\item 
+QBrush \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a7bfb586f372b253f54ad0b3b90e538c4}{background\+Brush}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1cfc0497b2badb42f8dc041b79720471}{background\+Scaled}} () const
+\item 
+Qt\+::\+Aspect\+Ratio\+Mode \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac0cfb9c931d2c6b787e8a5542c1f39bb}{background\+Scaled\+Mode}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad64bc10bb5716c27da19ed6223b58ffd}{range\+Drag}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a733f74365ca85af9481bc24de1909cdd}{range\+Zoom}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1b47bcddf8a4ee2ca16849326a06837e}{range\+Zoom\+Factor}} () const
+\item 
+const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6f9155eec81c0e3f9194a78dda3a70da}{range}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2ee9b8b1b57ac2a151625f80a52987d8}{range\+Reversed}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a015e61ecbab17615243b3006972fedd0}{angle}} () const
+\item 
+QShared\+Pointer$<$ \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a318206c22b5097ba6bb0f538200f345e}{ticker}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2b869595bba8e6b9ce606234d78efbeb}{ticks}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8407b0cd8cea76cce77545dffae23c9b}{tick\+Labels}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab698c848ff49d02fd6e7bd36fa6cc7f0}{tick\+Label\+Padding}} () const
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a9cc7f7da0047d41fa76199234b186336}{tick\+Label\+Font}} () const
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae5d612b64054aba4b6d409c74dacc46f}{tick\+Label\+Color}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a40b8bf39a6465ad8d088220350e7c8d4}{tick\+Label\+Rotation}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}{Label\+Mode}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8db11990630350767daa93fa4f0524db}{tick\+Label\+Mode}} () const
+\item 
+QString \mbox{\hyperlink{class_q_c_p_polar_axis_angular_adb591c3100c83a1ee8a3dbefa1101fa6}{number\+Format}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a39cc9d4e46111db83639f79b910d26c6}{number\+Precision}} () const
+\item 
+QVector$<$ double $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3b85e896c572493f7c89b88c41237208}{tick\+Vector}} () const
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac74e89a5673b3d47251f0262a882d061}{tick\+Vector\+Labels}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3f4cc96cd313767d9ce9e8a4d1f83d95}{tick\+Length\+In}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_abdfca6f0950f8cc9864ad65456c7fc3a}{tick\+Length\+Out}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a019fb5d634792be4e074dfa1c4b446be}{sub\+Ticks}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aec477406ab0a045b606f2d790eab49f6}{sub\+Tick\+Length\+In}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af7c59b01e930fdc95c8a0f29d7e7382d}{sub\+Tick\+Length\+Out}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac67ec83037c5c98cbb3c86a4ee262963}{base\+Pen}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af0c17c53488ba9bcfd00e477891ae85e}{tick\+Pen}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8bd7d2273fb06c82123ce9557c0edf29}{sub\+Tick\+Pen}} () const
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a10bad34d8422b37e3c53c78e38cfc59b}{label\+Font}} () const
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af4da90b5add84c4882ee58f05770dced}{label\+Color}} () const
+\item 
+QString \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a24039f3366a7be3f6312990db6786347}{label}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab9df2e9291f16e8eb5a1679c226ce694}{label\+Padding}} () const
+\item 
+Selectable\+Parts \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad042ac4411d1d24383c6d255ed7b024e}{selected\+Parts}} () const
+\item 
+Selectable\+Parts \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2bfe67878cb7524438a4642ce13ec6b3}{selectable\+Parts}} () const
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3cbe50f9c3b6e21cfbc5454b9b30f865}{selected\+Tick\+Label\+Font}} () const
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_acc329bf844cc7dc8f36daadf4394388b}{selected\+Label\+Font}} () const
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8b81fcd5c5228c87ce255240138da048}{selected\+Tick\+Label\+Color}} () const
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a178731e34afbe01c0fc8e7a61a667119}{selected\+Label\+Color}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad7114bcb764190ddbc474bf631986143}{selected\+Base\+Pen}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af29d95a0e1f3bd10049d69958a5f9334}{selected\+Tick\+Pen}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a30bf0fbfbb7f9283447ff27f4bdce7df}{selected\+Sub\+Tick\+Pen}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_grid}{QCPPolar\+Grid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae93b4da6c4759412853e82558d094b99}{grid}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a11e1e23ea1d52abded4b7fab42c10e60}{set\+Background}} (const QPixmap \&pm)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af456d4aaf5f71807d88d1b8919f79355}{set\+Background}} (const QPixmap \&pm, bool scaled, Qt\+::\+Aspect\+Ratio\+Mode mode=Qt\+::\+Keep\+Aspect\+Ratio\+By\+Expanding)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a7c0dd85939536498818b49a89c1e2433}{set\+Background}} (const QBrush \&brush)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af2a38b983f2ebe8fe10ca256b119a90c}{set\+Background\+Scaled}} (bool scaled)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a57b0e1c12826f67cf6ce347628abcbd8}{set\+Background\+Scaled\+Mode}} (Qt\+::\+Aspect\+Ratio\+Mode mode)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8ccde7cbd3b0653bc4a36949cdc0f9b7}{set\+Range\+Drag}} (bool enabled)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad396ede98a2bdfea4ad316f28bb8a326}{set\+Range\+Zoom}} (bool enabled)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad8f3fba6de0616e105ce8a19748fd034}{set\+Range\+Zoom\+Factor}} (double factor)
+\item 
+Q\+\_\+\+SLOT void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aeebf0bb5c0ec03affc49c20d3c914ee1}{set\+Range}} (const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&\mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6f9155eec81c0e3f9194a78dda3a70da}{range}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a533759bbabbd9985e8ad4ecc11c044ef}{set\+Range}} (double lower, double upper)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a10d361152ed9ccf68ecf682ac82b4442}{set\+Range}} (double position, double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1513b98be721e6f8abb75aa49932cf20}{size}}, Qt\+::\+Alignment\+Flag alignment)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8b82f5859601eb1e70b8220794058c38}{set\+Range\+Lower}} (double lower)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4b395b3cd4d43caa506351d35b3f401d}{set\+Range\+Upper}} (double upper)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_adf584a9a77283842c8df20805b90b17f}{set\+Range\+Reversed}} (bool reversed)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a92c6afff78f7edf61714f592d611f682}{set\+Angle}} (double degrees)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a343fafde7e44cf32b7d89e45c9154bc8}{set\+Ticker}} (QShared\+Pointer$<$ \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a318206c22b5097ba6bb0f538200f345e}{ticker}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad2e017970a91fd11a7d19bed81e2be59}{set\+Ticks}} (bool show)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a268cb4962d63494311de8b2ad800d8da}{set\+Tick\+Labels}} (bool show)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad7bfedb138fedcdd19ce574baedd4f3f}{set\+Tick\+Label\+Padding}} (int padding)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a7a601994f36dc333aa5285d1c34ec55d}{set\+Tick\+Label\+Font}} (const QFont \&font)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8fb8a8146883d77f39904cfea0d67d7c}{set\+Tick\+Label\+Color}} (const QColor \&color)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af0922fd33a9589524f1600f316ea673c}{set\+Tick\+Label\+Rotation}} (double degrees)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a04f223e0320c4929ac0d70e019974171}{set\+Tick\+Label\+Mode}} (\mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}{Label\+Mode}} mode)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3781860cc80b9a6d8be2a4f8179733dd}{set\+Number\+Format}} (const QString \&format\+Code)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1c463fe5cbc8ddaead62b2278cfbfb35}{set\+Number\+Precision}} (int precision)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3ac0147527231f74bc8a3c6311ad9d15}{set\+Tick\+Length}} (int inside, int outside=0)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa94320e22819cbc33f66412efc48aa89}{set\+Tick\+Length\+In}} (int inside)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac71eb7632a34f616cfbfe49000033485}{set\+Tick\+Length\+Out}} (int outside)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4961b3541814e331c4cc29f66e709a45}{set\+Sub\+Ticks}} (bool show)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a460a6035eef606e5e23df175cd3eef08}{set\+Sub\+Tick\+Length}} (int inside, int outside=0)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a953513417d18c9380d0cee0870f35c45}{set\+Sub\+Tick\+Length\+In}} (int inside)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a9bb670f94f8402f8e1654fcc87d7fae1}{set\+Sub\+Tick\+Length\+Out}} (int outside)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a70cf79cc9e48b69d5d3ffed2a5e9e331}{set\+Base\+Pen}} (const QPen \&pen)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a10c0f44c36985b5cc3b1e9cd34fbd7e2}{set\+Tick\+Pen}} (const QPen \&pen)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3349a6435c3c844051649226f7ae5bd5}{set\+Sub\+Tick\+Pen}} (const QPen \&pen)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa033e53edcfdc5a86bc178a72606148a}{set\+Label\+Font}} (const QFont \&font)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a757c74562718fcbc0b854be439e271b6}{set\+Label\+Color}} (const QColor \&color)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a71b78ba614fccb2f4742e7e75cf0652e}{set\+Label}} (const QString \&str)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a956564f6c44c95fbc794f5a820233a14}{set\+Label\+Padding}} (int padding)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a32e633bd3806a1ea7b522f251f1e4396}{set\+Label\+Position}} (Qt\+::\+Alignment\+Flag position)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3a671db3137ff4b7501216e65fd5738f}{set\+Selected\+Tick\+Label\+Font}} (const QFont \&font)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_abd612ae3bd32fe700e03a6e403eac3e8}{set\+Selected\+Label\+Font}} (const QFont \&font)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aee32235a2ebd5492af2f632f179b8a0d}{set\+Selected\+Tick\+Label\+Color}} (const QColor \&color)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a9ddd53a24e6307384bf35dc38ffbe1d6}{set\+Selected\+Label\+Color}} (const QColor \&color)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2b48d57dee01f1f8a5895d0f458c7fc8}{set\+Selected\+Base\+Pen}} (const QPen \&pen)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aac8b0df8636b4e8222315c7ee444ac46}{set\+Selected\+Tick\+Pen}} (const QPen \&pen)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3778f58fde6ffe276207fcc32b498264}{set\+Selected\+Sub\+Tick\+Pen}} (const QPen \&pen)
+\item 
+Q\+\_\+\+SLOT void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a47dcc58b93188782e02f59d2732d95d8}{set\+Selectable\+Parts}} (const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&\mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2bfe67878cb7524438a4642ce13ec6b3}{selectable\+Parts}})
+\item 
+Q\+\_\+\+SLOT void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a444d78628e230baa1e046888ab5ae47d}{set\+Selected\+Parts}} (const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&\mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad042ac4411d1d24383c6d255ed7b024e}{selected\+Parts}})
+\item 
+virtual double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aece60ae90720f074b309c742a24819b6}{select\+Test}} (const QPointF \&pos, bool only\+Selectable, QVariant \texorpdfstring{$\ast$}{*}details=0) const \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a224733ff97a0b4c2d72208a50c8b6b0a}{update}} (\mbox{\hyperlink{class_q_c_p_layout_element_a0d83360e05735735aaf6d7983c56374d}{Update\+Phase}} phase) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual QList$<$ \mbox{\hyperlink{class_q_c_p_layout_element}{QCPLayout\+Element}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_afadff27abbc70c729c2577da499d776b}{elements}} (bool recursive) const \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aeabd68d454543427b9b63614689a17fd}{remove\+Graph}} (\mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}} \texorpdfstring{$\ast$}{*}graph)
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aec977a08ff4e0e433fd8df5c972b2919}{radial\+Axis\+Count}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa911d67b990aa1413bb7b63d6d7e36fe}{radial\+Axis}} (int index=0) const
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab3880298df8867253a535045d5a045a1}{radial\+Axes}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac5333ac2429f6d6223c5890ab32fda38}{add\+Radial\+Axis}} (\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*}axis=0)
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4a621a38de7b6d3844b47dd243092958}{remove\+Radial\+Axis}} (\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*}axis)
+\item 
+\mbox{\hyperlink{class_q_c_p_layout_inset}{QCPLayout\+Inset}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aab81c173315a73725150010a1893a17d}{inset\+Layout}} () const
+\item 
+QRegion \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a31145f65370a730317d28e73e74b9ab9}{exact\+Clip\+Region}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af5d19f1b60eba481e735829c5e9ec433}{move\+Range}} (double diff)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae101a2ad79391909da0c0f1f08f9e872}{scale\+Range}} (double factor)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3f1783650404238080da4d5fd99dd81e}{scale\+Range}} (double factor, double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2543f064aba8787535cb497f1cf21cbb}{center}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa8eace1f019b6c858473a192be088762}{rescale}} (bool only\+Visible\+Plottables=false)
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_adcf5f87f947e7eed1cc76548911d9760}{coord\+To\+Angle\+Rad}} (double coord) const
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_adb335933e6d4428f75d39cea1c75b6fe}{angle\+Rad\+To\+Coord}} (double angle\+Rad) const
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a577c03df0af3a329f0c4a9a3006a7f4b}{pixel\+To\+Coord}} (QPointF pixel\+Pos, double \&angle\+Coord, double \&radius\+Coord) const
+\item 
+QPointF \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af339215e1af216daafb4ceaccd359fd9}{coord\+To\+Pixel}} (double angle\+Coord, double radius\+Coord) const
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416}{Selectable\+Part}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af60e51cb9bed657dea0b19690b8e64b6}{get\+Part\+At}} (const QPointF \&pos) const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a277a8803e452cbfa100f27f37cae1b14}{left}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab5d7d189cffd21294a23ece4f1cd9ca8}{right}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_acda4f07fde44972d0f70e939b0224f6a}{top}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a99358487c1c025b9cf18dc22cc322c3b}{bottom}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_abde756ec197666d7ee91eee11bc7c6d5}{width}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1134ccb64704bf7b99ec99041a89ecf2}{height}} () const
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1513b98be721e6f8abb75aa49932cf20}{size}} () const
+\item 
+QPoint \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a70a1d0d6bd2a8ba43eed9f5de2c67f1c}{top\+Left}} () const
+\item 
+QPoint \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6c8996dd4ae16f1df9c7269ef970d40b}{top\+Right}} () const
+\item 
+QPoint \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a7342e0dd62b71f81b993c38db6fa4d5b}{bottom\+Left}} () const
+\item 
+QPoint \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af55ce49c9820e3057d220f51bc3504ab}{bottom\+Right}} () const
+\item 
+QPointF \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2543f064aba8787535cb497f1cf21cbb}{center}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4e3605d9d960977c46686825ec8cde83}{radius}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_q_c_p_layout_element}{QCPLayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_layout_element_a2c25c7bf27eaa1fad66807af855d8d81}{QCPLayout\+Element}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_a36ed5b292b90934b524a4e5866a3526c}{parent\+Plot}}=nullptr)
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_layout_element_a6ec74ac2641e27e43cac2e9a5bbeea31}{\texorpdfstring{$\sim$}{\string~}\+QCPLayout\+Element}} () \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+\mbox{\hyperlink{class_q_c_p_layout}{QCPLayout}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layout_element_a4efdcbde9d28f410e5ef166c9d691deb}{layout}} () const
+\item 
+QRect \mbox{\hyperlink{class_q_c_p_layout_element_a208effccfe2cca4a0eaf9393e60f2dd4}{rect}} () const
+\item 
+QRect \mbox{\hyperlink{class_q_c_p_layout_element_a2a32a12a6161c9dffbadeb9cc585510c}{outer\+Rect}} () const
+\item 
+QMargins \mbox{\hyperlink{class_q_c_p_layout_element_af4ac9450aa2d60863bf3a8ea0c940c9d}{margins}} () const
+\item 
+QMargins \mbox{\hyperlink{class_q_c_p_layout_element_a5eae30e28f28d73fd1c56409c011393e}{minimum\+Margins}} () const
+\item 
+QCP\+::\+Margin\+Sides \mbox{\hyperlink{class_q_c_p_layout_element_a2585bc8c5cc70ee712909751a2fc8909}{auto\+Margins}} () const
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_layout_element_a60d4295468a2b57fe91f6f68e20c3993}{minimum\+Size}} () const
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_layout_element_afb9503858d4aa0f3b9f1794b084fb40a}{maximum\+Size}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_layout_element_a0afb3e5773529e4bd20e448f81be4d2a}{Size\+Constraint\+Rect}} \mbox{\hyperlink{class_q_c_p_layout_element_a66136f121ee3e1c933b748761203cab4}{size\+Constraint\+Rect}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_margin_group}{QCPMargin\+Group}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layout_element_aa5513622910f31d9309f87886bee597a}{margin\+Group}} (\mbox{\hyperlink{namespace_q_c_p_a7e487e3e2ccb62ab7771065bab7cae54}{QCP\+::\+Margin\+Side}} side) const
+\item 
+QHash$<$ \mbox{\hyperlink{namespace_q_c_p_a7e487e3e2ccb62ab7771065bab7cae54}{QCP\+::\+Margin\+Side}}, \mbox{\hyperlink{class_q_c_p_margin_group}{QCPMargin\+Group}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_layout_element_acdd2c6b2ffb1c712e3bb3014fdec2e1b}{margin\+Groups}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a38975ea13e36de8e53391ce41d94bc0f}{set\+Outer\+Rect}} (const QRect \&\mbox{\hyperlink{class_q_c_p_layout_element_a208effccfe2cca4a0eaf9393e60f2dd4}{rect}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a8f450b1f3f992ad576fce2c63d8b79cf}{set\+Margins}} (const QMargins \&\mbox{\hyperlink{class_q_c_p_layout_element_af4ac9450aa2d60863bf3a8ea0c940c9d}{margins}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a0a8a17abc16b7923159fcc7608f94673}{set\+Minimum\+Margins}} (const QMargins \&\mbox{\hyperlink{class_q_c_p_layout_element_af4ac9450aa2d60863bf3a8ea0c940c9d}{margins}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_accfda49994e3e6d51ed14504abf9d27d}{set\+Auto\+Margins}} (QCP\+::\+Margin\+Sides sides)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a5dd29a3c8bc88440c97c06b67be7886b}{set\+Minimum\+Size}} (const QSize \&size)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a8e0447614a0bf92de9a7304588c6b96e}{set\+Minimum\+Size}} (int width, int height)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a74eb5280a737ab44833d506db65efd95}{set\+Maximum\+Size}} (const QSize \&size)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a03e0e9c48f230217c529b0819f832d84}{set\+Maximum\+Size}} (int width, int height)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a361666cdcc6fbfd37344cc44be746b0f}{set\+Size\+Constraint\+Rect}} (\mbox{\hyperlink{class_q_c_p_layout_element_a0afb3e5773529e4bd20e448f81be4d2a}{Size\+Constraint\+Rect}} constraint\+Rect)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layout_element_a516e56f76b6bc100e8e71d329866847d}{set\+Margin\+Group}} (QCP\+::\+Margin\+Sides sides, \mbox{\hyperlink{class_q_c_p_margin_group}{QCPMargin\+Group}} \texorpdfstring{$\ast$}{*}group)
+\item 
+virtual QSize \mbox{\hyperlink{class_q_c_p_layout_element_ab6d7299a8f62128ab664dd1c8adf067b}{minimum\+Outer\+Size\+Hint}} () const
+\item 
+virtual QSize \mbox{\hyperlink{class_q_c_p_layout_element_a92147584a1a967f9049a7f3b407dbaa5}{maximum\+Outer\+Size\+Hint}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_layerable_a4f87f420cb2597e2b393aab934d2f099}{QCPLayerable}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}plot, QString target\+Layer=QString(), \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_aa78b7e644d2c519e1a9a6f2ac5fcd858}{parent\+Layerable}}=nullptr)
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_layerable_a2d16dff8d4582cf6607dc7124287a9df}{\texorpdfstring{$\sim$}{\string~}\+QCPLayerable}} ()
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_af0297b944b6192b6d67d00bff41b6b70}{visible}} () const
+\item 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layerable_a36ed5b292b90934b524a4e5866a3526c}{parent\+Plot}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layerable_aa78b7e644d2c519e1a9a6f2ac5fcd858}{parent\+Layerable}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_layer}{QCPLayer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layerable_a9d4e121a7f1d2314f906fe698209cac9}{layer}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_a71cbd212fde2703cee076e204a475709}{antialiased}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_layerable_a3bed99ddc396b48ce3ebfdc0418744f8}{set\+Visible}} (bool on)
+\item 
+Q\+\_\+\+SLOT bool \mbox{\hyperlink{class_q_c_p_layerable_aea8c061ee8a1aa7ea88ee9ca9cbaa773}{set\+Layer}} (\mbox{\hyperlink{class_q_c_p_layer}{QCPLayer}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_a9d4e121a7f1d2314f906fe698209cac9}{layer}})
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_ab25a0e7b897993b44447caee0f142083}{set\+Layer}} (const QString \&layer\+Name)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layerable_a4fd43e89be4a553ead41652565ff0581}{set\+Antialiased}} (bool enabled)
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_ab054e88f15d485defcb95e7376f119e7}{real\+Visibility}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4a4db0dac66759b5ddb1b38b5aa1cabc}{apply\+Default\+Antialiasing\+Hint}} (\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}painter) const \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_acb86a22318e2a861f5b1ac1ca282c837}{draw}} (\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}painter) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual \mbox{\hyperlink{namespace_q_c_p_a2ad6bb6281c7c2d593d4277b44c2b037}{QCP\+::\+Interaction}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_afa47b56d762e6368dd0624c4d65bb5a1}{selection\+Category}} () const \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a08954169175e6fe589438aec49d4bd3d}{mouse\+Press\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}event, const QVariant \&details) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae131704a8ef5cdbe8e7e65848a2b2686}{mouse\+Move\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}event, const QPointF \&start\+Pos) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a033267be675a57574ed888c1ff64f2e9}{mouse\+Release\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}event, const QPointF \&start\+Pos) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a74228dd854db4283061831dac1766732}{wheel\+Event}} (QWheel\+Event \texorpdfstring{$\ast$}{*}event) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a05dabed291d5997541b87b64ceda2050}{register\+Polar\+Graph}} (\mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}} \texorpdfstring{$\ast$}{*}graph)
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a453f671a8dbfd88c6e8552290963a413}{draw\+Background}} (\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}painter, const QPointF \&\mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2543f064aba8787535cb497f1cf21cbb}{center}}, double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4e3605d9d960977c46686825ec8cde83}{radius}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a7c0b6a474a7d35f38e140c73bb8aa503}{setup\+Tick\+Vectors}} ()
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa66785e0f49f618f71ce206c56fd50c0}{get\+Base\+Pen}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3140a5735e78a81e02d783c507686386}{get\+Tick\+Pen}} () const
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a548af1ddf317718ef9185c417dd2d9a5}{get\+Sub\+Tick\+Pen}} () const
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3a352882e0a6488c7ca9fb41287eb992}{get\+Tick\+Label\+Font}} () const
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a0e3b6ab030b80d19cf8a7cd4490d4823}{get\+Label\+Font}} () const
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_abb2a0a47bfb799c35cab0506855da9bf}{get\+Tick\+Label\+Color}} () const
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3ba71718bf0217113846f7307d24df8d}{get\+Label\+Color}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_q_c_p_layout_element}{QCPLayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_q_c_p_layout_element_a76b2b2f6a68d337b2faa3a9e96c87c9e}{calculate\+Auto\+Margin}} (\mbox{\hyperlink{namespace_q_c_p_a7e487e3e2ccb62ab7771065bab7cae54}{QCP\+::\+Margin\+Side}} side)
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_layout_element_a11d34c67076e500041dd5448f573bbd5}{layout\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_layout_element_aa4e9a1488b6929588829846a46243dc6}{parent\+Plot\+Initialized}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_a36ed5b292b90934b524a4e5866a3526c}{parent\+Plot}}) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual QRect \mbox{\hyperlink{class_q_c_p_layerable_afe2a5078cf08b63f94a1d614f6380bc2}{clip\+Rect}} () const
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_layerable_a0ff16be287fca7c237070ed821e921db}{select\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}event, bool additive, const QVariant \&details, bool \texorpdfstring{$\ast$}{*}selection\+State\+Changed)
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_layerable_a86e627b6b03aea7202b65328bd150936}{deselect\+Event}} (bool \texorpdfstring{$\ast$}{*}selection\+State\+Changed)
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_layerable_afedfd6f29df0297deba2812f4497810c}{mouse\+Double\+Click\+Event}} (QMouse\+Event \texorpdfstring{$\ast$}{*}event, const QVariant \&details)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layerable_a8cbe5a0c9a5674249982f5ca5f8e02bc}{initialize\+Parent\+Plot}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_a36ed5b292b90934b524a4e5866a3526c}{parent\+Plot}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_layerable_aa23c893671f1f6744ac235cf2204cf3a}{set\+Parent\+Layerable}} (\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_aa78b7e644d2c519e1a9a6f2ac5fcd858}{parent\+Layerable}})
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_af94484cfb7cbbddb7de522e9be71d9a4}{move\+To\+Layer}} (\mbox{\hyperlink{class_q_c_p_layer}{QCPLayer}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layerable_a9d4e121a7f1d2314f906fe698209cac9}{layer}}, bool prepend)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layerable_acb663e375d2d36dc5c55021ee5a2119b}{apply\+Antialiasing\+Hint}} (\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}painter, bool local\+Antialiased, \mbox{\hyperlink{namespace_q_c_p_ae55dbe315d41fe80f29ba88100843a0c}{QCP\+::\+Antialiased\+Element}} override\+Element) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QBrush \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3f5410ae2e7eaf44d1ac0a100b589f80}{m\+Background\+Brush}}
+\item 
+QPixmap \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a46084a9eb319dc5c8e88ca3ad01dcba6}{m\+Background\+Pixmap}}
+\item 
+QPixmap \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a02e286c769db5801c6d6b9f803f2cbdf}{m\+Scaled\+Background\+Pixmap}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae677a27e5381a7aca0b808228979c6c1}{m\+Background\+Scaled}}
+\item 
+Qt\+::\+Aspect\+Ratio\+Mode \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab817ad6fecb2417c4b33edadf4916ba2}{m\+Background\+Scaled\+Mode}}
+\item 
+\mbox{\hyperlink{class_q_c_p_layout_inset}{QCPLayout\+Inset}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa41b6d3e32168b2004804bdb2b4bbb13}{m\+Inset\+Layout}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_afba70315f39ac7c5aeca3a9932e6cae2}{m\+Range\+Drag}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_abc035f0e3ae30d869cde868a194c089b}{m\+Range\+Zoom}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8145e2741614f652bbe8c247495e1520}{m\+Range\+Zoom\+Factor}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a60ba468d32cdcb1ccf8974fd64d806de}{m\+Angle}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a19d4266a0498134ae8d6e670ec9a54fb}{m\+Angle\+Rad}}
+\item 
+Selectable\+Parts \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6e5deba9eb9786ed8e33862234f702b9}{m\+Selectable\+Parts}}
+\item 
+Selectable\+Parts \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a585c75aaceb4f653c9aa312832ce583e}{m\+Selected\+Parts}}
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af689b90127a47989c93b6f8b35239ad6}{m\+Base\+Pen}}
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a7b9fa65b5157602368b40436d751b886}{m\+Selected\+Base\+Pen}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a82a2ed4f3fdaf5438358976476a68dc5}{m\+Label\+Padding}}
+\item 
+QString \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6389565458a25fe6ece7c647ab490313}{m\+Label}}
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aab06a0467440beb6bfe30608aacc5fd4}{m\+Label\+Font}}
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a27deaca4ccb608fdcf0c92e2136ee5a5}{m\+Selected\+Label\+Font}}
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a07f002df3552c8740cb0ccccac0d5b2c}{m\+Label\+Color}}
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_af4504c28a0c1540adba16696a0b2ec33}{m\+Selected\+Label\+Color}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab8004354529255850cc7642bfe1679c1}{m\+Tick\+Labels}}
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ab57289f30afcc9302cf18f42412560f7}{m\+Tick\+Label\+Font}}
+\item 
+QFont \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa5c0413a95cead043025b8c24118345e}{m\+Selected\+Tick\+Label\+Font}}
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1b8124383d33e0b66b60bb6bb7b879cc}{m\+Tick\+Label\+Color}}
+\item 
+QColor \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a40178f7db8b0f56c1a0d2797f6e66816}{m\+Selected\+Tick\+Label\+Color}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aa10f054b6dbead520d89487febc50fbf}{m\+Number\+Precision}}
+\item 
+QLatin1\+Char \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac7419c6d953e8be82fd2dddc72f417b3}{m\+Number\+Format\+Char}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aac55ca0d449c442567d59b0999ea509b}{m\+Number\+Beautiful\+Powers}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a0519f06bc4f599747361d050a3533933}{m\+Number\+Multiply\+Cross}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8183cc3b5048a6f519e3c6b3b90797b5}{m\+Ticks}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4faa96cea04acfde25d2542af03b5f60}{m\+Sub\+Ticks}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ac9cb6b0ec4594abe471239365ba92809}{m\+Tick\+Length\+In}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aaa5f7d37b51c14e300d4e0ab696a04a5}{m\+Tick\+Length\+Out}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a40135452a4cd39ba5439f1267e0e5232}{m\+Sub\+Tick\+Length\+In}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_polar_axis_angular_afd8d1bc0ecbca2f6073f35d09c7a5728}{m\+Sub\+Tick\+Length\+Out}}
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a9337d09058b29fbbfd52d9abd193998c}{m\+Tick\+Pen}}
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a351dd829b440142e28ba65ab232da63c}{m\+Selected\+Tick\+Pen}}
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a8f11aa2e3e5b61f7982aa77ffd690a55}{m\+Sub\+Tick\+Pen}}
+\item 
+QPen \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad86694151d2d431d11654b85790d2b51}{m\+Selected\+Sub\+Tick\+Pen}}
+\item 
+\mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a9c3e7b44a9fb83a2638aac003aea1a84}{m\+Range}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae93330885f57594a085188ab79c175df}{m\+Range\+Reversed}}
+\item 
+QPointF \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad75c9ac740d24c0f0cebd782e0d208df}{m\+Center}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a780444529ad6777d607689a8a737a4cf}{m\+Radius}}
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a048f96e18d3b99074ef565b45059e221}{m\+Radial\+Axes}}
+\item 
+\mbox{\hyperlink{class_q_c_p_polar_grid}{QCPPolar\+Grid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a01765bb4c33da3fb44eed2ffe822f52a}{m\+Grid}}
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4cb61dcd0d96e35ff335e2312f802930}{m\+Graphs}}
+\item 
+QShared\+Pointer$<$ \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a431fe99c6f72ad2f0671a54fb5b4b457}{m\+Ticker}}
+\item 
+QVector$<$ double $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6650ba75f68b439528aabd4dcedcd720}{m\+Tick\+Vector}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a66f5d71105c134e19dc527b704b32461}{m\+Tick\+Vector\+Labels}}
+\item 
+QVector$<$ QPointF $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a3577e475914e58d6d779b03d6faf383a}{m\+Tick\+Vector\+Cos\+Sin}}
+\item 
+QVector$<$ double $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_add3c2d5ada6121c904662130da5944cf}{m\+Sub\+Tick\+Vector}}
+\item 
+QVector$<$ QPointF $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a4d189b91f9df020a5928826d103a844a}{m\+Sub\+Tick\+Vector\+Cos\+Sin}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_polar_axis_angular_abad49e188fd7feb34e88349a53260cf9}{m\+Dragging}}
+\item 
+\mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ae55d6bbf5f0b380e37bdba17a4d918a9}{m\+Drag\+Angular\+Start}}
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} $>$ \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a45c98ce5b94cbf0ff6ff4d48eee6d405}{m\+Drag\+Radial\+Start}}
+\item 
+QCP\+::\+Antialiased\+Elements \mbox{\hyperlink{class_q_c_p_polar_axis_angular_aad6823e7692cbfe39477ca7af6209f04}{m\+AADrag\+Backup}}
+\item 
+QCP\+::\+Antialiased\+Elements \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a498b0307a9b836400649eb7874f69211}{m\+Not\+AADrag\+Backup}}
+\item 
+\mbox{\hyperlink{class_q_c_p_label_painter_private}{QCPLabel\+Painter\+Private}} \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6fdce30bafad6fbaaf84100a28518119}{m\+Label\+Painter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_q_c_p_layout_element}{QCPLayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_layout}{QCPLayout}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layout_element_ae7c75c25549608bd688bdb65d4c38066}{m\+Parent\+Layout}}
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_layout_element_affef747c81632de33f08483b7fd10d01}{m\+Minimum\+Size}}
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_layout_element_a64a387973fd4addac842028c89088998}{m\+Maximum\+Size}}
+\item 
+\mbox{\hyperlink{class_q_c_p_layout_element_a0afb3e5773529e4bd20e448f81be4d2a}{Size\+Constraint\+Rect}} \mbox{\hyperlink{class_q_c_p_layout_element_acc012635b1ae178ff3c4da8a3af303a2}{m\+Size\+Constraint\+Rect}}
+\item 
+QRect \mbox{\hyperlink{class_q_c_p_layout_element_ad8896f05550389f7b9e92c9e6cdf6e01}{m\+Rect}}
+\item 
+QRect \mbox{\hyperlink{class_q_c_p_layout_element_a07bb4973379e75cb0fa5b032c1d24afd}{m\+Outer\+Rect}}
+\item 
+QMargins \mbox{\hyperlink{class_q_c_p_layout_element_ac2a32b99ee527ca5dfff9da03628fe94}{m\+Margins}}
+\item 
+QMargins \mbox{\hyperlink{class_q_c_p_layout_element_a5ba71f25d1af4bb092b28df618538e63}{m\+Minimum\+Margins}}
+\item 
+QCP\+::\+Margin\+Sides \mbox{\hyperlink{class_q_c_p_layout_element_af61c70354d1275778d68206b2a1b2d36}{m\+Auto\+Margins}}
+\item 
+QHash$<$ \mbox{\hyperlink{namespace_q_c_p_a7e487e3e2ccb62ab7771065bab7cae54}{QCP\+::\+Margin\+Side}}, \mbox{\hyperlink{class_q_c_p_margin_group}{QCPMargin\+Group}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_layout_element_aeafbbc1130e02eee663c5326761fc963}{m\+Margin\+Groups}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_a62e3aed8427d6ce3ccf716f285106cb3}{m\+Visible}}
+\item 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layerable_aa2a528433e44db02b8aef23c1f9f90ed}{m\+Parent\+Plot}}
+\item 
+QPointer$<$ \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} $>$ \mbox{\hyperlink{class_q_c_p_layerable_a3291445a980053e2d17a21d15957624e}{m\+Parent\+Layerable}}
+\item 
+\mbox{\hyperlink{class_q_c_p_layer}{QCPLayer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layerable_aa38ec5891aff0f50b36fd63e9372a0cd}{m\+Layer}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layerable_a3ab45a4c76a3333ce42eb217a81733ec}{m\+Antialiased}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a1cdf9df76adcfae45261690aa0ca2198}{QCustom\+Plot}}
+\item 
+class \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a2a278df7b98bfbeb3a209635e96647cb}{QCPPolar\+Grid}}
+\item 
+class \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a6e100f125d9339f3310d2bcd91719e61}{QCPPolar\+Graph}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!LabelMode@{LabelMode}}
+\index{LabelMode@{LabelMode}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{LabelMode}{LabelMode}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397} 
+enum \mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}{QCPPolar\+Axis\+Angular\+::\+Label\+Mode}}}
+
+TODO \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lmUpright@{lmUpright}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!lmUpright@{lmUpright}}}\Hypertarget{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397ae99da54da989991a5d65752e11b7bf5a}\label{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397} 
+lm\+Upright&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lmRotated@{lmRotated}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!lmRotated@{lmRotated}}}\Hypertarget{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397a3af21615eee30b393c3c7a1891f073c0}\label{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397} 
+lm\+Rotated&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!SelectablePart@{SelectablePart}}
+\index{SelectablePart@{SelectablePart}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{SelectablePart}{SelectablePart}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416} 
+enum \mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416}{QCPPolar\+Axis\+Angular\+::\+Selectable\+Part}}}
+
+Defines the selectable parts of an axis. \begin{DoxySeeAlso}{See also}
+\doxylink{class_q_c_p_polar_axis_angular_a47dcc58b93188782e02f59d2732d95d8}{set\+Selectable\+Parts}, \doxylink{class_q_c_p_polar_axis_angular_a444d78628e230baa1e046888ab5ae47d}{set\+Selected\+Parts} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spNone@{spNone}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!spNone@{spNone}}}\Hypertarget{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416a4cde0e8357b4ed68dd516694a347b232}\label{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416} 
+sp\+None&None of the selectable parts. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spAxis@{spAxis}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!spAxis@{spAxis}}}\Hypertarget{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416ab9b6df5346d143a9dca613dd392b4dc9}\label{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416} 
+sp\+Axis&The axis backbone and tick marks. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spTickLabels@{spTickLabels}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!spTickLabels@{spTickLabels}}}\Hypertarget{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416a1e3a22b6fbffd2b0c4e561b31cce97c5}\label{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416} 
+sp\+Tick\+Labels&Tick labels (numbers) of this axis (as a whole, not individually) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spAxisLabel@{spAxisLabel}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!spAxisLabel@{spAxisLabel}}}\Hypertarget{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416ad78c53954aaca5647d0ce10f843601f8}\label{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416} 
+sp\+Axis\+Label&The axis label. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_q_c_p_polar_axis_angular_afd2ca3525663193c15bc876a293ceb24}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{QCPPolarAxisAngular()}{QCPPolarAxisAngular()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_afd2ca3525663193c15bc876a293ceb24} 
+QCPPolar\+Axis\+Angular\+::\+QCPPolar\+Axis\+Angular (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}}]{parent\+Plot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4c05ef0912dec61eeac72068904b3ddd}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!````~QCPPolarAxisAngular@{\texorpdfstring{$\sim$}{\string~}QCPPolarAxisAngular}}
+\index{````~QCPPolarAxisAngular@{\texorpdfstring{$\sim$}{\string~}QCPPolarAxisAngular}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}QCPPolarAxisAngular()}{\string~QCPPolarAxisAngular()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4c05ef0912dec61eeac72068904b3ddd} 
+virtual QCPPolar\+Axis\+Angular\+::\texorpdfstring{$\sim$}{\string~}\+QCPPolar\+Axis\+Angular (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_q_c_p_polar_axis_angular_ac5333ac2429f6d6223c5890ab32fda38}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!addRadialAxis@{addRadialAxis}}
+\index{addRadialAxis@{addRadialAxis}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{addRadialAxis()}{addRadialAxis()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac5333ac2429f6d6223c5890ab32fda38} 
+\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} QCPPolar\+Axis\+Angular\+::add\+Radial\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*}}]{axis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a015e61ecbab17615243b3006972fedd0}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!angle@{angle}}
+\index{angle@{angle}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{angle()}{angle()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a015e61ecbab17615243b3006972fedd0} 
+double QCPPolar\+Axis\+Angular\+::angle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_adb335933e6d4428f75d39cea1c75b6fe}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!angleRadToCoord@{angleRadToCoord}}
+\index{angleRadToCoord@{angleRadToCoord}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{angleRadToCoord()}{angleRadToCoord()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_adb335933e6d4428f75d39cea1c75b6fe} 
+double QCPPolar\+Axis\+Angular\+::angle\+Rad\+To\+Coord (\begin{DoxyParamCaption}\item[{double}]{angle\+Rad}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4a4db0dac66759b5ddb1b38b5aa1cabc}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!applyDefaultAntialiasingHint@{applyDefaultAntialiasingHint}}
+\index{applyDefaultAntialiasingHint@{applyDefaultAntialiasingHint}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{applyDefaultAntialiasingHint()}{applyDefaultAntialiasingHint()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4a4db0dac66759b5ddb1b38b5aa1cabc} 
+virtual void QCPPolar\+Axis\+Angular\+::apply\+Default\+Antialiasing\+Hint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}}]{painter}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layout_element_a0a8f18141bcf46cf40ad4c13324ff346}{QCPLayout\+Element}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_acc9363fce1ca7bd40605e0f3c8cc54a4}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!background@{background}}
+\index{background@{background}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{background()}{background()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_acc9363fce1ca7bd40605e0f3c8cc54a4} 
+QPixmap QCPPolar\+Axis\+Angular\+::background (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a7bfb586f372b253f54ad0b3b90e538c4}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!backgroundBrush@{backgroundBrush}}
+\index{backgroundBrush@{backgroundBrush}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{backgroundBrush()}{backgroundBrush()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a7bfb586f372b253f54ad0b3b90e538c4} 
+QBrush QCPPolar\+Axis\+Angular\+::background\+Brush (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1cfc0497b2badb42f8dc041b79720471}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!backgroundScaled@{backgroundScaled}}
+\index{backgroundScaled@{backgroundScaled}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{backgroundScaled()}{backgroundScaled()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1cfc0497b2badb42f8dc041b79720471} 
+bool QCPPolar\+Axis\+Angular\+::background\+Scaled (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ac0cfb9c931d2c6b787e8a5542c1f39bb}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!backgroundScaledMode@{backgroundScaledMode}}
+\index{backgroundScaledMode@{backgroundScaledMode}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{backgroundScaledMode()}{backgroundScaledMode()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac0cfb9c931d2c6b787e8a5542c1f39bb} 
+Qt\+::\+Aspect\+Ratio\+Mode QCPPolar\+Axis\+Angular\+::background\+Scaled\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ac67ec83037c5c98cbb3c86a4ee262963}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!basePen@{basePen}}
+\index{basePen@{basePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{basePen()}{basePen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac67ec83037c5c98cbb3c86a4ee262963} 
+QPen QCPPolar\+Axis\+Angular\+::base\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a99358487c1c025b9cf18dc22cc322c3b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!bottom@{bottom}}
+\index{bottom@{bottom}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{bottom()}{bottom()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a99358487c1c025b9cf18dc22cc322c3b} 
+int QCPPolar\+Axis\+Angular\+::bottom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a7342e0dd62b71f81b993c38db6fa4d5b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!bottomLeft@{bottomLeft}}
+\index{bottomLeft@{bottomLeft}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{bottomLeft()}{bottomLeft()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a7342e0dd62b71f81b993c38db6fa4d5b} 
+QPoint QCPPolar\+Axis\+Angular\+::bottom\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af55ce49c9820e3057d220f51bc3504ab}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!bottomRight@{bottomRight}}
+\index{bottomRight@{bottomRight}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{bottomRight()}{bottomRight()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af55ce49c9820e3057d220f51bc3504ab} 
+QPoint QCPPolar\+Axis\+Angular\+::bottom\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a2543f064aba8787535cb497f1cf21cbb}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!center@{center}}
+\index{center@{center}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{center()}{center()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a2543f064aba8787535cb497f1cf21cbb} 
+QPointF QCPPolar\+Axis\+Angular\+::center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_adcf5f87f947e7eed1cc76548911d9760}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!coordToAngleRad@{coordToAngleRad}}
+\index{coordToAngleRad@{coordToAngleRad}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{coordToAngleRad()}{coordToAngleRad()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_adcf5f87f947e7eed1cc76548911d9760} 
+double QCPPolar\+Axis\+Angular\+::coord\+To\+Angle\+Rad (\begin{DoxyParamCaption}\item[{double}]{coord}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af339215e1af216daafb4ceaccd359fd9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!coordToPixel@{coordToPixel}}
+\index{coordToPixel@{coordToPixel}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{coordToPixel()}{coordToPixel()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af339215e1af216daafb4ceaccd359fd9} 
+QPointF QCPPolar\+Axis\+Angular\+::coord\+To\+Pixel (\begin{DoxyParamCaption}\item[{double}]{angle\+Coord}{, }\item[{double}]{radius\+Coord}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_acb86a22318e2a861f5b1ac1ca282c837}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!draw@{draw}}
+\index{draw@{draw}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_acb86a22318e2a861f5b1ac1ca282c837} 
+virtual void QCPPolar\+Axis\+Angular\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}}]{painter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layout_element_ad1c597b1d608cfdd86e7b76819a94cfb}{QCPLayout\+Element}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a453f671a8dbfd88c6e8552290963a413}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{drawBackground()}{drawBackground()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a453f671a8dbfd88c6e8552290963a413} 
+void QCPPolar\+Axis\+Angular\+::draw\+Background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}}]{painter}{, }\item[{const QPointF \&}]{center}{, }\item[{double}]{radius}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_afadff27abbc70c729c2577da499d776b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!elements@{elements}}
+\index{elements@{elements}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{elements()}{elements()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_afadff27abbc70c729c2577da499d776b} 
+virtual QList$<$ \mbox{\hyperlink{class_q_c_p_layout_element}{QCPLayout\+Element}} \texorpdfstring{$\ast$}{*} $>$ QCPPolar\+Axis\+Angular\+::elements (\begin{DoxyParamCaption}\item[{bool}]{recursive}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layout_element_adeb9064330dcf403c8cd546894dd4808}{QCPLayout\+Element}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a31145f65370a730317d28e73e74b9ab9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!exactClipRegion@{exactClipRegion}}
+\index{exactClipRegion@{exactClipRegion}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{exactClipRegion()}{exactClipRegion()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a31145f65370a730317d28e73e74b9ab9} 
+QRegion QCPPolar\+Axis\+Angular\+::exact\+Clip\+Region (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa66785e0f49f618f71ce206c56fd50c0}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getBasePen@{getBasePen}}
+\index{getBasePen@{getBasePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getBasePen()}{getBasePen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa66785e0f49f618f71ce206c56fd50c0} 
+QPen QCPPolar\+Axis\+Angular\+::get\+Base\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3ba71718bf0217113846f7307d24df8d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getLabelColor@{getLabelColor}}
+\index{getLabelColor@{getLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getLabelColor()}{getLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3ba71718bf0217113846f7307d24df8d} 
+QColor QCPPolar\+Axis\+Angular\+::get\+Label\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a0e3b6ab030b80d19cf8a7cd4490d4823}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getLabelFont@{getLabelFont}}
+\index{getLabelFont@{getLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getLabelFont()}{getLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a0e3b6ab030b80d19cf8a7cd4490d4823} 
+QFont QCPPolar\+Axis\+Angular\+::get\+Label\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af60e51cb9bed657dea0b19690b8e64b6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getPartAt@{getPartAt}}
+\index{getPartAt@{getPartAt}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getPartAt()}{getPartAt()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af60e51cb9bed657dea0b19690b8e64b6} 
+\mbox{\hyperlink{class_q_c_p_polar_axis_angular_a342afffd77fa1e8b30778b29a26eb416}{Selectable\+Part}} QCPPolar\+Axis\+Angular\+::get\+Part\+At (\begin{DoxyParamCaption}\item[{const QPointF \&}]{pos}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a548af1ddf317718ef9185c417dd2d9a5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getSubTickPen@{getSubTickPen}}
+\index{getSubTickPen@{getSubTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getSubTickPen()}{getSubTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a548af1ddf317718ef9185c417dd2d9a5} 
+QPen QCPPolar\+Axis\+Angular\+::get\+Sub\+Tick\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_abb2a0a47bfb799c35cab0506855da9bf}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getTickLabelColor@{getTickLabelColor}}
+\index{getTickLabelColor@{getTickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getTickLabelColor()}{getTickLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_abb2a0a47bfb799c35cab0506855da9bf} 
+QColor QCPPolar\+Axis\+Angular\+::get\+Tick\+Label\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3a352882e0a6488c7ca9fb41287eb992}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getTickLabelFont@{getTickLabelFont}}
+\index{getTickLabelFont@{getTickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getTickLabelFont()}{getTickLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3a352882e0a6488c7ca9fb41287eb992} 
+QFont QCPPolar\+Axis\+Angular\+::get\+Tick\+Label\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3140a5735e78a81e02d783c507686386}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!getTickPen@{getTickPen}}
+\index{getTickPen@{getTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{getTickPen()}{getTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3140a5735e78a81e02d783c507686386} 
+QPen QCPPolar\+Axis\+Angular\+::get\+Tick\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae93b4da6c4759412853e82558d094b99}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!grid@{grid}}
+\index{grid@{grid}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{grid()}{grid()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae93b4da6c4759412853e82558d094b99} 
+\mbox{\hyperlink{class_q_c_p_polar_grid}{QCPPolar\+Grid}} \texorpdfstring{$\ast$}{*} QCPPolar\+Axis\+Angular\+::grid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1134ccb64704bf7b99ec99041a89ecf2}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!height@{height}}
+\index{height@{height}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1134ccb64704bf7b99ec99041a89ecf2} 
+int QCPPolar\+Axis\+Angular\+::height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aab81c173315a73725150010a1893a17d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!insetLayout@{insetLayout}}
+\index{insetLayout@{insetLayout}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{insetLayout()}{insetLayout()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aab81c173315a73725150010a1893a17d} 
+\mbox{\hyperlink{class_q_c_p_layout_inset}{QCPLayout\+Inset}} \texorpdfstring{$\ast$}{*} QCPPolar\+Axis\+Angular\+::inset\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a24039f3366a7be3f6312990db6786347}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!label@{label}}
+\index{label@{label}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a24039f3366a7be3f6312990db6786347} 
+QString QCPPolar\+Axis\+Angular\+::label (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af4da90b5add84c4882ee58f05770dced}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!labelColor@{labelColor}}
+\index{labelColor@{labelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{labelColor()}{labelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af4da90b5add84c4882ee58f05770dced} 
+QColor QCPPolar\+Axis\+Angular\+::label\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a10bad34d8422b37e3c53c78e38cfc59b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!labelFont@{labelFont}}
+\index{labelFont@{labelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{labelFont()}{labelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a10bad34d8422b37e3c53c78e38cfc59b} 
+QFont QCPPolar\+Axis\+Angular\+::label\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab9df2e9291f16e8eb5a1679c226ce694}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!labelPadding@{labelPadding}}
+\index{labelPadding@{labelPadding}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{labelPadding()}{labelPadding()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab9df2e9291f16e8eb5a1679c226ce694} 
+int QCPPolar\+Axis\+Angular\+::label\+Padding (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a277a8803e452cbfa100f27f37cae1b14}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!left@{left}}
+\index{left@{left}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a277a8803e452cbfa100f27f37cae1b14} 
+int QCPPolar\+Axis\+Angular\+::left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae131704a8ef5cdbe8e7e65848a2b2686}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mouseMoveEvent()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae131704a8ef5cdbe8e7e65848a2b2686} 
+virtual void QCPPolar\+Axis\+Angular\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{const QPointF \&}]{start\+Pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layerable_afd4d5359773fc5f479bcd6c5bb7d9711}{QCPLayerable}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a08954169175e6fe589438aec49d4bd3d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a08954169175e6fe589438aec49d4bd3d} 
+virtual void QCPPolar\+Axis\+Angular\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{const QVariant \&}]{details}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layerable_a0295d5eb32e429bd1a9845e4fe889a93}{QCPLayerable}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a033267be675a57574ed888c1ff64f2e9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a033267be675a57574ed888c1ff64f2e9} 
+virtual void QCPPolar\+Axis\+Angular\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{const QPointF \&}]{start\+Pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layerable_a2f1b906a2cf286bc492b4600c369b28c}{QCPLayerable}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af5d19f1b60eba481e735829c5e9ec433}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!moveRange@{moveRange}}
+\index{moveRange@{moveRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{moveRange()}{moveRange()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af5d19f1b60eba481e735829c5e9ec433} 
+void QCPPolar\+Axis\+Angular\+::move\+Range (\begin{DoxyParamCaption}\item[{double}]{diff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_adb591c3100c83a1ee8a3dbefa1101fa6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!numberFormat@{numberFormat}}
+\index{numberFormat@{numberFormat}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{numberFormat()}{numberFormat()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_adb591c3100c83a1ee8a3dbefa1101fa6} 
+QString QCPPolar\+Axis\+Angular\+::number\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a39cc9d4e46111db83639f79b910d26c6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!numberPrecision@{numberPrecision}}
+\index{numberPrecision@{numberPrecision}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{numberPrecision()}{numberPrecision()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a39cc9d4e46111db83639f79b910d26c6} 
+int QCPPolar\+Axis\+Angular\+::number\+Precision (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a577c03df0af3a329f0c4a9a3006a7f4b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!pixelToCoord@{pixelToCoord}}
+\index{pixelToCoord@{pixelToCoord}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{pixelToCoord()}{pixelToCoord()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a577c03df0af3a329f0c4a9a3006a7f4b} 
+void QCPPolar\+Axis\+Angular\+::pixel\+To\+Coord (\begin{DoxyParamCaption}\item[{QPointF}]{pixel\+Pos}{, }\item[{double \&}]{angle\+Coord}{, }\item[{double \&}]{radius\+Coord}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab3880298df8867253a535045d5a045a1}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!radialAxes@{radialAxes}}
+\index{radialAxes@{radialAxes}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{radialAxes()}{radialAxes()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab3880298df8867253a535045d5a045a1} 
+QList$<$ \mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} $>$ QCPPolar\+Axis\+Angular\+::radial\+Axes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa911d67b990aa1413bb7b63d6d7e36fe}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!radialAxis@{radialAxis}}
+\index{radialAxis@{radialAxis}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{radialAxis()}{radialAxis()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa911d67b990aa1413bb7b63d6d7e36fe} 
+\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*} QCPPolar\+Axis\+Angular\+::radial\+Axis (\begin{DoxyParamCaption}\item[{int}]{index}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aec977a08ff4e0e433fd8df5c972b2919}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!radialAxisCount@{radialAxisCount}}
+\index{radialAxisCount@{radialAxisCount}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{radialAxisCount()}{radialAxisCount()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aec977a08ff4e0e433fd8df5c972b2919} 
+int QCPPolar\+Axis\+Angular\+::radial\+Axis\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4e3605d9d960977c46686825ec8cde83}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!radius@{radius}}
+\index{radius@{radius}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{radius()}{radius()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4e3605d9d960977c46686825ec8cde83} 
+double QCPPolar\+Axis\+Angular\+::radius (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6f9155eec81c0e3f9194a78dda3a70da}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!range@{range}}
+\index{range@{range}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6f9155eec81c0e3f9194a78dda3a70da} 
+const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} QCPPolar\+Axis\+Angular\+::range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a70f1f41494d189693e0e12f8cdd103b4}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rangeChanged@{rangeChanged}}
+\index{rangeChanged@{rangeChanged}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rangeChanged}{rangeChanged}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a70f1f41494d189693e0e12f8cdd103b4} 
+void QCPPolar\+Axis\+Angular\+::range\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&}]{new\+Range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af770dc3ea8fc17963439ee729725dca6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rangeChanged@{rangeChanged}}
+\index{rangeChanged@{rangeChanged}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rangeChanged}{rangeChanged}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af770dc3ea8fc17963439ee729725dca6} 
+void QCPPolar\+Axis\+Angular\+::range\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&}]{new\+Range}{, }\item[{const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&}]{old\+Range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad64bc10bb5716c27da19ed6223b58ffd}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rangeDrag@{rangeDrag}}
+\index{rangeDrag@{rangeDrag}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rangeDrag()}{rangeDrag()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad64bc10bb5716c27da19ed6223b58ffd} 
+bool QCPPolar\+Axis\+Angular\+::range\+Drag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a2ee9b8b1b57ac2a151625f80a52987d8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rangeReversed@{rangeReversed}}
+\index{rangeReversed@{rangeReversed}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rangeReversed()}{rangeReversed()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a2ee9b8b1b57ac2a151625f80a52987d8} 
+bool QCPPolar\+Axis\+Angular\+::range\+Reversed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a733f74365ca85af9481bc24de1909cdd}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rangeZoom@{rangeZoom}}
+\index{rangeZoom@{rangeZoom}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rangeZoom()}{rangeZoom()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a733f74365ca85af9481bc24de1909cdd} 
+bool QCPPolar\+Axis\+Angular\+::range\+Zoom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1b47bcddf8a4ee2ca16849326a06837e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rangeZoomFactor@{rangeZoomFactor}}
+\index{rangeZoomFactor@{rangeZoomFactor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rangeZoomFactor()}{rangeZoomFactor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1b47bcddf8a4ee2ca16849326a06837e} 
+double QCPPolar\+Axis\+Angular\+::range\+Zoom\+Factor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a05dabed291d5997541b87b64ceda2050}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!registerPolarGraph@{registerPolarGraph}}
+\index{registerPolarGraph@{registerPolarGraph}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{registerPolarGraph()}{registerPolarGraph()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a05dabed291d5997541b87b64ceda2050} 
+bool QCPPolar\+Axis\+Angular\+::register\+Polar\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aeabd68d454543427b9b63614689a17fd}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!removeGraph@{removeGraph}}
+\index{removeGraph@{removeGraph}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{removeGraph()}{removeGraph()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aeabd68d454543427b9b63614689a17fd} 
+bool QCPPolar\+Axis\+Angular\+::remove\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4a621a38de7b6d3844b47dd243092958}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!removeRadialAxis@{removeRadialAxis}}
+\index{removeRadialAxis@{removeRadialAxis}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{removeRadialAxis()}{removeRadialAxis()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4a621a38de7b6d3844b47dd243092958} 
+bool QCPPolar\+Axis\+Angular\+::remove\+Radial\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}} \texorpdfstring{$\ast$}{*}}]{axis}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa8eace1f019b6c858473a192be088762}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!rescale@{rescale}}
+\index{rescale@{rescale}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{rescale()}{rescale()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa8eace1f019b6c858473a192be088762} 
+void QCPPolar\+Axis\+Angular\+::rescale (\begin{DoxyParamCaption}\item[{bool}]{only\+Visible\+Plottables}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab5d7d189cffd21294a23ece4f1cd9ca8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!right@{right}}
+\index{right@{right}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{right()}{right()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab5d7d189cffd21294a23ece4f1cd9ca8} 
+int QCPPolar\+Axis\+Angular\+::right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae101a2ad79391909da0c0f1f08f9e872}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!scaleRange@{scaleRange}}
+\index{scaleRange@{scaleRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{scaleRange()}{scaleRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae101a2ad79391909da0c0f1f08f9e872} 
+void QCPPolar\+Axis\+Angular\+::scale\+Range (\begin{DoxyParamCaption}\item[{double}]{factor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3f1783650404238080da4d5fd99dd81e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!scaleRange@{scaleRange}}
+\index{scaleRange@{scaleRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{scaleRange()}{scaleRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3f1783650404238080da4d5fd99dd81e} 
+void QCPPolar\+Axis\+Angular\+::scale\+Range (\begin{DoxyParamCaption}\item[{double}]{factor}{, }\item[{double}]{center}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6131a9972658c62810fc0b646691a895}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectableChanged@{selectableChanged}}
+\index{selectableChanged@{selectableChanged}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectableChanged}{selectableChanged}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6131a9972658c62810fc0b646691a895} 
+void QCPPolar\+Axis\+Angular\+::selectable\+Changed (\begin{DoxyParamCaption}\item[{const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&}]{parts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a2bfe67878cb7524438a4642ce13ec6b3}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectableParts@{selectableParts}}
+\index{selectableParts@{selectableParts}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectableParts()}{selectableParts()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a2bfe67878cb7524438a4642ce13ec6b3} 
+Selectable\+Parts QCPPolar\+Axis\+Angular\+::selectable\+Parts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad7114bcb764190ddbc474bf631986143}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedBasePen@{selectedBasePen}}
+\index{selectedBasePen@{selectedBasePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedBasePen()}{selectedBasePen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad7114bcb764190ddbc474bf631986143} 
+QPen QCPPolar\+Axis\+Angular\+::selected\+Base\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a178731e34afbe01c0fc8e7a61a667119}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedLabelColor@{selectedLabelColor}}
+\index{selectedLabelColor@{selectedLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedLabelColor()}{selectedLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a178731e34afbe01c0fc8e7a61a667119} 
+QColor QCPPolar\+Axis\+Angular\+::selected\+Label\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_acc329bf844cc7dc8f36daadf4394388b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedLabelFont@{selectedLabelFont}}
+\index{selectedLabelFont@{selectedLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedLabelFont()}{selectedLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_acc329bf844cc7dc8f36daadf4394388b} 
+QFont QCPPolar\+Axis\+Angular\+::selected\+Label\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad042ac4411d1d24383c6d255ed7b024e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedParts@{selectedParts}}
+\index{selectedParts@{selectedParts}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedParts()}{selectedParts()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad042ac4411d1d24383c6d255ed7b024e} 
+Selectable\+Parts QCPPolar\+Axis\+Angular\+::selected\+Parts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a30bf0fbfbb7f9283447ff27f4bdce7df}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedSubTickPen@{selectedSubTickPen}}
+\index{selectedSubTickPen@{selectedSubTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedSubTickPen()}{selectedSubTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a30bf0fbfbb7f9283447ff27f4bdce7df} 
+QPen QCPPolar\+Axis\+Angular\+::selected\+Sub\+Tick\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8b81fcd5c5228c87ce255240138da048}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedTickLabelColor@{selectedTickLabelColor}}
+\index{selectedTickLabelColor@{selectedTickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedTickLabelColor()}{selectedTickLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8b81fcd5c5228c87ce255240138da048} 
+QColor QCPPolar\+Axis\+Angular\+::selected\+Tick\+Label\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3cbe50f9c3b6e21cfbc5454b9b30f865}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedTickLabelFont@{selectedTickLabelFont}}
+\index{selectedTickLabelFont@{selectedTickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedTickLabelFont()}{selectedTickLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3cbe50f9c3b6e21cfbc5454b9b30f865} 
+QFont QCPPolar\+Axis\+Angular\+::selected\+Tick\+Label\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af29d95a0e1f3bd10049d69958a5f9334}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectedTickPen@{selectedTickPen}}
+\index{selectedTickPen@{selectedTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectedTickPen()}{selectedTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af29d95a0e1f3bd10049d69958a5f9334} 
+QPen QCPPolar\+Axis\+Angular\+::selected\+Tick\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_afa47b56d762e6368dd0624c4d65bb5a1}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectionCategory@{selectionCategory}}
+\index{selectionCategory@{selectionCategory}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectionCategory()}{selectionCategory()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_afa47b56d762e6368dd0624c4d65bb5a1} 
+virtual \mbox{\hyperlink{namespace_q_c_p_a2ad6bb6281c7c2d593d4277b44c2b037}{QCP\+::\+Interaction}} QCPPolar\+Axis\+Angular\+::selection\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layerable_ae6857c38a001ba0c0c7fcdd99714ae51}{QCPLayerable}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa20dfb49bdfae700a08c9280ccb0d2c9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectionChanged@{selectionChanged}}
+\index{selectionChanged@{selectionChanged}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectionChanged}{selectionChanged}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa20dfb49bdfae700a08c9280ccb0d2c9} 
+void QCPPolar\+Axis\+Angular\+::selection\+Changed (\begin{DoxyParamCaption}\item[{const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&}]{parts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aece60ae90720f074b309c742a24819b6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!selectTest@{selectTest}}
+\index{selectTest@{selectTest}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{selectTest()}{selectTest()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aece60ae90720f074b309c742a24819b6} 
+virtual double QCPPolar\+Axis\+Angular\+::select\+Test (\begin{DoxyParamCaption}\item[{const QPointF \&}]{pos}{, }\item[{bool}]{only\+Selectable}{, }\item[{QVariant \texorpdfstring{$\ast$}{*}}]{details}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layout_element_a7fa712b49cf8b34f59ef901cf57d34a7}{QCPLayout\+Element}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a92c6afff78f7edf61714f592d611f682}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a92c6afff78f7edf61714f592d611f682} 
+void QCPPolar\+Axis\+Angular\+::set\+Angle (\begin{DoxyParamCaption}\item[{double}]{degrees}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a7c0dd85939536498818b49a89c1e2433}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a7c0dd85939536498818b49a89c1e2433} 
+void QCPPolar\+Axis\+Angular\+::set\+Background (\begin{DoxyParamCaption}\item[{const QBrush \&}]{brush}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a11e1e23ea1d52abded4b7fab42c10e60}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a11e1e23ea1d52abded4b7fab42c10e60} 
+void QCPPolar\+Axis\+Angular\+::set\+Background (\begin{DoxyParamCaption}\item[{const QPixmap \&}]{pm}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af456d4aaf5f71807d88d1b8919f79355}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af456d4aaf5f71807d88d1b8919f79355} 
+void QCPPolar\+Axis\+Angular\+::set\+Background (\begin{DoxyParamCaption}\item[{const QPixmap \&}]{pm}{, }\item[{bool}]{scaled}{, }\item[{Qt\+::\+Aspect\+Ratio\+Mode}]{mode}{ = {\ttfamily Qt\+:\+:KeepAspectRatioByExpanding}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af2a38b983f2ebe8fe10ca256b119a90c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setBackgroundScaled@{setBackgroundScaled}}
+\index{setBackgroundScaled@{setBackgroundScaled}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setBackgroundScaled()}{setBackgroundScaled()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af2a38b983f2ebe8fe10ca256b119a90c} 
+void QCPPolar\+Axis\+Angular\+::set\+Background\+Scaled (\begin{DoxyParamCaption}\item[{bool}]{scaled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a57b0e1c12826f67cf6ce347628abcbd8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setBackgroundScaledMode@{setBackgroundScaledMode}}
+\index{setBackgroundScaledMode@{setBackgroundScaledMode}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setBackgroundScaledMode()}{setBackgroundScaledMode()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a57b0e1c12826f67cf6ce347628abcbd8} 
+void QCPPolar\+Axis\+Angular\+::set\+Background\+Scaled\+Mode (\begin{DoxyParamCaption}\item[{Qt\+::\+Aspect\+Ratio\+Mode}]{mode}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a70cf79cc9e48b69d5d3ffed2a5e9e331}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setBasePen@{setBasePen}}
+\index{setBasePen@{setBasePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setBasePen()}{setBasePen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a70cf79cc9e48b69d5d3ffed2a5e9e331} 
+void QCPPolar\+Axis\+Angular\+::set\+Base\+Pen (\begin{DoxyParamCaption}\item[{const QPen \&}]{pen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a71b78ba614fccb2f4742e7e75cf0652e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setLabel@{setLabel}}
+\index{setLabel@{setLabel}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setLabel()}{setLabel()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a71b78ba614fccb2f4742e7e75cf0652e} 
+void QCPPolar\+Axis\+Angular\+::set\+Label (\begin{DoxyParamCaption}\item[{const QString \&}]{str}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a757c74562718fcbc0b854be439e271b6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setLabelColor@{setLabelColor}}
+\index{setLabelColor@{setLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setLabelColor()}{setLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a757c74562718fcbc0b854be439e271b6} 
+void QCPPolar\+Axis\+Angular\+::set\+Label\+Color (\begin{DoxyParamCaption}\item[{const QColor \&}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa033e53edcfdc5a86bc178a72606148a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setLabelFont@{setLabelFont}}
+\index{setLabelFont@{setLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setLabelFont()}{setLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa033e53edcfdc5a86bc178a72606148a} 
+void QCPPolar\+Axis\+Angular\+::set\+Label\+Font (\begin{DoxyParamCaption}\item[{const QFont \&}]{font}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a956564f6c44c95fbc794f5a820233a14}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setLabelPadding@{setLabelPadding}}
+\index{setLabelPadding@{setLabelPadding}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setLabelPadding()}{setLabelPadding()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a956564f6c44c95fbc794f5a820233a14} 
+void QCPPolar\+Axis\+Angular\+::set\+Label\+Padding (\begin{DoxyParamCaption}\item[{int}]{padding}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a32e633bd3806a1ea7b522f251f1e4396}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setLabelPosition@{setLabelPosition}}
+\index{setLabelPosition@{setLabelPosition}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setLabelPosition()}{setLabelPosition()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a32e633bd3806a1ea7b522f251f1e4396} 
+void QCPPolar\+Axis\+Angular\+::set\+Label\+Position (\begin{DoxyParamCaption}\item[{Qt\+::\+Alignment\+Flag}]{position}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3781860cc80b9a6d8be2a4f8179733dd}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setNumberFormat@{setNumberFormat}}
+\index{setNumberFormat@{setNumberFormat}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setNumberFormat()}{setNumberFormat()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3781860cc80b9a6d8be2a4f8179733dd} 
+void QCPPolar\+Axis\+Angular\+::set\+Number\+Format (\begin{DoxyParamCaption}\item[{const QString \&}]{format\+Code}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1c463fe5cbc8ddaead62b2278cfbfb35}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setNumberPrecision@{setNumberPrecision}}
+\index{setNumberPrecision@{setNumberPrecision}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setNumberPrecision()}{setNumberPrecision()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1c463fe5cbc8ddaead62b2278cfbfb35} 
+void QCPPolar\+Axis\+Angular\+::set\+Number\+Precision (\begin{DoxyParamCaption}\item[{int}]{precision}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aeebf0bb5c0ec03affc49c20d3c914ee1}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRange@{setRange}}
+\index{setRange@{setRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRange()}{setRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aeebf0bb5c0ec03affc49c20d3c914ee1} 
+Q\+\_\+\+SLOT void QCPPolar\+Axis\+Angular\+::set\+Range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&}]{range}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a533759bbabbd9985e8ad4ecc11c044ef}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRange@{setRange}}
+\index{setRange@{setRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRange()}{setRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a533759bbabbd9985e8ad4ecc11c044ef} 
+void QCPPolar\+Axis\+Angular\+::set\+Range (\begin{DoxyParamCaption}\item[{double}]{lower}{, }\item[{double}]{upper}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a10d361152ed9ccf68ecf682ac82b4442}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRange@{setRange}}
+\index{setRange@{setRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRange()}{setRange()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a10d361152ed9ccf68ecf682ac82b4442} 
+void QCPPolar\+Axis\+Angular\+::set\+Range (\begin{DoxyParamCaption}\item[{double}]{position}{, }\item[{double}]{size}{, }\item[{Qt\+::\+Alignment\+Flag}]{alignment}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8ccde7cbd3b0653bc4a36949cdc0f9b7}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRangeDrag@{setRangeDrag}}
+\index{setRangeDrag@{setRangeDrag}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRangeDrag()}{setRangeDrag()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8ccde7cbd3b0653bc4a36949cdc0f9b7} 
+void QCPPolar\+Axis\+Angular\+::set\+Range\+Drag (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8b82f5859601eb1e70b8220794058c38}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRangeLower@{setRangeLower}}
+\index{setRangeLower@{setRangeLower}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRangeLower()}{setRangeLower()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8b82f5859601eb1e70b8220794058c38} 
+void QCPPolar\+Axis\+Angular\+::set\+Range\+Lower (\begin{DoxyParamCaption}\item[{double}]{lower}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_adf584a9a77283842c8df20805b90b17f}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRangeReversed@{setRangeReversed}}
+\index{setRangeReversed@{setRangeReversed}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRangeReversed()}{setRangeReversed()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_adf584a9a77283842c8df20805b90b17f} 
+void QCPPolar\+Axis\+Angular\+::set\+Range\+Reversed (\begin{DoxyParamCaption}\item[{bool}]{reversed}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4b395b3cd4d43caa506351d35b3f401d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRangeUpper@{setRangeUpper}}
+\index{setRangeUpper@{setRangeUpper}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRangeUpper()}{setRangeUpper()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4b395b3cd4d43caa506351d35b3f401d} 
+void QCPPolar\+Axis\+Angular\+::set\+Range\+Upper (\begin{DoxyParamCaption}\item[{double}]{upper}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad396ede98a2bdfea4ad316f28bb8a326}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRangeZoom@{setRangeZoom}}
+\index{setRangeZoom@{setRangeZoom}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRangeZoom()}{setRangeZoom()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad396ede98a2bdfea4ad316f28bb8a326} 
+void QCPPolar\+Axis\+Angular\+::set\+Range\+Zoom (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad8f3fba6de0616e105ce8a19748fd034}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setRangeZoomFactor@{setRangeZoomFactor}}
+\index{setRangeZoomFactor@{setRangeZoomFactor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setRangeZoomFactor()}{setRangeZoomFactor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad8f3fba6de0616e105ce8a19748fd034} 
+void QCPPolar\+Axis\+Angular\+::set\+Range\+Zoom\+Factor (\begin{DoxyParamCaption}\item[{double}]{factor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a47dcc58b93188782e02f59d2732d95d8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectableParts@{setSelectableParts}}
+\index{setSelectableParts@{setSelectableParts}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectableParts()}{setSelectableParts()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a47dcc58b93188782e02f59d2732d95d8} 
+Q\+\_\+\+SLOT void QCPPolar\+Axis\+Angular\+::set\+Selectable\+Parts (\begin{DoxyParamCaption}\item[{const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&}]{selectable\+Parts}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a2b48d57dee01f1f8a5895d0f458c7fc8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedBasePen@{setSelectedBasePen}}
+\index{setSelectedBasePen@{setSelectedBasePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedBasePen()}{setSelectedBasePen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a2b48d57dee01f1f8a5895d0f458c7fc8} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Base\+Pen (\begin{DoxyParamCaption}\item[{const QPen \&}]{pen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a9ddd53a24e6307384bf35dc38ffbe1d6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedLabelColor@{setSelectedLabelColor}}
+\index{setSelectedLabelColor@{setSelectedLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedLabelColor()}{setSelectedLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a9ddd53a24e6307384bf35dc38ffbe1d6} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Label\+Color (\begin{DoxyParamCaption}\item[{const QColor \&}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_abd612ae3bd32fe700e03a6e403eac3e8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedLabelFont@{setSelectedLabelFont}}
+\index{setSelectedLabelFont@{setSelectedLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedLabelFont()}{setSelectedLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_abd612ae3bd32fe700e03a6e403eac3e8} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Label\+Font (\begin{DoxyParamCaption}\item[{const QFont \&}]{font}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a444d78628e230baa1e046888ab5ae47d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedParts@{setSelectedParts}}
+\index{setSelectedParts@{setSelectedParts}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedParts()}{setSelectedParts()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a444d78628e230baa1e046888ab5ae47d} 
+Q\+\_\+\+SLOT void QCPPolar\+Axis\+Angular\+::set\+Selected\+Parts (\begin{DoxyParamCaption}\item[{const QCPPolar\+Axis\+Angular\+::\+Selectable\+Parts \&}]{selected\+Parts}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3778f58fde6ffe276207fcc32b498264}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedSubTickPen@{setSelectedSubTickPen}}
+\index{setSelectedSubTickPen@{setSelectedSubTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedSubTickPen()}{setSelectedSubTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3778f58fde6ffe276207fcc32b498264} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Sub\+Tick\+Pen (\begin{DoxyParamCaption}\item[{const QPen \&}]{pen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aee32235a2ebd5492af2f632f179b8a0d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedTickLabelColor@{setSelectedTickLabelColor}}
+\index{setSelectedTickLabelColor@{setSelectedTickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedTickLabelColor()}{setSelectedTickLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aee32235a2ebd5492af2f632f179b8a0d} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Tick\+Label\+Color (\begin{DoxyParamCaption}\item[{const QColor \&}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3a671db3137ff4b7501216e65fd5738f}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedTickLabelFont@{setSelectedTickLabelFont}}
+\index{setSelectedTickLabelFont@{setSelectedTickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedTickLabelFont()}{setSelectedTickLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3a671db3137ff4b7501216e65fd5738f} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Tick\+Label\+Font (\begin{DoxyParamCaption}\item[{const QFont \&}]{font}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aac8b0df8636b4e8222315c7ee444ac46}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSelectedTickPen@{setSelectedTickPen}}
+\index{setSelectedTickPen@{setSelectedTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSelectedTickPen()}{setSelectedTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aac8b0df8636b4e8222315c7ee444ac46} 
+void QCPPolar\+Axis\+Angular\+::set\+Selected\+Tick\+Pen (\begin{DoxyParamCaption}\item[{const QPen \&}]{pen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a460a6035eef606e5e23df175cd3eef08}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSubTickLength@{setSubTickLength}}
+\index{setSubTickLength@{setSubTickLength}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSubTickLength()}{setSubTickLength()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a460a6035eef606e5e23df175cd3eef08} 
+void QCPPolar\+Axis\+Angular\+::set\+Sub\+Tick\+Length (\begin{DoxyParamCaption}\item[{int}]{inside}{, }\item[{int}]{outside}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a953513417d18c9380d0cee0870f35c45}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSubTickLengthIn@{setSubTickLengthIn}}
+\index{setSubTickLengthIn@{setSubTickLengthIn}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSubTickLengthIn()}{setSubTickLengthIn()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a953513417d18c9380d0cee0870f35c45} 
+void QCPPolar\+Axis\+Angular\+::set\+Sub\+Tick\+Length\+In (\begin{DoxyParamCaption}\item[{int}]{inside}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a9bb670f94f8402f8e1654fcc87d7fae1}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSubTickLengthOut@{setSubTickLengthOut}}
+\index{setSubTickLengthOut@{setSubTickLengthOut}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSubTickLengthOut()}{setSubTickLengthOut()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a9bb670f94f8402f8e1654fcc87d7fae1} 
+void QCPPolar\+Axis\+Angular\+::set\+Sub\+Tick\+Length\+Out (\begin{DoxyParamCaption}\item[{int}]{outside}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3349a6435c3c844051649226f7ae5bd5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSubTickPen@{setSubTickPen}}
+\index{setSubTickPen@{setSubTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSubTickPen()}{setSubTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3349a6435c3c844051649226f7ae5bd5} 
+void QCPPolar\+Axis\+Angular\+::set\+Sub\+Tick\+Pen (\begin{DoxyParamCaption}\item[{const QPen \&}]{pen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4961b3541814e331c4cc29f66e709a45}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setSubTicks@{setSubTicks}}
+\index{setSubTicks@{setSubTicks}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setSubTicks()}{setSubTicks()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4961b3541814e331c4cc29f66e709a45} 
+void QCPPolar\+Axis\+Angular\+::set\+Sub\+Ticks (\begin{DoxyParamCaption}\item[{bool}]{show}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a343fafde7e44cf32b7d89e45c9154bc8}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTicker@{setTicker}}
+\index{setTicker@{setTicker}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTicker()}{setTicker()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a343fafde7e44cf32b7d89e45c9154bc8} 
+void QCPPolar\+Axis\+Angular\+::set\+Ticker (\begin{DoxyParamCaption}\item[{QShared\+Pointer$<$ \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}} $>$}]{ticker}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8fb8a8146883d77f39904cfea0d67d7c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLabelColor@{setTickLabelColor}}
+\index{setTickLabelColor@{setTickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLabelColor()}{setTickLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8fb8a8146883d77f39904cfea0d67d7c} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Label\+Color (\begin{DoxyParamCaption}\item[{const QColor \&}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a7a601994f36dc333aa5285d1c34ec55d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLabelFont@{setTickLabelFont}}
+\index{setTickLabelFont@{setTickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLabelFont()}{setTickLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a7a601994f36dc333aa5285d1c34ec55d} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Label\+Font (\begin{DoxyParamCaption}\item[{const QFont \&}]{font}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a04f223e0320c4929ac0d70e019974171}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLabelMode@{setTickLabelMode}}
+\index{setTickLabelMode@{setTickLabelMode}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLabelMode()}{setTickLabelMode()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a04f223e0320c4929ac0d70e019974171} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Label\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}{Label\+Mode}}}]{mode}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad7bfedb138fedcdd19ce574baedd4f3f}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLabelPadding@{setTickLabelPadding}}
+\index{setTickLabelPadding@{setTickLabelPadding}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLabelPadding()}{setTickLabelPadding()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad7bfedb138fedcdd19ce574baedd4f3f} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Label\+Padding (\begin{DoxyParamCaption}\item[{int}]{padding}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af0922fd33a9589524f1600f316ea673c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLabelRotation@{setTickLabelRotation}}
+\index{setTickLabelRotation@{setTickLabelRotation}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLabelRotation()}{setTickLabelRotation()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af0922fd33a9589524f1600f316ea673c} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Label\+Rotation (\begin{DoxyParamCaption}\item[{double}]{degrees}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a268cb4962d63494311de8b2ad800d8da}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLabels@{setTickLabels}}
+\index{setTickLabels@{setTickLabels}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLabels()}{setTickLabels()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a268cb4962d63494311de8b2ad800d8da} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Labels (\begin{DoxyParamCaption}\item[{bool}]{show}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3ac0147527231f74bc8a3c6311ad9d15}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLength@{setTickLength}}
+\index{setTickLength@{setTickLength}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLength()}{setTickLength()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3ac0147527231f74bc8a3c6311ad9d15} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Length (\begin{DoxyParamCaption}\item[{int}]{inside}{, }\item[{int}]{outside}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa94320e22819cbc33f66412efc48aa89}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLengthIn@{setTickLengthIn}}
+\index{setTickLengthIn@{setTickLengthIn}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLengthIn()}{setTickLengthIn()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa94320e22819cbc33f66412efc48aa89} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Length\+In (\begin{DoxyParamCaption}\item[{int}]{inside}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ac71eb7632a34f616cfbfe49000033485}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickLengthOut@{setTickLengthOut}}
+\index{setTickLengthOut@{setTickLengthOut}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickLengthOut()}{setTickLengthOut()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac71eb7632a34f616cfbfe49000033485} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Length\+Out (\begin{DoxyParamCaption}\item[{int}]{outside}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a10c0f44c36985b5cc3b1e9cd34fbd7e2}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTickPen@{setTickPen}}
+\index{setTickPen@{setTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTickPen()}{setTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a10c0f44c36985b5cc3b1e9cd34fbd7e2} 
+void QCPPolar\+Axis\+Angular\+::set\+Tick\+Pen (\begin{DoxyParamCaption}\item[{const QPen \&}]{pen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad2e017970a91fd11a7d19bed81e2be59}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setTicks@{setTicks}}
+\index{setTicks@{setTicks}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setTicks()}{setTicks()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad2e017970a91fd11a7d19bed81e2be59} 
+void QCPPolar\+Axis\+Angular\+::set\+Ticks (\begin{DoxyParamCaption}\item[{bool}]{show}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a7c0b6a474a7d35f38e140c73bb8aa503}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!setupTickVectors@{setupTickVectors}}
+\index{setupTickVectors@{setupTickVectors}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{setupTickVectors()}{setupTickVectors()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a7c0b6a474a7d35f38e140c73bb8aa503} 
+void QCPPolar\+Axis\+Angular\+::setup\+Tick\+Vectors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1513b98be721e6f8abb75aa49932cf20}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!size@{size}}
+\index{size@{size}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1513b98be721e6f8abb75aa49932cf20} 
+QSize QCPPolar\+Axis\+Angular\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aec477406ab0a045b606f2d790eab49f6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!subTickLengthIn@{subTickLengthIn}}
+\index{subTickLengthIn@{subTickLengthIn}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{subTickLengthIn()}{subTickLengthIn()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aec477406ab0a045b606f2d790eab49f6} 
+int QCPPolar\+Axis\+Angular\+::sub\+Tick\+Length\+In (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af7c59b01e930fdc95c8a0f29d7e7382d}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!subTickLengthOut@{subTickLengthOut}}
+\index{subTickLengthOut@{subTickLengthOut}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{subTickLengthOut()}{subTickLengthOut()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af7c59b01e930fdc95c8a0f29d7e7382d} 
+int QCPPolar\+Axis\+Angular\+::sub\+Tick\+Length\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8bd7d2273fb06c82123ce9557c0edf29}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!subTickPen@{subTickPen}}
+\index{subTickPen@{subTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{subTickPen()}{subTickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8bd7d2273fb06c82123ce9557c0edf29} 
+QPen QCPPolar\+Axis\+Angular\+::sub\+Tick\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a019fb5d634792be4e074dfa1c4b446be}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!subTicks@{subTicks}}
+\index{subTicks@{subTicks}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{subTicks()}{subTicks()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a019fb5d634792be4e074dfa1c4b446be} 
+bool QCPPolar\+Axis\+Angular\+::sub\+Ticks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a318206c22b5097ba6bb0f538200f345e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!ticker@{ticker}}
+\index{ticker@{ticker}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{ticker()}{ticker()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a318206c22b5097ba6bb0f538200f345e} 
+QShared\+Pointer$<$ \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}} $>$ QCPPolar\+Axis\+Angular\+::ticker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae5d612b64054aba4b6d409c74dacc46f}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLabelColor@{tickLabelColor}}
+\index{tickLabelColor@{tickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLabelColor()}{tickLabelColor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae5d612b64054aba4b6d409c74dacc46f} 
+QColor QCPPolar\+Axis\+Angular\+::tick\+Label\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a9cc7f7da0047d41fa76199234b186336}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLabelFont@{tickLabelFont}}
+\index{tickLabelFont@{tickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLabelFont()}{tickLabelFont()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a9cc7f7da0047d41fa76199234b186336} 
+QFont QCPPolar\+Axis\+Angular\+::tick\+Label\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8db11990630350767daa93fa4f0524db}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLabelMode@{tickLabelMode}}
+\index{tickLabelMode@{tickLabelMode}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLabelMode()}{tickLabelMode()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8db11990630350767daa93fa4f0524db} 
+\mbox{\hyperlink{class_q_c_p_polar_axis_angular_ad9d85ec7a6b5febe6c27ab54fdd46397}{Label\+Mode}} QCPPolar\+Axis\+Angular\+::tick\+Label\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab698c848ff49d02fd6e7bd36fa6cc7f0}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLabelPadding@{tickLabelPadding}}
+\index{tickLabelPadding@{tickLabelPadding}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLabelPadding()}{tickLabelPadding()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab698c848ff49d02fd6e7bd36fa6cc7f0} 
+int QCPPolar\+Axis\+Angular\+::tick\+Label\+Padding (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a40b8bf39a6465ad8d088220350e7c8d4}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLabelRotation@{tickLabelRotation}}
+\index{tickLabelRotation@{tickLabelRotation}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLabelRotation()}{tickLabelRotation()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a40b8bf39a6465ad8d088220350e7c8d4} 
+double QCPPolar\+Axis\+Angular\+::tick\+Label\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8407b0cd8cea76cce77545dffae23c9b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLabels@{tickLabels}}
+\index{tickLabels@{tickLabels}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLabels()}{tickLabels()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8407b0cd8cea76cce77545dffae23c9b} 
+bool QCPPolar\+Axis\+Angular\+::tick\+Labels (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3f4cc96cd313767d9ce9e8a4d1f83d95}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLengthIn@{tickLengthIn}}
+\index{tickLengthIn@{tickLengthIn}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLengthIn()}{tickLengthIn()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3f4cc96cd313767d9ce9e8a4d1f83d95} 
+int QCPPolar\+Axis\+Angular\+::tick\+Length\+In (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_abdfca6f0950f8cc9864ad65456c7fc3a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickLengthOut@{tickLengthOut}}
+\index{tickLengthOut@{tickLengthOut}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickLengthOut()}{tickLengthOut()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_abdfca6f0950f8cc9864ad65456c7fc3a} 
+int QCPPolar\+Axis\+Angular\+::tick\+Length\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af0c17c53488ba9bcfd00e477891ae85e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickPen@{tickPen}}
+\index{tickPen@{tickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickPen()}{tickPen()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af0c17c53488ba9bcfd00e477891ae85e} 
+QPen QCPPolar\+Axis\+Angular\+::tick\+Pen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a2b869595bba8e6b9ce606234d78efbeb}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!ticks@{ticks}}
+\index{ticks@{ticks}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{ticks()}{ticks()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a2b869595bba8e6b9ce606234d78efbeb} 
+bool QCPPolar\+Axis\+Angular\+::ticks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3b85e896c572493f7c89b88c41237208}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickVector@{tickVector}}
+\index{tickVector@{tickVector}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickVector()}{tickVector()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3b85e896c572493f7c89b88c41237208} 
+QVector$<$ double $>$ QCPPolar\+Axis\+Angular\+::tick\+Vector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ac74e89a5673b3d47251f0262a882d061}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!tickVectorLabels@{tickVectorLabels}}
+\index{tickVectorLabels@{tickVectorLabels}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{tickVectorLabels()}{tickVectorLabels()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac74e89a5673b3d47251f0262a882d061} 
+QVector$<$ QString $>$ QCPPolar\+Axis\+Angular\+::tick\+Vector\+Labels (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_acda4f07fde44972d0f70e939b0224f6a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!top@{top}}
+\index{top@{top}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_acda4f07fde44972d0f70e939b0224f6a} 
+int QCPPolar\+Axis\+Angular\+::top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a70a1d0d6bd2a8ba43eed9f5de2c67f1c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!topLeft@{topLeft}}
+\index{topLeft@{topLeft}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{topLeft()}{topLeft()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a70a1d0d6bd2a8ba43eed9f5de2c67f1c} 
+QPoint QCPPolar\+Axis\+Angular\+::top\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6c8996dd4ae16f1df9c7269ef970d40b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!topRight@{topRight}}
+\index{topRight@{topRight}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{topRight()}{topRight()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6c8996dd4ae16f1df9c7269ef970d40b} 
+QPoint QCPPolar\+Axis\+Angular\+::top\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a224733ff97a0b4c2d72208a50c8b6b0a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!update@{update}}
+\index{update@{update}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a224733ff97a0b4c2d72208a50c8b6b0a} 
+virtual void QCPPolar\+Axis\+Angular\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_layout_element_a0d83360e05735735aaf6d7983c56374d}{Update\+Phase}}}]{phase}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layout_element_ad6884e89825dbe06f198f659120799e6}{QCPLayout\+Element}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a74228dd854db4283061831dac1766732}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!wheelEvent@{wheelEvent}}
+\index{wheelEvent@{wheelEvent}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{wheelEvent()}{wheelEvent()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a74228dd854db4283061831dac1766732} 
+virtual void QCPPolar\+Axis\+Angular\+::wheel\+Event (\begin{DoxyParamCaption}\item[{QWheel\+Event \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_layerable_ae8ec992ac0d81d65c70048fa3e8bd454}{QCPLayerable}}.
+
+\Hypertarget{class_q_c_p_polar_axis_angular_abde756ec197666d7ee91eee11bc7c6d5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!width@{width}}
+\index{width@{width}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_abde756ec197666d7ee91eee11bc7c6d5} 
+int QCPPolar\+Axis\+Angular\+::width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_q_c_p_polar_axis_angular_a6e100f125d9339f3310d2bcd91719e61}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!QCPPolarGraph@{QCPPolarGraph}}
+\index{QCPPolarGraph@{QCPPolarGraph}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{QCPPolarGraph}{QCPPolarGraph}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6e100f125d9339f3310d2bcd91719e61} 
+friend class \mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a2a278df7b98bfbeb3a209635e96647cb}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!QCPPolarGrid@{QCPPolarGrid}}
+\index{QCPPolarGrid@{QCPPolarGrid}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{QCPPolarGrid}{QCPPolarGrid}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a2a278df7b98bfbeb3a209635e96647cb} 
+friend class \mbox{\hyperlink{class_q_c_p_polar_grid}{QCPPolar\+Grid}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1cdf9df76adcfae45261690aa0ca2198}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!QCustomPlot@{QCustomPlot}}
+\index{QCustomPlot@{QCustomPlot}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{QCustomPlot}{QCustomPlot}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1cdf9df76adcfae45261690aa0ca2198} 
+friend class \mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_q_c_p_polar_axis_angular_aad6823e7692cbfe39477ca7af6209f04}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mAADragBackup@{mAADragBackup}}
+\index{mAADragBackup@{mAADragBackup}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mAADragBackup}{mAADragBackup}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aad6823e7692cbfe39477ca7af6209f04} 
+QCP\+::\+Antialiased\+Elements QCPPolar\+Axis\+Angular\+::m\+AADrag\+Backup\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a60ba468d32cdcb1ccf8974fd64d806de}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mAngle@{mAngle}}
+\index{mAngle@{mAngle}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mAngle}{mAngle}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a60ba468d32cdcb1ccf8974fd64d806de} 
+double QCPPolar\+Axis\+Angular\+::m\+Angle\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a19d4266a0498134ae8d6e670ec9a54fb}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mAngleRad@{mAngleRad}}
+\index{mAngleRad@{mAngleRad}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mAngleRad}{mAngleRad}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a19d4266a0498134ae8d6e670ec9a54fb} 
+double QCPPolar\+Axis\+Angular\+::m\+Angle\+Rad\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3f5410ae2e7eaf44d1ac0a100b589f80}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mBackgroundBrush@{mBackgroundBrush}}
+\index{mBackgroundBrush@{mBackgroundBrush}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mBackgroundBrush}{mBackgroundBrush}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3f5410ae2e7eaf44d1ac0a100b589f80} 
+QBrush QCPPolar\+Axis\+Angular\+::m\+Background\+Brush\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a46084a9eb319dc5c8e88ca3ad01dcba6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mBackgroundPixmap@{mBackgroundPixmap}}
+\index{mBackgroundPixmap@{mBackgroundPixmap}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mBackgroundPixmap}{mBackgroundPixmap}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a46084a9eb319dc5c8e88ca3ad01dcba6} 
+QPixmap QCPPolar\+Axis\+Angular\+::m\+Background\+Pixmap\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae677a27e5381a7aca0b808228979c6c1}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mBackgroundScaled@{mBackgroundScaled}}
+\index{mBackgroundScaled@{mBackgroundScaled}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mBackgroundScaled}{mBackgroundScaled}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae677a27e5381a7aca0b808228979c6c1} 
+bool QCPPolar\+Axis\+Angular\+::m\+Background\+Scaled\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab817ad6fecb2417c4b33edadf4916ba2}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mBackgroundScaledMode@{mBackgroundScaledMode}}
+\index{mBackgroundScaledMode@{mBackgroundScaledMode}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mBackgroundScaledMode}{mBackgroundScaledMode}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab817ad6fecb2417c4b33edadf4916ba2} 
+Qt\+::\+Aspect\+Ratio\+Mode QCPPolar\+Axis\+Angular\+::m\+Background\+Scaled\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af689b90127a47989c93b6f8b35239ad6}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mBasePen@{mBasePen}}
+\index{mBasePen@{mBasePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mBasePen}{mBasePen}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af689b90127a47989c93b6f8b35239ad6} 
+QPen QCPPolar\+Axis\+Angular\+::m\+Base\+Pen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad75c9ac740d24c0f0cebd782e0d208df}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mCenter@{mCenter}}
+\index{mCenter@{mCenter}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mCenter}{mCenter}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad75c9ac740d24c0f0cebd782e0d208df} 
+QPointF QCPPolar\+Axis\+Angular\+::m\+Center\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae55d6bbf5f0b380e37bdba17a4d918a9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mDragAngularStart@{mDragAngularStart}}
+\index{mDragAngularStart@{mDragAngularStart}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mDragAngularStart}{mDragAngularStart}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae55d6bbf5f0b380e37bdba17a4d918a9} 
+\mbox{\hyperlink{class_q_c_p_range}{QCPRange}} QCPPolar\+Axis\+Angular\+::m\+Drag\+Angular\+Start\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_abad49e188fd7feb34e88349a53260cf9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mDragging@{mDragging}}
+\index{mDragging@{mDragging}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mDragging}{mDragging}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_abad49e188fd7feb34e88349a53260cf9} 
+bool QCPPolar\+Axis\+Angular\+::m\+Dragging\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a45c98ce5b94cbf0ff6ff4d48eee6d405}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mDragRadialStart@{mDragRadialStart}}
+\index{mDragRadialStart@{mDragRadialStart}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mDragRadialStart}{mDragRadialStart}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a45c98ce5b94cbf0ff6ff4d48eee6d405} 
+QList$<$\mbox{\hyperlink{class_q_c_p_range}{QCPRange}}$>$ QCPPolar\+Axis\+Angular\+::m\+Drag\+Radial\+Start\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4cb61dcd0d96e35ff335e2312f802930}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mGraphs@{mGraphs}}
+\index{mGraphs@{mGraphs}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mGraphs}{mGraphs}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4cb61dcd0d96e35ff335e2312f802930} 
+QList$<$\mbox{\hyperlink{class_q_c_p_polar_graph}{QCPPolar\+Graph}}\texorpdfstring{$\ast$}{*}$>$ QCPPolar\+Axis\+Angular\+::m\+Graphs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a01765bb4c33da3fb44eed2ffe822f52a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mGrid@{mGrid}}
+\index{mGrid@{mGrid}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mGrid}{mGrid}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a01765bb4c33da3fb44eed2ffe822f52a} 
+\mbox{\hyperlink{class_q_c_p_polar_grid}{QCPPolar\+Grid}}\texorpdfstring{$\ast$}{*} QCPPolar\+Axis\+Angular\+::m\+Grid\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa41b6d3e32168b2004804bdb2b4bbb13}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mInsetLayout@{mInsetLayout}}
+\index{mInsetLayout@{mInsetLayout}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mInsetLayout}{mInsetLayout}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa41b6d3e32168b2004804bdb2b4bbb13} 
+\mbox{\hyperlink{class_q_c_p_layout_inset}{QCPLayout\+Inset}}\texorpdfstring{$\ast$}{*} QCPPolar\+Axis\+Angular\+::m\+Inset\+Layout\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6389565458a25fe6ece7c647ab490313}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mLabel@{mLabel}}
+\index{mLabel@{mLabel}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mLabel}{mLabel}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6389565458a25fe6ece7c647ab490313} 
+QString QCPPolar\+Axis\+Angular\+::m\+Label\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a07f002df3552c8740cb0ccccac0d5b2c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mLabelColor@{mLabelColor}}
+\index{mLabelColor@{mLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mLabelColor}{mLabelColor}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a07f002df3552c8740cb0ccccac0d5b2c} 
+QColor QCPPolar\+Axis\+Angular\+::m\+Label\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aab06a0467440beb6bfe30608aacc5fd4}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mLabelFont@{mLabelFont}}
+\index{mLabelFont@{mLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mLabelFont}{mLabelFont}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aab06a0467440beb6bfe30608aacc5fd4} 
+QFont QCPPolar\+Axis\+Angular\+::m\+Label\+Font\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a82a2ed4f3fdaf5438358976476a68dc5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mLabelPadding@{mLabelPadding}}
+\index{mLabelPadding@{mLabelPadding}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mLabelPadding}{mLabelPadding}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a82a2ed4f3fdaf5438358976476a68dc5} 
+int QCPPolar\+Axis\+Angular\+::m\+Label\+Padding\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6fdce30bafad6fbaaf84100a28518119}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mLabelPainter@{mLabelPainter}}
+\index{mLabelPainter@{mLabelPainter}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mLabelPainter}{mLabelPainter}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6fdce30bafad6fbaaf84100a28518119} 
+\mbox{\hyperlink{class_q_c_p_label_painter_private}{QCPLabel\+Painter\+Private}} QCPPolar\+Axis\+Angular\+::m\+Label\+Painter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a498b0307a9b836400649eb7874f69211}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mNotAADragBackup@{mNotAADragBackup}}
+\index{mNotAADragBackup@{mNotAADragBackup}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mNotAADragBackup}{mNotAADragBackup}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a498b0307a9b836400649eb7874f69211} 
+QCP\+::\+Antialiased\+Elements QCPPolar\+Axis\+Angular\+::m\+Not\+AADrag\+Backup\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aac55ca0d449c442567d59b0999ea509b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mNumberBeautifulPowers@{mNumberBeautifulPowers}}
+\index{mNumberBeautifulPowers@{mNumberBeautifulPowers}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mNumberBeautifulPowers}{mNumberBeautifulPowers}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aac55ca0d449c442567d59b0999ea509b} 
+bool QCPPolar\+Axis\+Angular\+::m\+Number\+Beautiful\+Powers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ac7419c6d953e8be82fd2dddc72f417b3}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mNumberFormatChar@{mNumberFormatChar}}
+\index{mNumberFormatChar@{mNumberFormatChar}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mNumberFormatChar}{mNumberFormatChar}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac7419c6d953e8be82fd2dddc72f417b3} 
+QLatin1\+Char QCPPolar\+Axis\+Angular\+::m\+Number\+Format\+Char\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a0519f06bc4f599747361d050a3533933}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mNumberMultiplyCross@{mNumberMultiplyCross}}
+\index{mNumberMultiplyCross@{mNumberMultiplyCross}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mNumberMultiplyCross}{mNumberMultiplyCross}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a0519f06bc4f599747361d050a3533933} 
+bool QCPPolar\+Axis\+Angular\+::m\+Number\+Multiply\+Cross\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa10f054b6dbead520d89487febc50fbf}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mNumberPrecision@{mNumberPrecision}}
+\index{mNumberPrecision@{mNumberPrecision}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mNumberPrecision}{mNumberPrecision}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa10f054b6dbead520d89487febc50fbf} 
+int QCPPolar\+Axis\+Angular\+::m\+Number\+Precision\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a048f96e18d3b99074ef565b45059e221}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRadialAxes@{mRadialAxes}}
+\index{mRadialAxes@{mRadialAxes}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRadialAxes}{mRadialAxes}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a048f96e18d3b99074ef565b45059e221} 
+QList$<$\mbox{\hyperlink{class_q_c_p_polar_axis_radial}{QCPPolar\+Axis\+Radial}}\texorpdfstring{$\ast$}{*}$>$ QCPPolar\+Axis\+Angular\+::m\+Radial\+Axes\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a780444529ad6777d607689a8a737a4cf}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRadius@{mRadius}}
+\index{mRadius@{mRadius}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRadius}{mRadius}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a780444529ad6777d607689a8a737a4cf} 
+double QCPPolar\+Axis\+Angular\+::m\+Radius\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a9c3e7b44a9fb83a2638aac003aea1a84}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRange@{mRange}}
+\index{mRange@{mRange}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRange}{mRange}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a9c3e7b44a9fb83a2638aac003aea1a84} 
+\mbox{\hyperlink{class_q_c_p_range}{QCPRange}} QCPPolar\+Axis\+Angular\+::m\+Range\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_afba70315f39ac7c5aeca3a9932e6cae2}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRangeDrag@{mRangeDrag}}
+\index{mRangeDrag@{mRangeDrag}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRangeDrag}{mRangeDrag}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_afba70315f39ac7c5aeca3a9932e6cae2} 
+bool QCPPolar\+Axis\+Angular\+::m\+Range\+Drag\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ae93330885f57594a085188ab79c175df}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRangeReversed@{mRangeReversed}}
+\index{mRangeReversed@{mRangeReversed}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRangeReversed}{mRangeReversed}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ae93330885f57594a085188ab79c175df} 
+bool QCPPolar\+Axis\+Angular\+::m\+Range\+Reversed\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_abc035f0e3ae30d869cde868a194c089b}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRangeZoom@{mRangeZoom}}
+\index{mRangeZoom@{mRangeZoom}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRangeZoom}{mRangeZoom}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_abc035f0e3ae30d869cde868a194c089b} 
+bool QCPPolar\+Axis\+Angular\+::m\+Range\+Zoom\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8145e2741614f652bbe8c247495e1520}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mRangeZoomFactor@{mRangeZoomFactor}}
+\index{mRangeZoomFactor@{mRangeZoomFactor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mRangeZoomFactor}{mRangeZoomFactor}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8145e2741614f652bbe8c247495e1520} 
+double QCPPolar\+Axis\+Angular\+::m\+Range\+Zoom\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a02e286c769db5801c6d6b9f803f2cbdf}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mScaledBackgroundPixmap@{mScaledBackgroundPixmap}}
+\index{mScaledBackgroundPixmap@{mScaledBackgroundPixmap}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mScaledBackgroundPixmap}{mScaledBackgroundPixmap}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a02e286c769db5801c6d6b9f803f2cbdf} 
+QPixmap QCPPolar\+Axis\+Angular\+::m\+Scaled\+Background\+Pixmap\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6e5deba9eb9786ed8e33862234f702b9}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectableParts@{mSelectableParts}}
+\index{mSelectableParts@{mSelectableParts}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectableParts}{mSelectableParts}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6e5deba9eb9786ed8e33862234f702b9} 
+Selectable\+Parts QCPPolar\+Axis\+Angular\+::m\+Selectable\+Parts\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a7b9fa65b5157602368b40436d751b886}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedBasePen@{mSelectedBasePen}}
+\index{mSelectedBasePen@{mSelectedBasePen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedBasePen}{mSelectedBasePen}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a7b9fa65b5157602368b40436d751b886} 
+QPen QCPPolar\+Axis\+Angular\+::m\+Selected\+Base\+Pen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_af4504c28a0c1540adba16696a0b2ec33}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedLabelColor@{mSelectedLabelColor}}
+\index{mSelectedLabelColor@{mSelectedLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedLabelColor}{mSelectedLabelColor}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_af4504c28a0c1540adba16696a0b2ec33} 
+QColor QCPPolar\+Axis\+Angular\+::m\+Selected\+Label\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a27deaca4ccb608fdcf0c92e2136ee5a5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedLabelFont@{mSelectedLabelFont}}
+\index{mSelectedLabelFont@{mSelectedLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedLabelFont}{mSelectedLabelFont}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a27deaca4ccb608fdcf0c92e2136ee5a5} 
+QFont QCPPolar\+Axis\+Angular\+::m\+Selected\+Label\+Font\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a585c75aaceb4f653c9aa312832ce583e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedParts@{mSelectedParts}}
+\index{mSelectedParts@{mSelectedParts}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedParts}{mSelectedParts}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a585c75aaceb4f653c9aa312832ce583e} 
+Selectable\+Parts QCPPolar\+Axis\+Angular\+::m\+Selected\+Parts\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ad86694151d2d431d11654b85790d2b51}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedSubTickPen@{mSelectedSubTickPen}}
+\index{mSelectedSubTickPen@{mSelectedSubTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedSubTickPen}{mSelectedSubTickPen}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ad86694151d2d431d11654b85790d2b51} 
+QPen QCPPolar\+Axis\+Angular\+::m\+Selected\+Sub\+Tick\+Pen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a40178f7db8b0f56c1a0d2797f6e66816}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedTickLabelColor@{mSelectedTickLabelColor}}
+\index{mSelectedTickLabelColor@{mSelectedTickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedTickLabelColor}{mSelectedTickLabelColor}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a40178f7db8b0f56c1a0d2797f6e66816} 
+QColor QCPPolar\+Axis\+Angular\+::m\+Selected\+Tick\+Label\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aa5c0413a95cead043025b8c24118345e}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedTickLabelFont@{mSelectedTickLabelFont}}
+\index{mSelectedTickLabelFont@{mSelectedTickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedTickLabelFont}{mSelectedTickLabelFont}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aa5c0413a95cead043025b8c24118345e} 
+QFont QCPPolar\+Axis\+Angular\+::m\+Selected\+Tick\+Label\+Font\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a351dd829b440142e28ba65ab232da63c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSelectedTickPen@{mSelectedTickPen}}
+\index{mSelectedTickPen@{mSelectedTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSelectedTickPen}{mSelectedTickPen}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a351dd829b440142e28ba65ab232da63c} 
+QPen QCPPolar\+Axis\+Angular\+::m\+Selected\+Tick\+Pen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a40135452a4cd39ba5439f1267e0e5232}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSubTickLengthIn@{mSubTickLengthIn}}
+\index{mSubTickLengthIn@{mSubTickLengthIn}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSubTickLengthIn}{mSubTickLengthIn}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a40135452a4cd39ba5439f1267e0e5232} 
+int QCPPolar\+Axis\+Angular\+::m\+Sub\+Tick\+Length\+In\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_afd8d1bc0ecbca2f6073f35d09c7a5728}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSubTickLengthOut@{mSubTickLengthOut}}
+\index{mSubTickLengthOut@{mSubTickLengthOut}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSubTickLengthOut}{mSubTickLengthOut}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_afd8d1bc0ecbca2f6073f35d09c7a5728} 
+int QCPPolar\+Axis\+Angular\+::m\+Sub\+Tick\+Length\+Out\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8f11aa2e3e5b61f7982aa77ffd690a55}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSubTickPen@{mSubTickPen}}
+\index{mSubTickPen@{mSubTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSubTickPen}{mSubTickPen}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8f11aa2e3e5b61f7982aa77ffd690a55} 
+QPen QCPPolar\+Axis\+Angular\+::m\+Sub\+Tick\+Pen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4faa96cea04acfde25d2542af03b5f60}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSubTicks@{mSubTicks}}
+\index{mSubTicks@{mSubTicks}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSubTicks}{mSubTicks}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4faa96cea04acfde25d2542af03b5f60} 
+bool QCPPolar\+Axis\+Angular\+::m\+Sub\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_add3c2d5ada6121c904662130da5944cf}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSubTickVector@{mSubTickVector}}
+\index{mSubTickVector@{mSubTickVector}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSubTickVector}{mSubTickVector}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_add3c2d5ada6121c904662130da5944cf} 
+QVector$<$double$>$ QCPPolar\+Axis\+Angular\+::m\+Sub\+Tick\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a4d189b91f9df020a5928826d103a844a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mSubTickVectorCosSin@{mSubTickVectorCosSin}}
+\index{mSubTickVectorCosSin@{mSubTickVectorCosSin}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mSubTickVectorCosSin}{mSubTickVectorCosSin}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a4d189b91f9df020a5928826d103a844a} 
+QVector$<$QPointF$>$ QCPPolar\+Axis\+Angular\+::m\+Sub\+Tick\+Vector\+Cos\+Sin\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a431fe99c6f72ad2f0671a54fb5b4b457}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTicker@{mTicker}}
+\index{mTicker@{mTicker}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTicker}{mTicker}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a431fe99c6f72ad2f0671a54fb5b4b457} 
+QShared\+Pointer$<$\mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}}$>$ QCPPolar\+Axis\+Angular\+::m\+Ticker\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a1b8124383d33e0b66b60bb6bb7b879cc}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickLabelColor@{mTickLabelColor}}
+\index{mTickLabelColor@{mTickLabelColor}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickLabelColor}{mTickLabelColor}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a1b8124383d33e0b66b60bb6bb7b879cc} 
+QColor QCPPolar\+Axis\+Angular\+::m\+Tick\+Label\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab57289f30afcc9302cf18f42412560f7}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickLabelFont@{mTickLabelFont}}
+\index{mTickLabelFont@{mTickLabelFont}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickLabelFont}{mTickLabelFont}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab57289f30afcc9302cf18f42412560f7} 
+QFont QCPPolar\+Axis\+Angular\+::m\+Tick\+Label\+Font\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ab8004354529255850cc7642bfe1679c1}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickLabels@{mTickLabels}}
+\index{mTickLabels@{mTickLabels}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickLabels}{mTickLabels}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ab8004354529255850cc7642bfe1679c1} 
+bool QCPPolar\+Axis\+Angular\+::m\+Tick\+Labels\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_ac9cb6b0ec4594abe471239365ba92809}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickLengthIn@{mTickLengthIn}}
+\index{mTickLengthIn@{mTickLengthIn}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickLengthIn}{mTickLengthIn}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_ac9cb6b0ec4594abe471239365ba92809} 
+int QCPPolar\+Axis\+Angular\+::m\+Tick\+Length\+In\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_aaa5f7d37b51c14e300d4e0ab696a04a5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickLengthOut@{mTickLengthOut}}
+\index{mTickLengthOut@{mTickLengthOut}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickLengthOut}{mTickLengthOut}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_aaa5f7d37b51c14e300d4e0ab696a04a5} 
+int QCPPolar\+Axis\+Angular\+::m\+Tick\+Length\+Out\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a9337d09058b29fbbfd52d9abd193998c}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickPen@{mTickPen}}
+\index{mTickPen@{mTickPen}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickPen}{mTickPen}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a9337d09058b29fbbfd52d9abd193998c} 
+QPen QCPPolar\+Axis\+Angular\+::m\+Tick\+Pen\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a8183cc3b5048a6f519e3c6b3b90797b5}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTicks@{mTicks}}
+\index{mTicks@{mTicks}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTicks}{mTicks}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a8183cc3b5048a6f519e3c6b3b90797b5} 
+bool QCPPolar\+Axis\+Angular\+::m\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a6650ba75f68b439528aabd4dcedcd720}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickVector@{mTickVector}}
+\index{mTickVector@{mTickVector}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickVector}{mTickVector}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a6650ba75f68b439528aabd4dcedcd720} 
+QVector$<$double$>$ QCPPolar\+Axis\+Angular\+::m\+Tick\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a3577e475914e58d6d779b03d6faf383a}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickVectorCosSin@{mTickVectorCosSin}}
+\index{mTickVectorCosSin@{mTickVectorCosSin}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickVectorCosSin}{mTickVectorCosSin}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a3577e475914e58d6d779b03d6faf383a} 
+QVector$<$QPointF$>$ QCPPolar\+Axis\+Angular\+::m\+Tick\+Vector\+Cos\+Sin\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_polar_axis_angular_a66f5d71105c134e19dc527b704b32461}\index{QCPPolarAxisAngular@{QCPPolarAxisAngular}!mTickVectorLabels@{mTickVectorLabels}}
+\index{mTickVectorLabels@{mTickVectorLabels}!QCPPolarAxisAngular@{QCPPolarAxisAngular}}
+\doxysubsubsection{\texorpdfstring{mTickVectorLabels}{mTickVectorLabels}}
+{\footnotesize\ttfamily \label{class_q_c_p_polar_axis_angular_a66f5d71105c134e19dc527b704b32461} 
+QVector$<$QString$>$ QCPPolar\+Axis\+Angular\+::m\+Tick\+Vector\+Labels\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+One\+Drive -\/ Universidad de Córdoba/\+Doctorado\+\_\+\+ARR/\+Qt/\+Versiones/\+DWM1001\+DEV\+\_\+\+APP/\+Github/\+UCO-\/\+DWM1001-\/\+DEV/src/\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\doxysection{QCPAbstract\+Paint\+Buffer Class Reference}
+\hypertarget{class_q_c_p_abstract_paint_buffer}{}\label{class_q_c_p_abstract_paint_buffer}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+
+
+{\ttfamily \#include $<$qcustomplot.\+h$>$}
+
+Inheritance diagram for QCPAbstract\+Paint\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_c_p_abstract_paint_buffer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a3ce532c12f10b81697108835755641e2}{QCPAbstract\+Paint\+Buffer}} (const QSize \&\mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a3ea8284e547985c5d263f26a6adfa11f}{size}}, double \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_aac1b981f8c1744036610ff1a6b9461f9}{device\+Pixel\+Ratio}})
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_ad1d0fef5b9dce4bb6caa4b5a11ff917c}{\texorpdfstring{$\sim$}{\string~}\+QCPAbstract\+Paint\+Buffer}} ()
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a3ea8284e547985c5d263f26a6adfa11f}{size}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a76bf771cda945a6c602cf9b7d365d92b}{invalidated}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_aac1b981f8c1744036610ff1a6b9461f9}{device\+Pixel\+Ratio}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a8b68c3cd36533f1a4a23b5ce8cd66f01}{set\+Size}} (const QSize \&\mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a3ea8284e547985c5d263f26a6adfa11f}{size}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_ae4c7dc70dfc66be2879ce297b2b3d67f}{set\+Invalidated}} (bool \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a76bf771cda945a6c602cf9b7d365d92b}{invalidated}}=true)
+\item 
+void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a555eaad5d5c806420ff35602a1bb68fa}{set\+Device\+Pixel\+Ratio}} (double ratio)
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_ab1329e5e2cfc44a7cef1b5e9b6fab20d}{start\+Painting}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a996577a718aecb3b9b5351fab797a062}{done\+Painting}} ()
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a1f92e533105b575951eba5f01d8d129d}{draw}} (\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}painter) const =0
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a7fc69e37c2a8232e8b2eb8b5853aae4c}{clear}} (const QColor \&color)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a9bbd9f7520ccfa3e13fc737813f706e4}{reallocate\+Buffer}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QSize \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_ae246c426222bfa18d5e8797fab73e3ce}{m\+Size}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a33c1fd784478441fcff9ebf3d69af5b2}{m\+Device\+Pixel\+Ratio}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer_a3bc49cc9cf9daaca3a60977f010c08c9}{m\+Invalidated}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a3ce532c12f10b81697108835755641e2}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{QCPAbstractPaintBuffer()}{QCPAbstractPaintBuffer()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a3ce532c12f10b81697108835755641e2} 
+QCPAbstract\+Paint\+Buffer\+::\+QCPAbstract\+Paint\+Buffer (\begin{DoxyParamCaption}\item[{const QSize \&}]{size}{, }\item[{double}]{device\+Pixel\+Ratio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_ad1d0fef5b9dce4bb6caa4b5a11ff917c}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!````~QCPAbstractPaintBuffer@{\texorpdfstring{$\sim$}{\string~}QCPAbstractPaintBuffer}}
+\index{````~QCPAbstractPaintBuffer@{\texorpdfstring{$\sim$}{\string~}QCPAbstractPaintBuffer}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}QCPAbstractPaintBuffer()}{\string~QCPAbstractPaintBuffer()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_ad1d0fef5b9dce4bb6caa4b5a11ff917c} 
+virtual QCPAbstract\+Paint\+Buffer\+::\texorpdfstring{$\sim$}{\string~}\+QCPAbstract\+Paint\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a7fc69e37c2a8232e8b2eb8b5853aae4c}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!clear@{clear}}
+\index{clear@{clear}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a7fc69e37c2a8232e8b2eb8b5853aae4c} 
+virtual void QCPAbstract\+Paint\+Buffer\+::clear (\begin{DoxyParamCaption}\item[{const QColor \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_c_p_paint_buffer_pixmap_a14badbd010a3cde6b55817ccb7b65217}{QCPPaint\+Buffer\+Pixmap}}.
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_aac1b981f8c1744036610ff1a6b9461f9}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!devicePixelRatio@{devicePixelRatio}}
+\index{devicePixelRatio@{devicePixelRatio}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{devicePixelRatio()}{devicePixelRatio()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_aac1b981f8c1744036610ff1a6b9461f9} 
+double QCPAbstract\+Paint\+Buffer\+::device\+Pixel\+Ratio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a996577a718aecb3b9b5351fab797a062}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!donePainting@{donePainting}}
+\index{donePainting@{donePainting}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{donePainting()}{donePainting()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a996577a718aecb3b9b5351fab797a062} 
+virtual void QCPAbstract\+Paint\+Buffer\+::done\+Painting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a1f92e533105b575951eba5f01d8d129d}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!draw@{draw}}
+\index{draw@{draw}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a1f92e533105b575951eba5f01d8d129d} 
+virtual void QCPAbstract\+Paint\+Buffer\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}}]{painter}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_c_p_paint_buffer_pixmap_a7f8df231d2439e6b9953b86798815600}{QCPPaint\+Buffer\+Pixmap}}.
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a76bf771cda945a6c602cf9b7d365d92b}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!invalidated@{invalidated}}
+\index{invalidated@{invalidated}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{invalidated()}{invalidated()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a76bf771cda945a6c602cf9b7d365d92b} 
+bool QCPAbstract\+Paint\+Buffer\+::invalidated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a9bbd9f7520ccfa3e13fc737813f706e4}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!reallocateBuffer@{reallocateBuffer}}
+\index{reallocateBuffer@{reallocateBuffer}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{reallocateBuffer()}{reallocateBuffer()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a9bbd9f7520ccfa3e13fc737813f706e4} 
+virtual void QCPAbstract\+Paint\+Buffer\+::reallocate\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_c_p_paint_buffer_pixmap_a055692ff7293153ed5c589f3d7a6718e}{QCPPaint\+Buffer\+Pixmap}}.
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a555eaad5d5c806420ff35602a1bb68fa}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!setDevicePixelRatio@{setDevicePixelRatio}}
+\index{setDevicePixelRatio@{setDevicePixelRatio}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{setDevicePixelRatio()}{setDevicePixelRatio()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a555eaad5d5c806420ff35602a1bb68fa} 
+void QCPAbstract\+Paint\+Buffer\+::set\+Device\+Pixel\+Ratio (\begin{DoxyParamCaption}\item[{double}]{ratio}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_ae4c7dc70dfc66be2879ce297b2b3d67f}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!setInvalidated@{setInvalidated}}
+\index{setInvalidated@{setInvalidated}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{setInvalidated()}{setInvalidated()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_ae4c7dc70dfc66be2879ce297b2b3d67f} 
+void QCPAbstract\+Paint\+Buffer\+::set\+Invalidated (\begin{DoxyParamCaption}\item[{bool}]{invalidated}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a8b68c3cd36533f1a4a23b5ce8cd66f01}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!setSize@{setSize}}
+\index{setSize@{setSize}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a8b68c3cd36533f1a4a23b5ce8cd66f01} 
+void QCPAbstract\+Paint\+Buffer\+::set\+Size (\begin{DoxyParamCaption}\item[{const QSize \&}]{size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a3ea8284e547985c5d263f26a6adfa11f}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!size@{size}}
+\index{size@{size}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a3ea8284e547985c5d263f26a6adfa11f} 
+QSize QCPAbstract\+Paint\+Buffer\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_ab1329e5e2cfc44a7cef1b5e9b6fab20d}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!startPainting@{startPainting}}
+\index{startPainting@{startPainting}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{startPainting()}{startPainting()}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_ab1329e5e2cfc44a7cef1b5e9b6fab20d} 
+virtual \mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*} QCPAbstract\+Paint\+Buffer\+::start\+Painting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_c_p_paint_buffer_pixmap_a1db3330c4effe159dd55bc3b8acc89b7}{QCPPaint\+Buffer\+Pixmap}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a33c1fd784478441fcff9ebf3d69af5b2}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!mDevicePixelRatio@{mDevicePixelRatio}}
+\index{mDevicePixelRatio@{mDevicePixelRatio}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{mDevicePixelRatio}{mDevicePixelRatio}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a33c1fd784478441fcff9ebf3d69af5b2} 
+double QCPAbstract\+Paint\+Buffer\+::m\+Device\+Pixel\+Ratio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_a3bc49cc9cf9daaca3a60977f010c08c9}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!mInvalidated@{mInvalidated}}
+\index{mInvalidated@{mInvalidated}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{mInvalidated}{mInvalidated}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_a3bc49cc9cf9daaca3a60977f010c08c9} 
+bool QCPAbstract\+Paint\+Buffer\+::m\+Invalidated\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_abstract_paint_buffer_ae246c426222bfa18d5e8797fab73e3ce}\index{QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}!mSize@{mSize}}
+\index{mSize@{mSize}!QCPAbstractPaintBuffer@{QCPAbstractPaintBuffer}}
+\doxysubsubsection{\texorpdfstring{mSize}{mSize}}
+{\footnotesize\ttfamily \label{class_q_c_p_abstract_paint_buffer_ae246c426222bfa18d5e8797fab73e3ce} 
+QSize QCPAbstract\+Paint\+Buffer\+::m\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+One\+Drive -\/ Universidad de Córdoba/\+Doctorado\+\_\+\+ARR/\+Qt/\+Versiones/\+DWM1001\+DEV\+\_\+\+APP/\+Github/\+UCO-\/\+DWM1001-\/\+DEV/src/\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.\+h}}\end{DoxyCompactItemize}

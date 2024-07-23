@@ -240,6 +240,8 @@ Additional Inherited Members</h2></td></tr>
 <p>This ticker produces unequal tick spacing in order to provide intuitive date and time-of-day ticks. For example, if the axis range spans a few years such that there is one tick per year, ticks will be positioned on 1. January of every year. This is intuitive but, due to leap years, will result in slightly unequal tick intervals (visually unnoticeable). The same can be seen in the image above: even though the number of days varies month by month, this ticker generates ticks on the same day of each month.</p>
 <p>If you would like to change the date/time that is used as a (mathematical) starting date for the ticks, use the <a class="el" href="#a2ea905872b8171847a49a5e093fb0c48">setTickOrigin(const QDateTime &amp;origin)</a> method overload, which takes a QDateTime. If you pass 15. July, 9:45 to this method, the yearly ticks will end up on 15. July at 9:45 of every year.</p>
 <p>The ticker can be created and assigned to an axis like this: </p><div class="fragment"></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If you rather wish to display relative times in terms of days, hours, minutes, seconds and milliseconds, and are not interested in the intricacies of real calendar dates with months and (leap) years, have a look at <a class="el" href="class_q_c_p_axis_ticker_time.html" title="Specialized axis ticker for time spans in units of milliseconds to days.">QCPAxisTickerTime</a> instead. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01797">1797</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="af2c7c60821a6234ca7a172f42ef7f1d8" name="af2c7c60821a6234ca7a172f42ef7f1d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2c7c60821a6234ca7a172f42ef7f1d8">&#9670;&#160;</a></span>DateStrategy</h2>
@@ -266,6 +268,13 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad" name="af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad"></a>dsUniformDayInMonth&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01831">1831</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1831</span>{<a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a02076ab726129e1ab9e0f999d4314309">dsNone</a>, <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a39644957223102224f35662da3ab1a14">dsUniformTimeInDay</a>, <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad">dsUniformDayInMonth</a>} <a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a>;</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_a7be1477443d73fef8dd25a07d9fe4b20"><div class="ttname"><a href="#a7be1477443d73fef8dd25a07d9fe4b20">QCPAxisTickerDateTime::mDateStrategy</a></div><div class="ttdeci">enum QCPAxisTickerDateTime::DateStrategy mDateStrategy</div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_af2c7c60821a6234ca7a172f42ef7f1d8a02076ab726129e1ab9e0f999d4314309"><div class="ttname"><a href="#af2c7c60821a6234ca7a172f42ef7f1d8a02076ab726129e1ab9e0f999d4314309">QCPAxisTickerDateTime::dsNone</a></div><div class="ttdeci">@ dsNone</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01831">qcustomplot.h:1831</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_af2c7c60821a6234ca7a172f42ef7f1d8a39644957223102224f35662da3ab1a14"><div class="ttname"><a href="#af2c7c60821a6234ca7a172f42ef7f1d8a39644957223102224f35662da3ab1a14">QCPAxisTickerDateTime::dsUniformTimeInDay</a></div><div class="ttdeci">@ dsUniformTimeInDay</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01831">qcustomplot.h:1831</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad"><div class="ttname"><a href="#af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad">QCPAxisTickerDateTime::dsUniformDayInMonth</a></div><div class="ttdeci">@ dsUniformDayInMonth</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01831">qcustomplot.h:1831</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -285,6 +294,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs the ticker and sets reasonable default values. Axis tickers are commonly created managed by a QSharedPointer, which then can be passed to <a class="el" href="class_q_c_p_axis.html#a4ee03fcd2c74d05cd1a419b9af5cfbdc">QCPAxis::setTicker</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06528">6528</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6528</span>                                             :</div>
+<div class="line"><span class="lineno"> 6529</span>  <a class="code hl_variable" href="#adbbb25add598377998c0c57dbd29adaf">mDateTimeFormat</a>(QLatin1String(<span class="stringliteral">&quot;hh:mm:ss\ndd.MM.yy&quot;</span>)),</div>
+<div class="line"><span class="lineno"> 6530</span>  <a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a>(Qt::LocalTime),</div>
+<div class="line"><span class="lineno"> 6531</span>  <a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a>(<a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a02076ab726129e1ab9e0f999d4314309">dsNone</a>)</div>
+<div class="line"><span class="lineno"> 6532</span>{</div>
+<div class="line"><span class="lineno"> 6533</span>  <a class="code hl_function" href="class_q_c_p_axis_ticker.html#a47752abba8293e6dc18491501ae34008">setTickCount</a>(4);</div>
+<div class="line"><span class="lineno"> 6534</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_a5f5abe83c371f13eb3415585e638dba9"><div class="ttname"><a href="#a5f5abe83c371f13eb3415585e638dba9">QCPAxisTickerDateTime::mDateTimeSpec</a></div><div class="ttdeci">Qt::TimeSpec mDateTimeSpec</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01826">qcustomplot.h:1826</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_adbbb25add598377998c0c57dbd29adaf"><div class="ttname"><a href="#adbbb25add598377998c0c57dbd29adaf">QCPAxisTickerDateTime::mDateTimeFormat</a></div><div class="ttdeci">QString mDateTimeFormat</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01825">qcustomplot.h:1825</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a47752abba8293e6dc18491501ae34008"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a47752abba8293e6dc18491501ae34008">QCPAxisTicker::setTickCount</a></div><div class="ttdeci">void setTickCount(int count)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06153">qcustomplot.cpp:6153</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -317,6 +338,46 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06740">6740</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6741</span>{</div>
+<div class="line"><span class="lineno"> 6742</span>  QVector&lt;double&gt; result = <a class="code hl_function" href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker::createTickVector</a>(tickStep, range);</div>
+<div class="line"><span class="lineno"> 6743</span>  <span class="keywordflow">if</span> (!result.isEmpty())</div>
+<div class="line"><span class="lineno"> 6744</span>  {</div>
+<div class="line"><span class="lineno"> 6745</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a> == <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a39644957223102224f35662da3ab1a14">dsUniformTimeInDay</a>)</div>
+<div class="line"><span class="lineno"> 6746</span>    {</div>
+<div class="line"><span class="lineno"> 6747</span>      QDateTime uniformDateTime = <a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(<a class="code hl_variable" href="class_q_c_p_axis_ticker.html#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a>); <span class="comment">// the time of this datetime will be set for all other ticks, if possible</span></div>
+<div class="line"><span class="lineno"> 6748</span>      QDateTime tickDateTime;</div>
+<div class="line"><span class="lineno"> 6749</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;result.size(); ++i)</div>
+<div class="line"><span class="lineno"> 6750</span>      {</div>
+<div class="line"><span class="lineno"> 6751</span>        tickDateTime = <a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(result.at(i));</div>
+<div class="line"><span class="lineno"> 6752</span>        tickDateTime.setTime(uniformDateTime.time());</div>
+<div class="line"><span class="lineno"> 6753</span>        result[i] = <a class="code hl_function" href="#a23705013d5f289de98667bd46950ac8c">dateTimeToKey</a>(tickDateTime);</div>
+<div class="line"><span class="lineno"> 6754</span>      }</div>
+<div class="line"><span class="lineno"> 6755</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a> == <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad">dsUniformDayInMonth</a>)</div>
+<div class="line"><span class="lineno"> 6756</span>    {</div>
+<div class="line"><span class="lineno"> 6757</span>      QDateTime uniformDateTime = <a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(<a class="code hl_variable" href="class_q_c_p_axis_ticker.html#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a>); <span class="comment">// this day (in month) and time will be set for all other ticks, if possible</span></div>
+<div class="line"><span class="lineno"> 6758</span>      QDateTime tickDateTime;</div>
+<div class="line"><span class="lineno"> 6759</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;result.size(); ++i)</div>
+<div class="line"><span class="lineno"> 6760</span>      {</div>
+<div class="line"><span class="lineno"> 6761</span>        tickDateTime = <a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(result.at(i));</div>
+<div class="line"><span class="lineno"> 6762</span>        tickDateTime.setTime(uniformDateTime.time());</div>
+<div class="line"><span class="lineno"> 6763</span>        <span class="keywordtype">int</span> thisUniformDay = uniformDateTime.date().day() &lt;= tickDateTime.date().daysInMonth() ? uniformDateTime.date().day() : tickDateTime.date().daysInMonth(); <span class="comment">// don&#39;t exceed month (e.g. try to set day 31 in February)</span></div>
+<div class="line"><span class="lineno"> 6764</span>        <span class="keywordflow">if</span> (thisUniformDay-tickDateTime.date().day() &lt; -15) <span class="comment">// with leap years involved, date month may jump backwards or forwards, and needs to be corrected before setting day</span></div>
+<div class="line"><span class="lineno"> 6765</span>          tickDateTime = tickDateTime.addMonths(1);</div>
+<div class="line"><span class="lineno"> 6766</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (thisUniformDay-tickDateTime.date().day() &gt; 15) <span class="comment">// with leap years involved, date month may jump backwards or forwards, and needs to be corrected before setting day</span></div>
+<div class="line"><span class="lineno"> 6767</span>          tickDateTime = tickDateTime.addMonths(-1);</div>
+<div class="line"><span class="lineno"> 6768</span>        tickDateTime.setDate(QDate(tickDateTime.date().year(), tickDateTime.date().month(), thisUniformDay));</div>
+<div class="line"><span class="lineno"> 6769</span>        result[i] = <a class="code hl_function" href="#a23705013d5f289de98667bd46950ac8c">dateTimeToKey</a>(tickDateTime);</div>
+<div class="line"><span class="lineno"> 6770</span>      }</div>
+<div class="line"><span class="lineno"> 6771</span>    }</div>
+<div class="line"><span class="lineno"> 6772</span>  }</div>
+<div class="line"><span class="lineno"> 6773</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6774</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_a23705013d5f289de98667bd46950ac8c"><div class="ttname"><a href="#a23705013d5f289de98667bd46950ac8c">QCPAxisTickerDateTime::dateTimeToKey</a></div><div class="ttdeci">static double dateTimeToKey(const QDateTime &amp;dateTime)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06805">qcustomplot.cpp:6805</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_a4c1761ad057f5564804a53f942629b53"><div class="ttname"><a href="#a4c1761ad057f5564804a53f942629b53">QCPAxisTickerDateTime::keyToDateTime</a></div><div class="ttdeci">static QDateTime keyToDateTime(double key)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06785">qcustomplot.cpp:6785</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a560ef9347b1aa599a9bf0e2f29d3ec16"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a560ef9347b1aa599a9bf0e2f29d3ec16">QCPAxisTicker::mTickOrigin</a></div><div class="ttdeci">double mTickOrigin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01768">qcustomplot.h:1768</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_af4645a824c7bd2ca8fc7e86ebf9055bd"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker::createTickVector</a></div><div class="ttdeci">virtual QVector&lt; double &gt; createTickVector(double tickStep, const QCPRange &amp;range)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06343">qcustomplot.cpp:6343</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aac8e2bb32ca8ff1394c42d2d62390718" name="aac8e2bb32ca8ff1394c42d2d62390718"></a>
@@ -342,6 +403,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01803">1803</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1803</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#adbbb25add598377998c0c57dbd29adaf">mDateTimeFormat</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae688e69ba55c9247af26b6db85cf9573" name="ae688e69ba55c9247af26b6db85cf9573"></a>
@@ -367,6 +431,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01804">1804</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1804</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4498f59a228a2300dff67525a6c4c250" name="a4498f59a228a2300dff67525a6c4c250"></a>
@@ -400,6 +467,17 @@ Additional Inherited Members</h2></td></tr>
 <p>The returned value will be the start of the passed day of <em>date</em>, interpreted in the given <em>timeSpec</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06825">6825</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6826</span>{</div>
+<div class="line"><span class="lineno"> 6827</span><span class="preprocessor"># if QT_VERSION &lt; QT_VERSION_CHECK(4, 7, 0)</span></div>
+<div class="line"><span class="lineno"> 6828</span>  <span class="keywordflow">return</span> QDateTime(date, QTime(0, 0), timeSpec).toTime_t();</div>
+<div class="line"><span class="lineno"> 6829</span><span class="preprocessor"># elif QT_VERSION &lt; QT_VERSION_CHECK(5, 14, 0)</span></div>
+<div class="line"><span class="lineno"> 6830</span>  <span class="keywordflow">return</span> QDateTime(date, QTime(0, 0), timeSpec).toMSecsSinceEpoch()/1000.0;</div>
+<div class="line"><span class="lineno"> 6831</span><span class="preprocessor"># else</span></div>
+<div class="line"><span class="lineno"> 6832</span>  <span class="keywordflow">return</span> date.startOfDay(timeSpec).toMSecsSinceEpoch()/1000.0;</div>
+<div class="line"><span class="lineno"> 6833</span><span class="preprocessor"># endif</span></div>
+<div class="line"><span class="lineno"> 6834</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a23705013d5f289de98667bd46950ac8c" name="a23705013d5f289de98667bd46950ac8c"></a>
@@ -429,6 +507,15 @@ Additional Inherited Members</h2></td></tr>
 <p>The accuracy achieved by this method is one millisecond, irrespective of the used Qt version (it works around the lack of a QDateTime::toMSecsSinceEpoch in Qt 4.6)</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06805">6805</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6806</span>{</div>
+<div class="line"><span class="lineno"> 6807</span><span class="preprocessor"># if QT_VERSION &lt; QT_VERSION_CHECK(4, 7, 0)</span></div>
+<div class="line"><span class="lineno"> 6808</span>  <span class="keywordflow">return</span> dateTime.toTime_t()+dateTime.time().msec()/1000.0;</div>
+<div class="line"><span class="lineno"> 6809</span><span class="preprocessor"># else</span></div>
+<div class="line"><span class="lineno"> 6810</span>  <span class="keywordflow">return</span> dateTime.toMSecsSinceEpoch()/1000.0;</div>
+<div class="line"><span class="lineno"> 6811</span><span class="preprocessor"># endif</span></div>
+<div class="line"><span class="lineno"> 6812</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a78dece0d51426a3c310528d413e09193" name="a78dece0d51426a3c310528d413e09193"></a>
@@ -456,6 +543,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06683">6683</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6684</span>{</div>
+<div class="line"><span class="lineno"> 6685</span>  <span class="keywordtype">int</span> result = <a class="code hl_function" href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker::getSubTickCount</a>(tickStep);</div>
+<div class="line"><span class="lineno"> 6686</span>  <span class="keywordflow">switch</span> (qRound(tickStep)) <span class="comment">// hand chosen subticks for specific minute/hour/day/week/month range (as specified in getTickStep)</span></div>
+<div class="line"><span class="lineno"> 6687</span>  {</div>
+<div class="line"><span class="lineno"> 6688</span>    <span class="keywordflow">case</span> 5*60: result = 4; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6689</span>    <span class="keywordflow">case</span> 10*60: result = 1; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6690</span>    <span class="keywordflow">case</span> 15*60: result = 2; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6691</span>    <span class="keywordflow">case</span> 30*60: result = 1; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6692</span>    <span class="keywordflow">case</span> 60*60: result = 3; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6693</span>    <span class="keywordflow">case</span> 3600*2: result = 3; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6694</span>    <span class="keywordflow">case</span> 3600*3: result = 2; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6695</span>    <span class="keywordflow">case</span> 3600*6: result = 1; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6696</span>    <span class="keywordflow">case</span> 3600*12: result = 3; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6697</span>    <span class="keywordflow">case</span> 3600*24: result = 3; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6698</span>    <span class="keywordflow">case</span> 86400*2: result = 1; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6699</span>    <span class="keywordflow">case</span> 86400*5: result = 4; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6700</span>    <span class="keywordflow">case</span> 86400*7: result = 6; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6701</span>    <span class="keywordflow">case</span> 86400*14: result = 1; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6702</span>    <span class="keywordflow">case</span> int(86400*30.4375+0.5): result = 3; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6703</span>    <span class="keywordflow">case</span> int(86400*30.4375*2+0.5): result = 1; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6704</span>    <span class="keywordflow">case</span> int(86400*30.4375*3+0.5): result = 2; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6705</span>    <span class="keywordflow">case</span> int(86400*30.4375*6+0.5): result = 5; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6706</span>    <span class="keywordflow">case</span> int(86400*30.4375*12+0.5): result = 3; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6707</span>  }</div>
+<div class="line"><span class="lineno"> 6708</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6709</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a4ccc403ced7a1457ce6ba293509933c8"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker::getSubTickCount</a></div><div class="ttdeci">virtual int getSubTickCount(double tickStep)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06235">qcustomplot.cpp:6235</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4dc6a03f7ea5c619477528a683ed5c18" name="a4dc6a03f7ea5c619477528a683ed5c18"></a>
@@ -497,6 +613,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a8201eb4aa8be192bf786b126eb5ee089">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06719">6719</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6720</span>{</div>
+<div class="line"><span class="lineno"> 6721</span>  Q_UNUSED(precision)</div>
+<div class="line"><span class="lineno"> 6722</span>  Q_UNUSED(formatChar)</div>
+<div class="line"><span class="lineno"> 6723</span><span class="preprocessor"># if QT_VERSION &gt;= QT_VERSION_CHECK(5, 2, 0)</span></div>
+<div class="line"><span class="lineno"> 6724</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a> == Qt::TimeZone)</div>
+<div class="line"><span class="lineno"> 6725</span>    <span class="keywordflow">return</span> locale.toString(<a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(tick).toTimeZone(<a class="code hl_variable" href="#af83bcfe53294702b6c9199616744f6b5">mTimeZone</a>), <a class="code hl_variable" href="#adbbb25add598377998c0c57dbd29adaf">mDateTimeFormat</a>);</div>
+<div class="line"><span class="lineno"> 6726</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6727</span>    <span class="keywordflow">return</span> locale.toString(<a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(tick).toTimeSpec(<a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a>), <a class="code hl_variable" href="#adbbb25add598377998c0c57dbd29adaf">mDateTimeFormat</a>);</div>
+<div class="line"><span class="lineno"> 6728</span><span class="preprocessor"># else</span></div>
+<div class="line"><span class="lineno"> 6729</span>  <span class="keywordflow">return</span> locale.toString(<a class="code hl_function" href="#a4c1761ad057f5564804a53f942629b53">keyToDateTime</a>(tick).toTimeSpec(<a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a>), <a class="code hl_variable" href="#adbbb25add598377998c0c57dbd29adaf">mDateTimeFormat</a>);</div>
+<div class="line"><span class="lineno"> 6730</span><span class="preprocessor"># endif</span></div>
+<div class="line"><span class="lineno"> 6731</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_af83bcfe53294702b6c9199616744f6b5"><div class="ttname"><a href="#af83bcfe53294702b6c9199616744f6b5">QCPAxisTickerDateTime::mTimeZone</a></div><div class="ttdeci">QTimeZone mTimeZone</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01828">qcustomplot.h:1828</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0560c14a3f87bb99ab136aca8321b32a" name="a0560c14a3f87bb99ab136aca8321b32a"></a>
@@ -524,6 +655,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a910d69bcec2de37e92d8d4e1ecf201e2">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06649">6649</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6650</span>{</div>
+<div class="line"><span class="lineno"> 6651</span>  <span class="keywordtype">double</span> result = range.<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/double(<a class="code hl_variable" href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>+1e-10); <span class="comment">// mTickCount ticks on average, the small addition is to prevent jitter on exact integers</span></div>
+<div class="line"><span class="lineno"> 6652</span>  </div>
+<div class="line"><span class="lineno"> 6653</span>  <a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a> = <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a02076ab726129e1ab9e0f999d4314309">dsNone</a>; <span class="comment">// leaving it at dsNone means tick coordinates will not be tuned in any special way in createTickVector</span></div>
+<div class="line"><span class="lineno"> 6654</span>  <span class="keywordflow">if</span> (result &lt; 1) <span class="comment">// ideal tick step is below 1 second -&gt; use normal clean mantissa algorithm in units of seconds</span></div>
+<div class="line"><span class="lineno"> 6655</span>  {</div>
+<div class="line"><span class="lineno"> 6656</span>    result = <a class="code hl_function" href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">cleanMantissa</a>(result);</div>
+<div class="line"><span class="lineno"> 6657</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result &lt; 86400*30.4375*12) <span class="comment">// below a year</span></div>
+<div class="line"><span class="lineno"> 6658</span>  {</div>
+<div class="line"><span class="lineno"> 6659</span>    result = <a class="code hl_function" href="class_q_c_p_axis_ticker.html#a4ea0a7c4ca1c610f92b9bd5944ab4260">pickClosest</a>(result, QVector&lt;double&gt;()</div>
+<div class="line"><span class="lineno"> 6660</span>                             &lt;&lt; 1 &lt;&lt; 2.5 &lt;&lt; 5 &lt;&lt; 10 &lt;&lt; 15 &lt;&lt; 30 &lt;&lt; 60 &lt;&lt; 2.5*60 &lt;&lt; 5*60 &lt;&lt; 10*60 &lt;&lt; 15*60 &lt;&lt; 30*60 &lt;&lt; 60*60 <span class="comment">// second, minute, hour range</span></div>
+<div class="line"><span class="lineno"> 6661</span>                             &lt;&lt; 3600*2 &lt;&lt; 3600*3 &lt;&lt; 3600*6 &lt;&lt; 3600*12 &lt;&lt; 3600*24 <span class="comment">// hour to day range</span></div>
+<div class="line"><span class="lineno"> 6662</span>                             &lt;&lt; 86400*2 &lt;&lt; 86400*5 &lt;&lt; 86400*7 &lt;&lt; 86400*14 &lt;&lt; 86400*30.4375 &lt;&lt; 86400*30.4375*2 &lt;&lt; 86400*30.4375*3 &lt;&lt; 86400*30.4375*6 &lt;&lt; 86400*30.4375*12); <span class="comment">// day, week, month range (avg. days per month includes leap years)</span></div>
+<div class="line"><span class="lineno"> 6663</span>    <span class="keywordflow">if</span> (result &gt; 86400*30.4375-1) <span class="comment">// month tick intervals or larger</span></div>
+<div class="line"><span class="lineno"> 6664</span>      <a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a> = <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad">dsUniformDayInMonth</a>;</div>
+<div class="line"><span class="lineno"> 6665</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result &gt; 3600*24-1) <span class="comment">// day tick intervals or larger</span></div>
+<div class="line"><span class="lineno"> 6666</span>      <a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a> = <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a39644957223102224f35662da3ab1a14">dsUniformTimeInDay</a>;</div>
+<div class="line"><span class="lineno"> 6667</span>  } <span class="keywordflow">else</span> <span class="comment">// more than a year, go back to normal clean mantissa algorithm but in units of years</span></div>
+<div class="line"><span class="lineno"> 6668</span>  {</div>
+<div class="line"><span class="lineno"> 6669</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> secondsPerYear = 86400*30.4375*12; <span class="comment">// average including leap years</span></div>
+<div class="line"><span class="lineno"> 6670</span>    result = <a class="code hl_function" href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">cleanMantissa</a>(result/secondsPerYear)*secondsPerYear;</div>
+<div class="line"><span class="lineno"> 6671</span>    <a class="code hl_variable" href="#a7be1477443d73fef8dd25a07d9fe4b20">mDateStrategy</a> = <a class="code hl_enumvalue" href="#af2c7c60821a6234ca7a172f42ef7f1d8a7889e1531db9ce1c5d8957b4f0de58ad">dsUniformDayInMonth</a>;</div>
+<div class="line"><span class="lineno"> 6672</span>  }</div>
+<div class="line"><span class="lineno"> 6673</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6674</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a14a35b47d1aad11b08d18ea0e25937b8"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">QCPAxisTicker::mTickCount</a></div><div class="ttdeci">int mTickCount</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01767">qcustomplot.h:1767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a4ea0a7c4ca1c610f92b9bd5944ab4260"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a4ea0a7c4ca1c610f92b9bd5944ab4260">QCPAxisTicker::pickClosest</a></div><div class="ttdeci">double pickClosest(double target, const QVector&lt; double &gt; &amp;candidates) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06424">qcustomplot.cpp:6424</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ac7df6c72876b7abd67c932663a0b0f6a"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">QCPAxisTicker::cleanMantissa</a></div><div class="ttdeci">double cleanMantissa(double input) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06457">qcustomplot.cpp:6457</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a62326e7cc4316b96df6a60813230e63f"><div class="ttname"><a href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">QCPRange::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00853">qcustomplot.h:853</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4c1761ad057f5564804a53f942629b53" name="a4c1761ad057f5564804a53f942629b53"></a>
@@ -552,6 +714,15 @@ Additional Inherited Members</h2></td></tr>
 <p>The accuracy achieved by this method is one millisecond, irrespective of the used Qt version (it works around the lack of a QDateTime::fromMSecsSinceEpoch in Qt 4.6)</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a23705013d5f289de98667bd46950ac8c">dateTimeToKey</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06785">6785</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6786</span>{</div>
+<div class="line"><span class="lineno"> 6787</span><span class="preprocessor"># if QT_VERSION &lt; QT_VERSION_CHECK(4, 7, 0)</span></div>
+<div class="line"><span class="lineno"> 6788</span>  <span class="keywordflow">return</span> QDateTime::fromTime_t(key).addMSecs((key-(qint64)key)*1000);</div>
+<div class="line"><span class="lineno"> 6789</span><span class="preprocessor"># else</span></div>
+<div class="line"><span class="lineno"> 6790</span>  <span class="keywordflow">return</span> QDateTime::fromMSecsSinceEpoch(qint64(key*1000.0));</div>
+<div class="line"><span class="lineno"> 6791</span><span class="preprocessor"># endif</span></div>
+<div class="line"><span class="lineno"> 6792</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad52660a82f688395468674d555f6a86b" name="ad52660a82f688395468674d555f6a86b"></a>
@@ -620,6 +791,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Newlines can be inserted with <code>"\n"</code>, literal strings (even when containing above expressions) by encapsulating them using single-quotes. A literal single quote can be generated by using two consecutive single quotes in the format.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#afbd987c7197e42ab61e67fb1c38abebc">setDateTimeSpec</a>, <a class="el" href="#a2e46bf56e771b08e1d344fd95f3dc405">setTimeZone</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06573">6573</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6574</span>{</div>
+<div class="line"><span class="lineno"> 6575</span>  <a class="code hl_variable" href="#adbbb25add598377998c0c57dbd29adaf">mDateTimeFormat</a> = format;</div>
+<div class="line"><span class="lineno"> 6576</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afbd987c7197e42ab61e67fb1c38abebc" name="afbd987c7197e42ab61e67fb1c38abebc"></a>
@@ -641,6 +817,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Tick labels corresponding to other time zones can be achieved with <a class="el" href="#a2e46bf56e771b08e1d344fd95f3dc405">setTimeZone</a> (which sets <em>spec</em> to <code>Qt::TimeZone</code> internally). Note that if <em>spec</em> is afterwards set to not be <code>Qt::TimeZone</code> again, the <a class="el" href="#a2e46bf56e771b08e1d344fd95f3dc405">setTimeZone</a> setting will be ignored accordingly.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad52660a82f688395468674d555f6a86b">setDateTimeFormat</a>, <a class="el" href="#a2e46bf56e771b08e1d344fd95f3dc405">setTimeZone</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06591">6591</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6592</span>{</div>
+<div class="line"><span class="lineno"> 6593</span>  <a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a> = spec;</div>
+<div class="line"><span class="lineno"> 6594</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2ea905872b8171847a49a5e093fb0c48" name="a2ea905872b8171847a49a5e093fb0c48"></a>
@@ -660,6 +841,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the tick origin (see <a class="el" href="class_q_c_p_axis_ticker.html#ab509c7e500293bf66a8409f0d7c23943">QCPAxisTicker::setTickOrigin</a>) as a QDateTime <em>origin</em>.</p>
 <p>This is useful to define the month/day/time recurring at greater tick interval steps. For example, If you pass 15. July, 9:45 to this method and the tick interval happens to be one tick per year, the ticks will end up on 15. July at 9:45 of every year. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06631">6631</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6632</span>{</div>
+<div class="line"><span class="lineno"> 6633</span>  <a class="code hl_function" href="#a5388e048cbd32cf1ba730b9f1859eb5c">setTickOrigin</a>(<a class="code hl_function" href="#a23705013d5f289de98667bd46950ac8c">dateTimeToKey</a>(origin));</div>
+<div class="line"><span class="lineno"> 6634</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_date_time_html_a5388e048cbd32cf1ba730b9f1859eb5c"><div class="ttname"><a href="#a5388e048cbd32cf1ba730b9f1859eb5c">QCPAxisTickerDateTime::setTickOrigin</a></div><div class="ttdeci">void setTickOrigin(double origin)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06619">qcustomplot.cpp:6619</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5388e048cbd32cf1ba730b9f1859eb5c" name="a5388e048cbd32cf1ba730b9f1859eb5c"></a>
@@ -679,6 +866,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the tick origin (see <a class="el" href="class_q_c_p_axis_ticker.html#ab509c7e500293bf66a8409f0d7c23943">QCPAxisTicker::setTickOrigin</a>) in seconds since Epoch (1. Jan 1970, 00:00 UTC). For the date time ticker it might be more intuitive to use the overload which directly takes a QDateTime, see <a class="el" href="#a2ea905872b8171847a49a5e093fb0c48">setTickOrigin(const QDateTime &amp;origin)</a>.</p>
 <p>This is useful to define the month/day/time recurring at greater tick interval steps. For example, If you pass 15. July, 9:45 to this method and the tick interval happens to be one tick per year, the ticks will end up on 15. July at 9:45 of every year. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06619">6619</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6620</span>{</div>
+<div class="line"><span class="lineno"> 6621</span>  <a class="code hl_function" href="class_q_c_p_axis_ticker.html#ab509c7e500293bf66a8409f0d7c23943">QCPAxisTicker::setTickOrigin</a>(origin);</div>
+<div class="line"><span class="lineno"> 6622</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ab509c7e500293bf66a8409f0d7c23943"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#ab509c7e500293bf66a8409f0d7c23943">QCPAxisTicker::setTickOrigin</a></div><div class="ttdeci">void setTickOrigin(double origin)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06169">qcustomplot.cpp:6169</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2e46bf56e771b08e1d344fd95f3dc405" name="a2e46bf56e771b08e1d344fd95f3dc405"></a>
@@ -698,6 +891,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the time zone that is used for creating the tick labels from corresponding dates/times. The time spec (<a class="el" href="#afbd987c7197e42ab61e67fb1c38abebc">setDateTimeSpec</a>) is set to <code>Qt::TimeZone</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad52660a82f688395468674d555f6a86b">setDateTimeFormat</a>, <a class="el" href="#a2e46bf56e771b08e1d344fd95f3dc405">setTimeZone</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06603">6603</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6604</span>{</div>
+<div class="line"><span class="lineno"> 6605</span>  <a class="code hl_variable" href="#af83bcfe53294702b6c9199616744f6b5">mTimeZone</a> = zone;</div>
+<div class="line"><span class="lineno"> 6606</span>  <a class="code hl_variable" href="#a5f5abe83c371f13eb3415585e638dba9">mDateTimeSpec</a> = Qt::TimeZone;</div>
+<div class="line"><span class="lineno"> 6607</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64a8f7751d9d6deb0d9fd7513696f7b1" name="a64a8f7751d9d6deb0d9fd7513696f7b1"></a>
@@ -723,6 +922,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01806">1806</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1806</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af83bcfe53294702b6c9199616744f6b5">mTimeZone</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -768,6 +970,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01825">1825</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a5f5abe83c371f13eb3415585e638dba9" name="a5f5abe83c371f13eb3415585e638dba9"></a>
@@ -789,6 +993,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01826">1826</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -812,11 +1018,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01828">1828</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

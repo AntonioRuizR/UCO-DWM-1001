@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['value_0',['value',['../class_q_c_p_graph_data.html#ac97e3ddbdcbe0b58d0b4d6f95250d59c',1,'QCPGraphData::value'],['../class_q_c_p_curve_data.html#a72b39b8e1dbf7b45382ebd48419b6828',1,'QCPCurveData::value'],['../class_q_c_p_bars_data.html#ab636644fb40630f3b1b72f44d65ec072',1,'QCPBarsData::value']]],
-  ['viewportrect_1',['viewportRect',['../class_q_c_p_axis_painter_private.html#a8627dc6b40781e3291bb508e4ac574d6',1,'QCPAxisPainterPrivate']]]
+  ['save_5ffolder_0',['save_folder',['../class_dialog__stats.html#a3a05ae94ab0c4cab3c9edf74be5572c8',1,'Dialog_stats']]],
+  ['save_5fstatistics_1',['save_statistics',['../class_dialog__stats.html#ad8bcf79526a0f5d40d4d88db5b37b8b4',1,'Dialog_stats']]],
+  ['savedata_2',['savedata',['../class_main_window.html#a3db73717974591e006f5037b4f0d8daf',1,'MainWindow']]],
+  ['serial_5fmessage_3',['serial_message',['../class_main_window.html#ad6f366558f1a19cdf5d462ebdb35a8ce',1,'MainWindow']]],
+  ['side_4',['side',['../struct_q_c_p_label_painter_private_1_1_label_data.html#af7606f1262f0892069925803a95b8966',1,'QCPLabelPainterPrivate::LabelData']]],
+  ['start_5',['start',['../class_q_c_p_item_line.html#a602da607a09498b0f152ada1d6851bc5',1,'QCPItemLine::start'],['../class_q_c_p_item_curve.html#a20c3b5ea31c33764f4f30c2ec7ae518b',1,'QCPItemCurve::start']]],
+  ['startdir_6',['startDir',['../class_q_c_p_item_curve.html#aa124bf66c09cc51c627fb49db8bf8a7b',1,'QCPItemCurve']]],
+  ['staticmetaobject_7',['staticMetaObject',['../namespace_q_c_p.html#a07ffa1eb1537a3b1f218ff2a442b2017',1,'QCP']]],
+  ['std_5f1_8',['std_1',['../class_main_window.html#a2a7c6d736c4a7247a54edf5cf6182371',1,'MainWindow']]],
+  ['std_5f2_9',['std_2',['../class_main_window.html#a02058750b7ac696260a86c3ffb35e9e5',1,'MainWindow']]],
+  ['std_5f3_10',['std_3',['../class_main_window.html#a407a18f95d32de6d10985ba609823bf7',1,'MainWindow']]],
+  ['std_5f4_11',['std_4',['../class_main_window.html#a30c562ad22b6fb18d80738b6dbcd1a78',1,'MainWindow']]],
+  ['std_5fx_12',['std_x',['../class_main_window.html#a85f55ca4c954cd4e96994b96e9ba2cf2',1,'MainWindow']]],
+  ['std_5fy_13',['std_y',['../class_main_window.html#a1500a128be5d8a9b7b45035046eecb0e',1,'MainWindow']]],
+  ['std_5fz_14',['std_z',['../class_main_window.html#a40f350bf7320edaf0a314d3b2855f0ac',1,'MainWindow']]],
+  ['substituteexponent_15',['substituteExponent',['../class_q_c_p_axis_painter_private.html#a546d22b10ddb5ca8582b7deb90223a91',1,'QCPAxisPainterPrivate']]],
+  ['subticklengthin_16',['subTickLengthIn',['../class_q_c_p_axis_painter_private.html#af11f7d83021c9cb3b0e76fe7814c6110',1,'QCPAxisPainterPrivate']]],
+  ['subticklengthout_17',['subTickLengthOut',['../class_q_c_p_axis_painter_private.html#a5f1afddc3dc7ccc4d5adcbcd8f0c2218',1,'QCPAxisPainterPrivate']]],
+  ['subtickpen_18',['subTickPen',['../class_q_c_p_axis_painter_private.html#a9b9cf594cd16575f52ecda9abef4e412',1,'QCPAxisPainterPrivate']]],
+  ['subtickpositions_19',['subTickPositions',['../class_q_c_p_axis_painter_private.html#afcde7484bbcc1004b8f59ab984ada6f9',1,'QCPAxisPainterPrivate']]],
+  ['suffixbounds_20',['suffixBounds',['../struct_q_c_p_label_painter_private_1_1_label_data.html#abd6814f47433d8209aaad6cdb6e44053',1,'QCPLabelPainterPrivate::LabelData::suffixBounds'],['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html#aa286a44422223bd4f0b044cc822079f6',1,'QCPAxisPainterPrivate::TickLabelData::suffixBounds']]],
+  ['suffixpart_21',['suffixPart',['../struct_q_c_p_label_painter_private_1_1_label_data.html#a4aefeae9615a47a789bfff5e73ce54a6',1,'QCPLabelPainterPrivate::LabelData::suffixPart'],['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html#a3cbf21c6411730a318f8d2287b77d840',1,'QCPAxisPainterPrivate::TickLabelData::suffixPart']]],
+  ['symbolcross_22',['SymbolCross',['../class_q_c_p_label_painter_private.html#a4299cda0568e3463c4e37000db399a12',1,'QCPLabelPainterPrivate']]],
+  ['symboldot_23',['SymbolDot',['../class_q_c_p_label_painter_private.html#a24727e07d16b53e26be3ab57b8a47ffa',1,'QCPLabelPainterPrivate']]]
 ];

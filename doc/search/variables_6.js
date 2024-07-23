@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['key_0',['key',['../class_q_c_p_graph_data.html#a2fcebdf84af975761c0661237d7e28ec',1,'QCPGraphData::key'],['../class_q_c_p_curve_data.html#a8a4ec5f2b9a396149fd842e309701bd4',1,'QCPCurveData::key'],['../class_q_c_p_bars_data.html#a09b492217dc03ee1c0348a2f2e6e0a04',1,'QCPBarsData::key'],['../class_q_c_p_statistical_box_data.html#a2d0b5ca5130e8a73294c46b8b2fd77b8',1,'QCPStatisticalBoxData::key'],['../class_q_c_p_financial_data.html#a18bc92126f28c214b05b0161e5f5958b',1,'QCPFinancialData::key']]]
+  ['gpio_5finit_5fconfig_0',['gpio_init_config',['../class_main_window.html#a8fc899f1ed220e0e681ecc152e2343a7',1,'MainWindow']]],
+  ['graph0_5fsize_1',['graph0_size',['../class_main_window.html#ad55791c542d01c059bf43e5a12498dfa',1,'MainWindow']]],
+  ['graph1_5fsize_2',['graph1_size',['../class_main_window.html#aab7974dc006af164a3a905a5f1c53d7d',1,'MainWindow']]],
+  ['graph2_5fsize_3',['graph2_size',['../class_main_window.html#a2261dc8e0e7795fc757cdf5144b9225d',1,'MainWindow']]],
+  ['graph4_5fsize_4',['graph4_size',['../class_main_window.html#ab048047034bdd227803d6971a94ed691',1,'MainWindow']]],
+  ['graph5_5fsize_5',['graph5_size',['../class_main_window.html#af94f524acf76230f0565f90d9f6d2d1f',1,'MainWindow']]],
+  ['graph6_5fsize_6',['graph6_size',['../class_main_window.html#a0fb8b3a0419a5e4944e03c2daf39bd9e',1,'MainWindow']]],
+  ['graphpen_7',['graphPen',['../class_main_window.html#a4ed2f2790e250f220c46f0d8c4966979',1,'MainWindow']]],
+  ['graphpen_5f1_8',['graphPen_1',['../class_dialog__graph__history.html#a7a58e9fd4d81e2eed4407ed51443eb48',1,'Dialog_graph_history']]],
+  ['graphpen_5f2_9',['graphPen_2',['../class_dialog__graph__history.html#a2917e85e12194ce034eb394a6dfbdf95',1,'Dialog_graph_history::graphPen_2'],['../class_main_window.html#a18fbfea1b1c97160f2f9259ebda7cbd0',1,'MainWindow::graphPen_2']]],
+  ['graphpen_5f3_10',['graphPen_3',['../class_dialog__graph__history.html#abfc83376fc09670a814ccea9c009b6fd',1,'Dialog_graph_history::graphPen_3'],['../class_main_window.html#a728505c756c5362163f8b4daa1c5feff',1,'MainWindow::graphPen_3']]],
+  ['graphpen_5f4_11',['graphPen_4',['../class_dialog__graph__history.html#af1efabec4f651e641deaa6071f2362ef',1,'Dialog_graph_history::graphPen_4'],['../class_main_window.html#a6f815fb681bce97f2bb928a80af62b5c',1,'MainWindow::graphPen_4']]],
+  ['graphpen_5f5_12',['graphPen_5',['../class_main_window.html#addcde3d980fcbffdfd5dfc48a91cfb0a',1,'MainWindow']]],
+  ['graphpen_5f6_13',['graphPen_6',['../class_main_window.html#a5d64f113a058d9568114d85cf78ba6f6',1,'MainWindow']]],
+  ['graphpen_5fselected_14',['graphPen_selected',['../class_dialog__graph__history.html#abc0fe01c782ff89905174665c425a6a3',1,'Dialog_graph_history']]],
+  ['graphpenmaxmin_15',['graphPenmaxmin',['../class_main_window.html#aed3ca0e5e47eb04c0d7749268f603a7d',1,'MainWindow']]]
 ];

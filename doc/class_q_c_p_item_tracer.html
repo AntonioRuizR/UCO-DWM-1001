@@ -361,6 +361,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>With <a class="el" href="#a6c244a9d1175bef12b50afafd4f5fcd2">setInterpolating</a> you may specify whether the tracer may only stay exactly on data points or whether it interpolates data points linearly, if given a key that lies between two data points of the graph.</p>
 <p>The tracer has different visual styles, see <a class="el" href="#a41a2ac4f1acd7897b4e2a2579c03204e">setStyle</a>. It is also possible to make the tracer have no own visual appearance (set the style to <a class="el" href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">tsNone</a>), and just connect other item positions to the tracer <em>position</em> (used as an anchor) via <a class="el" href="class_q_c_p_item_position.html#ac094d67a95d2dceafa0d50b9db3a7e51">QCPItemPosition::setParentAnchor</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>The tracer position is only automatically updated upon redraws. So when the data of the graph changes and immediately afterwards (without a redraw) the position coordinates of the tracer are retrieved, they will not reflect the updated data of the graph. In this case <a class="el" href="#a5b90296109e36384aedbc8908a670413">updatePosition</a> must be called manually, prior to reading the tracer coordinates. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06853">6853</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a2f05ddb13978036f902ca3ab47076500" name="a2f05ddb13978036f902ca3ab47076500"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f05ddb13978036f902ca3ab47076500">&#9670;&#160;</a></span>TracerStyle</h2>
@@ -388,6 +390,19 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06873">6873</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6873</span>                   { <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">tsNone</a>        </div>
+<div class="line"><span class="lineno"> 6874</span>                     ,<a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa">tsPlus</a>       </div>
+<div class="line"><span class="lineno"> 6875</span>                     ,<a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f">tsCrosshair</a>  </div>
+<div class="line"><span class="lineno"> 6876</span>                     ,<a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e">tsCircle</a>     </div>
+<div class="line"><span class="lineno"> 6877</span>                     ,<a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b">tsSquare</a>     </div>
+<div class="line"><span class="lineno"> 6878</span>                   };</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa"><div class="ttname"><a href="#a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa">QCPItemTracer::tsPlus</a></div><div class="ttdeci">@ tsPlus</div><div class="ttdoc">A plus shaped crosshair with limited size.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06875">qcustomplot.h:6874</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b"><div class="ttname"><a href="#a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b">QCPItemTracer::tsSquare</a></div><div class="ttdeci">@ tsSquare</div><div class="ttdoc">A square.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06878">qcustomplot.h:6877</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4"><div class="ttname"><a href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">QCPItemTracer::tsNone</a></div><div class="ttdeci">@ tsNone</div><div class="ttdoc">The tracer is not visible.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06874">qcustomplot.h:6873</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e"><div class="ttname"><a href="#a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e">QCPItemTracer::tsCircle</a></div><div class="ttdeci">@ tsCircle</div><div class="ttdoc">A circle.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06877">qcustomplot.h:6876</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f"><div class="ttname"><a href="#a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f">QCPItemTracer::tsCrosshair</a></div><div class="ttdeci">@ tsCrosshair</div><div class="ttdoc">A plus shaped crosshair which spans the complete axis rect.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06876">qcustomplot.h:6875</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -416,6 +431,38 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Creates a tracer item and sets default values.</p>
 <p>The created item is automatically registered with <em>parentPlot</em>. This <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> instance takes ownership of the item, so do not delete it manually but use <a class="el" href="class_q_custom_plot.html#ae04446557292551e8fb6e2c106e1848d">QCustomPlot::removeItem()</a> instead. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30441">30441</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30441</span>                                                    :</div>
+<div class="line"><span class="lineno">30442</span>  <a class="code hl_function" href="class_q_c_p_abstract_item.html#a9922507d8b4503a1fe1ed0b1030e23b6">QCPAbstractItem</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>),</div>
+<div class="line"><span class="lineno">30443</span>  <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>(<a class="code hl_function" href="class_q_c_p_abstract_item.html#a75036d39c4d4e2e1a7dd145fff915d32">createPosition</a>(QLatin1String(<span class="stringliteral">&quot;position&quot;</span>))),</div>
+<div class="line"><span class="lineno">30444</span>  <a class="code hl_variable" href="#a575153a24bb357d1e006f6bc3bd099b9">mSize</a>(6),</div>
+<div class="line"><span class="lineno">30445</span>  <a class="code hl_variable" href="#afb1f236bebf417544e0138fef22a292e">mStyle</a>(<a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f">tsCrosshair</a>),</div>
+<div class="line"><span class="lineno">30446</span>  <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">30447</span>  <a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a>(0),</div>
+<div class="line"><span class="lineno">30448</span>  <a class="code hl_variable" href="#afab37c22ad39f235921e86f93cd84595">mInterpolating</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">30449</span>{</div>
+<div class="line"><span class="lineno">30450</span>  <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(0, 0);</div>
+<div class="line"><span class="lineno">30451</span> </div>
+<div class="line"><span class="lineno">30452</span>  <a class="code hl_function" href="#a2c303f7470a30084daa201ed556b3c36">setBrush</a>(Qt::NoBrush);</div>
+<div class="line"><span class="lineno">30453</span>  <a class="code hl_function" href="#a0f55c084980a7a312af859d3e7b558ef">setSelectedBrush</a>(Qt::NoBrush);</div>
+<div class="line"><span class="lineno">30454</span>  <a class="code hl_function" href="#af8048636fc1ef0152e51809b008df2ca">setPen</a>(QPen(Qt::black));</div>
+<div class="line"><span class="lineno">30455</span>  <a class="code hl_function" href="#ae1bf70db7f13f928660168cd3e5069f3">setSelectedPen</a>(QPen(Qt::blue, 2));</div>
+<div class="line"><span class="lineno">30456</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_item_html_a75036d39c4d4e2e1a7dd145fff915d32"><div class="ttname"><a href="class_q_c_p_abstract_item.html#a75036d39c4d4e2e1a7dd145fff915d32">QCPAbstractItem::createPosition</a></div><div class="ttdeci">QCPItemPosition * createPosition(const QString &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l13191">qcustomplot.cpp:13191</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_item_html_a9922507d8b4503a1fe1ed0b1030e23b6"><div class="ttname"><a href="class_q_c_p_abstract_item.html#a9922507d8b4503a1fe1ed0b1030e23b6">QCPAbstractItem::QCPAbstractItem</a></div><div class="ttdeci">QCPAbstractItem(QCustomPlot *parentPlot)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12932">qcustomplot.cpp:12932</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aa988ba4e87ab684c9021017dcaba945f"><div class="ttname"><a href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">QCPItemPosition::setCoords</a></div><div class="ttdeci">void setCoords(double key, double value)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12519">qcustomplot.cpp:12519</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a0f55c084980a7a312af859d3e7b558ef"><div class="ttname"><a href="#a0f55c084980a7a312af859d3e7b558ef">QCPItemTracer::setSelectedBrush</a></div><div class="ttdeci">void setSelectedBrush(const QBrush &amp;brush)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30497">qcustomplot.cpp:30497</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2c303f7470a30084daa201ed556b3c36"><div class="ttname"><a href="#a2c303f7470a30084daa201ed556b3c36">QCPItemTracer::setBrush</a></div><div class="ttdeci">void setBrush(const QBrush &amp;brush)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30487">qcustomplot.cpp:30487</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a2d70cf616b579563aa15f796dfc143ac"><div class="ttname"><a href="#a2d70cf616b579563aa15f796dfc143ac">QCPItemTracer::mGraph</a></div><div class="ttdeci">QCPGraph * mGraph</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06920">qcustomplot.h:6920</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a575153a24bb357d1e006f6bc3bd099b9"><div class="ttname"><a href="#a575153a24bb357d1e006f6bc3bd099b9">QCPItemTracer::mSize</a></div><div class="ttdeci">double mSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06918">qcustomplot.h:6918</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a69917e2fdb2b3a929c196958feee7cbe"><div class="ttname"><a href="#a69917e2fdb2b3a929c196958feee7cbe">QCPItemTracer::position</a></div><div class="ttdeci">QCPItemPosition *const position</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06912">qcustomplot.h:6912</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a8fa20f2e9ee07d21fd7c8d30ba4702ca"><div class="ttname"><a href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">QCPItemTracer::mGraphKey</a></div><div class="ttdeci">double mGraphKey</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06921">qcustomplot.h:6921</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_ae1bf70db7f13f928660168cd3e5069f3"><div class="ttname"><a href="#ae1bf70db7f13f928660168cd3e5069f3">QCPItemTracer::setSelectedPen</a></div><div class="ttdeci">void setSelectedPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30477">qcustomplot.cpp:30477</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_af8048636fc1ef0152e51809b008df2ca"><div class="ttname"><a href="#af8048636fc1ef0152e51809b008df2ca">QCPItemTracer::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30467">qcustomplot.cpp:30467</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_afab37c22ad39f235921e86f93cd84595"><div class="ttname"><a href="#afab37c22ad39f235921e86f93cd84595">QCPItemTracer::mInterpolating</a></div><div class="ttdeci">bool mInterpolating</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06922">qcustomplot.h:6922</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_afb1f236bebf417544e0138fef22a292e"><div class="ttname"><a href="#afb1f236bebf417544e0138fef22a292e">QCPItemTracer::mStyle</a></div><div class="ttdeci">TracerStyle mStyle</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06919">qcustomplot.h:6919</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a84834da38876a11877d4f6447409275a" name="a84834da38876a11877d4f6447409275a"></a>
@@ -441,6 +488,10 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30458">30458</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30459</span>{</div>
+<div class="line"><span class="lineno">30460</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -467,6 +518,10 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06887">6887</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6887</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a6597be63a17a266233941354200b2340"><div class="ttname"><a href="#a6597be63a17a266233941354200b2340">QCPItemTracer::mBrush</a></div><div class="ttdeci">QBrush mBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06917">qcustomplot.h:6917</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a11f187ffea436434f3b5cfc387811967" name="a11f187ffea436434f3b5cfc387811967"></a>
@@ -494,6 +549,59 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_item.html#afe12c077663d07233a1b06608783ae41">QCPAbstractItem</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30638">30638</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30639</span>{</div>
+<div class="line"><span class="lineno">30640</span>  <a class="code hl_function" href="#a5b90296109e36384aedbc8908a670413">updatePosition</a>();</div>
+<div class="line"><span class="lineno">30641</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afb1f236bebf417544e0138fef22a292e">mStyle</a> == <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">tsNone</a>)</div>
+<div class="line"><span class="lineno">30642</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">30643</span> </div>
+<div class="line"><span class="lineno">30644</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_function" href="#abffdcf64d0f84f7b41bd4af07d144642">mainPen</a>());</div>
+<div class="line"><span class="lineno">30645</span>  painter-&gt;setBrush(<a class="code hl_function" href="#a94f81c54197577e86c53a60cf39155cd">mainBrush</a>());</div>
+<div class="line"><span class="lineno">30646</span>  QPointF center(<a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#a8be9a4787635433edecc75164beb748d">pixelPosition</a>());</div>
+<div class="line"><span class="lineno">30647</span>  <span class="keywordtype">double</span> w = <a class="code hl_variable" href="#a575153a24bb357d1e006f6bc3bd099b9">mSize</a>/2.0;</div>
+<div class="line"><span class="lineno">30648</span>  QRect clip = <a class="code hl_function" href="class_q_c_p_abstract_item.html#a6ad60000f29afe11035e1f791dcbd45a">clipRect</a>();</div>
+<div class="line"><span class="lineno">30649</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#afb1f236bebf417544e0138fef22a292e">mStyle</a>)</div>
+<div class="line"><span class="lineno">30650</span>  {</div>
+<div class="line"><span class="lineno">30651</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">tsNone</a>: <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">30652</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa">tsPlus</a>:</div>
+<div class="line"><span class="lineno">30653</span>    {</div>
+<div class="line"><span class="lineno">30654</span>      <span class="keywordflow">if</span> (clip.intersects(QRectF(center-QPointF(w, w), center+QPointF(w, w)).toRect()))</div>
+<div class="line"><span class="lineno">30655</span>      {</div>
+<div class="line"><span class="lineno">30656</span>        painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(center+QPointF(-w, 0), center+QPointF(w, 0)));</div>
+<div class="line"><span class="lineno">30657</span>        painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(center+QPointF(0, -w), center+QPointF(0, w)));</div>
+<div class="line"><span class="lineno">30658</span>      }</div>
+<div class="line"><span class="lineno">30659</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30660</span>    }</div>
+<div class="line"><span class="lineno">30661</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f">tsCrosshair</a>:</div>
+<div class="line"><span class="lineno">30662</span>    {</div>
+<div class="line"><span class="lineno">30663</span>      <span class="keywordflow">if</span> (center.y() &gt; clip.top() &amp;&amp; center.y() &lt; clip.bottom())</div>
+<div class="line"><span class="lineno">30664</span>        painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(clip.left(), center.y(), clip.right(), center.y()));</div>
+<div class="line"><span class="lineno">30665</span>      <span class="keywordflow">if</span> (center.x() &gt; clip.left() &amp;&amp; center.x() &lt; clip.right())</div>
+<div class="line"><span class="lineno">30666</span>        painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(center.x(), clip.top(), center.x(), clip.bottom()));</div>
+<div class="line"><span class="lineno">30667</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30668</span>    }</div>
+<div class="line"><span class="lineno">30669</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e">tsCircle</a>:</div>
+<div class="line"><span class="lineno">30670</span>    {</div>
+<div class="line"><span class="lineno">30671</span>      <span class="keywordflow">if</span> (clip.intersects(QRectF(center-QPointF(w, w), center+QPointF(w, w)).toRect()))</div>
+<div class="line"><span class="lineno">30672</span>        painter-&gt;drawEllipse(center, w, w);</div>
+<div class="line"><span class="lineno">30673</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30674</span>    }</div>
+<div class="line"><span class="lineno">30675</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b">tsSquare</a>:</div>
+<div class="line"><span class="lineno">30676</span>    {</div>
+<div class="line"><span class="lineno">30677</span>      <span class="keywordflow">if</span> (clip.intersects(QRectF(center-QPointF(w, w), center+QPointF(w, w)).toRect()))</div>
+<div class="line"><span class="lineno">30678</span>        painter-&gt;drawRect(QRectF(center-QPointF(w, w), center+QPointF(w, w)));</div>
+<div class="line"><span class="lineno">30679</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30680</span>    }</div>
+<div class="line"><span class="lineno">30681</span>  }</div>
+<div class="line"><span class="lineno">30682</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_item_html_a6ad60000f29afe11035e1f791dcbd45a"><div class="ttname"><a href="class_q_c_p_abstract_item.html#a6ad60000f29afe11035e1f791dcbd45a">QCPAbstractItem::clipRect</a></div><div class="ttdeci">virtual QRect clipRect() const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l13096">qcustomplot.cpp:13096</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a8be9a4787635433edecc75164beb748d"><div class="ttname"><a href="class_q_c_p_item_position.html#a8be9a4787635433edecc75164beb748d">QCPItemPosition::pixelPosition</a></div><div class="ttdeci">virtual QPointF pixelPosition() const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12541">qcustomplot.cpp:12541</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a5b90296109e36384aedbc8908a670413"><div class="ttname"><a href="#a5b90296109e36384aedbc8908a670413">QCPItemTracer::updatePosition</a></div><div class="ttdeci">void updatePosition()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30696">qcustomplot.cpp:30696</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a94f81c54197577e86c53a60cf39155cd"><div class="ttname"><a href="#a94f81c54197577e86c53a60cf39155cd">QCPItemTracer::mainBrush</a></div><div class="ttdeci">QBrush mainBrush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30761">qcustomplot.cpp:30761</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_abffdcf64d0f84f7b41bd4af07d144642"><div class="ttname"><a href="#abffdcf64d0f84f7b41bd4af07d144642">QCPItemTracer::mainPen</a></div><div class="ttdeci">QPen mainPen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l30751">qcustomplot.cpp:30751</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62660ae9684a9d92c026ff7a710f99b6" name="a62660ae9684a9d92c026ff7a710f99b6"></a>
@@ -519,6 +627,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06891">6891</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6891</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac39a0791109588d11bb97cd643da2470" name="ac39a0791109588d11bb97cd643da2470"></a>
@@ -544,6 +655,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06892">6892</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6892</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9ab6d72e0a35e1769c0b5a9b58181f2" name="ae9ab6d72e0a35e1769c0b5a9b58181f2"></a>
@@ -569,6 +683,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06893">6893</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6893</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#afab37c22ad39f235921e86f93cd84595">mInterpolating</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a94f81c54197577e86c53a60cf39155cd" name="a94f81c54197577e86c53a60cf39155cd"></a>
@@ -594,6 +711,13 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30761">30761</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30762</span>{</div>
+<div class="line"><span class="lineno">30763</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_abstract_item.html#a4bdb3457dad1d268c0f78a44152b9645">mSelected</a> ? <a class="code hl_variable" href="#a1c15d2adde40efdcc0ef1ff78fd256a6">mSelectedBrush</a> : <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a>;</div>
+<div class="line"><span class="lineno">30764</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_item_html_a4bdb3457dad1d268c0f78a44152b9645"><div class="ttname"><a href="class_q_c_p_abstract_item.html#a4bdb3457dad1d268c0f78a44152b9645">QCPAbstractItem::mSelected</a></div><div class="ttdeci">bool mSelected</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03758">qcustomplot.h:3758</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a1c15d2adde40efdcc0ef1ff78fd256a6"><div class="ttname"><a href="#a1c15d2adde40efdcc0ef1ff78fd256a6">QCPItemTracer::mSelectedBrush</a></div><div class="ttdeci">QBrush mSelectedBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06917">qcustomplot.h:6917</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abffdcf64d0f84f7b41bd4af07d144642" name="abffdcf64d0f84f7b41bd4af07d144642"></a>
@@ -619,6 +743,13 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30751">30751</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30752</span>{</div>
+<div class="line"><span class="lineno">30753</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_abstract_item.html#a4bdb3457dad1d268c0f78a44152b9645">mSelected</a> ? <a class="code hl_variable" href="#a3f61829784200819661d1e2a5354d866">mSelectedPen</a> : <a class="code hl_variable" href="#a579e3bd6bd16d6aaff03638dc8a99a69">mPen</a>;</div>
+<div class="line"><span class="lineno">30754</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a3f61829784200819661d1e2a5354d866"><div class="ttname"><a href="#a3f61829784200819661d1e2a5354d866">QCPItemTracer::mSelectedPen</a></div><div class="ttdeci">QPen mSelectedPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06916">qcustomplot.h:6916</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a579e3bd6bd16d6aaff03638dc8a99a69"><div class="ttname"><a href="#a579e3bd6bd16d6aaff03638dc8a99a69">QCPItemTracer::mPen</a></div><div class="ttdeci">QPen mPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06916">qcustomplot.h:6916</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a789cdc627868f5a4a0956816072571c9" name="a789cdc627868f5a4a0956816072571c9"></a>
@@ -644,6 +775,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06885">6885</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6885</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a579e3bd6bd16d6aaff03638dc8a99a69">mPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae3e48270b4a6ec20f7a9e1f63e778243" name="ae3e48270b4a6ec20f7a9e1f63e778243"></a>
@@ -669,6 +803,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06888">6888</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6888</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1c15d2adde40efdcc0ef1ff78fd256a6">mSelectedBrush</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad231a97bac99e01778618d1a5720b17d" name="ad231a97bac99e01778618d1a5720b17d"></a>
@@ -694,6 +831,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06886">6886</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6886</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3f61829784200819661d1e2a5354d866">mSelectedPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a01d8814404e3f0910b84029016ef73b2" name="a01d8814404e3f0910b84029016ef73b2"></a>
@@ -739,6 +879,68 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_item.html#ac75a4bdcba0ce51ae22eacebb16a9dcd">QCPAbstractItem</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30581">30581</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30582</span>{</div>
+<div class="line"><span class="lineno">30583</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">30584</span>  <span class="keywordflow">if</span> (onlySelectable &amp;&amp; !<a class="code hl_variable" href="class_q_c_p_abstract_item.html#ad81eb35c8726a0f458db9df9732e0e41">mSelectable</a>)</div>
+<div class="line"><span class="lineno">30585</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">30586</span> </div>
+<div class="line"><span class="lineno">30587</span>  QPointF center(<a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#a8be9a4787635433edecc75164beb748d">pixelPosition</a>());</div>
+<div class="line"><span class="lineno">30588</span>  <span class="keywordtype">double</span> w = <a class="code hl_variable" href="#a575153a24bb357d1e006f6bc3bd099b9">mSize</a>/2.0;</div>
+<div class="line"><span class="lineno">30589</span>  QRect clip = <a class="code hl_function" href="class_q_c_p_abstract_item.html#a6ad60000f29afe11035e1f791dcbd45a">clipRect</a>();</div>
+<div class="line"><span class="lineno">30590</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#afb1f236bebf417544e0138fef22a292e">mStyle</a>)</div>
+<div class="line"><span class="lineno">30591</span>  {</div>
+<div class="line"><span class="lineno">30592</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">tsNone</a>: <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">30593</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa">tsPlus</a>:</div>
+<div class="line"><span class="lineno">30594</span>    {</div>
+<div class="line"><span class="lineno">30595</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_item.html#a6ad60000f29afe11035e1f791dcbd45a">clipRect</a>().intersects(QRectF(center-QPointF(w, w), center+QPointF(w, w)).toRect()))</div>
+<div class="line"><span class="lineno">30596</span>        <span class="keywordflow">return</span> qSqrt(qMin(<a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(pos).distanceSquaredToLine(center+QPointF(-w, 0), center+QPointF(w, 0)),</div>
+<div class="line"><span class="lineno">30597</span>                          <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(pos).distanceSquaredToLine(center+QPointF(0, -w), center+QPointF(0, w))));</div>
+<div class="line"><span class="lineno">30598</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30599</span>    }</div>
+<div class="line"><span class="lineno">30600</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f">tsCrosshair</a>:</div>
+<div class="line"><span class="lineno">30601</span>    {</div>
+<div class="line"><span class="lineno">30602</span>      <span class="keywordflow">return</span> qSqrt(qMin(<a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(pos).distanceSquaredToLine(<a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(clip.left(), center.y()), <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(clip.right(), center.y())),</div>
+<div class="line"><span class="lineno">30603</span>                        <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(pos).distanceSquaredToLine(<a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(center.x(), clip.top()), <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(center.x(), clip.bottom()))));</div>
+<div class="line"><span class="lineno">30604</span>    }</div>
+<div class="line"><span class="lineno">30605</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e">tsCircle</a>:</div>
+<div class="line"><span class="lineno">30606</span>    {</div>
+<div class="line"><span class="lineno">30607</span>      <span class="keywordflow">if</span> (clip.intersects(QRectF(center-QPointF(w, w), center+QPointF(w, w)).toRect()))</div>
+<div class="line"><span class="lineno">30608</span>      {</div>
+<div class="line"><span class="lineno">30609</span>        <span class="comment">// distance to border:</span></div>
+<div class="line"><span class="lineno">30610</span>        <span class="keywordtype">double</span> centerDist = <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(center-pos).<a class="code hl_function" href="class_q_c_p_vector2_d.html#a10adb5ab031fe94f0b64a3c5aefb552e">length</a>();</div>
+<div class="line"><span class="lineno">30611</span>        <span class="keywordtype">double</span> circleLine = w;</div>
+<div class="line"><span class="lineno">30612</span>        <span class="keywordtype">double</span> result = qAbs(centerDist-circleLine);</div>
+<div class="line"><span class="lineno">30613</span>        <span class="comment">// filled ellipse, allow click inside to count as hit:</span></div>
+<div class="line"><span class="lineno">30614</span>        <span class="keywordflow">if</span> (result &gt; <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99 &amp;&amp; <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a>.style() != Qt::NoBrush &amp;&amp; <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a>.color().alpha() != 0)</div>
+<div class="line"><span class="lineno">30615</span>        {</div>
+<div class="line"><span class="lineno">30616</span>          <span class="keywordflow">if</span> (centerDist &lt;= circleLine)</div>
+<div class="line"><span class="lineno">30617</span>            result = <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99;</div>
+<div class="line"><span class="lineno">30618</span>        }</div>
+<div class="line"><span class="lineno">30619</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">30620</span>      }</div>
+<div class="line"><span class="lineno">30621</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30622</span>    }</div>
+<div class="line"><span class="lineno">30623</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b">tsSquare</a>:</div>
+<div class="line"><span class="lineno">30624</span>    {</div>
+<div class="line"><span class="lineno">30625</span>      <span class="keywordflow">if</span> (clip.intersects(QRectF(center-QPointF(w, w), center+QPointF(w, w)).toRect()))</div>
+<div class="line"><span class="lineno">30626</span>      {</div>
+<div class="line"><span class="lineno">30627</span>        QRectF rect = QRectF(center-QPointF(w, w), center+QPointF(w, w));</div>
+<div class="line"><span class="lineno">30628</span>        <span class="keywordtype">bool</span> filledRect = <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a>.style() != Qt::NoBrush &amp;&amp; <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a>.color().alpha() != 0;</div>
+<div class="line"><span class="lineno">30629</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_abstract_item.html#a7dfc2007e36d09b8b5c988a9f06d6a7e">rectDistance</a>(rect, pos, filledRect);</div>
+<div class="line"><span class="lineno">30630</span>      }</div>
+<div class="line"><span class="lineno">30631</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">30632</span>    }</div>
+<div class="line"><span class="lineno">30633</span>  }</div>
+<div class="line"><span class="lineno">30634</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">30635</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_item_html_a7dfc2007e36d09b8b5c988a9f06d6a7e"><div class="ttname"><a href="class_q_c_p_abstract_item.html#a7dfc2007e36d09b8b5c988a9f06d6a7e">QCPAbstractItem::rectDistance</a></div><div class="ttdeci">double rectDistance(const QRectF &amp;rect, const QPointF &amp;pos, bool filledRect) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l13135">qcustomplot.cpp:13135</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_item_html_ad81eb35c8726a0f458db9df9732e0e41"><div class="ttname"><a href="class_q_c_p_abstract_item.html#ad81eb35c8726a0f458db9df9732e0e41">QCPAbstractItem::mSelectable</a></div><div class="ttdeci">bool mSelectable</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03758">qcustomplot.h:3758</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html"><div class="ttname"><a href="class_q_c_p_vector2_d.html">QCPVector2D</a></div><div class="ttdoc">Represents two doubles as a mathematical 2D vector.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00440">qcustomplot.h:441</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html_a10adb5ab031fe94f0b64a3c5aefb552e"><div class="ttname"><a href="class_q_c_p_vector2_d.html#a10adb5ab031fe94f0b64a3c5aefb552e">QCPVector2D::length</a></div><div class="ttdeci">double length() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00459">qcustomplot.h:459</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a5441d11013afeaf4b8f2ea06e8624a25"><div class="ttname"><a href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">QCustomPlot::selectionTolerance</a></div><div class="ttdeci">int selectionTolerance() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03842">qcustomplot.h:3842</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2c303f7470a30084daa201ed556b3c36" name="a2c303f7470a30084daa201ed556b3c36"></a>
@@ -758,6 +960,12 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Sets the brush that will be used to draw any fills of the tracer</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0f55c084980a7a312af859d3e7b558ef">setSelectedBrush</a>, <a class="el" href="#af8048636fc1ef0152e51809b008df2ca">setPen</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30487">30487</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30488</span>{</div>
+<div class="line"><span class="lineno">30489</span>  <a class="code hl_variable" href="#a6597be63a17a266233941354200b2340">mBrush</a> = <a class="code hl_function" href="#a6dd4660e70f58bb00390bcda56be568d">brush</a>;</div>
+<div class="line"><span class="lineno">30490</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a6dd4660e70f58bb00390bcda56be568d"><div class="ttname"><a href="#a6dd4660e70f58bb00390bcda56be568d">QCPItemTracer::brush</a></div><div class="ttdeci">QBrush brush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06887">qcustomplot.h:6887</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af5886f4ded8dd68cb4f3388f390790c0" name="af5886f4ded8dd68cb4f3388f390790c0"></a>
@@ -778,6 +986,30 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>To free the tracer from any graph, set <em>graph</em> to <code>nullptr</code>. The tracer <em>position</em> can then be placed freely like any other item position. This is the state the tracer will assume when its graph gets deleted while still attached to it.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6840143b42f3b685cedf7c6d83a704c8">setGraphKey</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30532">30532</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30533</span>{</div>
+<div class="line"><span class="lineno">30534</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a62660ae9684a9d92c026ff7a710f99b6">graph</a>)</div>
+<div class="line"><span class="lineno">30535</span>  {</div>
+<div class="line"><span class="lineno">30536</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#a62660ae9684a9d92c026ff7a710f99b6">graph</a>-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>() == <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno">30537</span>    {</div>
+<div class="line"><span class="lineno">30538</span>      <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa476abf71ed8fa4c537457ebb1a754ad">setType</a>(<a class="code hl_enumvalue" href="class_q_c_p_item_position.html#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">QCPItemPosition::ptPlotCoords</a>);</div>
+<div class="line"><span class="lineno">30539</span>      <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#a2185f45c75ac8cb9be89daeaaad50e37">setAxes</a>(<a class="code hl_function" href="#a62660ae9684a9d92c026ff7a710f99b6">graph</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>(), <a class="code hl_function" href="#a62660ae9684a9d92c026ff7a710f99b6">graph</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>());</div>
+<div class="line"><span class="lineno">30540</span>      <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a> = <a class="code hl_function" href="#a62660ae9684a9d92c026ff7a710f99b6">graph</a>;</div>
+<div class="line"><span class="lineno">30541</span>      <a class="code hl_function" href="#a5b90296109e36384aedbc8908a670413">updatePosition</a>();</div>
+<div class="line"><span class="lineno">30542</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30543</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;graph isn&#39;t in same QCustomPlot instance as this item&quot;</span>;</div>
+<div class="line"><span class="lineno">30544</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30545</span>  {</div>
+<div class="line"><span class="lineno">30546</span>    <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">30547</span>  }</div>
+<div class="line"><span class="lineno">30548</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a842b3831660d3e33b73863fd133889dd"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">QCPAbstractPlottable::valueAxis</a></div><div class="ttdeci">QCPAxis * valueAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03521">qcustomplot.h:3521</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_aa6f25b97ee99988fe352f17cb9ed962b"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">QCPAbstractPlottable::keyAxis</a></div><div class="ttdeci">QCPAxis * keyAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03520">qcustomplot.h:3520</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a2185f45c75ac8cb9be89daeaaad50e37"><div class="ttname"><a href="class_q_c_p_item_position.html#a2185f45c75ac8cb9be89daeaaad50e37">QCPItemPosition::setAxes</a></div><div class="ttdeci">void setAxes(QCPAxis *keyAxis, QCPAxis *valueAxis)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12641">qcustomplot.cpp:12641</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aa476abf71ed8fa4c537457ebb1a754ad"><div class="ttname"><a href="class_q_c_p_item_position.html#aa476abf71ed8fa4c537457ebb1a754ad">QCPItemPosition::setType</a></div><div class="ttdeci">void setType(PositionType type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12281">qcustomplot.cpp:12281</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c"><div class="ttname"><a href="class_q_c_p_item_position.html#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">QCPItemPosition::ptPlotCoords</a></div><div class="ttdeci">@ ptPlotCoords</div><div class="ttdoc">Dynamic positioning at a plot coordinate defined by two axes (see setAxes).</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03661">qcustomplot.h:3660</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a62660ae9684a9d92c026ff7a710f99b6"><div class="ttname"><a href="#a62660ae9684a9d92c026ff7a710f99b6">QCPItemTracer::graph</a></div><div class="ttdeci">QCPGraph * graph() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06891">qcustomplot.h:6891</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6840143b42f3b685cedf7c6d83a704c8" name="a6840143b42f3b685cedf7c6d83a704c8"></a>
@@ -798,6 +1030,11 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Depending on <a class="el" href="#a6c244a9d1175bef12b50afafd4f5fcd2">setInterpolating</a>, the tracer will be either positioned on the data point closest to <em>key</em>, or will stay exactly at <em>key</em> and interpolate the value linearly.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#af5886f4ded8dd68cb4f3388f390790c0">setGraph</a>, <a class="el" href="#a6c244a9d1175bef12b50afafd4f5fcd2">setInterpolating</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30559">30559</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30560</span>{</div>
+<div class="line"><span class="lineno">30561</span>  <a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a> = key;</div>
+<div class="line"><span class="lineno">30562</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6c244a9d1175bef12b50afafd4f5fcd2" name="a6c244a9d1175bef12b50afafd4f5fcd2"></a>
@@ -818,6 +1055,11 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>If <em>enabled</em> is set to false and a key is given with <a class="el" href="#a6840143b42f3b685cedf7c6d83a704c8">setGraphKey</a>, the tracer is placed on the data point of the graph which is closest to the key, but which is not necessarily exactly there. If <em>enabled</em> is true, the tracer will be positioned exactly at the specified key, and the appropriate value will be interpolated from the graph's data points linearly.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#af5886f4ded8dd68cb4f3388f390790c0">setGraph</a>, <a class="el" href="#a6840143b42f3b685cedf7c6d83a704c8">setGraphKey</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30575">30575</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30576</span>{</div>
+<div class="line"><span class="lineno">30577</span>  <a class="code hl_variable" href="#afab37c22ad39f235921e86f93cd84595">mInterpolating</a> = enabled;</div>
+<div class="line"><span class="lineno">30578</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af8048636fc1ef0152e51809b008df2ca" name="af8048636fc1ef0152e51809b008df2ca"></a>
@@ -837,6 +1079,12 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Sets the pen that will be used to draw the line of the tracer</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae1bf70db7f13f928660168cd3e5069f3">setSelectedPen</a>, <a class="el" href="#a2c303f7470a30084daa201ed556b3c36">setBrush</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30467">30467</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30468</span>{</div>
+<div class="line"><span class="lineno">30469</span>  <a class="code hl_variable" href="#a579e3bd6bd16d6aaff03638dc8a99a69">mPen</a> = <a class="code hl_function" href="#a789cdc627868f5a4a0956816072571c9">pen</a>;</div>
+<div class="line"><span class="lineno">30470</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a789cdc627868f5a4a0956816072571c9"><div class="ttname"><a href="#a789cdc627868f5a4a0956816072571c9">QCPItemTracer::pen</a></div><div class="ttdeci">QPen pen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06885">qcustomplot.h:6885</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0f55c084980a7a312af859d3e7b558ef" name="a0f55c084980a7a312af859d3e7b558ef"></a>
@@ -856,6 +1104,11 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Sets the brush that will be used to draw any fills of the tracer, when selected.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2c303f7470a30084daa201ed556b3c36">setBrush</a>, <a class="el" href="class_q_c_p_abstract_item.html#a203de94ad586cc44d16c9565f49d3378">setSelected</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30497">30497</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30498</span>{</div>
+<div class="line"><span class="lineno">30499</span>  <a class="code hl_variable" href="#a1c15d2adde40efdcc0ef1ff78fd256a6">mSelectedBrush</a> = <a class="code hl_function" href="#a6dd4660e70f58bb00390bcda56be568d">brush</a>;</div>
+<div class="line"><span class="lineno">30500</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae1bf70db7f13f928660168cd3e5069f3" name="ae1bf70db7f13f928660168cd3e5069f3"></a>
@@ -875,6 +1128,11 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Sets the pen that will be used to draw the line of the tracer when selected</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#af8048636fc1ef0152e51809b008df2ca">setPen</a>, <a class="el" href="class_q_c_p_abstract_item.html#a203de94ad586cc44d16c9565f49d3378">setSelected</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30477">30477</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30478</span>{</div>
+<div class="line"><span class="lineno">30479</span>  <a class="code hl_variable" href="#a3f61829784200819661d1e2a5354d866">mSelectedPen</a> = <a class="code hl_function" href="#a789cdc627868f5a4a0956816072571c9">pen</a>;</div>
+<div class="line"><span class="lineno">30480</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae47fe0617f5fef5fdb766999569be10a" name="ae47fe0617f5fef5fdb766999569be10a"></a>
@@ -893,6 +1151,12 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </div><div class="memdoc">
 <p>Sets the size of the tracer in pixels, if the style supports setting a size (e.g. <a class="el" href="#a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b">tsSquare</a> does, <a class="el" href="#a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f">tsCrosshair</a> does not). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30506">30506</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30507</span>{</div>
+<div class="line"><span class="lineno">30508</span>  <a class="code hl_variable" href="#a575153a24bb357d1e006f6bc3bd099b9">mSize</a> = <a class="code hl_function" href="#a4e42d7b49f293273a74a49a2457856e2">size</a>;</div>
+<div class="line"><span class="lineno">30509</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_a4e42d7b49f293273a74a49a2457856e2"><div class="ttname"><a href="#a4e42d7b49f293273a74a49a2457856e2">QCPItemTracer::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06889">qcustomplot.h:6889</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41a2ac4f1acd7897b4e2a2579c03204e" name="a41a2ac4f1acd7897b4e2a2579c03204e"></a>
@@ -912,6 +1176,12 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>Sets the style/visual appearance of the tracer.</p>
 <p>If you only want to use the tracer <em>position</em> as an anchor for other items, set <em>style</em> to <a class="el" href="#a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4">tsNone</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30517">30517</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30518</span>{</div>
+<div class="line"><span class="lineno">30519</span>  <a class="code hl_variable" href="#afb1f236bebf417544e0138fef22a292e">mStyle</a> = <a class="code hl_function" href="#afdaee32c9ccc9c14502b28d3d86bf5ed">style</a>;</div>
+<div class="line"><span class="lineno">30520</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_tracer_html_afdaee32c9ccc9c14502b28d3d86bf5ed"><div class="ttname"><a href="#afdaee32c9ccc9c14502b28d3d86bf5ed">QCPItemTracer::style</a></div><div class="ttdeci">TracerStyle style() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06890">qcustomplot.h:6890</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4e42d7b49f293273a74a49a2457856e2" name="a4e42d7b49f293273a74a49a2457856e2"></a>
@@ -937,6 +1207,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06889">6889</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6889</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a575153a24bb357d1e006f6bc3bd099b9">mSize</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afdaee32c9ccc9c14502b28d3d86bf5ed" name="afdaee32c9ccc9c14502b28d3d86bf5ed"></a>
@@ -962,6 +1235,9 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06890">6890</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6890</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#afb1f236bebf417544e0138fef22a292e">mStyle</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b90296109e36384aedbc8908a670413" name="a5b90296109e36384aedbc8908a670413"></a>
@@ -982,6 +1258,59 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 <p>It is called automatically on every redraw and normally doesn't need to be called manually. One exception is when you want to read the tracer coordinates via <em>position</em> and are not sure that the graph's data (or the tracer key with <a class="el" href="#a6840143b42f3b685cedf7c6d83a704c8">setGraphKey</a>) hasn't changed since the last redraw. In that situation, call this function before accessing <em>position</em>, to make sure you don't get out-of-date coordinates.</p>
 <p>If there is no graph set on this tracer, this function does nothing. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l30696">30696</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">30697</span>{</div>
+<div class="line"><span class="lineno">30698</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>)</div>
+<div class="line"><span class="lineno">30699</span>  {</div>
+<div class="line"><span class="lineno">30700</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a72cefbfbb9e699940e37be605bd9c51e">hasPlottable</a>(<a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>))</div>
+<div class="line"><span class="lineno">30701</span>    {</div>
+<div class="line"><span class="lineno">30702</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;size() &gt; 1)</div>
+<div class="line"><span class="lineno">30703</span>      {</div>
+<div class="line"><span class="lineno">30704</span>        <a class="code hl_typedef" href="class_q_c_p_data_container.html#ae40a91f5cb0bcac61d727427449b7d15">QCPGraphDataContainer::const_iterator</a> first = <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;constBegin();</div>
+<div class="line"><span class="lineno">30705</span>        <a class="code hl_typedef" href="class_q_c_p_data_container.html#ae40a91f5cb0bcac61d727427449b7d15">QCPGraphDataContainer::const_iterator</a> last = <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;constEnd()-1;</div>
+<div class="line"><span class="lineno">30706</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey &lt;= first-&gt;</a>key)</div>
+<div class="line"><span class="lineno">30707</span>          <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(first-&gt;key, first-&gt;value);</div>
+<div class="line"><span class="lineno">30708</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a> &gt;= last-&gt;key)</div>
+<div class="line"><span class="lineno">30709</span>          <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(last-&gt;key, last-&gt;value);</div>
+<div class="line"><span class="lineno">30710</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30711</span>        {</div>
+<div class="line"><span class="lineno">30712</span>          <a class="code hl_typedef" href="class_q_c_p_data_container.html#ae40a91f5cb0bcac61d727427449b7d15">QCPGraphDataContainer::const_iterator</a> it = <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;findBegin(<a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a>);</div>
+<div class="line"><span class="lineno">30713</span>          <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;constEnd()) <span class="comment">// mGraphKey is not exactly on last iterator, but somewhere between iterators</span></div>
+<div class="line"><span class="lineno">30714</span>          {</div>
+<div class="line"><span class="lineno">30715</span>            <a class="code hl_typedef" href="class_q_c_p_data_container.html#ae40a91f5cb0bcac61d727427449b7d15">QCPGraphDataContainer::const_iterator</a> prevIt = it;</div>
+<div class="line"><span class="lineno">30716</span>            ++it; <span class="comment">// won&#39;t advance to constEnd because we handled that case (mGraphKey &gt;= last-&gt;key) before</span></div>
+<div class="line"><span class="lineno">30717</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afab37c22ad39f235921e86f93cd84595">mInterpolating</a>)</div>
+<div class="line"><span class="lineno">30718</span>            {</div>
+<div class="line"><span class="lineno">30719</span>              <span class="comment">// interpolate between iterators around mGraphKey:</span></div>
+<div class="line"><span class="lineno">30720</span>              <span class="keywordtype">double</span> slope = 0;</div>
+<div class="line"><span class="lineno">30721</span>              <span class="keywordflow">if</span> (!qFuzzyCompare(<span class="keywordtype">double</span>(it-&gt;key), <span class="keywordtype">double</span>(prevIt-&gt;key)))</div>
+<div class="line"><span class="lineno">30722</span>                slope = (it-&gt;value-prevIt-&gt;value)/(it-&gt;key-prevIt-&gt;key);</div>
+<div class="line"><span class="lineno">30723</span>              <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(<a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a>, (<a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a>-prevIt-&gt;key)*slope+prevIt-&gt;value);</div>
+<div class="line"><span class="lineno">30724</span>            } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30725</span>            {</div>
+<div class="line"><span class="lineno">30726</span>              <span class="comment">// find iterator with key closest to mGraphKey:</span></div>
+<div class="line"><span class="lineno">30727</span>              <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8fa20f2e9ee07d21fd7c8d30ba4702ca">mGraphKey</a> &lt; (prevIt-&gt;key+it-&gt;key)*0.5)</div>
+<div class="line"><span class="lineno">30728</span>                <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(prevIt-&gt;key, prevIt-&gt;value);</div>
+<div class="line"><span class="lineno">30729</span>              <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30730</span>                <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(it-&gt;key, it-&gt;value);</div>
+<div class="line"><span class="lineno">30731</span>            }</div>
+<div class="line"><span class="lineno">30732</span>          } <span class="keywordflow">else</span> <span class="comment">// mGraphKey is exactly on last iterator (should actually be caught when comparing first/last keys, but this is a failsafe for fp uncertainty)</span></div>
+<div class="line"><span class="lineno">30733</span>            <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(it-&gt;key, it-&gt;value);</div>
+<div class="line"><span class="lineno">30734</span>        }</div>
+<div class="line"><span class="lineno">30735</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;size() == 1)</div>
+<div class="line"><span class="lineno">30736</span>      {</div>
+<div class="line"><span class="lineno">30737</span>        <a class="code hl_typedef" href="class_q_c_p_data_container.html#ae40a91f5cb0bcac61d727427449b7d15">QCPGraphDataContainer::const_iterator</a> it = <a class="code hl_variable" href="#a2d70cf616b579563aa15f796dfc143ac">mGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">data</a>()-&gt;constBegin();</div>
+<div class="line"><span class="lineno">30738</span>        <a class="code hl_variable" href="#a69917e2fdb2b3a929c196958feee7cbe">position</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_position.html#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(it-&gt;key, it-&gt;value);</div>
+<div class="line"><span class="lineno">30739</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30740</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;graph has no data&quot;</span>;</div>
+<div class="line"><span class="lineno">30741</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">30742</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;graph not contained in QCustomPlot instance (anymore)&quot;</span>;</div>
+<div class="line"><span class="lineno">30743</span>  }</div>
+<div class="line"><span class="lineno">30744</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_container_html_ae40a91f5cb0bcac61d727427449b7d15"><div class="ttname"><a href="class_q_c_p_data_container.html#ae40a91f5cb0bcac61d727427449b7d15">QCPDataContainer::const_iterator</a></div><div class="ttdeci">QVector&lt; DataType &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02616">qcustomplot.h:2616</a></div></div>
+<div class="ttc" id="aclass_q_c_p_graph_html_a141aa31a1f19bbd0ce60f55eaeb9ea60"><div class="ttname"><a href="class_q_c_p_graph.html#a141aa31a1f19bbd0ce60f55eaeb9ea60">QCPGraph::data</a></div><div class="ttdeci">QSharedPointer&lt; QCPGraphDataContainer &gt; data() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05524">qcustomplot.h:5524</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a72cefbfbb9e699940e37be605bd9c51e"><div class="ttname"><a href="class_q_custom_plot.html#a72cefbfbb9e699940e37be605bd9c51e">QCustomPlot::hasPlottable</a></div><div class="ttdeci">bool hasPlottable(QCPAbstractPlottable *plottable) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l14374">qcustomplot.cpp:14374</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -1005,6 +1334,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06917">6917</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a2d70cf616b579563aa15f796dfc143ac" name="a2d70cf616b579563aa15f796dfc143ac"></a>
@@ -1026,6 +1357,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06920">6920</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1049,6 +1382,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06921">6921</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="afab37c22ad39f235921e86f93cd84595" name="afab37c22ad39f235921e86f93cd84595"></a>
@@ -1070,6 +1405,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06922">6922</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1093,6 +1430,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06916">6916</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1c15d2adde40efdcc0ef1ff78fd256a6" name="a1c15d2adde40efdcc0ef1ff78fd256a6"></a>
@@ -1114,6 +1453,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06917">6917</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1137,6 +1478,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06916">6916</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a575153a24bb357d1e006f6bc3bd099b9" name="a575153a24bb357d1e006f6bc3bd099b9"></a>
@@ -1158,6 +1501,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06918">6918</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1181,6 +1526,8 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06919">6919</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a69917e2fdb2b3a929c196958feee7cbe" name="a69917e2fdb2b3a929c196958feee7cbe"></a>
@@ -1195,11 +1542,13 @@ Tracer example. Blue dotted circles are anchors, solid blue discs are positions.
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06912">6912</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

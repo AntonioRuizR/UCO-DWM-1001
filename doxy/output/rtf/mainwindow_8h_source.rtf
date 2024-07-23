@@ -1,0 +1,590 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+mainwindow.h\par \pard\plain 
+{\tc\tcl2 \v C:/Users/anton/OneDrive - Universidad de Córdoba/Doctorado_ARR/Qt/Versiones/DWM1001DEV_APP/Github/UCO-DWM1001-DEV/src/mainwindow.h}
+{\xe \v C:/Users/anton/OneDrive - Universidad de Córdoba/Doctorado_ARR/Qt/Versiones/DWM1001DEV_APP/Github/UCO-DWM1001-DEV/src/mainwindow.h}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 \par
+26 {\cf21 #ifndef MAINWINDOW_H}\par
+27 {\cf21 #define MAINWINDOW_H}\par
+28 \par
+29 {\cf21 #include "qelapsedtimer.h"}\par
+30 {\cf21 #include "qtimer.h"}\par
+31 {\cf21 #include <QMainWindow>}\par
+32 {\cf21 #include "qcustomplot.h"}\par
+33 {\cf21 #include <QFileDialog>}\par
+34 {\cf21 #include <QSerialPort>}\par
+35 {\cf21 #include <QMessageBox>}\par
+36 {\cf21 #include <QPen>}\par
+37 {\cf21 #include <QTranslator>}\par
+38 \par
+39 QT_BEGIN_NAMESPACE\par
+40 {\cf17 namespace }Ui \{\par
+41 {\cf17 class }MainWindow;\par
+42 \}\par
+43 QT_END_NAMESPACE\par
+44 \par
+45 {\cf17 class }QSerialPort;\par
+46 {\cf17 class }Console;\par
+47 \par
+48 {\cf17 class }MainWindow : {\cf17 public} QMainWindow\par
+49 \{\par
+50     Q_OBJECT\par
+51 \par
+52 {\cf17 protected}:\par
+53     {\cf18 void} changeEvent(QEvent*);\par
+54 \par
+55 {\cf17 protected} slots:\par
+56     {\cf20 // this slot is called by the language menu actions}\par
+57     {\cf18 void} slotLanguageChanged(QAction* action);\par
+58 \par
+59 {\cf17 public}:\par
+60     MainWindow(QWidget *parent = {\cf17 nullptr});\par
+61     ~MainWindow();\par
+62 \par
+63     {\cf18 void} setupRealtimeDataDemo(QCustomPlot *customPlot);\par
+64     {\cf18 void} setupRealtimeDataDemo2(QCustomPlot *customPlot);\par
+65     {\cf18 void} setupRealtimeDataDemo3(QCustomPlot *customPlot);\par
+66 \par
+67     {\cf18 void} device_connection();\par
+68     {\cf18 void} device_disconnection();\par
+69     {\cf18 void} closeEvent (QCloseEvent *event);\par
+70 \par
+71 {\cf17 private} slots:\par
+72 \par
+73     {\cf20 // Connection:}\par
+74 \par
+75     {\cf18 void} writeData({\cf17 const} QByteArray &data);\par
+76     {\cf18 void} readData();\par
+77     {\cf18 void} sampletimechange_wait();\par
+78     {\cf18 void} gpio_config();\par
+79     {\cf18 void} device_config({\cf18 int});\par
+80     {\cf18 void} passive_config();\par
+81     {\cf18 void} network_config(QString);\par
+82     {\cf20 //void informacion_sys();}\par
+83     {\cf18 void} send_message(QString);\par
+84     {\cf18 void} change_devicemode_wait();\par
+85     {\cf18 void} receive_info();\par
+86     {\cf18 void} receive_info_failure();\par
+87 \par
+88     {\cf20 // Graph functions:}\par
+89 \par
+90     {\cf18 void} distance_analysis({\cf17 const} QByteArray &data);\par
+91     {\cf18 void} position_analysis({\cf17 const} QByteArray &data2);\par
+92     {\cf18 void} realtimeDataSlot();\par
+93 \par
+94     {\cf18 void} media_calc();\par
+95     {\cf18 void} media_calc_pos();\par
+96 \par
+97     {\cf18 void} distance_data_processing({\cf18 double}, {\cf18 double}, {\cf18 double}, {\cf18 double});\par
+98     {\cf18 void} position_data_processing();\par
+99     {\cf18 void} distance_stats_calc();\par
+100     {\cf18 void} position_stats_calc();\par
+101     {\cf18 void} reset_stats();\par
+102 \par
+103     {\cf18 void} save_distance_data(QDateTime hora);\par
+104     {\cf18 void} save_position_data(QDateTime hora);\par
+105     {\cf18 void} save_stats_data();\par
+106 \par
+107     {\cf18 void} check_distance_alarm();\par
+108     {\cf18 void} check_position_alarm();\par
+109     {\cf18 void} alarm_graph();\par
+110     {\cf18 void} alarm_duration_f();\par
+111     {\cf18 void} dist_alarm_activation_request();\par
+112     {\cf18 void} pos_alarm_activation_request();\par
+113     {\cf18 void} draw_alarm_pos();\par
+114 \par
+115     {\cf20 //void desactivar_recepcion();}\par
+116     {\cf18 void} clear_gpio();\par
+117     QColor obtain_color({\cf18 float});\par
+118     {\cf18 void} gpio_clear_wait();\par
+119 \par
+120     {\cf18 void} timer_gpio8();\par
+121     {\cf18 void} timer_gpio9();\par
+122     {\cf18 void} timer_gpio10();\par
+123     {\cf18 void} timer_gpio12();\par
+124     {\cf18 void} pos_anchors();\par
+125 \par
+126     {\cf18 void} on_pushButton_USBportrefresh_clicked();\par
+127     {\cf18 void} on_pushButton_connect_clicked();\par
+128     {\cf18 void} on_pushButton_disconnect_clicked();\par
+129     {\cf18 void} on_pushButton_distancemode_clicked();\par
+130     {\cf18 void} on_pushButton_positionmode_clicked();\par
+131     {\cf18 void} on_actionExit_triggered();\par
+132     {\cf18 void} on_plot_distance_toggled({\cf18 bool} checked);\par
+133     {\cf18 void} on_spinBox_sampletime_valueChanged({\cf18 int} arg1);\par
+134     {\cf18 void} on_actionDistanceGraphSettings_triggered();\par
+135     {\cf18 void} on_pushButton_2_clicked();\par
+136     {\cf18 void} on_pushButton_clicked();\par
+137     {\cf18 void} on_actionReset_triggered();\par
+138     {\cf18 void} on_actionFactory_Reset_triggered();\par
+139     {\cf18 void} on_actionDataSavingSettings_triggered();\par
+140     {\cf18 void} on_actionStartDataSaving_triggered();\par
+141     {\cf18 void} on_actionStopDataSaving_triggered();\par
+142     {\cf18 void} on_actionPositionGraphSettings_triggered();\par
+143     {\cf18 void} on_actionDeviceSettings_triggered();\par
+144     {\cf18 void} on_pushButton_6_clicked();\par
+145     {\cf18 void} on_pushButton_5_clicked();\par
+146     {\cf18 void} on_comboBox_GPIO8_activated({\cf18 int} index);\par
+147     {\cf18 void} on_comboBox_GPIO9_activated({\cf18 int} index);\par
+148     {\cf18 void} on_comboBox_GPIO10_activated({\cf18 int} index);\par
+149     {\cf18 void} on_comboBox_GPIO12_activated({\cf18 int} index);\par
+150     {\cf18 void} on_pushButton_GPIO8_clicked();\par
+151     {\cf18 void} on_pushButton_GPIO9_clicked();\par
+152     {\cf18 void} on_pushButton_GPIO10_clicked();\par
+153     {\cf18 void} on_pushButton_GPIO12_clicked();\par
+154     {\cf18 void} on_actionStatistics_triggered();\par
+155     {\cf18 void} on_actionAbout_triggered();\par
+156     {\cf18 void} on_actionHelp_triggered();\par
+157     {\cf18 void} on_actionHistogram_triggered();\par
+158     {\cf18 void} on_actionReiniciar_los_datos_recibidos_triggered();\par
+159 \par
+160 {\cf17 private}:\par
+161     {\cf20 // loads a language by the given language shortcur (e.g. de, en)}\par
+162     {\cf18 void} loadLanguage({\cf17 const} QString& rLanguage);\par
+163 \par
+164     {\cf20 // creates the language menu dynamically from the content of m_langPath}\par
+165     {\cf18 void} createLanguageMenu({\cf18 void});\par
+166 \par
+167 \par
+168     Ui::MainWindow *ui;\par
+169     QTranslator m_translator; {\cf20 // contains the translations for this application}\par
+170     QTranslator m_translatorQt; {\cf20 // contains the translations for qt}\par
+171     QString m_currLang; {\cf20 // contains the currently loaded language}\par
+172     QString m_langPath; {\cf20 // Path of language files. This is always fixed to /languages.}\par
+173 \par
+174     QSerialPort *p_serie;\par
+175 \par
+176     {\cf20 // Initialise variables}\par
+177 \par
+178     {\cf18 bool} savedata=0;\par
+179 \par
+180     {\cf18 bool} multiple_measures=0;\par
+181 \par
+182     {\cf18 bool} info_ids_1=0;\par
+183     {\cf18 bool} info_ids_2=0;\par
+184     {\cf18 bool} info_ids_3=0;\par
+185     {\cf18 bool} info_ids_4=0;\par
+186 \par
+187     QByteArray serial_message;\par
+188     QByteArray position_message;\par
+189     {\cf18 bool} receive_initial_info=0;\par
+190     QByteArray info_message;\par
+191     QString filename={\cf22 "C:/"};\par
+192     QString filename_est;\par
+193     QString chosenPort;\par
+194     QString network;\par
+195 \par
+196     QTimer timer_sampletime;\par
+197     QTimer dataTimer;\par
+198     QTimer posTimer;\par
+199     QTimer timer_gpioconfig;\par
+200     QTimer timer_alarmdelay;\par
+201     QTimer timer_alarmduration;\par
+202     QTimer timer_opmodechange;\par
+203     QTimer timer_infofailure;\par
+204     QTimer timer_gpioclear;\par
+205     {\cf18 bool} deactivate_GPIO=0;\par
+206 \par
+207     {\cf20 //int distance_samples_ID1=0; //Esto parece que no hace nada}\par
+208     {\cf20 //int distance_samples_ID2=0;}\par
+209     {\cf20 //int distance_samples_ID3=0;}\par
+210     {\cf18 int} distance_samples_ID4=0; {\cf20 //Sólo se usa esta variable (analizar)}\par
+211     {\cf18 int} position_samples=0;\par
+212 \par
+213     QTimer tem_gpio8;\par
+214     QTimer tem_gpio9;\par
+215     QTimer tem_gpio10;\par
+216     QTimer tem_gpio12;\par
+217     {\cf18 int} desac_gpio=0;\par
+218 \par
+219     {\cf18 bool} datareception_enabled;\par
+220     {\cf18 bool} passive_positioning=0;\par
+221     {\cf18 bool} tag_positioning=0;\par
+222 \par
+223     {\cf18 bool} operation_mode=0;\par
+224 \par
+225     {\cf18 bool} enable_statistics=0;\par
+226     {\cf18 double} distance_value_1;\par
+227     {\cf18 double} distance_value_2;\par
+228     {\cf18 double} distance_value_3;\par
+229     {\cf18 double} distance_value_4;\par
+230     {\cf18 double} mediafilter_value_1;\par
+231     {\cf18 double} mediafilter_value_2;\par
+232     {\cf18 double} mediafilter_value_3;\par
+233     {\cf18 double} mediafilter_value_4;\par
+234     {\cf18 double} accumulated_dist_1=0;\par
+235     {\cf18 double} accumulated_dist_2=0;\par
+236     {\cf18 double} accumulated_dist_3=0;\par
+237     {\cf18 double} accumulated_dist_4=0;\par
+238     {\cf18 double} position_data_samples=0;\par
+239     {\cf18 double} received_data_quantity_1=0;\par
+240     {\cf18 double} received_data_quantity_2=0;\par
+241     {\cf18 double} received_data_quantity_3=0;\par
+242     {\cf18 double} received_data_quantity_4=0;\par
+243     {\cf18 double} min_value_1=1000;\par
+244     {\cf18 double} max_value_1=0;\par
+245     {\cf18 double} min_value_2=1000;\par
+246     {\cf18 double} max_value_2=0;\par
+247     {\cf18 double} min_value_3=1000;\par
+248     {\cf18 double} max_value_3=0;\par
+249     {\cf18 double} min_value_4=1000;\par
+250     {\cf18 double} max_value_4=0;\par
+251 \par
+252     {\cf18 double} mode_1=0;\par
+253     {\cf18 double} std_1=0;\par
+254     {\cf18 double} range_1=0;\par
+255     {\cf18 double} percentil_25_1=0;\par
+256     {\cf18 double} percentil_75_1=0;\par
+257 \par
+258     {\cf18 double} mode_2=0;\par
+259     {\cf18 double} std_2=0;\par
+260     {\cf18 double} range_2=0;\par
+261     {\cf18 double} percentil_25_2=0;\par
+262     {\cf18 double} percentil_75_2=0;\par
+263 \par
+264     {\cf18 double} mode_3=0;\par
+265     {\cf18 double} std_3=0;\par
+266     {\cf18 double} range_3=0;\par
+267     {\cf18 double} percentil_25_3=0;\par
+268     {\cf18 double} percentil_75_3=0;\par
+269 \par
+270     {\cf18 double} mode_4=0;\par
+271     {\cf18 double} std_4=0;\par
+272     {\cf18 double} range_4=0;\par
+273     {\cf18 double} percentil_25_4=0;\par
+274     {\cf18 double} percentil_75_4=0;\par
+275 \par
+276     {\cf18 double} mode_x=0;\par
+277     {\cf18 double} mode_y=0;\par
+278     {\cf18 double} mode_z=0;\par
+279     {\cf18 double} std_x=0;\par
+280     {\cf18 double} std_y=0;\par
+281     {\cf18 double} std_z=0;\par
+282     {\cf18 double} max_x=-1000;\par
+283     {\cf18 double} max_y=-1000;\par
+284     {\cf18 double} max_z=-1000;\par
+285     {\cf18 double} min_x=1000;\par
+286     {\cf18 double} min_y=1000;\par
+287     {\cf18 double} min_z=1000;\par
+288     {\cf18 double} range_x=0;\par
+289     {\cf18 double} range_y=0;\par
+290     {\cf18 double} range_z=0;\par
+291     {\cf18 double} accumulated_pos_x=0;\par
+292     {\cf18 double} accumulated_pos_y=0;\par
+293     {\cf18 double} accumulated_pos_z=0;\par
+294     {\cf18 double} mean_total_x=0;\par
+295     {\cf18 double} mean_total_y=0;\par
+296     {\cf18 double} mean_total_z=0;\par
+297     {\cf18 double} percentil_25_x=0;\par
+298     {\cf18 double} percentil_75_x=0;\par
+299     {\cf18 double} percentil_25_y=0;\par
+300     {\cf18 double} percentil_75_y=0;\par
+301     {\cf18 double} percentil_25_z=0;\par
+302     {\cf18 double} percentil_75_z=0;\par
+303 \par
+304 \par
+305     QList<double> distance_list_1;\par
+306     QList<double> distance_list_2;\par
+307     QList<double> distance_list_3;\par
+308     QList<double> distance_list_4;\par
+309 \par
+310     QList<double> position_list_x;\par
+311     QList<double> position_list_y;\par
+312     QList<double> position_list_z;\par
+313 \par
+314     {\cf18 int} detected_devices = 0;\par
+315     {\cf18 int} max_detected_devices = 0;\par
+316 \par
+317     {\cf18 bool} gpio_init_config=1;\par
+318     {\cf18 bool} alarm_activation=0;\par
+319     {\cf18 bool} alarm_activated=0;\par
+320     {\cf18 int} previous_alarm=0;\par
+321     {\cf18 int} chosen_alarm=0;\par
+322     {\cf18 bool} distance_alarm_plot=0;\par
+323     {\cf18 bool} position_alarm_pos=0;\par
+324 \par
+325     {\cf18 bool} auto_range=0;\par
+326 \par
+327     {\cf18 bool} mean_value_alarm_link=0;\par
+328 \par
+329     {\cf18 int} bufer_size=1;\par
+330 \par
+331     {\cf18 double} bufer_media;\par
+332     {\cf18 double} bufer_media_2;\par
+333     {\cf18 double} bufer_media_3;\par
+334     {\cf18 double} bufer_media_4;\par
+335     {\cf18 double} bufer_media_5;\par
+336     {\cf18 double} bufer_media_6;\par
+337 \par
+338     {\cf18 bool} mean_enable=0;\par
+339     QList<double> bufer;\par
+340     QList<double> bufer_2;\par
+341     QList<double> bufer_3;\par
+342     QList<double> bufer_4;\par
+343     QList<double> bufer_5;\par
+344     QList<double> bufer_6;\par
+345 \par
+346     {\cf18 double} bufer_media_x;\par
+347     QList<double> bufer_x;\par
+348     {\cf18 double} bufer_media_y;\par
+349     QList<double> bufer_y;\par
+350     {\cf18 double} bufer_media_z;\par
+351     QList<double> bufer_z;\par
+352 \par
+353     QString id_1;\par
+354     QString id_2;\par
+355     QString id_3;\par
+356     QString id_4;\par
+357     QString initial_id_1;\par
+358     QString initial_id_2;\par
+359     QString initial_id_3;\par
+360     QString initial_id_4;\par
+361 \par
+362     {\cf18 int} alarm_issue_check_1=0;\par
+363     {\cf18 int} alarm_issue_check_2=0;\par
+364     {\cf18 int} alarm_issue_check_3=0;\par
+365     {\cf18 int} alarm_issue_check_4=0;\par
+366     {\cf18 double} prev_id_dist_1;\par
+367     {\cf18 double} prev_id_dist_2;\par
+368     {\cf18 double} prev_id_dist_3;\par
+369     {\cf18 double} prev_id_dist_4;\par
+370 \par
+371     {\cf18 int} id_label_1=0;\par
+372     {\cf18 int} id_label_2=0;\par
+373     {\cf18 int} id_label_3=0;\par
+374     {\cf18 int} id_label_4=0;\par
+375 \par
+376     {\cf18 double} position_x;\par
+377     {\cf18 double} position_y;\par
+378     {\cf18 double} position_z;\par
+379 \par
+380     {\cf18 double} pos_x_temp;\par
+381     {\cf18 double} pos_y_temp;\par
+382     {\cf18 double} pos_z_temp;\par
+383 \par
+384     {\cf18 float} pos_alarm_x_min;\par
+385     {\cf18 float} pos_alarm_x_max;\par
+386     {\cf18 float} pos_alarm_y_min;\par
+387     {\cf18 float} pos_alarm_y_max;\par
+388     {\cf18 float} pos_alarm_z_min;\par
+389     {\cf18 float} pos_alarm_z_max;\par
+390     {\cf18 int} pos_alarm_delay=0;\par
+391     {\cf18 int} pos_alarm_duration=0;\par
+392     {\cf18 bool} pos_x_alarm_ena=0;\par
+393     {\cf18 bool} pos_y_alarm_ena=0;\par
+394     {\cf18 bool} pos_z_alarm_ena=0;\par
+395 \par
+396     {\cf18 float} axisYmax;\par
+397     {\cf18 float} max_value_alarm;\par
+398     {\cf18 float} min_value_alarm;\par
+399     {\cf18 int} alarm_delay=0;\par
+400     {\cf18 int} alarm_duration=0;\par
+401 \par
+402     {\cf18 float} graph0_size=1.50;\par
+403     {\cf18 float} graph1_size=1.50;\par
+404     {\cf18 float} graph2_size=1.50;\par
+405     {\cf18 float} graph4_size=1.50;\par
+406     {\cf18 float} graph5_size=1.50;\par
+407     {\cf18 float} graph6_size=1.50;\par
+408     {\cf18 int} color_graph0;\par
+409     {\cf18 int} color_graph1;\par
+410     {\cf18 int} color_graph2;\par
+411 \par
+412     QColor color1;\par
+413     QColor color1_2;\par
+414     QColor color1_3;\par
+415     QColor color1_4;\par
+416     QColor color2;\par
+417     QColor color3;\par
+418     QString chosen_color_info={\cf22 ""};\par
+419 \par
+420     QString chosen_color_d1={\cf22 "red"};\par
+421     QString chosen_color_d2={\cf22 "blue"};\par
+422     QString chosen_color_d3={\cf22 "darkgreen"};\par
+423     QString chosen_color_d4={\cf22 "magenta"};\par
+424 \par
+425     {\cf18 int} indice_color_fm;\par
+426     {\cf18 int} indice_color_al;\par
+427 \par
+428     QPen graphPen;\par
+429     QPen graphPen_2;\par
+430     QPen graphPen_3;\par
+431     QPen graphPen_4;\par
+432     QPen graphPen_5;\par
+433     QPen graphPen_6;\par
+434     QPen graphPenmaxmin;\par
+435 \par
+436     {\cf18 double} range_dist_y_max;\par
+437     {\cf18 double} range_dist_y_min;\par
+438 \par
+439     {\cf18 double} range_pos_y_min=0;\par
+440     {\cf18 double} range_pos_y_max=10;\par
+441     {\cf18 double} range_pos_x_min=0;\par
+442     {\cf18 double} range_pos_x_max=10;\par
+443 \par
+444     {\cf18 double} anchor_1_x;\par
+445     {\cf18 double} anchor_1_y;\par
+446     {\cf18 double} anchor_2_x;\par
+447     {\cf18 double} anchor_2_y;\par
+448     {\cf18 double} anchor_3_x;\par
+449     {\cf18 double} anchor_3_y;\par
+450     {\cf18 double} anchor_4_x;\par
+451     {\cf18 double} anchor_4_y;\par
+452 \par
+453     {\cf18 bool} position_graph_enabled=0;\par
+454 \};\par
+455 {\cf21 #endif }{\cf20 // MAINWINDOW_H}\par
+}
+}

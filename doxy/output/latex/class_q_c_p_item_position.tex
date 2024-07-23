@@ -1,0 +1,407 @@
+\doxysection{QCPItem\+Position Class Reference}
+\hypertarget{class_q_c_p_item_position}{}\label{class_q_c_p_item_position}\index{QCPItemPosition@{QCPItemPosition}}
+
+
+{\ttfamily \#include $<$qcustomplot.\+h$>$}
+
+Inheritance diagram for QCPItem\+Position\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_c_p_item_position}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \{ \mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\+Absolute}}
+, \mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a}{pt\+Viewport\+Ratio}}
+, \mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75}{pt\+Axis\+Rect\+Ratio}}
+, \mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\+Plot\+Coords}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_position_a6519a552bd9766354644ec24d1f26622}{QCPItem\+Position}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}parent\+Plot, \mbox{\hyperlink{class_q_c_p_abstract_item}{QCPAbstract\+Item}} \texorpdfstring{$\ast$}{*}parent\+Item, const QString \&\mbox{\hyperlink{class_q_c_p_item_anchor_aad37cdf5a3f63428f61be739014e212e}{name}})
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_item_position_a00d31e21d2fd475aa668a1c95d749a8e}{\texorpdfstring{$\sim$}{\string~}\+QCPItem\+Position}} () \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_abc1276e2ef603e459a9e48e75966bf8f}{type}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_a1415911868835701c04250566bfc681d}{typeX}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_ae47bac6f679c58f9e1c78dc63d56f331}{typeY}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_a0a87f9dce1af6cc9b510785991bcf1c6}{parent\+Anchor}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_afd6993258e88255a6b5e82e98df40d6a}{parent\+AnchorX}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_a5151572d157fd475c9b2bc9b9df6595b}{parent\+AnchorY}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_item_position_a6fc519f1b73722a8d0cff7d4d647407e}{key}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_item_position_acfcf86f840a7366a4299bff593d5d636}{value}} () const
+\item 
+QPointF \mbox{\hyperlink{class_q_c_p_item_position_aa4ecf5b04c67049c05d37619e090820b}{coords}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_ab6c3afb95511842eee29745480cc8a53}{key\+Axis}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_aaa4dc49c9f142ff00b491272febc1de6}{value\+Axis}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_axis_rect}{QCPAxis\+Rect}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_ae4081cfe7575f922f403c6e3a2ce7891}{axis\+Rect}} () const
+\item 
+virtual QPointF \mbox{\hyperlink{class_q_c_p_item_position_a2943e7cc358c017b27ae9f9ca0f55fbc}{pixel\+Position}} () const \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_aa476abf71ed8fa4c537457ebb1a754ad}{set\+Type}} (\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_abc1276e2ef603e459a9e48e75966bf8f}{type}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_a2113b2351d6d00457fb3559a4e20c3ea}{set\+TypeX}} (\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_abc1276e2ef603e459a9e48e75966bf8f}{type}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_ac2a454aa5a54c1615c50686601ec4510}{set\+TypeY}} (\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_abc1276e2ef603e459a9e48e75966bf8f}{type}})
+\item 
+bool \mbox{\hyperlink{class_q_c_p_item_position_ac094d67a95d2dceafa0d50b9db3a7e51}{set\+Parent\+Anchor}} (\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_item_position_a0a87f9dce1af6cc9b510785991bcf1c6}{parent\+Anchor}}, bool keep\+Pixel\+Position=false)
+\item 
+bool \mbox{\hyperlink{class_q_c_p_item_position_add71461a973927c74e42179480916d9c}{set\+Parent\+AnchorX}} (\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_item_position_a0a87f9dce1af6cc9b510785991bcf1c6}{parent\+Anchor}}, bool keep\+Pixel\+Position=false)
+\item 
+bool \mbox{\hyperlink{class_q_c_p_item_position_add5ec1db9d19cec58a3b5c9e0a0c3f9d}{set\+Parent\+AnchorY}} (\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_item_position_a0a87f9dce1af6cc9b510785991bcf1c6}{parent\+Anchor}}, bool keep\+Pixel\+Position=false)
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_aa988ba4e87ab684c9021017dcaba945f}{set\+Coords}} (double \mbox{\hyperlink{class_q_c_p_item_position_a6fc519f1b73722a8d0cff7d4d647407e}{key}}, double \mbox{\hyperlink{class_q_c_p_item_position_acfcf86f840a7366a4299bff593d5d636}{value}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_ae2756567f063cd4be41697e105babc49}{set\+Coords}} (const QPointF \&pos)
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_a2185f45c75ac8cb9be89daeaaad50e37}{set\+Axes}} (\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_item_position_ab6c3afb95511842eee29745480cc8a53}{key\+Axis}}, \mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_item_position_aaa4dc49c9f142ff00b491272febc1de6}{value\+Axis}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_a0cd9b326fb324710169e92e8ca0041c2}{set\+Axis\+Rect}} (\mbox{\hyperlink{class_q_c_p_axis_rect}{QCPAxis\+Rect}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_item_position_ae4081cfe7575f922f403c6e3a2ce7891}{axis\+Rect}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_position_a8d4f858f2089973967cf9cb81970ef0a}{set\+Pixel\+Position}} (const QPointF \&\mbox{\hyperlink{class_q_c_p_item_position_a2943e7cc358c017b27ae9f9ca0f55fbc}{pixel\+Position}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_anchor_a32573023c6fa65b4496f1f995e5bfa5f}{QCPItem\+Anchor}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}parent\+Plot, \mbox{\hyperlink{class_q_c_p_abstract_item}{QCPAbstract\+Item}} \texorpdfstring{$\ast$}{*}parent\+Item, const QString \&\mbox{\hyperlink{class_q_c_p_item_anchor_aad37cdf5a3f63428f61be739014e212e}{name}}, int anchor\+Id=-\/1)
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_item_anchor_a2238425fc4ea48013659f9a18aef48a1}{\texorpdfstring{$\sim$}{\string~}\+QCPItem\+Anchor}} ()
+\item 
+QString \mbox{\hyperlink{class_q_c_p_item_anchor_aad37cdf5a3f63428f61be739014e212e}{name}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_a0d2c5b823c99207eda710a37a4bb1dbf}{to\+QCPItem\+Position}} () \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_anchor_aef15daa640debfb11b0aeaa2116c6fbc}{add\+ChildX}} (\mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*}pos)
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_anchor_a230b1d494cda63458e289bbe1b642599}{remove\+ChildX}} (\mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*}pos)
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_anchor_af05dc56f24536f0c7a9a0f57b58cea67}{add\+ChildY}} (\mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*}pos)
+\item 
+void \mbox{\hyperlink{class_q_c_p_item_anchor_aa2394911d8fff3bd958b9f4f1994b64d}{remove\+ChildY}} (\mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*}pos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_ae2a617dce057c5f3ec6878c1823aa291}{m\+Position\+TypeX}}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} \mbox{\hyperlink{class_q_c_p_item_position_a47c96c0ef4380e1af4aaa7c2265c260b}{m\+Position\+TypeY}}
+\item 
+QPointer$<$ \mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} $>$ \mbox{\hyperlink{class_q_c_p_item_position_a63967a33933231e92f68c8ce06bfc37e}{m\+Key\+Axis}}
+\item 
+QPointer$<$ \mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} $>$ \mbox{\hyperlink{class_q_c_p_item_position_a505dc2da24ba274452c1c817fcaba011}{m\+Value\+Axis}}
+\item 
+QPointer$<$ \mbox{\hyperlink{class_q_c_p_axis_rect}{QCPAxis\+Rect}} $>$ \mbox{\hyperlink{class_q_c_p_item_position_add40fcb8994c247d85f42a126286b740}{m\+Axis\+Rect}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_item_position_a4ff3931ad115603dfb4c7000b24bb415}{m\+Key}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_item_position_a67bf5df69f587d53731724a7d61c6c3f}{m\+Value}}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_a41b4641d18c90997b9c01bf304181bf0}{m\+Parent\+AnchorX}}
+\item 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_position_afc6142a6a09c8fa41c44d3d54fadd737}{m\+Parent\+AnchorY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}}}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{class_q_c_p_item_anchor_a23ad4d0ab0d2cbb41a7baf05bcf996ec}{m\+Name}}
+\item 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_anchor_a59b968410831ba91a25cc75a77dde6f5}{m\+Parent\+Plot}}
+\item 
+\mbox{\hyperlink{class_q_c_p_abstract_item}{QCPAbstract\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_item_anchor_a80fad480ad3bb980446ed6ebc00818ae}{m\+Parent\+Item}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_item_anchor_a00c62070333e8345976b579676ad3997}{m\+Anchor\+Id}}
+\item 
+QSet$<$ \mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_item_anchor_a3c0bfd6e50f3b48e2a9b3824695b20f7}{m\+ChildrenX}}
+\item 
+QSet$<$ \mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_item_anchor_a3abe4eebd0683454d81c8341df6f7115}{m\+ChildrenY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}\index{QCPItemPosition@{QCPItemPosition}!PositionType@{PositionType}}
+\index{PositionType@{PositionType}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{PositionType}{PositionType}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8} 
+enum \mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{QCPItem\+Position\+::\+Position\+Type}}}
+
+Defines the ways an item position can be specified. Thus it defines what the numbers passed to \doxylink{class_q_c_p_item_position_aa988ba4e87ab684c9021017dcaba945f}{set\+Coords} actually mean.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_q_c_p_item_position_aa476abf71ed8fa4c537457ebb1a754ad}{set\+Type} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ptAbsolute@{ptAbsolute}!QCPItemPosition@{QCPItemPosition}}\index{QCPItemPosition@{QCPItemPosition}!ptAbsolute@{ptAbsolute}}}\Hypertarget{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}\label{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8} 
+pt\+Absolute&Static positioning in pixels, starting from the top left corner of the viewport/widget. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ptViewportRatio@{ptViewportRatio}!QCPItemPosition@{QCPItemPosition}}\index{QCPItemPosition@{QCPItemPosition}!ptViewportRatio@{ptViewportRatio}}}\Hypertarget{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a}\label{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8} 
+pt\+Viewport\+Ratio&Static positioning given by a fraction of the viewport size. For example, if you call set\+Coords(0, 0), the position will be at the top left corner of the viewport/widget. set\+Coords(1, 1) will be at the bottom right corner, set\+Coords(0.\+5, 0) will be horizontally centered and vertically at the top of the viewport/widget, etc. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ptAxisRectRatio@{ptAxisRectRatio}!QCPItemPosition@{QCPItemPosition}}\index{QCPItemPosition@{QCPItemPosition}!ptAxisRectRatio@{ptAxisRectRatio}}}\Hypertarget{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75}\label{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8} 
+pt\+Axis\+Rect\+Ratio&Static positioning given by a fraction of the axis rect size (see \doxylink{class_q_c_p_item_position_a0cd9b326fb324710169e92e8ca0041c2}{set\+Axis\+Rect}). For example, if you call set\+Coords(0, 0), the position will be at the top left corner of the axis rect. set\+Coords(1, 1) will be at the bottom right corner, set\+Coords(0.\+5, 0) will be horizontally centered and vertically at the top of the axis rect, etc. You can also go beyond the axis rect by providing negative coordinates or coordinates larger than 1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ptPlotCoords@{ptPlotCoords}!QCPItemPosition@{QCPItemPosition}}\index{QCPItemPosition@{QCPItemPosition}!ptPlotCoords@{ptPlotCoords}}}\Hypertarget{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}\label{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8} 
+pt\+Plot\+Coords&Dynamic positioning at a plot coordinate defined by two axes (see \doxylink{class_q_c_p_item_position_a2185f45c75ac8cb9be89daeaaad50e37}{set\+Axes}). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_q_c_p_item_position_a6519a552bd9766354644ec24d1f26622}\index{QCPItemPosition@{QCPItemPosition}!QCPItemPosition@{QCPItemPosition}}
+\index{QCPItemPosition@{QCPItemPosition}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{QCPItemPosition()}{QCPItemPosition()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a6519a552bd9766354644ec24d1f26622} 
+QCPItem\+Position\+::\+QCPItem\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}}]{parent\+Plot}{, }\item[{\mbox{\hyperlink{class_q_c_p_abstract_item}{QCPAbstract\+Item}} \texorpdfstring{$\ast$}{*}}]{parent\+Item}{, }\item[{const QString \&}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_a00d31e21d2fd475aa668a1c95d749a8e}\index{QCPItemPosition@{QCPItemPosition}!````~QCPItemPosition@{\texorpdfstring{$\sim$}{\string~}QCPItemPosition}}
+\index{````~QCPItemPosition@{\texorpdfstring{$\sim$}{\string~}QCPItemPosition}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}QCPItemPosition()}{\string~QCPItemPosition()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a00d31e21d2fd475aa668a1c95d749a8e} 
+virtual QCPItem\+Position\+::\texorpdfstring{$\sim$}{\string~}\+QCPItem\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_q_c_p_item_position_ae4081cfe7575f922f403c6e3a2ce7891}\index{QCPItemPosition@{QCPItemPosition}!axisRect@{axisRect}}
+\index{axisRect@{axisRect}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{axisRect()}{axisRect()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ae4081cfe7575f922f403c6e3a2ce7891} 
+\mbox{\hyperlink{class_q_c_p_axis_rect}{QCPAxis\+Rect}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::axis\+Rect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_q_c_p_item_position_aa4ecf5b04c67049c05d37619e090820b}\index{QCPItemPosition@{QCPItemPosition}!coords@{coords}}
+\index{coords@{coords}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{coords()}{coords()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_aa4ecf5b04c67049c05d37619e090820b} 
+QPointF QCPItem\+Position\+::coords (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_a6fc519f1b73722a8d0cff7d4d647407e}\index{QCPItemPosition@{QCPItemPosition}!key@{key}}
+\index{key@{key}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a6fc519f1b73722a8d0cff7d4d647407e} 
+double QCPItem\+Position\+::key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_ab6c3afb95511842eee29745480cc8a53}\index{QCPItemPosition@{QCPItemPosition}!keyAxis@{keyAxis}}
+\index{keyAxis@{keyAxis}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{keyAxis()}{keyAxis()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ab6c3afb95511842eee29745480cc8a53} 
+\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::key\+Axis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_a0a87f9dce1af6cc9b510785991bcf1c6}\index{QCPItemPosition@{QCPItemPosition}!parentAnchor@{parentAnchor}}
+\index{parentAnchor@{parentAnchor}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{parentAnchor()}{parentAnchor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a0a87f9dce1af6cc9b510785991bcf1c6} 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::parent\+Anchor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_afd6993258e88255a6b5e82e98df40d6a}\index{QCPItemPosition@{QCPItemPosition}!parentAnchorX@{parentAnchorX}}
+\index{parentAnchorX@{parentAnchorX}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{parentAnchorX()}{parentAnchorX()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_afd6993258e88255a6b5e82e98df40d6a} 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::parent\+AnchorX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_a5151572d157fd475c9b2bc9b9df6595b}\index{QCPItemPosition@{QCPItemPosition}!parentAnchorY@{parentAnchorY}}
+\index{parentAnchorY@{parentAnchorY}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{parentAnchorY()}{parentAnchorY()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a5151572d157fd475c9b2bc9b9df6595b} 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::parent\+AnchorY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_a2943e7cc358c017b27ae9f9ca0f55fbc}\index{QCPItemPosition@{QCPItemPosition}!pixelPosition@{pixelPosition}}
+\index{pixelPosition@{pixelPosition}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{pixelPosition()}{pixelPosition()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a2943e7cc358c017b27ae9f9ca0f55fbc} 
+virtual QPointF QCPItem\+Position\+::pixel\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_item_anchor_a8f07eda402227676fb0508e3e9df54ef}{QCPItem\+Anchor}}.
+
+\Hypertarget{class_q_c_p_item_position_a2185f45c75ac8cb9be89daeaaad50e37}\index{QCPItemPosition@{QCPItemPosition}!setAxes@{setAxes}}
+\index{setAxes@{setAxes}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setAxes()}{setAxes()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a2185f45c75ac8cb9be89daeaaad50e37} 
+void QCPItem\+Position\+::set\+Axes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*}}]{key\+Axis}{, }\item[{\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*}}]{value\+Axis}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_a0cd9b326fb324710169e92e8ca0041c2}\index{QCPItemPosition@{QCPItemPosition}!setAxisRect@{setAxisRect}}
+\index{setAxisRect@{setAxisRect}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setAxisRect()}{setAxisRect()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a0cd9b326fb324710169e92e8ca0041c2} 
+void QCPItem\+Position\+::set\+Axis\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_axis_rect}{QCPAxis\+Rect}} \texorpdfstring{$\ast$}{*}}]{axis\+Rect}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_ae2756567f063cd4be41697e105babc49}\index{QCPItemPosition@{QCPItemPosition}!setCoords@{setCoords}}
+\index{setCoords@{setCoords}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setCoords()}{setCoords()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ae2756567f063cd4be41697e105babc49} 
+void QCPItem\+Position\+::set\+Coords (\begin{DoxyParamCaption}\item[{const QPointF \&}]{pos}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_aa988ba4e87ab684c9021017dcaba945f}\index{QCPItemPosition@{QCPItemPosition}!setCoords@{setCoords}}
+\index{setCoords@{setCoords}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setCoords()}{setCoords()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_aa988ba4e87ab684c9021017dcaba945f} 
+void QCPItem\+Position\+::set\+Coords (\begin{DoxyParamCaption}\item[{double}]{key}{, }\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_ac094d67a95d2dceafa0d50b9db3a7e51}\index{QCPItemPosition@{QCPItemPosition}!setParentAnchor@{setParentAnchor}}
+\index{setParentAnchor@{setParentAnchor}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setParentAnchor()}{setParentAnchor()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ac094d67a95d2dceafa0d50b9db3a7e51} 
+bool QCPItem\+Position\+::set\+Parent\+Anchor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*}}]{parent\+Anchor}{, }\item[{bool}]{keep\+Pixel\+Position}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_add71461a973927c74e42179480916d9c}\index{QCPItemPosition@{QCPItemPosition}!setParentAnchorX@{setParentAnchorX}}
+\index{setParentAnchorX@{setParentAnchorX}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setParentAnchorX()}{setParentAnchorX()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_add71461a973927c74e42179480916d9c} 
+bool QCPItem\+Position\+::set\+Parent\+AnchorX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*}}]{parent\+Anchor}{, }\item[{bool}]{keep\+Pixel\+Position}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_add5ec1db9d19cec58a3b5c9e0a0c3f9d}\index{QCPItemPosition@{QCPItemPosition}!setParentAnchorY@{setParentAnchorY}}
+\index{setParentAnchorY@{setParentAnchorY}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setParentAnchorY()}{setParentAnchorY()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_add5ec1db9d19cec58a3b5c9e0a0c3f9d} 
+bool QCPItem\+Position\+::set\+Parent\+AnchorY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*}}]{parent\+Anchor}{, }\item[{bool}]{keep\+Pixel\+Position}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_a8d4f858f2089973967cf9cb81970ef0a}\index{QCPItemPosition@{QCPItemPosition}!setPixelPosition@{setPixelPosition}}
+\index{setPixelPosition@{setPixelPosition}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setPixelPosition()}{setPixelPosition()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a8d4f858f2089973967cf9cb81970ef0a} 
+void QCPItem\+Position\+::set\+Pixel\+Position (\begin{DoxyParamCaption}\item[{const QPointF \&}]{pixel\+Position}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_aa476abf71ed8fa4c537457ebb1a754ad}\index{QCPItemPosition@{QCPItemPosition}!setType@{setType}}
+\index{setType@{setType}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_aa476abf71ed8fa4c537457ebb1a754ad} 
+void QCPItem\+Position\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_a2113b2351d6d00457fb3559a4e20c3ea}\index{QCPItemPosition@{QCPItemPosition}!setTypeX@{setTypeX}}
+\index{setTypeX@{setTypeX}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setTypeX()}{setTypeX()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a2113b2351d6d00457fb3559a4e20c3ea} 
+void QCPItem\+Position\+::set\+TypeX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_ac2a454aa5a54c1615c50686601ec4510}\index{QCPItemPosition@{QCPItemPosition}!setTypeY@{setTypeY}}
+\index{setTypeY@{setTypeY}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{setTypeY()}{setTypeY()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ac2a454aa5a54c1615c50686601ec4510} 
+void QCPItem\+Position\+::set\+TypeY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_item_position_a0d2c5b823c99207eda710a37a4bb1dbf}\index{QCPItemPosition@{QCPItemPosition}!toQCPItemPosition@{toQCPItemPosition}}
+\index{toQCPItemPosition@{toQCPItemPosition}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{toQCPItemPosition()}{toQCPItemPosition()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a0d2c5b823c99207eda710a37a4bb1dbf} 
+virtual \mbox{\hyperlink{class_q_c_p_item_position}{QCPItem\+Position}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::to\+QCPItem\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_item_anchor_ab04819cd5bc6dc607a68413828313675}{QCPItem\+Anchor}}.
+
+\Hypertarget{class_q_c_p_item_position_abc1276e2ef603e459a9e48e75966bf8f}\index{QCPItemPosition@{QCPItemPosition}!type@{type}}
+\index{type@{type}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_abc1276e2ef603e459a9e48e75966bf8f} 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} QCPItem\+Position\+::type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_a1415911868835701c04250566bfc681d}\index{QCPItemPosition@{QCPItemPosition}!typeX@{typeX}}
+\index{typeX@{typeX}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{typeX()}{typeX()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a1415911868835701c04250566bfc681d} 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} QCPItem\+Position\+::typeX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_ae47bac6f679c58f9e1c78dc63d56f331}\index{QCPItemPosition@{QCPItemPosition}!typeY@{typeY}}
+\index{typeY@{typeY}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{typeY()}{typeY()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ae47bac6f679c58f9e1c78dc63d56f331} 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} QCPItem\+Position\+::typeY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_acfcf86f840a7366a4299bff593d5d636}\index{QCPItemPosition@{QCPItemPosition}!value@{value}}
+\index{value@{value}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_acfcf86f840a7366a4299bff593d5d636} 
+double QCPItem\+Position\+::value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_item_position_aaa4dc49c9f142ff00b491272febc1de6}\index{QCPItemPosition@{QCPItemPosition}!valueAxis@{valueAxis}}
+\index{valueAxis@{valueAxis}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{valueAxis()}{valueAxis()}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_aaa4dc49c9f142ff00b491272febc1de6} 
+\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::value\+Axis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_q_c_p_item_position_add40fcb8994c247d85f42a126286b740}\index{QCPItemPosition@{QCPItemPosition}!mAxisRect@{mAxisRect}}
+\index{mAxisRect@{mAxisRect}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mAxisRect}{mAxisRect}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_add40fcb8994c247d85f42a126286b740} 
+QPointer$<$\mbox{\hyperlink{class_q_c_p_axis_rect}{QCPAxis\+Rect}}$>$ QCPItem\+Position\+::m\+Axis\+Rect\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_a4ff3931ad115603dfb4c7000b24bb415}\index{QCPItemPosition@{QCPItemPosition}!mKey@{mKey}}
+\index{mKey@{mKey}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mKey}{mKey}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a4ff3931ad115603dfb4c7000b24bb415} 
+double QCPItem\+Position\+::m\+Key\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_a63967a33933231e92f68c8ce06bfc37e}\index{QCPItemPosition@{QCPItemPosition}!mKeyAxis@{mKeyAxis}}
+\index{mKeyAxis@{mKeyAxis}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mKeyAxis}{mKeyAxis}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a63967a33933231e92f68c8ce06bfc37e} 
+QPointer$<$\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}}$>$ QCPItem\+Position\+::m\+Key\+Axis\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_a41b4641d18c90997b9c01bf304181bf0}\index{QCPItemPosition@{QCPItemPosition}!mParentAnchorX@{mParentAnchorX}}
+\index{mParentAnchorX@{mParentAnchorX}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mParentAnchorX}{mParentAnchorX}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a41b4641d18c90997b9c01bf304181bf0} 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}}\texorpdfstring{$\ast$}{*} QCPItem\+Position\+::m\+Parent\+AnchorX\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_afc6142a6a09c8fa41c44d3d54fadd737}\index{QCPItemPosition@{QCPItemPosition}!mParentAnchorY@{mParentAnchorY}}
+\index{mParentAnchorY@{mParentAnchorY}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mParentAnchorY}{mParentAnchorY}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_afc6142a6a09c8fa41c44d3d54fadd737} 
+\mbox{\hyperlink{class_q_c_p_item_anchor}{QCPItem\+Anchor}} \texorpdfstring{$\ast$}{*} QCPItem\+Position\+::m\+Parent\+AnchorY\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_ae2a617dce057c5f3ec6878c1823aa291}\index{QCPItemPosition@{QCPItemPosition}!mPositionTypeX@{mPositionTypeX}}
+\index{mPositionTypeX@{mPositionTypeX}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mPositionTypeX}{mPositionTypeX}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_ae2a617dce057c5f3ec6878c1823aa291} 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} QCPItem\+Position\+::m\+Position\+TypeX\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_a47c96c0ef4380e1af4aaa7c2265c260b}\index{QCPItemPosition@{QCPItemPosition}!mPositionTypeY@{mPositionTypeY}}
+\index{mPositionTypeY@{mPositionTypeY}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mPositionTypeY}{mPositionTypeY}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a47c96c0ef4380e1af4aaa7c2265c260b} 
+\mbox{\hyperlink{class_q_c_p_item_position_aad9936c22bf43e3d358552f6e86dbdc8}{Position\+Type}} QCPItem\+Position\+::m\+Position\+TypeY\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_a67bf5df69f587d53731724a7d61c6c3f}\index{QCPItemPosition@{QCPItemPosition}!mValue@{mValue}}
+\index{mValue@{mValue}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mValue}{mValue}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a67bf5df69f587d53731724a7d61c6c3f} 
+double QCPItem\+Position\+::m\+Value\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_item_position_a505dc2da24ba274452c1c817fcaba011}\index{QCPItemPosition@{QCPItemPosition}!mValueAxis@{mValueAxis}}
+\index{mValueAxis@{mValueAxis}!QCPItemPosition@{QCPItemPosition}}
+\doxysubsubsection{\texorpdfstring{mValueAxis}{mValueAxis}}
+{\footnotesize\ttfamily \label{class_q_c_p_item_position_a505dc2da24ba274452c1c817fcaba011} 
+QPointer$<$\mbox{\hyperlink{class_q_c_p_axis}{QCPAxis}}$>$ QCPItem\+Position\+::m\+Value\+Axis\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+One\+Drive -\/ Universidad de Córdoba/\+Doctorado\+\_\+\+ARR/\+Qt/\+Versiones/\+DWM1001\+DEV\+\_\+\+APP/\+Github/\+UCO-\/\+DWM1001-\/\+DEV/src/\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.\+h}}\end{DoxyCompactItemize}

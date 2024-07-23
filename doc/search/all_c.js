@@ -4,7 +4,7 @@ var searchData=
   ['nancolor_1',['nanColor',['../class_q_c_p_color_gradient.html#a057a02669d4f9977e7299e74f439715b',1,'QCPColorGradient']]],
   ['nanhandling_2',['NanHandling',['../class_q_c_p_color_gradient.html#afd38ab8d2cceef9cd98eef88408ccb7e',1,'QCPColorGradient']]],
   ['nanhandling_3',['nanHandling',['../class_q_c_p_color_gradient.html#a9db4d379cc88e61f881cdbc5b63da0cd',1,'QCPColorGradient']]],
-  ['network_4',['network',['../class_dialog__deviceconfig.html#aa43a9074147d9c5ba8b8f12b240b73e1',1,'Dialog_deviceconfig']]],
+  ['network_4',['network',['../class_dialog__deviceconfig.html#aa43a9074147d9c5ba8b8f12b240b73e1',1,'Dialog_deviceconfig::network'],['../class_main_window.html#a65ebfd5f5aa30056da49395dfe2d365e',1,'MainWindow::network']]],
   ['network_5fconfig_5',['network_config',['../class_main_window.html#ab07c1f0f2d7612c683e5561a6a768dca',1,'MainWindow']]],
   ['network_5fprocessing_6',['network_processing',['../class_dialog__deviceconfig.html#ae4650bd6525b8f3ba10d87e570a12841',1,'Dialog_deviceconfig']]],
   ['nhhighestcolor_7',['nhHighestColor',['../class_q_c_p_color_gradient.html#afd38ab8d2cceef9cd98eef88408ccb7ea1f1fec8678f690bdb2a437661beba24e',1,'QCPColorGradient']]],

@@ -100,6 +100,7 @@ $(function(){initNavTree('class_dialog__about.html',''); initResizable(true); })
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_dialog__about-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Dialog_about Class Reference</div></div>
 </div><!--header-->
@@ -119,8 +120,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a51db9187a7bccb024c3a8c3661d9ba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eee1ee31eb8972bb80767f14272984b" id="r_a7eee1ee31eb8972bb80767f14272984b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eee1ee31eb8972bb80767f14272984b">~Dialog_about</a> ()</td></tr>
 <tr class="separator:a7eee1ee31eb8972bb80767f14272984b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9ae52b56245b3b50e04fb09790c5562a" id="r_a9ae52b56245b3b50e04fb09790c5562a"><td class="memItemLeft" align="right" valign="top">Ui::Dialog_about *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a></td></tr>
+<tr class="separator:a9ae52b56245b3b50e04fb09790c5562a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="dialog__about_8h_source.html#l00014">14</a> of file <a class="el" href="dialog__about_8h_source.html">dialog_about.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51db9187a7bccb024c3a8c3661d9ba71" name="a51db9187a7bccb024c3a8c3661d9ba71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51db9187a7bccb024c3a8c3661d9ba71">&#9670;&#160;</a></span>Dialog_about()</h2>
 
@@ -146,6 +155,40 @@ Public Member Functions</h2></td></tr>
 <p>** UCO DWM-GUI, a software for the control of the DWM1001-DEV board ** Copyright (C) 2024 Antonio Ruiz Ruiz ** ** This program is free software: you can redistribute it and/or modify ** it under the terms of the GNU General Public License as published by ** the Free Software Foundation, either version 3 of the License, or any ** later version. ** ** This program is distributed in the hope that it will be useful, ** but WITHOUT ANY WARRANTY; without even the implied warranty of ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ** GNU General Public License for more details. ** ** You should have received a copy of the GNU General Public License ** along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. ** **</p>
 <p>Author: Antonio Ruiz Ruiz ** Contact: <a href="#" onclick="location.href='mai'+'lto:'+'ant'+'on'+'ior'+'ui'+'zrr'+'ui'+'z@g'+'ma'+'il.'+'co'+'m'; return false;">anton<span class="obfuscator">.nosp@m.</span>ioru<span class="obfuscator">.nosp@m.</span>izrru<span class="obfuscator">.nosp@m.</span>iz@g<span class="obfuscator">.nosp@m.</span>mail.<span class="obfuscator">.nosp@m.</span>com</a> ** Date: 29.04.24 ** Version: 1.0.0 ** </p>
 
+<p class="definition">Definition at line <a class="el" href="dialog__about_8cpp_source.html#l00031">31</a> of file <a class="el" href="dialog__about_8cpp_source.html">dialog_about.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    : QDialog(parent)</div>
+<div class="line"><span class="lineno">   33</span>    , <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>(<span class="keyword">new</span> Ui::Dialog_about)</div>
+<div class="line"><span class="lineno">   34</span>{</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   36</span>    setWindowTitle(tr(<span class="stringliteral">&quot;Acerca de:&quot;</span>));</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    QPixmap logo_uco(<span class="stringliteral">&quot;:/images/uco.png&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>    QPixmap logo_epsc(<span class="stringliteral">&quot;:/images/epsc.png&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>    QPixmap logo_prinia(<span class="stringliteral">&quot;:/images/prinia_logo.jpg&quot;</span>);</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">int</span> width_logo_uco = <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_logouco-&gt;width();</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordtype">int</span> height_logo_uco = <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_logouco-&gt;height();</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordtype">int</span> width_logo_epsc = <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_logoepsc-&gt;width();</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordtype">int</span> height_logo_epsc = <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_logoepsc-&gt;height();</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordtype">int</span> width_logo_prinia = <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_5-&gt;width();</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordtype">int</span> height_logo_prinia = <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_5-&gt;height();</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_logouco-&gt;setPixmap(logo_uco.scaled(width_logo_uco,height_logo_uco,Qt::KeepAspectRatio));</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_logoepsc-&gt;setPixmap(logo_epsc.scaled(width_logo_epsc,height_logo_epsc,Qt::KeepAspectRatio));</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_5-&gt;setPixmap(logo_prinia.scaled(width_logo_prinia,height_logo_prinia,Qt::KeepAspectRatio));</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_3-&gt;setText(<span class="stringliteral">&quot;&lt;a href=\&quot;https://www.researchgate.net/profile/Mario-Ruz-2\&quot;&gt;Mario L. Ruz Ruiz&lt;/a&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_3-&gt;setOpenExternalLinks(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_2-&gt;setText(<span class="stringliteral">&quot;&lt;a href=\&quot;https://www.researchgate.net/profile/Antonio-Ruiz-Ruiz-3\&quot;&gt;Antonio Ruiz Ruiz&lt;/a&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_2-&gt;setOpenExternalLinks(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_4-&gt;setText(<span class="stringliteral">&quot;&lt;a href=\&quot;https://www.researchgate.net/profile/Juan-Garrido-26\&quot;&gt;Juan Garrido Jurado&lt;/a&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label_4-&gt;setOpenExternalLinks(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label-&gt;setText(tr(<span class="stringliteral">&quot;Aplicación desarrollada en la Escuela Politécnica Superior de Córdoba de la &quot;</span> <span class="stringliteral">&quot;&lt;a href=\&quot;https://www.uco.es\&quot;&gt;Universidad de Córdoba&lt;/a&gt; (España).&quot;</span>));</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>-&gt;label-&gt;setOpenExternalLinks(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="aclass_dialog__about_html_a9ae52b56245b3b50e04fb09790c5562a"><div class="ttname"><a href="#a9ae52b56245b3b50e04fb09790c5562a">Dialog_about::ui</a></div><div class="ttdeci">Ui::Dialog_about * ui</div><div class="ttdef"><b>Definition</b> <a href="dialog__about_8h_source.html#l00023">dialog_about.h:23</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7eee1ee31eb8972bb80767f14272984b" name="a7eee1ee31eb8972bb80767f14272984b"></a>
@@ -163,11 +206,41 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="dialog__about_8cpp_source.html#l00064">64</a> of file <a class="el" href="dialog__about_8cpp_source.html">dialog_about.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>{</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="#a9ae52b56245b3b50e04fb09790c5562a">ui</a>;</div>
+<div class="line"><span class="lineno">   67</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9ae52b56245b3b50e04fb09790c5562a" name="a9ae52b56245b3b50e04fb09790c5562a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae52b56245b3b50e04fb09790c5562a">&#9670;&#160;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::Dialog_about* Dialog_about::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dialog__about_8h_source.html#l00023">23</a> of file <a class="el" href="dialog__about_8h_source.html">dialog_about.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="dialog__about_8h_source.html">dialog_about.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="dialog__about_8cpp.html">dialog_about.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="dialog__about_8cpp_source.html">dialog_about.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

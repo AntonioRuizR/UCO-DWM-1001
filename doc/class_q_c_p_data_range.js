@@ -18,5 +18,7 @@ var class_q_c_p_data_range =
     [ "setBegin", "class_q_c_p_data_range.html#a54ff59048e01e46ac4aefafc844626c6", null ],
     [ "setEnd", "class_q_c_p_data_range.html#a277f1a9eafe70b9184d9c00b641ae5de", null ],
     [ "size", "class_q_c_p_data_range.html#ac6af055e509d1b691c244954ff1c5887", null ],
-    [ "operator<<", "class_q_c_p_data_range.html#a486dd7af8a090ed069672e3510e6a082", null ]
+    [ "operator<<", "class_q_c_p_data_range.html#a486dd7af8a090ed069672e3510e6a082", null ],
+    [ "mBegin", "class_q_c_p_data_range.html#a849baf613e8ad866a66aaf45682dde53", null ],
+    [ "mEnd", "class_q_c_p_data_range.html#ac22cfcf2795d5e9f617d788be9fb14a0", null ]
 ];

@@ -175,6 +175,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>QPainter subclass used internally. </p>
 <p>This QPainter subclass is used to provide some extended functionality e.g. for tweaking position consistency between antialiased and non-antialiased painting. Further it provides workarounds for QPainter quirks.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This class intentionally hides non-virtual functions of QPainter, e.g. setPen, save and restore. So while it is possible to pass a <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a> instance to a function that expects a QPainter pointer, some of the workarounds and tweaks will be unavailable to the function (because it will call the base class implementations of the functions actually hidden by <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a>). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00515">515</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a156cf16444ff5e0d81a73c615fdb156d" name="a156cf16444ff5e0d81a73c615fdb156d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a156cf16444ff5e0d81a73c615fdb156d">&#9670;&#160;</a></span>PainterMode</h2>
@@ -199,6 +201,17 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00523">523</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  523</span>                   { <a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156da3bac5e87e3d58553b297befb4eee2a45">pmDefault</a>       = 0x00   </div>
+<div class="line"><span class="lineno">  524</span>                     ,<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab">pmVectorized</a>   = 0x01   </div>
+<div class="line"><span class="lineno">  525</span>                     ,<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156dae78f9a4eb277a5f9207f50850a51a0b0">pmNoCaching</a>    = 0x02   </div>
+<div class="line"><span class="lineno">  526</span>                     ,<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">pmNonCosmetic</a>  = 0x04   </div>
+<div class="line"><span class="lineno">  527</span>                   };</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a156cf16444ff5e0d81a73c615fdb156da3bac5e87e3d58553b297befb4eee2a45"><div class="ttname"><a href="#a156cf16444ff5e0d81a73c615fdb156da3bac5e87e3d58553b297befb4eee2a45">QCPPainter::pmDefault</a></div><div class="ttdeci">@ pmDefault</div><div class="ttdoc">0x00 Default mode for painting on screen devices</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00524">qcustomplot.h:523</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b"><div class="ttname"><a href="#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">QCPPainter::pmNonCosmetic</a></div><div class="ttdeci">@ pmNonCosmetic</div><div class="ttdoc">0x04 Turns pen widths 0 to 1, i.e. disables cosmetic pens. (A cosmetic pen is always drawn with width...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00527">qcustomplot.h:526</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a156cf16444ff5e0d81a73c615fdb156dae78f9a4eb277a5f9207f50850a51a0b0"><div class="ttname"><a href="#a156cf16444ff5e0d81a73c615fdb156dae78f9a4eb277a5f9207f50850a51a0b0">QCPPainter::pmNoCaching</a></div><div class="ttdeci">@ pmNoCaching</div><div class="ttdoc">0x02 Mode for all sorts of exports (e.g. PNG, PDF,...). For example, this prevents using cached pixma...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00526">qcustomplot.h:525</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab"><div class="ttname"><a href="#a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab">QCPPainter::pmVectorized</a></div><div class="ttdeci">@ pmVectorized</div><div class="ttdoc">0x01 Mode for vectorized painting (e.g. PDF export). For example, this prevents some antialiasing fix...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00525">qcustomplot.h:524</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -218,6 +231,17 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a> instance and sets default values </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00298">298</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>                       :</div>
+<div class="line"><span class="lineno">  299</span>  <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156da3bac5e87e3d58553b297befb4eee2a45">pmDefault</a>),</div>
+<div class="line"><span class="lineno">  300</span>  <a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  301</span>{</div>
+<div class="line"><span class="lineno">  302</span>  <span class="comment">// don&#39;t setRenderHint(QPainter::NonCosmeticDefautPen) here, because painter isn&#39;t active yet and</span></div>
+<div class="line"><span class="lineno">  303</span>  <span class="comment">// a call to begin() will follow</span></div>
+<div class="line"><span class="lineno">  304</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a7055085da176aee0f6b23298f1003d08"><div class="ttname"><a href="#a7055085da176aee0f6b23298f1003d08">QCPPainter::mIsAntialiasing</a></div><div class="ttdeci">bool mIsAntialiasing</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00560">qcustomplot.h:560</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af5d1d6e5df0adbc7de5633250fb3396c"><div class="ttname"><a href="#af5d1d6e5df0adbc7de5633250fb3396c">QCPPainter::mModes</a></div><div class="ttdeci">PainterModes mModes</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00559">qcustomplot.h:559</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae58dbb1795ddc4351ab324dc9898aa22" name="ae58dbb1795ddc4351ab324dc9898aa22"></a>
@@ -245,6 +269,18 @@ Protected Attributes</h2></td></tr>
 <p>Creates a new <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a> instance on the specified paint <em>device</em> and sets default values. Just like the analogous QPainter constructor, begins painting on <em>device</em> immediately.</p>
 <p>Like <a class="el" href="#a0a41146ccd619dceab6e25ec7b46b044">begin</a>, this method sets QPainter::NonCosmeticDefaultPen in Qt versions before Qt5. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00312">312</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  312</span>                                           :</div>
+<div class="line"><span class="lineno">  313</span>  QPainter(device),</div>
+<div class="line"><span class="lineno">  314</span>  <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156da3bac5e87e3d58553b297befb4eee2a45">pmDefault</a>),</div>
+<div class="line"><span class="lineno">  315</span>  <a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  316</span>{</div>
+<div class="line"><span class="lineno">  317</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5, 0, 0) </span><span class="comment">// before Qt5, default pens used to be cosmetic if NonCosmeticDefaultPen flag isn&#39;t set. So we set it to get consistency across Qt versions.</span></div>
+<div class="line"><span class="lineno">  318</span>  <span class="keywordflow">if</span> (isActive())</div>
+<div class="line"><span class="lineno">  319</span>    setRenderHint(QPainter::NonCosmeticDefaultPen);</div>
+<div class="line"><span class="lineno">  320</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  321</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -271,6 +307,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00536">536</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  536</span>{ <span class="keywordflow">return</span> testRenderHint(QPainter::Antialiasing); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0a41146ccd619dceab6e25ec7b46b044" name="a0a41146ccd619dceab6e25ec7b46b044"></a>
@@ -291,6 +330,16 @@ Protected Attributes</h2></td></tr>
 <p>The Constructor <a class="el" href="#ae58dbb1795ddc4351ab324dc9898aa22">QCPPainter(QPaintDevice *device)</a> which directly starts painting also sets the render hint as appropriate.</p>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00422">422</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  423</span>{</div>
+<div class="line"><span class="lineno">  424</span>  <span class="keywordtype">bool</span> result = QPainter::begin(device);</div>
+<div class="line"><span class="lineno">  425</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5, 0, 0) </span><span class="comment">// before Qt5, default pens used to be cosmetic if NonCosmeticDefaultPen flag isn&#39;t set. So we set it to get consistency across Qt versions.</span></div>
+<div class="line"><span class="lineno">  426</span>  <span class="keywordflow">if</span> (result)</div>
+<div class="line"><span class="lineno">  427</span>    setRenderHint(QPainter::NonCosmeticDefaultPen);</div>
+<div class="line"><span class="lineno">  428</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  429</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  430</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0b4b1b9bd495e182c731774dc800e6e0" name="a0b4b1b9bd495e182c731774dc800e6e0"></a>
@@ -311,6 +360,14 @@ Protected Attributes</h2></td></tr>
 <p>Works around a Qt bug introduced with Qt 4.8 which makes drawing QLineF unpredictable when antialiasing is disabled. Thus when antialiasing is disabled, it rounds the <em>line</em> to integer coordinates and then passes it to the original drawLine.</p>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00372">372</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span>{</div>
+<div class="line"><span class="lineno">  374</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a> || <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab">pmVectorized</a>))</div>
+<div class="line"><span class="lineno">  375</span>    QPainter::drawLine(line);</div>
+<div class="line"><span class="lineno">  376</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  377</span>    QPainter::drawLine(line.toLine());</div>
+<div class="line"><span class="lineno">  378</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1638db27929491b3f1beb74d6cbad5e" name="ad1638db27929491b3f1beb74d6cbad5e"></a>
@@ -340,6 +397,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00550">550</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  550</span>{<a class="code hl_function" href="#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(p1, p2));}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7e63fbcf47e35c6f2ecd11b8fef7c7d8" name="a7e63fbcf47e35c6f2ecd11b8fef7c7d8"></a>
@@ -358,6 +419,16 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Changes the pen width to 1 if it currently is 0. This function is called in the <a class="el" href="#af9c7a4cd1791403901f8c5b82a150195">setPen</a> overrides when the <a class="el" href="#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">pmNonCosmetic</a> mode is set. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00480">480</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  481</span>{</div>
+<div class="line"><span class="lineno">  482</span>  <span class="keywordflow">if</span> (qFuzzyIsNull(pen().widthF()))</div>
+<div class="line"><span class="lineno">  483</span>  {</div>
+<div class="line"><span class="lineno">  484</span>    QPen p = pen();</div>
+<div class="line"><span class="lineno">  485</span>    p.setWidth(1);</div>
+<div class="line"><span class="lineno">  486</span>    QPainter::setPen(p);</div>
+<div class="line"><span class="lineno">  487</span>  }</div>
+<div class="line"><span class="lineno">  488</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef102658219b24165f7ee2aad1b9e48f" name="aef102658219b24165f7ee2aad1b9e48f"></a>
@@ -383,6 +454,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00537">537</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  537</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64908e6298d5bbd83457dc987cc3a022" name="a64908e6298d5bbd83457dc987cc3a022"></a>
@@ -403,6 +477,16 @@ Protected Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8fd6821ee6fecbfa04444c9062912abd">save</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00467">467</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  468</span>{</div>
+<div class="line"><span class="lineno">  469</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a0189e641bbf7dc31ac15aef7b36501fa">mAntialiasingStack</a>.isEmpty())</div>
+<div class="line"><span class="lineno">  470</span>    <a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a> = <a class="code hl_variable" href="#a0189e641bbf7dc31ac15aef7b36501fa">mAntialiasingStack</a>.pop();</div>
+<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  472</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Unbalanced save/restore&quot;</span>;</div>
+<div class="line"><span class="lineno">  473</span>  QPainter::restore();</div>
+<div class="line"><span class="lineno">  474</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0189e641bbf7dc31ac15aef7b36501fa"><div class="ttname"><a href="#a0189e641bbf7dc31ac15aef7b36501fa">QCPPainter::mAntialiasingStack</a></div><div class="ttdeci">QStack&lt; bool &gt; mAntialiasingStack</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00563">qcustomplot.h:563</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8fd6821ee6fecbfa04444c9062912abd" name="a8fd6821ee6fecbfa04444c9062912abd"></a>
@@ -423,6 +507,12 @@ Protected Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a64908e6298d5bbd83457dc987cc3a022">restore</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00453">453</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  454</span>{</div>
+<div class="line"><span class="lineno">  455</span>  <a class="code hl_variable" href="#a0189e641bbf7dc31ac15aef7b36501fa">mAntialiasingStack</a>.push(<a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a>);</div>
+<div class="line"><span class="lineno">  456</span>  QPainter::save();</div>
+<div class="line"><span class="lineno">  457</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaba1deb9188244d9ea65b035112b4d05" name="aaba1deb9188244d9ea65b035112b4d05"></a>
@@ -441,6 +531,22 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets whether painting uses antialiasing or not. Use this method instead of using setRenderHint with QPainter::Antialiasing directly, as it allows <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a> to regain pixel exactness between antialiased and non-antialiased painting (Since Qt &lt; 5.0 uses slightly different coordinate systems for AA/Non-AA painting). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00386">386</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  387</span>{</div>
+<div class="line"><span class="lineno">  388</span>  setRenderHint(QPainter::Antialiasing, enabled);</div>
+<div class="line"><span class="lineno">  389</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a> != enabled)</div>
+<div class="line"><span class="lineno">  390</span>  {</div>
+<div class="line"><span class="lineno">  391</span>    <a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a> = enabled;</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab">pmVectorized</a>)) <span class="comment">// antialiasing half-pixel shift only needed for rasterized outputs</span></div>
+<div class="line"><span class="lineno">  393</span>    {</div>
+<div class="line"><span class="lineno">  394</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7055085da176aee0f6b23298f1003d08">mIsAntialiasing</a>)</div>
+<div class="line"><span class="lineno">  395</span>        translate(0.5, 0.5);</div>
+<div class="line"><span class="lineno">  396</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  397</span>        translate(-0.5, -0.5);</div>
+<div class="line"><span class="lineno">  398</span>    }</div>
+<div class="line"><span class="lineno">  399</span>  }</div>
+<div class="line"><span class="lineno">  400</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af6b1f7d2bbc548b10aa55d8b6ad49577" name="af6b1f7d2bbc548b10aa55d8b6ad49577"></a>
@@ -464,6 +570,14 @@ Protected Attributes</h2></td></tr>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Sets the mode of the painter. This controls whether the painter shall adjust its fixes/workarounds optimized for certain output devices. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00437">437</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  438</span>{</div>
+<div class="line"><span class="lineno">  439</span>  <span class="keywordflow">if</span> (!enabled &amp;&amp; <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(mode))</div>
+<div class="line"><span class="lineno">  440</span>    <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a> &amp;= ~mode;</div>
+<div class="line"><span class="lineno">  441</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (enabled &amp;&amp; !<a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(mode))</div>
+<div class="line"><span class="lineno">  442</span>    <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a> |= mode;</div>
+<div class="line"><span class="lineno">  443</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5fac93adc29c7c4dea9f3e171e9e635e" name="a5fac93adc29c7c4dea9f3e171e9e635e"></a>
@@ -482,6 +596,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the mode of the painter. This controls whether the painter shall adjust its fixes/workarounds optimized for certain output devices. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00406">406</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  407</span>{</div>
+<div class="line"><span class="lineno">  408</span>  <a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a> = <a class="code hl_function" href="#aef102658219b24165f7ee2aad1b9e48f">modes</a>;</div>
+<div class="line"><span class="lineno">  409</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_aef102658219b24165f7ee2aad1b9e48f"><div class="ttname"><a href="#aef102658219b24165f7ee2aad1b9e48f">QCPPainter::modes</a></div><div class="ttdeci">PainterModes modes() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00537">qcustomplot.h:537</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5c4d88f21564e156e88ef807f7cf0003" name="a5c4d88f21564e156e88ef807f7cf0003"></a>
@@ -502,6 +622,14 @@ Protected Attributes</h2></td></tr>
 <p>Sets the pen (by color) of the painter and applies certain fixes to it, depending on the mode of this <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00343">343</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  344</span>{</div>
+<div class="line"><span class="lineno">  345</span>  QPainter::setPen(color);</div>
+<div class="line"><span class="lineno">  346</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">pmNonCosmetic</a>))</div>
+<div class="line"><span class="lineno">  347</span>    <a class="code hl_function" href="#a7e63fbcf47e35c6f2ecd11b8fef7c7d8">makeNonCosmetic</a>();</div>
+<div class="line"><span class="lineno">  348</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a7e63fbcf47e35c6f2ecd11b8fef7c7d8"><div class="ttname"><a href="#a7e63fbcf47e35c6f2ecd11b8fef7c7d8">QCPPainter::makeNonCosmetic</a></div><div class="ttdeci">void makeNonCosmetic()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00480">qcustomplot.cpp:480</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af9c7a4cd1791403901f8c5b82a150195" name="af9c7a4cd1791403901f8c5b82a150195"></a>
@@ -521,6 +649,13 @@ Protected Attributes</h2></td></tr>
 <p>Sets the pen of the painter and applies certain fixes to it, depending on the mode of this <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00329">329</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>{</div>
+<div class="line"><span class="lineno">  331</span>  QPainter::setPen(pen);</div>
+<div class="line"><span class="lineno">  332</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">pmNonCosmetic</a>))</div>
+<div class="line"><span class="lineno">  333</span>    <a class="code hl_function" href="#a7e63fbcf47e35c6f2ecd11b8fef7c7d8">makeNonCosmetic</a>();</div>
+<div class="line"><span class="lineno">  334</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a25e76095aae41da0d08035060e5f81ca" name="a25e76095aae41da0d08035060e5f81ca"></a>
@@ -541,6 +676,13 @@ Protected Attributes</h2></td></tr>
 <p>Sets the pen (by style) of the painter and applies certain fixes to it, depending on the mode of this <a class="el" href="class_q_c_p_painter.html" title="QPainter subclass used internally.">QCPPainter</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>this function hides the non-virtual base class implementation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00357">357</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  358</span>{</div>
+<div class="line"><span class="lineno">  359</span>  QPainter::setPen(penStyle);</div>
+<div class="line"><span class="lineno">  360</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af5d1d6e5df0adbc7de5633250fb3396c">mModes</a>.testFlag(<a class="code hl_enumvalue" href="#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">pmNonCosmetic</a>))</div>
+<div class="line"><span class="lineno">  361</span>    <a class="code hl_function" href="#a7e63fbcf47e35c6f2ecd11b8fef7c7d8">makeNonCosmetic</a>();</div>
+<div class="line"><span class="lineno">  362</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -564,6 +706,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00563">563</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a7055085da176aee0f6b23298f1003d08" name="a7055085da176aee0f6b23298f1003d08"></a>
@@ -585,6 +729,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00560">560</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -608,11 +754,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00559">559</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

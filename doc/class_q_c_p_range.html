@@ -203,6 +203,8 @@ Related Symbols</h2></td></tr>
 <div class="textblock"><p>Represents the range an axis is encompassing. </p>
 <p>contains a <em>lower</em> and <em>upper</em> double value and provides convenience input, output and modification functions.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">QCPAxis::setRange</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00831">831</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aca158d7e69702cee5d77d10a269b01e2" name="aca158d7e69702cee5d77d10a269b01e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca158d7e69702cee5d77d10a269b01e2">&#9670;&#160;</a></span>QCPRange() <span class="overload">[1/2]</span></h2>
@@ -220,6 +222,15 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs a range with <em>lower</em> and <em>upper</em> set to zero. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01928">1928</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1928</span>                   :</div>
+<div class="line"><span class="lineno"> 1929</span>  <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>(0),</div>
+<div class="line"><span class="lineno"> 1930</span>  <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>(0)</div>
+<div class="line"><span class="lineno"> 1931</span>{</div>
+<div class="line"><span class="lineno"> 1932</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d9d84d084c8f368fdedd42e0978d405" name="a1d9d84d084c8f368fdedd42e0978d405"></a>
@@ -244,6 +255,15 @@ Related Symbols</h2></td></tr>
 <p>Constructs a range with the specified <em>lower</em> and <em>upper</em> values.</p>
 <p>The resulting range will be normalized (see <a class="el" href="#af914a7740269b0604d0827c634a878a9">normalize</a>), so if <em>lower</em> is not numerically smaller than <em>upper</em>, they will be swapped. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01941">1941</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1941</span>                                             :</div>
+<div class="line"><span class="lineno"> 1942</span>  <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>),</div>
+<div class="line"><span class="lineno"> 1943</span>  <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>(<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)</div>
+<div class="line"><span class="lineno"> 1944</span>{</div>
+<div class="line"><span class="lineno"> 1945</span>  <a class="code hl_function" href="#af914a7740269b0604d0827c634a878a9">normalize</a>();</div>
+<div class="line"><span class="lineno"> 1946</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_af914a7740269b0604d0827c634a878a9"><div class="ttname"><a href="#af914a7740269b0604d0827c634a878a9">QCPRange::normalize</a></div><div class="ttdeci">void normalize()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00855">qcustomplot.h:855</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -268,6 +288,31 @@ Related Symbols</h2></td></tr>
 <p>Returns this range, possibly modified to not exceed the bounds provided as <em>lowerBound</em> and <em>upperBound</em>. If possible, the size of the current range is preserved in the process.</p>
 <p>If the range shall only be bounded at the lower side, you can set <em>upperBound</em> to <a class="el" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">QCPRange::maxRange</a>. If it shall only be bounded at the upper side, set <em>lowerBound</em> to -<a class="el" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">QCPRange::maxRange</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02031">2031</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2032</span>{</div>
+<div class="line"><span class="lineno"> 2033</span>  <span class="keywordflow">if</span> (lowerBound &gt; upperBound)</div>
+<div class="line"><span class="lineno"> 2034</span>    qSwap(lowerBound, upperBound);</div>
+<div class="line"><span class="lineno"> 2035</span>  </div>
+<div class="line"><span class="lineno"> 2036</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>, <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>);</div>
+<div class="line"><span class="lineno"> 2037</span>  <span class="keywordflow">if</span> (result.lower &lt; lowerBound)</div>
+<div class="line"><span class="lineno"> 2038</span>  {</div>
+<div class="line"><span class="lineno"> 2039</span>    result.lower = lowerBound;</div>
+<div class="line"><span class="lineno"> 2040</span>    result.upper = lowerBound + <a class="code hl_function" href="#a62326e7cc4316b96df6a60813230e63f">size</a>();</div>
+<div class="line"><span class="lineno"> 2041</span>    <span class="keywordflow">if</span> (result.upper &gt; upperBound || qFuzzyCompare(<a class="code hl_function" href="#a62326e7cc4316b96df6a60813230e63f">size</a>(), upperBound-lowerBound))</div>
+<div class="line"><span class="lineno"> 2042</span>      result.upper = upperBound;</div>
+<div class="line"><span class="lineno"> 2043</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result.upper &gt; upperBound)</div>
+<div class="line"><span class="lineno"> 2044</span>  {</div>
+<div class="line"><span class="lineno"> 2045</span>    result.upper = upperBound;</div>
+<div class="line"><span class="lineno"> 2046</span>    result.lower = upperBound - <a class="code hl_function" href="#a62326e7cc4316b96df6a60813230e63f">size</a>();</div>
+<div class="line"><span class="lineno"> 2047</span>    <span class="keywordflow">if</span> (result.lower &lt; lowerBound || qFuzzyCompare(<a class="code hl_function" href="#a62326e7cc4316b96df6a60813230e63f">size</a>(), upperBound-lowerBound))</div>
+<div class="line"><span class="lineno"> 2048</span>      result.lower = lowerBound;</div>
+<div class="line"><span class="lineno"> 2049</span>  }</div>
+<div class="line"><span class="lineno"> 2050</span>  </div>
+<div class="line"><span class="lineno"> 2051</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2052</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a62326e7cc4316b96df6a60813230e63f"><div class="ttname"><a href="#a62326e7cc4316b96df6a60813230e63f">QCPRange::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00853">qcustomplot.h:853</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af57d4a37a45d0101177ca30fae5d4ca8" name="af57d4a37a45d0101177ca30fae5d4ca8"></a>
@@ -294,6 +339,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the center of the range, i.e. (<em>upper+<em>lower</em>)*0</em>.5 </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00854">854</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  854</span>{ <span class="keywordflow">return</span> (<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>+<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*0.5; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9842b48b6d38dc5e9607358e3083cc8" name="ae9842b48b6d38dc5e9607358e3083cc8"></a>
@@ -320,6 +368,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns true when <em>value</em> lies within or exactly on the borders of the range. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00863">863</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  863</span>{ <span class="keywordflow">return</span> value &gt;= <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &amp;&amp; value &lt;= <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0fa1bc8048be50d52bea93a8caf08305" name="a0fa1bc8048be50d52bea93a8caf08305"></a>
@@ -342,6 +393,14 @@ Related Symbols</h2></td></tr>
 <p>If <em>otherRange</em> is already inside the current range, this function does nothing.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a9cbfb7cd06eac1839cae981e05c19633">expanded</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01960">1960</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1961</span>{</div>
+<div class="line"><span class="lineno"> 1962</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; otherRange.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> || qIsNaN(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>))</div>
+<div class="line"><span class="lineno"> 1963</span>    <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = otherRange.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>;</div>
+<div class="line"><span class="lineno"> 1964</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; otherRange.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> || qIsNaN(<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>))</div>
+<div class="line"><span class="lineno"> 1965</span>    <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = otherRange.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>;</div>
+<div class="line"><span class="lineno"> 1966</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5fa977db0a4b7800075c629c62cf5e80" name="a5fa977db0a4b7800075c629c62cf5e80"></a>
@@ -364,6 +423,14 @@ Related Symbols</h2></td></tr>
 <p>If <em>includeCoord</em> is already inside the current range, this function does nothing.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0fa1bc8048be50d52bea93a8caf08305">expand</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01980">1980</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1981</span>{</div>
+<div class="line"><span class="lineno"> 1982</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; includeCoord || qIsNaN(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>))</div>
+<div class="line"><span class="lineno"> 1983</span>    <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = includeCoord;</div>
+<div class="line"><span class="lineno"> 1984</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; includeCoord || qIsNaN(<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>))</div>
+<div class="line"><span class="lineno"> 1985</span>    <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = includeCoord;</div>
+<div class="line"><span class="lineno"> 1986</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9cbfb7cd06eac1839cae981e05c19633" name="a9cbfb7cd06eac1839cae981e05c19633"></a>
@@ -385,6 +452,14 @@ Related Symbols</h2></td></tr>
 <p>If this range contains NaN as lower or upper bound, the returned range's bound will be taken from <em>otherRange</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0fa1bc8048be50d52bea93a8caf08305">expand</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01999">1999</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2000</span>{</div>
+<div class="line"><span class="lineno"> 2001</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result = *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2002</span>  result.<a class="code hl_function" href="#a0fa1bc8048be50d52bea93a8caf08305">expand</a>(otherRange);</div>
+<div class="line"><span class="lineno"> 2003</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2004</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_a0fa1bc8048be50d52bea93a8caf08305"><div class="ttname"><a href="#a0fa1bc8048be50d52bea93a8caf08305">QCPRange::expand</a></div><div class="ttdeci">void expand(const QCPRange &amp;otherRange)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01960">qcustomplot.cpp:1960</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af81d70f1add7233d73a19dcbe5decb2e" name="af81d70f1add7233d73a19dcbe5decb2e"></a>
@@ -406,6 +481,13 @@ Related Symbols</h2></td></tr>
 <p>If this range contains NaN as lower or upper bound, the returned range's bound will be set to <em>includeCoord</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0fa1bc8048be50d52bea93a8caf08305">expand</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02016">2016</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2017</span>{</div>
+<div class="line"><span class="lineno"> 2018</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result = *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2019</span>  result.<a class="code hl_function" href="#a0fa1bc8048be50d52bea93a8caf08305">expand</a>(includeCoord);</div>
+<div class="line"><span class="lineno"> 2020</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2021</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af914a7740269b0604d0827c634a878a9" name="af914a7740269b0604d0827c634a878a9"></a>
@@ -432,6 +514,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Makes sure <em>lower</em> is numerically smaller than <em>upper</em>. If this is not the case, the values are swapped. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00855">855</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  855</span>{ <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>) qSwap(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>, <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4827a37c83b8bb4bf53fcf8f6a257e77" name="a4827a37c83b8bb4bf53fcf8f6a257e77"></a>
@@ -457,6 +542,9 @@ Related Symbols</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00840">840</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  840</span>{ <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6876aa9620ff2f0f7f1873f998372cef" name="a6876aa9620ff2f0f7f1873f998372cef"></a>
@@ -483,6 +571,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Multiplies both boundaries of the range by <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00844">844</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  844</span>{ <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>*=value; <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>*=value; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afea7c1aa7d08f061cd9bd8832f957df8" name="afea7c1aa7d08f061cd9bd8832f957df8"></a>
@@ -509,6 +600,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds <em>value</em> to both boundaries of the range. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00842">842</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  842</span>{ <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>+=value; <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>+=value; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a95894bcb15a16a75ca564091374e2191" name="a95894bcb15a16a75ca564091374e2191"></a>
@@ -535,6 +629,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Subtracts <em>value</em> from both boundaries of the range. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00843">843</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  843</span>{ <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>-=value; <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-=value; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6137d8682b6835ace840730b4c1e2d63" name="a6137d8682b6835ace840730b4c1e2d63"></a>
@@ -561,6 +658,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Divides both boundaries of the range by <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00845">845</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  845</span>{ <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>/=value; <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/=value; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9f8d1fdcf4b6d19779f1c3d9a14b09c9" name="a9f8d1fdcf4b6d19779f1c3d9a14b09c9"></a>
@@ -586,6 +686,9 @@ Related Symbols</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00839">839</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  839</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> == other.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &amp;&amp; <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> == other.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a808751fdd9b17ef52327ba011df2e5f1" name="a808751fdd9b17ef52327ba011df2e5f1"></a>
@@ -604,6 +707,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a sanitized version of the range. Sanitized means for linear scales, that <em>lower</em> will always be numerically smaller (or equal) to <em>upper</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02115">2115</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2116</span>{</div>
+<div class="line"><span class="lineno"> 2117</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> sanitizedRange(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>, <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>);</div>
+<div class="line"><span class="lineno"> 2118</span>  sanitizedRange.normalize();</div>
+<div class="line"><span class="lineno"> 2119</span>  <span class="keywordflow">return</span> sanitizedRange;</div>
+<div class="line"><span class="lineno"> 2120</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3d66288d66e1d6df3636075eb42502ee" name="a3d66288d66e1d6df3636075eb42502ee"></a>
@@ -623,6 +733,51 @@ Related Symbols</h2></td></tr>
 <p>Returns a sanitized version of the range. Sanitized means for logarithmic scales, that the range won't span the positive and negative sign domain, i.e. contain zero. Further <em>lower</em> will always be numerically smaller (or equal) to <em>upper</em>.</p>
 <p>If the original range does span positive and negative sign domains or contains zero, the returned range will try to approximate the original range as good as possible. If the positive interval of the original range is wider than the negative interval, the returned range will only contain the positive interval, with lower bound set to <em>rangeFac</em> or <em>rangeFac</em> *<em>upper</em>, whichever is closer to zero. Same procedure is used if the negative interval is wider than the positive interval, this time by changing the <em>upper</em> bound. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02066">2066</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2067</span>{</div>
+<div class="line"><span class="lineno"> 2068</span>  <span class="keywordtype">double</span> rangeFac = 1e-3;</div>
+<div class="line"><span class="lineno"> 2069</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> sanitizedRange(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>, <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>);</div>
+<div class="line"><span class="lineno"> 2070</span>  sanitizedRange.normalize();</div>
+<div class="line"><span class="lineno"> 2071</span>  <span class="comment">// can&#39;t have range spanning negative and positive values in log plot, so change range to fix it</span></div>
+<div class="line"><span class="lineno"> 2072</span>  <span class="comment">//if (qFuzzyCompare(sanitizedRange.lower+1, 1) &amp;&amp; !qFuzzyCompare(sanitizedRange.upper+1, 1))</span></div>
+<div class="line"><span class="lineno"> 2073</span>  <span class="keywordflow">if</span> (sanitizedRange.lower == 0.0 &amp;&amp; sanitizedRange.upper != 0.0)</div>
+<div class="line"><span class="lineno"> 2074</span>  {</div>
+<div class="line"><span class="lineno"> 2075</span>    <span class="comment">// case lower is 0</span></div>
+<div class="line"><span class="lineno"> 2076</span>    <span class="keywordflow">if</span> (rangeFac &lt; sanitizedRange.upper*rangeFac)</div>
+<div class="line"><span class="lineno"> 2077</span>      sanitizedRange.lower = rangeFac;</div>
+<div class="line"><span class="lineno"> 2078</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2079</span>      sanitizedRange.lower = sanitizedRange.upper*rangeFac;</div>
+<div class="line"><span class="lineno"> 2080</span>  } <span class="comment">//else if (!qFuzzyCompare(lower+1, 1) &amp;&amp; qFuzzyCompare(upper+1, 1))</span></div>
+<div class="line"><span class="lineno"> 2081</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sanitizedRange.lower != 0.0 &amp;&amp; sanitizedRange.upper == 0.0)</div>
+<div class="line"><span class="lineno"> 2082</span>  {</div>
+<div class="line"><span class="lineno"> 2083</span>    <span class="comment">// case upper is 0</span></div>
+<div class="line"><span class="lineno"> 2084</span>    <span class="keywordflow">if</span> (-rangeFac &gt; sanitizedRange.lower*rangeFac)</div>
+<div class="line"><span class="lineno"> 2085</span>      sanitizedRange.upper = -rangeFac;</div>
+<div class="line"><span class="lineno"> 2086</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2087</span>      sanitizedRange.upper = sanitizedRange.lower*rangeFac;</div>
+<div class="line"><span class="lineno"> 2088</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sanitizedRange.lower &lt; 0 &amp;&amp; sanitizedRange.upper &gt; 0)</div>
+<div class="line"><span class="lineno"> 2089</span>  {</div>
+<div class="line"><span class="lineno"> 2090</span>    <span class="comment">// find out whether negative or positive interval is wider to decide which sign domain will be chosen</span></div>
+<div class="line"><span class="lineno"> 2091</span>    <span class="keywordflow">if</span> (-sanitizedRange.lower &gt; sanitizedRange.upper)</div>
+<div class="line"><span class="lineno"> 2092</span>    {</div>
+<div class="line"><span class="lineno"> 2093</span>      <span class="comment">// negative is wider, do same as in case upper is 0</span></div>
+<div class="line"><span class="lineno"> 2094</span>      <span class="keywordflow">if</span> (-rangeFac &gt; sanitizedRange.lower*rangeFac)</div>
+<div class="line"><span class="lineno"> 2095</span>        sanitizedRange.upper = -rangeFac;</div>
+<div class="line"><span class="lineno"> 2096</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2097</span>        sanitizedRange.upper = sanitizedRange.lower*rangeFac;</div>
+<div class="line"><span class="lineno"> 2098</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2099</span>    {</div>
+<div class="line"><span class="lineno"> 2100</span>      <span class="comment">// positive is wider, do same as in case lower is 0</span></div>
+<div class="line"><span class="lineno"> 2101</span>      <span class="keywordflow">if</span> (rangeFac &lt; sanitizedRange.upper*rangeFac)</div>
+<div class="line"><span class="lineno"> 2102</span>        sanitizedRange.lower = rangeFac;</div>
+<div class="line"><span class="lineno"> 2103</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2104</span>        sanitizedRange.lower = sanitizedRange.upper*rangeFac;</div>
+<div class="line"><span class="lineno"> 2105</span>    }</div>
+<div class="line"><span class="lineno"> 2106</span>  }</div>
+<div class="line"><span class="lineno"> 2107</span>  <span class="comment">// due to normalization, case lower&gt;0 &amp;&amp; upper&lt;0 should never occur, because that implies upper&lt;lower</span></div>
+<div class="line"><span class="lineno"> 2108</span>  <span class="keywordflow">return</span> sanitizedRange;</div>
+<div class="line"><span class="lineno"> 2109</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62326e7cc4316b96df6a60813230e63f" name="a62326e7cc4316b96df6a60813230e63f"></a>
@@ -649,6 +804,9 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the size of the range, i.e. <em>upper-<em>lower</em> </em> </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00853">853</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  853</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a801b964752eaad6219be9d8a651ec2b3" name="a801b964752eaad6219be9d8a651ec2b3"></a>
@@ -679,6 +837,18 @@ Related Symbols</h2></td></tr>
 <li>range size below maxRange </li>
 </ul>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02149">2149</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2150</span>{</div>
+<div class="line"><span class="lineno"> 2151</span>  <span class="keywordflow">return</span> (range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; -<a class="code hl_variable" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2152</span>          range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; <a class="code hl_variable" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2153</span>          qAbs(range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>-range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>) &gt; <a class="code hl_variable" href="#ab46d3bc95030ee25efda41b89e2b616b">minRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2154</span>          qAbs(range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>-range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>) &lt; <a class="code hl_variable" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2155</span>          !(range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; 0 &amp;&amp; qIsInf(range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2156</span>          !(range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; 0 &amp;&amp; qIsInf(range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>/range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)));</div>
+<div class="line"><span class="lineno"> 2157</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_a5ca51e7a2dc5dc0d49527ab171fe1f4f"><div class="ttname"><a href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">QCPRange::maxRange</a></div><div class="ttdeci">static const double maxRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00868">qcustomplot.h:868</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ab46d3bc95030ee25efda41b89e2b616b"><div class="ttname"><a href="#ab46d3bc95030ee25efda41b89e2b616b">QCPRange::minRange</a></div><div class="ttdeci">static const double minRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00867">qcustomplot.h:867</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab38bd4841c77c7bb86c9eea0f142dcc0" name="ab38bd4841c77c7bb86c9eea0f142dcc0"></a>
@@ -713,6 +883,16 @@ Related Symbols</h2></td></tr>
 <li>range size below maxRange </li>
 </ul>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02130">2130</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2131</span>{</div>
+<div class="line"><span class="lineno"> 2132</span>  <span class="keywordflow">return</span> (<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; -<a class="code hl_variable" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2133</span>          <a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; <a class="code hl_variable" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2134</span>          qAbs(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>-<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>) &gt; <a class="code hl_variable" href="#ab46d3bc95030ee25efda41b89e2b616b">minRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2135</span>          qAbs(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>-<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>) &lt; <a class="code hl_variable" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2136</span>          !(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; 0 &amp;&amp; qIsInf(<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2137</span>          !(<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; 0 &amp;&amp; qIsInf(<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a>/<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)));</div>
+<div class="line"><span class="lineno"> 2138</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -744,6 +924,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Multiplies both boundaries of the range by <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00916">916</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  917</span>{</div>
+<div class="line"><span class="lineno">  918</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(range);</div>
+<div class="line"><span class="lineno">  919</span>  result *= value;</div>
+<div class="line"><span class="lineno">  920</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  921</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5cb2332f6957021f47cc768089f4f090" name="a5cb2332f6957021f47cc768089f4f090"></a>
@@ -774,6 +961,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Multiplies both boundaries of the range by <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00926">926</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  927</span>{</div>
+<div class="line"><span class="lineno">  928</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(range);</div>
+<div class="line"><span class="lineno">  929</span>  result *= value;</div>
+<div class="line"><span class="lineno">  930</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  931</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aede14e69c31568a75bd3e9286603c9e0" name="aede14e69c31568a75bd3e9286603c9e0"></a>
@@ -804,6 +998,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds <em>value</em> to both boundaries of the range. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00886">886</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  887</span>{</div>
+<div class="line"><span class="lineno">  888</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(range);</div>
+<div class="line"><span class="lineno">  889</span>  result += value;</div>
+<div class="line"><span class="lineno">  890</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  891</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa7dd8efde53d115b7107826194879069" name="aa7dd8efde53d115b7107826194879069"></a>
@@ -834,6 +1035,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds <em>value</em> to both boundaries of the range. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00896">896</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  897</span>{</div>
+<div class="line"><span class="lineno">  898</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(range);</div>
+<div class="line"><span class="lineno">  899</span>  result += value;</div>
+<div class="line"><span class="lineno">  900</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  901</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a797f82830b516646da8873f82e39e356" name="a797f82830b516646da8873f82e39e356"></a>
@@ -864,6 +1072,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Subtracts <em>value</em> from both boundaries of the range. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00906">906</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  907</span>{</div>
+<div class="line"><span class="lineno">  908</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(range);</div>
+<div class="line"><span class="lineno">  909</span>  result -= value;</div>
+<div class="line"><span class="lineno">  910</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  911</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4b366a3a21974c88e09b0d39d4a24a4b" name="a4b366a3a21974c88e09b0d39d4a24a4b"></a>
@@ -894,6 +1109,13 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Divides both boundaries of the range by <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00936">936</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  937</span>{</div>
+<div class="line"><span class="lineno">  938</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result(range);</div>
+<div class="line"><span class="lineno">  939</span>  result /= value;</div>
+<div class="line"><span class="lineno">  940</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  941</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab4b7d434541ec2e2e00ef3764dde90d8" name="ab4b7d434541ec2e2e00ef3764dde90d8"></a>
@@ -924,6 +1146,12 @@ Related Symbols</h2></td></tr>
 </div><div class="memdoc">
 <p>Prints <em>range</em> in a human readable format to the qDebug output. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00877">877</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  878</span>{</div>
+<div class="line"><span class="lineno">  879</span>    d.nospace() &lt;&lt; <span class="stringliteral">&quot;QCPRange(&quot;</span> &lt;&lt; range.<a class="code hl_variable" href="#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; range.<a class="code hl_variable" href="#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  880</span>    <span class="keywordflow">return</span> d.space();</div>
+<div class="line"><span class="lineno">  881</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -938,6 +1166,8 @@ Related Symbols</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00834">834</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -964,6 +1194,8 @@ Related Symbols</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Do not use this constant to indicate "arbitrarily large" values in plotting logic (as values that will appear in the plot)! It is intended only as a bound to compare against, e.g. to prevent axis ranges from obtaining overflowing ranges.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab38bd4841c77c7bb86c9eea0f142dcc0">validRange</a>, <a class="el" href="#ab46d3bc95030ee25efda41b89e2b616b">minRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00868">868</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ab46d3bc95030ee25efda41b89e2b616b" name="ab46d3bc95030ee25efda41b89e2b616b"></a>
@@ -989,6 +1221,8 @@ Related Symbols</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Do not use this constant to indicate "arbitrarily small" values in plotting logic (as values that will appear in the plot)! It is intended only as a bound to compare against, e.g. to prevent axis ranges from obtaining underflowing ranges.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab38bd4841c77c7bb86c9eea0f142dcc0">validRange</a>, <a class="el" href="#a5ca51e7a2dc5dc0d49527ab171fe1f4f">maxRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00867">867</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ae44eb3aafe1d0e2ed34b499b6d2e074f" name="ae44eb3aafe1d0e2ed34b499b6d2e074f"></a>
@@ -1003,11 +1237,13 @@ Related Symbols</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00834">834</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

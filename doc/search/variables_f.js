@@ -1,6 +1,30 @@
 var searchData=
 [
-  ['upper_0',['upper',['../class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f',1,'QCPRange']]],
-  ['upperending_1',['upperEnding',['../class_q_c_p_axis_painter_private.html#af764be913be5f924700ac9bbb8c01139',1,'QCPAxisPainterPrivate']]],
-  ['upperquartile_2',['upperQuartile',['../class_q_c_p_statistical_box_data.html#a5604dfe04b103e5ac73ce7895b46303b',1,'QCPStatisticalBoxData']]]
+  ['range_5f1_0',['range_1',['../class_main_window.html#a955bbb22c154d7b71a331a7976a16d8f',1,'MainWindow']]],
+  ['range_5f2_1',['range_2',['../class_main_window.html#a927f63b2114c9dfc43bef8d906d93405',1,'MainWindow']]],
+  ['range_5f3_2',['range_3',['../class_main_window.html#a74389a484d0934a19b2617cbbd98ce47',1,'MainWindow']]],
+  ['range_5f4_3',['range_4',['../class_main_window.html#a07a20353612962fb63e522e5e8ce9989',1,'MainWindow']]],
+  ['range_5fdist_5fy_5fmax_4',['range_dist_y_max',['../class_main_window.html#a6e496ab78e28090934997a397e2fe328',1,'MainWindow']]],
+  ['range_5fdist_5fy_5fmin_5',['range_dist_y_min',['../class_main_window.html#a2c7f85715116ad0e939692a772004267',1,'MainWindow']]],
+  ['range_5fpos_5fx_5fmax_6',['range_pos_x_max',['../class_main_window.html#a9df80c11545a8899c234273cdbdd9545',1,'MainWindow']]],
+  ['range_5fpos_5fx_5fmax_5fc_7',['range_pos_x_max_c',['../class_dialog__graph__history.html#adb1c6d2cc0de6b9f85b9343954611823',1,'Dialog_graph_history']]],
+  ['range_5fpos_5fx_5fmin_8',['range_pos_x_min',['../class_main_window.html#aa7205ae36c0a1e2482231800979f3e61',1,'MainWindow']]],
+  ['range_5fpos_5fx_5fmin_5fc_9',['range_pos_x_min_c',['../class_dialog__graph__history.html#a27eb18b28cf9637d43325ec78b8c0b12',1,'Dialog_graph_history']]],
+  ['range_5fpos_5fy_5fmax_10',['range_pos_y_max',['../class_main_window.html#a8082692f3ac617875c64f16574619d97',1,'MainWindow']]],
+  ['range_5fpos_5fy_5fmax_5fc_11',['range_pos_y_max_c',['../class_dialog__graph__history.html#aaa85482a9e7f678c6b54267c8e8fc7c8',1,'Dialog_graph_history']]],
+  ['range_5fpos_5fy_5fmin_12',['range_pos_y_min',['../class_main_window.html#add60f079ac9867e62b9eb831192bd2b3',1,'MainWindow']]],
+  ['range_5fpos_5fy_5fmin_5fc_13',['range_pos_y_min_c',['../class_dialog__graph__history.html#a416abe027f1537ab88c334c5de5f4711',1,'Dialog_graph_history']]],
+  ['range_5fx_14',['range_x',['../class_main_window.html#a7597d65b3d4cfa27ebd2c33b2e9dcff6',1,'MainWindow']]],
+  ['range_5fy_15',['range_y',['../class_main_window.html#a26551a855ea6a5812c60e3adac343af7',1,'MainWindow']]],
+  ['range_5fz_16',['range_z',['../class_main_window.html#a0902ebec240d2b96ff466238fab08c90',1,'MainWindow']]],
+  ['receive_5finitial_5finfo_17',['receive_initial_info',['../class_main_window.html#a0473fea7a1f34e1ed663be0722e17fd9',1,'MainWindow']]],
+  ['received_5fdata_5fquantity_5f1_18',['received_data_quantity_1',['../class_main_window.html#a0f8e244230852d2580b8f303b7bbfa2b',1,'MainWindow']]],
+  ['received_5fdata_5fquantity_5f2_19',['received_data_quantity_2',['../class_main_window.html#ab049b86f3d2c845ac0d7b24a8a0455a9',1,'MainWindow']]],
+  ['received_5fdata_5fquantity_5f3_20',['received_data_quantity_3',['../class_main_window.html#a2aebc6d4af2ea7b6c1aaa5c0b82f1c9b',1,'MainWindow']]],
+  ['received_5fdata_5fquantity_5f4_21',['received_data_quantity_4',['../class_main_window.html#aac3c3ee99fc4f5dd4e024f2a5d825c68',1,'MainWindow']]],
+  ['reset_5fvalues_22',['reset_values',['../class_dialog__graph__history.html#a23ef2c95f5083f5822ef9f12abcaab2f',1,'Dialog_graph_history::reset_values'],['../class_dialog__stats.html#abaa10bcafb35cba7e978539a463d9b15',1,'Dialog_stats::reset_values']]],
+  ['reversedendings_23',['reversedEndings',['../class_q_c_p_axis_painter_private.html#a06d0ef3f4f1b567feb84196fc3b140da',1,'QCPAxisPainterPrivate']]],
+  ['right_24',['right',['../class_q_c_p_item_rect.html#a7979c1915f61ad2609a9cc179c2e445e',1,'QCPItemRect::right'],['../class_q_c_p_item_text.html#aef159622ce6502412e782a21ba6d84f2',1,'QCPItemText::right'],['../class_q_c_p_item_ellipse.html#a50091a3bd8761d3ce0d95d9c727e4a82',1,'QCPItemEllipse::right'],['../class_q_c_p_item_pixmap.html#ac9c0fd231f9e285765978a05d13f8280',1,'QCPItemPixmap::right'],['../class_q_c_p_item_bracket.html#afa6c1360b05a50c4e0df37b3cebab6be',1,'QCPItemBracket::right']]],
+  ['rotatedtotalbounds_25',['rotatedTotalBounds',['../struct_q_c_p_label_painter_private_1_1_label_data.html#ac5360318c8f86dc79fd485f125befa09',1,'QCPLabelPainterPrivate::LabelData::rotatedTotalBounds'],['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html#aa4d38c5ea47c9184a78ee33ae7f1012e',1,'QCPAxisPainterPrivate::TickLabelData::rotatedTotalBounds']]],
+  ['rotation_26',['rotation',['../struct_q_c_p_label_painter_private_1_1_label_data.html#a37774ba8469ad8c5e4b3b75fef6f1ea7',1,'QCPLabelPainterPrivate::LabelData']]]
 ];

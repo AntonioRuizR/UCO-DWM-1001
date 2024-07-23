@@ -236,7 +236,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <p>This <a class="el" href="class_q_c_p_axis_ticker.html" title="The base class tick generator used by QCPAxis to create tick positions and tick labels.">QCPAxisTicker</a> subclass generates ticks that are expressed with respect to a given symbolic constant with a numerical value specified with <a class="el" href="#a36ce0651d2ec92edd36feac1619c2468">setPiValue</a> and an appearance in the tick labels specified with <a class="el" href="#acfdcd4758a393bde4be12a50fb2017b5">setPiSymbol</a>.</p>
 <p>Ticks may be generated at fractions of the symbolic constant. How these fractions appear in the tick label can be configured with <a class="el" href="#a760c8af6ca68178e607556c4e5049d71">setFractionStyle</a>.</p>
-<p>The ticker can be created and assigned to an axis like this: </p><div class="fragment"></div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<p>The ticker can be created and assigned to an axis like this: </p><div class="fragment"></div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01978">1978</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a262f1534c7f0c79a7d5237f5d1e2c54c" name="a262f1534c7f0c79a7d5237f5d1e2c54c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a262f1534c7f0c79a7d5237f5d1e2c54c">&#9670;&#160;</a></span>FractionStyle</h2>
 
@@ -259,6 +261,15 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01987">1987</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1987</span>                     { <a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca00f097b669b2a0e22f508f1ae97877d8">fsFloatingPoint</a>     </div>
+<div class="line"><span class="lineno"> 1988</span>                       ,<a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca05a5457e0e14cb726f623e25282066b3">fsAsciiFractions</a>   </div>
+<div class="line"><span class="lineno"> 1989</span>                       ,<a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca92f38a938c8b179b23363d9993681c55">fsUnicodeFractions</a> </div>
+<div class="line"><span class="lineno"> 1990</span>                     };</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a262f1534c7f0c79a7d5237f5d1e2c54ca00f097b669b2a0e22f508f1ae97877d8"><div class="ttname"><a href="#a262f1534c7f0c79a7d5237f5d1e2c54ca00f097b669b2a0e22f508f1ae97877d8">QCPAxisTickerPi::fsFloatingPoint</a></div><div class="ttdeci">@ fsFloatingPoint</div><div class="ttdoc">Fractions are displayed as regular decimal floating point numbers, e.g. &quot;0.25&quot; or &quot;0....</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01988">qcustomplot.h:1987</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a262f1534c7f0c79a7d5237f5d1e2c54ca05a5457e0e14cb726f623e25282066b3"><div class="ttname"><a href="#a262f1534c7f0c79a7d5237f5d1e2c54ca05a5457e0e14cb726f623e25282066b3">QCPAxisTickerPi::fsAsciiFractions</a></div><div class="ttdeci">@ fsAsciiFractions</div><div class="ttdoc">Fractions are written as rationals using ASCII characters only, e.g. &quot;1/4&quot; or &quot;1/8&quot;.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01989">qcustomplot.h:1988</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a262f1534c7f0c79a7d5237f5d1e2c54ca92f38a938c8b179b23363d9993681c55"><div class="ttname"><a href="#a262f1534c7f0c79a7d5237f5d1e2c54ca92f38a938c8b179b23363d9993681c55">QCPAxisTickerPi::fsUnicodeFractions</a></div><div class="ttdeci">@ fsUnicodeFractions</div><div class="ttdoc">Fractions are written using sub- and superscript UTF-8 digits and the fraction symbol.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01990">qcustomplot.h:1989</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -278,6 +289,23 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs the ticker and sets reasonable default values. Axis tickers are commonly created managed by a QSharedPointer, which then can be passed to <a class="el" href="class_q_c_p_axis.html#a4ee03fcd2c74d05cd1a419b9af5cfbdc">QCPAxis::setTicker</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07432">7432</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7432</span>                                 :</div>
+<div class="line"><span class="lineno"> 7433</span>  <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a>(QLatin1String(<span class="stringliteral">&quot; &quot;</span>)+QChar(0x03C0)),</div>
+<div class="line"><span class="lineno"> 7434</span>  <a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a>(M_PI),</div>
+<div class="line"><span class="lineno"> 7435</span>  <a class="code hl_variable" href="#af5372570aa91ef3b0586939d91c119db">mPeriodicity</a>(0),</div>
+<div class="line"><span class="lineno"> 7436</span>  <a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a>(<a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca92f38a938c8b179b23363d9993681c55">fsUnicodeFractions</a>),</div>
+<div class="line"><span class="lineno"> 7437</span>  <a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a>(0)</div>
+<div class="line"><span class="lineno"> 7438</span>{</div>
+<div class="line"><span class="lineno"> 7439</span>  <a class="code hl_function" href="class_q_c_p_axis_ticker.html#a47752abba8293e6dc18491501ae34008">setTickCount</a>(4);</div>
+<div class="line"><span class="lineno"> 7440</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a47752abba8293e6dc18491501ae34008"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a47752abba8293e6dc18491501ae34008">QCPAxisTicker::setTickCount</a></div><div class="ttdeci">void setTickCount(int count)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06153">qcustomplot.cpp:6153</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a0962084571116e4d98e4dccc2e68f5ea"><div class="ttname"><a href="#a0962084571116e4d98e4dccc2e68f5ea">QCPAxisTickerPi::mPiSymbol</a></div><div class="ttdeci">QString mPiSymbol</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02009">qcustomplot.h:2009</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a34db3e41fbc1e91426841ca040930595"><div class="ttname"><a href="#a34db3e41fbc1e91426841ca040930595">QCPAxisTickerPi::mFractionStyle</a></div><div class="ttdeci">FractionStyle mFractionStyle</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02012">qcustomplot.h:2012</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a943706b7796d778c62915498864bbeb8"><div class="ttname"><a href="#a943706b7796d778c62915498864bbeb8">QCPAxisTickerPi::mPiTickStep</a></div><div class="ttdeci">double mPiTickStep</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02015">qcustomplot.h:2015</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_ab3e899a3d23ada89eb48b465204b09ea"><div class="ttname"><a href="#ab3e899a3d23ada89eb48b465204b09ea">QCPAxisTickerPi::mPiValue</a></div><div class="ttdeci">double mPiValue</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02010">qcustomplot.h:2010</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_af5372570aa91ef3b0586939d91c119db"><div class="ttname"><a href="#af5372570aa91ef3b0586939d91c119db">QCPAxisTickerPi::mPeriodicity</a></div><div class="ttdeci">int mPeriodicity</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02011">qcustomplot.h:2011</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -304,6 +332,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01999">1999</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1999</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afb59d434358173eb5b58e41255bea904" name="afb59d434358173eb5b58e41255bea904"></a>
@@ -333,6 +364,54 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07585">7585</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7586</span>{</div>
+<div class="line"><span class="lineno"> 7587</span>  <span class="keywordflow">if</span> (denominator == 0)</div>
+<div class="line"><span class="lineno"> 7588</span>  {</div>
+<div class="line"><span class="lineno"> 7589</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;called with zero denominator&quot;</span>;</div>
+<div class="line"><span class="lineno"> 7590</span>    <span class="keywordflow">return</span> QString();</div>
+<div class="line"><span class="lineno"> 7591</span>  }</div>
+<div class="line"><span class="lineno"> 7592</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a> == <a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca00f097b669b2a0e22f508f1ae97877d8">fsFloatingPoint</a>) <span class="comment">// should never be the case when calling this function</span></div>
+<div class="line"><span class="lineno"> 7593</span>  {</div>
+<div class="line"><span class="lineno"> 7594</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;shouldn&#39;t be called with fraction style fsDecimal&quot;</span>;</div>
+<div class="line"><span class="lineno"> 7595</span>    <span class="keywordflow">return</span> QString::number(numerator/<span class="keywordtype">double</span>(denominator)); <span class="comment">// failsafe</span></div>
+<div class="line"><span class="lineno"> 7596</span>  }</div>
+<div class="line"><span class="lineno"> 7597</span>  <span class="keywordtype">int</span> sign = numerator*denominator &lt; 0 ? -1 : 1;</div>
+<div class="line"><span class="lineno"> 7598</span>  numerator = qAbs(numerator);</div>
+<div class="line"><span class="lineno"> 7599</span>  denominator = qAbs(denominator);</div>
+<div class="line"><span class="lineno"> 7600</span>  </div>
+<div class="line"><span class="lineno"> 7601</span>  <span class="keywordflow">if</span> (denominator == 1)</div>
+<div class="line"><span class="lineno"> 7602</span>  {</div>
+<div class="line"><span class="lineno"> 7603</span>    <span class="keywordflow">return</span> QString::number(sign*numerator);</div>
+<div class="line"><span class="lineno"> 7604</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7605</span>  {</div>
+<div class="line"><span class="lineno"> 7606</span>    <span class="keywordtype">int</span> integerPart = numerator/denominator;</div>
+<div class="line"><span class="lineno"> 7607</span>    <span class="keywordtype">int</span> remainder = numerator%denominator;</div>
+<div class="line"><span class="lineno"> 7608</span>    <span class="keywordflow">if</span> (remainder == 0)</div>
+<div class="line"><span class="lineno"> 7609</span>    {</div>
+<div class="line"><span class="lineno"> 7610</span>      <span class="keywordflow">return</span> QString::number(sign*integerPart);</div>
+<div class="line"><span class="lineno"> 7611</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7612</span>    {</div>
+<div class="line"><span class="lineno"> 7613</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a> == <a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca05a5457e0e14cb726f623e25282066b3">fsAsciiFractions</a>)</div>
+<div class="line"><span class="lineno"> 7614</span>      {</div>
+<div class="line"><span class="lineno"> 7615</span>        <span class="keywordflow">return</span> QString(QLatin1String(<span class="stringliteral">&quot;%1%2%3/%4&quot;</span>))</div>
+<div class="line"><span class="lineno"> 7616</span>            .arg(sign == -1 ? QLatin1String(<span class="stringliteral">&quot;-&quot;</span>) : QLatin1String(<span class="stringliteral">&quot;&quot;</span>))</div>
+<div class="line"><span class="lineno"> 7617</span>            .arg(integerPart &gt; 0 ? QString::number(integerPart)+QLatin1String(<span class="stringliteral">&quot; &quot;</span>) : QString(QLatin1String(<span class="stringliteral">&quot;&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 7618</span>            .arg(remainder)</div>
+<div class="line"><span class="lineno"> 7619</span>            .arg(denominator);</div>
+<div class="line"><span class="lineno"> 7620</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a> == <a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca92f38a938c8b179b23363d9993681c55">fsUnicodeFractions</a>)</div>
+<div class="line"><span class="lineno"> 7621</span>      {</div>
+<div class="line"><span class="lineno"> 7622</span>        <span class="keywordflow">return</span> QString(QLatin1String(<span class="stringliteral">&quot;%1%2%3&quot;</span>))</div>
+<div class="line"><span class="lineno"> 7623</span>            .arg(sign == -1 ? QLatin1String(<span class="stringliteral">&quot;-&quot;</span>) : QLatin1String(<span class="stringliteral">&quot;&quot;</span>))</div>
+<div class="line"><span class="lineno"> 7624</span>            .arg(integerPart &gt; 0 ? QString::number(integerPart) : QLatin1String(<span class="stringliteral">&quot;&quot;</span>))</div>
+<div class="line"><span class="lineno"> 7625</span>            .arg(<a class="code hl_function" href="#ade6f7e49238e986e9aed74178a78d8d3">unicodeFraction</a>(remainder, denominator));</div>
+<div class="line"><span class="lineno"> 7626</span>      }</div>
+<div class="line"><span class="lineno"> 7627</span>    }</div>
+<div class="line"><span class="lineno"> 7628</span>  }</div>
+<div class="line"><span class="lineno"> 7629</span>  <span class="keywordflow">return</span> QString();</div>
+<div class="line"><span class="lineno"> 7630</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_ade6f7e49238e986e9aed74178a78d8d3"><div class="ttname"><a href="#ade6f7e49238e986e9aed74178a78d8d3">QCPAxisTickerPi::unicodeFraction</a></div><div class="ttdeci">QString unicodeFraction(int numerator, int denominator) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07641">qcustomplot.cpp:7641</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a56c90f870da97c8670cfae4d04ff3ac7" name="a56c90f870da97c8670cfae4d04ff3ac7"></a>
@@ -360,6 +439,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07510">7510</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7511</span>{</div>
+<div class="line"><span class="lineno"> 7512</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker::getSubTickCount</a>(tickStep/<a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a>);</div>
+<div class="line"><span class="lineno"> 7513</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a4ccc403ced7a1457ce6ba293509933c8"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker::getSubTickCount</a></div><div class="ttdeci">virtual int getSubTickCount(double tickStep)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06235">qcustomplot.cpp:6235</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9a087d931d4344b8a91d5cecceff7109" name="a9a087d931d4344b8a91d5cecceff7109"></a>
@@ -401,6 +486,38 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a8201eb4aa8be192bf786b126eb5ee089">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07523">7523</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7524</span>{</div>
+<div class="line"><span class="lineno"> 7525</span>  <span class="keywordtype">double</span> tickInPis = tick/<a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a>;</div>
+<div class="line"><span class="lineno"> 7526</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af5372570aa91ef3b0586939d91c119db">mPeriodicity</a> &gt; 0)</div>
+<div class="line"><span class="lineno"> 7527</span>    tickInPis = fmod(tickInPis, <a class="code hl_variable" href="#af5372570aa91ef3b0586939d91c119db">mPeriodicity</a>);</div>
+<div class="line"><span class="lineno"> 7528</span>  </div>
+<div class="line"><span class="lineno"> 7529</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a> != <a class="code hl_enumvalue" href="#a262f1534c7f0c79a7d5237f5d1e2c54ca00f097b669b2a0e22f508f1ae97877d8">fsFloatingPoint</a> &amp;&amp; <a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a> &gt; 0.09 &amp;&amp; <a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a> &lt; 50)</div>
+<div class="line"><span class="lineno"> 7530</span>  {</div>
+<div class="line"><span class="lineno"> 7531</span>    <span class="comment">// simply construct fraction from decimal like 1.234 -&gt; 1234/1000 and then simplify fraction, smaller digits are irrelevant due to mPiTickStep conditional above</span></div>
+<div class="line"><span class="lineno"> 7532</span>    <span class="keywordtype">int</span> denominator = 1000;</div>
+<div class="line"><span class="lineno"> 7533</span>    <span class="keywordtype">int</span> numerator = qRound(tickInPis*denominator);</div>
+<div class="line"><span class="lineno"> 7534</span>    <a class="code hl_function" href="#a0e30609aed5025d331cb61671f0115d0">simplifyFraction</a>(numerator, denominator);</div>
+<div class="line"><span class="lineno"> 7535</span>    <span class="keywordflow">if</span> (qAbs(numerator) == 1 &amp;&amp; denominator == 1)</div>
+<div class="line"><span class="lineno"> 7536</span>      <span class="keywordflow">return</span> (numerator &lt; 0 ? QLatin1String(<span class="stringliteral">&quot;-&quot;</span>) : QLatin1String(<span class="stringliteral">&quot;&quot;</span>)) + <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a>.trimmed();</div>
+<div class="line"><span class="lineno"> 7537</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (numerator == 0)</div>
+<div class="line"><span class="lineno"> 7538</span>      <span class="keywordflow">return</span> QLatin1String(<span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><span class="lineno"> 7539</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7540</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#afb59d434358173eb5b58e41255bea904">fractionToString</a>(numerator, denominator) + <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a>;</div>
+<div class="line"><span class="lineno"> 7541</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7542</span>  {</div>
+<div class="line"><span class="lineno"> 7543</span>    <span class="keywordflow">if</span> (qFuzzyIsNull(tickInPis))</div>
+<div class="line"><span class="lineno"> 7544</span>      <span class="keywordflow">return</span> QLatin1String(<span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><span class="lineno"> 7545</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (qFuzzyCompare(qAbs(tickInPis), 1.0))</div>
+<div class="line"><span class="lineno"> 7546</span>      <span class="keywordflow">return</span> (tickInPis &lt; 0 ? QLatin1String(<span class="stringliteral">&quot;-&quot;</span>) : QLatin1String(<span class="stringliteral">&quot;&quot;</span>)) + <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a>.trimmed();</div>
+<div class="line"><span class="lineno"> 7547</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7548</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_axis_ticker.html#a8201eb4aa8be192bf786b126eb5ee089">QCPAxisTicker::getTickLabel</a>(tickInPis, locale, formatChar, precision) + <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a>;</div>
+<div class="line"><span class="lineno"> 7549</span>  }</div>
+<div class="line"><span class="lineno"> 7550</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a8201eb4aa8be192bf786b126eb5ee089"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a8201eb4aa8be192bf786b126eb5ee089">QCPAxisTicker::getTickLabel</a></div><div class="ttdeci">virtual QString getTickLabel(double tick, const QLocale &amp;locale, QChar formatChar, int precision)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06298">qcustomplot.cpp:6298</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a0e30609aed5025d331cb61671f0115d0"><div class="ttname"><a href="#a0e30609aed5025d331cb61671f0115d0">QCPAxisTickerPi::simplifyFraction</a></div><div class="ttdeci">void simplifyFraction(int &amp;numerator, int &amp;denominator) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07558">qcustomplot.cpp:7558</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_afb59d434358173eb5b58e41255bea904"><div class="ttname"><a href="#afb59d434358173eb5b58e41255bea904">QCPAxisTickerPi::fractionToString</a></div><div class="ttdeci">QString fractionToString(int numerator, int denominator) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07585">qcustomplot.cpp:7585</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a55301f0072983bd2d7c131a24e1779e7" name="a55301f0072983bd2d7c131a24e1779e7"></a>
@@ -428,6 +545,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a910d69bcec2de37e92d8d4e1ecf201e2">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07495">7495</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7496</span>{</div>
+<div class="line"><span class="lineno"> 7497</span>  <a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a> = range.<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/<a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a>/double(<a class="code hl_variable" href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>+1e-10); <span class="comment">// mTickCount ticks on average, the small addition is to prevent jitter on exact integers</span></div>
+<div class="line"><span class="lineno"> 7498</span>  <a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a> = <a class="code hl_function" href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">cleanMantissa</a>(<a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a>);</div>
+<div class="line"><span class="lineno"> 7499</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a943706b7796d778c62915498864bbeb8">mPiTickStep</a>*<a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a>;</div>
+<div class="line"><span class="lineno"> 7500</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a14a35b47d1aad11b08d18ea0e25937b8"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">QCPAxisTicker::mTickCount</a></div><div class="ttdeci">int mTickCount</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01767">qcustomplot.h:1767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ac7df6c72876b7abd67c932663a0b0f6a"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">QCPAxisTicker::cleanMantissa</a></div><div class="ttdeci">double cleanMantissa(double input) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06457">qcustomplot.cpp:6457</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a62326e7cc4316b96df6a60813230e63f"><div class="ttname"><a href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">QCPRange::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00853">qcustomplot.h:853</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa320edf0a30386ce6a63c18050fbdfd8" name="aa320edf0a30386ce6a63c18050fbdfd8"></a>
@@ -453,6 +580,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01998">1998</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1998</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af5372570aa91ef3b0586939d91c119db">mPeriodicity</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2fd785cd66a6f4f969ac2eca1b08e0f2" name="a2fd785cd66a6f4f969ac2eca1b08e0f2"></a>
@@ -478,6 +608,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01996">1996</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1996</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abddc18799caa4ae6c721e1e5e229b3a4" name="abddc18799caa4ae6c721e1e5e229b3a4"></a>
@@ -503,6 +636,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01997">1997</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1997</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a760c8af6ca68178e607556c4e5049d71" name="a760c8af6ca68178e607556c4e5049d71"></a>
@@ -521,6 +657,11 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets how the numerical/fractional part preceding the symbolic constant is displayed in tick labels. See <a class="el" href="#a262f1534c7f0c79a7d5237f5d1e2c54c">FractionStyle</a> for the various options. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07482">7482</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7483</span>{</div>
+<div class="line"><span class="lineno"> 7484</span>  <a class="code hl_variable" href="#a34db3e41fbc1e91426841ca040930595">mFractionStyle</a> = style;</div>
+<div class="line"><span class="lineno"> 7485</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a58f538dc01860fb56e46970e28a87f03" name="a58f538dc01860fb56e46970e28a87f03"></a>
@@ -541,6 +682,11 @@ Protected Attributes</h2></td></tr>
 <p>To disable periodicity, set <em>multiplesOfPi</em> to zero.</p>
 <p>For example, an axis that identifies 0 with 2pi would set <em>multiplesOfPi</em> to two. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07473">7473</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7474</span>{</div>
+<div class="line"><span class="lineno"> 7475</span>  <a class="code hl_variable" href="#af5372570aa91ef3b0586939d91c119db">mPeriodicity</a> = qAbs(multiplesOfPi);</div>
+<div class="line"><span class="lineno"> 7476</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfdcd4758a393bde4be12a50fb2017b5" name="acfdcd4758a393bde4be12a50fb2017b5"></a>
@@ -560,6 +706,11 @@ Protected Attributes</h2></td></tr>
 <p>Sets how the symbol part (which is always a suffix to the number) shall appear in the axis tick label.</p>
 <p>If a space shall appear between the number and the symbol, make sure the space is contained in <em>symbol</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07449">7449</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7450</span>{</div>
+<div class="line"><span class="lineno"> 7451</span>  <a class="code hl_variable" href="#a0962084571116e4d98e4dccc2e68f5ea">mPiSymbol</a> = symbol;</div>
+<div class="line"><span class="lineno"> 7452</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a36ce0651d2ec92edd36feac1619c2468" name="a36ce0651d2ec92edd36feac1619c2468"></a>
@@ -579,6 +730,11 @@ Protected Attributes</h2></td></tr>
 <p>Sets the numerical value that the symbolic constant has.</p>
 <p>This will be used to place the appropriate fractions of the symbol at the respective axis coordinates. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07460">7460</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7461</span>{</div>
+<div class="line"><span class="lineno"> 7462</span>  <a class="code hl_variable" href="#ab3e899a3d23ada89eb48b465204b09ea">mPiValue</a> = pi;</div>
+<div class="line"><span class="lineno"> 7463</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e30609aed5025d331cb61671f0115d0" name="a0e30609aed5025d331cb61671f0115d0"></a>
@@ -608,6 +764,24 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07558">7558</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7559</span>{</div>
+<div class="line"><span class="lineno"> 7560</span>  <span class="keywordflow">if</span> (numerator == 0 || denominator == 0)</div>
+<div class="line"><span class="lineno"> 7561</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 7562</span>  </div>
+<div class="line"><span class="lineno"> 7563</span>  <span class="keywordtype">int</span> num = numerator;</div>
+<div class="line"><span class="lineno"> 7564</span>  <span class="keywordtype">int</span> denom = denominator;</div>
+<div class="line"><span class="lineno"> 7565</span>  <span class="keywordflow">while</span> (denom != 0) <span class="comment">// euclidean gcd algorithm</span></div>
+<div class="line"><span class="lineno"> 7566</span>  {</div>
+<div class="line"><span class="lineno"> 7567</span>    <span class="keywordtype">int</span> oldDenom = denom;</div>
+<div class="line"><span class="lineno"> 7568</span>    denom = num % denom;</div>
+<div class="line"><span class="lineno"> 7569</span>    num = oldDenom;</div>
+<div class="line"><span class="lineno"> 7570</span>  }</div>
+<div class="line"><span class="lineno"> 7571</span>  <span class="comment">// num is now gcd of numerator and denominator</span></div>
+<div class="line"><span class="lineno"> 7572</span>  numerator /= num;</div>
+<div class="line"><span class="lineno"> 7573</span>  denominator /= num;</div>
+<div class="line"><span class="lineno"> 7574</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ade6f7e49238e986e9aed74178a78d8d3" name="ade6f7e49238e986e9aed74178a78d8d3"></a>
@@ -637,6 +811,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07641">7641</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7642</span>{</div>
+<div class="line"><span class="lineno"> 7643</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#a34798972670b3760d649ccfe0d0ee9a5">unicodeSuperscript</a>(numerator)+QChar(0x2044)+<a class="code hl_function" href="#a5b3bb340adb888a30a96225e1ca23c7a">unicodeSubscript</a>(denominator);</div>
+<div class="line"><span class="lineno"> 7644</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a34798972670b3760d649ccfe0d0ee9a5"><div class="ttname"><a href="#a34798972670b3760d649ccfe0d0ee9a5">QCPAxisTickerPi::unicodeSuperscript</a></div><div class="ttdeci">QString unicodeSuperscript(int number) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07651">qcustomplot.cpp:7651</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_pi_html_a5b3bb340adb888a30a96225e1ca23c7a"><div class="ttname"><a href="#a5b3bb340adb888a30a96225e1ca23c7a">QCPAxisTickerPi::unicodeSubscript</a></div><div class="ttdeci">QString unicodeSubscript(int number) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07677">qcustomplot.cpp:7677</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b3bb340adb888a30a96225e1ca23c7a" name="a5b3bb340adb888a30a96225e1ca23c7a"></a>
@@ -662,6 +843,20 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07677">7677</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7678</span>{</div>
+<div class="line"><span class="lineno"> 7679</span>  <span class="keywordflow">if</span> (number == 0)</div>
+<div class="line"><span class="lineno"> 7680</span>    <span class="keywordflow">return</span> QString(QChar(0x2080));</div>
+<div class="line"><span class="lineno"> 7681</span>  </div>
+<div class="line"><span class="lineno"> 7682</span>  QString result;</div>
+<div class="line"><span class="lineno"> 7683</span>  <span class="keywordflow">while</span> (number &gt; 0)</div>
+<div class="line"><span class="lineno"> 7684</span>  {</div>
+<div class="line"><span class="lineno"> 7685</span>    result.prepend(QChar(0x2080+number%10));</div>
+<div class="line"><span class="lineno"> 7686</span>    number /= 10;</div>
+<div class="line"><span class="lineno"> 7687</span>  }</div>
+<div class="line"><span class="lineno"> 7688</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 7689</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a34798972670b3760d649ccfe0d0ee9a5" name="a34798972670b3760d649ccfe0d0ee9a5"></a>
@@ -687,6 +882,27 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07651">7651</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7652</span>{</div>
+<div class="line"><span class="lineno"> 7653</span>  <span class="keywordflow">if</span> (number == 0)</div>
+<div class="line"><span class="lineno"> 7654</span>    <span class="keywordflow">return</span> QString(QChar(0x2070));</div>
+<div class="line"><span class="lineno"> 7655</span>  </div>
+<div class="line"><span class="lineno"> 7656</span>  QString result;</div>
+<div class="line"><span class="lineno"> 7657</span>  <span class="keywordflow">while</span> (number &gt; 0)</div>
+<div class="line"><span class="lineno"> 7658</span>  {</div>
+<div class="line"><span class="lineno"> 7659</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> digit = number%10;</div>
+<div class="line"><span class="lineno"> 7660</span>    <span class="keywordflow">switch</span> (digit)</div>
+<div class="line"><span class="lineno"> 7661</span>    {</div>
+<div class="line"><span class="lineno"> 7662</span>      <span class="keywordflow">case</span> 1: { result.prepend(QChar(0x00B9)); <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno"> 7663</span>      <span class="keywordflow">case</span> 2: { result.prepend(QChar(0x00B2)); <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno"> 7664</span>      <span class="keywordflow">case</span> 3: { result.prepend(QChar(0x00B3)); <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno"> 7665</span>      <span class="keywordflow">default</span>: { result.prepend(QChar(0x2070+digit)); <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno"> 7666</span>    }</div>
+<div class="line"><span class="lineno"> 7667</span>    number /= 10;</div>
+<div class="line"><span class="lineno"> 7668</span>  }</div>
+<div class="line"><span class="lineno"> 7669</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 7670</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -710,6 +926,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02012">2012</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="af5372570aa91ef3b0586939d91c119db" name="af5372570aa91ef3b0586939d91c119db"></a>
@@ -731,6 +949,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02011">2011</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -754,6 +974,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02009">2009</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a943706b7796d778c62915498864bbeb8" name="a943706b7796d778c62915498864bbeb8"></a>
@@ -775,6 +997,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02015">2015</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -798,11 +1022,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02010">2010</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

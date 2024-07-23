@@ -158,6 +158,8 @@ Public Attributes</h2></td></tr>
 </ul>
 <p>The container for storing multiple data points is <a class="el" href="qcustomplot_8h.html#ae187bcf53c0a7abae09aa4286559e8b4">QCPFinancialDataContainer</a>. It is a typedef for <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a> with <a class="el" href="class_q_c_p_financial_data.html">QCPFinancialData</a> as the DataType template parameter. See the documentation there for an explanation regarding the data type's generic methods.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="qcustomplot_8h.html#ae187bcf53c0a7abae09aa4286559e8b4">QCPFinancialDataContainer</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06158">6158</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1ca53b3a9ae4e9658a4fd1ca57d76ba4" name="a1ca53b3a9ae4e9658a4fd1ca57d76ba4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ca53b3a9ae4e9658a4fd1ca57d76ba4">&#9670;&#160;</a></span>QCPFinancialData() <span class="overload">[1/2]</span></h2>
@@ -175,6 +177,21 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs a data point with key and all values set to zero. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l27003">27003</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">27003</span>                                   :</div>
+<div class="line"><span class="lineno">27004</span>  <a class="code hl_variable" href="#a18bc92126f28c214b05b0161e5f5958b">key</a>(0),</div>
+<div class="line"><span class="lineno">27005</span>  <a class="code hl_variable" href="#a3059e1e1fbcb9fd243fde0450f238032">open</a>(0),</div>
+<div class="line"><span class="lineno">27006</span>  <a class="code hl_variable" href="#a299a4b241296fb6cd1baf5ab03f7126a">high</a>(0),</div>
+<div class="line"><span class="lineno">27007</span>  <a class="code hl_variable" href="#aecce0fb45a115e3f3a25eea78491ac16">low</a>(0),</div>
+<div class="line"><span class="lineno">27008</span>  <a class="code hl_variable" href="#a45e9b96944c4a08ea6c82a72d3d22df2">close</a>(0)</div>
+<div class="line"><span class="lineno">27009</span>{</div>
+<div class="line"><span class="lineno">27010</span>}</div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_a18bc92126f28c214b05b0161e5f5958b"><div class="ttname"><a href="#a18bc92126f28c214b05b0161e5f5958b">QCPFinancialData::key</a></div><div class="ttdeci">double key</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06173">qcustomplot.h:6173</a></div></div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_a299a4b241296fb6cd1baf5ab03f7126a"><div class="ttname"><a href="#a299a4b241296fb6cd1baf5ab03f7126a">QCPFinancialData::high</a></div><div class="ttdeci">double high</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06173">qcustomplot.h:6173</a></div></div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_a3059e1e1fbcb9fd243fde0450f238032"><div class="ttname"><a href="#a3059e1e1fbcb9fd243fde0450f238032">QCPFinancialData::open</a></div><div class="ttdeci">double open</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06173">qcustomplot.h:6173</a></div></div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_a45e9b96944c4a08ea6c82a72d3d22df2"><div class="ttname"><a href="#a45e9b96944c4a08ea6c82a72d3d22df2">QCPFinancialData::close</a></div><div class="ttdeci">double close</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06173">qcustomplot.h:6173</a></div></div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_aecce0fb45a115e3f3a25eea78491ac16"><div class="ttname"><a href="#aecce0fb45a115e3f3a25eea78491ac16">QCPFinancialData::low</a></div><div class="ttdeci">double low</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06173">qcustomplot.h:6173</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a069b72c514dfd4fc8e1d5df811e54ca4" name="a069b72c514dfd4fc8e1d5df811e54ca4"></a>
@@ -212,6 +229,16 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs a data point with the specified <em>key</em> and OHLC values. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l27015">27015</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">27015</span>                                                                                                 :</div>
+<div class="line"><span class="lineno">27016</span>  <a class="code hl_variable" href="#a18bc92126f28c214b05b0161e5f5958b">key</a>(<a class="code hl_variable" href="#a18bc92126f28c214b05b0161e5f5958b">key</a>),</div>
+<div class="line"><span class="lineno">27017</span>  <a class="code hl_variable" href="#a3059e1e1fbcb9fd243fde0450f238032">open</a>(<a class="code hl_variable" href="#a3059e1e1fbcb9fd243fde0450f238032">open</a>),</div>
+<div class="line"><span class="lineno">27018</span>  <a class="code hl_variable" href="#a299a4b241296fb6cd1baf5ab03f7126a">high</a>(<a class="code hl_variable" href="#a299a4b241296fb6cd1baf5ab03f7126a">high</a>),</div>
+<div class="line"><span class="lineno">27019</span>  <a class="code hl_variable" href="#aecce0fb45a115e3f3a25eea78491ac16">low</a>(<a class="code hl_variable" href="#aecce0fb45a115e3f3a25eea78491ac16">low</a>),</div>
+<div class="line"><span class="lineno">27020</span>  <a class="code hl_variable" href="#a45e9b96944c4a08ea6c82a72d3d22df2">close</a>(<a class="code hl_variable" href="#a45e9b96944c4a08ea6c82a72d3d22df2">close</a>)</div>
+<div class="line"><span class="lineno">27021</span>{</div>
+<div class="line"><span class="lineno">27022</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -240,6 +267,11 @@ Public Attributes</h2></td></tr>
 <p>Returns a data point with the specified <em>sortKey</em>. All other members are set to zero.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06165">6165</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6165</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a1ca53b3a9ae4e9658a4fd1ca57d76ba4">QCPFinancialData</a>(<a class="code hl_function" href="#ab378e8ef6aef482735aba69115cb442e">sortKey</a>, 0, 0, 0, 0); }</div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_a1ca53b3a9ae4e9658a4fd1ca57d76ba4"><div class="ttname"><a href="#a1ca53b3a9ae4e9658a4fd1ca57d76ba4">QCPFinancialData::QCPFinancialData</a></div><div class="ttdeci">QCPFinancialData()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l27003">qcustomplot.cpp:27003</a></div></div>
+<div class="ttc" id="aclass_q_c_p_financial_data_html_ab378e8ef6aef482735aba69115cb442e"><div class="ttname"><a href="#ab378e8ef6aef482735aba69115cb442e">QCPFinancialData::sortKey</a></div><div class="ttdeci">double sortKey() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06164">qcustomplot.h:6164</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af6ed6349c65d938fabd2e4dd2cd499ff" name="af6ed6349c65d938fabd2e4dd2cd499ff"></a>
@@ -267,6 +299,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the <em>key</em> member of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06168">6168</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6168</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a18bc92126f28c214b05b0161e5f5958b">key</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a65206c76b6f31a57e04dc7da88c9be60" name="a65206c76b6f31a57e04dc7da88c9be60"></a>
@@ -294,6 +329,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the <em>open</em> member of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06169">6169</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6169</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3059e1e1fbcb9fd243fde0450f238032">open</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab378e8ef6aef482735aba69115cb442e" name="ab378e8ef6aef482735aba69115cb442e"></a>
@@ -321,6 +359,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the <em>key</em> member of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06164">6164</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6164</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a18bc92126f28c214b05b0161e5f5958b">key</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a45c90527fd3cececeb41e47555333794" name="a45c90527fd3cececeb41e47555333794"></a>
@@ -348,6 +389,9 @@ Public Attributes</h2></td></tr>
 <p>Since the member <em>key</em> is both the data point key coordinate and the data ordering parameter, this method returns true.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06166">6166</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6166</span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; } </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a164d5584eeeb9ba48b4b595ac2ac7fcf" name="a164d5584eeeb9ba48b4b595ac2ac7fcf"></a>
@@ -375,6 +419,10 @@ Public Attributes</h2></td></tr>
 <p>Returns a <a class="el" href="class_q_c_p_range.html" title="Represents the range an axis is encompassing.">QCPRange</a> spanning from the <em>low</em> to the <em>high</em> value of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06171">6171</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6171</span>{ <span class="keywordflow">return</span> <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(<a class="code hl_variable" href="#aecce0fb45a115e3f3a25eea78491ac16">low</a>, <a class="code hl_variable" href="#a299a4b241296fb6cd1baf5ab03f7126a">high</a>); } <span class="comment">// open and close must lie between low and high, so we don&#39;t need to check them</span></div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -390,6 +438,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06173">6173</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a299a4b241296fb6cd1baf5ab03f7126a" name="a299a4b241296fb6cd1baf5ab03f7126a"></a>
@@ -403,6 +453,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06173">6173</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -418,6 +470,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06173">6173</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aecce0fb45a115e3f3a25eea78491ac16" name="aecce0fb45a115e3f3a25eea78491ac16"></a>
@@ -431,6 +485,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06173">6173</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -446,11 +502,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06173">6173</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

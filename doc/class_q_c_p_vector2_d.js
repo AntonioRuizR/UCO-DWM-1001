@@ -33,5 +33,7 @@ var class_q_c_p_vector2_d =
     [ "operator-", "class_q_c_p_vector2_d.html#a14c807d345ee3f22d6809bb5a4137b52", null ],
     [ "operator-", "class_q_c_p_vector2_d.html#a9e01331d8debf0877ee4cba9abd83605", null ],
     [ "operator/", "class_q_c_p_vector2_d.html#aa69909afc8c656999a2ea292ea01244b", null ],
-    [ "operator<<", "class_q_c_p_vector2_d.html#a6c757af9671d925af4a36c2f58fb7234", null ]
+    [ "operator<<", "class_q_c_p_vector2_d.html#a6c757af9671d925af4a36c2f58fb7234", null ],
+    [ "mX", "class_q_c_p_vector2_d.html#ab6f67c521be2e7eea7d31175d086ac2c", null ],
+    [ "mY", "class_q_c_p_vector2_d.html#a1b6dbdfb973c4cb478116cd610265e13", null ]
 ];

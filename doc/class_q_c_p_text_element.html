@@ -378,7 +378,9 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A layout element displaying a text. </p>
 <p>The text may be specified with <a class="el" href="#ac44b81e69e719b879eb2feecb33557e2">setText</a>, the formatting can be controlled with <a class="el" href="#a09b3241769528fa87cb4bf35c97defad">setFont</a>, <a class="el" href="#a4f3b8361c3ffb3f84346954929ce93ba">setTextColor</a>, and <a class="el" href="#ab908f437f552020888a3ad8cf8242605">setTextFlags</a>.</p>
-<p>A text element can be added as follows: </p><div class="fragment"></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>A text element can be added as follows: </p><div class="fragment"></div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05268">5268</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae1de18bdb1e7ba959f132018dd9a0258" name="ae1de18bdb1e7ba959f132018dd9a0258"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1de18bdb1e7ba959f132018dd9a0258">&#9670;&#160;</a></span>QCPTextElement() <span class="overload">[1/5]</span></h2>
 
@@ -404,6 +406,37 @@ Additional Inherited Members</h2></td></tr>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Creates a new <a class="el" href="class_q_c_p_text_element.html" title="A layout element displaying a text.">QCPTextElement</a> instance and sets default values. The initial text is empty (<a class="el" href="#ac44b81e69e719b879eb2feecb33557e2">setText</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19680">19680</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19680</span>                                                      :</div>
+<div class="line"><span class="lineno">19681</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a2c25c7bf27eaa1fad66807af855d8d81">QCPLayoutElement</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>),</div>
+<div class="line"><span class="lineno">19682</span>  <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>(),</div>
+<div class="line"><span class="lineno">19683</span>  <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>(Qt::AlignCenter),</div>
+<div class="line"><span class="lineno">19684</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>(QFont(QLatin1String(<span class="stringliteral">&quot;sans serif&quot;</span>), 12)), <span class="comment">// will be taken from parentPlot if available, see below</span></div>
+<div class="line"><span class="lineno">19685</span>  <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>(Qt::black),</div>
+<div class="line"><span class="lineno">19686</span>  <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>(QFont(QLatin1String(<span class="stringliteral">&quot;sans serif&quot;</span>), 12)), <span class="comment">// will be taken from parentPlot if available, see below</span></div>
+<div class="line"><span class="lineno">19687</span>  <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a>(Qt::blue),</div>
+<div class="line"><span class="lineno">19688</span>  <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">19689</span>  <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">19690</span>{</div>
+<div class="line"><span class="lineno">19691</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>)</div>
+<div class="line"><span class="lineno">19692</span>  {</div>
+<div class="line"><span class="lineno">19693</span>    <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;font();</div>
+<div class="line"><span class="lineno">19694</span>    <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;font();</div>
+<div class="line"><span class="lineno">19695</span>  }</div>
+<div class="line"><span class="lineno">19696</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(QMargins(2, 2, 2, 2));</div>
+<div class="line"><span class="lineno">19697</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a2c25c7bf27eaa1fad66807af855d8d81"><div class="ttname"><a href="class_q_c_p_layout_element.html#a2c25c7bf27eaa1fad66807af855d8d81">QCPLayoutElement::QCPLayoutElement</a></div><div class="ttdeci">QCPLayoutElement(QCustomPlot *parentPlot=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03208">qcustomplot.cpp:3208</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a8f450b1f3f992ad576fce2c63d8b79cf"><div class="ttname"><a href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">QCPLayoutElement::setMargins</a></div><div class="ttdeci">void setMargins(const QMargins &amp;margins)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03261">qcustomplot.cpp:3261</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a112e8f9898991fe54f94fcb7effddc2f"><div class="ttname"><a href="#a112e8f9898991fe54f94fcb7effddc2f">QCPTextElement::mSelectable</a></div><div class="ttdeci">bool mSelectable</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05328">qcustomplot.h:5328</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a221eb95ecda1056eb79d56f1230f45d5"><div class="ttname"><a href="#a221eb95ecda1056eb79d56f1230f45d5">QCPTextElement::mTextFlags</a></div><div class="ttdeci">int mTextFlags</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05322">qcustomplot.h:5322</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a2ef3d8f044b2a0520c90561b3b533028"><div class="ttname"><a href="#a2ef3d8f044b2a0520c90561b3b533028">QCPTextElement::mText</a></div><div class="ttdeci">QString mText</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05321">qcustomplot.h:5321</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a2fef52fa1ec006799102b2956133ba29"><div class="ttname"><a href="#a2fef52fa1ec006799102b2956133ba29">QCPTextElement::mFont</a></div><div class="ttdeci">QFont mFont</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05323">qcustomplot.h:5323</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a3685263a99eacd98b180d29adc8e8830"><div class="ttname"><a href="#a3685263a99eacd98b180d29adc8e8830">QCPTextElement::mTextColor</a></div><div class="ttdeci">QColor mTextColor</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05324">qcustomplot.h:5324</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a5d242628c9c4beb361b82676c4851c38"><div class="ttname"><a href="#a5d242628c9c4beb361b82676c4851c38">QCPTextElement::mSelectedFont</a></div><div class="ttdeci">QFont mSelectedFont</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05325">qcustomplot.h:5325</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a7a46eb67459a3c8c80d19aa28b8ae791"><div class="ttname"><a href="#a7a46eb67459a3c8c80d19aa28b8ae791">QCPTextElement::mSelected</a></div><div class="ttdeci">bool mSelected</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05328">qcustomplot.h:5328</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_ad523a852d47bc97b1af62a4d0dedf2ad"><div class="ttname"><a href="#ad523a852d47bc97b1af62a4d0dedf2ad">QCPTextElement::mSelectedTextColor</a></div><div class="ttdeci">QColor mSelectedTextColor</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05326">qcustomplot.h:5326</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a00f08a8a3363ad8d7d12ca0db4922b6b" name="a00f08a8a3363ad8d7d12ca0db4922b6b"></a>
@@ -428,6 +461,27 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a new <a class="el" href="class_q_c_p_text_element.html" title="A layout element displaying a text.">QCPTextElement</a> instance and sets default values.</p>
 <p>The initial text is set to <em>text</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19705">19705</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19705</span>                                                                           :</div>
+<div class="line"><span class="lineno">19706</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a2c25c7bf27eaa1fad66807af855d8d81">QCPLayoutElement</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>),</div>
+<div class="line"><span class="lineno">19707</span>  <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>(<a class="code hl_function" href="#a453c24723b76fdcae405a8a7b0d02614">text</a>),</div>
+<div class="line"><span class="lineno">19708</span>  <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>(Qt::AlignCenter),</div>
+<div class="line"><span class="lineno">19709</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>(QFont(QLatin1String(<span class="stringliteral">&quot;sans serif&quot;</span>), 12)), <span class="comment">// will be taken from parentPlot if available, see below</span></div>
+<div class="line"><span class="lineno">19710</span>  <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>(Qt::black),</div>
+<div class="line"><span class="lineno">19711</span>  <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>(QFont(QLatin1String(<span class="stringliteral">&quot;sans serif&quot;</span>), 12)), <span class="comment">// will be taken from parentPlot if available, see below</span></div>
+<div class="line"><span class="lineno">19712</span>  <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a>(Qt::blue),</div>
+<div class="line"><span class="lineno">19713</span>  <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">19714</span>  <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">19715</span>{</div>
+<div class="line"><span class="lineno">19716</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>)</div>
+<div class="line"><span class="lineno">19717</span>  {</div>
+<div class="line"><span class="lineno">19718</span>    <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;font();</div>
+<div class="line"><span class="lineno">19719</span>    <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;font();</div>
+<div class="line"><span class="lineno">19720</span>  }</div>
+<div class="line"><span class="lineno">19721</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(QMargins(2, 2, 2, 2));</div>
+<div class="line"><span class="lineno">19722</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a453c24723b76fdcae405a8a7b0d02614"><div class="ttname"><a href="#a453c24723b76fdcae405a8a7b0d02614">QCPTextElement::text</a></div><div class="ttdeci">QString text() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05288">qcustomplot.h:5288</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2684e65def4a5daf80be9f5f149ca9b2" name="a2684e65def4a5daf80be9f5f149ca9b2"></a>
@@ -457,6 +511,29 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a new <a class="el" href="class_q_c_p_text_element.html" title="A layout element displaying a text.">QCPTextElement</a> instance and sets default values.</p>
 <p>The initial text is set to <em>text</em> with <em>pointSize</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19730">19730</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19730</span>                                                                                             :</div>
+<div class="line"><span class="lineno">19731</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a2c25c7bf27eaa1fad66807af855d8d81">QCPLayoutElement</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>),</div>
+<div class="line"><span class="lineno">19732</span>  <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>(<a class="code hl_function" href="#a453c24723b76fdcae405a8a7b0d02614">text</a>),</div>
+<div class="line"><span class="lineno">19733</span>  <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>(Qt::AlignCenter),</div>
+<div class="line"><span class="lineno">19734</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>(QFont(QLatin1String(<span class="stringliteral">&quot;sans serif&quot;</span>), <span class="keywordtype">int</span>(pointSize))), <span class="comment">// will be taken from parentPlot if available, see below</span></div>
+<div class="line"><span class="lineno">19735</span>  <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>(Qt::black),</div>
+<div class="line"><span class="lineno">19736</span>  <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>(QFont(QLatin1String(<span class="stringliteral">&quot;sans serif&quot;</span>), <span class="keywordtype">int</span>(pointSize))), <span class="comment">// will be taken from parentPlot if available, see below</span></div>
+<div class="line"><span class="lineno">19737</span>  <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a>(Qt::blue),</div>
+<div class="line"><span class="lineno">19738</span>  <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">19739</span>  <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">19740</span>{</div>
+<div class="line"><span class="lineno">19741</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>.setPointSizeF(pointSize); <span class="comment">// set here again as floating point, because constructor above only takes integer</span></div>
+<div class="line"><span class="lineno">19742</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>)</div>
+<div class="line"><span class="lineno">19743</span>  {</div>
+<div class="line"><span class="lineno">19744</span>    <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;font();</div>
+<div class="line"><span class="lineno">19745</span>    <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>.setPointSizeF(pointSize);</div>
+<div class="line"><span class="lineno">19746</span>    <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;font();</div>
+<div class="line"><span class="lineno">19747</span>    <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>.setPointSizeF(pointSize);</div>
+<div class="line"><span class="lineno">19748</span>  }</div>
+<div class="line"><span class="lineno">19749</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(QMargins(2, 2, 2, 2));</div>
+<div class="line"><span class="lineno">19750</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adb4bcd3743dbfabfedee4fe9c2ee93da" name="adb4bcd3743dbfabfedee4fe9c2ee93da"></a>
@@ -491,6 +568,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a new <a class="el" href="class_q_c_p_text_element.html" title="A layout element displaying a text.">QCPTextElement</a> instance and sets default values.</p>
 <p>The initial text is set to <em>text</em> with <em>pointSize</em> and the specified <em>fontFamily</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19758">19758</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19758</span>                                                                                                                        :</div>
+<div class="line"><span class="lineno">19759</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a2c25c7bf27eaa1fad66807af855d8d81">QCPLayoutElement</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>),</div>
+<div class="line"><span class="lineno">19760</span>  <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>(<a class="code hl_function" href="#a453c24723b76fdcae405a8a7b0d02614">text</a>),</div>
+<div class="line"><span class="lineno">19761</span>  <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>(Qt::AlignCenter),</div>
+<div class="line"><span class="lineno">19762</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>(QFont(fontFamily, <span class="keywordtype">int</span>(pointSize))),</div>
+<div class="line"><span class="lineno">19763</span>  <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>(Qt::black),</div>
+<div class="line"><span class="lineno">19764</span>  <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>(QFont(fontFamily, <span class="keywordtype">int</span>(pointSize))),</div>
+<div class="line"><span class="lineno">19765</span>  <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a>(Qt::blue),</div>
+<div class="line"><span class="lineno">19766</span>  <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">19767</span>  <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">19768</span>{</div>
+<div class="line"><span class="lineno">19769</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>.setPointSizeF(pointSize); <span class="comment">// set here again as floating point, because constructor above only takes integer</span></div>
+<div class="line"><span class="lineno">19770</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(QMargins(2, 2, 2, 2));</div>
+<div class="line"><span class="lineno">19771</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a00b75787b77b39bbd083813c2a7b2520" name="a00b75787b77b39bbd083813c2a7b2520"></a>
@@ -520,6 +613,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a new <a class="el" href="class_q_c_p_text_element.html" title="A layout element displaying a text.">QCPTextElement</a> instance and sets default values.</p>
 <p>The initial text is set to <em>text</em> with the specified <em>font</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19779">19779</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19779</span>                                                                                              :</div>
+<div class="line"><span class="lineno">19780</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a2c25c7bf27eaa1fad66807af855d8d81">QCPLayoutElement</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>),</div>
+<div class="line"><span class="lineno">19781</span>  <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>(<a class="code hl_function" href="#a453c24723b76fdcae405a8a7b0d02614">text</a>),</div>
+<div class="line"><span class="lineno">19782</span>  <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>(Qt::AlignCenter),</div>
+<div class="line"><span class="lineno">19783</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>(<a class="code hl_function" href="#a9247189a1c2b2bf5604645a7396b2ddc">font</a>),</div>
+<div class="line"><span class="lineno">19784</span>  <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>(Qt::black),</div>
+<div class="line"><span class="lineno">19785</span>  <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>(<a class="code hl_function" href="#a9247189a1c2b2bf5604645a7396b2ddc">font</a>),</div>
+<div class="line"><span class="lineno">19786</span>  <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a>(Qt::blue),</div>
+<div class="line"><span class="lineno">19787</span>  <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">19788</span>  <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">19789</span>{</div>
+<div class="line"><span class="lineno">19790</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(QMargins(2, 2, 2, 2));</div>
+<div class="line"><span class="lineno">19791</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a9247189a1c2b2bf5604645a7396b2ddc"><div class="ttname"><a href="#a9247189a1c2b2bf5604645a7396b2ddc">QCPTextElement::font</a></div><div class="ttdeci">QFont font() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05290">qcustomplot.h:5290</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -548,6 +657,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a0a8f18141bcf46cf40ad4c13324ff346">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19900">19900</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19901</span>{</div>
+<div class="line"><span class="lineno">19902</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca51dfdad36b2907277ae1221b09936441">QCP::aeOther</a>);</div>
+<div class="line"><span class="lineno">19903</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3ab45a4c76a3333ce42eb217a81733ec"><div class="ttname"><a href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">QCPLayerable::mAntialiased</a></div><div class="ttdeci">bool mAntialiased</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00793">qcustomplot.h:793</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acb663e375d2d36dc5c55021ee5a2119b"><div class="ttname"><a href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">QCPLayerable::applyAntialiasingHint</a></div><div class="ttdeci">void applyAntialiasingHint(QCPPainter *painter, bool localAntialiased, QCP::AntialiasedElement overrideElement) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01599">qcustomplot.cpp:1599</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca51dfdad36b2907277ae1221b09936441"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca51dfdad36b2907277ae1221b09936441">QCP::aeOther</a></div><div class="ttdeci">@ aeOther</div><div class="ttdoc">0x8000 Other elements that don't fit into any of the existing categories</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00255">qcustomplot.h:254</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad2246a0e701c0655623f048737298334" name="ad2246a0e701c0655623f048737298334"></a>
@@ -602,6 +719,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#ae546370644a5551c76af739afc008bee">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19948">19948</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19949</span>{</div>
+<div class="line"><span class="lineno">19950</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>)</div>
+<div class="line"><span class="lineno">19951</span>  {</div>
+<div class="line"><span class="lineno">19952</span>    <span class="keywordtype">bool</span> selBefore = <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>;</div>
+<div class="line"><span class="lineno">19953</span>    <a class="code hl_function" href="#aba5521f9fb22a5f3d2f09ab37d4a1751">setSelected</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">19954</span>    <span class="keywordflow">if</span> (selectionStateChanged)</div>
+<div class="line"><span class="lineno">19955</span>      *selectionStateChanged = <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> != selBefore;</div>
+<div class="line"><span class="lineno">19956</span>  }</div>
+<div class="line"><span class="lineno">19957</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_aba5521f9fb22a5f3d2f09ab37d4a1751"><div class="ttname"><a href="#aba5521f9fb22a5f3d2f09ab37d4a1751">QCPTextElement::setSelected</a></div><div class="ttdeci">Q_SLOT void setSelected(bool selected)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19890">qcustomplot.cpp:19890</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c6fd27ae8a7c3a02df7a6bbd3509e40" name="a9c6fd27ae8a7c3a02df7a6bbd3509e40"></a>
@@ -656,6 +785,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#ad1c597b1d608cfdd86e7b76819a94cfb">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19906">19906</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19907</span>{</div>
+<div class="line"><span class="lineno">19908</span>  painter-&gt;setFont(<a class="code hl_function" href="#ae236bd398e52939f2de2b70e5e2ba611">mainFont</a>());</div>
+<div class="line"><span class="lineno">19909</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(QPen(<a class="code hl_function" href="#a63510789e31db34362de97d78e9e7866">mainTextColor</a>()));</div>
+<div class="line"><span class="lineno">19910</span>  painter-&gt;drawText(<a class="code hl_variable" href="class_q_c_p_layout_element.html#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a>, <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>, <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>, &amp;<a class="code hl_variable" href="#a226bb09aae41b1d106f6b00d52def0cb">mTextBoundingRect</a>);</div>
+<div class="line"><span class="lineno">19911</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ad8896f05550389f7b9e92c9e6cdf6e01"><div class="ttname"><a href="class_q_c_p_layout_element.html#ad8896f05550389f7b9e92c9e6cdf6e01">QCPLayoutElement::mRect</a></div><div class="ttdeci">QRect mRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01317">qcustomplot.h:1317</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a226bb09aae41b1d106f6b00d52def0cb"><div class="ttname"><a href="#a226bb09aae41b1d106f6b00d52def0cb">QCPTextElement::mTextBoundingRect</a></div><div class="ttdeci">QRect mTextBoundingRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05327">qcustomplot.h:5327</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a63510789e31db34362de97d78e9e7866"><div class="ttname"><a href="#a63510789e31db34362de97d78e9e7866">QCPTextElement::mainTextColor</a></div><div class="ttdeci">QColor mainTextColor() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l20031">qcustomplot.cpp:20031</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_ae236bd398e52939f2de2b70e5e2ba611"><div class="ttname"><a href="#ae236bd398e52939f2de2b70e5e2ba611">QCPTextElement::mainFont</a></div><div class="ttdeci">QFont mainFont() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l20021">qcustomplot.cpp:20021</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9247189a1c2b2bf5604645a7396b2ddc" name="a9247189a1c2b2bf5604645a7396b2ddc"></a>
@@ -681,6 +822,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05290">5290</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5290</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae236bd398e52939f2de2b70e5e2ba611" name="ae236bd398e52939f2de2b70e5e2ba611"></a>
@@ -706,6 +850,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20021">20021</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20022</span>{</div>
+<div class="line"><span class="lineno">20023</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> ? <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a> : <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>;</div>
+<div class="line"><span class="lineno">20024</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a63510789e31db34362de97d78e9e7866" name="a63510789e31db34362de97d78e9e7866"></a>
@@ -731,6 +880,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20031">20031</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20032</span>{</div>
+<div class="line"><span class="lineno">20033</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> ? <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a> : <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>;</div>
+<div class="line"><span class="lineno">20034</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae82475b50c10a5b3314d996d50ae536b" name="ae82475b50c10a5b3314d996d50ae536b"></a>
@@ -762,6 +916,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#ad96efb977a26e360e8a64a4c1e56456d">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19924">19924</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19925</span>{</div>
+<div class="line"><span class="lineno">19926</span>  QFontMetrics metrics(<a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>);</div>
+<div class="line"><span class="lineno">19927</span>  QSize result(metrics.boundingRect(0, 0, 0, 0, Qt::TextDontClip, <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>).size());</div>
+<div class="line"><span class="lineno">19928</span>  result.setWidth(QWIDGETSIZE_MAX);</div>
+<div class="line"><span class="lineno">19929</span>  result.rheight() += <a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.top()+<a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.bottom();</div>
+<div class="line"><span class="lineno">19930</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">19931</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ac2a32b99ee527ca5dfff9da03628fe94"><div class="ttname"><a href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">QCPLayoutElement::mMargins</a></div><div class="ttdeci">QMargins mMargins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01318">qcustomplot.h:1318</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47b8541f55ff520c557e0f27461f109e" name="a47b8541f55ff520c557e0f27461f109e"></a>
@@ -793,6 +957,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a46789036c4fcb190fa374f91321d7c09">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19914">19914</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19915</span>{</div>
+<div class="line"><span class="lineno">19916</span>  QFontMetrics metrics(<a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a>);</div>
+<div class="line"><span class="lineno">19917</span>  QSize result(metrics.boundingRect(0, 0, 0, 0, Qt::TextDontClip, <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>).size());</div>
+<div class="line"><span class="lineno">19918</span>  result.rwidth() += <a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.left()+<a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.right();</div>
+<div class="line"><span class="lineno">19919</span>  result.rheight() += <a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.top()+<a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.bottom();</div>
+<div class="line"><span class="lineno">19920</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">19921</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2272ff775ab385f612e9fd39773de7c0" name="a2272ff775ab385f612e9fd39773de7c0"></a>
@@ -826,6 +999,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#a4171e2e823aca242dd0279f00ed2de81">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20010">20010</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20011</span>{</div>
+<div class="line"><span class="lineno">20012</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">20013</span>  emit <a class="code hl_signal" href="#a9c6fd27ae8a7c3a02df7a6bbd3509e40">doubleClicked</a>(event);</div>
+<div class="line"><span class="lineno">20014</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a9c6fd27ae8a7c3a02df7a6bbd3509e40"><div class="ttname"><a href="#a9c6fd27ae8a7c3a02df7a6bbd3509e40">QCPTextElement::doubleClicked</a></div><div class="ttdeci">void doubleClicked(QMouseEvent *event)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad7b2c98355e3d2f912574b74fcee0574" name="ad7b2c98355e3d2f912574b74fcee0574"></a>
@@ -859,6 +1039,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#af6567604818db90f4fd52822f8bc8376">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19987">19987</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19988</span>{</div>
+<div class="line"><span class="lineno">19989</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">19990</span>  <span class="keyword">event</span>-&gt;accept();</div>
+<div class="line"><span class="lineno">19991</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfcbaf9b1da18745e72726aafb39c855" name="acfcbaf9b1da18745e72726aafb39c855"></a>
@@ -892,6 +1078,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#aa0d79b005686f668622bbe66ac03ba2c">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19999">19999</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20000</span>{</div>
+<div class="line"><span class="lineno">20001</span>  <span class="keywordflow">if</span> ((QPointF(event-&gt;pos())-startPos).manhattanLength() &lt;= 3)</div>
+<div class="line"><span class="lineno">20002</span>    emit <a class="code hl_signal" href="#ad2246a0e701c0655623f048737298334">clicked</a>(event);</div>
+<div class="line"><span class="lineno">20003</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_ad2246a0e701c0655623f048737298334"><div class="ttname"><a href="#ad2246a0e701c0655623f048737298334">QCPTextElement::clicked</a></div><div class="ttdeci">void clicked(QMouseEvent *event)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96e2a712fca40324a8489f75833b4096" name="a96e2a712fca40324a8489f75833b4096"></a>
@@ -917,6 +1110,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05294">5294</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5294</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac4567260b52d02bfbad63357d13986c5" name="ac4567260b52d02bfbad63357d13986c5"></a>
@@ -967,6 +1163,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05295">5295</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5295</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7119d960bdf57df74f9bcc748d2a0b43" name="a7119d960bdf57df74f9bcc748d2a0b43"></a>
@@ -992,6 +1191,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05292">5292</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5292</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a98616fa5c33f1eaee0428191ece39686" name="a98616fa5c33f1eaee0428191ece39686"></a>
@@ -1017,6 +1219,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05293">5293</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5293</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d696ea82fa7bf743e01858039c03525" name="a8d696ea82fa7bf743e01858039c03525"></a>
@@ -1058,6 +1263,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#a7498c2d0d081cf7cad0fb3bb93aa0e91">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19934">19934</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19935</span>{</div>
+<div class="line"><span class="lineno">19936</span>  Q_UNUSED(event)</div>
+<div class="line"><span class="lineno">19937</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">19938</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>)</div>
+<div class="line"><span class="lineno">19939</span>  {</div>
+<div class="line"><span class="lineno">19940</span>    <span class="keywordtype">bool</span> selBefore = <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>;</div>
+<div class="line"><span class="lineno">19941</span>    <a class="code hl_function" href="#aba5521f9fb22a5f3d2f09ab37d4a1751">setSelected</a>(additive ? !<a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> : true);</div>
+<div class="line"><span class="lineno">19942</span>    <span class="keywordflow">if</span> (selectionStateChanged)</div>
+<div class="line"><span class="lineno">19943</span>      *selectionStateChanged = <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> != selBefore;</div>
+<div class="line"><span class="lineno">19944</span>  }</div>
+<div class="line"><span class="lineno">19945</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a49f45b87ee9c1fe866c2cdd12af17a9a" name="a49f45b87ee9c1fe866c2cdd12af17a9a"></a>
@@ -1124,6 +1342,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a62d60f1b0ee9bb23e38811d71586d79c">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19969">19969</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19970</span>{</div>
+<div class="line"><span class="lineno">19971</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">19972</span>  <span class="keywordflow">if</span> (onlySelectable &amp;&amp; !<a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>)</div>
+<div class="line"><span class="lineno">19973</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">19974</span>  </div>
+<div class="line"><span class="lineno">19975</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a226bb09aae41b1d106f6b00d52def0cb">mTextBoundingRect</a>.contains(pos.toPoint()))</div>
+<div class="line"><span class="lineno">19976</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99;</div>
+<div class="line"><span class="lineno">19977</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">19978</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">19979</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a5441d11013afeaf4b8f2ea06e8624a25"><div class="ttname"><a href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">QCustomPlot::selectionTolerance</a></div><div class="ttdeci">int selectionTolerance() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03842">qcustomplot.h:3842</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a09b3241769528fa87cb4bf35c97defad" name="a09b3241769528fa87cb4bf35c97defad"></a>
@@ -1143,6 +1375,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the <em>font</em> of the text.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4f3b8361c3ffb3f84346954929ce93ba">setTextColor</a>, <a class="el" href="#a0a2397a3c4ede519e16ab3e991904065">setSelectedFont</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19833">19833</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19834</span>{</div>
+<div class="line"><span class="lineno">19835</span>  <a class="code hl_variable" href="#a2fef52fa1ec006799102b2956133ba29">mFont</a> = <a class="code hl_function" href="#a9247189a1c2b2bf5604645a7396b2ddc">font</a>;</div>
+<div class="line"><span class="lineno">19836</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3c5f9b1897a036b16495ed3fb8371c55" name="a3c5f9b1897a036b16495ed3fb8371c55"></a>
@@ -1162,6 +1399,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets whether the user may select this text element.</p>
 <p>Note that even when <em>selectable</em> is set to <code>false</code>, the selection state may be changed programmatically via <a class="el" href="#aba5521f9fb22a5f3d2f09ab37d4a1751">setSelected</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19874">19874</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19875</span>{</div>
+<div class="line"><span class="lineno">19876</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a> != <a class="code hl_function" href="#a96e2a712fca40324a8489f75833b4096">selectable</a>)</div>
+<div class="line"><span class="lineno">19877</span>  {</div>
+<div class="line"><span class="lineno">19878</span>    <a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a> = <a class="code hl_function" href="#a96e2a712fca40324a8489f75833b4096">selectable</a>;</div>
+<div class="line"><span class="lineno">19879</span>    emit <a class="code hl_signal" href="#ac4567260b52d02bfbad63357d13986c5">selectableChanged</a>(<a class="code hl_variable" href="#a112e8f9898991fe54f94fcb7effddc2f">mSelectable</a>);</div>
+<div class="line"><span class="lineno">19880</span>  }</div>
+<div class="line"><span class="lineno">19881</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a96e2a712fca40324a8489f75833b4096"><div class="ttname"><a href="#a96e2a712fca40324a8489f75833b4096">QCPTextElement::selectable</a></div><div class="ttdeci">bool selectable() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05294">qcustomplot.h:5294</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_ac4567260b52d02bfbad63357d13986c5"><div class="ttname"><a href="#ac4567260b52d02bfbad63357d13986c5">QCPTextElement::selectableChanged</a></div><div class="ttdeci">void selectableChanged(bool selectable)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aba5521f9fb22a5f3d2f09ab37d4a1751" name="aba5521f9fb22a5f3d2f09ab37d4a1751"></a>
@@ -1181,6 +1429,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the selection state of this text element to <em>selected</em>. If the selection has changed, <a class="el" href="#a49f45b87ee9c1fe866c2cdd12af17a9a">selectionChanged</a> is emitted.</p>
 <p>Note that this function can change the selection state independently of the current <a class="el" href="#a3c5f9b1897a036b16495ed3fb8371c55">setSelectable</a> state. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19890">19890</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19891</span>{</div>
+<div class="line"><span class="lineno">19892</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> != <a class="code hl_function" href="#a135d1ad0aa97a245b4247c3292ff551c">selected</a>)</div>
+<div class="line"><span class="lineno">19893</span>  {</div>
+<div class="line"><span class="lineno">19894</span>    <a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a> = <a class="code hl_function" href="#a135d1ad0aa97a245b4247c3292ff551c">selected</a>;</div>
+<div class="line"><span class="lineno">19895</span>    emit <a class="code hl_signal" href="#a49f45b87ee9c1fe866c2cdd12af17a9a">selectionChanged</a>(<a class="code hl_variable" href="#a7a46eb67459a3c8c80d19aa28b8ae791">mSelected</a>);</div>
+<div class="line"><span class="lineno">19896</span>  }</div>
+<div class="line"><span class="lineno">19897</span>}</div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a135d1ad0aa97a245b4247c3292ff551c"><div class="ttname"><a href="#a135d1ad0aa97a245b4247c3292ff551c">QCPTextElement::selected</a></div><div class="ttdeci">bool selected() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05295">qcustomplot.h:5295</a></div></div>
+<div class="ttc" id="aclass_q_c_p_text_element_html_a49f45b87ee9c1fe866c2cdd12af17a9a"><div class="ttname"><a href="#a49f45b87ee9c1fe866c2cdd12af17a9a">QCPTextElement::selectionChanged</a></div><div class="ttdeci">void selectionChanged(bool selected)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0a2397a3c4ede519e16ab3e991904065" name="a0a2397a3c4ede519e16ab3e991904065"></a>
@@ -1200,6 +1459,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the <em>font</em> of the text that will be used if the text element is selected (<a class="el" href="#aba5521f9fb22a5f3d2f09ab37d4a1751">setSelected</a>).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a09b3241769528fa87cb4bf35c97defad">setFont</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19853">19853</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19854</span>{</div>
+<div class="line"><span class="lineno">19855</span>  <a class="code hl_variable" href="#a5d242628c9c4beb361b82676c4851c38">mSelectedFont</a> = <a class="code hl_function" href="#a9247189a1c2b2bf5604645a7396b2ddc">font</a>;</div>
+<div class="line"><span class="lineno">19856</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abaec200cae70a0eade53583defc0476d" name="abaec200cae70a0eade53583defc0476d"></a>
@@ -1219,6 +1483,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the <em>color</em> of the text that will be used if the text element is selected (<a class="el" href="#aba5521f9fb22a5f3d2f09ab37d4a1751">setSelected</a>).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4f3b8361c3ffb3f84346954929ce93ba">setTextColor</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19863">19863</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19864</span>{</div>
+<div class="line"><span class="lineno">19865</span>  <a class="code hl_variable" href="#ad523a852d47bc97b1af62a4d0dedf2ad">mSelectedTextColor</a> = color;</div>
+<div class="line"><span class="lineno">19866</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac44b81e69e719b879eb2feecb33557e2" name="ac44b81e69e719b879eb2feecb33557e2"></a>
@@ -1238,6 +1507,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the text that will be displayed to <em>text</em>. Multiple lines can be created by insertion of "\n".</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a09b3241769528fa87cb4bf35c97defad">setFont</a>, <a class="el" href="#a4f3b8361c3ffb3f84346954929ce93ba">setTextColor</a>, <a class="el" href="#ab908f437f552020888a3ad8cf8242605">setTextFlags</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19798">19798</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19799</span>{</div>
+<div class="line"><span class="lineno">19800</span>  <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a> = <a class="code hl_function" href="#a453c24723b76fdcae405a8a7b0d02614">text</a>;</div>
+<div class="line"><span class="lineno">19801</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4f3b8361c3ffb3f84346954929ce93ba" name="a4f3b8361c3ffb3f84346954929ce93ba"></a>
@@ -1257,6 +1531,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the <em>color</em> of the text.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a09b3241769528fa87cb4bf35c97defad">setFont</a>, <a class="el" href="#abaec200cae70a0eade53583defc0476d">setSelectedTextColor</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19843">19843</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19844</span>{</div>
+<div class="line"><span class="lineno">19845</span>  <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a> = color;</div>
+<div class="line"><span class="lineno">19846</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab908f437f552020888a3ad8cf8242605" name="ab908f437f552020888a3ad8cf8242605"></a>
@@ -1291,6 +1570,11 @@ Additional Inherited Members</h2></td></tr>
 <li>Qt::TextIncludeTrailingSpaces </li>
 </ul>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19823">19823</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19824</span>{</div>
+<div class="line"><span class="lineno">19825</span>  <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a> = flags;</div>
+<div class="line"><span class="lineno">19826</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a453c24723b76fdcae405a8a7b0d02614" name="a453c24723b76fdcae405a8a7b0d02614"></a>
@@ -1316,6 +1600,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05288">5288</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5288</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2ef3d8f044b2a0520c90561b3b533028">mText</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4b906c81abb94517500dbdb2fe9c22b9" name="a4b906c81abb94517500dbdb2fe9c22b9"></a>
@@ -1341,6 +1628,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05291">5291</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5291</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3685263a99eacd98b180d29adc8e8830">mTextColor</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1937ed3b7454d7e815f6027895a7d480" name="a1937ed3b7454d7e815f6027895a7d480"></a>
@@ -1366,6 +1656,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05289">5289</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5289</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a221eb95ecda1056eb79d56f1230f45d5">mTextFlags</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -1389,6 +1682,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05323">5323</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a112e8f9898991fe54f94fcb7effddc2f" name="a112e8f9898991fe54f94fcb7effddc2f"></a>
@@ -1410,6 +1705,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05328">5328</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1433,6 +1730,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05328">5328</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a5d242628c9c4beb361b82676c4851c38" name="a5d242628c9c4beb361b82676c4851c38"></a>
@@ -1454,6 +1753,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05325">5325</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1477,6 +1778,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05326">5326</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a2ef3d8f044b2a0520c90561b3b533028" name="a2ef3d8f044b2a0520c90561b3b533028"></a>
@@ -1498,6 +1801,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05321">5321</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1521,6 +1826,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05327">5327</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a3685263a99eacd98b180d29adc8e8830" name="a3685263a99eacd98b180d29adc8e8830"></a>
@@ -1542,6 +1849,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05324">5324</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1565,11 +1874,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05322">5322</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

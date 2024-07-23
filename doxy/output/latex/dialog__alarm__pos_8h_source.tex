@@ -1,0 +1,58 @@
+\doxysection{dialog\+\_\+alarm\+\_\+pos.\+h}
+\hypertarget{dialog__alarm__pos_8h_source}{}\label{dialog__alarm__pos_8h_source}\index{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_alarm\_pos.h@{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_alarm\_pos.h}}
+\mbox{\hyperlink{dialog__alarm__pos_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ DIALOG\_ALARM\_POS\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DIALOG\_ALARM\_POS\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__alarm__pos}{Dialog\_alarm\_pos}};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__alarm__pos}{Dialog\_alarm\_pos}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_dialog__alarm__pos_ab8fc5b296441e8b82270224a44653ffd}{Dialog\_alarm\_pos}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_dialog__alarm__pos_a39f287014a5ed9227245022149972540}{\string~Dialog\_alarm\_pos}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__alarm__pos_a092e30f577d6a92d44231d8392f4a0d0}{load\_data\_alarm}}(QList<float>);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ QList<float>\ \mbox{\hyperlink{class_dialog__alarm__pos_a856ca0d4fcca247b0c74b76addbe5235}{alarm\_data}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_ac9dd56334ef30e089ae32b9b6ae12be8}{alarm\_on}}=0;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_abec455d7fa946126d658a037a3a538d0}{alarm\_pos\_on}}=0;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_ab07149d59ca1d268e0020e8e87eceff7}{alarm\_activation}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_a5a50f64d2c3220c7cdbfc5140a713a23}{alarm\_x\_enabled}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_ac68b129efc86d0d00198275ee8d5bf86}{alarm\_y\_enabled}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_aa5db55f4a8d63286c7ac66c35c76947e}{alarm\_z\_enabled}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_a65000ef58de1a0fdec3b20c3ab71b8ab}{alarm\_x\_ena}}=0;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_a11bac49d81575a0417cf0df2813b4bdb}{alarm\_y\_ena}}=0;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__pos_a9f2cf3e9e3a85487d56d0655b38451ea}{alarm\_z\_ena}}=0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_2\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_5\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_6\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_7\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_8\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_2\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_3\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_4\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ Ui::Dialog\_alarm\_pos\ *ui;}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIALOG\_ALARM\_POS\_H}}
+
+\end{DoxyCode}

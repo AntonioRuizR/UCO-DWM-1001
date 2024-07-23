@@ -239,6 +239,8 @@ Custom shapes and pixmaps</h1>
 <p><a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> supports drawing custom shapes and arbitrary pixmaps as scatter points.</p>
 <p>For custom shapes, you can provide a QPainterPath with the desired shape to the <a class="el" href="#a96a3e949f90b2afe5677ca9412a12a1e">setCustomPath</a> function or call the constructor that takes a painter path. The scatter shape will automatically be set to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>.</p>
 <p>For pixmaps, you call <a class="el" href="#a5fb611d46acfac520d7b89a1c71d9246">setPixmap</a> with the desired QPixmap. Alternatively you can use the constructor that takes a QPixmap. The scatter shape will automatically be set to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>. Note that <a class="el" href="#aaefdd031052892c4136129db68596e0f">setSize</a> does not influence the appearance of the pixmap. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02497">2497</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a8974f6a20f8f6eea7781f0e6af9deb46" name="a8974f6a20f8f6eea7781f0e6af9deb46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46">&#9670;&#160;</a></span>ScatterProperty</h2>
@@ -268,6 +270,21 @@ Custom shapes and pixmaps</h1>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02509">2509</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2509</span>                       { <a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46a5891be10bea382fad6c20f7737a2dd90">spNone</a>  = 0x00  </div>
+<div class="line"><span class="lineno"> 2510</span>                         ,<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46aa04d012e7c03e455db2b68fdd55c2a04">spPen</a>   = 0x01  </div>
+<div class="line"><span class="lineno"> 2511</span>                         ,<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46af0499b1fc04de2dcc7e47ff0ef75c904">spBrush</a> = 0x02  </div>
+<div class="line"><span class="lineno"> 2512</span>                         ,<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46a553ae95798ace9a328c7cd62045260b0">spSize</a>  = 0x04  </div>
+<div class="line"><span class="lineno"> 2513</span>                         ,<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46a19c224563adb42c55fb8b7ae6904411b">spShape</a> = 0x08  </div>
+<div class="line"><span class="lineno"> 2514</span>                         ,<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46af62509c0409467f387234274762e6f69">spAll</a>   = 0xFF  </div>
+<div class="line"><span class="lineno"> 2515</span>                       };</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a8974f6a20f8f6eea7781f0e6af9deb46a19c224563adb42c55fb8b7ae6904411b"><div class="ttname"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46a19c224563adb42c55fb8b7ae6904411b">QCPScatterStyle::spShape</a></div><div class="ttdeci">@ spShape</div><div class="ttdoc">0x08 The shape property, see setShape</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02514">qcustomplot.h:2513</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a8974f6a20f8f6eea7781f0e6af9deb46a553ae95798ace9a328c7cd62045260b0"><div class="ttname"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46a553ae95798ace9a328c7cd62045260b0">QCPScatterStyle::spSize</a></div><div class="ttdeci">@ spSize</div><div class="ttdoc">0x04 The size property, see setSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02513">qcustomplot.h:2512</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a8974f6a20f8f6eea7781f0e6af9deb46a5891be10bea382fad6c20f7737a2dd90"><div class="ttname"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46a5891be10bea382fad6c20f7737a2dd90">QCPScatterStyle::spNone</a></div><div class="ttdeci">@ spNone</div><div class="ttdoc">0x00 None</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02510">qcustomplot.h:2509</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a8974f6a20f8f6eea7781f0e6af9deb46aa04d012e7c03e455db2b68fdd55c2a04"><div class="ttname"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46aa04d012e7c03e455db2b68fdd55c2a04">QCPScatterStyle::spPen</a></div><div class="ttdeci">@ spPen</div><div class="ttdoc">0x01 The pen property, see setPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02511">qcustomplot.h:2510</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a8974f6a20f8f6eea7781f0e6af9deb46af0499b1fc04de2dcc7e47ff0ef75c904"><div class="ttname"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46af0499b1fc04de2dcc7e47ff0ef75c904">QCPScatterStyle::spBrush</a></div><div class="ttdeci">@ spBrush</div><div class="ttdoc">0x02 The brush property, see setBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02512">qcustomplot.h:2511</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a8974f6a20f8f6eea7781f0e6af9deb46af62509c0409467f387234274762e6f69"><div class="ttname"><a href="#a8974f6a20f8f6eea7781f0e6af9deb46af62509c0409467f387234274762e6f69">QCPScatterStyle::spAll</a></div><div class="ttdeci">@ spAll</div><div class="ttdoc">0xFF All properties</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02515">qcustomplot.h:2514</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adb31525af6b680e6f1b7472e43859349" name="adb31525af6b680e6f1b7472e43859349"></a>
@@ -322,6 +339,45 @@ Custom shapes and pixmaps</h1>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02527">2527</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2527</span>                    { <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022">ssNone</a>       </div>
+<div class="line"><span class="lineno"> 2528</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a06e15a735b79093a1d999c0374fa3aa1">ssDot</a>       </div>
+<div class="line"><span class="lineno"> 2529</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a9eacd60f059dc3ef71bf249f515a6fe4">ssCross</a>     </div>
+<div class="line"><span class="lineno"> 2530</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a2d7f1d3c1a148b9d9d17f2fd9cae5eb7">ssPlus</a>      </div>
+<div class="line"><span class="lineno"> 2531</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779">ssCircle</a>    </div>
+<div class="line"><span class="lineno"> 2532</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a281fe1434696dcbab3aa6b9ccfbb09e9">ssDisc</a>      </div>
+<div class="line"><span class="lineno"> 2533</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a279e48703ddc9f1cf4a61d3e2817ab3c">ssSquare</a>    </div>
+<div class="line"><span class="lineno"> 2534</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a4fc5929df1b2dad0a3cb2ef2c8b6e633">ssDiamond</a>   </div>
+<div class="line"><span class="lineno"> 2535</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a6047a2d64e41f1d6ce54445d595d442f">ssStar</a>      </div>
+<div class="line"><span class="lineno"> 2536</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a74a8d4eff1d97b57c53a60d0003453c3">ssTriangle</a>  </div>
+<div class="line"><span class="lineno"> 2537</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a6156274d21d8b4115197567d3ea2d9a8">ssTriangleInverted</a> </div>
+<div class="line"><span class="lineno"> 2538</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a7081310936c200c6c78e34c172f72d07">ssCrossSquare</a>      </div>
+<div class="line"><span class="lineno"> 2539</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a5aa8e9db545e5404482fec774768ee25">ssPlusSquare</a>       </div>
+<div class="line"><span class="lineno"> 2540</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a524613ba5d1c4eaa1541d74cf339d283">ssCrossCircle</a>      </div>
+<div class="line"><span class="lineno"> 2541</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a6fa151d01f1694c9ff9922da686dc535">ssPlusCircle</a>       </div>
+<div class="line"><span class="lineno"> 2542</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349ada3b2988ece38c121922a4b5007eb08d">ssPeace</a>     </div>
+<div class="line"><span class="lineno"> 2543</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>    </div>
+<div class="line"><span class="lineno"> 2544</span>                      ,<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>    </div>
+<div class="line"><span class="lineno"> 2545</span>                    };</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a06e15a735b79093a1d999c0374fa3aa1"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a06e15a735b79093a1d999c0374fa3aa1">QCPScatterStyle::ssDot</a></div><div class="ttdeci">@ ssDot</div><div class="ttdoc">\enumimage{ssDot.png} a single pixel (use ssDisc or ssCircle if you want a round shape with a certain...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02529">qcustomplot.h:2528</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">QCPScatterStyle::ssCustom</a></div><div class="ttdeci">@ ssCustom</div><div class="ttdoc">custom painter operations are performed per scatter (As QPainterPath, see setCustomPath)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02545">qcustomplot.h:2544</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a279e48703ddc9f1cf4a61d3e2817ab3c"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a279e48703ddc9f1cf4a61d3e2817ab3c">QCPScatterStyle::ssSquare</a></div><div class="ttdeci">@ ssSquare</div><div class="ttdoc">\enumimage{ssSquare.png} a square</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02534">qcustomplot.h:2533</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a281fe1434696dcbab3aa6b9ccfbb09e9"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a281fe1434696dcbab3aa6b9ccfbb09e9">QCPScatterStyle::ssDisc</a></div><div class="ttdeci">@ ssDisc</div><div class="ttdoc">\enumimage{ssDisc.png} a circle which is filled with the pen's color (not the brush as with ssCircle)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02533">qcustomplot.h:2532</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a2d7f1d3c1a148b9d9d17f2fd9cae5eb7"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a2d7f1d3c1a148b9d9d17f2fd9cae5eb7">QCPScatterStyle::ssPlus</a></div><div class="ttdeci">@ ssPlus</div><div class="ttdoc">\enumimage{ssPlus.png} a plus</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02531">qcustomplot.h:2530</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a4fc5929df1b2dad0a3cb2ef2c8b6e633"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a4fc5929df1b2dad0a3cb2ef2c8b6e633">QCPScatterStyle::ssDiamond</a></div><div class="ttdeci">@ ssDiamond</div><div class="ttdoc">\enumimage{ssDiamond.png} a diamond</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02535">qcustomplot.h:2534</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a524613ba5d1c4eaa1541d74cf339d283"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a524613ba5d1c4eaa1541d74cf339d283">QCPScatterStyle::ssCrossCircle</a></div><div class="ttdeci">@ ssCrossCircle</div><div class="ttdoc">\enumimage{ssCrossCircle.png} a circle with a cross inside</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02541">qcustomplot.h:2540</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a5aa8e9db545e5404482fec774768ee25"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a5aa8e9db545e5404482fec774768ee25">QCPScatterStyle::ssPlusSquare</a></div><div class="ttdeci">@ ssPlusSquare</div><div class="ttdoc">\enumimage{ssPlusSquare.png} a square with a plus inside</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02540">qcustomplot.h:2539</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a6047a2d64e41f1d6ce54445d595d442f"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a6047a2d64e41f1d6ce54445d595d442f">QCPScatterStyle::ssStar</a></div><div class="ttdeci">@ ssStar</div><div class="ttdoc">\enumimage{ssStar.png} a star with eight arms, i.e. a combination of cross and plus</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02536">qcustomplot.h:2535</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a6156274d21d8b4115197567d3ea2d9a8"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a6156274d21d8b4115197567d3ea2d9a8">QCPScatterStyle::ssTriangleInverted</a></div><div class="ttdeci">@ ssTriangleInverted</div><div class="ttdoc">\enumimage{ssTriangleInverted.png} an equilateral triangle, standing on corner</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02538">qcustomplot.h:2537</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a6fa151d01f1694c9ff9922da686dc535"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a6fa151d01f1694c9ff9922da686dc535">QCPScatterStyle::ssPlusCircle</a></div><div class="ttdeci">@ ssPlusCircle</div><div class="ttdoc">\enumimage{ssPlusCircle.png} a circle with a plus inside</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02542">qcustomplot.h:2541</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a7081310936c200c6c78e34c172f72d07"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a7081310936c200c6c78e34c172f72d07">QCPScatterStyle::ssCrossSquare</a></div><div class="ttdeci">@ ssCrossSquare</div><div class="ttdoc">\enumimage{ssCrossSquare.png} a square with a cross inside</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02539">qcustomplot.h:2538</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a74a8d4eff1d97b57c53a60d0003453c3"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a74a8d4eff1d97b57c53a60d0003453c3">QCPScatterStyle::ssTriangle</a></div><div class="ttdeci">@ ssTriangle</div><div class="ttdoc">\enumimage{ssTriangle.png} an equilateral triangle, standing on baseline</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02537">qcustomplot.h:2536</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779">QCPScatterStyle::ssCircle</a></div><div class="ttdeci">@ ssCircle</div><div class="ttdoc">\enumimage{ssCircle.png} a circle</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02532">qcustomplot.h:2531</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">QCPScatterStyle::ssPixmap</a></div><div class="ttdeci">@ ssPixmap</div><div class="ttdoc">a custom pixmap specified by setPixmap, centered on the data point coordinates</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02544">qcustomplot.h:2543</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349a9eacd60f059dc3ef71bf249f515a6fe4"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349a9eacd60f059dc3ef71bf249f515a6fe4">QCPScatterStyle::ssCross</a></div><div class="ttdeci">@ ssCross</div><div class="ttdoc">\enumimage{ssCross.png} a cross</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02530">qcustomplot.h:2529</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022">QCPScatterStyle::ssNone</a></div><div class="ttdeci">@ ssNone</div><div class="ttdoc">no scatter symbols are drawn (e.g. in QCPGraph, data only represented with lines)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02528">qcustomplot.h:2527</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adb31525af6b680e6f1b7472e43859349ada3b2988ece38c121922a4b5007eb08d"><div class="ttname"><a href="#adb31525af6b680e6f1b7472e43859349ada3b2988ece38c121922a4b5007eb08d">QCPScatterStyle::ssPeace</a></div><div class="ttdeci">@ ssPeace</div><div class="ttdoc">\enumimage{ssPeace.png} a circle, with one vertical and two downward diagonal lines</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02543">qcustomplot.h:2542</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -342,6 +398,21 @@ Custom shapes and pixmaps</h1>
 <p>Creates a new <a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> instance with size set to 6. No shape, pen or brush is defined.</p>
 <p>Since the pen is undefined (<a class="el" href="#a47077eb6450fe9a788f833e4ec1b1d5a">isPenDefined</a> returns false), the scatter color will be inherited from the plottable that uses this scatter style. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10640">10640</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10640</span>                                 :</div>
+<div class="line"><span class="lineno">10641</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(6),</div>
+<div class="line"><span class="lineno">10642</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022">ssNone</a>),</div>
+<div class="line"><span class="lineno">10643</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(Qt::NoPen),</div>
+<div class="line"><span class="lineno">10644</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(Qt::NoBrush),</div>
+<div class="line"><span class="lineno">10645</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">10646</span>{</div>
+<div class="line"><span class="lineno">10647</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17"><div class="ttname"><a href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">QCPScatterStyle::mPen</a></div><div class="ttdeci">QPen mPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02585">qcustomplot.h:2585</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a1b9c6ab10aebcaf236f1f45d1d6d64d1"><div class="ttname"><a href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">QCPScatterStyle::mBrush</a></div><div class="ttdeci">QBrush mBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02586">qcustomplot.h:2586</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a757da98671eb06b221979373ac2cec91"><div class="ttname"><a href="#a757da98671eb06b221979373ac2cec91">QCPScatterStyle::mSize</a></div><div class="ttdeci">double mSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02583">qcustomplot.h:2583</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a84ef5aa591ddba07b440f597e1669e78"><div class="ttname"><a href="#a84ef5aa591ddba07b440f597e1669e78">QCPScatterStyle::mPenDefined</a></div><div class="ttdeci">bool mPenDefined</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02591">qcustomplot.h:2591</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_af1b327f35f107ed108290187bbc8c7c6"><div class="ttname"><a href="#af1b327f35f107ed108290187bbc8c7c6">QCPScatterStyle::mShape</a></div><div class="ttdeci">ScatterShape mShape</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02584">qcustomplot.h:2584</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a003d92f74f4561eda111862eadd62f28" name="a003d92f74f4561eda111862eadd62f28"></a>
@@ -365,6 +436,18 @@ Custom shapes and pixmaps</h1>
 <p>Creates a new <a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> instance with shape set to <em>shape</em> and size to <em>size</em>. No pen or brush is defined.</p>
 <p>Since the pen is undefined (<a class="el" href="#a47077eb6450fe9a788f833e4ec1b1d5a">isPenDefined</a> returns false), the scatter color will be inherited from the plottable that uses this scatter style. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10656">10656</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10656</span>                                                                :</div>
+<div class="line"><span class="lineno">10657</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(<a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>),</div>
+<div class="line"><span class="lineno">10658</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>),</div>
+<div class="line"><span class="lineno">10659</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(Qt::NoPen),</div>
+<div class="line"><span class="lineno">10660</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(Qt::NoBrush),</div>
+<div class="line"><span class="lineno">10661</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">10662</span>{</div>
+<div class="line"><span class="lineno">10663</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a0e94526d9165d9f50e262102bdd71a47"><div class="ttname"><a href="#a0e94526d9165d9f50e262102bdd71a47">QCPScatterStyle::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02557">qcustomplot.h:2557</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_af04cad55bd7f58a96da4fc6bc46a0a1e"><div class="ttname"><a href="#af04cad55bd7f58a96da4fc6bc46a0a1e">QCPScatterStyle::shape</a></div><div class="ttdeci">ScatterShape shape() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02558">qcustomplot.h:2558</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afa059da858c864c7e05871dc602d7eab" name="afa059da858c864c7e05871dc602d7eab"></a>
@@ -392,6 +475,16 @@ Custom shapes and pixmaps</h1>
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> instance with shape set to <em>shape</em>, the pen color set to <em>color</em>, and size to <em>size</em>. No brush is defined, i.e. the scatter point will not be filled. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10669">10669</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10669</span>                                                                                     :</div>
+<div class="line"><span class="lineno">10670</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(<a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>),</div>
+<div class="line"><span class="lineno">10671</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>),</div>
+<div class="line"><span class="lineno">10672</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(QPen(color)),</div>
+<div class="line"><span class="lineno">10673</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(Qt::NoBrush),</div>
+<div class="line"><span class="lineno">10674</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">10675</span>{</div>
+<div class="line"><span class="lineno">10676</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6e1b64f12cac7f07af180ae4316fd38d" name="a6e1b64f12cac7f07af180ae4316fd38d"></a>
@@ -424,6 +517,16 @@ Custom shapes and pixmaps</h1>
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> instance with shape set to <em>shape</em>, the pen color set to <em>color</em>, the brush color to <em>fill</em> (with a solid pattern), and size to <em>size</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10682">10682</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10682</span>                                                                                                         :</div>
+<div class="line"><span class="lineno">10683</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(<a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>),</div>
+<div class="line"><span class="lineno">10684</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>),</div>
+<div class="line"><span class="lineno">10685</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(QPen(color)),</div>
+<div class="line"><span class="lineno">10686</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(QBrush(fill)),</div>
+<div class="line"><span class="lineno">10687</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">10688</span>{</div>
+<div class="line"><span class="lineno">10689</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a85acc4941d7e5c9bca5fa51377a77f49" name="a85acc4941d7e5c9bca5fa51377a77f49"></a>
@@ -459,6 +562,18 @@ Custom shapes and pixmaps</h1>
 <code><a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle(QCPScatterShape::ssCircle, Qt::NoPen, Qt::blue, 5)</a></code><br  />
 doesn't necessarily lead C++ to use this constructor in some cases, but might mistake <code>Qt::NoPen</code> for a QColor and use the <a class="el" href="#a6e1b64f12cac7f07af180ae4316fd38d">QCPScatterStyle(ScatterShape shape, const QColor &amp;color, const QColor &amp;fill, double size)</a> constructor instead (which will lead to an unexpected look of the scatter points). To prevent this, be more explicit with the parameter types. For example, use <code>QBrush(Qt::blue)</code> instead of just <code>Qt::blue</code>, to clearly point out to the compiler that this constructor is wanted. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10706">10706</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10706</span>                                                                                                      :</div>
+<div class="line"><span class="lineno">10707</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(<a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>),</div>
+<div class="line"><span class="lineno">10708</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>),</div>
+<div class="line"><span class="lineno">10709</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(<a class="code hl_function" href="#acdd6313d16e69d3810e9d1f48dd9e4bb">pen</a>),</div>
+<div class="line"><span class="lineno">10710</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(<a class="code hl_function" href="#adc4f66aed84f1d7a3a5aabf4f48f31a6">brush</a>),</div>
+<div class="line"><span class="lineno">10711</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<a class="code hl_function" href="#acdd6313d16e69d3810e9d1f48dd9e4bb">pen</a>.style() != Qt::NoPen)</div>
+<div class="line"><span class="lineno">10712</span>{</div>
+<div class="line"><span class="lineno">10713</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_acdd6313d16e69d3810e9d1f48dd9e4bb"><div class="ttname"><a href="#acdd6313d16e69d3810e9d1f48dd9e4bb">QCPScatterStyle::pen</a></div><div class="ttdeci">QPen pen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02559">qcustomplot.h:2559</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_adc4f66aed84f1d7a3a5aabf4f48f31a6"><div class="ttname"><a href="#adc4f66aed84f1d7a3a5aabf4f48f31a6">QCPScatterStyle::brush</a></div><div class="ttdeci">QBrush brush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02560">qcustomplot.h:2560</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a63962094587a4c2258435aa7933996cc" name="a63962094587a4c2258435aa7933996cc"></a>
@@ -477,6 +592,19 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> instance which will show the specified <em>pixmap</em>. The scatter shape is set to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10719">10719</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10719</span>                                                      :</div>
+<div class="line"><span class="lineno">10720</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(5),</div>
+<div class="line"><span class="lineno">10721</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>),</div>
+<div class="line"><span class="lineno">10722</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(Qt::NoPen),</div>
+<div class="line"><span class="lineno">10723</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(Qt::NoBrush),</div>
+<div class="line"><span class="lineno">10724</span>  <a class="code hl_variable" href="#a7697346c89b19d4cd1d8dd33319ec9e3">mPixmap</a>(<a class="code hl_function" href="#a9b2d1a2ec0aac0c74f7582d14050e93a">pixmap</a>),</div>
+<div class="line"><span class="lineno">10725</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">10726</span>{</div>
+<div class="line"><span class="lineno">10727</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a7697346c89b19d4cd1d8dd33319ec9e3"><div class="ttname"><a href="#a7697346c89b19d4cd1d8dd33319ec9e3">QCPScatterStyle::mPixmap</a></div><div class="ttdeci">QPixmap mPixmap</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02587">qcustomplot.h:2587</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a9b2d1a2ec0aac0c74f7582d14050e93a"><div class="ttname"><a href="#a9b2d1a2ec0aac0c74f7582d14050e93a">QCPScatterStyle::pixmap</a></div><div class="ttdeci">QPixmap pixmap() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02561">qcustomplot.h:2561</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a879c30647683b3cfbde2afecea815e6f" name="a879c30647683b3cfbde2afecea815e6f"></a>
@@ -510,6 +638,19 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Creates a new <a class="el" href="class_q_c_p_scatter_style.html" title="Represents the visual appearance of scatter points.">QCPScatterStyle</a> instance with a custom shape that is defined via <em>customPath</em>. The scatter shape is set to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>.</p>
 <p>The custom shape line will be drawn with <em>pen</em> and filled with <em>brush</em>. The size has a slightly different meaning than for built-in scatter points: The custom path will be drawn scaled by a factor of <em>size/6.0</em>. Since the default <em>size</em> is 6, the custom path will appear in its original size by default. To for example double the size of the path, set <em>size</em> to 12. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10738">10738</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10738</span>                                                                                                                  :</div>
+<div class="line"><span class="lineno">10739</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>(<a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>),</div>
+<div class="line"><span class="lineno">10740</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>(<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>),</div>
+<div class="line"><span class="lineno">10741</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>(<a class="code hl_function" href="#acdd6313d16e69d3810e9d1f48dd9e4bb">pen</a>),</div>
+<div class="line"><span class="lineno">10742</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>(<a class="code hl_function" href="#adc4f66aed84f1d7a3a5aabf4f48f31a6">brush</a>),</div>
+<div class="line"><span class="lineno">10743</span>  <a class="code hl_variable" href="#a813cb074744dc5a2f59cc99d6a10c6f0">mCustomPath</a>(<a class="code hl_function" href="#aef1fac84c9830fd97f2a8568e605e372">customPath</a>),</div>
+<div class="line"><span class="lineno">10744</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>(<a class="code hl_function" href="#acdd6313d16e69d3810e9d1f48dd9e4bb">pen</a>.style() != Qt::NoPen)</div>
+<div class="line"><span class="lineno">10745</span>{</div>
+<div class="line"><span class="lineno">10746</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a813cb074744dc5a2f59cc99d6a10c6f0"><div class="ttname"><a href="#a813cb074744dc5a2f59cc99d6a10c6f0">QCPScatterStyle::mCustomPath</a></div><div class="ttdeci">QPainterPath mCustomPath</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02588">qcustomplot.h:2588</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_aef1fac84c9830fd97f2a8568e605e372"><div class="ttname"><a href="#aef1fac84c9830fd97f2a8568e605e372">QCPScatterStyle::customPath</a></div><div class="ttdeci">QPainterPath customPath() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02562">qcustomplot.h:2562</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -535,6 +676,13 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>This function is used by plottables (or any class that wants to draw scatters) just before a number of scatters with this style shall be drawn with the <em>painter</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a89b5105e6027bfcbfeefed9d201b607c">drawShape</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10866">10866</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10867</span>{</div>
+<div class="line"><span class="lineno">10868</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a> ? <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a> : defaultPen);</div>
+<div class="line"><span class="lineno">10869</span>  painter-&gt;setBrush(<a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>);</div>
+<div class="line"><span class="lineno">10870</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adc4f66aed84f1d7a3a5aabf4f48f31a6" name="adc4f66aed84f1d7a3a5aabf4f48f31a6"></a>
@@ -560,6 +708,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02560">2560</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2560</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef1fac84c9830fd97f2a8568e605e372" name="aef1fac84c9830fd97f2a8568e605e372"></a>
@@ -585,6 +736,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02562">2562</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2562</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a813cb074744dc5a2f59cc99d6a10c6f0">mCustomPath</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a89b5105e6027bfcbfeefed9d201b607c" name="a89b5105e6027bfcbfeefed9d201b607c"></a>
@@ -609,6 +763,12 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>This function does not modify the pen or the brush on the painter, as <a class="el" href="#afd8044ece445300499ca0dc164821e0f">applyTo</a> is meant to be called before scatter points are drawn with <a class="el" href="#a89b5105e6027bfcbfeefed9d201b607c">drawShape</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#afd8044ece445300499ca0dc164821e0f">applyTo</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10880">10880</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10881</span>{</div>
+<div class="line"><span class="lineno">10882</span>  <a class="code hl_function" href="#a89b5105e6027bfcbfeefed9d201b607c">drawShape</a>(painter, pos.x(), pos.y());</div>
+<div class="line"><span class="lineno">10883</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a89b5105e6027bfcbfeefed9d201b607c"><div class="ttname"><a href="#a89b5105e6027bfcbfeefed9d201b607c">QCPScatterStyle::drawShape</a></div><div class="ttdeci">void drawShape(QCPPainter *painter, const QPointF &amp;pos) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10880">qcustomplot.cpp:10880</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a95c297b114c77c22428ef40f54620ddf" name="a95c297b114c77c22428ef40f54620ddf"></a>
@@ -636,6 +796,142 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </div><div class="memdoc">
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Draws the scatter shape with <em>painter</em> at position <em>x</em> and <em>y</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10888">10888</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10889</span>{</div>
+<div class="line"><span class="lineno">10890</span>  <span class="keywordtype">double</span> w = <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>/2.0;</div>
+<div class="line"><span class="lineno">10891</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>)</div>
+<div class="line"><span class="lineno">10892</span>  {</div>
+<div class="line"><span class="lineno">10893</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022">ssNone</a>: <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10894</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a06e15a735b79093a1d999c0374fa3aa1">ssDot</a>:</div>
+<div class="line"><span class="lineno">10895</span>    {</div>
+<div class="line"><span class="lineno">10896</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QPointF(x, y), QPointF(x+0.0001, y));</div>
+<div class="line"><span class="lineno">10897</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10898</span>    }</div>
+<div class="line"><span class="lineno">10899</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a9eacd60f059dc3ef71bf249f515a6fe4">ssCross</a>:</div>
+<div class="line"><span class="lineno">10900</span>    {</div>
+<div class="line"><span class="lineno">10901</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w, y-w, x+w, y+w));</div>
+<div class="line"><span class="lineno">10902</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w, y+w, x+w, y-w));</div>
+<div class="line"><span class="lineno">10903</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10904</span>    }</div>
+<div class="line"><span class="lineno">10905</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a2d7f1d3c1a148b9d9d17f2fd9cae5eb7">ssPlus</a>:</div>
+<div class="line"><span class="lineno">10906</span>    {</div>
+<div class="line"><span class="lineno">10907</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w,   y, x+w,   y));</div>
+<div class="line"><span class="lineno">10908</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(  x, y+w,   x, y-w));</div>
+<div class="line"><span class="lineno">10909</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10910</span>    }</div>
+<div class="line"><span class="lineno">10911</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779">ssCircle</a>:</div>
+<div class="line"><span class="lineno">10912</span>    {</div>
+<div class="line"><span class="lineno">10913</span>      painter-&gt;drawEllipse(QPointF(x , y), w, w);</div>
+<div class="line"><span class="lineno">10914</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10915</span>    }</div>
+<div class="line"><span class="lineno">10916</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a281fe1434696dcbab3aa6b9ccfbb09e9">ssDisc</a>:</div>
+<div class="line"><span class="lineno">10917</span>    {</div>
+<div class="line"><span class="lineno">10918</span>      QBrush b = painter-&gt;brush();</div>
+<div class="line"><span class="lineno">10919</span>      painter-&gt;setBrush(painter-&gt;pen().color());</div>
+<div class="line"><span class="lineno">10920</span>      painter-&gt;drawEllipse(QPointF(x , y), w, w);</div>
+<div class="line"><span class="lineno">10921</span>      painter-&gt;setBrush(b);</div>
+<div class="line"><span class="lineno">10922</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10923</span>    }</div>
+<div class="line"><span class="lineno">10924</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a279e48703ddc9f1cf4a61d3e2817ab3c">ssSquare</a>:</div>
+<div class="line"><span class="lineno">10925</span>    {</div>
+<div class="line"><span class="lineno">10926</span>      painter-&gt;drawRect(QRectF(x-w, y-w, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>));</div>
+<div class="line"><span class="lineno">10927</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10928</span>    }</div>
+<div class="line"><span class="lineno">10929</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a4fc5929df1b2dad0a3cb2ef2c8b6e633">ssDiamond</a>:</div>
+<div class="line"><span class="lineno">10930</span>    {</div>
+<div class="line"><span class="lineno">10931</span>      QPointF lineArray[4] = {QPointF(x-w,   y),</div>
+<div class="line"><span class="lineno">10932</span>                              QPointF(  x, y-w),</div>
+<div class="line"><span class="lineno">10933</span>                              QPointF(x+w,   y),</div>
+<div class="line"><span class="lineno">10934</span>                              QPointF(  x, y+w)};</div>
+<div class="line"><span class="lineno">10935</span>      painter-&gt;drawPolygon(lineArray, 4);</div>
+<div class="line"><span class="lineno">10936</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10937</span>    }</div>
+<div class="line"><span class="lineno">10938</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a6047a2d64e41f1d6ce54445d595d442f">ssStar</a>:</div>
+<div class="line"><span class="lineno">10939</span>    {</div>
+<div class="line"><span class="lineno">10940</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w,   y, x+w,   y));</div>
+<div class="line"><span class="lineno">10941</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(  x, y+w,   x, y-w));</div>
+<div class="line"><span class="lineno">10942</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w*0.707, y-w*0.707, x+w*0.707, y+w*0.707));</div>
+<div class="line"><span class="lineno">10943</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w*0.707, y+w*0.707, x+w*0.707, y-w*0.707));</div>
+<div class="line"><span class="lineno">10944</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10945</span>    }</div>
+<div class="line"><span class="lineno">10946</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a74a8d4eff1d97b57c53a60d0003453c3">ssTriangle</a>:</div>
+<div class="line"><span class="lineno">10947</span>    {</div>
+<div class="line"><span class="lineno">10948</span>      QPointF lineArray[3] = {QPointF(x-w, y+0.755*w),</div>
+<div class="line"><span class="lineno">10949</span>                              QPointF(x+w, y+0.755*w),</div>
+<div class="line"><span class="lineno">10950</span>                              QPointF(  x, y-0.977*w)};</div>
+<div class="line"><span class="lineno">10951</span>      painter-&gt;drawPolygon(lineArray, 3);</div>
+<div class="line"><span class="lineno">10952</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10953</span>    }</div>
+<div class="line"><span class="lineno">10954</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a6156274d21d8b4115197567d3ea2d9a8">ssTriangleInverted</a>:</div>
+<div class="line"><span class="lineno">10955</span>    {</div>
+<div class="line"><span class="lineno">10956</span>      QPointF lineArray[3] = {QPointF(x-w, y-0.755*w),</div>
+<div class="line"><span class="lineno">10957</span>                              QPointF(x+w, y-0.755*w),</div>
+<div class="line"><span class="lineno">10958</span>                              QPointF(  x, y+0.977*w)};</div>
+<div class="line"><span class="lineno">10959</span>      painter-&gt;drawPolygon(lineArray, 3);</div>
+<div class="line"><span class="lineno">10960</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10961</span>    }</div>
+<div class="line"><span class="lineno">10962</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a7081310936c200c6c78e34c172f72d07">ssCrossSquare</a>:</div>
+<div class="line"><span class="lineno">10963</span>    {</div>
+<div class="line"><span class="lineno">10964</span>      painter-&gt;drawRect(QRectF(x-w, y-w, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>));</div>
+<div class="line"><span class="lineno">10965</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w, y-w, x+w*0.95, y+w*0.95));</div>
+<div class="line"><span class="lineno">10966</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w, y+w*0.95, x+w*0.95, y-w));</div>
+<div class="line"><span class="lineno">10967</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10968</span>    }</div>
+<div class="line"><span class="lineno">10969</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a5aa8e9db545e5404482fec774768ee25">ssPlusSquare</a>:</div>
+<div class="line"><span class="lineno">10970</span>    {</div>
+<div class="line"><span class="lineno">10971</span>      painter-&gt;drawRect(QRectF(x-w, y-w, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>));</div>
+<div class="line"><span class="lineno">10972</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w,   y, x+w*0.95,   y));</div>
+<div class="line"><span class="lineno">10973</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(  x, y+w,        x, y-w));</div>
+<div class="line"><span class="lineno">10974</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10975</span>    }</div>
+<div class="line"><span class="lineno">10976</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a524613ba5d1c4eaa1541d74cf339d283">ssCrossCircle</a>:</div>
+<div class="line"><span class="lineno">10977</span>    {</div>
+<div class="line"><span class="lineno">10978</span>      painter-&gt;drawEllipse(QPointF(x, y), w, w);</div>
+<div class="line"><span class="lineno">10979</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w*0.707, y-w*0.707, x+w*0.670, y+w*0.670));</div>
+<div class="line"><span class="lineno">10980</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w*0.707, y+w*0.670, x+w*0.670, y-w*0.707));</div>
+<div class="line"><span class="lineno">10981</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10982</span>    }</div>
+<div class="line"><span class="lineno">10983</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a6fa151d01f1694c9ff9922da686dc535">ssPlusCircle</a>:</div>
+<div class="line"><span class="lineno">10984</span>    {</div>
+<div class="line"><span class="lineno">10985</span>      painter-&gt;drawEllipse(QPointF(x, y), w, w);</div>
+<div class="line"><span class="lineno">10986</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x-w,   y, x+w,   y));</div>
+<div class="line"><span class="lineno">10987</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(  x, y+w,   x, y-w));</div>
+<div class="line"><span class="lineno">10988</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10989</span>    }</div>
+<div class="line"><span class="lineno">10990</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349ada3b2988ece38c121922a4b5007eb08d">ssPeace</a>:</div>
+<div class="line"><span class="lineno">10991</span>    {</div>
+<div class="line"><span class="lineno">10992</span>      painter-&gt;drawEllipse(QPointF(x, y), w, w);</div>
+<div class="line"><span class="lineno">10993</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x, y-w,         x,       y+w));</div>
+<div class="line"><span class="lineno">10994</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x,   y, x-w*0.707, y+w*0.707));</div>
+<div class="line"><span class="lineno">10995</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(x,   y, x+w*0.707, y+w*0.707));</div>
+<div class="line"><span class="lineno">10996</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">10997</span>    }</div>
+<div class="line"><span class="lineno">10998</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>:</div>
+<div class="line"><span class="lineno">10999</span>    {</div>
+<div class="line"><span class="lineno">11000</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> widthHalf = <a class="code hl_variable" href="#a7697346c89b19d4cd1d8dd33319ec9e3">mPixmap</a>.width()*0.5;</div>
+<div class="line"><span class="lineno">11001</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> heightHalf = <a class="code hl_variable" href="#a7697346c89b19d4cd1d8dd33319ec9e3">mPixmap</a>.height()*0.5;</div>
+<div class="line"><span class="lineno">11002</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(4, 8, 0)</span></div>
+<div class="line"><span class="lineno">11003</span>      <span class="keyword">const</span> QRectF clipRect = painter-&gt;clipRegion().boundingRect().adjusted(-widthHalf, -heightHalf, widthHalf, heightHalf);</div>
+<div class="line"><span class="lineno">11004</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">11005</span>      <span class="keyword">const</span> QRectF clipRect = painter-&gt;clipBoundingRect().adjusted(-widthHalf, -heightHalf, widthHalf, heightHalf);</div>
+<div class="line"><span class="lineno">11006</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">11007</span>      <span class="keywordflow">if</span> (clipRect.contains(x, y))</div>
+<div class="line"><span class="lineno">11008</span>        painter-&gt;drawPixmap(qRound(x-widthHalf), qRound(y-heightHalf), <a class="code hl_variable" href="#a7697346c89b19d4cd1d8dd33319ec9e3">mPixmap</a>);</div>
+<div class="line"><span class="lineno">11009</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">11010</span>    }</div>
+<div class="line"><span class="lineno">11011</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>:</div>
+<div class="line"><span class="lineno">11012</span>    {</div>
+<div class="line"><span class="lineno">11013</span>      QTransform oldTransform = painter-&gt;transform();</div>
+<div class="line"><span class="lineno">11014</span>      painter-&gt;translate(x, y);</div>
+<div class="line"><span class="lineno">11015</span>      painter-&gt;scale(<a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>/6.0, <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>/6.0);</div>
+<div class="line"><span class="lineno">11016</span>      painter-&gt;drawPath(<a class="code hl_variable" href="#a813cb074744dc5a2f59cc99d6a10c6f0">mCustomPath</a>);</div>
+<div class="line"><span class="lineno">11017</span>      painter-&gt;setTransform(oldTransform);</div>
+<div class="line"><span class="lineno">11018</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">11019</span>    }</div>
+<div class="line"><span class="lineno">11020</span>  }</div>
+<div class="line"><span class="lineno">11021</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a72db6bcb1e1abd6e53c1315dd3dea7e4" name="a72db6bcb1e1abd6e53c1315dd3dea7e4"></a>
@@ -663,6 +959,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Returns whether the scatter shape is <a class="el" href="#adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022">ssNone</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7c641c4d4c6d29cb705d3887cfce91c1">setShape</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02574">2574</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2574</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a> == <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022">ssNone</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47077eb6450fe9a788f833e4ec1b1d5a" name="a47077eb6450fe9a788f833e4ec1b1d5a"></a>
@@ -692,6 +991,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>If a pen was defined for this scatter style instance, and you now wish to undefine the pen, call <a class="el" href="#acabc2a8c83d650b946f50c3166b6c35e">undefinePen</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a761f1f229cc0ca4703e1e2b89f6dd1ba">setPen</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02575">2575</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2575</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acdd6313d16e69d3810e9d1f48dd9e4bb" name="acdd6313d16e69d3810e9d1f48dd9e4bb"></a>
@@ -717,6 +1019,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02559">2559</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2559</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9b2d1a2ec0aac0c74f7582d14050e93a" name="a9b2d1a2ec0aac0c74f7582d14050e93a"></a>
@@ -742,6 +1047,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02561">2561</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2561</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7697346c89b19d4cd1d8dd33319ec9e3">mPixmap</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a74d692aaeb8d4b36d6f7d510e44264b1" name="a74d692aaeb8d4b36d6f7d510e44264b1"></a>
@@ -761,6 +1069,11 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Sets the brush that will be used to fill scatter points to <em>brush</em>. Note that not all scatter shapes have fillable areas. For example, <a class="el" href="#adb31525af6b680e6f1b7472e43859349a2d7f1d3c1a148b9d9d17f2fd9cae5eb7">ssPlus</a> does not while <a class="el" href="#adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779">ssCircle</a> does.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a761f1f229cc0ca4703e1e2b89f6dd1ba">setPen</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10817">10817</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10818</span>{</div>
+<div class="line"><span class="lineno">10819</span>  <a class="code hl_variable" href="#a1b9c6ab10aebcaf236f1f45d1d6d64d1">mBrush</a> = <a class="code hl_function" href="#adc4f66aed84f1d7a3a5aabf4f48f31a6">brush</a>;</div>
+<div class="line"><span class="lineno">10820</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96a3e949f90b2afe5677ca9412a12a1e" name="a96a3e949f90b2afe5677ca9412a12a1e"></a>
@@ -780,6 +1093,13 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Sets the custom shape that will be drawn as scatter point to <em>customPath</em>.</p>
 <p>The scatter shape is automatically set to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10840">10840</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10841</span>{</div>
+<div class="line"><span class="lineno">10842</span>  <a class="code hl_function" href="#a7c641c4d4c6d29cb705d3887cfce91c1">setShape</a>(<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>);</div>
+<div class="line"><span class="lineno">10843</span>  <a class="code hl_variable" href="#a813cb074744dc5a2f59cc99d6a10c6f0">mCustomPath</a> = <a class="code hl_function" href="#aef1fac84c9830fd97f2a8568e605e372">customPath</a>;</div>
+<div class="line"><span class="lineno">10844</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a7c641c4d4c6d29cb705d3887cfce91c1"><div class="ttname"><a href="#a7c641c4d4c6d29cb705d3887cfce91c1">QCPScatterStyle::setShape</a></div><div class="ttdeci">void setShape(ScatterShape shape)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10791">qcustomplot.cpp:10791</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d59ba8864914f765817841089e436f1" name="a7d59ba8864914f765817841089e436f1"></a>
@@ -802,6 +1122,35 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </div><div class="memdoc">
 <p>Copies the specified <em>properties</em> from the <em>other</em> scatter style to this scatter style. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10751">10751</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10752</span>{</div>
+<div class="line"><span class="lineno">10753</span>  <span class="keywordflow">if</span> (properties.testFlag(<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46aa04d012e7c03e455db2b68fdd55c2a04">spPen</a>))</div>
+<div class="line"><span class="lineno">10754</span>  {</div>
+<div class="line"><span class="lineno">10755</span>    <a class="code hl_function" href="#a761f1f229cc0ca4703e1e2b89f6dd1ba">setPen</a>(other.<a class="code hl_function" href="#acdd6313d16e69d3810e9d1f48dd9e4bb">pen</a>());</div>
+<div class="line"><span class="lineno">10756</span>    <span class="keywordflow">if</span> (!other.<a class="code hl_function" href="#a47077eb6450fe9a788f833e4ec1b1d5a">isPenDefined</a>())</div>
+<div class="line"><span class="lineno">10757</span>      <a class="code hl_function" href="#acabc2a8c83d650b946f50c3166b6c35e">undefinePen</a>();</div>
+<div class="line"><span class="lineno">10758</span>  }</div>
+<div class="line"><span class="lineno">10759</span>  <span class="keywordflow">if</span> (properties.testFlag(<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46af0499b1fc04de2dcc7e47ff0ef75c904">spBrush</a>))</div>
+<div class="line"><span class="lineno">10760</span>    <a class="code hl_function" href="#a74d692aaeb8d4b36d6f7d510e44264b1">setBrush</a>(other.<a class="code hl_function" href="#adc4f66aed84f1d7a3a5aabf4f48f31a6">brush</a>());</div>
+<div class="line"><span class="lineno">10761</span>  <span class="keywordflow">if</span> (properties.testFlag(<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46a553ae95798ace9a328c7cd62045260b0">spSize</a>))</div>
+<div class="line"><span class="lineno">10762</span>    <a class="code hl_function" href="#aaefdd031052892c4136129db68596e0f">setSize</a>(other.<a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>());</div>
+<div class="line"><span class="lineno">10763</span>  <span class="keywordflow">if</span> (properties.testFlag(<a class="code hl_enumvalue" href="#a8974f6a20f8f6eea7781f0e6af9deb46a19c224563adb42c55fb8b7ae6904411b">spShape</a>))</div>
+<div class="line"><span class="lineno">10764</span>  {</div>
+<div class="line"><span class="lineno">10765</span>    <a class="code hl_function" href="#a7c641c4d4c6d29cb705d3887cfce91c1">setShape</a>(other.<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>());</div>
+<div class="line"><span class="lineno">10766</span>    <span class="keywordflow">if</span> (other.<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>() == <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>)</div>
+<div class="line"><span class="lineno">10767</span>      <a class="code hl_function" href="#a5fb611d46acfac520d7b89a1c71d9246">setPixmap</a>(other.<a class="code hl_function" href="#a9b2d1a2ec0aac0c74f7582d14050e93a">pixmap</a>());</div>
+<div class="line"><span class="lineno">10768</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (other.<a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>() == <a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>)</div>
+<div class="line"><span class="lineno">10769</span>      <a class="code hl_function" href="#a96a3e949f90b2afe5677ca9412a12a1e">setCustomPath</a>(other.<a class="code hl_function" href="#aef1fac84c9830fd97f2a8568e605e372">customPath</a>());</div>
+<div class="line"><span class="lineno">10770</span>  }</div>
+<div class="line"><span class="lineno">10771</span>}</div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a47077eb6450fe9a788f833e4ec1b1d5a"><div class="ttname"><a href="#a47077eb6450fe9a788f833e4ec1b1d5a">QCPScatterStyle::isPenDefined</a></div><div class="ttdeci">bool isPenDefined() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02575">qcustomplot.h:2575</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a5fb611d46acfac520d7b89a1c71d9246"><div class="ttname"><a href="#a5fb611d46acfac520d7b89a1c71d9246">QCPScatterStyle::setPixmap</a></div><div class="ttdeci">void setPixmap(const QPixmap &amp;pixmap)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10829">qcustomplot.cpp:10829</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a74d692aaeb8d4b36d6f7d510e44264b1"><div class="ttname"><a href="#a74d692aaeb8d4b36d6f7d510e44264b1">QCPScatterStyle::setBrush</a></div><div class="ttdeci">void setBrush(const QBrush &amp;brush)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10817">qcustomplot.cpp:10817</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a761f1f229cc0ca4703e1e2b89f6dd1ba"><div class="ttname"><a href="#a761f1f229cc0ca4703e1e2b89f6dd1ba">QCPScatterStyle::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10805">qcustomplot.cpp:10805</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_a96a3e949f90b2afe5677ca9412a12a1e"><div class="ttname"><a href="#a96a3e949f90b2afe5677ca9412a12a1e">QCPScatterStyle::setCustomPath</a></div><div class="ttdeci">void setCustomPath(const QPainterPath &amp;customPath)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10840">qcustomplot.cpp:10840</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_aaefdd031052892c4136129db68596e0f"><div class="ttname"><a href="#aaefdd031052892c4136129db68596e0f">QCPScatterStyle::setSize</a></div><div class="ttdeci">void setSize(double size)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10778">qcustomplot.cpp:10778</a></div></div>
+<div class="ttc" id="aclass_q_c_p_scatter_style_html_acabc2a8c83d650b946f50c3166b6c35e"><div class="ttname"><a href="#acabc2a8c83d650b946f50c3166b6c35e">QCPScatterStyle::undefinePen</a></div><div class="ttdeci">void undefinePen()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l10852">qcustomplot.cpp:10852</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a761f1f229cc0ca4703e1e2b89f6dd1ba" name="a761f1f229cc0ca4703e1e2b89f6dd1ba"></a>
@@ -822,6 +1171,12 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>If the pen was previously undefined (see <a class="el" href="#a47077eb6450fe9a788f833e4ec1b1d5a">isPenDefined</a>), the pen is considered defined after a call to this function, even if <em>pen</em> is <code>Qt::NoPen</code>. If you have defined a pen previously by calling this function and now wish to undefine the pen, call <a class="el" href="#acabc2a8c83d650b946f50c3166b6c35e">undefinePen</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a74d692aaeb8d4b36d6f7d510e44264b1">setBrush</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10805">10805</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10806</span>{</div>
+<div class="line"><span class="lineno">10807</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">10808</span>  <a class="code hl_variable" href="#a0f6a85e6d1e3ae1ca1b6efb4d4cdfe17">mPen</a> = <a class="code hl_function" href="#acdd6313d16e69d3810e9d1f48dd9e4bb">pen</a>;</div>
+<div class="line"><span class="lineno">10809</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5fb611d46acfac520d7b89a1c71d9246" name="a5fb611d46acfac520d7b89a1c71d9246"></a>
@@ -842,6 +1197,12 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Note that <a class="el" href="#aaefdd031052892c4136129db68596e0f">setSize</a> does not influence the appearance of the pixmap.</p>
 <p>The scatter shape is automatically set to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10829">10829</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10830</span>{</div>
+<div class="line"><span class="lineno">10831</span>  <a class="code hl_function" href="#a7c641c4d4c6d29cb705d3887cfce91c1">setShape</a>(<a class="code hl_enumvalue" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a>);</div>
+<div class="line"><span class="lineno">10832</span>  <a class="code hl_variable" href="#a7697346c89b19d4cd1d8dd33319ec9e3">mPixmap</a> = <a class="code hl_function" href="#a9b2d1a2ec0aac0c74f7582d14050e93a">pixmap</a>;</div>
+<div class="line"><span class="lineno">10833</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c641c4d4c6d29cb705d3887cfce91c1" name="a7c641c4d4c6d29cb705d3887cfce91c1"></a>
@@ -862,6 +1223,11 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Note that the calls <a class="el" href="#a5fb611d46acfac520d7b89a1c71d9246">setPixmap</a> and <a class="el" href="#a96a3e949f90b2afe5677ca9412a12a1e">setCustomPath</a> automatically set the shape to <a class="el" href="#adb31525af6b680e6f1b7472e43859349a8718b849ca7c307b07b8e091efb0c31e">ssPixmap</a> and <a class="el" href="#adb31525af6b680e6f1b7472e43859349a15d9bcfd9de94edda949006529f9219d">ssCustom</a>, respectively.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aaefdd031052892c4136129db68596e0f">setSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10791">10791</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10792</span>{</div>
+<div class="line"><span class="lineno">10793</span>  <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a> = <a class="code hl_function" href="#af04cad55bd7f58a96da4fc6bc46a0a1e">shape</a>;</div>
+<div class="line"><span class="lineno">10794</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaefdd031052892c4136129db68596e0f" name="aaefdd031052892c4136129db68596e0f"></a>
@@ -881,6 +1247,11 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Sets the size (pixel diameter) of the drawn scatter points to <em>size</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7c641c4d4c6d29cb705d3887cfce91c1">setShape</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10778">10778</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10779</span>{</div>
+<div class="line"><span class="lineno">10780</span>  <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a> = <a class="code hl_function" href="#a0e94526d9165d9f50e262102bdd71a47">size</a>;</div>
+<div class="line"><span class="lineno">10781</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af04cad55bd7f58a96da4fc6bc46a0a1e" name="af04cad55bd7f58a96da4fc6bc46a0a1e"></a>
@@ -906,6 +1277,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02558">2558</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2558</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af1b327f35f107ed108290187bbc8c7c6">mShape</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e94526d9165d9f50e262102bdd71a47" name="a0e94526d9165d9f50e262102bdd71a47"></a>
@@ -931,6 +1305,9 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02557">2557</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2557</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a757da98671eb06b221979373ac2cec91">mSize</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acabc2a8c83d650b946f50c3166b6c35e" name="acabc2a8c83d650b946f50c3166b6c35e"></a>
@@ -950,6 +1327,11 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 <p>Sets this scatter style to have an undefined pen (see <a class="el" href="#a47077eb6450fe9a788f833e4ec1b1d5a">isPenDefined</a> for what an undefined pen implies).</p>
 <p>A call to <a class="el" href="#a761f1f229cc0ca4703e1e2b89f6dd1ba">setPen</a> will define a pen. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l10852">10852</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">10853</span>{</div>
+<div class="line"><span class="lineno">10854</span>  <a class="code hl_variable" href="#a84ef5aa591ddba07b440f597e1669e78">mPenDefined</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">10855</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -973,6 +1355,8 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02586">2586</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a813cb074744dc5a2f59cc99d6a10c6f0" name="a813cb074744dc5a2f59cc99d6a10c6f0"></a>
@@ -994,6 +1378,8 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02588">2588</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1017,6 +1403,8 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02585">2585</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a84ef5aa591ddba07b440f597e1669e78" name="a84ef5aa591ddba07b440f597e1669e78"></a>
@@ -1038,6 +1426,8 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02591">2591</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1061,6 +1451,8 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02587">2587</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="af1b327f35f107ed108290187bbc8c7c6" name="af1b327f35f107ed108290187bbc8c7c6"></a>
@@ -1082,6 +1474,8 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02584">2584</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1105,11 +1499,13 @@ doesn't necessarily lead C++ to use this constructor in some cases, but might mi
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02583">2583</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

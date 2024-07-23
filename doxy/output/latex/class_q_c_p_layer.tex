@@ -1,0 +1,264 @@
+\doxysection{QCPLayer Class Reference}
+\hypertarget{class_q_c_p_layer}{}\label{class_q_c_p_layer}\index{QCPLayer@{QCPLayer}}
+
+
+{\ttfamily \#include $<$qcustomplot.\+h$>$}
+
+Inheritance diagram for QCPLayer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_c_p_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}} \{ \mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce}{lm\+Logical}}
+, \mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538}{lm\+Buffered}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_layer_a5d0657fc86d624e5efbe930ef21af718}{QCPLayer}} (\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_c_p_layer_a923cb87bb467eeb17d649ba2b2fe4f5f}{parent\+Plot}}, const QString \&layer\+Name)
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_layer_abd896d183f20698f906d0390c9a047b2}{\texorpdfstring{$\sim$}{\string~}\+QCPLayer}} ()
+\item 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layer_a923cb87bb467eeb17d649ba2b2fe4f5f}{parent\+Plot}} () const
+\item 
+QString \mbox{\hyperlink{class_q_c_p_layer_a37806f662b50b588fb1029a14fc5ef50}{name}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_layer_ad322905c4700dcc7ceba63e011c730d2}{index}} () const
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_layer_a183b90941fc78f0b136edd77c5fb6966}{children}} () const
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layer_ad1cc2d6b32d2abb33c7f449b964e068c}{visible}} () const
+\item 
+\mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}} \mbox{\hyperlink{class_q_c_p_layer_a44ae50b011b19f3dd46a38d8e2e2c1b6}{mode}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_ac07671f74edf6884b51a82afb2c19516}{set\+Visible}} (bool \mbox{\hyperlink{class_q_c_p_layer_ad1cc2d6b32d2abb33c7f449b964e068c}{visible}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_a938d57b04f4e4c23cedf1711f983919b}{set\+Mode}} (\mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}} \mbox{\hyperlink{class_q_c_p_layer_a44ae50b011b19f3dd46a38d8e2e2c1b6}{mode}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_adefd53b6db02f470151c416f42e37180}{replot}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_ab831a99c8d30b15ec4533ca341e8813b}{draw}} (\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}painter)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_a4a8e0a86f31462299e7fc8e8158dd2c6}{draw\+To\+Paint\+Buffer}} ()
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_a57ce5e49364aa9122276d5df3b4a0ddc}{add\+Child}} (\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*}layerable, bool prepend)
+\item 
+void \mbox{\hyperlink{class_q_c_p_layer_ac2f64ac7761650582d968d86670ef362}{remove\+Child}} (\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*}layerable)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_c_p_layer_a2f3374a7884bf403720cd1cf6f7ad1bb}{m\+Parent\+Plot}}
+\item 
+QString \mbox{\hyperlink{class_q_c_p_layer_a91e6298183cb4b9dfd4efdfaf1ecc220}{m\+Name}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_layer_a122088bcab6cec76a52b75ce8606605b}{m\+Index}}
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_q_c_p_layer_a704aa71bba469383c3a3c598c1ec0d28}{m\+Children}}
+\item 
+bool \mbox{\hyperlink{class_q_c_p_layer_a264950deb08e589460c126c895a1e2b5}{m\+Visible}}
+\item 
+\mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}} \mbox{\hyperlink{class_q_c_p_layer_a11bd0aa190d8fa21c8c7673d070737c8}{m\+Mode}}
+\item 
+QWeak\+Pointer$<$ \mbox{\hyperlink{class_q_c_p_abstract_paint_buffer}{QCPAbstract\+Paint\+Buffer}} $>$ \mbox{\hyperlink{class_q_c_p_layer_aa0bdbc75e4350a0669ff515b3476a3d3}{m\+Paint\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_q_c_p_layer_a1cdf9df76adcfae45261690aa0ca2198}{QCustom\+Plot}}
+\item 
+class \mbox{\hyperlink{class_q_c_p_layer_ad655f55cccf49ba14d5172ec517e07ae}{QCPLayerable}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}\index{QCPLayer@{QCPLayer}!LayerMode@{LayerMode}}
+\index{LayerMode@{LayerMode}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{LayerMode}{LayerMode}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c} 
+enum \mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{QCPLayer\+::\+Layer\+Mode}}}
+
+Defines the different rendering modes of a layer. Depending on the mode, certain layers can be replotted individually, without the need to replot (possibly complex) layerables on other layers.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_q_c_p_layer_a938d57b04f4e4c23cedf1711f983919b}{set\+Mode} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lmLogical@{lmLogical}!QCPLayer@{QCPLayer}}\index{QCPLayer@{QCPLayer}!lmLogical@{lmLogical}}}\Hypertarget{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce}\label{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c} 
+lm\+Logical&Layer is used only for rendering order, and shares paint buffer with all other adjacent logical layers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lmBuffered@{lmBuffered}!QCPLayer@{QCPLayer}}\index{QCPLayer@{QCPLayer}!lmBuffered@{lmBuffered}}}\Hypertarget{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538}\label{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c} 
+lm\+Buffered&Layer has its own paint buffer and may be replotted individually (see \doxylink{class_q_c_p_layer_adefd53b6db02f470151c416f42e37180}{replot}). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_q_c_p_layer_a5d0657fc86d624e5efbe930ef21af718}\index{QCPLayer@{QCPLayer}!QCPLayer@{QCPLayer}}
+\index{QCPLayer@{QCPLayer}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{QCPLayer()}{QCPLayer()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a5d0657fc86d624e5efbe930ef21af718} 
+QCPLayer\+::\+QCPLayer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*}}]{parent\+Plot}{, }\item[{const QString \&}]{layer\+Name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_layer_abd896d183f20698f906d0390c9a047b2}\index{QCPLayer@{QCPLayer}!````~QCPLayer@{\texorpdfstring{$\sim$}{\string~}QCPLayer}}
+\index{````~QCPLayer@{\texorpdfstring{$\sim$}{\string~}QCPLayer}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}QCPLayer()}{\string~QCPLayer()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_abd896d183f20698f906d0390c9a047b2} 
+virtual QCPLayer\+::\texorpdfstring{$\sim$}{\string~}\+QCPLayer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_q_c_p_layer_a57ce5e49364aa9122276d5df3b4a0ddc}\index{QCPLayer@{QCPLayer}!addChild@{addChild}}
+\index{addChild@{addChild}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a57ce5e49364aa9122276d5df3b4a0ddc} 
+void QCPLayer\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*}}]{layerable}{, }\item[{bool}]{prepend}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a183b90941fc78f0b136edd77c5fb6966}\index{QCPLayer@{QCPLayer}!children@{children}}
+\index{children@{children}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{children()}{children()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a183b90941fc78f0b136edd77c5fb6966} 
+QList$<$ \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*} $>$ QCPLayer\+::children (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_layer_ab831a99c8d30b15ec4533ca341e8813b}\index{QCPLayer@{QCPLayer}!draw@{draw}}
+\index{draw@{draw}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_ab831a99c8d30b15ec4533ca341e8813b} 
+void QCPLayer\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_painter}{QCPPainter}} \texorpdfstring{$\ast$}{*}}]{painter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a4a8e0a86f31462299e7fc8e8158dd2c6}\index{QCPLayer@{QCPLayer}!drawToPaintBuffer@{drawToPaintBuffer}}
+\index{drawToPaintBuffer@{drawToPaintBuffer}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{drawToPaintBuffer()}{drawToPaintBuffer()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a4a8e0a86f31462299e7fc8e8158dd2c6} 
+void QCPLayer\+::draw\+To\+Paint\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_ad322905c4700dcc7ceba63e011c730d2}\index{QCPLayer@{QCPLayer}!index@{index}}
+\index{index@{index}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_ad322905c4700dcc7ceba63e011c730d2} 
+int QCPLayer\+::index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_layer_a44ae50b011b19f3dd46a38d8e2e2c1b6}\index{QCPLayer@{QCPLayer}!mode@{mode}}
+\index{mode@{mode}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a44ae50b011b19f3dd46a38d8e2e2c1b6} 
+\mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}} QCPLayer\+::mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_layer_a37806f662b50b588fb1029a14fc5ef50}\index{QCPLayer@{QCPLayer}!name@{name}}
+\index{name@{name}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a37806f662b50b588fb1029a14fc5ef50} 
+QString QCPLayer\+::name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_layer_a923cb87bb467eeb17d649ba2b2fe4f5f}\index{QCPLayer@{QCPLayer}!parentPlot@{parentPlot}}
+\index{parentPlot@{parentPlot}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{parentPlot()}{parentPlot()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a923cb87bb467eeb17d649ba2b2fe4f5f} 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}} \texorpdfstring{$\ast$}{*} QCPLayer\+::parent\+Plot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_layer_ac2f64ac7761650582d968d86670ef362}\index{QCPLayer@{QCPLayer}!removeChild@{removeChild}}
+\index{removeChild@{removeChild}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{removeChild()}{removeChild()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_ac2f64ac7761650582d968d86670ef362} 
+void QCPLayer\+::remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}} \texorpdfstring{$\ast$}{*}}]{layerable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_adefd53b6db02f470151c416f42e37180}\index{QCPLayer@{QCPLayer}!replot@{replot}}
+\index{replot@{replot}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{replot()}{replot()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_adefd53b6db02f470151c416f42e37180} 
+void QCPLayer\+::replot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_layer_a938d57b04f4e4c23cedf1711f983919b}\index{QCPLayer@{QCPLayer}!setMode@{setMode}}
+\index{setMode@{setMode}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a938d57b04f4e4c23cedf1711f983919b} 
+void QCPLayer\+::set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}}}]{mode}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_layer_ac07671f74edf6884b51a82afb2c19516}\index{QCPLayer@{QCPLayer}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_ac07671f74edf6884b51a82afb2c19516} 
+void QCPLayer\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_layer_ad1cc2d6b32d2abb33c7f449b964e068c}\index{QCPLayer@{QCPLayer}!visible@{visible}}
+\index{visible@{visible}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{visible()}{visible()}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_ad1cc2d6b32d2abb33c7f449b964e068c} 
+bool QCPLayer\+::visible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_q_c_p_layer_ad655f55cccf49ba14d5172ec517e07ae}\index{QCPLayer@{QCPLayer}!QCPLayerable@{QCPLayerable}}
+\index{QCPLayerable@{QCPLayerable}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{QCPLayerable}{QCPLayerable}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_ad655f55cccf49ba14d5172ec517e07ae} 
+friend class \mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_q_c_p_layer_a1cdf9df76adcfae45261690aa0ca2198}\index{QCPLayer@{QCPLayer}!QCustomPlot@{QCustomPlot}}
+\index{QCustomPlot@{QCustomPlot}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{QCustomPlot}{QCustomPlot}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a1cdf9df76adcfae45261690aa0ca2198} 
+friend class \mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_q_c_p_layer_a704aa71bba469383c3a3c598c1ec0d28}\index{QCPLayer@{QCPLayer}!mChildren@{mChildren}}
+\index{mChildren@{mChildren}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mChildren}{mChildren}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a704aa71bba469383c3a3c598c1ec0d28} 
+QList$<$\mbox{\hyperlink{class_q_c_p_layerable}{QCPLayerable}}\texorpdfstring{$\ast$}{*}$>$ QCPLayer\+::m\+Children\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a122088bcab6cec76a52b75ce8606605b}\index{QCPLayer@{QCPLayer}!mIndex@{mIndex}}
+\index{mIndex@{mIndex}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mIndex}{mIndex}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a122088bcab6cec76a52b75ce8606605b} 
+int QCPLayer\+::m\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a11bd0aa190d8fa21c8c7673d070737c8}\index{QCPLayer@{QCPLayer}!mMode@{mMode}}
+\index{mMode@{mMode}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mMode}{mMode}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a11bd0aa190d8fa21c8c7673d070737c8} 
+\mbox{\hyperlink{class_q_c_p_layer_a67dcfc1590be2a1f2227c5a39bb59c7c}{Layer\+Mode}} QCPLayer\+::m\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a91e6298183cb4b9dfd4efdfaf1ecc220}\index{QCPLayer@{QCPLayer}!mName@{mName}}
+\index{mName@{mName}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mName}{mName}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a91e6298183cb4b9dfd4efdfaf1ecc220} 
+QString QCPLayer\+::m\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_aa0bdbc75e4350a0669ff515b3476a3d3}\index{QCPLayer@{QCPLayer}!mPaintBuffer@{mPaintBuffer}}
+\index{mPaintBuffer@{mPaintBuffer}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mPaintBuffer}{mPaintBuffer}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_aa0bdbc75e4350a0669ff515b3476a3d3} 
+QWeak\+Pointer$<$\mbox{\hyperlink{class_q_c_p_abstract_paint_buffer}{QCPAbstract\+Paint\+Buffer}}$>$ QCPLayer\+::m\+Paint\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a2f3374a7884bf403720cd1cf6f7ad1bb}\index{QCPLayer@{QCPLayer}!mParentPlot@{mParentPlot}}
+\index{mParentPlot@{mParentPlot}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mParentPlot}{mParentPlot}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a2f3374a7884bf403720cd1cf6f7ad1bb} 
+\mbox{\hyperlink{class_q_custom_plot}{QCustom\+Plot}}\texorpdfstring{$\ast$}{*} QCPLayer\+::m\+Parent\+Plot\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_layer_a264950deb08e589460c126c895a1e2b5}\index{QCPLayer@{QCPLayer}!mVisible@{mVisible}}
+\index{mVisible@{mVisible}!QCPLayer@{QCPLayer}}
+\doxysubsubsection{\texorpdfstring{mVisible}{mVisible}}
+{\footnotesize\ttfamily \label{class_q_c_p_layer_a264950deb08e589460c126c895a1e2b5} 
+bool QCPLayer\+::m\+Visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+One\+Drive -\/ Universidad de Córdoba/\+Doctorado\+\_\+\+ARR/\+Qt/\+Versiones/\+DWM1001\+DEV\+\_\+\+APP/\+Github/\+UCO-\/\+DWM1001-\/\+DEV/src/\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.\+h}}\end{DoxyCompactItemize}

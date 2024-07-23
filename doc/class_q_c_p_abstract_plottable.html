@@ -373,6 +373,8 @@ Creating own plottables</h1>
 <tr>
 <td><a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> <b>mSelection</b>  </td><td>Holds the current selection state of the plottable's data, i.e. the selected data ranges (<a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a>).  </td></tr>
 </table>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03495">3495</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af78a036e40db6f53a31abadc5323715a" name="af78a036e40db6f53a31abadc5323715a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af78a036e40db6f53a31abadc5323715a">&#9670;&#160;</a></span>QCPAbstractPlottable()</h2>
@@ -396,6 +398,48 @@ Creating own plottables</h1>
 <p>Since <a class="el" href="class_q_c_p_abstract_plottable.html" title="The abstract base class for all data representing objects in a plot.">QCPAbstractPlottable</a> is an abstract class that defines the basic interface to plottables, it can't be directly instantiated.</p>
 <p>You probably want one of the subclasses like <a class="el" href="class_q_c_p_graph.html">QCPGraph</a> or <a class="el" href="class_q_c_p_curve.html">QCPCurve</a> instead. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11419">11419</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11419</span>                                                                               :</div>
+<div class="line"><span class="lineno">11420</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable</a>(<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>(), QString(), <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a001b4ddefe6ea42d5e75866e235f62e8">axisRect</a>()),</div>
+<div class="line"><span class="lineno">11421</span>  <a class="code hl_variable" href="#ac29ffef424e2488675930de18cde612a">mName</a>(),</div>
+<div class="line"><span class="lineno">11422</span>  <a class="code hl_variable" href="#a152ac765bedf927fb240545d11d453ea">mAntialiasedFill</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">11423</span>  <a class="code hl_variable" href="#aa115755e525a8e3a86dc683f9cab755b">mAntialiasedScatters</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">11424</span>  <a class="code hl_variable" href="#a67bc0622fd1b9fa14e54c14922dcec66">mPen</a>(Qt::black),</div>
+<div class="line"><span class="lineno">11425</span>  <a class="code hl_variable" href="#a33f00674c0161c13315ab9da0895418e">mBrush</a>(Qt::NoBrush),</div>
+<div class="line"><span class="lineno">11426</span>  <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>(<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>),</div>
+<div class="line"><span class="lineno">11427</span>  <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>(<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>),</div>
+<div class="line"><span class="lineno">11428</span>  <a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a>(<a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d">QCP::stWhole</a>),</div>
+<div class="line"><span class="lineno">11429</span>  <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>(<span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">11430</span>{</div>
+<div class="line"><span class="lineno">11431</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>() != <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>())</div>
+<div class="line"><span class="lineno">11432</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Parent plot of keyAxis is not the same as that of valueAxis.&quot;</span>;</div>
+<div class="line"><span class="lineno">11433</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>())</div>
+<div class="line"><span class="lineno">11434</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;keyAxis and valueAxis must be orthogonal to each other.&quot;</span>;</div>
+<div class="line"><span class="lineno">11435</span>  </div>
+<div class="line"><span class="lineno">11436</span>  <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aeba7733bb9fadfb5a375b3f40de9e58a">registerPlottable</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">11437</span>  <a class="code hl_function" href="#a20e266ad646f8c4a7e4631040510e5d9">setSelectionDecorator</a>(<span class="keyword">new</span> <a class="code hl_class" href="class_q_c_p_selection_decorator.html">QCPSelectionDecorator</a>);</div>
+<div class="line"><span class="lineno">11438</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a0dbc731cab717f4ff67b4ca100c74046"><div class="ttname"><a href="#a0dbc731cab717f4ff67b4ca100c74046">QCPAbstractPlottable::mSelectionDecorator</a></div><div class="ttdeci">QCPSelectionDecorator * mSelectionDecorator</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03572">qcustomplot.h:3572</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a152ac765bedf927fb240545d11d453ea"><div class="ttname"><a href="#a152ac765bedf927fb240545d11d453ea">QCPAbstractPlottable::mAntialiasedFill</a></div><div class="ttdeci">bool mAntialiasedFill</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03566">qcustomplot.h:3566</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a20e266ad646f8c4a7e4631040510e5d9"><div class="ttname"><a href="#a20e266ad646f8c4a7e4631040510e5d9">QCPAbstractPlottable::setSelectionDecorator</a></div><div class="ttdeci">void setSelectionDecorator(QCPSelectionDecorator *decorator)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11578">qcustomplot.cpp:11578</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a2901452ca4aea911a1827717934a4bda"><div class="ttname"><a href="#a2901452ca4aea911a1827717934a4bda">QCPAbstractPlottable::mValueAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mValueAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03569">qcustomplot.h:3569</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a33f00674c0161c13315ab9da0895418e"><div class="ttname"><a href="#a33f00674c0161c13315ab9da0895418e">QCPAbstractPlottable::mBrush</a></div><div class="ttdeci">QBrush mBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03568">qcustomplot.h:3568</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a3944521f7bec90974737c9d192fc57ba"><div class="ttname"><a href="#a3944521f7bec90974737c9d192fc57ba">QCPAbstractPlottable::mSelectable</a></div><div class="ttdeci">QCP::SelectionType mSelectable</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03570">qcustomplot.h:3570</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a426f42e254d0f8ce5436a868c61a6827"><div class="ttname"><a href="#a426f42e254d0f8ce5436a868c61a6827">QCPAbstractPlottable::mKeyAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mKeyAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03569">qcustomplot.h:3569</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a67bc0622fd1b9fa14e54c14922dcec66"><div class="ttname"><a href="#a67bc0622fd1b9fa14e54c14922dcec66">QCPAbstractPlottable::mPen</a></div><div class="ttdeci">QPen mPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03567">qcustomplot.h:3567</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a842b3831660d3e33b73863fd133889dd"><div class="ttname"><a href="#a842b3831660d3e33b73863fd133889dd">QCPAbstractPlottable::valueAxis</a></div><div class="ttdeci">QCPAxis * valueAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03521">qcustomplot.h:3521</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_aa115755e525a8e3a86dc683f9cab755b"><div class="ttname"><a href="#aa115755e525a8e3a86dc683f9cab755b">QCPAbstractPlottable::mAntialiasedScatters</a></div><div class="ttdeci">bool mAntialiasedScatters</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03566">qcustomplot.h:3566</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_aa6f25b97ee99988fe352f17cb9ed962b"><div class="ttname"><a href="#aa6f25b97ee99988fe352f17cb9ed962b">QCPAbstractPlottable::keyAxis</a></div><div class="ttdeci">QCPAxis * keyAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03520">qcustomplot.h:3520</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_ac29ffef424e2488675930de18cde612a"><div class="ttname"><a href="#ac29ffef424e2488675930de18cde612a">QCPAbstractPlottable::mName</a></div><div class="ttdeci">QString mName</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03565">qcustomplot.h:3565</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a001b4ddefe6ea42d5e75866e235f62e8"><div class="ttname"><a href="class_q_c_p_axis.html#a001b4ddefe6ea42d5e75866e235f62e8">QCPAxis::axisRect</a></div><div class="ttdeci">QCPAxisRect * axisRect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02216">qcustomplot.h:2216</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ab988ef4538e2655bb77bd138189cd42e"><div class="ttname"><a href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">QCPAxis::orientation</a></div><div class="ttdeci">Qt::Orientation orientation() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02309">qcustomplot.h:2309</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4f87f420cb2597e2b393aab934d2f099"><div class="ttname"><a href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable::QCPLayerable</a></div><div class="ttdeci">QCPLayerable(QCustomPlot *plot, QString targetLayer=QString(), QCPLayerable *parentLayerable=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01367">qcustomplot.cpp:1367</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_html"><div class="ttname"><a href="class_q_c_p_selection_decorator.html">QCPSelectionDecorator</a></div><div class="ttdoc">Controls how a plottable's data selection is drawn.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03448">qcustomplot.h:3449</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_aeba7733bb9fadfb5a375b3f40de9e58a"><div class="ttname"><a href="class_q_custom_plot.html#aeba7733bb9fadfb5a375b3f40de9e58a">QCustomPlot::registerPlottable</a></div><div class="ttdeci">bool registerPlottable(QCPAbstractPlottable *plottable)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l16214">qcustomplot.cpp:16214</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d">QCP::stWhole</a></div><div class="ttdeci">@ stWhole</div><div class="ttdoc">Selection behaves like stMultipleDataRanges, but if there are any data points selected,...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00325">qcustomplot.h:324</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3223d1e2073bd1d3516863a1dce554b0" name="a3223d1e2073bd1d3516863a1dce554b0"></a>
@@ -421,6 +465,15 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11440">11440</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11441</span>{</div>
+<div class="line"><span class="lineno">11442</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>)</div>
+<div class="line"><span class="lineno">11443</span>  {</div>
+<div class="line"><span class="lineno">11444</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>;</div>
+<div class="line"><span class="lineno">11445</span>    <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">11446</span>  }</div>
+<div class="line"><span class="lineno">11447</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -442,6 +495,16 @@ Creating own plottables</h1>
 <p>Adds this plottable to the legend of the parent <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> (<a class="el" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">QCustomPlot::legend</a>).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3cc235007e2343a65ad4f463767e0e20">removeFromLegend</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11838">11838</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11839</span>{</div>
+<div class="line"><span class="lineno">11840</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a> || !<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_variable" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">legend</a>)</div>
+<div class="line"><span class="lineno">11841</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11842</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11843</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a70f8cabfd808f7d5204b9f18c45c13f5">addToLegend</a>(<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_variable" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">legend</a>);</div>
+<div class="line"><span class="lineno">11844</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a70f8cabfd808f7d5204b9f18c45c13f5"><div class="ttname"><a href="#a70f8cabfd808f7d5204b9f18c45c13f5">QCPAbstractPlottable::addToLegend</a></div><div class="ttdeci">bool addToLegend()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11838">qcustomplot.cpp:11838</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a73da53368aa4c2db3d874cf0db50d140"><div class="ttname"><a href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">QCustomPlot::legend</a></div><div class="ttdeci">QCPLegend * legend</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03945">qcustomplot.h:3945</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa64e93cb5b606d8110d2cc0a349bb30f" name="aa64e93cb5b606d8110d2cc0a349bb30f"></a>
@@ -464,6 +527,30 @@ Creating own plottables</h1>
 <p>If the plottable needs a more specialized representation in the legend, you can create a corresponding subclass of <a class="el" href="class_q_c_p_plottable_legend_item.html">QCPPlottableLegendItem</a> and add it to the legend manually instead of calling this method.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3cc235007e2343a65ad4f463767e0e20">removeFromLegend</a>, <a class="el" href="class_q_c_p_legend.html#a3ab274de52d2951faea45a6d975e6b3f">QCPLegend::addItem</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11811">11811</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11812</span>{</div>
+<div class="line"><span class="lineno">11813</span>  <span class="keywordflow">if</span> (!legend)</div>
+<div class="line"><span class="lineno">11814</span>  {</div>
+<div class="line"><span class="lineno">11815</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;passed legend is null&quot;</span>;</div>
+<div class="line"><span class="lineno">11816</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11817</span>  }</div>
+<div class="line"><span class="lineno">11818</span>  <span class="keywordflow">if</span> (legend-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>() != <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno">11819</span>  {</div>
+<div class="line"><span class="lineno">11820</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;passed legend isn&#39;t in the same QCustomPlot as this plottable&quot;</span>;</div>
+<div class="line"><span class="lineno">11821</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11822</span>  }</div>
+<div class="line"><span class="lineno">11823</span>  </div>
+<div class="line"><span class="lineno">11824</span>  <span class="keywordflow">if</span> (!legend-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#a4b90a442af871582df85c2bc13f91e88">hasItemWithPlottable</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">11825</span>  {</div>
+<div class="line"><span class="lineno">11826</span>    legend-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#a3ab274de52d2951faea45a6d975e6b3f">addItem</a>(<span class="keyword">new</span> <a class="code hl_friend" href="#a104c78e91302afd6842a903e472f552f">QCPPlottableLegendItem</a>(legend, <span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">11827</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">11828</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11829</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11830</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a104c78e91302afd6842a903e472f552f"><div class="ttname"><a href="#a104c78e91302afd6842a903e472f552f">QCPAbstractPlottable::QCPPlottableLegendItem</a></div><div class="ttdeci">friend class QCPPlottableLegendItem</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03595">qcustomplot.h:3595</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a3ab274de52d2951faea45a6d975e6b3f"><div class="ttname"><a href="class_q_c_p_legend.html#a3ab274de52d2951faea45a6d975e6b3f">QCPLegend::addItem</a></div><div class="ttdeci">bool addItem(QCPAbstractLegendItem *item)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19433">qcustomplot.cpp:19433</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a4b90a442af871582df85c2bc13f91e88"><div class="ttname"><a href="class_q_c_p_legend.html#a4b90a442af871582df85c2bc13f91e88">QCPLegend::hasItemWithPlottable</a></div><div class="ttdeci">bool hasItemWithPlottable(const QCPAbstractPlottable *plottable) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19418">qcustomplot.cpp:19418</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a022717896dc57b638a7b5a7be7212ba9" name="a022717896dc57b638a7b5a7be7212ba9"></a>
@@ -489,6 +576,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03516">3516</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3516</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a152ac765bedf927fb240545d11d453ea">mAntialiasedFill</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a795370db6b1309de0ab60b633efb5ec2" name="a795370db6b1309de0ab60b633efb5ec2"></a>
@@ -514,6 +604,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03517">3517</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3517</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa115755e525a8e3a86dc683f9cab755b">mAntialiasedScatters</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac032077fb0db93d6faa3273d02363398" name="ac032077fb0db93d6faa3273d02363398"></a>
@@ -541,6 +634,14 @@ Creating own plottables</h1>
 
 <p>Implements <a class="el" href="class_q_c_p_layerable.html#a1168944abbf9fa6731b0f4a2d0d67e8b">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11914">11914</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11915</span>{</div>
+<div class="line"><span class="lineno">11916</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4145e4251b0cf2dbedabeea0a38f84f6">QCP::aePlottables</a>);</div>
+<div class="line"><span class="lineno">11917</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3ab45a4c76a3333ce42eb217a81733ec"><div class="ttname"><a href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">QCPLayerable::mAntialiased</a></div><div class="ttdeci">bool mAntialiased</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00793">qcustomplot.h:793</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acb663e375d2d36dc5c55021ee5a2119b"><div class="ttname"><a href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">QCPLayerable::applyAntialiasingHint</a></div><div class="ttdeci">void applyAntialiasingHint(QCPPainter *painter, bool localAntialiased, QCP::AntialiasedElement overrideElement) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01599">qcustomplot.cpp:1599</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca4145e4251b0cf2dbedabeea0a38f84f6"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4145e4251b0cf2dbedabeea0a38f84f6">QCP::aePlottables</a></div><div class="ttdeci">@ aePlottables</div><div class="ttdoc">0x0020 Main lines of plottables</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00250">qcustomplot.h:249</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d06a59ea23324cce6330ebf2262c0ed" name="a8d06a59ea23324cce6330ebf2262c0ed"></a>
@@ -566,6 +667,12 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11930">11930</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11931</span>{</div>
+<div class="line"><span class="lineno">11932</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#a152ac765bedf927fb240545d11d453ea">mAntialiasedFill</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca788810f0aa930137de6ad6cc6d83d354">QCP::aeFills</a>);</div>
+<div class="line"><span class="lineno">11933</span>}</div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca788810f0aa930137de6ad6cc6d83d354"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca788810f0aa930137de6ad6cc6d83d354">QCP::aeFills</a></div><div class="ttdeci">@ aeFills</div><div class="ttdoc">0x0100 Borders of fills (e.g. under or between graphs)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00253">qcustomplot.h:252</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac95f26b15a1e5d9c7bd2c0a46d760fc9" name="ac95f26b15a1e5d9c7bd2c0a46d760fc9"></a>
@@ -591,6 +698,12 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11946">11946</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11947</span>{</div>
+<div class="line"><span class="lineno">11948</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#aa115755e525a8e3a86dc683f9cab755b">mAntialiasedScatters</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0cae45ed8cd167bffe27d7f40da4bc17e9c">QCP::aeScatters</a>);</div>
+<div class="line"><span class="lineno">11949</span>}</div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0cae45ed8cd167bffe27d7f40da4bc17e9c"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0cae45ed8cd167bffe27d7f40da4bc17e9c">QCP::aeScatters</a></div><div class="ttdeci">@ aeScatters</div><div class="ttdoc">0x0080 Scatter symbols of plottables (excluding scatter symbols of type ssPixmap)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00252">qcustomplot.h:251</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a893b4896dfd92b68b05b2600b80f5826" name="a893b4896dfd92b68b05b2600b80f5826"></a>
@@ -616,6 +729,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03519">3519</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3519</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a33f00674c0161c13315ab9da0895418e">mBrush</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a635cee3effc07ad421414c76fd83548c" name="a635cee3effc07ad421414c76fd83548c"></a>
@@ -643,6 +759,14 @@ Creating own plottables</h1>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#acbcfc9ecc75433747b1978a77b1864b3">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11885">11885</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11886</span>{</div>
+<div class="line"><span class="lineno">11887</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a> &amp;&amp; <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>)</div>
+<div class="line"><span class="lineno">11888</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data()-&gt;axisRect()-&gt;rect() &amp; <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>.data()-&gt;axisRect()-&gt;rect();</div>
+<div class="line"><span class="lineno">11889</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11890</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">11891</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5acb50ae984eef09a7ab92315d2ad708" name="a5acb50ae984eef09a7ab92315d2ad708"></a>
@@ -666,6 +790,20 @@ Creating own plottables</h1>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Transforms the given <em>key</em> and <em>value</em> to pixel coordinates and returns them in a QPointF. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11651">11651</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11652</span>{</div>
+<div class="line"><span class="lineno">11653</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> = <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data();</div>
+<div class="line"><span class="lineno">11654</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a> = <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>.data();</div>
+<div class="line"><span class="lineno">11655</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> || !<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid key or value axis&quot;</span>; <span class="keywordflow">return</span> QPointF(); }</div>
+<div class="line"><span class="lineno">11656</span>  </div>
+<div class="line"><span class="lineno">11657</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">11658</span>    <span class="keywordflow">return</span> QPointF(<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(key), <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(value));</div>
+<div class="line"><span class="lineno">11659</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11660</span>    <span class="keywordflow">return</span> QPointF(<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(value), <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(key));</div>
+<div class="line"><span class="lineno">11661</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html"><div class="ttname"><a href="class_q_c_p_axis.html">QCPAxis</a></div><div class="ttdoc">Manages a single axis inside a QCustomPlot.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02120">qcustomplot.h:2121</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_af15d1b3a7f7e9b53d759d3ccff1fe4b4"><div class="ttname"><a href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">QCPAxis::coordToPixel</a></div><div class="ttdeci">double coordToPixel(double value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09304">qcustomplot.cpp:9304</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ad84a36472441cf1f555c5683d0da93" name="a7ad84a36472441cf1f555c5683d0da93"></a>
@@ -700,6 +838,23 @@ Creating own plottables</h1>
 <p><em>key</em> and <em>value</em> are transformed to the coodinates in pixels and are written to <em>x</em> and <em>y</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3903c1120ab5c27e7fa46b597ef267bd">pixelsToCoords</a>, <a class="el" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">QCPAxis::coordToPixel</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11630">11630</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11631</span>{</div>
+<div class="line"><span class="lineno">11632</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> = <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data();</div>
+<div class="line"><span class="lineno">11633</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a> = <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>.data();</div>
+<div class="line"><span class="lineno">11634</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> || !<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid key or value axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">11635</span>  </div>
+<div class="line"><span class="lineno">11636</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">11637</span>  {</div>
+<div class="line"><span class="lineno">11638</span>    x = <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(key);</div>
+<div class="line"><span class="lineno">11639</span>    y = <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(value);</div>
+<div class="line"><span class="lineno">11640</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11641</span>  {</div>
+<div class="line"><span class="lineno">11642</span>    y = <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(key);</div>
+<div class="line"><span class="lineno">11643</span>    x = <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(value);</div>
+<div class="line"><span class="lineno">11644</span>  }</div>
+<div class="line"><span class="lineno">11645</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9b104d9da4f38f934363945c313bf82e" name="a9b104d9da4f38f934363945c313bf82e"></a>
@@ -727,6 +882,21 @@ Creating own plottables</h1>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#ae546370644a5551c76af739afc008bee">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11983">11983</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11984</span>{</div>
+<div class="line"><span class="lineno">11985</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a> != <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a>)</div>
+<div class="line"><span class="lineno">11986</span>  {</div>
+<div class="line"><span class="lineno">11987</span>    <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> selectionBefore = <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>;</div>
+<div class="line"><span class="lineno">11988</span>    <a class="code hl_function" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>(<a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a>());</div>
+<div class="line"><span class="lineno">11989</span>    <span class="keywordflow">if</span> (selectionStateChanged)</div>
+<div class="line"><span class="lineno">11990</span>      *selectionStateChanged = <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a> != selectionBefore;</div>
+<div class="line"><span class="lineno">11991</span>  }</div>
+<div class="line"><span class="lineno">11992</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a206aa62c9eba32c82e892b29cdbf6314"><div class="ttname"><a href="#a206aa62c9eba32c82e892b29cdbf6314">QCPAbstractPlottable::mSelection</a></div><div class="ttdeci">QCPDataSelection mSelection</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03571">qcustomplot.h:3571</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a219bc5403a9d85d3129165ec3f5ae436"><div class="ttname"><a href="#a219bc5403a9d85d3129165ec3f5ae436">QCPAbstractPlottable::setSelection</a></div><div class="ttdeci">Q_SLOT void setSelection(QCPDataSelection selection)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11558">qcustomplot.cpp:11558</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html"><div class="ttname"><a href="class_q_c_p_data_selection.html">QCPDataSelection</a></div><div class="ttdoc">Describes a data set by holding multiple QCPDataRange instances.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00986">qcustomplot.h:987</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a></div><div class="ttdeci">@ stNone</div><div class="ttdoc">The plottable is not selectable.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00324">qcustomplot.h:323</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a453f676a5cee7bf846c5f0fa05ea84b3" name="a453f676a5cee7bf846c5f0fa05ea84b3"></a>
@@ -890,6 +1060,9 @@ Creating own plottables</h1>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_plottable1_d.html#acb01f095cfb292f2cce2257e074554c4">QCPAbstractPlottable1D&lt; DataType &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#acb01f095cfb292f2cce2257e074554c4">QCPAbstractPlottable1D&lt; QCPBarsData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#acb01f095cfb292f2cce2257e074554c4">QCPAbstractPlottable1D&lt; QCPCurveData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#acb01f095cfb292f2cce2257e074554c4">QCPAbstractPlottable1D&lt; QCPFinancialData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#acb01f095cfb292f2cce2257e074554c4">QCPAbstractPlottable1D&lt; QCPGraphData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#acb01f095cfb292f2cce2257e074554c4">QCPAbstractPlottable1D&lt; QCPStatisticalBoxData &gt;</a>, and <a class="el" href="class_q_c_p_error_bars.html#ad8f0bfffcbb3c3bdf9ebe5f7ef2fe0cf">QCPErrorBars</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03541">3541</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3541</span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa6f25b97ee99988fe352f17cb9ed962b" name="aa6f25b97ee99988fe352f17cb9ed962b"></a>
@@ -915,6 +1088,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03520">3520</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3520</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a52c226eefcb1920240eeabae574d28c0" name="a52c226eefcb1920240eeabae574d28c0"></a>
@@ -940,6 +1116,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03515">3515</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3515</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac29ffef424e2488675930de18cde612a">mName</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad5972efc31344e5a7a78ab4f8864b2d3" name="ad5972efc31344e5a7a78ab4f8864b2d3"></a>
@@ -965,6 +1144,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03518">3518</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3518</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a67bc0622fd1b9fa14e54c14922dcec66">mPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a28d32c0062b9450847851ffdee1c5f69" name="a28d32c0062b9450847851ffdee1c5f69"></a>
@@ -993,6 +1175,12 @@ Creating own plottables</h1>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Returns the pixel input <em>pixelPos</em> as plot coordinates <em>key</em> and <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11693">11693</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11694</span>{</div>
+<div class="line"><span class="lineno">11695</span>  <a class="code hl_function" href="#a3903c1120ab5c27e7fa46b597ef267bd">pixelsToCoords</a>(pixelPos.x(), pixelPos.y(), key, value);</div>
+<div class="line"><span class="lineno">11696</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a3903c1120ab5c27e7fa46b597ef267bd"><div class="ttname"><a href="#a3903c1120ab5c27e7fa46b597ef267bd">QCPAbstractPlottable::pixelsToCoords</a></div><div class="ttdeci">void pixelsToCoords(double x, double y, double &amp;key, double &amp;value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11672">qcustomplot.cpp:11672</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3903c1120ab5c27e7fa46b597ef267bd" name="a3903c1120ab5c27e7fa46b597ef267bd"></a>
@@ -1027,6 +1215,24 @@ Creating own plottables</h1>
 <p><em>x</em> and <em>y</em> are transformed to the plot coodinates and are written to <em>key</em> and <em>value</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7ad84a36472441cf1f555c5683d0da93">coordsToPixels</a>, <a class="el" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">QCPAxis::coordToPixel</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11672">11672</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11673</span>{</div>
+<div class="line"><span class="lineno">11674</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> = <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data();</div>
+<div class="line"><span class="lineno">11675</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a> = <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>.data();</div>
+<div class="line"><span class="lineno">11676</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> || !<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid key or value axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">11677</span>  </div>
+<div class="line"><span class="lineno">11678</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">11679</span>  {</div>
+<div class="line"><span class="lineno">11680</span>    key = <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(x);</div>
+<div class="line"><span class="lineno">11681</span>    value = <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(y);</div>
+<div class="line"><span class="lineno">11682</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11683</span>  {</div>
+<div class="line"><span class="lineno">11684</span>    key = <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(y);</div>
+<div class="line"><span class="lineno">11685</span>    value = <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(x);</div>
+<div class="line"><span class="lineno">11686</span>  }</div>
+<div class="line"><span class="lineno">11687</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a536ef8f624cac59b6b6fdcb495723c57"><div class="ttname"><a href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">QCPAxis::pixelToCoord</a></div><div class="ttdeci">double pixelToCoord(double value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09266">qcustomplot.cpp:9266</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac95fb2604d9106d0852ad9ceb326fe8c" name="ac95fb2604d9106d0852ad9ceb326fe8c"></a>
@@ -1047,6 +1253,15 @@ Creating own plottables</h1>
 <p>Removes the plottable from the legend of the parent <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa64e93cb5b606d8110d2cc0a349bb30f">addToLegend</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11876">11876</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11877</span>{</div>
+<div class="line"><span class="lineno">11878</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a> || !<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_variable" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">legend</a>)</div>
+<div class="line"><span class="lineno">11879</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11880</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11881</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ac95fb2604d9106d0852ad9ceb326fe8c">removeFromLegend</a>(<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_variable" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">legend</a>);</div>
+<div class="line"><span class="lineno">11882</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_ac95fb2604d9106d0852ad9ceb326fe8c"><div class="ttname"><a href="#ac95fb2604d9106d0852ad9ceb326fe8c">QCPAbstractPlottable::removeFromLegend</a></div><div class="ttdeci">bool removeFromLegend() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11876">qcustomplot.cpp:11876</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3cc235007e2343a65ad4f463767e0e20" name="a3cc235007e2343a65ad4f463767e0e20"></a>
@@ -1068,6 +1283,23 @@ Creating own plottables</h1>
 <p>Returns true on success, i.e. if the legend exists and a legend item associated with this plottable was found and removed.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa64e93cb5b606d8110d2cc0a349bb30f">addToLegend</a>, <a class="el" href="class_q_c_p_legend.html#ac91595c3eaa746fe6321d2eb952c63bb">QCPLegend::removeItem</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11856">11856</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11857</span>{</div>
+<div class="line"><span class="lineno">11858</span>  <span class="keywordflow">if</span> (!legend)</div>
+<div class="line"><span class="lineno">11859</span>  {</div>
+<div class="line"><span class="lineno">11860</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;passed legend is null&quot;</span>;</div>
+<div class="line"><span class="lineno">11861</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11862</span>  }</div>
+<div class="line"><span class="lineno">11863</span>  </div>
+<div class="line"><span class="lineno">11864</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_plottable_legend_item.html">QCPPlottableLegendItem</a> *lip = legend-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#a91e790002d8bf15a20628a8e8841e397">itemWithPlottable</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">11865</span>    <span class="keywordflow">return</span> legend-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#ac91595c3eaa746fe6321d2eb952c63bb">removeItem</a>(lip);</div>
+<div class="line"><span class="lineno">11866</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11867</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">11868</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a91e790002d8bf15a20628a8e8841e397"><div class="ttname"><a href="class_q_c_p_legend.html#a91e790002d8bf15a20628a8e8841e397">QCPLegend::itemWithPlottable</a></div><div class="ttdeci">QCPPlottableLegendItem * itemWithPlottable(const QCPAbstractPlottable *plottable) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19369">qcustomplot.cpp:19369</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ac91595c3eaa746fe6321d2eb952c63bb"><div class="ttname"><a href="class_q_c_p_legend.html#ac91595c3eaa746fe6321d2eb952c63bb">QCPLegend::removeItem</a></div><div class="ttdeci">bool removeItem(int index)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19451">qcustomplot.cpp:19451</a></div></div>
+<div class="ttc" id="aclass_q_c_p_plottable_legend_item_html"><div class="ttname"><a href="class_q_c_p_plottable_legend_item.html">QCPPlottableLegendItem</a></div><div class="ttdoc">A legend item representing a plottable with an icon and the plottable name.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05114">qcustomplot.h:5115</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1491c4a606bccd2d09e65e11b79eb882" name="a1491c4a606bccd2d09e65e11b79eb882"></a>
@@ -1088,6 +1320,14 @@ Creating own plottables</h1>
 <p><em>onlyEnlarge</em> makes sure the ranges are only expanded, never reduced. So it's possible to show multiple plottables in their entirety by multiple calls to rescaleAxes where the first call has <em>onlyEnlarge</em> set to false (the default), and all subsequent set to true.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae96b83c961e257da116c6acf9c7da308">rescaleKeyAxis</a>, <a class="el" href="#a714eaf36b12434cd71846215504db82e">rescaleValueAxis</a>, <a class="el" href="class_q_custom_plot.html#ad86528f2cee6c7e446dea4a6e8839935">QCustomPlot::rescaleAxes</a>, <a class="el" href="class_q_c_p_axis.html#a499345f02ebce4b23d8ccec96e58daa9">QCPAxis::rescale</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11711">11711</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11712</span>{</div>
+<div class="line"><span class="lineno">11713</span>  <a class="code hl_function" href="#ae96b83c961e257da116c6acf9c7da308">rescaleKeyAxis</a>(onlyEnlarge);</div>
+<div class="line"><span class="lineno">11714</span>  <a class="code hl_function" href="#a714eaf36b12434cd71846215504db82e">rescaleValueAxis</a>(onlyEnlarge);</div>
+<div class="line"><span class="lineno">11715</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a714eaf36b12434cd71846215504db82e"><div class="ttname"><a href="#a714eaf36b12434cd71846215504db82e">QCPAbstractPlottable::rescaleValueAxis</a></div><div class="ttdeci">void rescaleValueAxis(bool onlyEnlarge=false, bool inKeyRange=false) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11764">qcustomplot.cpp:11764</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_ae96b83c961e257da116c6acf9c7da308"><div class="ttname"><a href="#ae96b83c961e257da116c6acf9c7da308">QCPAbstractPlottable::rescaleKeyAxis</a></div><div class="ttdeci">void rescaleKeyAxis(bool onlyEnlarge=false) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11722">qcustomplot.cpp:11722</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae96b83c961e257da116c6acf9c7da308" name="ae96b83c961e257da116c6acf9c7da308"></a>
@@ -1107,6 +1347,54 @@ Creating own plottables</h1>
 <p>Rescales the key axis of the plottable so the whole plottable is visible.</p>
 <p>See <a class="el" href="#a1491c4a606bccd2d09e65e11b79eb882">rescaleAxes</a> for detailed behaviour. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11722">11722</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11723</span>{</div>
+<div class="line"><span class="lineno">11724</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> = <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data();</div>
+<div class="line"><span class="lineno">11725</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid key axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">11726</span>  </div>
+<div class="line"><span class="lineno">11727</span>  <a class="code hl_enumeration" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9">QCP::SignDomain</a> signDomain = <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24">QCP::sdBoth</a>;</div>
+<div class="line"><span class="lineno">11728</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ad23e9ad97b44e9aeaf4fab8904280098">scaleType</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>)</div>
+<div class="line"><span class="lineno">11729</span>    signDomain = (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; 0 ? <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829">QCP::sdNegative</a> : <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f">QCP::sdPositive</a>);</div>
+<div class="line"><span class="lineno">11730</span>  </div>
+<div class="line"><span class="lineno">11731</span>  <span class="keywordtype">bool</span> foundRange;</div>
+<div class="line"><span class="lineno">11732</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> newRange = <a class="code hl_function" href="#a56b4d9000f4de0de86c566c84eb05a21">getKeyRange</a>(foundRange, signDomain);</div>
+<div class="line"><span class="lineno">11733</span>  <span class="keywordflow">if</span> (foundRange)</div>
+<div class="line"><span class="lineno">11734</span>  {</div>
+<div class="line"><span class="lineno">11735</span>    <span class="keywordflow">if</span> (onlyEnlarge)</div>
+<div class="line"><span class="lineno">11736</span>      newRange.<a class="code hl_function" href="class_q_c_p_range.html#a0fa1bc8048be50d52bea93a8caf08305">expand</a>(<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>());</div>
+<div class="line"><span class="lineno">11737</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_q_c_p_range.html#ab38bd4841c77c7bb86c9eea0f142dcc0">QCPRange::validRange</a>(newRange)) <span class="comment">// likely due to range being zero (plottable has only constant data in this axis dimension), shift current range to at least center the plottable</span></div>
+<div class="line"><span class="lineno">11738</span>    {</div>
+<div class="line"><span class="lineno">11739</span>      <span class="keywordtype">double</span> center = (newRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>+newRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)*0.5; <span class="comment">// upper and lower should be equal anyway, but just to make sure, incase validRange returned false for other reason</span></div>
+<div class="line"><span class="lineno">11740</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ad23e9ad97b44e9aeaf4fab8904280098">scaleType</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a>)</div>
+<div class="line"><span class="lineno">11741</span>      {</div>
+<div class="line"><span class="lineno">11742</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = center-<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/2.0;</div>
+<div class="line"><span class="lineno">11743</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = center+<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/2.0;</div>
+<div class="line"><span class="lineno">11744</span>      } <span class="keywordflow">else</span> <span class="comment">// scaleType() == stLogarithmic</span></div>
+<div class="line"><span class="lineno">11745</span>      {</div>
+<div class="line"><span class="lineno">11746</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = center/qSqrt(<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>);</div>
+<div class="line"><span class="lineno">11747</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = center*qSqrt(<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>);</div>
+<div class="line"><span class="lineno">11748</span>      }</div>
+<div class="line"><span class="lineno">11749</span>    }</div>
+<div class="line"><span class="lineno">11750</span>    <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">setRange</a>(newRange);</div>
+<div class="line"><span class="lineno">11751</span>  }</div>
+<div class="line"><span class="lineno">11752</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a56b4d9000f4de0de86c566c84eb05a21"><div class="ttname"><a href="#a56b4d9000f4de0de86c566c84eb05a21">QCPAbstractPlottable::getKeyRange</a></div><div class="ttdeci">virtual QCPRange getKeyRange(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth) const =0</div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a></div><div class="ttdeci">@ stLogarithmic</div><div class="ttdoc">Logarithmic scaling with correspondingly transformed axis coordinates (possibly also setTicker to a Q...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02196">qcustomplot.h:2195</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a></div><div class="ttdeci">@ stLinear</div><div class="ttdoc">Linear scaling.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02195">qcustomplot.h:2194</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ac4058855a81f1a883cf2e754f6a6acb1"><div class="ttname"><a href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">QCPAxis::range</a></div><div class="ttdeci">const QCPRange range() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02218">qcustomplot.h:2218</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ad23e9ad97b44e9aeaf4fab8904280098"><div class="ttname"><a href="class_q_c_p_axis.html#ad23e9ad97b44e9aeaf4fab8904280098">QCPAxis::scaleType</a></div><div class="ttdeci">ScaleType scaleType() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02217">qcustomplot.h:2217</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_aebdfea5d44c3a0ad2b4700cd4d25b641"><div class="ttname"><a href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">QCPAxis::setRange</a></div><div class="ttdeci">Q_SLOT void setRange(const QCPRange &amp;range)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l08390">qcustomplot.cpp:8390</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a0fa1bc8048be50d52bea93a8caf08305"><div class="ttname"><a href="class_q_c_p_range.html#a0fa1bc8048be50d52bea93a8caf08305">QCPRange::expand</a></div><div class="ttdeci">void expand(const QCPRange &amp;otherRange)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01960">qcustomplot.cpp:1960</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a62326e7cc4316b96df6a60813230e63f"><div class="ttname"><a href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">QCPRange::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00853">qcustomplot.h:853</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ab38bd4841c77c7bb86c9eea0f142dcc0"><div class="ttname"><a href="class_q_c_p_range.html#ab38bd4841c77c7bb86c9eea0f142dcc0">QCPRange::validRange</a></div><div class="ttdeci">static bool validRange(double lower, double upper)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02130">qcustomplot.cpp:2130</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afd50e7cf431af385614987d8553ff8a9"><div class="ttname"><a href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9">QCP::SignDomain</a></div><div class="ttdeci">SignDomain</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00216">qcustomplot.h:216</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829"><div class="ttname"><a href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829">QCP::sdNegative</a></div><div class="ttdeci">@ sdNegative</div><div class="ttdoc">The negative sign domain, i.e. numbers smaller than zero.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00217">qcustomplot.h:216</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f"><div class="ttname"><a href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f">QCP::sdPositive</a></div><div class="ttdeci">@ sdPositive</div><div class="ttdoc">The positive sign domain, i.e. numbers greater than zero.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00219">qcustomplot.h:218</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24"><div class="ttname"><a href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24">QCP::sdBoth</a></div><div class="ttdeci">@ sdBoth</div><div class="ttdoc">Both sign domains, including zero, i.e. all numbers.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00218">qcustomplot.h:217</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a714eaf36b12434cd71846215504db82e" name="a714eaf36b12434cd71846215504db82e"></a>
@@ -1131,6 +1419,40 @@ Creating own plottables</h1>
 <p>Returns true if the axis was actually scaled. This might not be the case if this plottable has an invalid range, e.g. because it has no data points.</p>
 <p>See <a class="el" href="#a1491c4a606bccd2d09e65e11b79eb882">rescaleAxes</a> for detailed behaviour. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11764">11764</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11765</span>{</div>
+<div class="line"><span class="lineno">11766</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> = <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data();</div>
+<div class="line"><span class="lineno">11767</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a> = <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>.data();</div>
+<div class="line"><span class="lineno">11768</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> || !<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid key or value axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">11769</span>  </div>
+<div class="line"><span class="lineno">11770</span>  <a class="code hl_enumeration" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9">QCP::SignDomain</a> signDomain = <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24">QCP::sdBoth</a>;</div>
+<div class="line"><span class="lineno">11771</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ad23e9ad97b44e9aeaf4fab8904280098">scaleType</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>)</div>
+<div class="line"><span class="lineno">11772</span>    signDomain = (<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; 0 ? <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829">QCP::sdNegative</a> : <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f">QCP::sdPositive</a>);</div>
+<div class="line"><span class="lineno">11773</span>  </div>
+<div class="line"><span class="lineno">11774</span>  <span class="keywordtype">bool</span> foundRange;</div>
+<div class="line"><span class="lineno">11775</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> newRange = <a class="code hl_function" href="#aa81c95aec08d86cdd5407e48b83ab186">getValueRange</a>(foundRange, signDomain, inKeyRange ? <a class="code hl_function" href="#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>() : <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>());</div>
+<div class="line"><span class="lineno">11776</span>  <span class="keywordflow">if</span> (foundRange)</div>
+<div class="line"><span class="lineno">11777</span>  {</div>
+<div class="line"><span class="lineno">11778</span>    <span class="keywordflow">if</span> (onlyEnlarge)</div>
+<div class="line"><span class="lineno">11779</span>      newRange.<a class="code hl_function" href="class_q_c_p_range.html#a0fa1bc8048be50d52bea93a8caf08305">expand</a>(<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>());</div>
+<div class="line"><span class="lineno">11780</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_q_c_p_range.html#ab38bd4841c77c7bb86c9eea0f142dcc0">QCPRange::validRange</a>(newRange)) <span class="comment">// likely due to range being zero (plottable has only constant data in this axis dimension), shift current range to at least center the plottable</span></div>
+<div class="line"><span class="lineno">11781</span>    {</div>
+<div class="line"><span class="lineno">11782</span>      <span class="keywordtype">double</span> center = (newRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>+newRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)*0.5; <span class="comment">// upper and lower should be equal anyway, but just to make sure, incase validRange returned false for other reason</span></div>
+<div class="line"><span class="lineno">11783</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ad23e9ad97b44e9aeaf4fab8904280098">scaleType</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a>)</div>
+<div class="line"><span class="lineno">11784</span>      {</div>
+<div class="line"><span class="lineno">11785</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = center-<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/2.0;</div>
+<div class="line"><span class="lineno">11786</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = center+<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/2.0;</div>
+<div class="line"><span class="lineno">11787</span>      } <span class="keywordflow">else</span> <span class="comment">// scaleType() == stLogarithmic</span></div>
+<div class="line"><span class="lineno">11788</span>      {</div>
+<div class="line"><span class="lineno">11789</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = center/qSqrt(<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>);</div>
+<div class="line"><span class="lineno">11790</span>        newRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = center*qSqrt(<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/<a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>);</div>
+<div class="line"><span class="lineno">11791</span>      }</div>
+<div class="line"><span class="lineno">11792</span>    }</div>
+<div class="line"><span class="lineno">11793</span>    <a class="code hl_function" href="#a842b3831660d3e33b73863fd133889dd">valueAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">setRange</a>(newRange);</div>
+<div class="line"><span class="lineno">11794</span>  }</div>
+<div class="line"><span class="lineno">11795</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_aa81c95aec08d86cdd5407e48b83ab186"><div class="ttname"><a href="#aa81c95aec08d86cdd5407e48b83ab186">QCPAbstractPlottable::getValueRange</a></div><div class="ttdeci">virtual QCPRange getValueRange(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth, const QCPRange &amp;inKeyRange=QCPRange()) const =0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a016653741033bd332d1d4c3c725cc284" name="a016653741033bd332d1d4c3c725cc284"></a>
@@ -1156,6 +1478,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03522">3522</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3522</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a663b1a44123c8340ac041a29d1e2c973" name="a663b1a44123c8340ac041a29d1e2c973"></a>
@@ -1209,6 +1534,10 @@ Creating own plottables</h1>
 </div><div class="memdoc">
 <p>Returns true if there are any data points of the plottable currently selected. Use <a class="el" href="#a040bf09f41d456284cfd39cc37aa068f">selection</a> to retrieve the current <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03523">3523</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3523</span>{ <span class="keywordflow">return</span> !<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>.<a class="code hl_function" href="class_q_c_p_data_selection.html#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>(); }</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a7f7526b475998dc0c3d6c376b24736c9"><div class="ttname"><a href="class_q_c_p_data_selection.html#a7f7526b475998dc0c3d6c376b24736c9">QCPDataSelection::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01017">qcustomplot.h:1017</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2d488568cf16600dd81fa23d7d439829" name="a2d488568cf16600dd81fa23d7d439829"></a>
@@ -1250,6 +1579,38 @@ Creating own plottables</h1>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#a7498c2d0d081cf7cad0fb3bb93aa0e91">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11952">11952</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11953</span>{</div>
+<div class="line"><span class="lineno">11954</span>  Q_UNUSED(event)</div>
+<div class="line"><span class="lineno">11955</span>  </div>
+<div class="line"><span class="lineno">11956</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a> != <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a>)</div>
+<div class="line"><span class="lineno">11957</span>  {</div>
+<div class="line"><span class="lineno">11958</span>    <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> newSelection = details.value&lt;<a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a>&gt;();</div>
+<div class="line"><span class="lineno">11959</span>    <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> selectionBefore = <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>;</div>
+<div class="line"><span class="lineno">11960</span>    <span class="keywordflow">if</span> (additive)</div>
+<div class="line"><span class="lineno">11961</span>    {</div>
+<div class="line"><span class="lineno">11962</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a> == <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d">QCP::stWhole</a>) <span class="comment">// in whole selection mode, we toggle to no selection even if currently unselected point was hit</span></div>
+<div class="line"><span class="lineno">11963</span>      {</div>
+<div class="line"><span class="lineno">11964</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0b3b514474fe93354fc74cfc144184b4">selected</a>())</div>
+<div class="line"><span class="lineno">11965</span>          <a class="code hl_function" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>(<a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a>());</div>
+<div class="line"><span class="lineno">11966</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11967</span>          <a class="code hl_function" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>(newSelection);</div>
+<div class="line"><span class="lineno">11968</span>      } <span class="keywordflow">else</span> <span class="comment">// in all other selection modes we toggle selections of homogeneously selected/unselected segments</span></div>
+<div class="line"><span class="lineno">11969</span>      {</div>
+<div class="line"><span class="lineno">11970</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>.<a class="code hl_function" href="class_q_c_p_data_selection.html#ab1ad3d5bbb55749c3f7ab1e45429c932">contains</a>(newSelection)) <span class="comment">// if entire newSelection is already selected, toggle selection</span></div>
+<div class="line"><span class="lineno">11971</span>          <a class="code hl_function" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>(<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>-newSelection);</div>
+<div class="line"><span class="lineno">11972</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11973</span>          <a class="code hl_function" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>(<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>+newSelection);</div>
+<div class="line"><span class="lineno">11974</span>      }</div>
+<div class="line"><span class="lineno">11975</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">11976</span>      <a class="code hl_function" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>(newSelection);</div>
+<div class="line"><span class="lineno">11977</span>    <span class="keywordflow">if</span> (selectionStateChanged)</div>
+<div class="line"><span class="lineno">11978</span>      *selectionStateChanged = <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a> != selectionBefore;</div>
+<div class="line"><span class="lineno">11979</span>  }</div>
+<div class="line"><span class="lineno">11980</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a0b3b514474fe93354fc74cfc144184b4"><div class="ttname"><a href="#a0b3b514474fe93354fc74cfc144184b4">QCPAbstractPlottable::selected</a></div><div class="ttdeci">bool selected() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03523">qcustomplot.h:3523</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_ab1ad3d5bbb55749c3f7ab1e45429c932"><div class="ttname"><a href="class_q_c_p_data_selection.html#ab1ad3d5bbb55749c3f7ab1e45429c932">QCPDataSelection::contains</a></div><div class="ttdeci">bool contains(const QCPDataSelection &amp;other) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02685">qcustomplot.cpp:2685</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a040bf09f41d456284cfd39cc37aa068f" name="a040bf09f41d456284cfd39cc37aa068f"></a>
@@ -1277,6 +1638,9 @@ Creating own plottables</h1>
 <p>Returns a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> encompassing all the data points that are currently selected on this plottable.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0b3b514474fe93354fc74cfc144184b4">selected</a>, <a class="el" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>, <a class="el" href="#ac238d6e910f976f1f30d41c2bca44ac3">setSelectable</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03524">3524</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3524</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af80ad8531642e786b6f4fad551c203c4" name="af80ad8531642e786b6f4fad551c203c4"></a>
@@ -1304,6 +1668,12 @@ Creating own plottables</h1>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#a908c9edda761886f33893be326dab77d">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11894">11894</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11895</span>{</div>
+<div class="line"><span class="lineno">11896</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a67148c8227b4155eca49135fc274c7ec">QCP::iSelectPlottables</a>;</div>
+<div class="line"><span class="lineno">11897</span>}</div>
+<div class="ttc" id="anamespace_q_c_p_html_a2ad6bb6281c7c2d593d4277b44c2b037a67148c8227b4155eca49135fc274c7ec"><div class="ttname"><a href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a67148c8227b4155eca49135fc274c7ec">QCP::iSelectPlottables</a></div><div class="ttdeci">@ iSelectPlottables</div><div class="ttdoc">0x008 Plottables are selectable (e.g. graphs, curves, bars,... see QCPAbstractPlottable)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00286">qcustomplot.h:285</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3af66432b1dca93b28e00e78a8c7c1d9" name="a3af66432b1dca93b28e00e78a8c7c1d9"></a>
@@ -1385,6 +1755,9 @@ Creating own plottables</h1>
 <p>Provides access to the selection decorator of this plottable. The selection decorator controls how selected data ranges are drawn (e.g. their pen color and fill), see <a class="el" href="class_q_c_p_selection_decorator.html">QCPSelectionDecorator</a> for details.</p>
 <p>If you wish to use an own <a class="el" href="class_q_c_p_selection_decorator.html">QCPSelectionDecorator</a> subclass, pass an instance of it to <a class="el" href="#a20e266ad646f8c4a7e4631040510e5d9">setSelectionDecorator</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03525">3525</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3525</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8e4964b629802ce50e1427c7fb21d35b" name="a8e4964b629802ce50e1427c7fb21d35b"></a>
@@ -1451,6 +1824,11 @@ Creating own plottables</h1>
 <p>Sets whether fills of this plottable are drawn antialiased or not.</p>
 <p>Note that this setting may be overridden by <a class="el" href="class_q_custom_plot.html#af6f91e5eab1be85f67c556e98c3745e8">QCustomPlot::setAntialiasedElements</a> and <a class="el" href="class_q_custom_plot.html#ae10d685b5eabea2999fb8775ca173c24">QCustomPlot::setNotAntialiasedElements</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11464">11464</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11465</span>{</div>
+<div class="line"><span class="lineno">11466</span>  <a class="code hl_variable" href="#a152ac765bedf927fb240545d11d453ea">mAntialiasedFill</a> = enabled;</div>
+<div class="line"><span class="lineno">11467</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2f03f067ede2ed4da6f7d0e4777a3f02" name="a2f03f067ede2ed4da6f7d0e4777a3f02"></a>
@@ -1470,6 +1848,11 @@ Creating own plottables</h1>
 <p>Sets whether the scatter symbols of this plottable are drawn antialiased or not.</p>
 <p>Note that this setting may be overridden by <a class="el" href="class_q_custom_plot.html#af6f91e5eab1be85f67c556e98c3745e8">QCustomPlot::setAntialiasedElements</a> and <a class="el" href="class_q_custom_plot.html#ae10d685b5eabea2999fb8775ca173c24">QCustomPlot::setNotAntialiasedElements</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11475">11475</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11476</span>{</div>
+<div class="line"><span class="lineno">11477</span>  <a class="code hl_variable" href="#aa115755e525a8e3a86dc683f9cab755b">mAntialiasedScatters</a> = enabled;</div>
+<div class="line"><span class="lineno">11478</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7a4b92144dca6453a1f0f210e27edc74" name="a7a4b92144dca6453a1f0f210e27edc74"></a>
@@ -1490,6 +1873,12 @@ Creating own plottables</h1>
 <p>For example, the <a class="el" href="class_q_c_p_graph.html">QCPGraph</a> subclass draws the fill under the graph with this brush, when it's not set to Qt::NoBrush.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab74b09ae4c0e7e13142fe4b5bf46cac7">setPen</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11502">11502</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11503</span>{</div>
+<div class="line"><span class="lineno">11504</span>  <a class="code hl_variable" href="#a33f00674c0161c13315ab9da0895418e">mBrush</a> = <a class="code hl_function" href="#a893b4896dfd92b68b05b2600b80f5826">brush</a>;</div>
+<div class="line"><span class="lineno">11505</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a893b4896dfd92b68b05b2600b80f5826"><div class="ttname"><a href="#a893b4896dfd92b68b05b2600b80f5826">QCPAbstractPlottable::brush</a></div><div class="ttdeci">QBrush brush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03519">qcustomplot.h:3519</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8524fa2994c63c0913ebd9bb2ffa3920" name="a8524fa2994c63c0913ebd9bb2ffa3920"></a>
@@ -1510,6 +1899,11 @@ Creating own plottables</h1>
 <p>Normally, the key and value axes are set in the constructor of the plottable (or <a class="el" href="class_q_custom_plot.html#a2836a46e31d5aee174ae054c0aa6580b">QCustomPlot::addGraph</a> when working with QCPGraphs through the dedicated graph interface).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a71626a07367e241ec62ad2c34baf21cb">setValueAxis</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11518">11518</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11519</span>{</div>
+<div class="line"><span class="lineno">11520</span>  <a class="code hl_variable" href="#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a> = axis;</div>
+<div class="line"><span class="lineno">11521</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab79c7ba76bc7fa89a4b3580e12149f1f" name="ab79c7ba76bc7fa89a4b3580e12149f1f"></a>
@@ -1528,6 +1922,12 @@ Creating own plottables</h1>
 </div><div class="memdoc">
 <p>The name is the textual representation of this plottable as it is displayed in the legend (<a class="el" href="class_q_c_p_legend.html">QCPLegend</a>). It may contain any UTF-8 characters, including newlines. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11453">11453</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11454</span>{</div>
+<div class="line"><span class="lineno">11455</span>  <a class="code hl_variable" href="#ac29ffef424e2488675930de18cde612a">mName</a> = <a class="code hl_function" href="#a52c226eefcb1920240eeabae574d28c0">name</a>;</div>
+<div class="line"><span class="lineno">11456</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a52c226eefcb1920240eeabae574d28c0"><div class="ttname"><a href="#a52c226eefcb1920240eeabae574d28c0">QCPAbstractPlottable::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03515">qcustomplot.h:3515</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab74b09ae4c0e7e13142fe4b5bf46cac7" name="ab74b09ae4c0e7e13142fe4b5bf46cac7"></a>
@@ -1548,6 +1948,12 @@ Creating own plottables</h1>
 <p>For example, the <a class="el" href="class_q_c_p_graph.html">QCPGraph</a> subclass draws its graph lines with this pen.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7a4b92144dca6453a1f0f210e27edc74">setBrush</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11488">11488</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11489</span>{</div>
+<div class="line"><span class="lineno">11490</span>  <a class="code hl_variable" href="#a67bc0622fd1b9fa14e54c14922dcec66">mPen</a> = <a class="code hl_function" href="#ad5972efc31344e5a7a78ab4f8864b2d3">pen</a>;</div>
+<div class="line"><span class="lineno">11491</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_ad5972efc31344e5a7a78ab4f8864b2d3"><div class="ttname"><a href="#ad5972efc31344e5a7a78ab4f8864b2d3">QCPAbstractPlottable::pen</a></div><div class="ttdeci">QPen pen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03518">qcustomplot.h:3518</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac238d6e910f976f1f30d41c2bca44ac3" name="ac238d6e910f976f1f30d41c2bca44ac3"></a>
@@ -1568,6 +1974,26 @@ Creating own plottables</h1>
 <p>A selection can happen by clicking on the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> surface (When <a class="el" href="class_q_custom_plot.html#a5ee1e2f6ae27419deca53e75907c27e5">QCustomPlot::setInteractions</a> contains <a class="el" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a67148c8227b4155eca49135fc274c7ec">QCP::iSelectPlottables</a>), by dragging a selection rect (When <a class="el" href="class_q_custom_plot.html#a810ef958ebe84db661c7288b526c0deb">QCustomPlot::setSelectionRectMode</a> is <a class="el" href="namespace_q_c_p.html#ac9aa4d6d81ac76b094f9af9ad2d3aacfa62c286e8da283a0cbb88ecac2f3f7506">QCP::srmSelect</a>), or programmatically by calling <a class="el" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a219bc5403a9d85d3129165ec3f5ae436">setSelection</a>, <a class="el" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038">QCP::SelectionType</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11604">11604</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11605</span>{</div>
+<div class="line"><span class="lineno">11606</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a> != <a class="code hl_function" href="#a016653741033bd332d1d4c3c725cc284">selectable</a>)</div>
+<div class="line"><span class="lineno">11607</span>  {</div>
+<div class="line"><span class="lineno">11608</span>    <a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a> = <a class="code hl_function" href="#a016653741033bd332d1d4c3c725cc284">selectable</a>;</div>
+<div class="line"><span class="lineno">11609</span>    <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> oldSelection = <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>;</div>
+<div class="line"><span class="lineno">11610</span>    <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>.<a class="code hl_function" href="class_q_c_p_data_selection.html#a17b84d852911531d229f4a76aa239a75">enforceType</a>(<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a>);</div>
+<div class="line"><span class="lineno">11611</span>    emit <a class="code hl_signal" href="#a663b1a44123c8340ac041a29d1e2c973">selectableChanged</a>(<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a>);</div>
+<div class="line"><span class="lineno">11612</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a> != oldSelection)</div>
+<div class="line"><span class="lineno">11613</span>    {</div>
+<div class="line"><span class="lineno">11614</span>      emit <a class="code hl_signal" href="#a3af66432b1dca93b28e00e78a8c7c1d9">selectionChanged</a>(<a class="code hl_function" href="#a0b3b514474fe93354fc74cfc144184b4">selected</a>());</div>
+<div class="line"><span class="lineno">11615</span>      emit <a class="code hl_signal" href="#a3af66432b1dca93b28e00e78a8c7c1d9">selectionChanged</a>(<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>);</div>
+<div class="line"><span class="lineno">11616</span>    }</div>
+<div class="line"><span class="lineno">11617</span>  }</div>
+<div class="line"><span class="lineno">11618</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a016653741033bd332d1d4c3c725cc284"><div class="ttname"><a href="#a016653741033bd332d1d4c3c725cc284">QCPAbstractPlottable::selectable</a></div><div class="ttdeci">QCP::SelectionType selectable() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03522">qcustomplot.h:3522</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a3af66432b1dca93b28e00e78a8c7c1d9"><div class="ttname"><a href="#a3af66432b1dca93b28e00e78a8c7c1d9">QCPAbstractPlottable::selectionChanged</a></div><div class="ttdeci">void selectionChanged(bool selected)</div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a663b1a44123c8340ac041a29d1e2c973"><div class="ttname"><a href="#a663b1a44123c8340ac041a29d1e2c973">QCPAbstractPlottable::selectableChanged</a></div><div class="ttdeci">void selectableChanged(QCP::SelectionType selectable)</div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a17b84d852911531d229f4a76aa239a75"><div class="ttname"><a href="class_q_c_p_data_selection.html#a17b84d852911531d229f4a76aa239a75">QCPDataSelection::enforceType</a></div><div class="ttdeci">void enforceType(QCP::SelectionType type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02638">qcustomplot.cpp:2638</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a219bc5403a9d85d3129165ec3f5ae436" name="a219bc5403a9d85d3129165ec3f5ae436"></a>
@@ -1590,6 +2016,18 @@ Creating own plottables</h1>
 <p>emits the <a class="el" href="#a3af66432b1dca93b28e00e78a8c7c1d9">selectionChanged</a> signal when <em>selected</em> is different from the previous selection state.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac238d6e910f976f1f30d41c2bca44ac3">setSelectable</a>, <a class="el" href="#a8e4964b629802ce50e1427c7fb21d35b">selectTest</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11558">11558</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11559</span>{</div>
+<div class="line"><span class="lineno">11560</span>  <a class="code hl_function" href="#a040bf09f41d456284cfd39cc37aa068f">selection</a>.<a class="code hl_function" href="class_q_c_p_data_selection.html#a17b84d852911531d229f4a76aa239a75">enforceType</a>(<a class="code hl_variable" href="#a3944521f7bec90974737c9d192fc57ba">mSelectable</a>);</div>
+<div class="line"><span class="lineno">11561</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a> != <a class="code hl_function" href="#a040bf09f41d456284cfd39cc37aa068f">selection</a>)</div>
+<div class="line"><span class="lineno">11562</span>  {</div>
+<div class="line"><span class="lineno">11563</span>    <a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a> = <a class="code hl_function" href="#a040bf09f41d456284cfd39cc37aa068f">selection</a>;</div>
+<div class="line"><span class="lineno">11564</span>    emit <a class="code hl_signal" href="#a3af66432b1dca93b28e00e78a8c7c1d9">selectionChanged</a>(<a class="code hl_function" href="#a0b3b514474fe93354fc74cfc144184b4">selected</a>());</div>
+<div class="line"><span class="lineno">11565</span>    emit <a class="code hl_signal" href="#a3af66432b1dca93b28e00e78a8c7c1d9">selectionChanged</a>(<a class="code hl_variable" href="#a206aa62c9eba32c82e892b29cdbf6314">mSelection</a>);</div>
+<div class="line"><span class="lineno">11566</span>  }</div>
+<div class="line"><span class="lineno">11567</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a040bf09f41d456284cfd39cc37aa068f"><div class="ttname"><a href="#a040bf09f41d456284cfd39cc37aa068f">QCPAbstractPlottable::selection</a></div><div class="ttdeci">QCPDataSelection selection() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03524">qcustomplot.h:3524</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a20e266ad646f8c4a7e4631040510e5d9" name="a20e266ad646f8c4a7e4631040510e5d9"></a>
@@ -1610,6 +2048,23 @@ Creating own plottables</h1>
 <p>The plottable takes ownership of the <em>decorator</em>.</p>
 <p>The currently set decorator can be accessed via <a class="el" href="#a7861518e47ca0c6a0c386032c2db075e">selectionDecorator</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11578">11578</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11579</span>{</div>
+<div class="line"><span class="lineno">11580</span>  <span class="keywordflow">if</span> (decorator)</div>
+<div class="line"><span class="lineno">11581</span>  {</div>
+<div class="line"><span class="lineno">11582</span>    <span class="keywordflow">if</span> (decorator-&gt;<a class="code hl_function" href="class_q_c_p_selection_decorator.html#af66cb39e308da0285ae5d533e1e85027">registerWithPlottable</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">11583</span>    {</div>
+<div class="line"><span class="lineno">11584</span>      <span class="keyword">delete</span> <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>; <span class="comment">// delete old decorator if necessary</span></div>
+<div class="line"><span class="lineno">11585</span>      <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a> = decorator;</div>
+<div class="line"><span class="lineno">11586</span>    }</div>
+<div class="line"><span class="lineno">11587</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>) <span class="comment">// just clear decorator</span></div>
+<div class="line"><span class="lineno">11588</span>  {</div>
+<div class="line"><span class="lineno">11589</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a>;</div>
+<div class="line"><span class="lineno">11590</span>    <a class="code hl_variable" href="#a0dbc731cab717f4ff67b4ca100c74046">mSelectionDecorator</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">11591</span>  }</div>
+<div class="line"><span class="lineno">11592</span>}</div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_html_af66cb39e308da0285ae5d533e1e85027"><div class="ttname"><a href="class_q_c_p_selection_decorator.html#af66cb39e308da0285ae5d533e1e85027">QCPSelectionDecorator::registerWithPlottable</a></div><div class="ttdeci">virtual bool registerWithPlottable(QCPAbstractPlottable *plottable)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11190">qcustomplot.cpp:11190</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a71626a07367e241ec62ad2c34baf21cb" name="a71626a07367e241ec62ad2c34baf21cb"></a>
@@ -1630,6 +2085,11 @@ Creating own plottables</h1>
 <p>Normally, the key and value axes are set in the constructor of the plottable (or <a class="el" href="class_q_custom_plot.html#a2836a46e31d5aee174ae054c0aa6580b">QCustomPlot::addGraph</a> when working with QCPGraphs through the dedicated graph interface).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8524fa2994c63c0913ebd9bb2ffa3920">setKeyAxis</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l11534">11534</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">11535</span>{</div>
+<div class="line"><span class="lineno">11536</span>  <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a> = axis;</div>
+<div class="line"><span class="lineno">11537</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a842b3831660d3e33b73863fd133889dd" name="a842b3831660d3e33b73863fd133889dd"></a>
@@ -1655,6 +2115,9 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03521">3521</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3521</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>.data(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -1678,6 +2141,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03594">3594</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a104c78e91302afd6842a903e472f552f" name="a104c78e91302afd6842a903e472f552f"></a>
@@ -1700,6 +2165,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03595">3595</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdf9df76adcfae45261690aa0ca2198" name="a1cdf9df76adcfae45261690aa0ca2198"></a>
@@ -1721,6 +2188,8 @@ Creating own plottables</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03593">3593</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1745,6 +2214,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03566">3566</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aa115755e525a8e3a86dc683f9cab755b" name="aa115755e525a8e3a86dc683f9cab755b"></a>
@@ -1766,6 +2237,8 @@ Creating own plottables</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03566">3566</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1789,6 +2262,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03568">3568</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a426f42e254d0f8ce5436a868c61a6827" name="a426f42e254d0f8ce5436a868c61a6827"></a>
@@ -1810,6 +2285,8 @@ Creating own plottables</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03569">3569</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1833,6 +2310,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03565">3565</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a67bc0622fd1b9fa14e54c14922dcec66" name="a67bc0622fd1b9fa14e54c14922dcec66"></a>
@@ -1854,6 +2333,8 @@ Creating own plottables</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03567">3567</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1877,6 +2358,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03570">3570</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a206aa62c9eba32c82e892b29cdbf6314" name="a206aa62c9eba32c82e892b29cdbf6314"></a>
@@ -1898,6 +2381,8 @@ Creating own plottables</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03571">3571</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1921,6 +2406,8 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03572">3572</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a2901452ca4aea911a1827717934a4bda" name="a2901452ca4aea911a1827717934a4bda"></a>
@@ -1943,11 +2430,13 @@ Creating own plottables</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03569">3569</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

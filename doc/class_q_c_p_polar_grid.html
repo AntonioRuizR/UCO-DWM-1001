@@ -288,6 +288,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The grid in both angular and radial dimensions for polar plots. </p>
 <dl class="section warning"><dt>Warning</dt><dd>In this <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> version, polar plots are a tech preview. Expect documentation and functionality to be incomplete, as well as changing public interfaces in the future. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07531">7531</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a58c68f0d47bdf4614dc4017d51876bc2" name="a58c68f0d47bdf4614dc4017d51876bc2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58c68f0d47bdf4614dc4017d51876bc2">&#9670;&#160;</a></span>GridType</h2>
@@ -308,6 +310,17 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d" name="a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d"></a>gtNone&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07541">7541</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7541</span>                { <a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a8a856e09cb4bfa377e174fea50109543">gtAngular</a> = 0x01 </div>
+<div class="line"><span class="lineno"> 7542</span>                  ,<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a1ca1cc598280072772c11b22849b5faf">gtRadial</a> = 0x02 </div>
+<div class="line"><span class="lineno"> 7543</span>                  ,<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a77ef19b4cc2ac233c6239b8919360861">gtAll</a>    = 0xFF </div>
+<div class="line"><span class="lineno"> 7544</span>                  ,<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d">gtNone</a>   = 0x00 </div>
+<div class="line"><span class="lineno"> 7545</span>                };</div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a58c68f0d47bdf4614dc4017d51876bc2a1ca1cc598280072772c11b22849b5faf"><div class="ttname"><a href="#a58c68f0d47bdf4614dc4017d51876bc2a1ca1cc598280072772c11b22849b5faf">QCPPolarGrid::gtRadial</a></div><div class="ttdeci">@ gtRadial</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07543">qcustomplot.h:7542</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a58c68f0d47bdf4614dc4017d51876bc2a77ef19b4cc2ac233c6239b8919360861"><div class="ttname"><a href="#a58c68f0d47bdf4614dc4017d51876bc2a77ef19b4cc2ac233c6239b8919360861">QCPPolarGrid::gtAll</a></div><div class="ttdeci">@ gtAll</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07544">qcustomplot.h:7543</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a58c68f0d47bdf4614dc4017d51876bc2a8a856e09cb4bfa377e174fea50109543"><div class="ttname"><a href="#a58c68f0d47bdf4614dc4017d51876bc2a8a856e09cb4bfa377e174fea50109543">QCPPolarGrid::gtAngular</a></div><div class="ttdeci">@ gtAngular</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07542">qcustomplot.h:7541</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d"><div class="ttname"><a href="#a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d">QCPPolarGrid::gtNone</a></div><div class="ttdeci">@ gtNone</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07545">qcustomplot.h:7544</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -336,6 +349,45 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a <a class="el" href="class_q_c_p_polar_grid.html" title="The grid in both angular and radial dimensions for polar plots.">QCPPolarGrid</a> instance and sets default values.</p>
 <p>You shouldn't instantiate grids on their own, since every axis brings its own grid. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34181">34181</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34181</span>                                                          :</div>
+<div class="line"><span class="lineno">34182</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable</a>(parentAxis-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>(), QString(), parentAxis),</div>
+<div class="line"><span class="lineno">34183</span>  <a class="code hl_variable" href="#a654c8090e410942f7c0e939c8b4dcfe0">mType</a>(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d">gtNone</a>),</div>
+<div class="line"><span class="lineno">34184</span>  <a class="code hl_variable" href="#a29232977b1ed2d73801f8a9e5018be28">mSubGridType</a>(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d">gtNone</a>),</div>
+<div class="line"><span class="lineno">34185</span>  <a class="code hl_variable" href="#a128297f31e71060cbed5f0b38028f916">mAntialiasedSubGrid</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">34186</span>  <a class="code hl_variable" href="#a82d4e316240af6469706c66f798759cd">mAntialiasedZeroLine</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">34187</span>  <a class="code hl_variable" href="#a1ddecf521612eee506f54493b34912cf">mParentAxis</a>(parentAxis)</div>
+<div class="line"><span class="lineno">34188</span>{</div>
+<div class="line"><span class="lineno">34189</span>  <span class="comment">// warning: this is called in QCPPolarAxisAngular constructor, so parentAxis members should not be accessed/called</span></div>
+<div class="line"><span class="lineno">34190</span>  setParent(parentAxis);</div>
+<div class="line"><span class="lineno">34191</span>  <a class="code hl_function" href="#a3cfa8889817de9f5b81b2a478b0b5b99">setType</a>(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a77ef19b4cc2ac233c6239b8919360861">gtAll</a>);</div>
+<div class="line"><span class="lineno">34192</span>  <a class="code hl_function" href="#a92daeff4ec132b60e5a30ee58dd36c53">setSubGridType</a>(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2af7e55cd45cc947355d86490a2713613d">gtNone</a>);</div>
+<div class="line"><span class="lineno">34193</span>  </div>
+<div class="line"><span class="lineno">34194</span>  <a class="code hl_function" href="#ae67f25627e160421817cf354a232a528">setAngularPen</a>(QPen(QColor(200,200,200), 0, Qt::DotLine));</div>
+<div class="line"><span class="lineno">34195</span>  <a class="code hl_function" href="#a0f88a4eb7e890e2c4bf4cfc366bab55d">setAngularSubGridPen</a>(QPen(QColor(220,220,220), 0, Qt::DotLine));</div>
+<div class="line"><span class="lineno">34196</span>  </div>
+<div class="line"><span class="lineno">34197</span>  <a class="code hl_function" href="#a88d242172e84fe6657dd2629fa8397f1">setRadialPen</a>(QPen(QColor(200,200,200), 0, Qt::DotLine));</div>
+<div class="line"><span class="lineno">34198</span>  <a class="code hl_function" href="#a944da087c371a15ae54652df6d881135">setRadialSubGridPen</a>(QPen(QColor(220,220,220), 0, Qt::DotLine));</div>
+<div class="line"><span class="lineno">34199</span>  <a class="code hl_function" href="#ad9e13e63232986fc6748dafb62970bcf">setRadialZeroLinePen</a>(QPen(QColor(200,200,200), 0, Qt::SolidLine));</div>
+<div class="line"><span class="lineno">34200</span>  </div>
+<div class="line"><span class="lineno">34201</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">setAntialiased</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">34202</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4f87f420cb2597e2b393aab934d2f099"><div class="ttname"><a href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable::QCPLayerable</a></div><div class="ttdeci">QCPLayerable(QCustomPlot *plot, QString targetLayer=QString(), QCPLayerable *parentLayerable=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01367">qcustomplot.cpp:1367</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4fd43e89be4a553ead41652565ff0581"><div class="ttname"><a href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">QCPLayerable::setAntialiased</a></div><div class="ttdeci">void setAntialiased(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01445">qcustomplot.cpp:1445</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a0f88a4eb7e890e2c4bf4cfc366bab55d"><div class="ttname"><a href="#a0f88a4eb7e890e2c4bf4cfc366bab55d">QCPPolarGrid::setAngularSubGridPen</a></div><div class="ttdeci">void setAngularSubGridPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34246">qcustomplot.cpp:34246</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a128297f31e71060cbed5f0b38028f916"><div class="ttname"><a href="#a128297f31e71060cbed5f0b38028f916">QCPPolarGrid::mAntialiasedSubGrid</a></div><div class="ttdeci">bool mAntialiasedSubGrid</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07580">qcustomplot.h:7580</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a1ddecf521612eee506f54493b34912cf"><div class="ttname"><a href="#a1ddecf521612eee506f54493b34912cf">QCPPolarGrid::mParentAxis</a></div><div class="ttdeci">QCPPolarAxisAngular * mParentAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07585">qcustomplot.h:7585</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a29232977b1ed2d73801f8a9e5018be28"><div class="ttname"><a href="#a29232977b1ed2d73801f8a9e5018be28">QCPPolarGrid::mSubGridType</a></div><div class="ttdeci">GridTypes mSubGridType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07579">qcustomplot.h:7579</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a3cfa8889817de9f5b81b2a478b0b5b99"><div class="ttname"><a href="#a3cfa8889817de9f5b81b2a478b0b5b99">QCPPolarGrid::setType</a></div><div class="ttdeci">void setType(GridTypes type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34209">qcustomplot.cpp:34209</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a654c8090e410942f7c0e939c8b4dcfe0"><div class="ttname"><a href="#a654c8090e410942f7c0e939c8b4dcfe0">QCPPolarGrid::mType</a></div><div class="ttdeci">GridTypes mType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07578">qcustomplot.h:7578</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a82d4e316240af6469706c66f798759cd"><div class="ttname"><a href="#a82d4e316240af6469706c66f798759cd">QCPPolarGrid::mAntialiasedZeroLine</a></div><div class="ttdeci">bool mAntialiasedZeroLine</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07580">qcustomplot.h:7580</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a88d242172e84fe6657dd2629fa8397f1"><div class="ttname"><a href="#a88d242172e84fe6657dd2629fa8397f1">QCPPolarGrid::setRadialPen</a></div><div class="ttdeci">void setRadialPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34251">qcustomplot.cpp:34251</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a92daeff4ec132b60e5a30ee58dd36c53"><div class="ttname"><a href="#a92daeff4ec132b60e5a30ee58dd36c53">QCPPolarGrid::setSubGridType</a></div><div class="ttdeci">void setSubGridType(GridTypes type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34214">qcustomplot.cpp:34214</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a944da087c371a15ae54652df6d881135"><div class="ttname"><a href="#a944da087c371a15ae54652df6d881135">QCPPolarGrid::setRadialSubGridPen</a></div><div class="ttdeci">void setRadialSubGridPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34256">qcustomplot.cpp:34256</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_ad9e13e63232986fc6748dafb62970bcf"><div class="ttname"><a href="#ad9e13e63232986fc6748dafb62970bcf">QCPPolarGrid::setRadialZeroLinePen</a></div><div class="ttdeci">void setRadialZeroLinePen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34261">qcustomplot.cpp:34261</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_ae67f25627e160421817cf354a232a528"><div class="ttname"><a href="#ae67f25627e160421817cf354a232a528">QCPPolarGrid::setAngularPen</a></div><div class="ttdeci">void setAngularPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34238">qcustomplot.cpp:34238</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -362,6 +414,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07558">7558</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7558</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#abd5cb0e3d720a75b2bf162a4161a9b43">mAngularPen</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_abd5cb0e3d720a75b2bf162a4161a9b43"><div class="ttname"><a href="#abd5cb0e3d720a75b2bf162a4161a9b43">QCPPolarGrid::mAngularPen</a></div><div class="ttdeci">QPen mAngularPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07581">qcustomplot.h:7581</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a75cfe9ac428cdf402e4fc2c9c9c90c1c" name="a75cfe9ac428cdf402e4fc2c9c9c90c1c"></a>
@@ -387,6 +443,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07559">7559</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7559</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a867f3193c8f0c6d1ce25ab26798d1aab">mAngularSubGridPen</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a867f3193c8f0c6d1ce25ab26798d1aab"><div class="ttname"><a href="#a867f3193c8f0c6d1ce25ab26798d1aab">QCPPolarGrid::mAngularSubGridPen</a></div><div class="ttdeci">QPen mAngularSubGridPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07581">qcustomplot.h:7581</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad386f37ac78334c50f6868476126f42a" name="ad386f37ac78334c50f6868476126f42a"></a>
@@ -412,6 +472,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07556">7556</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7556</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a128297f31e71060cbed5f0b38028f916">mAntialiasedSubGrid</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a044f807bb7ec647f4448eefb47af5151" name="a044f807bb7ec647f4448eefb47af5151"></a>
@@ -437,6 +500,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07557">7557</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7557</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a82d4e316240af6469706c66f798759cd">mAntialiasedZeroLine</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac3ec084d6db6c8a27b94f91b57a8ea32" name="ac3ec084d6db6c8a27b94f91b57a8ea32"></a>
@@ -464,6 +530,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layerable.html#a1168944abbf9fa6731b0f4a2d0d67e8b">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34279">34279</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34280</span>{</div>
+<div class="line"><span class="lineno">34281</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f">QCP::aeGrid</a>);</div>
+<div class="line"><span class="lineno">34282</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3ab45a4c76a3333ce42eb217a81733ec"><div class="ttname"><a href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">QCPLayerable::mAntialiased</a></div><div class="ttdeci">bool mAntialiased</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00793">qcustomplot.h:793</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acb663e375d2d36dc5c55021ee5a2119b"><div class="ttname"><a href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">QCPLayerable::applyAntialiasingHint</a></div><div class="ttdeci">void applyAntialiasingHint(QCPPainter *painter, bool localAntialiased, QCP::AntialiasedElement overrideElement) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01599">qcustomplot.cpp:1599</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f">QCP::aeGrid</a></div><div class="ttdeci">@ aeGrid</div><div class="ttdoc">0x0002 Grid lines</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00246">qcustomplot.h:245</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af62b863506a570afdb83e9433b91aee8" name="af62b863506a570afdb83e9433b91aee8"></a>
@@ -491,6 +565,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layerable.html#adf62b4bac3ca934db80290792fc897e1">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34289">34289</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34290</span>{</div>
+<div class="line"><span class="lineno">34291</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a1ddecf521612eee506f54493b34912cf">mParentAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid parent axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">34292</span>  </div>
+<div class="line"><span class="lineno">34293</span>  <span class="keyword">const</span> QPointF center = <a class="code hl_variable" href="#a1ddecf521612eee506f54493b34912cf">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_polar_axis_angular.html#ad75c9ac740d24c0f0cebd782e0d208df">mCenter</a>;</div>
+<div class="line"><span class="lineno">34294</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> radius = <a class="code hl_variable" href="#a1ddecf521612eee506f54493b34912cf">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_polar_axis_angular.html#a780444529ad6777d607689a8a737a4cf">mRadius</a>;</div>
+<div class="line"><span class="lineno">34295</span>  </div>
+<div class="line"><span class="lineno">34296</span>  painter-&gt;setBrush(Qt::NoBrush);</div>
+<div class="line"><span class="lineno">34297</span>  <span class="comment">// draw main angular grid:</span></div>
+<div class="line"><span class="lineno">34298</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a654c8090e410942f7c0e939c8b4dcfe0">mType</a>.testFlag(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a8a856e09cb4bfa377e174fea50109543">gtAngular</a>))</div>
+<div class="line"><span class="lineno">34299</span>    <a class="code hl_function" href="#a6beb5d68d3af7d4f69e2b044aa7fedfa">drawAngularGrid</a>(painter, center, radius, <a class="code hl_variable" href="#a1ddecf521612eee506f54493b34912cf">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_polar_axis_angular.html#a3577e475914e58d6d779b03d6faf383a">mTickVectorCosSin</a>, <a class="code hl_variable" href="#abd5cb0e3d720a75b2bf162a4161a9b43">mAngularPen</a>);</div>
+<div class="line"><span class="lineno">34300</span>  <span class="comment">// draw main radial grid:</span></div>
+<div class="line"><span class="lineno">34301</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a654c8090e410942f7c0e939c8b4dcfe0">mType</a>.testFlag(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a1ca1cc598280072772c11b22849b5faf">gtRadial</a>) &amp;&amp; <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>)</div>
+<div class="line"><span class="lineno">34302</span>    <a class="code hl_function" href="#aabbd4c9003803dd30f42b4eec8e83346">drawRadialGrid</a>(painter, center, <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>-&gt;tickVector(), <a class="code hl_variable" href="#a9e73fd5a66ab128ace43e348e2d57b6f">mRadialPen</a>, <a class="code hl_variable" href="#ad2a466a53fb54aeaafa254f0f6270b7c">mRadialZeroLinePen</a>);</div>
+<div class="line"><span class="lineno">34303</span>  </div>
+<div class="line"><span class="lineno">34304</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#a128297f31e71060cbed5f0b38028f916">mAntialiasedSubGrid</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f">QCP::aeGrid</a>);</div>
+<div class="line"><span class="lineno">34305</span>  <span class="comment">// draw sub angular grid:</span></div>
+<div class="line"><span class="lineno">34306</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a29232977b1ed2d73801f8a9e5018be28">mSubGridType</a>.testFlag(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a8a856e09cb4bfa377e174fea50109543">gtAngular</a>))</div>
+<div class="line"><span class="lineno">34307</span>    <a class="code hl_function" href="#a6beb5d68d3af7d4f69e2b044aa7fedfa">drawAngularGrid</a>(painter, center, radius, <a class="code hl_variable" href="#a1ddecf521612eee506f54493b34912cf">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_polar_axis_angular.html#a4d189b91f9df020a5928826d103a844a">mSubTickVectorCosSin</a>, <a class="code hl_variable" href="#a867f3193c8f0c6d1ce25ab26798d1aab">mAngularSubGridPen</a>);</div>
+<div class="line"><span class="lineno">34308</span>  <span class="comment">// draw sub radial grid:</span></div>
+<div class="line"><span class="lineno">34309</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a29232977b1ed2d73801f8a9e5018be28">mSubGridType</a>.testFlag(<a class="code hl_enumvalue" href="#a58c68f0d47bdf4614dc4017d51876bc2a1ca1cc598280072772c11b22849b5faf">gtRadial</a>) &amp;&amp; <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>)</div>
+<div class="line"><span class="lineno">34310</span>    <a class="code hl_function" href="#aabbd4c9003803dd30f42b4eec8e83346">drawRadialGrid</a>(painter, center, <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>-&gt;subTickVector(), <a class="code hl_variable" href="#af19a3f83b46f885cebd89c86443db157">mRadialSubGridPen</a>);</div>
+<div class="line"><span class="lineno">34311</span>}</div>
+<div class="ttc" id="aclass_q_c_p_polar_axis_angular_html_a3577e475914e58d6d779b03d6faf383a"><div class="ttname"><a href="class_q_c_p_polar_axis_angular.html#a3577e475914e58d6d779b03d6faf383a">QCPPolarAxisAngular::mTickVectorCosSin</a></div><div class="ttdeci">QVector&lt; QPointF &gt; mTickVectorCosSin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07484">qcustomplot.h:7484</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_axis_angular_html_a4d189b91f9df020a5928826d103a844a"><div class="ttname"><a href="class_q_c_p_polar_axis_angular.html#a4d189b91f9df020a5928826d103a844a">QCPPolarAxisAngular::mSubTickVectorCosSin</a></div><div class="ttdeci">QVector&lt; QPointF &gt; mSubTickVectorCosSin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07486">qcustomplot.h:7486</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_axis_angular_html_a780444529ad6777d607689a8a737a4cf"><div class="ttname"><a href="class_q_c_p_polar_axis_angular.html#a780444529ad6777d607689a8a737a4cf">QCPPolarAxisAngular::mRadius</a></div><div class="ttdeci">double mRadius</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07477">qcustomplot.h:7477</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_axis_angular_html_ad75c9ac740d24c0f0cebd782e0d208df"><div class="ttname"><a href="class_q_c_p_polar_axis_angular.html#ad75c9ac740d24c0f0cebd782e0d208df">QCPPolarAxisAngular::mCenter</a></div><div class="ttdeci">QPointF mCenter</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07476">qcustomplot.h:7476</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a11a2115e513a5c4d2650143db97482fd"><div class="ttname"><a href="#a11a2115e513a5c4d2650143db97482fd">QCPPolarGrid::mRadialAxis</a></div><div class="ttdeci">QPointer&lt; QCPPolarAxisRadial &gt; mRadialAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07586">qcustomplot.h:7586</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a6beb5d68d3af7d4f69e2b044aa7fedfa"><div class="ttname"><a href="#a6beb5d68d3af7d4f69e2b044aa7fedfa">QCPPolarGrid::drawAngularGrid</a></div><div class="ttdeci">void drawAngularGrid(QCPPainter *painter, const QPointF &amp;center, double radius, const QVector&lt; QPointF &gt; &amp;ticksCosSin, const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34338">qcustomplot.cpp:34338</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_a9e73fd5a66ab128ace43e348e2d57b6f"><div class="ttname"><a href="#a9e73fd5a66ab128ace43e348e2d57b6f">QCPPolarGrid::mRadialPen</a></div><div class="ttdeci">QPen mRadialPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07582">qcustomplot.h:7582</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_aabbd4c9003803dd30f42b4eec8e83346"><div class="ttname"><a href="#aabbd4c9003803dd30f42b4eec8e83346">QCPPolarGrid::drawRadialGrid</a></div><div class="ttdeci">void drawRadialGrid(QCPPainter *painter, const QPointF &amp;center, const QVector&lt; double &gt; &amp;coords, const QPen &amp;pen, const QPen &amp;zeroPen=Qt::NoPen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34313">qcustomplot.cpp:34313</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_ad2a466a53fb54aeaafa254f0f6270b7c"><div class="ttname"><a href="#ad2a466a53fb54aeaafa254f0f6270b7c">QCPPolarGrid::mRadialZeroLinePen</a></div><div class="ttdeci">QPen mRadialZeroLinePen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07582">qcustomplot.h:7582</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_af19a3f83b46f885cebd89c86443db157"><div class="ttname"><a href="#af19a3f83b46f885cebd89c86443db157">QCPPolarGrid::mRadialSubGridPen</a></div><div class="ttdeci">QPen mRadialSubGridPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07582">qcustomplot.h:7582</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6beb5d68d3af7d4f69e2b044aa7fedfa" name="a6beb5d68d3af7d4f69e2b044aa7fedfa"></a>
@@ -535,6 +643,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34338">34338</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34339</span>{</div>
+<div class="line"><span class="lineno">34340</span>  <span class="keywordflow">if</span> (ticksCosSin.isEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">34341</span>  </div>
+<div class="line"><span class="lineno">34342</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(pen);</div>
+<div class="line"><span class="lineno">34343</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;ticksCosSin.size(); ++i)</div>
+<div class="line"><span class="lineno">34344</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(center, center+ticksCosSin.at(i)*radius);</div>
+<div class="line"><span class="lineno">34345</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aabbd4c9003803dd30f42b4eec8e83346" name="aabbd4c9003803dd30f42b4eec8e83346"></a>
@@ -579,6 +698,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34313">34313</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34314</span>{</div>
+<div class="line"><span class="lineno">34315</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">34316</span>  <span class="keywordflow">if</span> (coords.isEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">34317</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> drawZeroLine = zeroPen != Qt::NoPen;</div>
+<div class="line"><span class="lineno">34318</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> zeroLineEpsilon = qAbs(coords.last()-coords.first())*1e-6;</div>
+<div class="line"><span class="lineno">34319</span>  </div>
+<div class="line"><span class="lineno">34320</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(pen);</div>
+<div class="line"><span class="lineno">34321</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;coords.size(); ++i)</div>
+<div class="line"><span class="lineno">34322</span>  {</div>
+<div class="line"><span class="lineno">34323</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> r = <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>-&gt;coordToRadius(coords.at(i));</div>
+<div class="line"><span class="lineno">34324</span>    <span class="keywordflow">if</span> (drawZeroLine &amp;&amp; qAbs(coords.at(i)) &lt; zeroLineEpsilon)</div>
+<div class="line"><span class="lineno">34325</span>    {</div>
+<div class="line"><span class="lineno">34326</span>      <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#a82d4e316240af6469706c66f798759cd">mAntialiasedZeroLine</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12">QCP::aeZeroLine</a>);</div>
+<div class="line"><span class="lineno">34327</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(zeroPen);</div>
+<div class="line"><span class="lineno">34328</span>      painter-&gt;drawEllipse(center, r, r);</div>
+<div class="line"><span class="lineno">34329</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(pen);</div>
+<div class="line"><span class="lineno">34330</span>      <a class="code hl_function" href="#ac3ec084d6db6c8a27b94f91b57a8ea32">applyDefaultAntialiasingHint</a>(painter);</div>
+<div class="line"><span class="lineno">34331</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">34332</span>    {</div>
+<div class="line"><span class="lineno">34333</span>      painter-&gt;drawEllipse(center, r, r);</div>
+<div class="line"><span class="lineno">34334</span>    }</div>
+<div class="line"><span class="lineno">34335</span>  }</div>
+<div class="line"><span class="lineno">34336</span>}</div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_ac3ec084d6db6c8a27b94f91b57a8ea32"><div class="ttname"><a href="#ac3ec084d6db6c8a27b94f91b57a8ea32">QCPPolarGrid::applyDefaultAntialiasingHint</a></div><div class="ttdeci">virtual void applyDefaultAntialiasingHint(QCPPainter *painter) const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34279">qcustomplot.cpp:34279</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12">QCP::aeZeroLine</a></div><div class="ttdeci">@ aeZeroLine</div><div class="ttdoc">0x0200 Zero-lines, see QCPGrid::setZeroLinePen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00254">qcustomplot.h:253</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae8af0c2df6b9735f44f2c30015f55225" name="ae8af0c2df6b9735f44f2c30015f55225"></a>
@@ -604,6 +750,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07553">7553</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7553</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a>.data(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ace2ebea6d02ff6d985f209e47a97225c" name="ace2ebea6d02ff6d985f209e47a97225c"></a>
@@ -629,6 +778,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07560">7560</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7560</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9e73fd5a66ab128ace43e348e2d57b6f">mRadialPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abaa02d7b124a8556d02a17f754f802d8" name="abaa02d7b124a8556d02a17f754f802d8"></a>
@@ -654,6 +806,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07561">7561</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7561</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af19a3f83b46f885cebd89c86443db157">mRadialSubGridPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae36491dbd1dfd9005a296bd8d91d5198" name="ae36491dbd1dfd9005a296bd8d91d5198"></a>
@@ -679,6 +834,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07562">7562</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7562</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad2a466a53fb54aeaafa254f0f6270b7c">mRadialZeroLinePen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae67f25627e160421817cf354a232a528" name="ae67f25627e160421817cf354a232a528"></a>
@@ -697,6 +855,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the pen with which (major) grid lines are drawn. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34238">34238</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34239</span>{</div>
+<div class="line"><span class="lineno">34240</span>  <a class="code hl_variable" href="#abd5cb0e3d720a75b2bf162a4161a9b43">mAngularPen</a> = pen;</div>
+<div class="line"><span class="lineno">34241</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0f88a4eb7e890e2c4bf4cfc366bab55d" name="a0f88a4eb7e890e2c4bf4cfc366bab55d"></a>
@@ -715,6 +878,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the pen with which sub grid lines are drawn. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34246">34246</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34247</span>{</div>
+<div class="line"><span class="lineno">34248</span>  <a class="code hl_variable" href="#a867f3193c8f0c6d1ce25ab26798d1aab">mAngularSubGridPen</a> = pen;</div>
+<div class="line"><span class="lineno">34249</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf455c16a110de3595a118959e6ea0a9" name="aaf455c16a110de3595a118959e6ea0a9"></a>
@@ -733,6 +901,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets whether sub grid lines are drawn antialiased. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34222">34222</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34223</span>{</div>
+<div class="line"><span class="lineno">34224</span>  <a class="code hl_variable" href="#a128297f31e71060cbed5f0b38028f916">mAntialiasedSubGrid</a> = enabled;</div>
+<div class="line"><span class="lineno">34225</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c9b241ecba6d89c494d6ccb9688b84e" name="a9c9b241ecba6d89c494d6ccb9688b84e"></a>
@@ -751,6 +924,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets whether zero lines are drawn antialiased. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34230">34230</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34231</span>{</div>
+<div class="line"><span class="lineno">34232</span>  <a class="code hl_variable" href="#a82d4e316240af6469706c66f798759cd">mAntialiasedZeroLine</a> = enabled;</div>
+<div class="line"><span class="lineno">34233</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0f912f1f958d5c58d30797d336efc6f1" name="a0f912f1f958d5c58d30797d336efc6f1"></a>
@@ -768,6 +946,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34204">34204</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34205</span>{</div>
+<div class="line"><span class="lineno">34206</span>  <a class="code hl_variable" href="#a11a2115e513a5c4d2650143db97482fd">mRadialAxis</a> = axis;</div>
+<div class="line"><span class="lineno">34207</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88d242172e84fe6657dd2629fa8397f1" name="a88d242172e84fe6657dd2629fa8397f1"></a>
@@ -785,6 +968,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34251">34251</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34252</span>{</div>
+<div class="line"><span class="lineno">34253</span>  <a class="code hl_variable" href="#a9e73fd5a66ab128ace43e348e2d57b6f">mRadialPen</a> = pen;</div>
+<div class="line"><span class="lineno">34254</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a944da087c371a15ae54652df6d881135" name="a944da087c371a15ae54652df6d881135"></a>
@@ -802,6 +990,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34256">34256</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34257</span>{</div>
+<div class="line"><span class="lineno">34258</span>  <a class="code hl_variable" href="#af19a3f83b46f885cebd89c86443db157">mRadialSubGridPen</a> = pen;</div>
+<div class="line"><span class="lineno">34259</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad9e13e63232986fc6748dafb62970bcf" name="ad9e13e63232986fc6748dafb62970bcf"></a>
@@ -819,6 +1012,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34261">34261</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34262</span>{</div>
+<div class="line"><span class="lineno">34263</span>  <a class="code hl_variable" href="#ad2a466a53fb54aeaafa254f0f6270b7c">mRadialZeroLinePen</a> = pen;</div>
+<div class="line"><span class="lineno">34264</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a92daeff4ec132b60e5a30ee58dd36c53" name="a92daeff4ec132b60e5a30ee58dd36c53"></a>
@@ -836,6 +1034,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34214">34214</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34215</span>{</div>
+<div class="line"><span class="lineno">34216</span>  <a class="code hl_variable" href="#a29232977b1ed2d73801f8a9e5018be28">mSubGridType</a> = <a class="code hl_function" href="#ae9daa7e166d47187deb6c593fe609f5c">type</a>;</div>
+<div class="line"><span class="lineno">34217</span>}</div>
+<div class="ttc" id="aclass_q_c_p_polar_grid_html_ae9daa7e166d47187deb6c593fe609f5c"><div class="ttname"><a href="#ae9daa7e166d47187deb6c593fe609f5c">QCPPolarGrid::type</a></div><div class="ttdeci">GridTypes type() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07554">qcustomplot.h:7554</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3cfa8889817de9f5b81b2a478b0b5b99" name="a3cfa8889817de9f5b81b2a478b0b5b99"></a>
@@ -853,6 +1057,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34209">34209</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34210</span>{</div>
+<div class="line"><span class="lineno">34211</span>  <a class="code hl_variable" href="#a654c8090e410942f7c0e939c8b4dcfe0">mType</a> = <a class="code hl_function" href="#ae9daa7e166d47187deb6c593fe609f5c">type</a>;</div>
+<div class="line"><span class="lineno">34212</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e379db069630f99254c3463b8d7b2ed" name="a3e379db069630f99254c3463b8d7b2ed"></a>
@@ -878,6 +1087,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07555">7555</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7555</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a29232977b1ed2d73801f8a9e5018be28">mSubGridType</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9daa7e166d47187deb6c593fe609f5c" name="ae9daa7e166d47187deb6c593fe609f5c"></a>
@@ -903,6 +1115,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07554">7554</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7554</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a654c8090e410942f7c0e939c8b4dcfe0">mType</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -926,6 +1141,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07581">7581</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a867f3193c8f0c6d1ce25ab26798d1aab" name="a867f3193c8f0c6d1ce25ab26798d1aab"></a>
@@ -947,6 +1164,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07581">7581</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -970,6 +1189,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07580">7580</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a82d4e316240af6469706c66f798759cd" name="a82d4e316240af6469706c66f798759cd"></a>
@@ -991,6 +1212,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07580">7580</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1014,6 +1237,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07585">7585</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a11a2115e513a5c4d2650143db97482fd" name="a11a2115e513a5c4d2650143db97482fd"></a>
@@ -1035,6 +1260,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07586">7586</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1058,6 +1285,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07582">7582</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="af19a3f83b46f885cebd89c86443db157" name="af19a3f83b46f885cebd89c86443db157"></a>
@@ -1079,6 +1308,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07582">7582</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1102,6 +1333,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07582">7582</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a29232977b1ed2d73801f8a9e5018be28" name="a29232977b1ed2d73801f8a9e5018be28"></a>
@@ -1123,6 +1356,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07579">7579</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1146,11 +1381,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07578">7578</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

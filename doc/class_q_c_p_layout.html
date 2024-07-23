@@ -347,6 +347,8 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="el" href="class_q_c_p_layout.html" title="The abstract base class for layouts.">QCPLayout</a> introduces a common interface for accessing and manipulating the child elements. Those functions are most notably <a class="el" href="#acc6012e7dacc55c4282942c31c45b8d9">elementCount</a>, <a class="el" href="#ab22bd9153d855a35ab4010267ae36a69">elementAt</a>, <a class="el" href="#aae3fc1bd5656aa737f18f0779789fd79">takeAt</a>, <a class="el" href="#ad110be0de976cd8a817513a4a53d53db">take</a>, <a class="el" href="#a41e6ac049143866e8f8b4964efab01b2">simplify</a>, <a class="el" href="#a2403f684fee3ce47132faaeed00bb066">removeAt</a>, <a class="el" href="#a6c58f537d8086f352576ab7c5b15d0bc">remove</a> and <a class="el" href="#a02883bdf2769b5b227f0232dba1ac4ee">clear</a>. Individual subclasses may add more functions to this interface which are more specialized to the form of the layout. For example, <a class="el" href="class_q_c_p_layout_grid.html">QCPLayoutGrid</a> adds functions that take row and column indices to access cells of the layout grid more conveniently.</p>
 <p>Since this is an abstract base class, you can't instantiate it directly. Rather use one of its subclasses like <a class="el" href="class_q_c_p_layout_grid.html" title="A layout that arranges child elements in a grid.">QCPLayoutGrid</a> or <a class="el" href="class_q_c_p_layout_inset.html" title="A layout that places child elements aligned to the border or arbitrarily positioned.">QCPLayoutInset</a>.</p>
 <p>For a general introduction to the layout system, see the dedicated documentation page The Layout System. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01341">1341</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a04222e6e1361fd802d48f1a25b7020d4" name="a04222e6e1361fd802d48f1a25b7020d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04222e6e1361fd802d48f1a25b7020d4">&#9670;&#160;</a></span>QCPLayout()</h2>
@@ -372,6 +374,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates an instance of <a class="el" href="class_q_c_p_layout.html" title="The abstract base class for layouts.">QCPLayout</a> and sets default values. Note that since <a class="el" href="class_q_c_p_layout.html" title="The abstract base class for layouts.">QCPLayout</a> is an abstract base class, it can't be instantiated directly. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03667">3667</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3668</span>{</div>
+<div class="line"><span class="lineno"> 3669</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -398,6 +404,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03832">3832</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3833</span>{</div>
+<div class="line"><span class="lineno"> 3834</span>  <span class="keywordflow">if</span> (el)</div>
+<div class="line"><span class="lineno"> 3835</span>  {</div>
+<div class="line"><span class="lineno"> 3836</span>    el-&gt;<a class="code hl_variable" href="class_q_c_p_layout_element.html#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 3837</span>    el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#aa23c893671f1f6744ac235cf2204cf3a">setParentLayerable</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 3838</span>    el-&gt;setParent(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 3839</span>    <span class="keywordflow">if</span> (!el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>())</div>
+<div class="line"><span class="lineno"> 3840</span>      el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a8cbe5a0c9a5674249982f5ca5f8e02bc">initializeParentPlot</a>(<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>);</div>
+<div class="line"><span class="lineno"> 3841</span>    el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a765f041a73af0c2de41b41a5a03e31a4">layoutChanged</a>();</div>
+<div class="line"><span class="lineno"> 3842</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3843</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Null element passed&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3844</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a8cbe5a0c9a5674249982f5ca5f8e02bc"><div class="ttname"><a href="class_q_c_p_layerable.html#a8cbe5a0c9a5674249982f5ca5f8e02bc">QCPLayerable::initializeParentPlot</a></div><div class="ttdeci">void initializeParentPlot(QCustomPlot *parentPlot)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01529">qcustomplot.cpp:1529</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa23c893671f1f6744ac235cf2204cf3a"><div class="ttname"><a href="class_q_c_p_layerable.html#aa23c893671f1f6744ac235cf2204cf3a">QCPLayerable::setParentLayerable</a></div><div class="ttdeci">void setParentLayerable(QCPLayerable *parentLayerable)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01555">qcustomplot.cpp:1555</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a765f041a73af0c2de41b41a5a03e31a4"><div class="ttname"><a href="class_q_c_p_layout_element.html#a765f041a73af0c2de41b41a5a03e31a4">QCPLayoutElement::layoutChanged</a></div><div class="ttdeci">virtual void layoutChanged()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03585">qcustomplot.cpp:3585</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ae7c75c25549608bd688bdb65d4c38066"><div class="ttname"><a href="class_q_c_p_layout_element.html#ae7c75c25549608bd688bdb65d4c38066">QCPLayoutElement::mParentLayout</a></div><div class="ttdeci">QCPLayout * mParentLayout</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01314">qcustomplot.h:1314</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a02883bdf2769b5b227f0232dba1ac4ee" name="a02883bdf2769b5b227f0232dba1ac4ee"></a>
@@ -417,6 +443,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Removes and deletes all layout elements in this layout. Finally calls <a class="el" href="#a41e6ac049143866e8f8b4964efab01b2">simplify</a> to make sure all empty cells are collapsed.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6c58f537d8086f352576ab7c5b15d0bc">remove</a>, <a class="el" href="#a2403f684fee3ce47132faaeed00bb066">removeAt</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03777">3777</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3778</span>{</div>
+<div class="line"><span class="lineno"> 3779</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_function" href="#acc6012e7dacc55c4282942c31c45b8d9">elementCount</a>()-1; i&gt;=0; --i)</div>
+<div class="line"><span class="lineno"> 3780</span>  {</div>
+<div class="line"><span class="lineno"> 3781</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab22bd9153d855a35ab4010267ae36a69">elementAt</a>(i))</div>
+<div class="line"><span class="lineno"> 3782</span>      <a class="code hl_function" href="#a2403f684fee3ce47132faaeed00bb066">removeAt</a>(i);</div>
+<div class="line"><span class="lineno"> 3783</span>  }</div>
+<div class="line"><span class="lineno"> 3784</span>  <a class="code hl_function" href="#a41e6ac049143866e8f8b4964efab01b2">simplify</a>();</div>
+<div class="line"><span class="lineno"> 3785</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a2403f684fee3ce47132faaeed00bb066"><div class="ttname"><a href="#a2403f684fee3ce47132faaeed00bb066">QCPLayout::removeAt</a></div><div class="ttdeci">bool removeAt(int index)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03740">qcustomplot.cpp:3740</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a41e6ac049143866e8f8b4964efab01b2"><div class="ttname"><a href="#a41e6ac049143866e8f8b4964efab01b2">QCPLayout::simplify</a></div><div class="ttdeci">virtual void simplify()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03725">qcustomplot.cpp:3725</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_ab22bd9153d855a35ab4010267ae36a69"><div class="ttname"><a href="#ab22bd9153d855a35ab4010267ae36a69">QCPLayout::elementAt</a></div><div class="ttdeci">virtual QCPLayoutElement * elementAt(int index) const =0</div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_acc6012e7dacc55c4282942c31c45b8d9"><div class="ttname"><a href="#acc6012e7dacc55c4282942c31c45b8d9">QCPLayout::elementCount</a></div><div class="ttdeci">virtual int elementCount() const =0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab22bd9153d855a35ab4010267ae36a69" name="ab22bd9153d855a35ab4010267ae36a69"></a>
@@ -507,6 +547,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_layout_grid.html#a7d5b968b4cf57393e9e387976d91f8f7">QCPLayoutGrid</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03698">3698</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3699</span>{</div>
+<div class="line"><span class="lineno"> 3700</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> c = <a class="code hl_function" href="#acc6012e7dacc55c4282942c31c45b8d9">elementCount</a>();</div>
+<div class="line"><span class="lineno"> 3701</span>  QList&lt;QCPLayoutElement*&gt; result;</div>
+<div class="line"><span class="lineno"> 3702</span><span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(4, 7, 0)</span></div>
+<div class="line"><span class="lineno"> 3703</span>  result.reserve(c);</div>
+<div class="line"><span class="lineno"> 3704</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 3705</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;c; ++i)</div>
+<div class="line"><span class="lineno"> 3706</span>    result.append(<a class="code hl_function" href="#ab22bd9153d855a35ab4010267ae36a69">elementAt</a>(i));</div>
+<div class="line"><span class="lineno"> 3707</span>  <span class="keywordflow">if</span> (recursive)</div>
+<div class="line"><span class="lineno"> 3708</span>  {</div>
+<div class="line"><span class="lineno"> 3709</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;c; ++i)</div>
+<div class="line"><span class="lineno"> 3710</span>    {</div>
+<div class="line"><span class="lineno"> 3711</span>      <span class="keywordflow">if</span> (result.at(i))</div>
+<div class="line"><span class="lineno"> 3712</span>        result &lt;&lt; result.at(i)-&gt;elements(recursive);</div>
+<div class="line"><span class="lineno"> 3713</span>    }</div>
+<div class="line"><span class="lineno"> 3714</span>  }</div>
+<div class="line"><span class="lineno"> 3715</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 3716</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="add49fd6843821a6126914b837ed52e22" name="add49fd6843821a6126914b837ed52e22"></a>
@@ -532,6 +592,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04046">4046</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4047</span>{</div>
+<div class="line"><span class="lineno"> 4048</span>  QSize maxOuterHint = el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#ad96efb977a26e360e8a64a4c1e56456d">maximumOuterSizeHint</a>();</div>
+<div class="line"><span class="lineno"> 4049</span>  QSize maxOuter = el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#afb9503858d4aa0f3b9f1794b084fb40a">maximumSize</a>(); <span class="comment">// depending on sizeConstraitRect this might be with respect to inner rect, so possibly add margins in next four lines (preserving unset maximum of QWIDGETSIZE_MAX)</span></div>
+<div class="line"><span class="lineno"> 4050</span>  <span class="keywordflow">if</span> (maxOuter.width() &lt; QWIDGETSIZE_MAX &amp;&amp; el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a66136f121ee3e1c933b748761203cab4">sizeConstraintRect</a>() == <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">QCPLayoutElement::scrInnerRect</a>)</div>
+<div class="line"><span class="lineno"> 4051</span>    maxOuter.rwidth() += el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().left() + el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().right();</div>
+<div class="line"><span class="lineno"> 4052</span>  <span class="keywordflow">if</span> (maxOuter.height() &lt; QWIDGETSIZE_MAX &amp;&amp; el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a66136f121ee3e1c933b748761203cab4">sizeConstraintRect</a>() == <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">QCPLayoutElement::scrInnerRect</a>)</div>
+<div class="line"><span class="lineno"> 4053</span>    maxOuter.rheight() += el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().top() + el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().bottom();</div>
+<div class="line"><span class="lineno"> 4054</span>  </div>
+<div class="line"><span class="lineno"> 4055</span>  <span class="keywordflow">return</span> {maxOuter.width() &lt; QWIDGETSIZE_MAX ? maxOuter.width() : maxOuterHint.width(),</div>
+<div class="line"><span class="lineno"> 4056</span>               maxOuter.height() &lt; QWIDGETSIZE_MAX ? maxOuter.height() : maxOuterHint.height()};</div>
+<div class="line"><span class="lineno"> 4057</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c"><div class="ttname"><a href="class_q_c_p_layout_element.html#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">QCPLayoutElement::scrInnerRect</a></div><div class="ttdeci">@ scrInnerRect</div><div class="ttdoc">Minimum/Maximum size constraints apply to inner rect.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01271">qcustomplot.h:1270</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a66136f121ee3e1c933b748761203cab4"><div class="ttname"><a href="class_q_c_p_layout_element.html#a66136f121ee3e1c933b748761203cab4">QCPLayoutElement::sizeConstraintRect</a></div><div class="ttdeci">SizeConstraintRect sizeConstraintRect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01287">qcustomplot.h:1287</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ad96efb977a26e360e8a64a4c1e56456d"><div class="ttname"><a href="class_q_c_p_layout_element.html#ad96efb977a26e360e8a64a4c1e56456d">QCPLayoutElement::maximumOuterSizeHint</a></div><div class="ttdeci">virtual QSize maximumOuterSizeHint() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03497">qcustomplot.cpp:3497</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_af4ac9450aa2d60863bf3a8ea0c940c9d"><div class="ttname"><a href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">QCPLayoutElement::margins</a></div><div class="ttdeci">QMargins margins() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01282">qcustomplot.h:1282</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_afb9503858d4aa0f3b9f1794b084fb40a"><div class="ttname"><a href="class_q_c_p_layout_element.html#afb9503858d4aa0f3b9f1794b084fb40a">QCPLayoutElement::maximumSize</a></div><div class="ttdeci">QSize maximumSize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01286">qcustomplot.h:1286</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a864fddc84721f186663faf3683f1fa70" name="a864fddc84721f186663faf3683f1fa70"></a>
@@ -557,6 +635,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04021">4021</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4022</span>{</div>
+<div class="line"><span class="lineno"> 4023</span>  QSize minOuterHint = el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a46789036c4fcb190fa374f91321d7c09">minimumOuterSizeHint</a>();</div>
+<div class="line"><span class="lineno"> 4024</span>  QSize minOuter = el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a60d4295468a2b57fe91f6f68e20c3993">minimumSize</a>(); <span class="comment">// depending on sizeConstraitRect this might be with respect to inner rect, so possibly add margins in next four lines (preserving unset minimum of 0)</span></div>
+<div class="line"><span class="lineno"> 4025</span>  <span class="keywordflow">if</span> (minOuter.width() &gt; 0 &amp;&amp; el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a66136f121ee3e1c933b748761203cab4">sizeConstraintRect</a>() == <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">QCPLayoutElement::scrInnerRect</a>)</div>
+<div class="line"><span class="lineno"> 4026</span>    minOuter.rwidth() += el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().left() + el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().right();</div>
+<div class="line"><span class="lineno"> 4027</span>  <span class="keywordflow">if</span> (minOuter.height() &gt; 0 &amp;&amp; el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a66136f121ee3e1c933b748761203cab4">sizeConstraintRect</a>() == <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">QCPLayoutElement::scrInnerRect</a>)</div>
+<div class="line"><span class="lineno"> 4028</span>    minOuter.rheight() += el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().top() + el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>().bottom();</div>
+<div class="line"><span class="lineno"> 4029</span>  </div>
+<div class="line"><span class="lineno"> 4030</span>  <span class="keywordflow">return</span> {minOuter.width() &gt; 0 ? minOuter.width() : minOuterHint.width(),</div>
+<div class="line"><span class="lineno"> 4031</span>               minOuter.height() &gt; 0 ? minOuter.height() : minOuterHint.height()};</div>
+<div class="line"><span class="lineno"> 4032</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a46789036c4fcb190fa374f91321d7c09"><div class="ttname"><a href="class_q_c_p_layout_element.html#a46789036c4fcb190fa374f91321d7c09">QCPLayoutElement::minimumOuterSizeHint</a></div><div class="ttdeci">virtual QSize minimumOuterSizeHint() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03478">qcustomplot.cpp:3478</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a60d4295468a2b57fe91f6f68e20c3993"><div class="ttname"><a href="class_q_c_p_layout_element.html#a60d4295468a2b57fe91f6f68e20c3993">QCPLayoutElement::minimumSize</a></div><div class="ttdeci">QSize minimumSize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01285">qcustomplot.h:1285</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e77be8006d39f2aafc1313d6e8fc3fd" name="a3e77be8006d39f2aafc1313d6e8fc3fd"></a>
@@ -596,6 +689,118 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03897">3897</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3898</span>{</div>
+<div class="line"><span class="lineno"> 3899</span>  <span class="keywordflow">if</span> (maxSizes.size() != minSizes.size() || minSizes.size() != stretchFactors.size())</div>
+<div class="line"><span class="lineno"> 3900</span>  {</div>
+<div class="line"><span class="lineno"> 3901</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Passed vector sizes aren&#39;t equal:&quot;</span> &lt;&lt; maxSizes &lt;&lt; minSizes &lt;&lt; stretchFactors;</div>
+<div class="line"><span class="lineno"> 3902</span>    <span class="keywordflow">return</span> QVector&lt;int&gt;();</div>
+<div class="line"><span class="lineno"> 3903</span>  }</div>
+<div class="line"><span class="lineno"> 3904</span>  <span class="keywordflow">if</span> (stretchFactors.isEmpty())</div>
+<div class="line"><span class="lineno"> 3905</span>    <span class="keywordflow">return</span> QVector&lt;int&gt;();</div>
+<div class="line"><span class="lineno"> 3906</span>  <span class="keywordtype">int</span> sectionCount = stretchFactors.size();</div>
+<div class="line"><span class="lineno"> 3907</span>  QVector&lt;double&gt; sectionSizes(sectionCount);</div>
+<div class="line"><span class="lineno"> 3908</span>  <span class="comment">// if provided total size is forced smaller than total minimum size, ignore minimum sizes (squeeze sections):</span></div>
+<div class="line"><span class="lineno"> 3909</span>  <span class="keywordtype">int</span> minSizeSum = 0;</div>
+<div class="line"><span class="lineno"> 3910</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sectionCount; ++i)</div>
+<div class="line"><span class="lineno"> 3911</span>    minSizeSum += minSizes.at(i);</div>
+<div class="line"><span class="lineno"> 3912</span>  <span class="keywordflow">if</span> (totalSize &lt; minSizeSum)</div>
+<div class="line"><span class="lineno"> 3913</span>  {</div>
+<div class="line"><span class="lineno"> 3914</span>    <span class="comment">// new stretch factors are minimum sizes and minimum sizes are set to zero:</span></div>
+<div class="line"><span class="lineno"> 3915</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sectionCount; ++i)</div>
+<div class="line"><span class="lineno"> 3916</span>    {</div>
+<div class="line"><span class="lineno"> 3917</span>      stretchFactors[i] = minSizes.at(i);</div>
+<div class="line"><span class="lineno"> 3918</span>      minSizes[i] = 0;</div>
+<div class="line"><span class="lineno"> 3919</span>    }</div>
+<div class="line"><span class="lineno"> 3920</span>  }</div>
+<div class="line"><span class="lineno"> 3921</span>  </div>
+<div class="line"><span class="lineno"> 3922</span>  QList&lt;int&gt; minimumLockedSections;</div>
+<div class="line"><span class="lineno"> 3923</span>  QList&lt;int&gt; unfinishedSections;</div>
+<div class="line"><span class="lineno"> 3924</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sectionCount; ++i)</div>
+<div class="line"><span class="lineno"> 3925</span>    unfinishedSections.append(i);</div>
+<div class="line"><span class="lineno"> 3926</span>  <span class="keywordtype">double</span> freeSize = totalSize;</div>
+<div class="line"><span class="lineno"> 3927</span>  </div>
+<div class="line"><span class="lineno"> 3928</span>  <span class="keywordtype">int</span> outerIterations = 0;</div>
+<div class="line"><span class="lineno"> 3929</span>  <span class="keywordflow">while</span> (!unfinishedSections.isEmpty() &amp;&amp; outerIterations &lt; sectionCount*2) <span class="comment">// the iteration check ist just a failsafe in case something really strange happens</span></div>
+<div class="line"><span class="lineno"> 3930</span>  {</div>
+<div class="line"><span class="lineno"> 3931</span>    ++outerIterations;</div>
+<div class="line"><span class="lineno"> 3932</span>    <span class="keywordtype">int</span> innerIterations = 0;</div>
+<div class="line"><span class="lineno"> 3933</span>    <span class="keywordflow">while</span> (!unfinishedSections.isEmpty() &amp;&amp; innerIterations &lt; sectionCount*2) <span class="comment">// the iteration check ist just a failsafe in case something really strange happens</span></div>
+<div class="line"><span class="lineno"> 3934</span>    {</div>
+<div class="line"><span class="lineno"> 3935</span>      ++innerIterations;</div>
+<div class="line"><span class="lineno"> 3936</span>      <span class="comment">// find section that hits its maximum next:</span></div>
+<div class="line"><span class="lineno"> 3937</span>      <span class="keywordtype">int</span> nextId = -1;</div>
+<div class="line"><span class="lineno"> 3938</span>      <span class="keywordtype">double</span> nextMax = 1e12;</div>
+<div class="line"><span class="lineno"> 3939</span>      <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> secId, unfinishedSections)</div>
+<div class="line"><span class="lineno"> 3940</span>      {</div>
+<div class="line"><span class="lineno"> 3941</span>        <span class="keywordtype">double</span> hitsMaxAt = (maxSizes.at(secId)-sectionSizes.at(secId))/stretchFactors.at(secId);</div>
+<div class="line"><span class="lineno"> 3942</span>        <span class="keywordflow">if</span> (hitsMaxAt &lt; nextMax)</div>
+<div class="line"><span class="lineno"> 3943</span>        {</div>
+<div class="line"><span class="lineno"> 3944</span>          nextMax = hitsMaxAt;</div>
+<div class="line"><span class="lineno"> 3945</span>          nextId = secId;</div>
+<div class="line"><span class="lineno"> 3946</span>        }</div>
+<div class="line"><span class="lineno"> 3947</span>      }</div>
+<div class="line"><span class="lineno"> 3948</span>      <span class="comment">// check if that maximum is actually within the bounds of the total size (i.e. can we stretch all remaining sections so far that the found section</span></div>
+<div class="line"><span class="lineno"> 3949</span>      <span class="comment">// actually hits its maximum, without exceeding the total size when we add up all sections)</span></div>
+<div class="line"><span class="lineno"> 3950</span>      <span class="keywordtype">double</span> stretchFactorSum = 0;</div>
+<div class="line"><span class="lineno"> 3951</span>      <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> secId, unfinishedSections)</div>
+<div class="line"><span class="lineno"> 3952</span>        stretchFactorSum += stretchFactors.at(secId);</div>
+<div class="line"><span class="lineno"> 3953</span>      <span class="keywordtype">double</span> nextMaxLimit = freeSize/stretchFactorSum;</div>
+<div class="line"><span class="lineno"> 3954</span>      <span class="keywordflow">if</span> (nextMax &lt; nextMaxLimit) <span class="comment">// next maximum is actually hit, move forward to that point and fix the size of that section</span></div>
+<div class="line"><span class="lineno"> 3955</span>      {</div>
+<div class="line"><span class="lineno"> 3956</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> secId, unfinishedSections)</div>
+<div class="line"><span class="lineno"> 3957</span>        {</div>
+<div class="line"><span class="lineno"> 3958</span>          sectionSizes[secId] += nextMax*stretchFactors.at(secId); <span class="comment">// increment all sections</span></div>
+<div class="line"><span class="lineno"> 3959</span>          freeSize -= nextMax*stretchFactors.at(secId);</div>
+<div class="line"><span class="lineno"> 3960</span>        }</div>
+<div class="line"><span class="lineno"> 3961</span>        unfinishedSections.removeOne(nextId); <span class="comment">// exclude the section that is now at maximum from further changes</span></div>
+<div class="line"><span class="lineno"> 3962</span>      } <span class="keywordflow">else</span> <span class="comment">// next maximum isn&#39;t hit, just distribute rest of free space on remaining sections</span></div>
+<div class="line"><span class="lineno"> 3963</span>      {</div>
+<div class="line"><span class="lineno"> 3964</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> secId, unfinishedSections)</div>
+<div class="line"><span class="lineno"> 3965</span>          sectionSizes[secId] += nextMaxLimit*stretchFactors.at(secId); <span class="comment">// increment all sections</span></div>
+<div class="line"><span class="lineno"> 3966</span>        unfinishedSections.clear();</div>
+<div class="line"><span class="lineno"> 3967</span>      }</div>
+<div class="line"><span class="lineno"> 3968</span>    }</div>
+<div class="line"><span class="lineno"> 3969</span>    <span class="keywordflow">if</span> (innerIterations == sectionCount*2)</div>
+<div class="line"><span class="lineno"> 3970</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Exceeded maximum expected inner iteration count, layouting aborted. Input was:&quot;</span> &lt;&lt; maxSizes &lt;&lt; minSizes &lt;&lt; stretchFactors &lt;&lt; totalSize;</div>
+<div class="line"><span class="lineno"> 3971</span>    </div>
+<div class="line"><span class="lineno"> 3972</span>    <span class="comment">// now check whether the resulting section sizes violate minimum restrictions:</span></div>
+<div class="line"><span class="lineno"> 3973</span>    <span class="keywordtype">bool</span> foundMinimumViolation = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3974</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sectionSizes.size(); ++i)</div>
+<div class="line"><span class="lineno"> 3975</span>    {</div>
+<div class="line"><span class="lineno"> 3976</span>      <span class="keywordflow">if</span> (minimumLockedSections.contains(i))</div>
+<div class="line"><span class="lineno"> 3977</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3978</span>      <span class="keywordflow">if</span> (sectionSizes.at(i) &lt; minSizes.at(i)) <span class="comment">// section violates minimum</span></div>
+<div class="line"><span class="lineno"> 3979</span>      {</div>
+<div class="line"><span class="lineno"> 3980</span>        sectionSizes[i] = minSizes.at(i); <span class="comment">// set it to minimum</span></div>
+<div class="line"><span class="lineno"> 3981</span>        foundMinimumViolation = <span class="keyword">true</span>; <span class="comment">// make sure we repeat the whole optimization process</span></div>
+<div class="line"><span class="lineno"> 3982</span>        minimumLockedSections.append(i);</div>
+<div class="line"><span class="lineno"> 3983</span>      }</div>
+<div class="line"><span class="lineno"> 3984</span>    }</div>
+<div class="line"><span class="lineno"> 3985</span>    <span class="keywordflow">if</span> (foundMinimumViolation)</div>
+<div class="line"><span class="lineno"> 3986</span>    {</div>
+<div class="line"><span class="lineno"> 3987</span>      freeSize = totalSize;</div>
+<div class="line"><span class="lineno"> 3988</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sectionCount; ++i)</div>
+<div class="line"><span class="lineno"> 3989</span>      {</div>
+<div class="line"><span class="lineno"> 3990</span>        <span class="keywordflow">if</span> (!minimumLockedSections.contains(i)) <span class="comment">// only put sections that haven&#39;t hit their minimum back into the pool</span></div>
+<div class="line"><span class="lineno"> 3991</span>          unfinishedSections.append(i);</div>
+<div class="line"><span class="lineno"> 3992</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3993</span>          freeSize -= sectionSizes.at(i); <span class="comment">// remove size of minimum locked sections from available space in next round</span></div>
+<div class="line"><span class="lineno"> 3994</span>      }</div>
+<div class="line"><span class="lineno"> 3995</span>      <span class="comment">// reset all section sizes to zero that are in unfinished sections (all others have been set to their minimum):</span></div>
+<div class="line"><span class="lineno"> 3996</span>      <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> secId, unfinishedSections)</div>
+<div class="line"><span class="lineno"> 3997</span>        sectionSizes[secId] = 0;</div>
+<div class="line"><span class="lineno"> 3998</span>    }</div>
+<div class="line"><span class="lineno"> 3999</span>  }</div>
+<div class="line"><span class="lineno"> 4000</span>  <span class="keywordflow">if</span> (outerIterations == sectionCount*2)</div>
+<div class="line"><span class="lineno"> 4001</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Exceeded maximum expected outer iteration count, layouting aborted. Input was:&quot;</span> &lt;&lt; maxSizes &lt;&lt; minSizes &lt;&lt; stretchFactors &lt;&lt; totalSize;</div>
+<div class="line"><span class="lineno"> 4002</span>  </div>
+<div class="line"><span class="lineno"> 4003</span>  QVector&lt;int&gt; result(sectionCount);</div>
+<div class="line"><span class="lineno"> 4004</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sectionCount; ++i)</div>
+<div class="line"><span class="lineno"> 4005</span>    result[i] = qRound(sectionSizes.at(i));</div>
+<div class="line"><span class="lineno"> 4006</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 4007</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4afbb4bef0071f72f91afdac4433a18e" name="a4afbb4bef0071f72f91afdac4433a18e"></a>
@@ -621,6 +826,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03856">3856</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3857</span>{</div>
+<div class="line"><span class="lineno"> 3858</span>  <span class="keywordflow">if</span> (el)</div>
+<div class="line"><span class="lineno"> 3859</span>  {</div>
+<div class="line"><span class="lineno"> 3860</span>    el-&gt;<a class="code hl_variable" href="class_q_c_p_layout_element.html#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 3861</span>    el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#aa23c893671f1f6744ac235cf2204cf3a">setParentLayerable</a>(<span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno"> 3862</span>    el-&gt;setParent(<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>);</div>
+<div class="line"><span class="lineno"> 3863</span>    <span class="comment">// Note: Don&#39;t initializeParentPlot(0) here, because layout element will stay in same parent plot</span></div>
+<div class="line"><span class="lineno"> 3864</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3865</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Null element passed&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3866</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6c58f537d8086f352576ab7c5b15d0bc" name="a6c58f537d8086f352576ab7c5b15d0bc"></a>
@@ -641,6 +858,17 @@ Additional Inherited Members</h2></td></tr>
 <p>This function internally uses <a class="el" href="#aae3fc1bd5656aa737f18f0779789fd79">takeAt</a> to remove the element from the layout and then deletes the element. Note that some layouts don't remove the respective cell right away but leave an empty cell after successful removal of the layout element. To collapse empty cells, use <a class="el" href="#a41e6ac049143866e8f8b4964efab01b2">simplify</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2403f684fee3ce47132faaeed00bb066">removeAt</a>, <a class="el" href="#ad110be0de976cd8a817513a4a53d53db">take</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03761">3761</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3762</span>{</div>
+<div class="line"><span class="lineno"> 3763</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#ad110be0de976cd8a817513a4a53d53db">take</a>(element))</div>
+<div class="line"><span class="lineno"> 3764</span>  {</div>
+<div class="line"><span class="lineno"> 3765</span>    <span class="keyword">delete</span> element;</div>
+<div class="line"><span class="lineno"> 3766</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3767</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3768</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3769</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html_ad110be0de976cd8a817513a4a53d53db"><div class="ttname"><a href="#ad110be0de976cd8a817513a4a53d53db">QCPLayout::take</a></div><div class="ttdeci">virtual bool take(QCPLayoutElement *element)=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2403f684fee3ce47132faaeed00bb066" name="a2403f684fee3ce47132faaeed00bb066"></a>
@@ -661,6 +889,18 @@ Additional Inherited Members</h2></td></tr>
 <p>This function internally uses <a class="el" href="#aae3fc1bd5656aa737f18f0779789fd79">takeAt</a> to remove the element from the layout and then deletes the returned element. Note that some layouts don't remove the respective cell right away but leave an empty cell after successful removal of the layout element. To collapse empty cells, use <a class="el" href="#a41e6ac049143866e8f8b4964efab01b2">simplify</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6c58f537d8086f352576ab7c5b15d0bc">remove</a>, <a class="el" href="#aae3fc1bd5656aa737f18f0779789fd79">takeAt</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03740">3740</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3741</span>{</div>
+<div class="line"><span class="lineno"> 3742</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el = <a class="code hl_function" href="#aae3fc1bd5656aa737f18f0779789fd79">takeAt</a>(index))</div>
+<div class="line"><span class="lineno"> 3743</span>  {</div>
+<div class="line"><span class="lineno"> 3744</span>    <span class="keyword">delete</span> el;</div>
+<div class="line"><span class="lineno"> 3745</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3746</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3747</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3748</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html"><div class="ttname"><a href="class_q_c_p_layout_element.html">QCPLayoutElement</a></div><div class="ttdoc">The abstract base class for all objects that form the layout system.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01238">qcustomplot.h:1239</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_aae3fc1bd5656aa737f18f0779789fd79"><div class="ttname"><a href="#aae3fc1bd5656aa737f18f0779789fd79">QCPLayout::takeAt</a></div><div class="ttdeci">virtual QCPLayoutElement * takeAt(int index)=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41e6ac049143866e8f8b4964efab01b2" name="a41e6ac049143866e8f8b4964efab01b2"></a>
@@ -690,6 +930,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_layout_grid.html#a38621ca7aa633b6a9a88617df7f08672">QCPLayoutGrid</a>, and <a class="el" href="class_q_c_p_layout_inset.html#abdac9a04752751ea68c320016086a2e8">QCPLayoutInset</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03725">3725</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3726</span>{</div>
+<div class="line"><span class="lineno"> 3727</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeac66a292f65cf7f8adf94eb92345b3e" name="aeac66a292f65cf7f8adf94eb92345b3e"></a>
@@ -717,6 +961,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Subclasses call this method to report changed (minimum/maximum) size constraints.</p>
 <p>If the parent of this layout is again a <a class="el" href="class_q_c_p_layout.html" title="The abstract base class for layouts.">QCPLayout</a>, forwards the call to the parent's <a class="el" href="#aeac66a292f65cf7f8adf94eb92345b3e">sizeConstraintsChanged</a>. If the parent is a QWidget (i.e. is the <a class="el" href="class_q_custom_plot.html#af1a1f1f571237deb7c2bd34a5e9f018f">QCustomPlot::plotLayout</a> of <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a>), calls QWidget::updateGeometry, so if the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> widget is inside a Qt QLayout, it may update itself and resize cells accordingly. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03795">3795</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3796</span>{</div>
+<div class="line"><span class="lineno"> 3797</span>  <span class="keywordflow">if</span> (QWidget *w = qobject_cast&lt;QWidget*&gt;(parent()))</div>
+<div class="line"><span class="lineno"> 3798</span>    w-&gt;updateGeometry();</div>
+<div class="line"><span class="lineno"> 3799</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_layout.html">QCPLayout</a> *l = qobject_cast&lt;QCPLayout*&gt;(parent()))</div>
+<div class="line"><span class="lineno"> 3800</span>    l-&gt;sizeConstraintsChanged();</div>
+<div class="line"><span class="lineno"> 3801</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html"><div class="ttname"><a href="class_q_c_p_layout.html">QCPLayout</a></div><div class="ttdoc">The abstract base class for layouts.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01341">qcustomplot.h:1342</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad110be0de976cd8a817513a4a53d53db" name="ad110be0de976cd8a817513a4a53d53db"></a>
@@ -809,6 +1062,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a929c2ec62e0e0e1d8418eaa802e2af9b">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03680">3680</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3681</span>{</div>
+<div class="line"><span class="lineno"> 3682</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a929c2ec62e0e0e1d8418eaa802e2af9b">QCPLayoutElement::update</a>(phase);</div>
+<div class="line"><span class="lineno"> 3683</span>  </div>
+<div class="line"><span class="lineno"> 3684</span>  <span class="comment">// set child element rects according to layout:</span></div>
+<div class="line"><span class="lineno"> 3685</span>  <span class="keywordflow">if</span> (phase == <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045">upLayout</a>)</div>
+<div class="line"><span class="lineno"> 3686</span>    <a class="code hl_function" href="#a165c77f6287ac92e8d03017ad913378b">updateLayout</a>();</div>
+<div class="line"><span class="lineno"> 3687</span>  </div>
+<div class="line"><span class="lineno"> 3688</span>  <span class="comment">// propagate update call to child elements:</span></div>
+<div class="line"><span class="lineno"> 3689</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> elCount = <a class="code hl_function" href="#acc6012e7dacc55c4282942c31c45b8d9">elementCount</a>();</div>
+<div class="line"><span class="lineno"> 3690</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;elCount; ++i)</div>
+<div class="line"><span class="lineno"> 3691</span>  {</div>
+<div class="line"><span class="lineno"> 3692</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el = <a class="code hl_function" href="#ab22bd9153d855a35ab4010267ae36a69">elementAt</a>(i))</div>
+<div class="line"><span class="lineno"> 3693</span>      el-&gt;update(phase);</div>
+<div class="line"><span class="lineno"> 3694</span>  }</div>
+<div class="line"><span class="lineno"> 3695</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045"><div class="ttname"><a href="class_q_c_p_layout_element.html#a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045">QCPLayoutElement::upLayout</a></div><div class="ttdeci">@ upLayout</div><div class="ttdoc">Final phase in which the layout system places the rects of the elements.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01259">qcustomplot.h:1258</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a929c2ec62e0e0e1d8418eaa802e2af9b"><div class="ttname"><a href="class_q_c_p_layout_element.html#a929c2ec62e0e0e1d8418eaa802e2af9b">QCPLayoutElement::update</a></div><div class="ttdeci">virtual void update(UpdatePhase phase)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03437">qcustomplot.cpp:3437</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a165c77f6287ac92e8d03017ad913378b"><div class="ttname"><a href="#a165c77f6287ac92e8d03017ad913378b">QCPLayout::updateLayout</a></div><div class="ttdeci">virtual void updateLayout()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03815">qcustomplot.cpp:3815</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a165c77f6287ac92e8d03017ad913378b" name="a165c77f6287ac92e8d03017ad913378b"></a>
@@ -836,6 +1109,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_layout_grid.html#a6cf43f14d3fa335fd8758561ccf1f78c">QCPLayoutGrid</a>, and <a class="el" href="class_q_c_p_layout_inset.html#a493526b922ea66a75c45ef1842446988">QCPLayoutInset</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03815">3815</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3816</span>{</div>
+<div class="line"><span class="lineno"> 3817</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -859,11 +1136,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01377">1377</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

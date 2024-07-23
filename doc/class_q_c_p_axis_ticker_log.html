@@ -212,6 +212,8 @@ Additional Inherited Members</h2></td></tr>
 <img src="axisticker-log-powers.png" alt=""/>
 </div>
 <p>The ticker can be created and assigned to an axis like this: </p><div class="fragment"></div><!-- fragment --><p>Note that the nature of logarithmic ticks imply that there exists a smallest possible tick step, corresponding to one multiplication by the log base. If the user zooms in further than that, no new ticks would appear, leading to very sparse or even no axis ticks on the axis. To prevent this situation, this ticker falls back to regular tick generation if the axis range would be covered by too few logarithmically placed ticks. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02037">2037</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af3cb86ea5eef2023c0b96b5260c4cbdf" name="af3cb86ea5eef2023c0b96b5260c4cbdf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3cb86ea5eef2023c0b96b5260c4cbdf">&#9670;&#160;</a></span>QCPAxisTickerLog()</h2>
@@ -229,6 +231,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs the ticker and sets reasonable default values. Axis tickers are commonly created managed by a QSharedPointer, which then can be passed to <a class="el" href="class_q_c_p_axis.html#a4ee03fcd2c74d05cd1a419b9af5cfbdc">QCPAxis::setTicker</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07729">7729</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7729</span>                                   :</div>
+<div class="line"><span class="lineno"> 7730</span>  <a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a>(10.0),</div>
+<div class="line"><span class="lineno"> 7731</span>  <a class="code hl_variable" href="#a3d92b729bedbbbd34ee5f74565defd95">mSubTickCount</a>(8), <span class="comment">// generates 10 intervals</span></div>
+<div class="line"><span class="lineno"> 7732</span>  <a class="code hl_variable" href="#aeba719bbeec39957f475ef89d6ae2fe7">mLogBaseLnInv</a>(1.0/qLn(<a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a>))</div>
+<div class="line"><span class="lineno"> 7733</span>{</div>
+<div class="line"><span class="lineno"> 7734</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_log_html_a3d92b729bedbbbd34ee5f74565defd95"><div class="ttname"><a href="#a3d92b729bedbbbd34ee5f74565defd95">QCPAxisTickerLog::mSubTickCount</a></div><div class="ttdeci">int mSubTickCount</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02053">qcustomplot.h:2053</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_log_html_a4108bcc1cd68dcec54dc75667440d328"><div class="ttname"><a href="#a4108bcc1cd68dcec54dc75667440d328">QCPAxisTickerLog::mLogBase</a></div><div class="ttdeci">double mLogBase</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02052">qcustomplot.h:2052</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_log_html_aeba719bbeec39957f475ef89d6ae2fe7"><div class="ttname"><a href="#aeba719bbeec39957f475ef89d6ae2fe7">QCPAxisTickerLog::mLogBaseLnInv</a></div><div class="ttdeci">double mLogBaseLnInv</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02056">qcustomplot.h:2056</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -261,6 +274,50 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07793">7793</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7794</span>{</div>
+<div class="line"><span class="lineno"> 7795</span>  QVector&lt;double&gt; result;</div>
+<div class="line"><span class="lineno"> 7796</span>  <span class="keywordflow">if</span> (range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; 0 &amp;&amp; range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt; 0) <span class="comment">// positive range</span></div>
+<div class="line"><span class="lineno"> 7797</span>  {</div>
+<div class="line"><span class="lineno"> 7798</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> baseTickCount = qLn(range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>/range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*<a class="code hl_variable" href="#aeba719bbeec39957f475ef89d6ae2fe7">mLogBaseLnInv</a>;</div>
+<div class="line"><span class="lineno"> 7799</span>    <span class="keywordflow">if</span> (baseTickCount &lt; 1.6) <span class="comment">// if too few log ticks would be visible in axis range, fall back to regular tick vector generation</span></div>
+<div class="line"><span class="lineno"> 7800</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker::createTickVector</a>(tickStep, range);</div>
+<div class="line"><span class="lineno"> 7801</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> exactPowerStep =  baseTickCount/double(<a class="code hl_variable" href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>+1e-10);</div>
+<div class="line"><span class="lineno"> 7802</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> newLogBase = qPow(<a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a>, qMax(<span class="keywordtype">int</span>(<a class="code hl_function" href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">cleanMantissa</a>(exactPowerStep)), 1));</div>
+<div class="line"><span class="lineno"> 7803</span>    <span class="keywordtype">double</span> currentTick = qPow(newLogBase, qFloor(qLn(range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/qLn(newLogBase)));</div>
+<div class="line"><span class="lineno"> 7804</span>    result.append(currentTick);</div>
+<div class="line"><span class="lineno"> 7805</span>    <span class="keywordflow">while</span> (currentTick &lt; range.upper &amp;&amp; currentTick &gt; 0) <span class="comment">// currentMag might be zero for ranges ~1e-300, just cancel in that case</span></div>
+<div class="line"><span class="lineno"> 7806</span>    {</div>
+<div class="line"><span class="lineno"> 7807</span>      currentTick *= newLogBase;</div>
+<div class="line"><span class="lineno"> 7808</span>      result.append(currentTick);</div>
+<div class="line"><span class="lineno"> 7809</span>    }</div>
+<div class="line"><span class="lineno"> 7810</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt; 0 &amp;&amp; range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; 0) <span class="comment">// negative range</span></div>
+<div class="line"><span class="lineno"> 7811</span>  {</div>
+<div class="line"><span class="lineno"> 7812</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> baseTickCount = qLn(range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>/range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)*<a class="code hl_variable" href="#aeba719bbeec39957f475ef89d6ae2fe7">mLogBaseLnInv</a>;</div>
+<div class="line"><span class="lineno"> 7813</span>    <span class="keywordflow">if</span> (baseTickCount &lt; 1.6) <span class="comment">// if too few log ticks would be visible in axis range, fall back to regular tick vector generation</span></div>
+<div class="line"><span class="lineno"> 7814</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker::createTickVector</a>(tickStep, range);</div>
+<div class="line"><span class="lineno"> 7815</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> exactPowerStep =  baseTickCount/double(<a class="code hl_variable" href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>+1e-10);</div>
+<div class="line"><span class="lineno"> 7816</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> newLogBase = qPow(<a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a>, qMax(<span class="keywordtype">int</span>(<a class="code hl_function" href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">cleanMantissa</a>(exactPowerStep)), 1));</div>
+<div class="line"><span class="lineno"> 7817</span>    <span class="keywordtype">double</span> currentTick = -qPow(newLogBase, qCeil(qLn(-range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/qLn(newLogBase)));</div>
+<div class="line"><span class="lineno"> 7818</span>    result.append(currentTick);</div>
+<div class="line"><span class="lineno"> 7819</span>    <span class="keywordflow">while</span> (currentTick &lt; range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &amp;&amp; currentTick &lt; 0) <span class="comment">// currentMag might be zero for ranges ~1e-300, just cancel in that case</span></div>
+<div class="line"><span class="lineno"> 7820</span>    {</div>
+<div class="line"><span class="lineno"> 7821</span>      currentTick /= newLogBase;</div>
+<div class="line"><span class="lineno"> 7822</span>      result.append(currentTick);</div>
+<div class="line"><span class="lineno"> 7823</span>    }</div>
+<div class="line"><span class="lineno"> 7824</span>  } <span class="keywordflow">else</span> <span class="comment">// invalid range for logarithmic scale, because lower and upper have different sign</span></div>
+<div class="line"><span class="lineno"> 7825</span>  {</div>
+<div class="line"><span class="lineno"> 7826</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid range for logarithmic plot: &quot;</span> &lt;&lt; range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt;&lt; <span class="stringliteral">&quot;..&quot;</span> &lt;&lt; range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>;</div>
+<div class="line"><span class="lineno"> 7827</span>  }</div>
+<div class="line"><span class="lineno"> 7828</span>  </div>
+<div class="line"><span class="lineno"> 7829</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 7830</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a14a35b47d1aad11b08d18ea0e25937b8"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#a14a35b47d1aad11b08d18ea0e25937b8">QCPAxisTicker::mTickCount</a></div><div class="ttdeci">int mTickCount</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01767">qcustomplot.h:1767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ac7df6c72876b7abd67c932663a0b0f6a"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#ac7df6c72876b7abd67c932663a0b0f6a">QCPAxisTicker::cleanMantissa</a></div><div class="ttdeci">double cleanMantissa(double input) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06457">qcustomplot.cpp:6457</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_af4645a824c7bd2ca8fc7e86ebf9055bd"><div class="ttname"><a href="class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker::createTickVector</a></div><div class="ttdeci">virtual QVector&lt; double &gt; createTickVector(double tickStep, const QCPRange &amp;range)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06343">qcustomplot.cpp:6343</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a352fef7ae68837acd26e35188aa86167" name="a352fef7ae68837acd26e35188aa86167"></a>
@@ -288,6 +345,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_ticker.html#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07775">7775</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7776</span>{</div>
+<div class="line"><span class="lineno"> 7777</span>  Q_UNUSED(tickStep)</div>
+<div class="line"><span class="lineno"> 7778</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3d92b729bedbbbd34ee5f74565defd95">mSubTickCount</a>;</div>
+<div class="line"><span class="lineno"> 7779</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a841a97f2b6850ff1ef3aa73e89d94775" name="a841a97f2b6850ff1ef3aa73e89d94775"></a>
@@ -313,6 +376,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02043">2043</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2043</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6e3b4e03baea3816f898869ab9751ef" name="ac6e3b4e03baea3816f898869ab9751ef"></a>
@@ -331,6 +397,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the logarithm base used for tick coordinate generation. The ticks will be placed at integer powers of <em>base</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07740">7740</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7741</span>{</div>
+<div class="line"><span class="lineno"> 7742</span>  <span class="keywordflow">if</span> (base &gt; 0)</div>
+<div class="line"><span class="lineno"> 7743</span>  {</div>
+<div class="line"><span class="lineno"> 7744</span>    <a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a> = base;</div>
+<div class="line"><span class="lineno"> 7745</span>    <a class="code hl_variable" href="#aeba719bbeec39957f475ef89d6ae2fe7">mLogBaseLnInv</a> = 1.0/qLn(<a class="code hl_variable" href="#a4108bcc1cd68dcec54dc75667440d328">mLogBase</a>);</div>
+<div class="line"><span class="lineno"> 7746</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7747</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;log base has to be greater than zero:&quot;</span> &lt;&lt; base;</div>
+<div class="line"><span class="lineno"> 7748</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad51989c798c0cfd50936d77aac57c56a" name="ad51989c798c0cfd50936d77aac57c56a"></a>
@@ -350,6 +426,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the number of sub ticks in a tick interval. Within each interval, the sub ticks are spaced linearly to provide a better visual guide, so the sub tick density increases toward the higher tick.</p>
 <p>Note that <em>subTicks</em> is the number of sub ticks (not sub intervals) in one tick interval. So in the case of logarithm base 10 an intuitive sub tick spacing would be achieved with eight sub ticks (the default). This means e.g. between the ticks 10 and 100 there will be eight ticks, namely at 20, 30, 40, 50, 60, 70, 80 and 90. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07760">7760</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7761</span>{</div>
+<div class="line"><span class="lineno"> 7762</span>  <span class="keywordflow">if</span> (subTicks &gt;= 0)</div>
+<div class="line"><span class="lineno"> 7763</span>    <a class="code hl_variable" href="#a3d92b729bedbbbd34ee5f74565defd95">mSubTickCount</a> = subTicks;</div>
+<div class="line"><span class="lineno"> 7764</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 7765</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;sub tick count can&#39;t be negative:&quot;</span> &lt;&lt; subTicks;</div>
+<div class="line"><span class="lineno"> 7766</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aebe43661977364fc1fd220fa1ae36a10" name="aebe43661977364fc1fd220fa1ae36a10"></a>
@@ -375,6 +459,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02044">2044</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2044</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3d92b729bedbbbd34ee5f74565defd95">mSubTickCount</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -398,6 +485,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02052">2052</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aeba719bbeec39957f475ef89d6ae2fe7" name="aeba719bbeec39957f475ef89d6ae2fe7"></a>
@@ -419,6 +508,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02056">2056</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -442,11 +533,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02053">2053</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

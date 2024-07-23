@@ -365,6 +365,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A legend item for polar plots. </p>
 <dl class="section warning"><dt>Warning</dt><dd>In this <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> version, polar plots are a tech preview. Expect documentation and functionality to be incomplete, as well as changing public interfaces in the future. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07612">7612</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5cb0dd67a4f14cd5a762d516b9a527ec" name="a5cb0dd67a4f14cd5a762d516b9a527ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5cb0dd67a4f14cd5a762d516b9a527ec">&#9670;&#160;</a></span>QCPPolarLegendItem()</h2>
@@ -385,6 +387,17 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34363">34363</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34363</span>                                                                              :</div>
+<div class="line"><span class="lineno">34364</span>  <a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#afaff87610e8da0fa238ecf552872d774">QCPAbstractLegendItem</a>(parent),</div>
+<div class="line"><span class="lineno">34365</span>  <a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>(graph)</div>
+<div class="line"><span class="lineno">34366</span>{</div>
+<div class="line"><span class="lineno">34367</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">setAntialiased</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">34368</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_afaff87610e8da0fa238ecf552872d774"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#afaff87610e8da0fa238ecf552872d774">QCPAbstractLegendItem::QCPAbstractLegendItem</a></div><div class="ttdeci">QCPAbstractLegendItem(QCPLegend *parent)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18753">qcustomplot.cpp:18753</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4fd43e89be4a553ead41652565ff0581"><div class="ttname"><a href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">QCPLayerable::setAntialiased</a></div><div class="ttdeci">void setAntialiased(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01445">qcustomplot.cpp:1445</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_legend_item_html_af7a08d8dd23d77894b81da5461d11f88"><div class="ttname"><a href="#af7a08d8dd23d77894b81da5461d11f88">QCPPolarLegendItem::mPolarGraph</a></div><div class="ttdeci">QCPPolarGraph * mPolarGraph</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07623">qcustomplot.h:7623</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -413,6 +426,45 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_legend_item.html#a14ce0b09f5b814c765a0d790bd838909">QCPAbstractLegendItem</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34370">34370</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34371</span>{</div>
+<div class="line"><span class="lineno">34372</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">34373</span>  painter-&gt;setFont(<a class="code hl_function" href="#a72e7dd33f4b4d220a88faecd90631b55">getFont</a>());</div>
+<div class="line"><span class="lineno">34374</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(QPen(<a class="code hl_function" href="#ab877841120790623b7ffa75a1b34b027">getTextColor</a>()));</div>
+<div class="line"><span class="lineno">34375</span>  QSizeF iconSize = <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">mParentLegend</a>-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#ae4f17a186558c82d2ba269f6e7164dda">iconSize</a>();</div>
+<div class="line"><span class="lineno">34376</span>  QRectF textRect = painter-&gt;fontMetrics().boundingRect(0, 0, 0, iconSize.height(), Qt::TextDontClip, <a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_polar_graph.html#a2688b7f85cb4f1efe9a0646f6ac86f96">name</a>());</div>
+<div class="line"><span class="lineno">34377</span>  QRectF iconRect(<a class="code hl_variable" href="class_q_c_p_layout_element.html#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a>.topLeft(), iconSize);</div>
+<div class="line"><span class="lineno">34378</span>  <span class="keywordtype">int</span> textHeight = qMax(textRect.height(), iconSize.height());  <span class="comment">// if text has smaller height than icon, center text vertically in icon height, else align tops</span></div>
+<div class="line"><span class="lineno">34379</span>  painter-&gt;drawText(<a class="code hl_variable" href="class_q_c_p_layout_element.html#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a>.x()+iconSize.width()+<a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">mParentLegend</a>-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#a19668bb7f8fafe20d367cebf96269eaf">iconTextPadding</a>(), <a class="code hl_variable" href="class_q_c_p_layout_element.html#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a>.y(), textRect.width(), textHeight, Qt::TextDontClip, <a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_polar_graph.html#a2688b7f85cb4f1efe9a0646f6ac86f96">name</a>());</div>
+<div class="line"><span class="lineno">34380</span>  <span class="comment">// draw icon:</span></div>
+<div class="line"><span class="lineno">34381</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a8fd6821ee6fecbfa04444c9062912abd">save</a>();</div>
+<div class="line"><span class="lineno">34382</span>  painter-&gt;setClipRect(iconRect, Qt::IntersectClip);</div>
+<div class="line"><span class="lineno">34383</span>  <a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_polar_graph.html#a59fc02419f54a53225d51e81dd8bc24d">drawLegendIcon</a>(painter, iconRect);</div>
+<div class="line"><span class="lineno">34384</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a64908e6298d5bbd83457dc987cc3a022">restore</a>();</div>
+<div class="line"><span class="lineno">34385</span>  <span class="comment">// draw icon border:</span></div>
+<div class="line"><span class="lineno">34386</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a2592d8638500edb0105c77dae2bacbf9">getIconBorderPen</a>().style() != Qt::NoPen)</div>
+<div class="line"><span class="lineno">34387</span>  {</div>
+<div class="line"><span class="lineno">34388</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_function" href="#a2592d8638500edb0105c77dae2bacbf9">getIconBorderPen</a>());</div>
+<div class="line"><span class="lineno">34389</span>    painter-&gt;setBrush(Qt::NoBrush);</div>
+<div class="line"><span class="lineno">34390</span>    <span class="keywordtype">int</span> halfPen = qCeil(painter-&gt;pen().widthF()*0.5)+1;</div>
+<div class="line"><span class="lineno">34391</span>    painter-&gt;setClipRect(<a class="code hl_variable" href="class_q_c_p_layout_element.html#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>.adjusted(-halfPen, -halfPen, halfPen, halfPen)); <span class="comment">// extend default clip rect so thicker pens (especially during selection) are not clipped</span></div>
+<div class="line"><span class="lineno">34392</span>    painter-&gt;drawRect(iconRect);</div>
+<div class="line"><span class="lineno">34393</span>  }</div>
+<div class="line"><span class="lineno">34394</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_aafcd9fc6fcb10f4a8d46037011afafe8"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">QCPAbstractLegendItem::mParentLegend</a></div><div class="ttdeci">QCPLegend * mParentLegend</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05091">qcustomplot.h:5091</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a07bb4973379e75cb0fa5b032c1d24afd"><div class="ttname"><a href="class_q_c_p_layout_element.html#a07bb4973379e75cb0fa5b032c1d24afd">QCPLayoutElement::mOuterRect</a></div><div class="ttdeci">QRect mOuterRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01317">qcustomplot.h:1317</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ad8896f05550389f7b9e92c9e6cdf6e01"><div class="ttname"><a href="class_q_c_p_layout_element.html#ad8896f05550389f7b9e92c9e6cdf6e01">QCPLayoutElement::mRect</a></div><div class="ttdeci">QRect mRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01317">qcustomplot.h:1317</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a19668bb7f8fafe20d367cebf96269eaf"><div class="ttname"><a href="class_q_c_p_legend.html#a19668bb7f8fafe20d367cebf96269eaf">QCPLegend::iconTextPadding</a></div><div class="ttdeci">int iconTextPadding() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05180">qcustomplot.h:5180</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ae4f17a186558c82d2ba269f6e7164dda"><div class="ttname"><a href="class_q_c_p_legend.html#ae4f17a186558c82d2ba269f6e7164dda">QCPLegend::iconSize</a></div><div class="ttdeci">QSize iconSize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05179">qcustomplot.h:5179</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a64908e6298d5bbd83457dc987cc3a022"><div class="ttname"><a href="class_q_c_p_painter.html#a64908e6298d5bbd83457dc987cc3a022">QCPPainter::restore</a></div><div class="ttdeci">void restore()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00467">qcustomplot.cpp:467</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a8fd6821ee6fecbfa04444c9062912abd"><div class="ttname"><a href="class_q_c_p_painter.html#a8fd6821ee6fecbfa04444c9062912abd">QCPPainter::save</a></div><div class="ttdeci">void save()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00453">qcustomplot.cpp:453</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_graph_html_a2688b7f85cb4f1efe9a0646f6ac86f96"><div class="ttname"><a href="class_q_c_p_polar_graph.html#a2688b7f85cb4f1efe9a0646f6ac86f96">QCPPolarGraph::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l07658">qcustomplot.h:7658</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_graph_html_a59fc02419f54a53225d51e81dd8bc24d"><div class="ttname"><a href="class_q_c_p_polar_graph.html#a59fc02419f54a53225d51e81dd8bc24d">QCPPolarGraph::drawLegendIcon</a></div><div class="ttdeci">virtual void drawLegendIcon(QCPPainter *painter, const QRectF &amp;rect) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l35144">qcustomplot.cpp:35144</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_legend_item_html_a2592d8638500edb0105c77dae2bacbf9"><div class="ttname"><a href="#a2592d8638500edb0105c77dae2bacbf9">QCPPolarLegendItem::getIconBorderPen</a></div><div class="ttdeci">QPen getIconBorderPen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34411">qcustomplot.cpp:34411</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_legend_item_html_a72e7dd33f4b4d220a88faecd90631b55"><div class="ttname"><a href="#a72e7dd33f4b4d220a88faecd90631b55">QCPPolarLegendItem::getFont</a></div><div class="ttdeci">QFont getFont() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34421">qcustomplot.cpp:34421</a></div></div>
+<div class="ttc" id="aclass_q_c_p_polar_legend_item_html_ab877841120790623b7ffa75a1b34b027"><div class="ttname"><a href="#ab877841120790623b7ffa75a1b34b027">QCPPolarLegendItem::getTextColor</a></div><div class="ttdeci">QColor getTextColor() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l34416">qcustomplot.cpp:34416</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a72e7dd33f4b4d220a88faecd90631b55" name="a72e7dd33f4b4d220a88faecd90631b55"></a>
@@ -438,6 +490,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34421">34421</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34422</span>{</div>
+<div class="line"><span class="lineno">34423</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#ae58ebebbd0c36cc6fe897483369984d2">mSelected</a> ? <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#ab971df604306b192875a7d097feb1e21">mSelectedFont</a> : <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#ae916a78ac0d2a60e20a17ca2f24f9754">mFont</a>;</div>
+<div class="line"><span class="lineno">34424</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_ab971df604306b192875a7d097feb1e21"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#ab971df604306b192875a7d097feb1e21">QCPAbstractLegendItem::mSelectedFont</a></div><div class="ttdeci">QFont mSelectedFont</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05094">qcustomplot.h:5094</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_ae58ebebbd0c36cc6fe897483369984d2"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#ae58ebebbd0c36cc6fe897483369984d2">QCPAbstractLegendItem::mSelected</a></div><div class="ttdeci">bool mSelected</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05096">qcustomplot.h:5096</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_ae916a78ac0d2a60e20a17ca2f24f9754"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#ae916a78ac0d2a60e20a17ca2f24f9754">QCPAbstractLegendItem::mFont</a></div><div class="ttdeci">QFont mFont</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05092">qcustomplot.h:5092</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2592d8638500edb0105c77dae2bacbf9" name="a2592d8638500edb0105c77dae2bacbf9"></a>
@@ -463,6 +523,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34411">34411</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34412</span>{</div>
+<div class="line"><span class="lineno">34413</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#ae58ebebbd0c36cc6fe897483369984d2">mSelected</a> ? <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">mParentLegend</a>-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#ad8eb320ca3a25928982a65163e8f883b">selectedIconBorderPen</a>() : <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">mParentLegend</a>-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#a5b91d2ea68a4dd20238f660b80cd9945">iconBorderPen</a>();</div>
+<div class="line"><span class="lineno">34414</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a5b91d2ea68a4dd20238f660b80cd9945"><div class="ttname"><a href="class_q_c_p_legend.html#a5b91d2ea68a4dd20238f660b80cd9945">QCPLegend::iconBorderPen</a></div><div class="ttdeci">QPen iconBorderPen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05181">qcustomplot.h:5181</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ad8eb320ca3a25928982a65163e8f883b"><div class="ttname"><a href="class_q_c_p_legend.html#ad8eb320ca3a25928982a65163e8f883b">QCPLegend::selectedIconBorderPen</a></div><div class="ttdeci">QPen selectedIconBorderPen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05185">qcustomplot.h:5185</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab877841120790623b7ffa75a1b34b027" name="ab877841120790623b7ffa75a1b34b027"></a>
@@ -488,6 +555,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34416">34416</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34417</span>{</div>
+<div class="line"><span class="lineno">34418</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#ae58ebebbd0c36cc6fe897483369984d2">mSelected</a> ? <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#a4965c13854d970b24c284f0a4f005fbd">mSelectedTextColor</a> : <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#a974b21e9930227d281344bd2242d289d">mTextColor</a>;</div>
+<div class="line"><span class="lineno">34419</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a4965c13854d970b24c284f0a4f005fbd"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a4965c13854d970b24c284f0a4f005fbd">QCPAbstractLegendItem::mSelectedTextColor</a></div><div class="ttdeci">QColor mSelectedTextColor</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05095">qcustomplot.h:5095</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a974b21e9930227d281344bd2242d289d"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a974b21e9930227d281344bd2242d289d">QCPAbstractLegendItem::mTextColor</a></div><div class="ttdeci">QColor mTextColor</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05093">qcustomplot.h:5093</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17e2c0da8308a014b1d4339131215217" name="a17e2c0da8308a014b1d4339131215217"></a>
@@ -519,6 +593,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a46789036c4fcb190fa374f91321d7c09">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l34396">34396</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">34397</span>{</div>
+<div class="line"><span class="lineno">34398</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>) <span class="keywordflow">return</span> QSize();</div>
+<div class="line"><span class="lineno">34399</span>  QSize result(0, 0);</div>
+<div class="line"><span class="lineno">34400</span>  QRect textRect;</div>
+<div class="line"><span class="lineno">34401</span>  QFontMetrics fontMetrics(<a class="code hl_function" href="#a72e7dd33f4b4d220a88faecd90631b55">getFont</a>());</div>
+<div class="line"><span class="lineno">34402</span>  QSize iconSize = <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">mParentLegend</a>-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#ae4f17a186558c82d2ba269f6e7164dda">iconSize</a>();</div>
+<div class="line"><span class="lineno">34403</span>  textRect = fontMetrics.boundingRect(0, 0, 0, iconSize.height(), Qt::TextDontClip, <a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>-&gt;<a class="code hl_function" href="class_q_c_p_polar_graph.html#a2688b7f85cb4f1efe9a0646f6ac86f96">name</a>());</div>
+<div class="line"><span class="lineno">34404</span>  result.setWidth(iconSize.width() + <a class="code hl_variable" href="class_q_c_p_abstract_legend_item.html#aafcd9fc6fcb10f4a8d46037011afafe8">mParentLegend</a>-&gt;<a class="code hl_function" href="class_q_c_p_legend.html#a19668bb7f8fafe20d367cebf96269eaf">iconTextPadding</a>() + textRect.width());</div>
+<div class="line"><span class="lineno">34405</span>  result.setHeight(qMax(textRect.height(), iconSize.height()));</div>
+<div class="line"><span class="lineno">34406</span>  result.rwidth() += <a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.left()+<a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.right();</div>
+<div class="line"><span class="lineno">34407</span>  result.rheight() += <a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.top()+<a class="code hl_variable" href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.bottom();</div>
+<div class="line"><span class="lineno">34408</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">34409</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ac2a32b99ee527ca5dfff9da03628fe94"><div class="ttname"><a href="class_q_c_p_layout_element.html#ac2a32b99ee527ca5dfff9da03628fe94">QCPLayoutElement::mMargins</a></div><div class="ttdeci">QMargins mMargins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01318">qcustomplot.h:1318</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa3401d381cd5610af14690bed2c23070" name="aa3401d381cd5610af14690bed2c23070"></a>
@@ -544,6 +634,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07619">7619</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7619</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af7a08d8dd23d77894b81da5461d11f88">mPolarGraph</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -567,11 +660,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l07623">7623</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

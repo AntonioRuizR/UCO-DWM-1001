@@ -181,7 +181,9 @@ Protected Attributes</h2></td></tr>
 The various ending styles currently supported</div></div>
 <p>For every ending a line-like item has, an instance of this class exists. For example, <a class="el" href="class_q_c_p_item_line.html" title="A line from one point to another.">QCPItemLine</a> has two endings which can be set with <a class="el" href="class_q_c_p_item_line.html#aebf3d687114d584e0459db6759e2c3c3">QCPItemLine::setHead</a> and <a class="el" href="class_q_c_p_item_line.html#ac264222c3297a7efe33df9345c811a5f">QCPItemLine::setTail</a>.</p>
 <p>The styles themselves are defined via the enum <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5">QCPLineEnding::EndingStyle</a>. Most decorations can be modified regarding width and length, see <a class="el" href="#a26dc020ea985a72cc25881ce2115e34e">setWidth</a> and <a class="el" href="#ae36fa01763751cd64b7f56c3507e935a">setLength</a>. The direction of the ending decoration (e.g. direction an arrow is pointing) is controlled by the line-like item. For example, when both endings of a <a class="el" href="class_q_c_p_item_line.html" title="A line from one point to another.">QCPItemLine</a> are set to be arrows, they will point to opposite directions, e.g. "outward". This can be changed by <a class="el" href="#a580e4e2360b35ebb8d68f3494aa2335d">setInverted</a>, which would make the respective arrow point inward.</p>
-<p>Note that due to the overloaded <a class="el" href="class_q_c_p_line_ending.html" title="Handles the different ending decorations for line-like items.">QCPLineEnding</a> constructor, you may directly specify a <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5">QCPLineEnding::EndingStyle</a> where actually a <a class="el" href="class_q_c_p_line_ending.html" title="Handles the different ending decorations for line-like items.">QCPLineEnding</a> is expected, e.g. </p><div class="fragment"></div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<p>Note that due to the overloaded <a class="el" href="class_q_c_p_line_ending.html" title="Handles the different ending decorations for line-like items.">QCPLineEnding</a> constructor, you may directly specify a <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5">QCPLineEnding::EndingStyle</a> where actually a <a class="el" href="class_q_c_p_line_ending.html" title="Handles the different ending decorations for line-like items.">QCPLineEnding</a> is expected, e.g. </p><div class="fragment"></div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01528">1528</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5ef16e6876b4b74959c7261d8d4c2cd5" name="a5ef16e6876b4b74959c7261d8d4c2cd5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5">&#9670;&#160;</a></span>EndingStyle</h2>
 
@@ -222,6 +224,29 @@ The various ending styles currently supported</div></div>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01543">1543</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1543</span>                   { <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>          </div>
+<div class="line"><span class="lineno"> 1544</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f">esFlatArrow</a>    </div>
+<div class="line"><span class="lineno"> 1545</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf">esSpikeArrow</a>   </div>
+<div class="line"><span class="lineno"> 1546</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a61f78ee8f375fb21cb9d250687bbcbd2">esLineArrow</a>    </div>
+<div class="line"><span class="lineno"> 1547</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae5a3414916817258bcc6dddd605e8f5c">esDisc</a>         </div>
+<div class="line"><span class="lineno"> 1548</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae1836502fa43d8990bb62b2d493a140a">esSquare</a>       </div>
+<div class="line"><span class="lineno"> 1549</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a378fe5a8b768411b0bc1765210fe7200">esDiamond</a>      </div>
+<div class="line"><span class="lineno"> 1550</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2cf543bbca332df26d89bf779f50469f">esBar</a>          </div>
+<div class="line"><span class="lineno"> 1551</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b">esHalfBar</a>      </div>
+<div class="line"><span class="lineno"> 1552</span>                     ,<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2b2cc96e757ca9bcd91fb70221ed43ab">esSkewedBar</a>    </div>
+<div class="line"><span class="lineno"> 1553</span>                   };</div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b">QCPLineEnding::esHalfBar</a></div><div class="ttdeci">@ esHalfBar</div><div class="ttdoc">A bar perpendicular to the line, pointing out to only one side (to which side can be changed with set...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01552">qcustomplot.h:1551</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5a2b2cc96e757ca9bcd91fb70221ed43ab"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2b2cc96e757ca9bcd91fb70221ed43ab">QCPLineEnding::esSkewedBar</a></div><div class="ttdeci">@ esSkewedBar</div><div class="ttdoc">A bar that is skewed (skew controllable via setLength)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01553">qcustomplot.h:1552</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5a2cf543bbca332df26d89bf779f50469f"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2cf543bbca332df26d89bf779f50469f">QCPLineEnding::esBar</a></div><div class="ttdeci">@ esBar</div><div class="ttdoc">A bar perpendicular to the line.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01551">qcustomplot.h:1550</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5a378fe5a8b768411b0bc1765210fe7200"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5a378fe5a8b768411b0bc1765210fe7200">QCPLineEnding::esDiamond</a></div><div class="ttdeci">@ esDiamond</div><div class="ttdoc">A filled diamond (45 degrees rotated square)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01550">qcustomplot.h:1549</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f">QCPLineEnding::esFlatArrow</a></div><div class="ttdeci">@ esFlatArrow</div><div class="ttdoc">A filled arrow head with a straight/flat back (a triangle)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01545">qcustomplot.h:1544</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5a61f78ee8f375fb21cb9d250687bbcbd2"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5a61f78ee8f375fb21cb9d250687bbcbd2">QCPLineEnding::esLineArrow</a></div><div class="ttdeci">@ esLineArrow</div><div class="ttdoc">A non-filled arrow head with open back.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01547">qcustomplot.h:1546</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf">QCPLineEnding::esSpikeArrow</a></div><div class="ttdeci">@ esSpikeArrow</div><div class="ttdoc">A filled arrow head with an indented back.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01546">qcustomplot.h:1545</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">QCPLineEnding::esNone</a></div><div class="ttdeci">@ esNone</div><div class="ttdoc">No ending decoration.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01544">qcustomplot.h:1543</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5ae1836502fa43d8990bb62b2d493a140a"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae1836502fa43d8990bb62b2d493a140a">QCPLineEnding::esSquare</a></div><div class="ttdeci">@ esSquare</div><div class="ttdoc">A filled square.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01549">qcustomplot.h:1548</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a5ef16e6876b4b74959c7261d8d4c2cd5ae5a3414916817258bcc6dddd605e8f5c"><div class="ttname"><a href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae5a3414916817258bcc6dddd605e8f5c">QCPLineEnding::esDisc</a></div><div class="ttdeci">@ esDisc</div><div class="ttdoc">A filled circle.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01548">qcustomplot.h:1547</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -241,6 +266,19 @@ The various ending styles currently supported</div></div>
 </div><div class="memdoc">
 <p>Creates a <a class="el" href="class_q_c_p_line_ending.html" title="Handles the different ending decorations for line-like items.">QCPLineEnding</a> instance with default values (style <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05194">5194</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5194</span>                             :</div>
+<div class="line"><span class="lineno"> 5195</span>  <a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a>(<a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>),</div>
+<div class="line"><span class="lineno"> 5196</span>  <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>(8),</div>
+<div class="line"><span class="lineno"> 5197</span>  <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>(10),</div>
+<div class="line"><span class="lineno"> 5198</span>  <a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno"> 5199</span>{</div>
+<div class="line"><span class="lineno"> 5200</span>}</div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a4696fc9117b60f1ca7690fcd2ba56611"><div class="ttname"><a href="#a4696fc9117b60f1ca7690fcd2ba56611">QCPLineEnding::mStyle</a></div><div class="ttdeci">EndingStyle mStyle</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01579">qcustomplot.h:1579</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a91306fe771d54c955e0af21af14349d5"><div class="ttname"><a href="#a91306fe771d54c955e0af21af14349d5">QCPLineEnding::mInverted</a></div><div class="ttdeci">bool mInverted</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01581">qcustomplot.h:1581</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_aca89d21341133c20dc6825c33a5eac48"><div class="ttname"><a href="#aca89d21341133c20dc6825c33a5eac48">QCPLineEnding::mWidth</a></div><div class="ttdeci">double mWidth</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01580">qcustomplot.h:1580</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_ae8e1e2566b96c05736cd92662dba8af8"><div class="ttname"><a href="#ae8e1e2566b96c05736cd92662dba8af8">QCPLineEnding::mLength</a></div><div class="ttdeci">double mLength</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01580">qcustomplot.h:1580</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abb2abc7542f0c7a3c081d878248896a4" name="abb2abc7542f0c7a3c081d878248896a4"></a>
@@ -273,6 +311,19 @@ The various ending styles currently supported</div></div>
 </div><div class="memdoc">
 <p>Creates a <a class="el" href="class_q_c_p_line_ending.html" title="Handles the different ending decorations for line-like items.">QCPLineEnding</a> instance with the specified values. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05205">5205</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5205</span>                                                                                                       :</div>
+<div class="line"><span class="lineno"> 5206</span>  <a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a>(<a class="code hl_function" href="#a07e75aaac6c61322bf51af237c5778e3">style</a>),</div>
+<div class="line"><span class="lineno"> 5207</span>  <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>(<a class="code hl_function" href="#ae6f1fb83c210da6ace35d629993287f3">width</a>),</div>
+<div class="line"><span class="lineno"> 5208</span>  <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>(<a class="code hl_function" href="#aee9050a13fe115bd1b6794f9ad14cd72">length</a>),</div>
+<div class="line"><span class="lineno"> 5209</span>  <a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a>(<a class="code hl_function" href="#a15a68706d298a0c9f94556f6b4db15ff">inverted</a>)</div>
+<div class="line"><span class="lineno"> 5210</span>{</div>
+<div class="line"><span class="lineno"> 5211</span>}</div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a07e75aaac6c61322bf51af237c5778e3"><div class="ttname"><a href="#a07e75aaac6c61322bf51af237c5778e3">QCPLineEnding::style</a></div><div class="ttdeci">EndingStyle style() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01560">qcustomplot.h:1560</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a15a68706d298a0c9f94556f6b4db15ff"><div class="ttname"><a href="#a15a68706d298a0c9f94556f6b4db15ff">QCPLineEnding::inverted</a></div><div class="ttdeci">bool inverted() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01563">qcustomplot.h:1563</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_ae6f1fb83c210da6ace35d629993287f3"><div class="ttname"><a href="#ae6f1fb83c210da6ace35d629993287f3">QCPLineEnding::width</a></div><div class="ttdeci">double width() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01561">qcustomplot.h:1561</a></div></div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_aee9050a13fe115bd1b6794f9ad14cd72"><div class="ttname"><a href="#aee9050a13fe115bd1b6794f9ad14cd72">QCPLineEnding::length</a></div><div class="ttdeci">double length() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01562">qcustomplot.h:1562</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -291,6 +342,30 @@ The various ending styles currently supported</div></div>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05265">5265</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5266</span>{</div>
+<div class="line"><span class="lineno"> 5267</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a>)</div>
+<div class="line"><span class="lineno"> 5268</span>  {</div>
+<div class="line"><span class="lineno"> 5269</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>:</div>
+<div class="line"><span class="lineno"> 5270</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 5271</span>      </div>
+<div class="line"><span class="lineno"> 5272</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f">esFlatArrow</a>:</div>
+<div class="line"><span class="lineno"> 5273</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf">esSpikeArrow</a>:</div>
+<div class="line"><span class="lineno"> 5274</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a61f78ee8f375fb21cb9d250687bbcbd2">esLineArrow</a>:</div>
+<div class="line"><span class="lineno"> 5275</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2b2cc96e757ca9bcd91fb70221ed43ab">esSkewedBar</a>:</div>
+<div class="line"><span class="lineno"> 5276</span>      <span class="keywordflow">return</span> qSqrt(<a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>*<a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>+<a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>*<a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>); <span class="comment">// items that have width and length</span></div>
+<div class="line"><span class="lineno"> 5277</span>      </div>
+<div class="line"><span class="lineno"> 5278</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae5a3414916817258bcc6dddd605e8f5c">esDisc</a>:</div>
+<div class="line"><span class="lineno"> 5279</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae1836502fa43d8990bb62b2d493a140a">esSquare</a>:</div>
+<div class="line"><span class="lineno"> 5280</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a378fe5a8b768411b0bc1765210fe7200">esDiamond</a>:</div>
+<div class="line"><span class="lineno"> 5281</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2cf543bbca332df26d89bf779f50469f">esBar</a>:</div>
+<div class="line"><span class="lineno"> 5282</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b">esHalfBar</a>:</div>
+<div class="line"><span class="lineno"> 5283</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>*1.42; <span class="comment">// items that only have a width -&gt; width*sqrt(2)</span></div>
+<div class="line"><span class="lineno"> 5284</span> </div>
+<div class="line"><span class="lineno"> 5285</span>  }</div>
+<div class="line"><span class="lineno"> 5286</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 5287</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4f45db54f2aba03acf055e29aec1e8e7" name="a4f45db54f2aba03acf055e29aec1e8e7"></a>
@@ -317,6 +392,131 @@ The various ending styles currently supported</div></div>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05330">5330</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5331</span>{</div>
+<div class="line"><span class="lineno"> 5332</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a> == <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>)</div>
+<div class="line"><span class="lineno"> 5333</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 5334</span>  </div>
+<div class="line"><span class="lineno"> 5335</span>  <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a> lengthVec = dir.<a class="code hl_function" href="class_q_c_p_vector2_d.html#a707bb3af3b1f9331a2450ec75eaf7eb0">normalized</a>() * <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>*(<a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a> ? -1 : 1);</div>
+<div class="line"><span class="lineno"> 5336</span>  <span class="keywordflow">if</span> (lengthVec.<a class="code hl_function" href="class_q_c_p_vector2_d.html#ace99f200b347b14864808213eef16593">isNull</a>())</div>
+<div class="line"><span class="lineno"> 5337</span>    lengthVec = <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(1, 0);</div>
+<div class="line"><span class="lineno"> 5338</span>  <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a> widthVec = dir.<a class="code hl_function" href="class_q_c_p_vector2_d.html#a707bb3af3b1f9331a2450ec75eaf7eb0">normalized</a>().<a class="code hl_function" href="class_q_c_p_vector2_d.html#a0e08d09f9027784237e302e32290b001">perpendicular</a>() * <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>*0.5*(<a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a> ? -1 : 1);</div>
+<div class="line"><span class="lineno"> 5339</span>  </div>
+<div class="line"><span class="lineno"> 5340</span>  QPen penBackup = painter-&gt;pen();</div>
+<div class="line"><span class="lineno"> 5341</span>  QBrush brushBackup = painter-&gt;brush();</div>
+<div class="line"><span class="lineno"> 5342</span>  QPen miterPen = penBackup;</div>
+<div class="line"><span class="lineno"> 5343</span>  miterPen.setJoinStyle(Qt::MiterJoin); <span class="comment">// to make arrow heads spikey</span></div>
+<div class="line"><span class="lineno"> 5344</span>  QBrush brush(painter-&gt;pen().color(), Qt::SolidPattern);</div>
+<div class="line"><span class="lineno"> 5345</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a>)</div>
+<div class="line"><span class="lineno"> 5346</span>  {</div>
+<div class="line"><span class="lineno"> 5347</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>: <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5348</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f">esFlatArrow</a>:</div>
+<div class="line"><span class="lineno"> 5349</span>    {</div>
+<div class="line"><span class="lineno"> 5350</span>      QPointF points[3] = {pos.<a class="code hl_function" href="class_q_c_p_vector2_d.html#acd7af3f4a62833ada58be3f3021dbbac">toPointF</a>(),</div>
+<div class="line"><span class="lineno"> 5351</span>                           (pos-lengthVec+widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5352</span>                           (pos-lengthVec-widthVec).toPointF()</div>
+<div class="line"><span class="lineno"> 5353</span>                          };</div>
+<div class="line"><span class="lineno"> 5354</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(miterPen);</div>
+<div class="line"><span class="lineno"> 5355</span>      painter-&gt;setBrush(brush);</div>
+<div class="line"><span class="lineno"> 5356</span>      painter-&gt;drawConvexPolygon(points, 3);</div>
+<div class="line"><span class="lineno"> 5357</span>      painter-&gt;setBrush(brushBackup);</div>
+<div class="line"><span class="lineno"> 5358</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(penBackup);</div>
+<div class="line"><span class="lineno"> 5359</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5360</span>    }</div>
+<div class="line"><span class="lineno"> 5361</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf">esSpikeArrow</a>:</div>
+<div class="line"><span class="lineno"> 5362</span>    {</div>
+<div class="line"><span class="lineno"> 5363</span>      QPointF points[4] = {pos.<a class="code hl_function" href="class_q_c_p_vector2_d.html#acd7af3f4a62833ada58be3f3021dbbac">toPointF</a>(),</div>
+<div class="line"><span class="lineno"> 5364</span>                           (pos-lengthVec+widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5365</span>                           (pos-lengthVec*0.8).toPointF(),</div>
+<div class="line"><span class="lineno"> 5366</span>                           (pos-lengthVec-widthVec).toPointF()</div>
+<div class="line"><span class="lineno"> 5367</span>                          };</div>
+<div class="line"><span class="lineno"> 5368</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(miterPen);</div>
+<div class="line"><span class="lineno"> 5369</span>      painter-&gt;setBrush(brush);</div>
+<div class="line"><span class="lineno"> 5370</span>      painter-&gt;drawConvexPolygon(points, 4);</div>
+<div class="line"><span class="lineno"> 5371</span>      painter-&gt;setBrush(brushBackup);</div>
+<div class="line"><span class="lineno"> 5372</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(penBackup);</div>
+<div class="line"><span class="lineno"> 5373</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5374</span>    }</div>
+<div class="line"><span class="lineno"> 5375</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a61f78ee8f375fb21cb9d250687bbcbd2">esLineArrow</a>:</div>
+<div class="line"><span class="lineno"> 5376</span>    {</div>
+<div class="line"><span class="lineno"> 5377</span>      QPointF points[3] = {(pos-lengthVec+widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5378</span>                           pos.<a class="code hl_function" href="class_q_c_p_vector2_d.html#acd7af3f4a62833ada58be3f3021dbbac">toPointF</a>(),</div>
+<div class="line"><span class="lineno"> 5379</span>                           (pos-lengthVec-widthVec).toPointF()</div>
+<div class="line"><span class="lineno"> 5380</span>                          };</div>
+<div class="line"><span class="lineno"> 5381</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(miterPen);</div>
+<div class="line"><span class="lineno"> 5382</span>      painter-&gt;drawPolyline(points, 3);</div>
+<div class="line"><span class="lineno"> 5383</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(penBackup);</div>
+<div class="line"><span class="lineno"> 5384</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5385</span>    }</div>
+<div class="line"><span class="lineno"> 5386</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae5a3414916817258bcc6dddd605e8f5c">esDisc</a>:</div>
+<div class="line"><span class="lineno"> 5387</span>    {</div>
+<div class="line"><span class="lineno"> 5388</span>      painter-&gt;setBrush(brush);</div>
+<div class="line"><span class="lineno"> 5389</span>      painter-&gt;drawEllipse(pos.<a class="code hl_function" href="class_q_c_p_vector2_d.html#acd7af3f4a62833ada58be3f3021dbbac">toPointF</a>(),  <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>*0.5, <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>*0.5);</div>
+<div class="line"><span class="lineno"> 5390</span>      painter-&gt;setBrush(brushBackup);</div>
+<div class="line"><span class="lineno"> 5391</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5392</span>    }</div>
+<div class="line"><span class="lineno"> 5393</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae1836502fa43d8990bb62b2d493a140a">esSquare</a>:</div>
+<div class="line"><span class="lineno"> 5394</span>    {</div>
+<div class="line"><span class="lineno"> 5395</span>      <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a> widthVecPerp = widthVec.<a class="code hl_function" href="class_q_c_p_vector2_d.html#a0e08d09f9027784237e302e32290b001">perpendicular</a>();</div>
+<div class="line"><span class="lineno"> 5396</span>      QPointF points[4] = {(pos-widthVecPerp+widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5397</span>                           (pos-widthVecPerp-widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5398</span>                           (pos+widthVecPerp-widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5399</span>                           (pos+widthVecPerp+widthVec).toPointF()</div>
+<div class="line"><span class="lineno"> 5400</span>                          };</div>
+<div class="line"><span class="lineno"> 5401</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(miterPen);</div>
+<div class="line"><span class="lineno"> 5402</span>      painter-&gt;setBrush(brush);</div>
+<div class="line"><span class="lineno"> 5403</span>      painter-&gt;drawConvexPolygon(points, 4);</div>
+<div class="line"><span class="lineno"> 5404</span>      painter-&gt;setBrush(brushBackup);</div>
+<div class="line"><span class="lineno"> 5405</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(penBackup);</div>
+<div class="line"><span class="lineno"> 5406</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5407</span>    }</div>
+<div class="line"><span class="lineno"> 5408</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a378fe5a8b768411b0bc1765210fe7200">esDiamond</a>:</div>
+<div class="line"><span class="lineno"> 5409</span>    {</div>
+<div class="line"><span class="lineno"> 5410</span>      <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a> widthVecPerp = widthVec.<a class="code hl_function" href="class_q_c_p_vector2_d.html#a0e08d09f9027784237e302e32290b001">perpendicular</a>();</div>
+<div class="line"><span class="lineno"> 5411</span>      QPointF points[4] = {(pos-widthVecPerp).toPointF(),</div>
+<div class="line"><span class="lineno"> 5412</span>                           (pos-widthVec).toPointF(),</div>
+<div class="line"><span class="lineno"> 5413</span>                           (pos+widthVecPerp).toPointF(),</div>
+<div class="line"><span class="lineno"> 5414</span>                           (pos+widthVec).toPointF()</div>
+<div class="line"><span class="lineno"> 5415</span>                          };</div>
+<div class="line"><span class="lineno"> 5416</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(miterPen);</div>
+<div class="line"><span class="lineno"> 5417</span>      painter-&gt;setBrush(brush);</div>
+<div class="line"><span class="lineno"> 5418</span>      painter-&gt;drawConvexPolygon(points, 4);</div>
+<div class="line"><span class="lineno"> 5419</span>      painter-&gt;setBrush(brushBackup);</div>
+<div class="line"><span class="lineno"> 5420</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(penBackup);</div>
+<div class="line"><span class="lineno"> 5421</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5422</span>    }</div>
+<div class="line"><span class="lineno"> 5423</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2cf543bbca332df26d89bf779f50469f">esBar</a>:</div>
+<div class="line"><span class="lineno"> 5424</span>    {</div>
+<div class="line"><span class="lineno"> 5425</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>((pos+widthVec).toPointF(), (pos-widthVec).toPointF());</div>
+<div class="line"><span class="lineno"> 5426</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5427</span>    }</div>
+<div class="line"><span class="lineno"> 5428</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b">esHalfBar</a>:</div>
+<div class="line"><span class="lineno"> 5429</span>    {</div>
+<div class="line"><span class="lineno"> 5430</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>((pos+widthVec).toPointF(), pos.<a class="code hl_function" href="class_q_c_p_vector2_d.html#acd7af3f4a62833ada58be3f3021dbbac">toPointF</a>());</div>
+<div class="line"><span class="lineno"> 5431</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5432</span>    }</div>
+<div class="line"><span class="lineno"> 5433</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2b2cc96e757ca9bcd91fb70221ed43ab">esSkewedBar</a>:</div>
+<div class="line"><span class="lineno"> 5434</span>    {</div>
+<div class="line"><span class="lineno"> 5435</span>      <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a> shift;</div>
+<div class="line"><span class="lineno"> 5436</span>      <span class="keywordflow">if</span> (!qFuzzyIsNull(painter-&gt;pen().widthF()) || painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#aef102658219b24165f7ee2aad1b9e48f">modes</a>().testFlag(<a class="code hl_enumvalue" href="class_q_c_p_painter.html#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">QCPPainter::pmNonCosmetic</a>))</div>
+<div class="line"><span class="lineno"> 5437</span>        shift = dir.<a class="code hl_function" href="class_q_c_p_vector2_d.html#a707bb3af3b1f9331a2450ec75eaf7eb0">normalized</a>()*qMax(qreal(1.0), painter-&gt;pen().widthF())*qreal(0.5);</div>
+<div class="line"><span class="lineno"> 5438</span>      <span class="comment">// if drawing with thick (non-cosmetic) pen, shift bar a little in line direction to prevent line from sticking through bar slightly</span></div>
+<div class="line"><span class="lineno"> 5439</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>((pos+widthVec+lengthVec*0.2*(<a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a>?-1:1)+shift).toPointF(),</div>
+<div class="line"><span class="lineno"> 5440</span>                        (pos-widthVec-lengthVec*0.2*(<a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a>?-1:1)+shift).toPointF());</div>
+<div class="line"><span class="lineno"> 5441</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5442</span>    }</div>
+<div class="line"><span class="lineno"> 5443</span>  }</div>
+<div class="line"><span class="lineno"> 5444</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b"><div class="ttname"><a href="class_q_c_p_painter.html#a156cf16444ff5e0d81a73c615fdb156dac1e481bfaf408f2bd2eaad3ec341f36b">QCPPainter::pmNonCosmetic</a></div><div class="ttdeci">@ pmNonCosmetic</div><div class="ttdoc">0x04 Turns pen widths 0 to 1, i.e. disables cosmetic pens. (A cosmetic pen is always drawn with width...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00527">qcustomplot.h:526</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_aef102658219b24165f7ee2aad1b9e48f"><div class="ttname"><a href="class_q_c_p_painter.html#aef102658219b24165f7ee2aad1b9e48f">QCPPainter::modes</a></div><div class="ttdeci">PainterModes modes() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00537">qcustomplot.h:537</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html"><div class="ttname"><a href="class_q_c_p_vector2_d.html">QCPVector2D</a></div><div class="ttdoc">Represents two doubles as a mathematical 2D vector.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00440">qcustomplot.h:441</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html_a0e08d09f9027784237e302e32290b001"><div class="ttname"><a href="class_q_c_p_vector2_d.html#a0e08d09f9027784237e302e32290b001">QCPVector2D::perpendicular</a></div><div class="ttdeci">QCPVector2D perpendicular() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00468">qcustomplot.h:468</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html_a707bb3af3b1f9331a2450ec75eaf7eb0"><div class="ttname"><a href="class_q_c_p_vector2_d.html#a707bb3af3b1f9331a2450ec75eaf7eb0">QCPVector2D::normalized</a></div><div class="ttdeci">QCPVector2D normalized() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00177">qcustomplot.cpp:177</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html_acd7af3f4a62833ada58be3f3021dbbac"><div class="ttname"><a href="class_q_c_p_vector2_d.html#acd7af3f4a62833ada58be3f3021dbbac">QCPVector2D::toPointF</a></div><div class="ttdeci">QPointF toPointF() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00463">qcustomplot.h:463</a></div></div>
+<div class="ttc" id="aclass_q_c_p_vector2_d_html_ace99f200b347b14864808213eef16593"><div class="ttname"><a href="class_q_c_p_vector2_d.html#ace99f200b347b14864808213eef16593">QCPVector2D::isNull</a></div><div class="ttdeci">bool isNull() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00465">qcustomplot.h:465</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7ac30a81ba85b9bded148c6ec387391" name="af7ac30a81ba85b9bded148c6ec387391"></a>
@@ -343,6 +543,12 @@ The various ending styles currently supported</div></div>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05451">5451</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5452</span>{</div>
+<div class="line"><span class="lineno"> 5453</span>  <a class="code hl_function" href="#a4f45db54f2aba03acf055e29aec1e8e7">draw</a>(painter, pos, <a class="code hl_class" href="class_q_c_p_vector2_d.html">QCPVector2D</a>(qCos(angle), qSin(angle)));</div>
+<div class="line"><span class="lineno"> 5454</span>}</div>
+<div class="ttc" id="aclass_q_c_p_line_ending_html_a4f45db54f2aba03acf055e29aec1e8e7"><div class="ttname"><a href="#a4f45db54f2aba03acf055e29aec1e8e7">QCPLineEnding::draw</a></div><div class="ttdeci">void draw(QCPPainter *painter, const QCPVector2D &amp;pos, const QCPVector2D &amp;dir) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l05330">qcustomplot.cpp:5330</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a15a68706d298a0c9f94556f6b4db15ff" name="a15a68706d298a0c9f94556f6b4db15ff"></a>
@@ -368,6 +574,9 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01563">1563</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1563</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aee9050a13fe115bd1b6794f9ad14cd72" name="aee9050a13fe115bd1b6794f9ad14cd72"></a>
@@ -393,6 +602,9 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01562">1562</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1562</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acacd24d386d459b282d3c57f16a5405d" name="acacd24d386d459b282d3c57f16a5405d"></a>
@@ -413,6 +625,31 @@ The various ending styles currently supported</div></div>
 <p>For example, the <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf">esSpikeArrow</a> has a shorter real length than a <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f">esFlatArrow</a>, even if both have the same <a class="el" href="#ae36fa01763751cd64b7f56c3507e935a">setLength</a> value, because the spike arrow has an inward curved back, which reduces the length along its center axis (the drawing origin for arrows is at the tip).</p>
 <p>This function is used for precise, style specific placement of line endings, for example in QCPAxes. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05300">5300</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5301</span>{</div>
+<div class="line"><span class="lineno"> 5302</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a>)</div>
+<div class="line"><span class="lineno"> 5303</span>  {</div>
+<div class="line"><span class="lineno"> 5304</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5aca12d500f50cd6871766801bac30fb03">esNone</a>:</div>
+<div class="line"><span class="lineno"> 5305</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a61f78ee8f375fb21cb9d250687bbcbd2">esLineArrow</a>:</div>
+<div class="line"><span class="lineno"> 5306</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2b2cc96e757ca9bcd91fb70221ed43ab">esSkewedBar</a>:</div>
+<div class="line"><span class="lineno"> 5307</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a2cf543bbca332df26d89bf779f50469f">esBar</a>:</div>
+<div class="line"><span class="lineno"> 5308</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b">esHalfBar</a>:</div>
+<div class="line"><span class="lineno"> 5309</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 5310</span>      </div>
+<div class="line"><span class="lineno"> 5311</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a3d7dcea2f100671727c3417142154f8f">esFlatArrow</a>:</div>
+<div class="line"><span class="lineno"> 5312</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>;</div>
+<div class="line"><span class="lineno"> 5313</span>      </div>
+<div class="line"><span class="lineno"> 5314</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae5a3414916817258bcc6dddd605e8f5c">esDisc</a>:</div>
+<div class="line"><span class="lineno"> 5315</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ae1836502fa43d8990bb62b2d493a140a">esSquare</a>:</div>
+<div class="line"><span class="lineno"> 5316</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a378fe5a8b768411b0bc1765210fe7200">esDiamond</a>:</div>
+<div class="line"><span class="lineno"> 5317</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>*0.5;</div>
+<div class="line"><span class="lineno"> 5318</span>      </div>
+<div class="line"><span class="lineno"> 5319</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a5ef16e6876b4b74959c7261d8d4c2cd5ab9964d0d03f812d1e79de15edbeb2cbf">esSpikeArrow</a>:</div>
+<div class="line"><span class="lineno"> 5320</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a>*0.8;</div>
+<div class="line"><span class="lineno"> 5321</span>  }</div>
+<div class="line"><span class="lineno"> 5322</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 5323</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a580e4e2360b35ebb8d68f3494aa2335d" name="a580e4e2360b35ebb8d68f3494aa2335d"></a>
@@ -432,6 +669,11 @@ The various ending styles currently supported</div></div>
 <p>Sets whether the ending decoration shall be inverted. For example, an arrow decoration will point inward when <em>inverted</em> is set to true.</p>
 <p>Note that also the <em>width</em> direction is inverted. For symmetrical ending styles like arrows or discs, this doesn't make a difference. However, asymmetric styles like <a class="el" href="#a5ef16e6876b4b74959c7261d8d4c2cd5a126c390f0c359fcd8df1fc5e38d26d5b">esHalfBar</a> are affected by it, which can be used to control to which side the half bar points to. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05251">5251</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5252</span>{</div>
+<div class="line"><span class="lineno"> 5253</span>  <a class="code hl_variable" href="#a91306fe771d54c955e0af21af14349d5">mInverted</a> = <a class="code hl_function" href="#a15a68706d298a0c9f94556f6b4db15ff">inverted</a>;</div>
+<div class="line"><span class="lineno"> 5254</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae36fa01763751cd64b7f56c3507e935a" name="ae36fa01763751cd64b7f56c3507e935a"></a>
@@ -451,6 +693,11 @@ The various ending styles currently supported</div></div>
 <p>Sets the length of the ending decoration, if the style supports it. On arrows, for example, the length defines the size in pointing direction.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a26dc020ea985a72cc25881ce2115e34e">setWidth</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05238">5238</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5239</span>{</div>
+<div class="line"><span class="lineno"> 5240</span>  <a class="code hl_variable" href="#ae8e1e2566b96c05736cd92662dba8af8">mLength</a> = <a class="code hl_function" href="#aee9050a13fe115bd1b6794f9ad14cd72">length</a>;</div>
+<div class="line"><span class="lineno"> 5241</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a56953b9cb8ed1bed0f025c3935f16910" name="a56953b9cb8ed1bed0f025c3935f16910"></a>
@@ -469,6 +716,11 @@ The various ending styles currently supported</div></div>
 </div><div class="memdoc">
 <p>Sets the style of the ending decoration. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05216">5216</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5217</span>{</div>
+<div class="line"><span class="lineno"> 5218</span>  <a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a> = <a class="code hl_function" href="#a07e75aaac6c61322bf51af237c5778e3">style</a>;</div>
+<div class="line"><span class="lineno"> 5219</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a26dc020ea985a72cc25881ce2115e34e" name="a26dc020ea985a72cc25881ce2115e34e"></a>
@@ -488,6 +740,11 @@ The various ending styles currently supported</div></div>
 <p>Sets the width of the ending decoration, if the style supports it. On arrows, for example, the width defines the size perpendicular to the arrow's pointing direction.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae36fa01763751cd64b7f56c3507e935a">setLength</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05227">5227</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5228</span>{</div>
+<div class="line"><span class="lineno"> 5229</span>  <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a> = <a class="code hl_function" href="#ae6f1fb83c210da6ace35d629993287f3">width</a>;</div>
+<div class="line"><span class="lineno"> 5230</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a07e75aaac6c61322bf51af237c5778e3" name="a07e75aaac6c61322bf51af237c5778e3"></a>
@@ -513,6 +770,9 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01560">1560</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1560</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4696fc9117b60f1ca7690fcd2ba56611">mStyle</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae6f1fb83c210da6ace35d629993287f3" name="ae6f1fb83c210da6ace35d629993287f3"></a>
@@ -538,6 +798,9 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01561">1561</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1561</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aca89d21341133c20dc6825c33a5eac48">mWidth</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -561,6 +824,8 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01581">1581</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ae8e1e2566b96c05736cd92662dba8af8" name="ae8e1e2566b96c05736cd92662dba8af8"></a>
@@ -582,6 +847,8 @@ The various ending styles currently supported</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01580">1580</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -605,6 +872,8 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01579">1579</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aca89d21341133c20dc6825c33a5eac48" name="aca89d21341133c20dc6825c33a5eac48"></a>
@@ -627,11 +896,13 @@ The various ending styles currently supported</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01580">1580</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

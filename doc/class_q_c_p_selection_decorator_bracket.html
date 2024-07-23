@@ -246,6 +246,8 @@ Protected Attributes</h2></td></tr>
 <p>Additionally to the regular highlighting of selected segments via color, fill and scatter style, this <a class="el" href="class_q_c_p_selection_decorator.html">QCPSelectionDecorator</a> subclass draws markers at the begin and end of each selected data segment of the plottable.</p>
 <p>The shape of the markers can be controlled with <a class="el" href="#a04507697438f6ad8cc2aeea5422dcbe5">setBracketStyle</a>, <a class="el" href="#a291b59cab98ce93a0a3c85963fe10f5e">setBracketWidth</a> and <a class="el" href="#aed773ad737201cca40efc6fe451acad8">setBracketHeight</a>. The color/fill can be controlled with <a class="el" href="#ac0e392a6097990f8aa978932a8fa05d6">setBracketPen</a> and <a class="el" href="#a2f4ea0bfb0ea980252b76dd349dd53aa">setBracketBrush</a>.</p>
 <p>To introduce custom bracket styles, it is only necessary to sublcass <a class="el" href="class_q_c_p_selection_decorator_bracket.html">QCPSelectionDecoratorBracket</a> and reimplement <a class="el" href="#a57b65b5508d5bd0f27c9318f3d4646be">drawBracket</a>. The rest will be managed by the base class. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04855">4855</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aa6d18517ec0553575bbef0de4252336e" name="aa6d18517ec0553575bbef0de4252336e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6d18517ec0553575bbef0de4252336e">&#9670;&#160;</a></span>BracketStyle</h2>
@@ -273,6 +275,19 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04866">4866</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4866</span>                    { <a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336eaa10a8d25d409b09256a13220a4d74f81">bsSquareBracket</a> </div>
+<div class="line"><span class="lineno"> 4867</span>                      ,<a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336eafa8ad19b1822c9c03fbe5e9ff8eeeea2">bsHalfEllipse</a>   </div>
+<div class="line"><span class="lineno"> 4868</span>                      ,<a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336ea7cab0f2f406e293094a7a1e4903f6e8c">bsEllipse</a>       </div>
+<div class="line"><span class="lineno"> 4869</span>                      ,<a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336ea86eb6ae27e6296576fdc46d13c840530">bsPlus</a>         </div>
+<div class="line"><span class="lineno"> 4870</span>                      ,<a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336ea5a627cacdaa30ce434371d6a034b991d">bsUserStyle</a>    </div>
+<div class="line"><span class="lineno"> 4871</span>  };</div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_aa6d18517ec0553575bbef0de4252336ea5a627cacdaa30ce434371d6a034b991d"><div class="ttname"><a href="#aa6d18517ec0553575bbef0de4252336ea5a627cacdaa30ce434371d6a034b991d">QCPSelectionDecoratorBracket::bsUserStyle</a></div><div class="ttdeci">@ bsUserStyle</div><div class="ttdoc">Start custom bracket styles at this index when subclassing and reimplementing drawBracket.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04871">qcustomplot.h:4870</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_aa6d18517ec0553575bbef0de4252336ea7cab0f2f406e293094a7a1e4903f6e8c"><div class="ttname"><a href="#aa6d18517ec0553575bbef0de4252336ea7cab0f2f406e293094a7a1e4903f6e8c">QCPSelectionDecoratorBracket::bsEllipse</a></div><div class="ttdeci">@ bsEllipse</div><div class="ttdoc">An ellipse is drawn. The size of the ellipse is given by the bracket width/height properties.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04869">qcustomplot.h:4868</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_aa6d18517ec0553575bbef0de4252336ea86eb6ae27e6296576fdc46d13c840530"><div class="ttname"><a href="#aa6d18517ec0553575bbef0de4252336ea86eb6ae27e6296576fdc46d13c840530">QCPSelectionDecoratorBracket::bsPlus</a></div><div class="ttdeci">@ bsPlus</div><div class="ttdoc">A plus is drawn.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04870">qcustomplot.h:4869</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_aa6d18517ec0553575bbef0de4252336eaa10a8d25d409b09256a13220a4d74f81"><div class="ttname"><a href="#aa6d18517ec0553575bbef0de4252336eaa10a8d25d409b09256a13220a4d74f81">QCPSelectionDecoratorBracket::bsSquareBracket</a></div><div class="ttdeci">@ bsSquareBracket</div><div class="ttdoc">A square bracket is drawn.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04867">qcustomplot.h:4866</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_aa6d18517ec0553575bbef0de4252336eafa8ad19b1822c9c03fbe5e9ff8eeeea2"><div class="ttname"><a href="#aa6d18517ec0553575bbef0de4252336eafa8ad19b1822c9c03fbe5e9ff8eeeea2">QCPSelectionDecoratorBracket::bsHalfEllipse</a></div><div class="ttdeci">@ bsHalfEllipse</div><div class="ttdoc">A half ellipse is drawn. The size of the ellipse is given by the bracket width/height properties.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04868">qcustomplot.h:4867</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -292,6 +307,26 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_selection_decorator_bracket.html" title="A selection decorator which draws brackets around each selected data segment.">QCPSelectionDecoratorBracket</a> instance with default values. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17163">17163</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17163</span>                                                           :</div>
+<div class="line"><span class="lineno">17164</span>  <a class="code hl_variable" href="#ac7da5610713e67e92d0a882ef743a453">mBracketPen</a>(QPen(Qt::black)),</div>
+<div class="line"><span class="lineno">17165</span>  <a class="code hl_variable" href="#ae905dd458b85ac529fb9c6ec879e5680">mBracketBrush</a>(Qt::NoBrush),</div>
+<div class="line"><span class="lineno">17166</span>  <a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>(5),</div>
+<div class="line"><span class="lineno">17167</span>  <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>(50),</div>
+<div class="line"><span class="lineno">17168</span>  <a class="code hl_variable" href="#a5ed4965200caa115da1a49f2f860e23c">mBracketStyle</a>(<a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336eaa10a8d25d409b09256a13220a4d74f81">bsSquareBracket</a>),</div>
+<div class="line"><span class="lineno">17169</span>  <a class="code hl_variable" href="#ac08c7de0fd81b64b0f3fe31739688081">mTangentToData</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">17170</span>  <a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a>(2)</div>
+<div class="line"><span class="lineno">17171</span>{</div>
+<div class="line"><span class="lineno">17172</span>  </div>
+<div class="line"><span class="lineno">17173</span>}</div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_a333983308322d10968c35bf2af4b392d"><div class="ttname"><a href="#a333983308322d10968c35bf2af4b392d">QCPSelectionDecoratorBracket::mBracketWidth</a></div><div class="ttdeci">int mBracketWidth</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04905">qcustomplot.h:4905</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_a3887d29b82f4dec3bf2ddf97d5475b16"><div class="ttname"><a href="#a3887d29b82f4dec3bf2ddf97d5475b16">QCPSelectionDecoratorBracket::mBracketHeight</a></div><div class="ttdeci">int mBracketHeight</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04906">qcustomplot.h:4906</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_a5ed4965200caa115da1a49f2f860e23c"><div class="ttname"><a href="#a5ed4965200caa115da1a49f2f860e23c">QCPSelectionDecoratorBracket::mBracketStyle</a></div><div class="ttdeci">BracketStyle mBracketStyle</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04907">qcustomplot.h:4907</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_a810900616f17964cab140cbc13f40203"><div class="ttname"><a href="#a810900616f17964cab140cbc13f40203">QCPSelectionDecoratorBracket::mTangentAverage</a></div><div class="ttdeci">int mTangentAverage</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04909">qcustomplot.h:4909</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_ac08c7de0fd81b64b0f3fe31739688081"><div class="ttname"><a href="#ac08c7de0fd81b64b0f3fe31739688081">QCPSelectionDecoratorBracket::mTangentToData</a></div><div class="ttdeci">bool mTangentToData</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04908">qcustomplot.h:4908</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_ac7da5610713e67e92d0a882ef743a453"><div class="ttname"><a href="#ac7da5610713e67e92d0a882ef743a453">QCPSelectionDecoratorBracket::mBracketPen</a></div><div class="ttdeci">QPen mBracketPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04903">qcustomplot.h:4903</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_ae905dd458b85ac529fb9c6ec879e5680"><div class="ttname"><a href="#ae905dd458b85ac529fb9c6ec879e5680">QCPSelectionDecoratorBracket::mBracketBrush</a></div><div class="ttdeci">QBrush mBracketBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04904">qcustomplot.h:4904</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab8ae22784b6803aeebadb8f2d184d873" name="ab8ae22784b6803aeebadb8f2d184d873"></a>
@@ -317,6 +352,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17175">17175</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17176</span>{</div>
+<div class="line"><span class="lineno">17177</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -343,6 +382,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04879">4879</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4879</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae905dd458b85ac529fb9c6ec879e5680">mBracketBrush</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a531d9c953a7279db93611248e115edab" name="a531d9c953a7279db93611248e115edab"></a>
@@ -368,6 +410,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04881">4881</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4881</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a841c56a37380f2e8af6126881b5f0fb9" name="a841c56a37380f2e8af6126881b5f0fb9"></a>
@@ -393,6 +438,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04878">4878</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4878</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac7da5610713e67e92d0a882ef743a453">mBracketPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1c3d65e560555caf9b31123008491ac6" name="a1c3d65e560555caf9b31123008491ac6"></a>
@@ -418,6 +466,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04882">4882</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4882</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5ed4965200caa115da1a49f2f860e23c">mBracketStyle</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae268c621b808d8660d38fc6c69fc40ae" name="ae268c621b808d8660d38fc6c69fc40ae"></a>
@@ -443,6 +494,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04880">4880</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4880</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a57b65b5508d5bd0f27c9318f3d4646be" name="a57b65b5508d5bd0f27c9318f3d4646be"></a>
@@ -475,6 +529,42 @@ Protected Attributes</h2></td></tr>
 <p>The passed <em>painter</em> already contains all transformations that are necessary to position and rotate the bracket appropriately. Painting operations can be performed as if drawing upright brackets on flat data with horizontal key axis, with (0, 0) being the center of the bracket.</p>
 <p>If you wish to sublcass <a class="el" href="class_q_c_p_selection_decorator_bracket.html">QCPSelectionDecoratorBracket</a> in order to provide custom bracket shapes (see <a class="el" href="#aa6d18517ec0553575bbef0de4252336ea5a627cacdaa30ce434371d6a034b991d">QCPSelectionDecoratorBracket::bsUserStyle</a>), this is the method you should reimplement. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17267">17267</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17268</span>{</div>
+<div class="line"><span class="lineno">17269</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a5ed4965200caa115da1a49f2f860e23c">mBracketStyle</a>)</div>
+<div class="line"><span class="lineno">17270</span>  {</div>
+<div class="line"><span class="lineno">17271</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336eaa10a8d25d409b09256a13220a4d74f81">bsSquareBracket</a>:</div>
+<div class="line"><span class="lineno">17272</span>    {</div>
+<div class="line"><span class="lineno">17273</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(<a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>*direction, -<a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5, 0, -<a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5));</div>
+<div class="line"><span class="lineno">17274</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(<a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>*direction, <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5, 0, <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5));</div>
+<div class="line"><span class="lineno">17275</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(0, -<a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5, 0, <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5));</div>
+<div class="line"><span class="lineno">17276</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">17277</span>    }</div>
+<div class="line"><span class="lineno">17278</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336eafa8ad19b1822c9c03fbe5e9ff8eeeea2">bsHalfEllipse</a>:</div>
+<div class="line"><span class="lineno">17279</span>    {</div>
+<div class="line"><span class="lineno">17280</span>      painter-&gt;drawArc(QRectF(-<a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>*0.5, -<a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5, <a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>, <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>), -90*16, -180*16*direction);</div>
+<div class="line"><span class="lineno">17281</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">17282</span>    }</div>
+<div class="line"><span class="lineno">17283</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336ea7cab0f2f406e293094a7a1e4903f6e8c">bsEllipse</a>:</div>
+<div class="line"><span class="lineno">17284</span>    {</div>
+<div class="line"><span class="lineno">17285</span>      painter-&gt;drawEllipse(QRectF(-<a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>*0.5, -<a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5, <a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>, <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>));</div>
+<div class="line"><span class="lineno">17286</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">17287</span>    }</div>
+<div class="line"><span class="lineno">17288</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aa6d18517ec0553575bbef0de4252336ea86eb6ae27e6296576fdc46d13c840530">bsPlus</a>:</div>
+<div class="line"><span class="lineno">17289</span>    {</div>
+<div class="line"><span class="lineno">17290</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(0, -<a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5, 0, <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a>*0.5));</div>
+<div class="line"><span class="lineno">17291</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(-<a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>*0.5, 0, <a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a>*0.5, 0));</div>
+<div class="line"><span class="lineno">17292</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">17293</span>    }</div>
+<div class="line"><span class="lineno">17294</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">17295</span>    {</div>
+<div class="line"><span class="lineno">17296</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;unknown/custom bracket style can&#39;t be handeld by default implementation:&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a5ed4965200caa115da1a49f2f860e23c">mBracketStyle</a>);</div>
+<div class="line"><span class="lineno">17297</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">17298</span>    }</div>
+<div class="line"><span class="lineno">17299</span>  }</div>
+<div class="line"><span class="lineno">17300</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ebe2e729b5012c0a995d788f87fac22" name="a9ebe2e729b5012c0a995d788f87fac22"></a>
@@ -509,6 +599,59 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_selection_decorator.html#a4f8eb49e277063845391e803ae23054a">QCPSelectionDecorator</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17310">17310</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17311</span>{</div>
+<div class="line"><span class="lineno">17312</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">mPlottable</a> || selection.<a class="code hl_function" href="class_q_c_p_data_selection.html#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">17313</span>  </div>
+<div class="line"><span class="lineno">17314</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_plottable_interface1_d.html">QCPPlottableInterface1D</a> *interface1d = <a class="code hl_variable" href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">mPlottable</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a53c8b30779771f2c743104e652e74ab1">interface1D</a>())</div>
+<div class="line"><span class="lineno">17315</span>  {</div>
+<div class="line"><span class="lineno">17316</span>    <span class="keywordflow">foreach</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;dataRange, selection.<a class="code hl_function" href="class_q_c_p_data_selection.html#ac3b1c5e7713d380cd9e447f4556b94da">dataRanges</a>())</div>
+<div class="line"><span class="lineno">17317</span>    {</div>
+<div class="line"><span class="lineno">17318</span>      <span class="comment">// determine position and (if tangent mode is enabled) angle of brackets:</span></div>
+<div class="line"><span class="lineno">17319</span>      <span class="keywordtype">int</span> openBracketDir = (<a class="code hl_variable" href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">mPlottable</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>() &amp;&amp; !<a class="code hl_variable" href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">mPlottable</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>()-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab9866dd1a78f1920f491ec12a794bec2">rangeReversed</a>()) ? 1 : -1;</div>
+<div class="line"><span class="lineno">17320</span>      <span class="keywordtype">int</span> closeBracketDir = -openBracketDir;</div>
+<div class="line"><span class="lineno">17321</span>      QPointF openBracketPos = <a class="code hl_function" href="#a9925ed667e8a645fcb9949bd02ee4a19">getPixelCoordinates</a>(interface1d, dataRange.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>());</div>
+<div class="line"><span class="lineno">17322</span>      QPointF closeBracketPos = <a class="code hl_function" href="#a9925ed667e8a645fcb9949bd02ee4a19">getPixelCoordinates</a>(interface1d, dataRange.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>()-1);</div>
+<div class="line"><span class="lineno">17323</span>      <span class="keywordtype">double</span> openBracketAngle = 0;</div>
+<div class="line"><span class="lineno">17324</span>      <span class="keywordtype">double</span> closeBracketAngle = 0;</div>
+<div class="line"><span class="lineno">17325</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac08c7de0fd81b64b0f3fe31739688081">mTangentToData</a>)</div>
+<div class="line"><span class="lineno">17326</span>      {</div>
+<div class="line"><span class="lineno">17327</span>        openBracketAngle = <a class="code hl_function" href="#ac002e20586950bf5c91a399863769c61">getTangentAngle</a>(interface1d, dataRange.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>(), openBracketDir);</div>
+<div class="line"><span class="lineno">17328</span>        closeBracketAngle = <a class="code hl_function" href="#ac002e20586950bf5c91a399863769c61">getTangentAngle</a>(interface1d, dataRange.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>()-1, closeBracketDir);</div>
+<div class="line"><span class="lineno">17329</span>      }</div>
+<div class="line"><span class="lineno">17330</span>      <span class="comment">// draw opening bracket:</span></div>
+<div class="line"><span class="lineno">17331</span>      QTransform oldTransform = painter-&gt;transform();</div>
+<div class="line"><span class="lineno">17332</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#ac7da5610713e67e92d0a882ef743a453">mBracketPen</a>);</div>
+<div class="line"><span class="lineno">17333</span>      painter-&gt;setBrush(<a class="code hl_variable" href="#ae905dd458b85ac529fb9c6ec879e5680">mBracketBrush</a>);</div>
+<div class="line"><span class="lineno">17334</span>      painter-&gt;translate(openBracketPos);</div>
+<div class="line"><span class="lineno">17335</span>      painter-&gt;rotate(openBracketAngle/M_PI*180.0);</div>
+<div class="line"><span class="lineno">17336</span>      <a class="code hl_function" href="#a57b65b5508d5bd0f27c9318f3d4646be">drawBracket</a>(painter, openBracketDir);</div>
+<div class="line"><span class="lineno">17337</span>      painter-&gt;setTransform(oldTransform);</div>
+<div class="line"><span class="lineno">17338</span>      <span class="comment">// draw closing bracket:</span></div>
+<div class="line"><span class="lineno">17339</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#ac7da5610713e67e92d0a882ef743a453">mBracketPen</a>);</div>
+<div class="line"><span class="lineno">17340</span>      painter-&gt;setBrush(<a class="code hl_variable" href="#ae905dd458b85ac529fb9c6ec879e5680">mBracketBrush</a>);</div>
+<div class="line"><span class="lineno">17341</span>      painter-&gt;translate(closeBracketPos);</div>
+<div class="line"><span class="lineno">17342</span>      painter-&gt;rotate(closeBracketAngle/M_PI*180.0);</div>
+<div class="line"><span class="lineno">17343</span>      <a class="code hl_function" href="#a57b65b5508d5bd0f27c9318f3d4646be">drawBracket</a>(painter, closeBracketDir);</div>
+<div class="line"><span class="lineno">17344</span>      painter-&gt;setTransform(oldTransform);</div>
+<div class="line"><span class="lineno">17345</span>    }</div>
+<div class="line"><span class="lineno">17346</span>  }</div>
+<div class="line"><span class="lineno">17347</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a53c8b30779771f2c743104e652e74ab1"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a53c8b30779771f2c743104e652e74ab1">QCPAbstractPlottable::interface1D</a></div><div class="ttdeci">virtual QCPPlottableInterface1D * interface1D()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03541">qcustomplot.h:3541</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_aa6f25b97ee99988fe352f17cb9ed962b"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">QCPAbstractPlottable::keyAxis</a></div><div class="ttdeci">QCPAxis * keyAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03520">qcustomplot.h:3520</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ab9866dd1a78f1920f491ec12a794bec2"><div class="ttname"><a href="class_q_c_p_axis.html#ab9866dd1a78f1920f491ec12a794bec2">QCPAxis::rangeReversed</a></div><div class="ttdeci">bool rangeReversed() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02219">qcustomplot.h:2219</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html"><div class="ttname"><a href="class_q_c_p_data_range.html">QCPDataRange</a></div><div class="ttdoc">Describes a data range given by begin and end index.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00949">qcustomplot.h:950</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_ae76d7eba9defdfafcd0fc41096793129"><div class="ttname"><a href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">QCPDataRange::begin</a></div><div class="ttdeci">int begin() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00959">qcustomplot.h:959</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_aee1b20fb045929c3753ee2ce14af7630"><div class="ttname"><a href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">QCPDataRange::end</a></div><div class="ttdeci">int end() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00960">qcustomplot.h:960</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a7f7526b475998dc0c3d6c376b24736c9"><div class="ttname"><a href="class_q_c_p_data_selection.html#a7f7526b475998dc0c3d6c376b24736c9">QCPDataSelection::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01017">qcustomplot.h:1017</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_ac3b1c5e7713d380cd9e447f4556b94da"><div class="ttname"><a href="class_q_c_p_data_selection.html#ac3b1c5e7713d380cd9e447f4556b94da">QCPDataSelection::dataRanges</a></div><div class="ttdeci">QList&lt; QCPDataRange &gt; dataRanges() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01011">qcustomplot.h:1011</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+<div class="ttc" id="aclass_q_c_p_plottable_interface1_d_html"><div class="ttname"><a href="class_q_c_p_plottable_interface1_d.html">QCPPlottableInterface1D</a></div><div class="ttdoc">Defines an abstract interface for one-dimensional plottables.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04160">qcustomplot.h:4161</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_a57b65b5508d5bd0f27c9318f3d4646be"><div class="ttname"><a href="#a57b65b5508d5bd0f27c9318f3d4646be">QCPSelectionDecoratorBracket::drawBracket</a></div><div class="ttdeci">virtual void drawBracket(QCPPainter *painter, int direction) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l17267">qcustomplot.cpp:17267</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_a9925ed667e8a645fcb9949bd02ee4a19"><div class="ttname"><a href="#a9925ed667e8a645fcb9949bd02ee4a19">QCPSelectionDecoratorBracket::getPixelCoordinates</a></div><div class="ttdeci">QPointF getPixelCoordinates(const QCPPlottableInterface1D *interface1d, int dataIndex) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l17409">qcustomplot.cpp:17409</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_bracket_html_ac002e20586950bf5c91a399863769c61"><div class="ttname"><a href="#ac002e20586950bf5c91a399863769c61">QCPSelectionDecoratorBracket::getTangentAngle</a></div><div class="ttdeci">double getTangentAngle(const QCPPlottableInterface1D *interface1d, int dataIndex, int direction) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l17362">qcustomplot.cpp:17362</a></div></div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_html_a25250a1d29b0723c4fa59a97e62f5758"><div class="ttname"><a href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">QCPSelectionDecorator::mPlottable</a></div><div class="ttdeci">QCPAbstractPlottable * mPlottable</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03483">qcustomplot.h:3483</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9925ed667e8a645fcb9949bd02ee4a19" name="a9925ed667e8a645fcb9949bd02ee4a19"></a>
@@ -538,6 +681,24 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17409">17409</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17410</span>{</div>
+<div class="line"><span class="lineno">17411</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *keyAxis = <a class="code hl_variable" href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">mPlottable</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>();</div>
+<div class="line"><span class="lineno">17412</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *valueAxis = <a class="code hl_variable" href="class_q_c_p_selection_decorator.html#a25250a1d29b0723c4fa59a97e62f5758">mPlottable</a>-&gt;<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>();</div>
+<div class="line"><span class="lineno">17413</span>  <span class="keywordflow">if</span> (!keyAxis || !valueAxis) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid key or value axis&quot;</span>; <span class="keywordflow">return</span> {0, 0}; }</div>
+<div class="line"><span class="lineno">17414</span>  </div>
+<div class="line"><span class="lineno">17415</span>  <span class="keywordflow">if</span> (keyAxis-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">17416</span>    <span class="keywordflow">return</span> {keyAxis-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(interface1d-&gt;<a class="code hl_function" href="class_q_c_p_plottable_interface1_d.html#a572ed2583cb6a2bb590a265c3fc2b004">dataMainKey</a>(dataIndex)), valueAxis-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(interface1d-&gt;<a class="code hl_function" href="class_q_c_p_plottable_interface1_d.html#a17f6fbd78e004b6f3c8257fea50f9808">dataMainValue</a>(dataIndex))};</div>
+<div class="line"><span class="lineno">17417</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">17418</span>    <span class="keywordflow">return</span> {valueAxis-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(interface1d-&gt;<a class="code hl_function" href="class_q_c_p_plottable_interface1_d.html#a17f6fbd78e004b6f3c8257fea50f9808">dataMainValue</a>(dataIndex)), keyAxis-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(interface1d-&gt;<a class="code hl_function" href="class_q_c_p_plottable_interface1_d.html#a572ed2583cb6a2bb590a265c3fc2b004">dataMainKey</a>(dataIndex))};</div>
+<div class="line"><span class="lineno">17419</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a842b3831660d3e33b73863fd133889dd"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">QCPAbstractPlottable::valueAxis</a></div><div class="ttdeci">QCPAxis * valueAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03521">qcustomplot.h:3521</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html"><div class="ttname"><a href="class_q_c_p_axis.html">QCPAxis</a></div><div class="ttdoc">Manages a single axis inside a QCustomPlot.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02120">qcustomplot.h:2121</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ab988ef4538e2655bb77bd138189cd42e"><div class="ttname"><a href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">QCPAxis::orientation</a></div><div class="ttdeci">Qt::Orientation orientation() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02309">qcustomplot.h:2309</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_af15d1b3a7f7e9b53d759d3ccff1fe4b4"><div class="ttname"><a href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">QCPAxis::coordToPixel</a></div><div class="ttdeci">double coordToPixel(double value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09304">qcustomplot.cpp:9304</a></div></div>
+<div class="ttc" id="aclass_q_c_p_plottable_interface1_d_html_a17f6fbd78e004b6f3c8257fea50f9808"><div class="ttname"><a href="class_q_c_p_plottable_interface1_d.html#a17f6fbd78e004b6f3c8257fea50f9808">QCPPlottableInterface1D::dataMainValue</a></div><div class="ttdeci">virtual double dataMainValue(int index) const =0</div></div>
+<div class="ttc" id="aclass_q_c_p_plottable_interface1_d_html_a572ed2583cb6a2bb590a265c3fc2b004"><div class="ttname"><a href="class_q_c_p_plottable_interface1_d.html#a572ed2583cb6a2bb590a265c3fc2b004">QCPPlottableInterface1D::dataMainKey</a></div><div class="ttdeci">virtual double dataMainKey(int index) const =0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac002e20586950bf5c91a399863769c61" name="ac002e20586950bf5c91a399863769c61"></a>
@@ -572,6 +733,49 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17362">17362</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17363</span>{</div>
+<div class="line"><span class="lineno">17364</span>  <span class="keywordflow">if</span> (!interface1d || dataIndex &lt; 0 || dataIndex &gt;= interface1d-&gt;<a class="code hl_function" href="class_q_c_p_plottable_interface1_d.html#adf4ce17d263b506df80d0ac37e497432">dataCount</a>())</div>
+<div class="line"><span class="lineno">17365</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">17366</span>  direction = direction &lt; 0 ? -1 : 1; <span class="comment">// enforce direction is either -1 or 1</span></div>
+<div class="line"><span class="lineno">17367</span>  </div>
+<div class="line"><span class="lineno">17368</span>  <span class="comment">// how many steps we can actually go from index in the given direction without exceeding data bounds:</span></div>
+<div class="line"><span class="lineno">17369</span>  <span class="keywordtype">int</span> averageCount;</div>
+<div class="line"><span class="lineno">17370</span>  <span class="keywordflow">if</span> (direction &lt; 0)</div>
+<div class="line"><span class="lineno">17371</span>    averageCount = qMin(<a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a>, dataIndex);</div>
+<div class="line"><span class="lineno">17372</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">17373</span>    averageCount = qMin(<a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a>, interface1d-&gt;<a class="code hl_function" href="class_q_c_p_plottable_interface1_d.html#adf4ce17d263b506df80d0ac37e497432">dataCount</a>()-1-dataIndex);</div>
+<div class="line"><span class="lineno">17374</span>  qDebug() &lt;&lt; averageCount;</div>
+<div class="line"><span class="lineno">17375</span>  <span class="comment">// calculate point average of averageCount points:</span></div>
+<div class="line"><span class="lineno">17376</span>  QVector&lt;QPointF&gt; points(averageCount);</div>
+<div class="line"><span class="lineno">17377</span>  QPointF pointsAverage;</div>
+<div class="line"><span class="lineno">17378</span>  <span class="keywordtype">int</span> currentIndex = dataIndex;</div>
+<div class="line"><span class="lineno">17379</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;averageCount; ++i)</div>
+<div class="line"><span class="lineno">17380</span>  {</div>
+<div class="line"><span class="lineno">17381</span>    points[i] = <a class="code hl_function" href="#a9925ed667e8a645fcb9949bd02ee4a19">getPixelCoordinates</a>(interface1d, currentIndex);</div>
+<div class="line"><span class="lineno">17382</span>    pointsAverage += points[i];</div>
+<div class="line"><span class="lineno">17383</span>    currentIndex += direction;</div>
+<div class="line"><span class="lineno">17384</span>  }</div>
+<div class="line"><span class="lineno">17385</span>  pointsAverage /= double(averageCount);</div>
+<div class="line"><span class="lineno">17386</span>  </div>
+<div class="line"><span class="lineno">17387</span>  <span class="comment">// calculate slope of linear regression through points:</span></div>
+<div class="line"><span class="lineno">17388</span>  <span class="keywordtype">double</span> numSum = 0;</div>
+<div class="line"><span class="lineno">17389</span>  <span class="keywordtype">double</span> denomSum = 0;</div>
+<div class="line"><span class="lineno">17390</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;averageCount; ++i)</div>
+<div class="line"><span class="lineno">17391</span>  {</div>
+<div class="line"><span class="lineno">17392</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> dx = points.at(i).x()-pointsAverage.x();</div>
+<div class="line"><span class="lineno">17393</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> dy = points.at(i).y()-pointsAverage.y();</div>
+<div class="line"><span class="lineno">17394</span>    numSum += dx*dy;</div>
+<div class="line"><span class="lineno">17395</span>    denomSum += dx*dx;</div>
+<div class="line"><span class="lineno">17396</span>  }</div>
+<div class="line"><span class="lineno">17397</span>  <span class="keywordflow">if</span> (!qFuzzyIsNull(denomSum) &amp;&amp; !qFuzzyIsNull(numSum))</div>
+<div class="line"><span class="lineno">17398</span>  {</div>
+<div class="line"><span class="lineno">17399</span>    <span class="keywordflow">return</span> qAtan2(numSum, denomSum);</div>
+<div class="line"><span class="lineno">17400</span>  } <span class="keywordflow">else</span> <span class="comment">// undetermined angle, probably mTangentAverage == 1, so using only one data point</span></div>
+<div class="line"><span class="lineno">17401</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">17402</span>}</div>
+<div class="ttc" id="aclass_q_c_p_plottable_interface1_d_html_adf4ce17d263b506df80d0ac37e497432"><div class="ttname"><a href="class_q_c_p_plottable_interface1_d.html#adf4ce17d263b506df80d0ac37e497432">QCPPlottableInterface1D::dataCount</a></div><div class="ttdeci">virtual int dataCount() const =0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2f4ea0bfb0ea980252b76dd349dd53aa" name="a2f4ea0bfb0ea980252b76dd349dd53aa"></a>
@@ -590,6 +794,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the brush that will be used to draw the brackets at the beginning and end of each selected data segment. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17192">17192</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17193</span>{</div>
+<div class="line"><span class="lineno">17194</span>  <a class="code hl_variable" href="#ae905dd458b85ac529fb9c6ec879e5680">mBracketBrush</a> = <a class="code hl_function" href="class_q_c_p_selection_decorator.html#a783b643aa52120a25308fc501b9998b1">brush</a>;</div>
+<div class="line"><span class="lineno">17195</span>}</div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_html_a783b643aa52120a25308fc501b9998b1"><div class="ttname"><a href="class_q_c_p_selection_decorator.html#a783b643aa52120a25308fc501b9998b1">QCPSelectionDecorator::brush</a></div><div class="ttdeci">QBrush brush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03457">qcustomplot.h:3457</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aed773ad737201cca40efc6fe451acad8" name="aed773ad737201cca40efc6fe451acad8"></a>
@@ -608,6 +818,11 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the height of the drawn bracket. The height dimension is always perpendicular to the key axis of the data, or the tangent direction of the current data slope, if <a class="el" href="#a93bc6086e53a5e40a08641a7b2e2cdd5">setTangentToData</a> is enabled. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17212">17212</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17213</span>{</div>
+<div class="line"><span class="lineno">17214</span>  <a class="code hl_variable" href="#a3887d29b82f4dec3bf2ddf97d5475b16">mBracketHeight</a> = height;</div>
+<div class="line"><span class="lineno">17215</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac0e392a6097990f8aa978932a8fa05d6" name="ac0e392a6097990f8aa978932a8fa05d6"></a>
@@ -626,6 +841,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the pen that will be used to draw the brackets at the beginning and end of each selected data segment. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17183">17183</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17184</span>{</div>
+<div class="line"><span class="lineno">17185</span>  <a class="code hl_variable" href="#ac7da5610713e67e92d0a882ef743a453">mBracketPen</a> = <a class="code hl_function" href="class_q_c_p_selection_decorator.html#a9307a60c9759223367909aed2d05ad91">pen</a>;</div>
+<div class="line"><span class="lineno">17186</span>}</div>
+<div class="ttc" id="aclass_q_c_p_selection_decorator_html_a9307a60c9759223367909aed2d05ad91"><div class="ttname"><a href="class_q_c_p_selection_decorator.html#a9307a60c9759223367909aed2d05ad91">QCPSelectionDecorator::pen</a></div><div class="ttdeci">QPen pen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03456">qcustomplot.h:3456</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a04507697438f6ad8cc2aeea5422dcbe5" name="a04507697438f6ad8cc2aeea5422dcbe5"></a>
@@ -645,6 +866,11 @@ Protected Attributes</h2></td></tr>
 <p>Sets the shape that the bracket/marker will have.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a291b59cab98ce93a0a3c85963fe10f5e">setBracketWidth</a>, <a class="el" href="#aed773ad737201cca40efc6fe451acad8">setBracketHeight</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17222">17222</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17223</span>{</div>
+<div class="line"><span class="lineno">17224</span>  <a class="code hl_variable" href="#a5ed4965200caa115da1a49f2f860e23c">mBracketStyle</a> = style;</div>
+<div class="line"><span class="lineno">17225</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a291b59cab98ce93a0a3c85963fe10f5e" name="a291b59cab98ce93a0a3c85963fe10f5e"></a>
@@ -663,6 +889,11 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the width of the drawn bracket. The width dimension is always parallel to the key axis of the data, or the tangent direction of the current data slope, if <a class="el" href="#a93bc6086e53a5e40a08641a7b2e2cdd5">setTangentToData</a> is enabled. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17202">17202</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17203</span>{</div>
+<div class="line"><span class="lineno">17204</span>  <a class="code hl_variable" href="#a333983308322d10968c35bf2af4b392d">mBracketWidth</a> = width;</div>
+<div class="line"><span class="lineno">17205</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adb2d0876f25a77c88042b70818f1d6e4" name="adb2d0876f25a77c88042b70818f1d6e4"></a>
@@ -682,6 +913,13 @@ Protected Attributes</h2></td></tr>
 <p>Controls over how many data points the slope shall be averaged, when brackets shall be aligned with the data (if <a class="el" href="#a93bc6086e53a5e40a08641a7b2e2cdd5">setTangentToData</a> is true).</p>
 <p>From the position of the bracket, <em>pointCount</em> points towards the selected data range will be taken into account. The smallest value of <em>pointCount</em> is 1, which is effectively equivalent to disabling <a class="el" href="#a93bc6086e53a5e40a08641a7b2e2cdd5">setTangentToData</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17247">17247</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17248</span>{</div>
+<div class="line"><span class="lineno">17249</span>  <a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a> = pointCount;</div>
+<div class="line"><span class="lineno">17250</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a> &lt; 1)</div>
+<div class="line"><span class="lineno">17251</span>    <a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a> = 1;</div>
+<div class="line"><span class="lineno">17252</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a93bc6086e53a5e40a08641a7b2e2cdd5" name="a93bc6086e53a5e40a08641a7b2e2cdd5"></a>
@@ -701,6 +939,11 @@ Protected Attributes</h2></td></tr>
 <p>Sets whether the brackets will be rotated such that they align with the slope of the data at the position that they appear in.</p>
 <p>For noisy data, it might be more visually appealing to average the slope over multiple data points. This can be configured via <a class="el" href="#adb2d0876f25a77c88042b70818f1d6e4">setTangentAverage</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l17234">17234</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17235</span>{</div>
+<div class="line"><span class="lineno">17236</span>  <a class="code hl_variable" href="#ac08c7de0fd81b64b0f3fe31739688081">mTangentToData</a> = enabled;</div>
+<div class="line"><span class="lineno">17237</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4e21ee2db0f43c1208d2e30879ec6a3c" name="a4e21ee2db0f43c1208d2e30879ec6a3c"></a>
@@ -726,6 +969,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04884">4884</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4884</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a810900616f17964cab140cbc13f40203">mTangentAverage</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a257cb5f8b822edc839c1510ed0f23f13" name="a257cb5f8b822edc839c1510ed0f23f13"></a>
@@ -751,6 +997,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04883">4883</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4883</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac08c7de0fd81b64b0f3fe31739688081">mTangentToData</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -774,6 +1023,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04904">4904</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a3887d29b82f4dec3bf2ddf97d5475b16" name="a3887d29b82f4dec3bf2ddf97d5475b16"></a>
@@ -795,6 +1046,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04906">4906</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -818,6 +1071,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04903">4903</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a5ed4965200caa115da1a49f2f860e23c" name="a5ed4965200caa115da1a49f2f860e23c"></a>
@@ -839,6 +1094,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04907">4907</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -862,6 +1119,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04905">4905</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a810900616f17964cab140cbc13f40203" name="a810900616f17964cab140cbc13f40203"></a>
@@ -883,6 +1142,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04909">4909</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -906,11 +1167,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l04908">4908</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

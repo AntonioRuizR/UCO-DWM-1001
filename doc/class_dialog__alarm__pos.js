@@ -8,9 +8,20 @@ var class_dialog__alarm__pos =
     [ "alarm_y_enabled", "class_dialog__alarm__pos.html#ac68b129efc86d0d00198275ee8d5bf86", null ],
     [ "alarm_z_enabled", "class_dialog__alarm__pos.html#aa5db55f4a8d63286c7ac66c35c76947e", null ],
     [ "load_data_alarm", "class_dialog__alarm__pos.html#a092e30f577d6a92d44231d8392f4a0d0", null ],
+    [ "on_checkBox_2_toggled", "class_dialog__alarm__pos.html#a7ed8145eba503bd839858c493ead8f28", null ],
+    [ "on_checkBox_3_toggled", "class_dialog__alarm__pos.html#a924b1c791c0b0edcf121b5f69249de4d", null ],
+    [ "on_checkBox_4_toggled", "class_dialog__alarm__pos.html#ac3bb157bf850c660c226365a0feb0939", null ],
+    [ "on_checkBox_toggled", "class_dialog__alarm__pos.html#aa246304c1e6a5985670ce417d0d2e731", null ],
+    [ "on_doubleSpinBox_2_valueChanged", "class_dialog__alarm__pos.html#a1338a254d3e863213595ebd8d72b45e6", null ],
+    [ "on_doubleSpinBox_5_valueChanged", "class_dialog__alarm__pos.html#a08410a8fc4985e978d2cfed0247685ce", null ],
+    [ "on_doubleSpinBox_6_valueChanged", "class_dialog__alarm__pos.html#aecfe5877354cbb668482b9873c1bd708", null ],
+    [ "on_doubleSpinBox_7_valueChanged", "class_dialog__alarm__pos.html#a51b39d94cb8108029d1ea4a2b572d6b0", null ],
+    [ "on_doubleSpinBox_8_valueChanged", "class_dialog__alarm__pos.html#ace88ef72c6d88a91b76db997892c8f23", null ],
+    [ "on_doubleSpinBox_valueChanged", "class_dialog__alarm__pos.html#a81cb6b6292033910b406668a5965af16", null ],
     [ "alarm_on", "class_dialog__alarm__pos.html#ac9dd56334ef30e089ae32b9b6ae12be8", null ],
     [ "alarm_pos_on", "class_dialog__alarm__pos.html#abec455d7fa946126d658a037a3a538d0", null ],
     [ "alarm_x_ena", "class_dialog__alarm__pos.html#a65000ef58de1a0fdec3b20c3ab71b8ab", null ],
     [ "alarm_y_ena", "class_dialog__alarm__pos.html#a11bac49d81575a0417cf0df2813b4bdb", null ],
-    [ "alarm_z_ena", "class_dialog__alarm__pos.html#a9f2cf3e9e3a85487d56d0655b38451ea", null ]
+    [ "alarm_z_ena", "class_dialog__alarm__pos.html#a9f2cf3e9e3a85487d56d0655b38451ea", null ],
+    [ "ui", "class_dialog__alarm__pos.html#a42ef91dcde3a60b7ad3cbf6312ed50ab", null ]
 ];

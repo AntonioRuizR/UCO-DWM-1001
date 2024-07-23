@@ -64,20 +64,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_q_c_p_abstract_paint_buffer.html#a3bc49cc9cf9daaca3a60977f010c08c9",
-"class_q_c_p_axis.html#add79d1e39c4ed65869a1e9cc79043f3f",
-"class_q_c_p_axis_ticker_pi.html#a262f1534c7f0c79a7d5237f5d1e2c54ca92f38a938c8b179b23363d9993681c55",
-"class_q_c_p_color_map_data.html#a225bb96f10c1a27b51ae59249477dbef",
-"class_q_c_p_error_bars.html#a7cba420078adc523efa59fb8c6ca23e0",
-"class_q_c_p_item_curve.html#a28181a9dee9cc3c3da83a883221bd2d0",
-"class_q_c_p_item_text.html#a77ff96a2972a00872ff8f8c67143abbe",
-"class_q_c_p_layout_element.html#a2fa26d3d22a2854c4da1d80f188db961",
-"class_q_c_p_painter.html#a8fd6821ee6fecbfa04444c9062912abd",
-"class_q_c_p_polar_axis_radial.html#a010c5af35d5638d16ba4f71a749c0bce",
-"class_q_c_p_polar_graph.html#ab69bb9f6074ba180e74e535fd6494f96",
-"class_q_c_p_selection_rect.html#af67bc58f4f5ce9a4dc420b9c42de235a",
-"class_q_custom_plot.html#aa27569c92e74395af10151357d268628",
-"namespace_q_c_p.html#a5400e5fcb9528d92002ddb938c1f4ef4aa5fd227bc878c56ad2a87ea32c74ee4d"
+"class_main_window.html#a2f6b17d323e616e1f35f17ccbfcf2b64",
+"class_main_window.html#afe467c57b0da9e8544a479a89381eb67",
+"class_q_c_p_axis.html#a62ec40bebe3540e9c1479a8fd2be3b0d",
+"class_q_c_p_axis_ticker.html#a47752abba8293e6dc18491501ae34008",
+"class_q_c_p_color_gradient.html#ac5dca17cc24336e6ca176610e7f77fc1",
+"class_q_c_p_data_container.html#aff99fffbb26597a354c4bc8312596ab2",
+"class_q_c_p_grid.html",
+"class_q_c_p_item_rect.html#a4bc770dc673f0c6b47513710d873290e",
+"class_q_c_p_layer.html#ad655f55cccf49ba14d5172ec517e07ae",
+"class_q_c_p_legend.html#ac91595c3eaa746fe6321d2eb952c63bb",
+"class_q_c_p_polar_axis_angular.html#aab06a0467440beb6bfe30608aacc5fd4",
+"class_q_c_p_polar_axis_radial.html#ae3de39f6d88318769698aa035b1e194f",
+"class_q_c_p_selection_decorator.html#a467a8d5cfcab27e862a17c797ac27b8a",
+"class_q_custom_plot.html#a3c1c171f620ef0ea4ae3dbb2e6a0209a",
+"functions_func_l.html",
+"qcustomplot_8h.html#aed23afce99cb2c82db7540026f3b7af3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -416,6 +416,8 @@ Transparency</h1>
 Usage</h1>
 <p>Like all data representing objects in <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a>, the <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> is a plottable (<a class="el" href="class_q_c_p_abstract_plottable.html" title="The abstract base class for all data representing objects in a plot.">QCPAbstractPlottable</a>). So the plottable-interface of <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> applies (<a class="el" href="class_q_custom_plot.html#a32de81ff53e263e785b83b52ecd99d6f">QCustomPlot::plottable</a>, <a class="el" href="class_q_custom_plot.html#af3dafd56884208474f311d6226513ab2">QCustomPlot::removePlottable</a>, etc.)</p>
 <p>Usually, you first create an instance: </p><div class="fragment"></div><!-- fragment --><p> which registers it with the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> instance of the passed axes. Note that this <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> instance takes ownership of the plottable, so do not delete it manually but use <a class="el" href="class_q_custom_plot.html#af3dafd56884208474f311d6226513ab2">QCustomPlot::removePlottable()</a> instead. The newly created plottable can be modified, e.g.: </p><div class="fragment"></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> always displays the data at equal key/value intervals, even if the key or value axis is set to a logarithmic scaling. If you want to use <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> with logarithmic axes, you shouldn't use the <a class="el" href="class_q_c_p_color_map_data.html#afd2083ccfd6987ec94aa7ef8e91ca39a">QCPColorMapData::setData</a> method as it uses a linear transformation to determine the cell index. Rather directly access the cell index with <a class="el" href="class_q_c_p_color_map_data.html#a8e75eaf8746596319032a93f3d2d0683">QCPColorMapData::setCell</a>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06079">6079</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa37e976d2ee1e2be6c4cd88a64b36215" name="aa37e976d2ee1e2be6c4cd88a64b36215"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa37e976d2ee1e2be6c4cd88a64b36215">&#9670;&#160;</a></span>QCPColorMap()</h2>
@@ -446,6 +448,31 @@ Usage</h1>
 <p>Constructs a color map with the specified <em>keyAxis</em> and <em>valueAxis</em>.</p>
 <p>The created <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> is automatically registered with the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> instance inferred from <em>keyAxis</em>. This <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> instance takes ownership of the <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a>, so do not delete it manually but use <a class="el" href="class_q_custom_plot.html#af3dafd56884208474f311d6226513ab2">QCustomPlot::removePlottable()</a> instead. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26442">26442</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26442</span>                                                             :</div>
+<div class="line"><span class="lineno">26443</span>  <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#af78a036e40db6f53a31abadc5323715a">QCPAbstractPlottable</a>(<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>, <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>),</div>
+<div class="line"><span class="lineno">26444</span>  <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a>),</div>
+<div class="line"><span class="lineno">26445</span>  <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>(<span class="keyword">new</span> <a class="code hl_class" href="class_q_c_p_color_map_data.html">QCPColorMapData</a>(10, 10, <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(0, 5), <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(0, 5))),</div>
+<div class="line"><span class="lineno">26446</span>  <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>(<a class="code hl_enumvalue" href="class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072aec8c001f62c0d5cb853db5fd85309557">QCPColorGradient::gpCold</a>),</div>
+<div class="line"><span class="lineno">26447</span>  <a class="code hl_variable" href="#af77e5eba9a844592648edeb6fbe834f1">mInterpolate</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">26448</span>  <a class="code hl_variable" href="#ac2e9425fe4381b496726e1c09f978302">mTightBoundary</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">26449</span>  <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">26450</span>{</div>
+<div class="line"><span class="lineno">26451</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a842b3831660d3e33b73863fd133889dd"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">QCPAbstractPlottable::valueAxis</a></div><div class="ttdeci">QCPAxis * valueAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03521">qcustomplot.h:3521</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_aa6f25b97ee99988fe352f17cb9ed962b"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">QCPAbstractPlottable::keyAxis</a></div><div class="ttdeci">QCPAxis * keyAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03520">qcustomplot.h:3520</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_af78a036e40db6f53a31abadc5323715a"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#af78a036e40db6f53a31abadc5323715a">QCPAbstractPlottable::QCPAbstractPlottable</a></div><div class="ttdeci">QCPAbstractPlottable(QCPAxis *keyAxis, QCPAxis *valueAxis)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11419">qcustomplot.cpp:11419</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a></div><div class="ttdeci">@ stLinear</div><div class="ttdoc">Linear scaling.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02195">qcustomplot.h:2194</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_gradient_html_aed6569828fee337023670272910c9072aec8c001f62c0d5cb853db5fd85309557"><div class="ttname"><a href="class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072aec8c001f62c0d5cb853db5fd85309557">QCPColorGradient::gpCold</a></div><div class="ttdeci">@ gpCold</div><div class="ttdoc">Continuous lightness from black over icey colors to white (suited for non-biased data representation)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04786">qcustomplot.h:4785</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html"><div class="ttname"><a href="class_q_c_p_color_map_data.html">QCPColorMapData</a></div><div class="ttdoc">Holds the two-dimensional data of a QCPColorMap plottable.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06022">qcustomplot.h:6023</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a8709272aa8f0be3ca111bf3866806f8b"><div class="ttname"><a href="#a8709272aa8f0be3ca111bf3866806f8b">QCPColorMap::mMapData</a></div><div class="ttdeci">QCPColorMapData * mMapData</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06130">qcustomplot.h:6130</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_aab77fe9a8df6f0486ab3507cc5f278fa"><div class="ttname"><a href="#aab77fe9a8df6f0486ab3507cc5f278fa">QCPColorMap::mGradient</a></div><div class="ttdeci">QCPColorGradient mGradient</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06131">qcustomplot.h:6131</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_ab28a4b2def408f83b9818799d5f18446"><div class="ttname"><a href="#ab28a4b2def408f83b9818799d5f18446">QCPColorMap::mDataScaleType</a></div><div class="ttdeci">QCPAxis::ScaleType mDataScaleType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06129">qcustomplot.h:6129</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_ac2e9425fe4381b496726e1c09f978302"><div class="ttname"><a href="#ac2e9425fe4381b496726e1c09f978302">QCPColorMap::mTightBoundary</a></div><div class="ttdeci">bool mTightBoundary</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06133">qcustomplot.h:6133</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_ac9aea6a5c193d7fa866bc7b26e79ef2c"><div class="ttname"><a href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">QCPColorMap::mMapImageInvalidated</a></div><div class="ttdeci">bool mMapImageInvalidated</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06139">qcustomplot.h:6139</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_af77e5eba9a844592648edeb6fbe834f1"><div class="ttname"><a href="#af77e5eba9a844592648edeb6fbe834f1">QCPColorMap::mInterpolate</a></div><div class="ttdeci">bool mInterpolate</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06132">qcustomplot.h:6132</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae571da4089e0d420a91dc61dffc57138" name="ae571da4089e0d420a91dc61dffc57138"></a>
@@ -471,6 +498,11 @@ Usage</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26453">26453</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26454</span>{</div>
+<div class="line"><span class="lineno">26455</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>;</div>
+<div class="line"><span class="lineno">26456</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -497,6 +529,10 @@ Usage</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06101">6101</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6101</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(); }</div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a95b4100bacc3387652c988b071ec9db7"><div class="ttname"><a href="#a95b4100bacc3387652c988b071ec9db7">QCPColorMap::mColorScale</a></div><div class="ttdeci">QPointer&lt; QCPColorScale &gt; mColorScale</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06134">qcustomplot.h:6134</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a047d7eb3ae657f93f2f39b5e68b79451" name="a047d7eb3ae657f93f2f39b5e68b79451"></a>
@@ -524,6 +560,9 @@ Usage</h1>
 <p>Returns a pointer to the internal data storage of type <a class="el" href="class_q_c_p_color_map_data.html">QCPColorMapData</a>. Access this to modify data points (cells) and the color map key/value range.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a5a23e133a20c4ccad35fd32e6c0f9809">setData</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06095">6095</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6095</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae478f0a5a016420d66c70cc33d6cda1d" name="ae478f0a5a016420d66c70cc33d6cda1d"></a>
@@ -549,6 +588,10 @@ Usage</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06096">6096</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6096</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_ab87609621d16cd3e9d52ad070b327b08"><div class="ttname"><a href="#ab87609621d16cd3e9d52ad070b327b08">QCPColorMap::mDataRange</a></div><div class="ttdeci">QCPRange mDataRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06128">qcustomplot.h:6128</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a83ae5be3903da493f732e1a5c14fd807" name="a83ae5be3903da493f732e1a5c14fd807"></a>
@@ -601,6 +644,9 @@ Usage</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06097">6097</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6097</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a978d5d5c9f68cffef8c902b855c04490" name="a978d5d5c9f68cffef8c902b855c04490"></a>
@@ -655,6 +701,92 @@ Usage</h1>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_plottable.html#a453f676a5cee7bf846c5f0fa05ea84b3">QCPAbstractPlottable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26833">26833</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26834</span>{</div>
+<div class="line"><span class="lineno">26835</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a>()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">26836</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a> || !<a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">26837</span>  <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#ac032077fb0db93d6faa3273d02363398">applyDefaultAntialiasingHint</a>(painter);</div>
+<div class="line"><span class="lineno">26838</span>  </div>
+<div class="line"><span class="lineno">26839</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_map_data.html#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> || <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a>)</div>
+<div class="line"><span class="lineno">26840</span>    <a class="code hl_function" href="#a5efcea591bb5486d968af520a4d43c3a">updateMapImage</a>();</div>
+<div class="line"><span class="lineno">26841</span>  </div>
+<div class="line"><span class="lineno">26842</span>  <span class="comment">// use buffer if painting vectorized (PDF):</span></div>
+<div class="line"><span class="lineno">26843</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> useBuffer = painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#aef102658219b24165f7ee2aad1b9e48f">modes</a>().testFlag(<a class="code hl_enumvalue" href="class_q_c_p_painter.html#a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab">QCPPainter::pmVectorized</a>);</div>
+<div class="line"><span class="lineno">26844</span>  <a class="code hl_class" href="class_q_c_p_painter.html">QCPPainter</a> *localPainter = painter; <span class="comment">// will be redirected to paint on mapBuffer if painting vectorized</span></div>
+<div class="line"><span class="lineno">26845</span>  QRectF mapBufferTarget; <span class="comment">// the rect in absolute widget coordinates where the visible map portion/buffer will end up in</span></div>
+<div class="line"><span class="lineno">26846</span>  QPixmap mapBuffer;</div>
+<div class="line"><span class="lineno">26847</span>  <span class="keywordflow">if</span> (useBuffer)</div>
+<div class="line"><span class="lineno">26848</span>  {</div>
+<div class="line"><span class="lineno">26849</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> mapBufferPixelRatio = 3; <span class="comment">// factor by which DPI is increased in embedded bitmaps</span></div>
+<div class="line"><span class="lineno">26850</span>    mapBufferTarget = painter-&gt;clipRegion().boundingRect();</div>
+<div class="line"><span class="lineno">26851</span>    mapBuffer = QPixmap((mapBufferTarget.size()*mapBufferPixelRatio).toSize());</div>
+<div class="line"><span class="lineno">26852</span>    mapBuffer.fill(Qt::transparent);</div>
+<div class="line"><span class="lineno">26853</span>    localPainter = <span class="keyword">new</span> <a class="code hl_class" href="class_q_c_p_painter.html">QCPPainter</a>(&amp;mapBuffer);</div>
+<div class="line"><span class="lineno">26854</span>    localPainter-&gt;scale(mapBufferPixelRatio, mapBufferPixelRatio);</div>
+<div class="line"><span class="lineno">26855</span>    localPainter-&gt;translate(-mapBufferTarget.topLeft());</div>
+<div class="line"><span class="lineno">26856</span>  }</div>
+<div class="line"><span class="lineno">26857</span>  </div>
+<div class="line"><span class="lineno">26858</span>  QRectF imageRect = QRectF(<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a7ad84a36472441cf1f555c5683d0da93">coordsToPixels</a>(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>, <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>),</div>
+<div class="line"><span class="lineno">26859</span>                            <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a7ad84a36472441cf1f555c5683d0da93">coordsToPixels</a>(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>, <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)).normalized();</div>
+<div class="line"><span class="lineno">26860</span>  <span class="comment">// extend imageRect to contain outer halves/quarters of bordering/cornering pixels (cells are centered on map range boundary):</span></div>
+<div class="line"><span class="lineno">26861</span>  <span class="keywordtype">double</span> halfCellWidth = 0; <span class="comment">// in pixels</span></div>
+<div class="line"><span class="lineno">26862</span>  <span class="keywordtype">double</span> halfCellHeight = 0; <span class="comment">// in pixels</span></div>
+<div class="line"><span class="lineno">26863</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>()-&gt;orientation() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">26864</span>  {</div>
+<div class="line"><span class="lineno">26865</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>() &gt; 1)</div>
+<div class="line"><span class="lineno">26866</span>      halfCellWidth = 0.5*imageRect.width()/double(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>()-1);</div>
+<div class="line"><span class="lineno">26867</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>() &gt; 1)</div>
+<div class="line"><span class="lineno">26868</span>      halfCellHeight = 0.5*imageRect.height()/double(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>()-1);</div>
+<div class="line"><span class="lineno">26869</span>  } <span class="keywordflow">else</span> <span class="comment">// keyAxis orientation is Qt::Vertical</span></div>
+<div class="line"><span class="lineno">26870</span>  {</div>
+<div class="line"><span class="lineno">26871</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>() &gt; 1)</div>
+<div class="line"><span class="lineno">26872</span>      halfCellHeight = 0.5*imageRect.height()/double(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>()-1);</div>
+<div class="line"><span class="lineno">26873</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>() &gt; 1)</div>
+<div class="line"><span class="lineno">26874</span>      halfCellWidth = 0.5*imageRect.width()/double(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>()-1);</div>
+<div class="line"><span class="lineno">26875</span>  }</div>
+<div class="line"><span class="lineno">26876</span>  imageRect.adjust(-halfCellWidth, -halfCellHeight, halfCellWidth, halfCellHeight);</div>
+<div class="line"><span class="lineno">26877</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> mirrorX = (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>()-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal ? <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>() : <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>())-&gt;rangeReversed();</div>
+<div class="line"><span class="lineno">26878</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> mirrorY = (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>()-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Vertical ? <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>() : <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>())-&gt;rangeReversed();</div>
+<div class="line"><span class="lineno">26879</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> smoothBackup = localPainter-&gt;renderHints().testFlag(QPainter::SmoothPixmapTransform);</div>
+<div class="line"><span class="lineno">26880</span>  localPainter-&gt;setRenderHint(QPainter::SmoothPixmapTransform, <a class="code hl_variable" href="#af77e5eba9a844592648edeb6fbe834f1">mInterpolate</a>);</div>
+<div class="line"><span class="lineno">26881</span>  QRegion clipBackup;</div>
+<div class="line"><span class="lineno">26882</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac2e9425fe4381b496726e1c09f978302">mTightBoundary</a>)</div>
+<div class="line"><span class="lineno">26883</span>  {</div>
+<div class="line"><span class="lineno">26884</span>    clipBackup = localPainter-&gt;clipRegion();</div>
+<div class="line"><span class="lineno">26885</span>    QRectF tightClipRect = QRectF(<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a7ad84a36472441cf1f555c5683d0da93">coordsToPixels</a>(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>, <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>),</div>
+<div class="line"><span class="lineno">26886</span>                                  <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a7ad84a36472441cf1f555c5683d0da93">coordsToPixels</a>(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>, <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)).normalized();</div>
+<div class="line"><span class="lineno">26887</span>    localPainter-&gt;setClipRect(tightClipRect, Qt::IntersectClip);</div>
+<div class="line"><span class="lineno">26888</span>  }</div>
+<div class="line"><span class="lineno">26889</span>  localPainter-&gt;drawImage(imageRect, <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.mirrored(mirrorX, mirrorY));</div>
+<div class="line"><span class="lineno">26890</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac2e9425fe4381b496726e1c09f978302">mTightBoundary</a>)</div>
+<div class="line"><span class="lineno">26891</span>    localPainter-&gt;setClipRegion(clipBackup);</div>
+<div class="line"><span class="lineno">26892</span>  localPainter-&gt;setRenderHint(QPainter::SmoothPixmapTransform, smoothBackup);</div>
+<div class="line"><span class="lineno">26893</span>  </div>
+<div class="line"><span class="lineno">26894</span>  <span class="keywordflow">if</span> (useBuffer) <span class="comment">// localPainter painted to mapBuffer, so now draw buffer with original painter</span></div>
+<div class="line"><span class="lineno">26895</span>  {</div>
+<div class="line"><span class="lineno">26896</span>    <span class="keyword">delete</span> localPainter;</div>
+<div class="line"><span class="lineno">26897</span>    painter-&gt;drawPixmap(mapBufferTarget.toRect(), mapBuffer);</div>
+<div class="line"><span class="lineno">26898</span>  }</div>
+<div class="line"><span class="lineno">26899</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a2901452ca4aea911a1827717934a4bda"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a2901452ca4aea911a1827717934a4bda">QCPAbstractPlottable::mValueAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mValueAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03569">qcustomplot.h:3569</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a426f42e254d0f8ce5436a868c61a6827"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a426f42e254d0f8ce5436a868c61a6827">QCPAbstractPlottable::mKeyAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mKeyAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03569">qcustomplot.h:3569</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a7ad84a36472441cf1f555c5683d0da93"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a7ad84a36472441cf1f555c5683d0da93">QCPAbstractPlottable::coordsToPixels</a></div><div class="ttdeci">void coordsToPixels(double key, double value, double &amp;x, double &amp;y) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11630">qcustomplot.cpp:11630</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_ac032077fb0db93d6faa3273d02363398"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#ac032077fb0db93d6faa3273d02363398">QCPAbstractPlottable::applyDefaultAntialiasingHint</a></div><div class="ttdeci">void applyDefaultAntialiasingHint(QCPPainter *painter) const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11914">qcustomplot.cpp:11914</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ab988ef4538e2655bb77bd138189cd42e"><div class="ttname"><a href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">QCPAxis::orientation</a></div><div class="ttdeci">Qt::Orientation orientation() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02309">qcustomplot.h:2309</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a1e43abd20a77b922b7cecfc69bf4dad7"><div class="ttname"><a href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">QCPColorMapData::keyRange</a></div><div class="ttdeci">QCPRange keyRange() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06033">qcustomplot.h:6033</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a818e4e384aa4e5fad69ac603924394d3"><div class="ttname"><a href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">QCPColorMapData::valueRange</a></div><div class="ttdeci">QCPRange valueRange() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06034">qcustomplot.h:6034</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a8510cafea24645bbb62b5e0bfc43209f"><div class="ttname"><a href="class_q_c_p_color_map_data.html#a8510cafea24645bbb62b5e0bfc43209f">QCPColorMapData::valueSize</a></div><div class="ttdeci">int valueSize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06032">qcustomplot.h:6032</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_abbda4d28de97aedce1e6e6f008a0a1f7"><div class="ttname"><a href="class_q_c_p_color_map_data.html#abbda4d28de97aedce1e6e6f008a0a1f7">QCPColorMapData::keySize</a></div><div class="ttdeci">int keySize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06031">qcustomplot.h:6031</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ad3cc682da2ac14e5acdbc05cf4d3d93b"><div class="ttname"><a href="class_q_c_p_color_map_data.html#ad3cc682da2ac14e5acdbc05cf4d3d93b">QCPColorMapData::mDataModified</a></div><div class="ttdeci">bool mDataModified</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06071">qcustomplot.h:6071</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_aea88cc75a76ca571acf29b2ba8ac970d"><div class="ttname"><a href="class_q_c_p_color_map_data.html#aea88cc75a76ca571acf29b2ba8ac970d">QCPColorMapData::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06057">qcustomplot.h:6057</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a5efcea591bb5486d968af520a4d43c3a"><div class="ttname"><a href="#a5efcea591bb5486d968af520a4d43c3a">QCPColorMap::updateMapImage</a></div><div class="ttdeci">virtual void updateMapImage()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26755">qcustomplot.cpp:26755</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a66110813b42eca78b64095b2a1f285a0"><div class="ttname"><a href="#a66110813b42eca78b64095b2a1f285a0">QCPColorMap::mMapImage</a></div><div class="ttdeci">QImage mMapImage</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06137">qcustomplot.h:6137</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html"><div class="ttname"><a href="class_q_c_p_painter.html">QCPPainter</a></div><div class="ttdoc">QPainter subclass used internally.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00515">qcustomplot.h:516</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab"><div class="ttname"><a href="class_q_c_p_painter.html#a156cf16444ff5e0d81a73c615fdb156daeda679cd55dcd468341d07d48a30b6ab">QCPPainter::pmVectorized</a></div><div class="ttdeci">@ pmVectorized</div><div class="ttdoc">0x01 Mode for vectorized painting (e.g. PDF export). For example, this prevents some antialiasing fix...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00525">qcustomplot.h:524</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_aef102658219b24165f7ee2aad1b9e48f"><div class="ttname"><a href="class_q_c_p_painter.html#aef102658219b24165f7ee2aad1b9e48f">QCPPainter::modes</a></div><div class="ttdeci">PainterModes modes() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00537">qcustomplot.h:537</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adeaa5e262a03b7f021bd1aa6f1e60ce9" name="adeaa5e262a03b7f021bd1aa6f1e60ce9"></a>
@@ -686,6 +818,26 @@ Usage</h1>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_plottable.html#a71c259f4f96533d12df152c446b17425">QCPAbstractPlottable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26902">26902</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26903</span>{</div>
+<div class="line"><span class="lineno">26904</span>  <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#ac032077fb0db93d6faa3273d02363398">applyDefaultAntialiasingHint</a>(painter);</div>
+<div class="line"><span class="lineno">26905</span>  <span class="comment">// draw map thumbnail:</span></div>
+<div class="line"><span class="lineno">26906</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#ada522988db02cb531767d38c5029ef60">mLegendIcon</a>.isNull())</div>
+<div class="line"><span class="lineno">26907</span>  {</div>
+<div class="line"><span class="lineno">26908</span>    QPixmap scaledIcon = <a class="code hl_variable" href="#ada522988db02cb531767d38c5029ef60">mLegendIcon</a>.scaled(rect.size().toSize(), Qt::KeepAspectRatio, Qt::FastTransformation);</div>
+<div class="line"><span class="lineno">26909</span>    QRectF iconRect = QRectF(0, 0, scaledIcon.width(), scaledIcon.height());</div>
+<div class="line"><span class="lineno">26910</span>    iconRect.moveCenter(rect.center());</div>
+<div class="line"><span class="lineno">26911</span>    painter-&gt;drawPixmap(iconRect.topLeft(), scaledIcon);</div>
+<div class="line"><span class="lineno">26912</span>  }</div>
+<div class="line"><span class="lineno">26913</span>  <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">26914</span><span class="comment">  // draw frame:</span></div>
+<div class="line"><span class="lineno">26915</span><span class="comment">  painter-&gt;setBrush(Qt::NoBrush);</span></div>
+<div class="line"><span class="lineno">26916</span><span class="comment">  painter-&gt;setPen(Qt::black);</span></div>
+<div class="line"><span class="lineno">26917</span><span class="comment">  painter-&gt;drawRect(rect.adjusted(1, 1, 0, 0));</span></div>
+<div class="line"><span class="lineno">26918</span><span class="comment">  */</span></div>
+<div class="line"><span class="lineno">26919</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_ada522988db02cb531767d38c5029ef60"><div class="ttname"><a href="#ada522988db02cb531767d38c5029ef60">QCPColorMap::mLegendIcon</a></div><div class="ttdeci">QPixmap mLegendIcon</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06138">qcustomplot.h:6138</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a985861974560f950af6cb7fae8c46267" name="a985861974560f950af6cb7fae8c46267"></a>
@@ -720,6 +872,30 @@ Usage</h1>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_plottable.html#a56b4d9000f4de0de86c566c84eb05a21">QCPAbstractPlottable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26689">26689</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26690</span>{</div>
+<div class="line"><span class="lineno">26691</span>  foundRange = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26692</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result = <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>();</div>
+<div class="line"><span class="lineno">26693</span>  result.<a class="code hl_function" href="class_q_c_p_range.html#af914a7740269b0604d0827c634a878a9">normalize</a>();</div>
+<div class="line"><span class="lineno">26694</span>  <span class="keywordflow">if</span> (inSignDomain == <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f">QCP::sdPositive</a>)</div>
+<div class="line"><span class="lineno">26695</span>  {</div>
+<div class="line"><span class="lineno">26696</span>    <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt; 0)</div>
+<div class="line"><span class="lineno">26697</span>      result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>*1e-3;</div>
+<div class="line"><span class="lineno">26698</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">26699</span>      foundRange = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26700</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inSignDomain == <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829">QCP::sdNegative</a>)</div>
+<div class="line"><span class="lineno">26701</span>  {</div>
+<div class="line"><span class="lineno">26702</span>    <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt; 0)</div>
+<div class="line"><span class="lineno">26703</span>      result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>*1e-3;</div>
+<div class="line"><span class="lineno">26704</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt;= 0)</div>
+<div class="line"><span class="lineno">26705</span>      foundRange = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26706</span>  }</div>
+<div class="line"><span class="lineno">26707</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">26708</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_af914a7740269b0604d0827c634a878a9"><div class="ttname"><a href="class_q_c_p_range.html#af914a7740269b0604d0827c634a878a9">QCPRange::normalize</a></div><div class="ttdeci">void normalize()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00855">qcustomplot.h:855</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829"><div class="ttname"><a href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829">QCP::sdNegative</a></div><div class="ttdeci">@ sdNegative</div><div class="ttdoc">The negative sign domain, i.e. numbers smaller than zero.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00217">qcustomplot.h:216</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f"><div class="ttname"><a href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f">QCP::sdPositive</a></div><div class="ttdeci">@ sdPositive</div><div class="ttdoc">The positive sign domain, i.e. numbers greater than zero.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00219">qcustomplot.h:218</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88134493aaf6b297af34eaab65264fff" name="a88134493aaf6b297af34eaab65264fff"></a>
@@ -760,6 +936,36 @@ Usage</h1>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_plottable.html#aa81c95aec08d86cdd5407e48b83ab186">QCPAbstractPlottable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26711">26711</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26712</span>{</div>
+<div class="line"><span class="lineno">26713</span>  <span class="keywordflow">if</span> (inKeyRange != <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>())</div>
+<div class="line"><span class="lineno">26714</span>  {</div>
+<div class="line"><span class="lineno">26715</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt; inKeyRange.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> || <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt; inKeyRange.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)</div>
+<div class="line"><span class="lineno">26716</span>    {</div>
+<div class="line"><span class="lineno">26717</span>      foundRange = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26718</span>      <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">26719</span>    }</div>
+<div class="line"><span class="lineno">26720</span>  }</div>
+<div class="line"><span class="lineno">26721</span>  </div>
+<div class="line"><span class="lineno">26722</span>  foundRange = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26723</span>  <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a> result = <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>();</div>
+<div class="line"><span class="lineno">26724</span>  result.<a class="code hl_function" href="class_q_c_p_range.html#af914a7740269b0604d0827c634a878a9">normalize</a>();</div>
+<div class="line"><span class="lineno">26725</span>  <span class="keywordflow">if</span> (inSignDomain == <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f">QCP::sdPositive</a>)</div>
+<div class="line"><span class="lineno">26726</span>  {</div>
+<div class="line"><span class="lineno">26727</span>    <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt; 0)</div>
+<div class="line"><span class="lineno">26728</span>      result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>*1e-3;</div>
+<div class="line"><span class="lineno">26729</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">26730</span>      foundRange = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26731</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inSignDomain == <a class="code hl_enumvalue" href="namespace_q_c_p.html#afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829">QCP::sdNegative</a>)</div>
+<div class="line"><span class="lineno">26732</span>  {</div>
+<div class="line"><span class="lineno">26733</span>    <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt; 0)</div>
+<div class="line"><span class="lineno">26734</span>      result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>*1e-3;</div>
+<div class="line"><span class="lineno">26735</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt;= 0 &amp;&amp; result.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &gt;= 0)</div>
+<div class="line"><span class="lineno">26736</span>      foundRange = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26737</span>  }</div>
+<div class="line"><span class="lineno">26738</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">26739</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acc4bb87c903607b96c08d2bc34bc24cd" name="acc4bb87c903607b96c08d2bc34bc24cd"></a>
@@ -785,6 +991,9 @@ Usage</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06100">6100</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6100</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a31a12726736b1ac274e7b1d8dfb67468" name="a31a12726736b1ac274e7b1d8dfb67468"></a>
@@ -837,6 +1046,9 @@ Usage</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06098">6098</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6098</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af77e5eba9a844592648edeb6fbe834f1">mInterpolate</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a856608fa3dd1cc290bcd5f29a5575774" name="a856608fa3dd1cc290bcd5f29a5575774"></a>
@@ -857,6 +1069,16 @@ Usage</h1>
 <p>The minimum and maximum values of the data set are buffered in the internal <a class="el" href="class_q_c_p_color_map_data.html" title="Holds the two-dimensional data of a QCPColorMap plottable.">QCPColorMapData</a> instance (<a class="el" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a>). As data is updated via its <a class="el" href="class_q_c_p_color_map_data.html#a8e75eaf8746596319032a93f3d2d0683">QCPColorMapData::setCell</a> or <a class="el" href="class_q_c_p_color_map_data.html#afd2083ccfd6987ec94aa7ef8e91ca39a">QCPColorMapData::setData</a>, the buffered minimum and maximum values are updated, too. For performance reasons, however, they are only updated in an expanding fashion. So the buffered maximum can only increase and the buffered minimum can only decrease. In consequence, changes to the data that actually lower the maximum of the data set (by overwriting the cell holding the current maximum with a smaller value), aren't recognized and the buffered maximum overestimates the true maximum of the data set. The same happens for the buffered minimum. To recalculate the true minimum and maximum by explicitly looking at each cell, the method <a class="el" href="class_q_c_p_color_map_data.html#ab235ade8a4d64bd3adb26a99b3dd57ee">QCPColorMapData::recalculateDataBounds</a> can be used. For convenience, setting the parameter <em>recalculateDataBounds</em> calls this method before setting the data range to the buffered minimum and maximum.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26631">26631</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26632</span>{</div>
+<div class="line"><span class="lineno">26633</span>  <span class="keywordflow">if</span> (recalculateDataBounds)</div>
+<div class="line"><span class="lineno">26634</span>    <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#ab235ade8a4d64bd3adb26a99b3dd57ee">recalculateDataBounds</a>();</div>
+<div class="line"><span class="lineno">26635</span>  <a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#ab7620248272c5ddd9a3f877f07179f6d">dataBounds</a>());</div>
+<div class="line"><span class="lineno">26636</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ab235ade8a4d64bd3adb26a99b3dd57ee"><div class="ttname"><a href="class_q_c_p_color_map_data.html#ab235ade8a4d64bd3adb26a99b3dd57ee">QCPColorMapData::recalculateDataBounds</a></div><div class="ttdeci">void recalculateDataBounds()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26159">qcustomplot.cpp:26159</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ab7620248272c5ddd9a3f877f07179f6d"><div class="ttname"><a href="class_q_c_p_color_map_data.html#ab7620248272c5ddd9a3f877f07179f6d">QCPColorMapData::dataBounds</a></div><div class="ttdeci">QCPRange dataBounds() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06035">qcustomplot.h:6035</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a980b42837821159786a85b4b7dcb8774"><div class="ttname"><a href="#a980b42837821159786a85b4b7dcb8774">QCPColorMap::setDataRange</a></div><div class="ttdeci">Q_SLOT void setDataRange(const QCPRange &amp;dataRange)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26491">qcustomplot.cpp:26491</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0a8ef6c421bd387bbbc8e5f5cb2a602" name="af0a8ef6c421bd387bbbc8e5f5cb2a602"></a>
@@ -902,6 +1124,38 @@ Usage</h1>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_plottable.html#a8e4964b629802ce50e1427c7fb21d35b">QCPAbstractPlottable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26666">26666</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26667</span>{</div>
+<div class="line"><span class="lineno">26668</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">26669</span>  <span class="keywordflow">if</span> ((onlySelectable &amp;&amp; <a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a3944521f7bec90974737c9d192fc57ba">mSelectable</a> == <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a>) || <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a>())</div>
+<div class="line"><span class="lineno">26670</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">26671</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a> || !<a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a2901452ca4aea911a1827717934a4bda">mValueAxis</a>)</div>
+<div class="line"><span class="lineno">26672</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">26673</span>  </div>
+<div class="line"><span class="lineno">26674</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data()-&gt;axisRect()-&gt;rect().contains(pos.toPoint()) || <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a2c78c5fd2943c148ab76652801d3f2dc">interactions</a>().testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037ac8eec3d1e6c3eadf6af60968906db8db">QCP::iSelectPlottablesBeyondAxisRect</a>))</div>
+<div class="line"><span class="lineno">26675</span>  {</div>
+<div class="line"><span class="lineno">26676</span>    <span class="keywordtype">double</span> posKey, posValue;</div>
+<div class="line"><span class="lineno">26677</span>    <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a3903c1120ab5c27e7fa46b597ef267bd">pixelsToCoords</a>(pos, posKey, posValue);</div>
+<div class="line"><span class="lineno">26678</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>().<a class="code hl_function" href="class_q_c_p_range.html#ae9842b48b6d38dc5e9607358e3083cc8">contains</a>(posKey) &amp;&amp; <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>().<a class="code hl_function" href="class_q_c_p_range.html#ae9842b48b6d38dc5e9607358e3083cc8">contains</a>(posValue))</div>
+<div class="line"><span class="lineno">26679</span>    {</div>
+<div class="line"><span class="lineno">26680</span>      <span class="keywordflow">if</span> (details)</div>
+<div class="line"><span class="lineno">26681</span>        details-&gt;setValue(<a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a>(<a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a>(0, 1))); <span class="comment">// temporary solution, to facilitate whole-plottable selection. Replace in future version with segmented 2D selection.</span></div>
+<div class="line"><span class="lineno">26682</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99;</div>
+<div class="line"><span class="lineno">26683</span>    }</div>
+<div class="line"><span class="lineno">26684</span>  }</div>
+<div class="line"><span class="lineno">26685</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">26686</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a3903c1120ab5c27e7fa46b597ef267bd"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a3903c1120ab5c27e7fa46b597ef267bd">QCPAbstractPlottable::pixelsToCoords</a></div><div class="ttdeci">void pixelsToCoords(double x, double y, double &amp;key, double &amp;value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l11672">qcustomplot.cpp:11672</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_plottable_html_a3944521f7bec90974737c9d192fc57ba"><div class="ttname"><a href="class_q_c_p_abstract_plottable.html#a3944521f7bec90974737c9d192fc57ba">QCPAbstractPlottable::mSelectable</a></div><div class="ttdeci">QCP::SelectionType mSelectable</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03570">qcustomplot.h:3570</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html"><div class="ttname"><a href="class_q_c_p_data_range.html">QCPDataRange</a></div><div class="ttdoc">Describes a data range given by begin and end index.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00949">qcustomplot.h:950</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html"><div class="ttname"><a href="class_q_c_p_data_selection.html">QCPDataSelection</a></div><div class="ttdoc">Describes a data set by holding multiple QCPDataRange instances.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00986">qcustomplot.h:987</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae9842b48b6d38dc5e9607358e3083cc8"><div class="ttname"><a href="class_q_c_p_range.html#ae9842b48b6d38dc5e9607358e3083cc8">QCPRange::contains</a></div><div class="ttdeci">bool contains(double value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00863">qcustomplot.h:863</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a2c78c5fd2943c148ab76652801d3f2dc"><div class="ttname"><a href="class_q_custom_plot.html#a2c78c5fd2943c148ab76652801d3f2dc">QCustomPlot::interactions</a></div><div class="ttdeci">const QCP::Interactions interactions() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03841">qcustomplot.h:3841</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a5441d11013afeaf4b8f2ea06e8624a25"><div class="ttname"><a href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">QCustomPlot::selectionTolerance</a></div><div class="ttdeci">int selectionTolerance() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03842">qcustomplot.h:3842</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a2ad6bb6281c7c2d593d4277b44c2b037ac8eec3d1e6c3eadf6af60968906db8db"><div class="ttname"><a href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037ac8eec3d1e6c3eadf6af60968906db8db">QCP::iSelectPlottablesBeyondAxisRect</a></div><div class="ttdeci">@ iSelectPlottablesBeyondAxisRect</div><div class="ttdoc">0x100 When performing plottable selection/hit tests, this flag extends the sensitive area beyond the ...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00291">qcustomplot.h:290</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a></div><div class="ttdeci">@ stNone</div><div class="ttdoc">The plottable is not selectable.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00324">qcustomplot.h:323</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa828921db364fe3c6af4619580ab85fd" name="aa828921db364fe3c6af4619580ab85fd"></a>
@@ -923,6 +1177,40 @@ Usage</h1>
 <p>This function causes the color map to adopt the current color gradient, data range and data scale type of <em>colorScale</em>. After this call, you may change these properties at either the color map or the color scale, and the setting will be applied to both.</p>
 <p>Pass <code>nullptr</code> as <em>colorScale</em> to disconnect the color scale from this color map again. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26585">26585</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26586</span>{</div>
+<div class="line"><span class="lineno">26587</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>) <span class="comment">// unconnect signals from old color scale</span></div>
+<div class="line"><span class="lineno">26588</span>  {</div>
+<div class="line"><span class="lineno">26589</span>    disconnect(<span class="keyword">this</span>, SIGNAL(<a class="code hl_signal" href="#a83ae5be3903da493f732e1a5c14fd807">dataRangeChanged</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SLOT(<a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">26590</span>    disconnect(<span class="keyword">this</span>, SIGNAL(<a class="code hl_signal" href="#a978d5d5c9f68cffef8c902b855c04490">dataScaleTypeChanged</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SLOT(<a class="code hl_function" href="#a9d20aa08e3c1f20f22908c45b9c06511">setDataScaleType</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">26591</span>    disconnect(<span class="keyword">this</span>, SIGNAL(<a class="code hl_signal" href="#a31a12726736b1ac274e7b1d8dfb67468">gradientChanged</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)), <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SLOT(<a class="code hl_function" href="#a7313c78360471cead3576341a2c50377">setGradient</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)));</div>
+<div class="line"><span class="lineno">26592</span>    disconnect(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SIGNAL(<a class="code hl_signal" href="#a83ae5be3903da493f732e1a5c14fd807">dataRangeChanged</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">26593</span>    disconnect(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SIGNAL(<a class="code hl_signal" href="#a31a12726736b1ac274e7b1d8dfb67468">gradientChanged</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a7313c78360471cead3576341a2c50377">setGradient</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)));</div>
+<div class="line"><span class="lineno">26594</span>    disconnect(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SIGNAL(<a class="code hl_signal" href="#a978d5d5c9f68cffef8c902b855c04490">dataScaleTypeChanged</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a9d20aa08e3c1f20f22908c45b9c06511">setDataScaleType</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">26595</span>  }</div>
+<div class="line"><span class="lineno">26596</span>  <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a> = <a class="code hl_function" href="#a067e7c6765460381f880c581e4d43fab">colorScale</a>;</div>
+<div class="line"><span class="lineno">26597</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>) <span class="comment">// connect signals to new color scale</span></div>
+<div class="line"><span class="lineno">26598</span>  {</div>
+<div class="line"><span class="lineno">26599</span>    <a class="code hl_function" href="#a7313c78360471cead3576341a2c50377">setGradient</a>(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data()-&gt;gradient());</div>
+<div class="line"><span class="lineno">26600</span>    <a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data()-&gt;dataRange());</div>
+<div class="line"><span class="lineno">26601</span>    <a class="code hl_function" href="#a9d20aa08e3c1f20f22908c45b9c06511">setDataScaleType</a>(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data()-&gt;dataScaleType());</div>
+<div class="line"><span class="lineno">26602</span>    connect(<span class="keyword">this</span>, SIGNAL(<a class="code hl_signal" href="#a83ae5be3903da493f732e1a5c14fd807">dataRangeChanged</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SLOT(<a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">26603</span>    connect(<span class="keyword">this</span>, SIGNAL(<a class="code hl_signal" href="#a978d5d5c9f68cffef8c902b855c04490">dataScaleTypeChanged</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SLOT(<a class="code hl_function" href="#a9d20aa08e3c1f20f22908c45b9c06511">setDataScaleType</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">26604</span>    connect(<span class="keyword">this</span>, SIGNAL(<a class="code hl_signal" href="#a31a12726736b1ac274e7b1d8dfb67468">gradientChanged</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)), <a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SLOT(<a class="code hl_function" href="#a7313c78360471cead3576341a2c50377">setGradient</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)));</div>
+<div class="line"><span class="lineno">26605</span>    connect(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SIGNAL(<a class="code hl_signal" href="#a83ae5be3903da493f732e1a5c14fd807">dataRangeChanged</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">26606</span>    connect(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SIGNAL(<a class="code hl_signal" href="#a31a12726736b1ac274e7b1d8dfb67468">gradientChanged</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a7313c78360471cead3576341a2c50377">setGradient</a>(<a class="code hl_class" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>)));</div>
+<div class="line"><span class="lineno">26607</span>    connect(<a class="code hl_variable" href="#a95b4100bacc3387652c988b071ec9db7">mColorScale</a>.data(), SIGNAL(<a class="code hl_signal" href="#a978d5d5c9f68cffef8c902b855c04490">dataScaleTypeChanged</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a9d20aa08e3c1f20f22908c45b9c06511">setDataScaleType</a>(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">26608</span>  }</div>
+<div class="line"><span class="lineno">26609</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a></div><div class="ttdeci">ScaleType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02194">qcustomplot.h:2194</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_gradient_html"><div class="ttname"><a href="class_q_c_p_color_gradient.html">QCPColorGradient</a></div><div class="ttdoc">Defines a color gradient for use with e.g. QCPColorMap.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04752">qcustomplot.h:4753</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a067e7c6765460381f880c581e4d43fab"><div class="ttname"><a href="#a067e7c6765460381f880c581e4d43fab">QCPColorMap::colorScale</a></div><div class="ttdeci">QCPColorScale * colorScale() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06101">qcustomplot.h:6101</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a31a12726736b1ac274e7b1d8dfb67468"><div class="ttname"><a href="#a31a12726736b1ac274e7b1d8dfb67468">QCPColorMap::gradientChanged</a></div><div class="ttdeci">void gradientChanged(const QCPColorGradient &amp;newGradient)</div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a7313c78360471cead3576341a2c50377"><div class="ttname"><a href="#a7313c78360471cead3576341a2c50377">QCPColorMap::setGradient</a></div><div class="ttdeci">Q_SLOT void setGradient(const QCPColorGradient &amp;gradient)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26533">qcustomplot.cpp:26533</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a83ae5be3903da493f732e1a5c14fd807"><div class="ttname"><a href="#a83ae5be3903da493f732e1a5c14fd807">QCPColorMap::dataRangeChanged</a></div><div class="ttdeci">void dataRangeChanged(const QCPRange &amp;newRange)</div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a978d5d5c9f68cffef8c902b855c04490"><div class="ttname"><a href="#a978d5d5c9f68cffef8c902b855c04490">QCPColorMap::dataScaleTypeChanged</a></div><div class="ttdeci">void dataScaleTypeChanged(QCPAxis::ScaleType scaleType)</div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a9d20aa08e3c1f20f22908c45b9c06511"><div class="ttname"><a href="#a9d20aa08e3c1f20f22908c45b9c06511">QCPColorMap::setDataScaleType</a></div><div class="ttdeci">Q_SLOT void setDataScaleType(QCPAxis::ScaleType scaleType)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26510">qcustomplot.cpp:26510</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a23e133a20c4ccad35fd32e6c0f9809" name="a5a23e133a20c4ccad35fd32e6c0f9809"></a>
@@ -946,6 +1234,25 @@ Usage</h1>
 <p>Replaces the current <a class="el" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a> with the provided <em>data</em>.</p>
 <p>If <em>copy</em> is set to true, the <em>data</em> object will only be copied. if false, the color map takes ownership of the passed data and replaces the internal data pointer with it. This is significantly faster than copying for large datasets. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26465">26465</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26466</span>{</div>
+<div class="line"><span class="lineno">26467</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a> == <a class="code hl_function" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a>)</div>
+<div class="line"><span class="lineno">26468</span>  {</div>
+<div class="line"><span class="lineno">26469</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;The data pointer is already in (and owned by) this plottable&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a>);</div>
+<div class="line"><span class="lineno">26470</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">26471</span>  }</div>
+<div class="line"><span class="lineno">26472</span>  <span class="keywordflow">if</span> (copy)</div>
+<div class="line"><span class="lineno">26473</span>  {</div>
+<div class="line"><span class="lineno">26474</span>    *<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a> = *<a class="code hl_function" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a>;</div>
+<div class="line"><span class="lineno">26475</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26476</span>  {</div>
+<div class="line"><span class="lineno">26477</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>;</div>
+<div class="line"><span class="lineno">26478</span>    <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a> = <a class="code hl_function" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a>;</div>
+<div class="line"><span class="lineno">26479</span>  }</div>
+<div class="line"><span class="lineno">26480</span>  <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26481</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_a047d7eb3ae657f93f2f39b5e68b79451"><div class="ttname"><a href="#a047d7eb3ae657f93f2f39b5e68b79451">QCPColorMap::data</a></div><div class="ttdeci">QCPColorMapData * data() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06095">qcustomplot.h:6095</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a980b42837821159786a85b4b7dcb8774" name="a980b42837821159786a85b4b7dcb8774"></a>
@@ -966,6 +1273,25 @@ Usage</h1>
 <p>To make the data range span the full range of the data set, use <a class="el" href="#a856608fa3dd1cc290bcd5f29a5575774">rescaleDataRange</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_color_scale.html#abe88633003a26d1e756aa74984587fef">QCPColorScale::setDataRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26491">26491</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26492</span>{</div>
+<div class="line"><span class="lineno">26493</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_q_c_p_range.html#ab38bd4841c77c7bb86c9eea0f142dcc0">QCPRange::validRange</a>(<a class="code hl_function" href="#ae478f0a5a016420d66c70cc33d6cda1d">dataRange</a>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">26494</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> != <a class="code hl_function" href="#ae478f0a5a016420d66c70cc33d6cda1d">dataRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> || <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> != <a class="code hl_function" href="#ae478f0a5a016420d66c70cc33d6cda1d">dataRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)</div>
+<div class="line"><span class="lineno">26495</span>  {</div>
+<div class="line"><span class="lineno">26496</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>)</div>
+<div class="line"><span class="lineno">26497</span>      <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a> = <a class="code hl_function" href="#ae478f0a5a016420d66c70cc33d6cda1d">dataRange</a>.<a class="code hl_function" href="class_q_c_p_range.html#a3d66288d66e1d6df3636075eb42502ee">sanitizedForLogScale</a>();</div>
+<div class="line"><span class="lineno">26498</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26499</span>      <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a> = <a class="code hl_function" href="#ae478f0a5a016420d66c70cc33d6cda1d">dataRange</a>.<a class="code hl_function" href="class_q_c_p_range.html#a808751fdd9b17ef52327ba011df2e5f1">sanitizedForLinScale</a>();</div>
+<div class="line"><span class="lineno">26500</span>    <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26501</span>    emit <a class="code hl_signal" href="#a83ae5be3903da493f732e1a5c14fd807">dataRangeChanged</a>(<a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>);</div>
+<div class="line"><span class="lineno">26502</span>  }</div>
+<div class="line"><span class="lineno">26503</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a></div><div class="ttdeci">@ stLogarithmic</div><div class="ttdoc">Logarithmic scaling with correspondingly transformed axis coordinates (possibly also setTicker to a Q...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02196">qcustomplot.h:2195</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_ae478f0a5a016420d66c70cc33d6cda1d"><div class="ttname"><a href="#ae478f0a5a016420d66c70cc33d6cda1d">QCPColorMap::dataRange</a></div><div class="ttdeci">QCPRange dataRange() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06096">qcustomplot.h:6096</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a3d66288d66e1d6df3636075eb42502ee"><div class="ttname"><a href="class_q_c_p_range.html#a3d66288d66e1d6df3636075eb42502ee">QCPRange::sanitizedForLogScale</a></div><div class="ttdeci">QCPRange sanitizedForLogScale() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02066">qcustomplot.cpp:2066</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a808751fdd9b17ef52327ba011df2e5f1"><div class="ttname"><a href="class_q_c_p_range.html#a808751fdd9b17ef52327ba011df2e5f1">QCPRange::sanitizedForLinScale</a></div><div class="ttdeci">QCPRange sanitizedForLinScale() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02115">qcustomplot.cpp:2115</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ab38bd4841c77c7bb86c9eea0f142dcc0"><div class="ttname"><a href="class_q_c_p_range.html#ab38bd4841c77c7bb86c9eea0f142dcc0">QCPRange::validRange</a></div><div class="ttdeci">static bool validRange(double lower, double upper)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02130">qcustomplot.cpp:2130</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9d20aa08e3c1f20f22908c45b9c06511" name="a9d20aa08e3c1f20f22908c45b9c06511"></a>
@@ -985,6 +1311,18 @@ Usage</h1>
 <p>Sets whether the data is correlated with the color gradient linearly or logarithmically.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_color_scale.html#aeb6107d67dd7325145b2498abae67fc3">QCPColorScale::setDataScaleType</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26510">26510</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26511</span>{</div>
+<div class="line"><span class="lineno">26512</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a> != scaleType)</div>
+<div class="line"><span class="lineno">26513</span>  {</div>
+<div class="line"><span class="lineno">26514</span>    <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a> = scaleType;</div>
+<div class="line"><span class="lineno">26515</span>    <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26516</span>    emit <a class="code hl_signal" href="#a978d5d5c9f68cffef8c902b855c04490">dataScaleTypeChanged</a>(<a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>);</div>
+<div class="line"><span class="lineno">26517</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>)</div>
+<div class="line"><span class="lineno">26518</span>      <a class="code hl_function" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>(<a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>.<a class="code hl_function" href="class_q_c_p_range.html#a3d66288d66e1d6df3636075eb42502ee">sanitizedForLogScale</a>());</div>
+<div class="line"><span class="lineno">26519</span>  }</div>
+<div class="line"><span class="lineno">26520</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7313c78360471cead3576341a2c50377" name="a7313c78360471cead3576341a2c50377"></a>
@@ -1005,6 +1343,17 @@ Usage</h1>
 <p>The colors defined by the gradient will be used to represent data values in the currently set data range, see <a class="el" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a>. Data points that are outside this data range will either be colored uniformly with the respective gradient boundary color, or the gradient will repeat, depending on <a class="el" href="class_q_c_p_color_gradient.html#a39d6448155fc00a219f239220d14bb39">QCPColorGradient::setPeriodic</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_color_scale.html#a1f29583bb6f1e7f473b62fb712be3940">QCPColorScale::setGradient</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26533">26533</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26534</span>{</div>
+<div class="line"><span class="lineno">26535</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a> != <a class="code hl_function" href="#acc4bb87c903607b96c08d2bc34bc24cd">gradient</a>)</div>
+<div class="line"><span class="lineno">26536</span>  {</div>
+<div class="line"><span class="lineno">26537</span>    <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a> = <a class="code hl_function" href="#acc4bb87c903607b96c08d2bc34bc24cd">gradient</a>;</div>
+<div class="line"><span class="lineno">26538</span>    <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26539</span>    emit <a class="code hl_signal" href="#a31a12726736b1ac274e7b1d8dfb67468">gradientChanged</a>(<a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>);</div>
+<div class="line"><span class="lineno">26540</span>  }</div>
+<div class="line"><span class="lineno">26541</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_acc4bb87c903607b96c08d2bc34bc24cd"><div class="ttname"><a href="#acc4bb87c903607b96c08d2bc34bc24cd">QCPColorMap::gradient</a></div><div class="ttdeci">QCPColorGradient gradient() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06100">qcustomplot.h:6100</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a484eaa8a5065cfc386b15375bf98b964" name="a484eaa8a5065cfc386b15375bf98b964"></a>
@@ -1027,6 +1376,12 @@ Usage</h1>
 <div class="caption">
 A 10*10 color map, with interpolation and without interpolation enabled</div></div>
  
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26549">26549</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26550</span>{</div>
+<div class="line"><span class="lineno">26551</span>  <a class="code hl_variable" href="#af77e5eba9a844592648edeb6fbe834f1">mInterpolate</a> = enabled;</div>
+<div class="line"><span class="lineno">26552</span>  <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a> = <span class="keyword">true</span>; <span class="comment">// because oversampling factors might need to change</span></div>
+<div class="line"><span class="lineno">26553</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad03221cc285e5f562a0b13d684b5576d" name="ad03221cc285e5f562a0b13d684b5576d"></a>
@@ -1050,6 +1405,11 @@ A 10*10 color map, with interpolation and without interpolation enabled</div></d
 <div class="caption">
 A color map, with tight boundary enabled and disabled</div></div>
  
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26566">26566</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26567</span>{</div>
+<div class="line"><span class="lineno">26568</span>  <a class="code hl_variable" href="#ac2e9425fe4381b496726e1c09f978302">mTightBoundary</a> = enabled;</div>
+<div class="line"><span class="lineno">26569</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a53b5d26b28d6027af0fc863f057965db" name="a53b5d26b28d6027af0fc863f057965db"></a>
@@ -1075,6 +1435,9 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06099">6099</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6099</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac2e9425fe4381b496726e1c09f978302">mTightBoundary</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5d8158b62d55fcfeaabcb68ce0083e87" name="a5d8158b62d55fcfeaabcb68ce0083e87"></a>
@@ -1100,6 +1463,19 @@ A color map, with tight boundary enabled and disabled</div></div>
 <p>The current color map appearance is scaled down to <em>thumbSize</em>. Ideally, this should be equal to the size of the legend icon (see <a class="el" href="class_q_c_p_legend.html#a8b0740cce488bf7010da6beda6898984">QCPLegend::setIconSize</a>). If it isn't exactly the configured legend icon size, the thumb will be rescaled during drawing of the legend item.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a980b42837821159786a85b4b7dcb8774">setDataRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26652">26652</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26653</span>{</div>
+<div class="line"><span class="lineno">26654</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.isNull() &amp;&amp; !<a class="code hl_function" href="#a047d7eb3ae657f93f2f39b5e68b79451">data</a>()-&gt;isEmpty())</div>
+<div class="line"><span class="lineno">26655</span>    <a class="code hl_function" href="#a5efcea591bb5486d968af520a4d43c3a">updateMapImage</a>(); <span class="comment">// try to update map image if it&#39;s null (happens if no draw has happened yet)</span></div>
+<div class="line"><span class="lineno">26656</span>  </div>
+<div class="line"><span class="lineno">26657</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.isNull()) <span class="comment">// might still be null, e.g. if data is empty, so check here again</span></div>
+<div class="line"><span class="lineno">26658</span>  {</div>
+<div class="line"><span class="lineno">26659</span>    <span class="keywordtype">bool</span> mirrorX = (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>()-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal ? <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>() : <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>())-&gt;rangeReversed();</div>
+<div class="line"><span class="lineno">26660</span>    <span class="keywordtype">bool</span> mirrorY = (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>()-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Vertical ? <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#a842b3831660d3e33b73863fd133889dd">valueAxis</a>() : <a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>())-&gt;rangeReversed();</div>
+<div class="line"><span class="lineno">26661</span>    <a class="code hl_variable" href="#ada522988db02cb531767d38c5029ef60">mLegendIcon</a> = QPixmap::fromImage(<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.mirrored(mirrorX, mirrorY)).scaled(thumbSize, Qt::KeepAspectRatio, transformMode);</div>
+<div class="line"><span class="lineno">26662</span>  }</div>
+<div class="line"><span class="lineno">26663</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5efcea591bb5486d968af520a4d43c3a" name="a5efcea591bb5486d968af520a4d43c3a"></a>
@@ -1125,6 +1501,88 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26755">26755</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26756</span>{</div>
+<div class="line"><span class="lineno">26757</span>  <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a> = <a class="code hl_variable" href="class_q_c_p_abstract_plottable.html#a426f42e254d0f8ce5436a868c61a6827">mKeyAxis</a>.data();</div>
+<div class="line"><span class="lineno">26758</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">26759</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a>()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">26760</span>  </div>
+<div class="line"><span class="lineno">26761</span>  <span class="keyword">const</span> QImage::Format format = QImage::Format_ARGB32_Premultiplied;</div>
+<div class="line"><span class="lineno">26762</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> keySize = <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>();</div>
+<div class="line"><span class="lineno">26763</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> valueSize = <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_map_data.html#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>();</div>
+<div class="line"><span class="lineno">26764</span>  <span class="keywordtype">int</span> keyOversamplingFactor = <a class="code hl_variable" href="#af77e5eba9a844592648edeb6fbe834f1">mInterpolate</a> ? 1 : int(1.0+100.0/<span class="keywordtype">double</span>(keySize)); <span class="comment">// make mMapImage have at least size 100, factor becomes 1 if size &gt; 200 or interpolation is on</span></div>
+<div class="line"><span class="lineno">26765</span>  <span class="keywordtype">int</span> valueOversamplingFactor = <a class="code hl_variable" href="#af77e5eba9a844592648edeb6fbe834f1">mInterpolate</a> ? 1 : int(1.0+100.0/<span class="keywordtype">double</span>(valueSize)); <span class="comment">// make mMapImage have at least size 100, factor becomes 1 if size &gt; 200 or interpolation is on</span></div>
+<div class="line"><span class="lineno">26766</span>  </div>
+<div class="line"><span class="lineno">26767</span>  <span class="comment">// resize mMapImage to correct dimensions including possible oversampling factors, according to key/value axes orientation:</span></div>
+<div class="line"><span class="lineno">26768</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal &amp;&amp; (<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.width() != keySize*keyOversamplingFactor || <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.height() != valueSize*valueOversamplingFactor))</div>
+<div class="line"><span class="lineno">26769</span>    <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a> = QImage(QSize(keySize*keyOversamplingFactor, valueSize*valueOversamplingFactor), format);</div>
+<div class="line"><span class="lineno">26770</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Vertical &amp;&amp; (<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.width() != valueSize*valueOversamplingFactor || <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.height() != keySize*keyOversamplingFactor))</div>
+<div class="line"><span class="lineno">26771</span>    <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a> = QImage(QSize(valueSize*valueOversamplingFactor, keySize*keyOversamplingFactor), format);</div>
+<div class="line"><span class="lineno">26772</span>  </div>
+<div class="line"><span class="lineno">26773</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.isNull())</div>
+<div class="line"><span class="lineno">26774</span>  {</div>
+<div class="line"><span class="lineno">26775</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Couldn&#39;t create map image (possibly too large for memory)&quot;</span>;</div>
+<div class="line"><span class="lineno">26776</span>    <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a> = QImage(QSize(10, 10), format);</div>
+<div class="line"><span class="lineno">26777</span>    <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>.fill(Qt::black);</div>
+<div class="line"><span class="lineno">26778</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26779</span>  {</div>
+<div class="line"><span class="lineno">26780</span>    QImage *localMapImage = &amp;<a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a>; <span class="comment">// this is the image on which the colorization operates. Either the final mMapImage, or if we need oversampling, mUndersampledMapImage</span></div>
+<div class="line"><span class="lineno">26781</span>    <span class="keywordflow">if</span> (keyOversamplingFactor &gt; 1 || valueOversamplingFactor &gt; 1)</div>
+<div class="line"><span class="lineno">26782</span>    {</div>
+<div class="line"><span class="lineno">26783</span>      <span class="comment">// resize undersampled map image to actual key/value cell sizes:</span></div>
+<div class="line"><span class="lineno">26784</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal &amp;&amp; (<a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.width() != keySize || <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.height() != valueSize))</div>
+<div class="line"><span class="lineno">26785</span>        <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a> = QImage(QSize(keySize, valueSize), format);</div>
+<div class="line"><span class="lineno">26786</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Vertical &amp;&amp; (<a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.width() != valueSize || <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.height() != keySize))</div>
+<div class="line"><span class="lineno">26787</span>        <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a> = QImage(QSize(valueSize, keySize), format);</div>
+<div class="line"><span class="lineno">26788</span>      localMapImage = &amp;<a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>; <span class="comment">// make the colorization run on the undersampled image</span></div>
+<div class="line"><span class="lineno">26789</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.isNull())</div>
+<div class="line"><span class="lineno">26790</span>      <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a> = QImage(); <span class="comment">// don&#39;t need oversampling mechanism anymore (map size has changed) but mUndersampledMapImage still has nonzero size, free it</span></div>
+<div class="line"><span class="lineno">26791</span>    </div>
+<div class="line"><span class="lineno">26792</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> *rawData = <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_map_data.html#ac1682862022f575191351c9825187d39">mData</a>;</div>
+<div class="line"><span class="lineno">26793</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *rawAlpha = <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_map_data.html#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>;</div>
+<div class="line"><span class="lineno">26794</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">26795</span>    {</div>
+<div class="line"><span class="lineno">26796</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> lineCount = valueSize;</div>
+<div class="line"><span class="lineno">26797</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> rowCount = keySize;</div>
+<div class="line"><span class="lineno">26798</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> line=0; line&lt;lineCount; ++line)</div>
+<div class="line"><span class="lineno">26799</span>      {</div>
+<div class="line"><span class="lineno">26800</span>        QRgb* pixels = <span class="keyword">reinterpret_cast&lt;</span>QRgb*<span class="keyword">&gt;</span>(localMapImage-&gt;scanLine(lineCount-1-line)); <span class="comment">// invert scanline index because QImage counts scanlines from top, but our vertical index counts from bottom (mathematical coordinate system)</span></div>
+<div class="line"><span class="lineno">26801</span>        <span class="keywordflow">if</span> (rawAlpha)</div>
+<div class="line"><span class="lineno">26802</span>          <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">colorize</a>(rawData+line*rowCount, rawAlpha+line*rowCount, <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>, pixels, rowCount, 1, <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>==<a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>);</div>
+<div class="line"><span class="lineno">26803</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26804</span>          <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">colorize</a>(rawData+line*rowCount, <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>, pixels, rowCount, 1, <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>==<a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>);</div>
+<div class="line"><span class="lineno">26805</span>      }</div>
+<div class="line"><span class="lineno">26806</span>    } <span class="keywordflow">else</span> <span class="comment">// keyAxis-&gt;orientation() == Qt::Vertical</span></div>
+<div class="line"><span class="lineno">26807</span>    {</div>
+<div class="line"><span class="lineno">26808</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> lineCount = keySize;</div>
+<div class="line"><span class="lineno">26809</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> rowCount = valueSize;</div>
+<div class="line"><span class="lineno">26810</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> line=0; line&lt;lineCount; ++line)</div>
+<div class="line"><span class="lineno">26811</span>      {</div>
+<div class="line"><span class="lineno">26812</span>        QRgb* pixels = <span class="keyword">reinterpret_cast&lt;</span>QRgb*<span class="keyword">&gt;</span>(localMapImage-&gt;scanLine(lineCount-1-line)); <span class="comment">// invert scanline index because QImage counts scanlines from top, but our vertical index counts from bottom (mathematical coordinate system)</span></div>
+<div class="line"><span class="lineno">26813</span>        <span class="keywordflow">if</span> (rawAlpha)</div>
+<div class="line"><span class="lineno">26814</span>          <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">colorize</a>(rawData+line, rawAlpha+line, <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>, pixels, rowCount, lineCount, <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>==<a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>);</div>
+<div class="line"><span class="lineno">26815</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26816</span>          <a class="code hl_variable" href="#aab77fe9a8df6f0486ab3507cc5f278fa">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">colorize</a>(rawData+line, <a class="code hl_variable" href="#ab87609621d16cd3e9d52ad070b327b08">mDataRange</a>, pixels, rowCount, lineCount, <a class="code hl_variable" href="#ab28a4b2def408f83b9818799d5f18446">mDataScaleType</a>==<a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>);</div>
+<div class="line"><span class="lineno">26817</span>      }</div>
+<div class="line"><span class="lineno">26818</span>    }</div>
+<div class="line"><span class="lineno">26819</span>    </div>
+<div class="line"><span class="lineno">26820</span>    <span class="keywordflow">if</span> (keyOversamplingFactor &gt; 1 || valueOversamplingFactor &gt; 1)</div>
+<div class="line"><span class="lineno">26821</span>    {</div>
+<div class="line"><span class="lineno">26822</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_abstract_plottable.html#aa6f25b97ee99988fe352f17cb9ed962b">keyAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">26823</span>        <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a> = <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.scaled(keySize*keyOversamplingFactor, valueSize*valueOversamplingFactor, Qt::IgnoreAspectRatio, Qt::FastTransformation);</div>
+<div class="line"><span class="lineno">26824</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26825</span>        <a class="code hl_variable" href="#a66110813b42eca78b64095b2a1f285a0">mMapImage</a> = <a class="code hl_variable" href="#acad3d52f3572436d5f2e4057911ea8d3">mUndersampledMapImage</a>.scaled(valueSize*valueOversamplingFactor, keySize*keyOversamplingFactor, Qt::IgnoreAspectRatio, Qt::FastTransformation);</div>
+<div class="line"><span class="lineno">26826</span>    }</div>
+<div class="line"><span class="lineno">26827</span>  }</div>
+<div class="line"><span class="lineno">26828</span>  <a class="code hl_variable" href="#a8709272aa8f0be3ca111bf3866806f8b">mMapData</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_map_data.html#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26829</span>  <a class="code hl_variable" href="#ac9aea6a5c193d7fa866bc7b26e79ef2c">mMapImageInvalidated</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26830</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html"><div class="ttname"><a href="class_q_c_p_axis.html">QCPAxis</a></div><div class="ttdoc">Manages a single axis inside a QCustomPlot.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02120">qcustomplot.h:2121</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_gradient_html_aaf423ceb943e177b0ed2c48c811d83dc"><div class="ttname"><a href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">QCPColorGradient::colorize</a></div><div class="ttdeci">void colorize(const double *data, const QCPRange &amp;range, QRgb *scanLine, int n, int dataIndexFactor=1, bool logarithmic=false)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l16710">qcustomplot.cpp:16710</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a2146560b3a61a41186f9aa5ed9ec37a6"><div class="ttname"><a href="class_q_c_p_color_map_data.html#a2146560b3a61a41186f9aa5ed9ec37a6">QCPColorMapData::mAlpha</a></div><div class="ttdeci">unsigned char * mAlpha</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06069">qcustomplot.h:6069</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ac1682862022f575191351c9825187d39"><div class="ttname"><a href="class_q_c_p_color_map_data.html#ac1682862022f575191351c9825187d39">QCPColorMapData::mData</a></div><div class="ttdeci">double * mData</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06068">qcustomplot.h:6068</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_html_acad3d52f3572436d5f2e4057911ea8d3"><div class="ttname"><a href="#acad3d52f3572436d5f2e4057911ea8d3">QCPColorMap::mUndersampledMapImage</a></div><div class="ttdeci">QImage mUndersampledMapImage</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06137">qcustomplot.h:6137</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -1148,6 +1606,8 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06149">6149</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdf9df76adcfae45261690aa0ca2198" name="a1cdf9df76adcfae45261690aa0ca2198"></a>
@@ -1169,6 +1629,8 @@ A color map, with tight boundary enabled and disabled</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06148">6148</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1193,6 +1655,8 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06134">6134</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ab87609621d16cd3e9d52ad070b327b08" name="ab87609621d16cd3e9d52ad070b327b08"></a>
@@ -1214,6 +1678,8 @@ A color map, with tight boundary enabled and disabled</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06128">6128</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1237,6 +1703,8 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06129">6129</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aab77fe9a8df6f0486ab3507cc5f278fa" name="aab77fe9a8df6f0486ab3507cc5f278fa"></a>
@@ -1258,6 +1726,8 @@ A color map, with tight boundary enabled and disabled</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06131">6131</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1281,6 +1751,8 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06132">6132</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ada522988db02cb531767d38c5029ef60" name="ada522988db02cb531767d38c5029ef60"></a>
@@ -1302,6 +1774,8 @@ A color map, with tight boundary enabled and disabled</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06138">6138</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1325,6 +1799,8 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06130">6130</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a66110813b42eca78b64095b2a1f285a0" name="a66110813b42eca78b64095b2a1f285a0"></a>
@@ -1346,6 +1822,8 @@ A color map, with tight boundary enabled and disabled</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06137">6137</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1369,6 +1847,8 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06139">6139</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ac2e9425fe4381b496726e1c09f978302" name="ac2e9425fe4381b496726e1c09f978302"></a>
@@ -1390,6 +1870,8 @@ A color map, with tight boundary enabled and disabled</div></div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06133">6133</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1413,11 +1895,13 @@ A color map, with tight boundary enabled and disabled</div></div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06137">6137</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

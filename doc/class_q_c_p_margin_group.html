@@ -167,6 +167,8 @@ Demonstration of QCPMarginGroup</div></div>
 <h1><a class="anchor" id="QCPMarginGroup-example"></a>
 Example</h1>
 <p>First create a margin group: </p><div class="fragment"></div><!-- fragment --><p> Then set this group on the layout element sides: </p><div class="fragment"></div><!-- fragment --><p> Here, we've used the first two axis rects of the plot and synchronized their left margins with each other and their right margins with each other. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01207">1207</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac481c20678ec5b305d6df330715f4b7b" name="ac481c20678ec5b305d6df330715f4b7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac481c20678ec5b305d6df330715f4b7b">&#9670;&#160;</a></span>QCPMarginGroup()</h2>
@@ -192,6 +194,23 @@ Example</h1>
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_margin_group.html" title="A margin group allows synchronization of margin sides if working with multiple layout elements.">QCPMarginGroup</a> instance in <em>parentPlot</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03042">3042</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3042</span>                                                      :</div>
+<div class="line"><span class="lineno"> 3043</span>  QObject(parentPlot),</div>
+<div class="line"><span class="lineno"> 3044</span>  <a class="code hl_variable" href="#a23cfa29e3cc0f33a59141b77d8c04edf">mParentPlot</a>(parentPlot)</div>
+<div class="line"><span class="lineno"> 3045</span>{</div>
+<div class="line"><span class="lineno"> 3046</span>  <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>.insert(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07">QCP::msLeft</a>, QList&lt;QCPLayoutElement*&gt;());</div>
+<div class="line"><span class="lineno"> 3047</span>  <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>.insert(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65">QCP::msRight</a>, QList&lt;QCPLayoutElement*&gt;());</div>
+<div class="line"><span class="lineno"> 3048</span>  <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>.insert(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0">QCP::msTop</a>, QList&lt;QCPLayoutElement*&gt;());</div>
+<div class="line"><span class="lineno"> 3049</span>  <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>.insert(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc">QCP::msBottom</a>, QList&lt;QCPLayoutElement*&gt;());</div>
+<div class="line"><span class="lineno"> 3050</span>}</div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html_a23cfa29e3cc0f33a59141b77d8c04edf"><div class="ttname"><a href="#a23cfa29e3cc0f33a59141b77d8c04edf">QCPMarginGroup::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01221">qcustomplot.h:1221</a></div></div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html_a954bc89ff8958b9bb6a4a0d08ed5fc0f"><div class="ttname"><a href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">QCPMarginGroup::mChildren</a></div><div class="ttdeci">QHash&lt; QCP::MarginSide, QList&lt; QCPLayoutElement * &gt; &gt; mChildren</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01222">qcustomplot.h:1222</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc">QCP::msBottom</a></div><div class="ttdeci">@ msBottom</div><div class="ttdoc">0x08 bottom margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00230">qcustomplot.h:229</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0">QCP::msTop</a></div><div class="ttdeci">@ msTop</div><div class="ttdoc">0x04 top margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00229">qcustomplot.h:228</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65">QCP::msRight</a></div><div class="ttdeci">@ msRight</div><div class="ttdoc">0x02 right margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00228">qcustomplot.h:227</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07">QCP::msLeft</a></div><div class="ttdeci">@ msLeft</div><div class="ttdoc">0x01 left margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00227">qcustomplot.h:226</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a42c62becdaac41406ca90f1c2a755e1c" name="a42c62becdaac41406ca90f1c2a755e1c"></a>
@@ -217,6 +236,12 @@ Example</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03052">3052</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3053</span>{</div>
+<div class="line"><span class="lineno"> 3054</span>  <a class="code hl_function" href="#a144b67f216e4e86c3a3a309e850285fe">clear</a>();</div>
+<div class="line"><span class="lineno"> 3055</span>}</div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html_a144b67f216e4e86c3a3a309e850285fe"><div class="ttname"><a href="#a144b67f216e4e86c3a3a309e850285fe">QCPMarginGroup::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03077">qcustomplot.cpp:3077</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -247,6 +272,14 @@ Example</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03121">3121</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3122</span>{</div>
+<div class="line"><span class="lineno"> 3123</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>[side].contains(element))</div>
+<div class="line"><span class="lineno"> 3124</span>    <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>[side].append(element);</div>
+<div class="line"><span class="lineno"> 3125</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3126</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;element is already child of this margin group side&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(element);</div>
+<div class="line"><span class="lineno"> 3127</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a144b67f216e4e86c3a3a309e850285fe" name="a144b67f216e4e86c3a3a309e850285fe"></a>
@@ -265,6 +298,20 @@ Example</h1>
 </div><div class="memdoc">
 <p>Clears this margin group. The synchronization of the margin sides that use this margin group is lifted and they will use their individual margin sizes again. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03077">3077</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3078</span>{</div>
+<div class="line"><span class="lineno"> 3079</span>  <span class="comment">// make all children remove themselves from this margin group:</span></div>
+<div class="line"><span class="lineno"> 3080</span>  QHashIterator&lt;QCP::MarginSide, QList&lt;QCPLayoutElement*&gt; &gt; it(<a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>);</div>
+<div class="line"><span class="lineno"> 3081</span>  <span class="keywordflow">while</span> (it.hasNext())</div>
+<div class="line"><span class="lineno"> 3082</span>  {</div>
+<div class="line"><span class="lineno"> 3083</span>    it.next();</div>
+<div class="line"><span class="lineno"> 3084</span>    <span class="keyword">const</span> QList&lt;QCPLayoutElement*&gt; <a class="code hl_function" href="#ac967a4dc5fe02ae44aeb43511d5e1bd4">elements</a> = it.value();</div>
+<div class="line"><span class="lineno"> 3085</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_function" href="#ac967a4dc5fe02ae44aeb43511d5e1bd4">elements</a>.size()-1; i&gt;=0; --i)</div>
+<div class="line"><span class="lineno"> 3086</span>      <a class="code hl_function" href="#ac967a4dc5fe02ae44aeb43511d5e1bd4">elements</a>.at(i)-&gt;setMarginGroup(it.key(), <span class="keyword">nullptr</span>); <span class="comment">// removes itself from mChildren via removeChild</span></div>
+<div class="line"><span class="lineno"> 3087</span>  }</div>
+<div class="line"><span class="lineno"> 3088</span>}</div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html_ac967a4dc5fe02ae44aeb43511d5e1bd4"><div class="ttname"><a href="#ac967a4dc5fe02ae44aeb43511d5e1bd4">QCPMarginGroup::elements</a></div><div class="ttdeci">QList&lt; QCPLayoutElement * &gt; elements(QCP::MarginSide side) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01215">qcustomplot.h:1215</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aea6a00373b3a0305de56c34d2423ea99" name="aea6a00373b3a0305de56c34d2423ea99"></a>
@@ -290,6 +337,26 @@ Example</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03100">3100</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3101</span>{</div>
+<div class="line"><span class="lineno"> 3102</span>  <span class="comment">// query all automatic margins of the layout elements in this margin group side and find maximum:</span></div>
+<div class="line"><span class="lineno"> 3103</span>  <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><span class="lineno"> 3104</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el, <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>.value(side))</div>
+<div class="line"><span class="lineno"> 3105</span>  {</div>
+<div class="line"><span class="lineno"> 3106</span>    <span class="keywordflow">if</span> (!el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a2585bc8c5cc70ee712909751a2fc8909">autoMargins</a>().testFlag(side))</div>
+<div class="line"><span class="lineno"> 3107</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3108</span>    <span class="keywordtype">int</span> m = qMax(el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a005c9f0fe84bc1591a2cf2c46fd477b4">calculateAutoMargin</a>(side), <a class="code hl_function" href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a>(el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a5eae30e28f28d73fd1c56409c011393e">minimumMargins</a>(), side));</div>
+<div class="line"><span class="lineno"> 3109</span>    <span class="keywordflow">if</span> (m &gt; result)</div>
+<div class="line"><span class="lineno"> 3110</span>      result = m;</div>
+<div class="line"><span class="lineno"> 3111</span>  }</div>
+<div class="line"><span class="lineno"> 3112</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 3113</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html"><div class="ttname"><a href="class_q_c_p_layout_element.html">QCPLayoutElement</a></div><div class="ttdoc">The abstract base class for all objects that form the layout system.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01238">qcustomplot.h:1239</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a005c9f0fe84bc1591a2cf2c46fd477b4"><div class="ttname"><a href="class_q_c_p_layout_element.html#a005c9f0fe84bc1591a2cf2c46fd477b4">QCPLayoutElement::calculateAutoMargin</a></div><div class="ttdeci">virtual int calculateAutoMargin(QCP::MarginSide side)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03569">qcustomplot.cpp:3569</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a2585bc8c5cc70ee712909751a2fc8909"><div class="ttname"><a href="class_q_c_p_layout_element.html#a2585bc8c5cc70ee712909751a2fc8909">QCPLayoutElement::autoMargins</a></div><div class="ttdeci">QCP::MarginSides autoMargins() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01284">qcustomplot.h:1284</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a5eae30e28f28d73fd1c56409c011393e"><div class="ttname"><a href="class_q_c_p_layout_element.html#a5eae30e28f28d73fd1c56409c011393e">QCPLayoutElement::minimumMargins</a></div><div class="ttdeci">QMargins minimumMargins() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01283">qcustomplot.h:1283</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a23a2679d3495c444acc26acc61e35b5b"><div class="ttname"><a href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a></div><div class="ttdeci">int getMarginValue(const QMargins &amp;margins, QCP::MarginSide side)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00377">qcustomplot.h:377</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac967a4dc5fe02ae44aeb43511d5e1bd4" name="ac967a4dc5fe02ae44aeb43511d5e1bd4"></a>
@@ -316,6 +383,9 @@ Example</h1>
 </div><div class="memdoc">
 <p>Returns a list of all layout elements that have their margin <em>side</em> associated with this margin group. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01215">1215</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1215</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>.value(side); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae0d32656d8a5fc5690c4e7693f9d0539" name="ae0d32656d8a5fc5690c4e7693f9d0539"></a>
@@ -334,6 +404,18 @@ Example</h1>
 </div><div class="memdoc">
 <p>Returns whether this margin group is empty. If this function returns true, no layout elements use this margin group to synchronize margin sides. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03061">3061</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3062</span>{</div>
+<div class="line"><span class="lineno"> 3063</span>  QHashIterator&lt;QCP::MarginSide, QList&lt;QCPLayoutElement*&gt; &gt; it(<a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>);</div>
+<div class="line"><span class="lineno"> 3064</span>  <span class="keywordflow">while</span> (it.hasNext())</div>
+<div class="line"><span class="lineno"> 3065</span>  {</div>
+<div class="line"><span class="lineno"> 3066</span>    it.next();</div>
+<div class="line"><span class="lineno"> 3067</span>    <span class="keywordflow">if</span> (!it.value().isEmpty())</div>
+<div class="line"><span class="lineno"> 3068</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3069</span>  }</div>
+<div class="line"><span class="lineno"> 3070</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3071</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a20ab3286062957d99b58db683fe725b0" name="a20ab3286062957d99b58db683fe725b0"></a>
@@ -363,6 +445,12 @@ Example</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03135">3135</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3136</span>{</div>
+<div class="line"><span class="lineno"> 3137</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a954bc89ff8958b9bb6a4a0d08ed5fc0f">mChildren</a>[side].removeOne(element))</div>
+<div class="line"><span class="lineno"> 3138</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;element is not child of this margin group side&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(element);</div>
+<div class="line"><span class="lineno"> 3139</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -385,6 +473,8 @@ Example</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01234">1234</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -409,6 +499,8 @@ Example</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01222">1222</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a23cfa29e3cc0f33a59141b77d8c04edf" name="a23cfa29e3cc0f33a59141b77d8c04edf"></a>
@@ -431,11 +523,13 @@ Example</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01221">1221</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

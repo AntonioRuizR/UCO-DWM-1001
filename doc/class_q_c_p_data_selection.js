@@ -30,5 +30,6 @@ var class_q_c_p_data_selection =
     [ "operator-", "class_q_c_p_data_selection.html#a726652cb9ed840e3025435cc2c266468", null ],
     [ "operator-", "class_q_c_p_data_selection.html#a32c5784ac70946f09a09b2dd19816b78", null ],
     [ "operator-", "class_q_c_p_data_selection.html#a41147ef7d6303c746e398278b7b624d1", null ],
-    [ "operator<<", "class_q_c_p_data_selection.html#aed65b8988afe6b03adeadf5edf663670", null ]
+    [ "operator<<", "class_q_c_p_data_selection.html#aed65b8988afe6b03adeadf5edf663670", null ],
+    [ "mDataRanges", "class_q_c_p_data_selection.html#aa1070e7c700f15d9018fad78b4732004", null ]
 ];

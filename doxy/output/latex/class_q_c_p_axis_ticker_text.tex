@@ -1,0 +1,232 @@
+\doxysection{QCPAxis\+Ticker\+Text Class Reference}
+\hypertarget{class_q_c_p_axis_ticker_text}{}\label{class_q_c_p_axis_ticker_text}\index{QCPAxisTickerText@{QCPAxisTickerText}}
+
+
+{\ttfamily \#include $<$qcustomplot.\+h$>$}
+
+Inheritance diagram for QCPAxis\+Ticker\+Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_c_p_axis_ticker_text}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_axis_ticker_text_a1d7243b1256c1aa9d1d5b99b2e84e648}{QCPAxis\+Ticker\+Text}} ()
+\item 
+QMap$<$ double, QString $>$ \& \mbox{\hyperlink{class_q_c_p_axis_ticker_text_ac84622a6bb4f2a98474e185ecaf3189a}{ticks}} ()
+\item 
+int \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a5c3c59e8fdf4c96568dd50d4a653e791}{sub\+Tick\+Count}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a8cdf1f21940f1f53f5e3d30b2c74f5cf}{set\+Ticks}} (const QMap$<$ double, QString $>$ \&\mbox{\hyperlink{class_q_c_p_axis_ticker_text_ac84622a6bb4f2a98474e185ecaf3189a}{ticks}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a686f38f358a0cf2d9309c84c22581d9b}{set\+Ticks}} (const QVector$<$ double $>$ \&positions, const QVector$<$ QString $>$ \&labels)
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a8cfa50c51183c90186892eeef978d571}{set\+Sub\+Tick\+Count}} (int sub\+Ticks)
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a21826d2fcd9a25c194d34d4f67aa1460}{clear}} ()
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a3362873a48614e6d446c193548cb85e3}{add\+Tick}} (double position, const QString \&label)
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_aba34051300eecaefbedb2df8feff2d45}{add\+Ticks}} (const QMap$<$ double, QString $>$ \&\mbox{\hyperlink{class_q_c_p_axis_ticker_text_ac84622a6bb4f2a98474e185ecaf3189a}{ticks}})
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a8140c730e20b0050e1b702af3db00b2e}{add\+Ticks}} (const QVector$<$ double $>$ \&positions, const QVector$<$ QString $>$ \&labels)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_axis_ticker_a8fcf23c79ebd72202fe79253f9f01ea8}{QCPAxis\+Ticker}} ()
+\item 
+virtual \mbox{\hyperlink{class_q_c_p_axis_ticker_a6dfb35878b64e94e5f28e01d975302ad}{\texorpdfstring{$\sim$}{\string~}\+QCPAxis\+Ticker}} ()
+\item 
+\mbox{\hyperlink{class_q_c_p_axis_ticker_ab6d2f9d9477821623ac9bc4b21ddf49a}{Tick\+Step\+Strategy}} \mbox{\hyperlink{class_q_c_p_axis_ticker_a58df76f2ec3eb48401bdd314b0e14ba1}{tick\+Step\+Strategy}} () const
+\item 
+int \mbox{\hyperlink{class_q_c_p_axis_ticker_aaf9edbe4169ce55e216fd067cc139452}{tick\+Count}} () const
+\item 
+double \mbox{\hyperlink{class_q_c_p_axis_ticker_ac0c6e9587c36fdeefb5518c00fe7ab15}{tick\+Origin}} () const
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_a73b1d847c1a12159af6bfda4ebebe7d5}{set\+Tick\+Step\+Strategy}} (\mbox{\hyperlink{class_q_c_p_axis_ticker_ab6d2f9d9477821623ac9bc4b21ddf49a}{Tick\+Step\+Strategy}} strategy)
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_a47752abba8293e6dc18491501ae34008}{set\+Tick\+Count}} (int count)
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_ab509c7e500293bf66a8409f0d7c23943}{set\+Tick\+Origin}} (double origin)
+\item 
+virtual void \mbox{\hyperlink{class_q_c_p_axis_ticker_ae11e785e1d9ecfe7d4ba1292551b4a46}{generate}} (const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&range, const QLocale \&locale, QChar format\+Char, int precision, QVector$<$ double $>$ \&ticks, QVector$<$ double $>$ \texorpdfstring{$\ast$}{*}sub\+Ticks, QVector$<$ QString $>$ \texorpdfstring{$\ast$}{*}tick\+Labels)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_q_c_p_axis_ticker_text_aa220d42ce46debd93a759440c2214a33}{get\+Tick\+Step}} (const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&range) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual int \mbox{\hyperlink{class_q_c_p_axis_ticker_text_ac899dad500213b5c488033071723e97d}{get\+Sub\+Tick\+Count}} (double tick\+Step) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual QString \mbox{\hyperlink{class_q_c_p_axis_ticker_text_adb3da2374ca0b62ff1d648097ae17e8a}{get\+Tick\+Label}} (double tick, const QLocale \&locale, QChar format\+Char, int precision) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\item 
+virtual QVector$<$ double $>$ \mbox{\hyperlink{class_q_c_p_axis_ticker_text_af3eea448e1c4f6dfa115f68b03141130}{create\+Tick\+Vector}} (double tick\+Step, const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&range) \mbox{\hyperlink{qcustomplot_8h_a42cc5eaeb25b85f8b52d2a4b94c56f55}{Q\+\_\+\+DECL\+\_\+\+OVERRIDE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual QVector$<$ double $>$ \mbox{\hyperlink{class_q_c_p_axis_ticker_a60f3c92d6c03d384d39e257cf257cddb}{create\+Sub\+Tick\+Vector}} (int sub\+Tick\+Count, const QVector$<$ double $>$ \&ticks)
+\item 
+virtual QVector$<$ QString $>$ \mbox{\hyperlink{class_q_c_p_axis_ticker_ac35f5a0e065081644e69561bf7fd6881}{create\+Label\+Vector}} (const QVector$<$ double $>$ \&ticks, const QLocale \&locale, QChar format\+Char, int precision)
+\item 
+void \mbox{\hyperlink{class_q_c_p_axis_ticker_ab28cc1ab549489be7975f5ce7e717916}{trim\+Ticks}} (const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&range, QVector$<$ double $>$ \&ticks, bool keep\+One\+Outlier) const
+\item 
+double \mbox{\hyperlink{class_q_c_p_axis_ticker_a4ea0a7c4ca1c610f92b9bd5944ab4260}{pick\+Closest}} (double target, const QVector$<$ double $>$ \&candidates) const
+\item 
+double \mbox{\hyperlink{class_q_c_p_axis_ticker_abe99aaaf6c512812869b0a19937c76ff}{get\+Mantissa}} (double input, double \texorpdfstring{$\ast$}{*}magnitude=nullptr) const
+\item 
+double \mbox{\hyperlink{class_q_c_p_axis_ticker_ac7df6c72876b7abd67c932663a0b0f6a}{clean\+Mantissa}} (double input) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QMap$<$ double, QString $>$ \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a27c48539feb6c293979cd8059ba220c3}{m\+Ticks}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_axis_ticker_text_a206d092b1598eecb981bba7fb16ff44e}{m\+Sub\+Tick\+Count}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_c_p_axis_ticker_ab6d2f9d9477821623ac9bc4b21ddf49a}{Tick\+Step\+Strategy}} \mbox{\hyperlink{class_q_c_p_axis_ticker_ac059d6d670b2f6132c593fb4de156701}{m\+Tick\+Step\+Strategy}}
+\item 
+int \mbox{\hyperlink{class_q_c_p_axis_ticker_a14a35b47d1aad11b08d18ea0e25937b8}{m\+Tick\+Count}}
+\item 
+double \mbox{\hyperlink{class_q_c_p_axis_ticker_a560ef9347b1aa599a9bf0e2f29d3ec16}{m\+Tick\+Origin}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_q_c_p_axis_ticker}{QCPAxis\+Ticker}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_q_c_p_axis_ticker_ab6d2f9d9477821623ac9bc4b21ddf49a}{Tick\+Step\+Strategy}} \{ \mbox{\hyperlink{class_q_c_p_axis_ticker_ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8}{tss\+Readability}}
+, \mbox{\hyperlink{class_q_c_p_axis_ticker_ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2}{tss\+Meet\+Tick\+Count}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_q_c_p_axis_ticker_text_a1d7243b1256c1aa9d1d5b99b2e84e648}\index{QCPAxisTickerText@{QCPAxisTickerText}!QCPAxisTickerText@{QCPAxisTickerText}}
+\index{QCPAxisTickerText@{QCPAxisTickerText}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{QCPAxisTickerText()}{QCPAxisTickerText()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a1d7243b1256c1aa9d1d5b99b2e84e648} 
+QCPAxis\+Ticker\+Text\+::\+QCPAxis\+Ticker\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_q_c_p_axis_ticker_text_a3362873a48614e6d446c193548cb85e3}\index{QCPAxisTickerText@{QCPAxisTickerText}!addTick@{addTick}}
+\index{addTick@{addTick}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{addTick()}{addTick()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a3362873a48614e6d446c193548cb85e3} 
+void QCPAxis\+Ticker\+Text\+::add\+Tick (\begin{DoxyParamCaption}\item[{double}]{position}{, }\item[{const QString \&}]{label}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_aba34051300eecaefbedb2df8feff2d45}\index{QCPAxisTickerText@{QCPAxisTickerText}!addTicks@{addTicks}}
+\index{addTicks@{addTicks}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{addTicks()}{addTicks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_aba34051300eecaefbedb2df8feff2d45} 
+void QCPAxis\+Ticker\+Text\+::add\+Ticks (\begin{DoxyParamCaption}\item[{const QMap$<$ double, QString $>$ \&}]{ticks}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a8140c730e20b0050e1b702af3db00b2e}\index{QCPAxisTickerText@{QCPAxisTickerText}!addTicks@{addTicks}}
+\index{addTicks@{addTicks}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{addTicks()}{addTicks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a8140c730e20b0050e1b702af3db00b2e} 
+void QCPAxis\+Ticker\+Text\+::add\+Ticks (\begin{DoxyParamCaption}\item[{const QVector$<$ double $>$ \&}]{positions}{, }\item[{const QVector$<$ QString $>$ \&}]{labels}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a21826d2fcd9a25c194d34d4f67aa1460}\index{QCPAxisTickerText@{QCPAxisTickerText}!clear@{clear}}
+\index{clear@{clear}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a21826d2fcd9a25c194d34d4f67aa1460} 
+void QCPAxis\+Ticker\+Text\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_af3eea448e1c4f6dfa115f68b03141130}\index{QCPAxisTickerText@{QCPAxisTickerText}!createTickVector@{createTickVector}}
+\index{createTickVector@{createTickVector}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{createTickVector()}{createTickVector()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_af3eea448e1c4f6dfa115f68b03141130} 
+virtual QVector$<$ double $>$ QCPAxis\+Ticker\+Text\+::create\+Tick\+Vector (\begin{DoxyParamCaption}\item[{double}]{tick\+Step}{, }\item[{const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&}]{range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_axis_ticker_a153dd31436c0d74adf4cae6de7751217}{QCPAxis\+Ticker}}.
+
+\Hypertarget{class_q_c_p_axis_ticker_text_ac899dad500213b5c488033071723e97d}\index{QCPAxisTickerText@{QCPAxisTickerText}!getSubTickCount@{getSubTickCount}}
+\index{getSubTickCount@{getSubTickCount}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{getSubTickCount()}{getSubTickCount()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_ac899dad500213b5c488033071723e97d} 
+virtual int QCPAxis\+Ticker\+Text\+::get\+Sub\+Tick\+Count (\begin{DoxyParamCaption}\item[{double}]{tick\+Step}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_axis_ticker_aa3703390b2b7a54b8cf0a81d58f75624}{QCPAxis\+Ticker}}.
+
+\Hypertarget{class_q_c_p_axis_ticker_text_adb3da2374ca0b62ff1d648097ae17e8a}\index{QCPAxisTickerText@{QCPAxisTickerText}!getTickLabel@{getTickLabel}}
+\index{getTickLabel@{getTickLabel}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{getTickLabel()}{getTickLabel()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_adb3da2374ca0b62ff1d648097ae17e8a} 
+virtual QString QCPAxis\+Ticker\+Text\+::get\+Tick\+Label (\begin{DoxyParamCaption}\item[{double}]{tick}{, }\item[{const QLocale \&}]{locale}{, }\item[{QChar}]{format\+Char}{, }\item[{int}]{precision}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_axis_ticker_ad51fe3f25144d24d84694fb21a2a1222}{QCPAxis\+Ticker}}.
+
+\Hypertarget{class_q_c_p_axis_ticker_text_aa220d42ce46debd93a759440c2214a33}\index{QCPAxisTickerText@{QCPAxisTickerText}!getTickStep@{getTickStep}}
+\index{getTickStep@{getTickStep}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{getTickStep()}{getTickStep()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_aa220d42ce46debd93a759440c2214a33} 
+virtual double QCPAxis\+Ticker\+Text\+::get\+Tick\+Step (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_c_p_range}{QCPRange}} \&}]{range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_c_p_axis_ticker_a4ff8a8bff34993820d3b75b6cdc4a85d}{QCPAxis\+Ticker}}.
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a8cfa50c51183c90186892eeef978d571}\index{QCPAxisTickerText@{QCPAxisTickerText}!setSubTickCount@{setSubTickCount}}
+\index{setSubTickCount@{setSubTickCount}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{setSubTickCount()}{setSubTickCount()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a8cfa50c51183c90186892eeef978d571} 
+void QCPAxis\+Ticker\+Text\+::set\+Sub\+Tick\+Count (\begin{DoxyParamCaption}\item[{int}]{sub\+Ticks}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a8cdf1f21940f1f53f5e3d30b2c74f5cf}\index{QCPAxisTickerText@{QCPAxisTickerText}!setTicks@{setTicks}}
+\index{setTicks@{setTicks}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{setTicks()}{setTicks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a8cdf1f21940f1f53f5e3d30b2c74f5cf} 
+void QCPAxis\+Ticker\+Text\+::set\+Ticks (\begin{DoxyParamCaption}\item[{const QMap$<$ double, QString $>$ \&}]{ticks}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a686f38f358a0cf2d9309c84c22581d9b}\index{QCPAxisTickerText@{QCPAxisTickerText}!setTicks@{setTicks}}
+\index{setTicks@{setTicks}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{setTicks()}{setTicks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a686f38f358a0cf2d9309c84c22581d9b} 
+void QCPAxis\+Ticker\+Text\+::set\+Ticks (\begin{DoxyParamCaption}\item[{const QVector$<$ double $>$ \&}]{positions}{, }\item[{const QVector$<$ QString $>$ \&}]{labels}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a5c3c59e8fdf4c96568dd50d4a653e791}\index{QCPAxisTickerText@{QCPAxisTickerText}!subTickCount@{subTickCount}}
+\index{subTickCount@{subTickCount}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{subTickCount()}{subTickCount()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a5c3c59e8fdf4c96568dd50d4a653e791} 
+int QCPAxis\+Ticker\+Text\+::sub\+Tick\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_ac84622a6bb4f2a98474e185ecaf3189a}\index{QCPAxisTickerText@{QCPAxisTickerText}!ticks@{ticks}}
+\index{ticks@{ticks}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{ticks()}{ticks()}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_ac84622a6bb4f2a98474e185ecaf3189a} 
+QMap$<$ double, QString $>$ \& QCPAxis\+Ticker\+Text\+::ticks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_q_c_p_axis_ticker_text_a206d092b1598eecb981bba7fb16ff44e}\index{QCPAxisTickerText@{QCPAxisTickerText}!mSubTickCount@{mSubTickCount}}
+\index{mSubTickCount@{mSubTickCount}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{mSubTickCount}{mSubTickCount}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a206d092b1598eecb981bba7fb16ff44e} 
+int QCPAxis\+Ticker\+Text\+::m\+Sub\+Tick\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_q_c_p_axis_ticker_text_a27c48539feb6c293979cd8059ba220c3}\index{QCPAxisTickerText@{QCPAxisTickerText}!mTicks@{mTicks}}
+\index{mTicks@{mTicks}!QCPAxisTickerText@{QCPAxisTickerText}}
+\doxysubsubsection{\texorpdfstring{mTicks}{mTicks}}
+{\footnotesize\ttfamily \label{class_q_c_p_axis_ticker_text_a27c48539feb6c293979cd8059ba220c3} 
+QMap$<$double, QString$>$ QCPAxis\+Ticker\+Text\+::m\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+One\+Drive -\/ Universidad de Córdoba/\+Doctorado\+\_\+\+ARR/\+Qt/\+Versiones/\+DWM1001\+DEV\+\_\+\+APP/\+Github/\+UCO-\/\+DWM1001-\/\+DEV/src/\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.\+h}}\end{DoxyCompactItemize}

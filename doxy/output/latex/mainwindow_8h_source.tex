@@ -1,0 +1,437 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/mainwindow.h@{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/mainwindow.h}}
+\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}qelapsedtimer.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}qtimer.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <QFileDialog>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <QSerialPort>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <QPen>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <QTranslator>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00040\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }QSerialPort;}
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_console}{Console}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_abb7f9175322a9ab2355f61da864189c5}{changeEvent}}(QEvent*);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{protected}\ slots:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ this\ slot\ is\ called\ by\ the\ language\ menu\ actions}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a6fdb47c6ffe98d604836468a331bb44e}{slotLanguageChanged}}(QAction*\ action);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ac7927939817f246b8b0d6877561bb38f}{setupRealtimeDataDemo}}(\mbox{\hyperlink{class_q_custom_plot}{QCustomPlot}}\ *customPlot);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aeb397f11aea7db0dd419f7fdcae9c37e}{setupRealtimeDataDemo2}}(\mbox{\hyperlink{class_q_custom_plot}{QCustomPlot}}\ *customPlot);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a7590ff786c9e955f2d45f73628261d73}{setupRealtimeDataDemo3}}(\mbox{\hyperlink{class_q_custom_plot}{QCustomPlot}}\ *customPlot);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a92fd2008f3604069beb8b9f8da013870}{device\_connection}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a0be7bb94da0e9bdbb728adf8a1dbc4a7}{device\_disconnection}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4e20a4a065fbb0e4d3532a45a0a91425}{closeEvent}}\ (QCloseEvent\ *event);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ Connection:}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ writeData(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ readData();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ sampletimechange\_wait();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ gpio\_config();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ device\_config(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ passive\_config();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ network\_config(QString);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//void\ informacion\_sys();}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ send\_message(QString);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ change\_devicemode\_wait();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ receive\_info();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ receive\_info\_failure();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ Graph\ functions:}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ distance\_analysis(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ position\_analysis(\textcolor{keyword}{const}\ QByteArray\ \&data2);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ realtimeDataSlot();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ media\_calc();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ media\_calc\_pos();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ distance\_data\_processing(\textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ position\_data\_processing();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ distance\_stats\_calc();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ position\_stats\_calc();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ reset\_stats();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ save\_distance\_data(QDateTime\ hora);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ save\_position\_data(QDateTime\ hora);}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ save\_stats\_data();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ check\_distance\_alarm();}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ check\_position\_alarm();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ alarm\_graph();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ alarm\_duration\_f();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ dist\_alarm\_activation\_request();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ pos\_alarm\_activation\_request();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ draw\_alarm\_pos();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ desactivar\_recepcion();}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ clear\_gpio();}
+\DoxyCodeLine{00117\ \ \ \ \ QColor\ obtain\_color(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ gpio\_clear\_wait();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ timer\_gpio8();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ timer\_gpio9();}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ timer\_gpio10();}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ timer\_gpio12();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ pos\_anchors();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_USBportrefresh\_clicked();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_connect\_clicked();}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_disconnect\_clicked();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_distancemode\_clicked();}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_positionmode\_clicked();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionExit\_triggered();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_plot\_distance\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_spinBox\_sampletime\_valueChanged(\textcolor{keywordtype}{int}\ arg1);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionDistanceGraphSettings\_triggered();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_2\_clicked();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_clicked();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionReset\_triggered();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionFactory\_Reset\_triggered();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionDataSavingSettings\_triggered();}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionStartDataSaving\_triggered();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionStopDataSaving\_triggered();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionPositionGraphSettings\_triggered();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionDeviceSettings\_triggered();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_6\_clicked();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_5\_clicked();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_comboBox\_GPIO8\_activated(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_comboBox\_GPIO9\_activated(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_comboBox\_GPIO10\_activated(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_comboBox\_GPIO12\_activated(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_GPIO8\_clicked();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_GPIO9\_clicked();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_GPIO10\_clicked();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_GPIO12\_clicked();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionStatistics\_triggered();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionAbout\_triggered();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionHelp\_triggered();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionHistogram\_triggered();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionReiniciar\_los\_datos\_recibidos\_triggered();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//\ loads\ a\ language\ by\ the\ given\ language\ shortcur\ (e.g.\ de,\ en)}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ loadLanguage(\textcolor{keyword}{const}\ QString\&\ rLanguage);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//\ creates\ the\ language\ menu\ dynamically\ from\ the\ content\ of\ m\_langPath}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ createLanguageMenu(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ Ui::MainWindow\ *ui;}
+\DoxyCodeLine{00169\ \ \ \ \ QTranslator\ m\_translator;\ \textcolor{comment}{//\ contains\ the\ translations\ for\ this\ application}}
+\DoxyCodeLine{00170\ \ \ \ \ QTranslator\ m\_translatorQt;\ \textcolor{comment}{//\ contains\ the\ translations\ for\ qt}}
+\DoxyCodeLine{00171\ \ \ \ \ QString\ m\_currLang;\ \textcolor{comment}{//\ contains\ the\ currently\ loaded\ language}}
+\DoxyCodeLine{00172\ \ \ \ \ QString\ m\_langPath;\ \textcolor{comment}{//\ Path\ of\ language\ files.\ This\ is\ always\ fixed\ to\ /languages.}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ QSerialPort\ *p\_serie;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ Initialise\ variables}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{bool}\ savedata=0;}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{bool}\ multiple\_measures=0;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{bool}\ info\_ids\_1=0;}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{bool}\ info\_ids\_2=0;}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{bool}\ info\_ids\_3=0;}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{bool}\ info\_ids\_4=0;}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ QByteArray\ serial\_message;}
+\DoxyCodeLine{00188\ \ \ \ \ QByteArray\ position\_message;}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ receive\_initial\_info=0;}
+\DoxyCodeLine{00190\ \ \ \ \ QByteArray\ info\_message;}
+\DoxyCodeLine{00191\ \ \ \ \ QString\ filename=\textcolor{stringliteral}{"{}C:/"{}};}
+\DoxyCodeLine{00192\ \ \ \ \ QString\ filename\_est;}
+\DoxyCodeLine{00193\ \ \ \ \ QString\ chosenPort;}
+\DoxyCodeLine{00194\ \ \ \ \ QString\ network;}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ QTimer\ timer\_sampletime;}
+\DoxyCodeLine{00197\ \ \ \ \ QTimer\ dataTimer;}
+\DoxyCodeLine{00198\ \ \ \ \ QTimer\ posTimer;}
+\DoxyCodeLine{00199\ \ \ \ \ QTimer\ timer\_gpioconfig;}
+\DoxyCodeLine{00200\ \ \ \ \ QTimer\ timer\_alarmdelay;}
+\DoxyCodeLine{00201\ \ \ \ \ QTimer\ timer\_alarmduration;}
+\DoxyCodeLine{00202\ \ \ \ \ QTimer\ timer\_opmodechange;}
+\DoxyCodeLine{00203\ \ \ \ \ QTimer\ timer\_infofailure;}
+\DoxyCodeLine{00204\ \ \ \ \ QTimer\ timer\_gpioclear;}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ deactivate\_GPIO=0;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//int\ distance\_samples\_ID1=0;\ //Esto\ parece\ que\ no\ hace\ nada}}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//int\ distance\_samples\_ID2=0;}}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//int\ distance\_samples\_ID3=0;}}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{int}\ distance\_samples\_ID4=0;\ \textcolor{comment}{//Sólo\ se\ usa\ esta\ variable\ (analizar)}}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{int}\ position\_samples=0;}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ QTimer\ tem\_gpio8;}
+\DoxyCodeLine{00214\ \ \ \ \ QTimer\ tem\_gpio9;}
+\DoxyCodeLine{00215\ \ \ \ \ QTimer\ tem\_gpio10;}
+\DoxyCodeLine{00216\ \ \ \ \ QTimer\ tem\_gpio12;}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{int}\ desac\_gpio=0;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{bool}\ datareception\_enabled;}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{bool}\ passive\_positioning=0;}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{bool}\ tag\_positioning=0;}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{bool}\ operation\_mode=0;}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{bool}\ enable\_statistics=0;}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{double}\ distance\_value\_1;}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{double}\ distance\_value\_2;}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{double}\ distance\_value\_3;}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{double}\ distance\_value\_4;}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{double}\ mediafilter\_value\_1;}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{double}\ mediafilter\_value\_2;}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{double}\ mediafilter\_value\_3;}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{double}\ mediafilter\_value\_4;}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_dist\_1=0;}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_dist\_2=0;}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_dist\_3=0;}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_dist\_4=0;}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{double}\ position\_data\_samples=0;}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{double}\ received\_data\_quantity\_1=0;}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{double}\ received\_data\_quantity\_2=0;}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{double}\ received\_data\_quantity\_3=0;}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{double}\ received\_data\_quantity\_4=0;}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_value\_1=1000;}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_value\_1=0;}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_value\_2=1000;}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_value\_2=0;}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_value\_3=1000;}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_value\_3=0;}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_value\_4=1000;}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_value\_4=0;}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_1=0;}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_1=0;}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_1=0;}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_1=0;}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_1=0;}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_2=0;}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_2=0;}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_2=0;}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_2=0;}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_2=0;}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_3=0;}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_3=0;}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_3=0;}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_3=0;}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_3=0;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_4=0;}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_4=0;}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_4=0;}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_4=0;}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_4=0;}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_x=0;}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_y=0;}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{double}\ mode\_z=0;}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_x=0;}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_y=0;}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordtype}{double}\ std\_z=0;}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_x=-\/1000;}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_y=-\/1000;}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_z=-\/1000;}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_x=1000;}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_y=1000;}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordtype}{double}\ min\_z=1000;}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_x=0;}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_y=0;}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_z=0;}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_pos\_x=0;}
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_pos\_y=0;}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{double}\ accumulated\_pos\_z=0;}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{double}\ mean\_total\_x=0;}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordtype}{double}\ mean\_total\_y=0;}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{double}\ mean\_total\_z=0;}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_x=0;}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_x=0;}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_y=0;}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_y=0;}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_25\_z=0;}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordtype}{double}\ percentil\_75\_z=0;}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ QList<double>\ distance\_list\_1;}
+\DoxyCodeLine{00306\ \ \ \ \ QList<double>\ distance\_list\_2;}
+\DoxyCodeLine{00307\ \ \ \ \ QList<double>\ distance\_list\_3;}
+\DoxyCodeLine{00308\ \ \ \ \ QList<double>\ distance\_list\_4;}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ QList<double>\ position\_list\_x;}
+\DoxyCodeLine{00311\ \ \ \ \ QList<double>\ position\_list\_y;}
+\DoxyCodeLine{00312\ \ \ \ \ QList<double>\ position\_list\_z;}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keywordtype}{int}\ detected\_devices\ =\ 0;}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_detected\_devices\ =\ 0;}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{bool}\ gpio\_init\_config=1;}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{bool}\ alarm\_activation=0;}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordtype}{bool}\ alarm\_activated=0;}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{int}\ previous\_alarm=0;}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordtype}{int}\ chosen\_alarm=0;}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordtype}{bool}\ distance\_alarm\_plot=0;}
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordtype}{bool}\ position\_alarm\_pos=0;}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{keywordtype}{bool}\ auto\_range=0;}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keywordtype}{bool}\ mean\_value\_alarm\_link=0;}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{int}\ bufer\_size=1;}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media;}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_2;}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_3;}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_4;}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_5;}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_6;}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordtype}{bool}\ mean\_enable=0;}
+\DoxyCodeLine{00339\ \ \ \ \ QList<double>\ bufer;}
+\DoxyCodeLine{00340\ \ \ \ \ QList<double>\ bufer\_2;}
+\DoxyCodeLine{00341\ \ \ \ \ QList<double>\ bufer\_3;}
+\DoxyCodeLine{00342\ \ \ \ \ QList<double>\ bufer\_4;}
+\DoxyCodeLine{00343\ \ \ \ \ QList<double>\ bufer\_5;}
+\DoxyCodeLine{00344\ \ \ \ \ QList<double>\ bufer\_6;}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_x;}
+\DoxyCodeLine{00347\ \ \ \ \ QList<double>\ bufer\_x;}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_y;}
+\DoxyCodeLine{00349\ \ \ \ \ QList<double>\ bufer\_y;}
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keywordtype}{double}\ bufer\_media\_z;}
+\DoxyCodeLine{00351\ \ \ \ \ QList<double>\ bufer\_z;}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \ \ QString\ id\_1;}
+\DoxyCodeLine{00354\ \ \ \ \ QString\ id\_2;}
+\DoxyCodeLine{00355\ \ \ \ \ QString\ id\_3;}
+\DoxyCodeLine{00356\ \ \ \ \ QString\ id\_4;}
+\DoxyCodeLine{00357\ \ \ \ \ QString\ initial\_id\_1;}
+\DoxyCodeLine{00358\ \ \ \ \ QString\ initial\_id\_2;}
+\DoxyCodeLine{00359\ \ \ \ \ QString\ initial\_id\_3;}
+\DoxyCodeLine{00360\ \ \ \ \ QString\ initial\_id\_4;}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{keywordtype}{int}\ alarm\_issue\_check\_1=0;}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordtype}{int}\ alarm\_issue\_check\_2=0;}
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{keywordtype}{int}\ alarm\_issue\_check\_3=0;}
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{keywordtype}{int}\ alarm\_issue\_check\_4=0;}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{double}\ prev\_id\_dist\_1;}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordtype}{double}\ prev\_id\_dist\_2;}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordtype}{double}\ prev\_id\_dist\_3;}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{double}\ prev\_id\_dist\_4;}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_label\_1=0;}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_label\_2=0;}
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_label\_3=0;}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_label\_4=0;}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordtype}{double}\ position\_x;}
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordtype}{double}\ position\_y;}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordtype}{double}\ position\_z;}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordtype}{double}\ pos\_x\_temp;}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordtype}{double}\ pos\_y\_temp;}
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keywordtype}{double}\ pos\_z\_temp;}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordtype}{float}\ pos\_alarm\_x\_min;}
+\DoxyCodeLine{00385\ \ \ \ \ \textcolor{keywordtype}{float}\ pos\_alarm\_x\_max;}
+\DoxyCodeLine{00386\ \ \ \ \ \textcolor{keywordtype}{float}\ pos\_alarm\_y\_min;}
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{keywordtype}{float}\ pos\_alarm\_y\_max;}
+\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordtype}{float}\ pos\_alarm\_z\_min;}
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordtype}{float}\ pos\_alarm\_z\_max;}
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{keywordtype}{int}\ pos\_alarm\_delay=0;}
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordtype}{int}\ pos\_alarm\_duration=0;}
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordtype}{bool}\ pos\_x\_alarm\_ena=0;}
+\DoxyCodeLine{00393\ \ \ \ \ \textcolor{keywordtype}{bool}\ pos\_y\_alarm\_ena=0;}
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordtype}{bool}\ pos\_z\_alarm\_ena=0;}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordtype}{float}\ axisYmax;}
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordtype}{float}\ max\_value\_alarm;}
+\DoxyCodeLine{00398\ \ \ \ \ \textcolor{keywordtype}{float}\ min\_value\_alarm;}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordtype}{int}\ alarm\_delay=0;}
+\DoxyCodeLine{00400\ \ \ \ \ \textcolor{keywordtype}{int}\ alarm\_duration=0;}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordtype}{float}\ graph0\_size=1.50;}
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordtype}{float}\ graph1\_size=1.50;}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordtype}{float}\ graph2\_size=1.50;}
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keywordtype}{float}\ graph4\_size=1.50;}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordtype}{float}\ graph5\_size=1.50;}
+\DoxyCodeLine{00407\ \ \ \ \ \textcolor{keywordtype}{float}\ graph6\_size=1.50;}
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keywordtype}{int}\ color\_graph0;}
+\DoxyCodeLine{00409\ \ \ \ \ \textcolor{keywordtype}{int}\ color\_graph1;}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordtype}{int}\ color\_graph2;}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \ \ \ \ QColor\ color1;}
+\DoxyCodeLine{00413\ \ \ \ \ QColor\ color1\_2;}
+\DoxyCodeLine{00414\ \ \ \ \ QColor\ color1\_3;}
+\DoxyCodeLine{00415\ \ \ \ \ QColor\ color1\_4;}
+\DoxyCodeLine{00416\ \ \ \ \ QColor\ color2;}
+\DoxyCodeLine{00417\ \ \ \ \ QColor\ color3;}
+\DoxyCodeLine{00418\ \ \ \ \ QString\ chosen\_color\_info=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ QString\ chosen\_color\_d1=\textcolor{stringliteral}{"{}red"{}};}
+\DoxyCodeLine{00421\ \ \ \ \ QString\ chosen\_color\_d2=\textcolor{stringliteral}{"{}blue"{}};}
+\DoxyCodeLine{00422\ \ \ \ \ QString\ chosen\_color\_d3=\textcolor{stringliteral}{"{}darkgreen"{}};}
+\DoxyCodeLine{00423\ \ \ \ \ QString\ chosen\_color\_d4=\textcolor{stringliteral}{"{}magenta"{}};}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \ \ \ \ \textcolor{keywordtype}{int}\ indice\_color\_fm;}
+\DoxyCodeLine{00426\ \ \ \ \ \textcolor{keywordtype}{int}\ indice\_color\_al;}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00428\ \ \ \ \ QPen\ graphPen;}
+\DoxyCodeLine{00429\ \ \ \ \ QPen\ graphPen\_2;}
+\DoxyCodeLine{00430\ \ \ \ \ QPen\ graphPen\_3;}
+\DoxyCodeLine{00431\ \ \ \ \ QPen\ graphPen\_4;}
+\DoxyCodeLine{00432\ \ \ \ \ QPen\ graphPen\_5;}
+\DoxyCodeLine{00433\ \ \ \ \ QPen\ graphPen\_6;}
+\DoxyCodeLine{00434\ \ \ \ \ QPen\ graphPenmaxmin;}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_dist\_y\_max;}
+\DoxyCodeLine{00437\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_dist\_y\_min;}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_y\_min=0;}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_y\_max=10;}
+\DoxyCodeLine{00441\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_x\_min=0;}
+\DoxyCodeLine{00442\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_x\_max=10;}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_1\_x;}
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_1\_y;}
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_2\_x;}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_2\_y;}
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_3\_x;}
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_3\_y;}
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_4\_x;}
+\DoxyCodeLine{00451\ \ \ \ \ \textcolor{keywordtype}{double}\ anchor\_4\_y;}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \ \ \ \ \textcolor{keywordtype}{bool}\ position\_graph\_enabled=0;}
+\DoxyCodeLine{00454\ \};}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

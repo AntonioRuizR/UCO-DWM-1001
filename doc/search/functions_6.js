@@ -70,8 +70,9 @@ var searchData=
   ['gradientchanged_67',['gradientChanged',['../class_q_c_p_color_scale.html#a5e5f8c5626242c8f7308bfab74d3d989',1,'QCPColorScale::gradientChanged()'],['../class_q_c_p_color_map.html#a31a12726736b1ac274e7b1d8dfb67468',1,'QCPColorMap::gradientChanged()']]],
   ['graph_68',['graph',['../class_q_custom_plot.html#a6ecae130f684b25276fb47bd3a5875c6',1,'QCustomPlot::graph(int index) const'],['../class_q_custom_plot.html#aac190865a67f19af3fdf2136774997af',1,'QCustomPlot::graph() const'],['../class_q_c_p_item_tracer.html#a62660ae9684a9d92c026ff7a710f99b6',1,'QCPItemTracer::graph()']]],
   ['graph_5fdata_69',['graph_data',['../class_dialog__dist__graph__config.html#a56298a64b55a19f11cf465255699cacf',1,'Dialog_dist_graph_config']]],
-  ['graphcount_70',['graphCount',['../class_q_custom_plot.html#a5e1787cdde868c4d3790f9ebc8207d90',1,'QCustomPlot']]],
-  ['graphkey_71',['graphKey',['../class_q_c_p_item_tracer.html#ac39a0791109588d11bb97cd643da2470',1,'QCPItemTracer']]],
-  ['graphs_72',['graphs',['../class_q_c_p_axis.html#ad590c0da223697a2727f97a520870fec',1,'QCPAxis::graphs()'],['../class_q_c_p_axis_rect.html#a2d9ded3eca97be1fcb5867949391bb88',1,'QCPAxisRect::graphs()']]],
-  ['grid_73',['grid',['../class_q_c_p_axis.html#a63f1dd2df663680d2a8d06c19592dd63',1,'QCPAxis::grid()'],['../class_q_c_p_polar_axis_angular.html#ae93b4da6c4759412853e82558d094b99',1,'QCPPolarAxisAngular::grid()']]]
+  ['graph_5finteraction_70',['graph_interaction',['../class_dialog__graph__history.html#a219ecfd5fac9da8e0c873892f1336c26',1,'Dialog_graph_history']]],
+  ['graphcount_71',['graphCount',['../class_q_custom_plot.html#a5e1787cdde868c4d3790f9ebc8207d90',1,'QCustomPlot']]],
+  ['graphkey_72',['graphKey',['../class_q_c_p_item_tracer.html#ac39a0791109588d11bb97cd643da2470',1,'QCPItemTracer']]],
+  ['graphs_73',['graphs',['../class_q_c_p_axis.html#ad590c0da223697a2727f97a520870fec',1,'QCPAxis::graphs()'],['../class_q_c_p_axis_rect.html#a2d9ded3eca97be1fcb5867949391bb88',1,'QCPAxisRect::graphs()']]],
+  ['grid_74',['grid',['../class_q_c_p_axis.html#a63f1dd2df663680d2a8d06c19592dd63',1,'QCPAxis::grid()'],['../class_q_c_p_polar_axis_angular.html#ae93b4da6c4759412853e82558d094b99',1,'QCPPolarAxisAngular::grid()']]]
 ];

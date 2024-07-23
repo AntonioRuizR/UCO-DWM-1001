@@ -227,6 +227,8 @@ Friends</h2></td></tr>
 <p>This is the abstract base class most visible objects derive from, e.g. plottables, axes, grid etc.</p>
 <p>Every layerable is on a layer (<a class="el" href="class_q_c_p_layer.html" title="A layer that may contain objects, to control the rendering order.">QCPLayer</a>) which allows controlling the rendering order by stacking the layers accordingly.</p>
 <p>For details about the layering mechanism, see the <a class="el" href="class_q_c_p_layer.html" title="A layer that may contain objects, to control the rendering order.">QCPLayer</a> documentation. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00751">751</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4f87f420cb2597e2b393aab934d2f099" name="a4f87f420cb2597e2b393aab934d2f099"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f87f420cb2597e2b393aab934d2f099">&#9670;&#160;</a></span>QCPLayerable()</h2>
@@ -257,6 +259,32 @@ Friends</h2></td></tr>
 <p>It is possible to provide <code>nullptr</code> as <em>plot</em>. In that case, you should assign a parent plot at a later time with <a class="el" href="#a8cbe5a0c9a5674249982f5ca5f8e02bc">initializeParentPlot</a>.</p>
 <p>The layerable's parent layerable is set to <em>parentLayerable</em>, if provided. Direct layerable parents are mainly used to control visibility in a hierarchy of layerables. This means a layerable is only drawn, if all its ancestor layerables are also visible. Note that <em>parentLayerable</em> does not become the QObject-parent (for memory management) of this layerable, <em>plot</em> does. It is not uncommon to set the QObject-parent to something else in the constructors of <a class="el" href="class_q_c_p_layerable.html" title="Base class for all drawable objects.">QCPLayerable</a> subclasses, to guarantee a working destruction hierarchy. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01367">1367</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1367</span>                                                                                                :</div>
+<div class="line"><span class="lineno"> 1368</span>  QObject(plot),</div>
+<div class="line"><span class="lineno"> 1369</span>  <a class="code hl_variable" href="#a62e3aed8427d6ce3ccf716f285106cb3">mVisible</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno"> 1370</span>  <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>(plot),</div>
+<div class="line"><span class="lineno"> 1371</span>  <a class="code hl_variable" href="#a3291445a980053e2d17a21d15957624e">mParentLayerable</a>(<a class="code hl_function" href="#aa78b7e644d2c519e1a9a6f2ac5fcd858">parentLayerable</a>),</div>
+<div class="line"><span class="lineno"> 1372</span>  <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno"> 1373</span>  <a class="code hl_variable" href="#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno"> 1374</span>{</div>
+<div class="line"><span class="lineno"> 1375</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1376</span>  {</div>
+<div class="line"><span class="lineno"> 1377</span>    <span class="keywordflow">if</span> (targetLayer.isEmpty())</div>
+<div class="line"><span class="lineno"> 1378</span>      <a class="code hl_function" href="#ab0d0da6d2de45a118886d2c8e16d5a54">setLayer</a>(<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5">currentLayer</a>());</div>
+<div class="line"><span class="lineno"> 1379</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ab0d0da6d2de45a118886d2c8e16d5a54">setLayer</a>(targetLayer))</div>
+<div class="line"><span class="lineno"> 1380</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;setting QCPlayerable initial layer to&quot;</span> &lt;&lt; targetLayer &lt;&lt; <span class="stringliteral">&quot;failed.&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1381</span>  }</div>
+<div class="line"><span class="lineno"> 1382</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3291445a980053e2d17a21d15957624e"><div class="ttname"><a href="#a3291445a980053e2d17a21d15957624e">QCPLayerable::mParentLayerable</a></div><div class="ttdeci">QPointer&lt; QCPLayerable &gt; mParentLayerable</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00791">qcustomplot.h:791</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3ab45a4c76a3333ce42eb217a81733ec"><div class="ttname"><a href="#a3ab45a4c76a3333ce42eb217a81733ec">QCPLayerable::mAntialiased</a></div><div class="ttdeci">bool mAntialiased</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00793">qcustomplot.h:793</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a62e3aed8427d6ce3ccf716f285106cb3"><div class="ttname"><a href="#a62e3aed8427d6ce3ccf716f285106cb3">QCPLayerable::mVisible</a></div><div class="ttdeci">bool mVisible</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00789">qcustomplot.h:789</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa38ec5891aff0f50b36fd63e9372a0cd"><div class="ttname"><a href="#aa38ec5891aff0f50b36fd63e9372a0cd">QCPLayerable::mLayer</a></div><div class="ttdeci">QCPLayer * mLayer</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00792">qcustomplot.h:792</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa78b7e644d2c519e1a9a6f2ac5fcd858"><div class="ttname"><a href="#aa78b7e644d2c519e1a9a6f2ac5fcd858">QCPLayerable::parentLayerable</a></div><div class="ttdeci">QCPLayerable * parentLayerable() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00768">qcustomplot.h:768</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_ab0d0da6d2de45a118886d2c8e16d5a54"><div class="ttname"><a href="#ab0d0da6d2de45a118886d2c8e16d5a54">QCPLayerable::setLayer</a></div><div class="ttdeci">Q_SLOT bool setLayer(QCPLayer *layer)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01412">qcustomplot.cpp:1412</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a0421d647f420b0b4c57aec1708857af5"><div class="ttname"><a href="class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5">QCustomPlot::currentLayer</a></div><div class="ttdeci">QCPLayer * currentLayer() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l14695">qcustomplot.cpp:14695</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4231cf5b3601d6d3a5781283e7a9735b" name="a4231cf5b3601d6d3a5781283e7a9735b"></a>
@@ -282,6 +310,16 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01384">1384</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1385</span>{</div>
+<div class="line"><span class="lineno"> 1386</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>)</div>
+<div class="line"><span class="lineno"> 1387</span>  {</div>
+<div class="line"><span class="lineno"> 1388</span>    <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>-&gt;<a class="code hl_function" href="class_q_c_p_layer.html#ac2f64ac7761650582d968d86670ef362">removeChild</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 1389</span>    <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 1390</span>  }</div>
+<div class="line"><span class="lineno"> 1391</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_ac2f64ac7761650582d968d86670ef362"><div class="ttname"><a href="class_q_c_p_layer.html#ac2f64ac7761650582d968d86670ef362">QCPLayer::removeChild</a></div><div class="ttdeci">void removeChild(QCPLayerable *layerable)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01248">qcustomplot.cpp:1248</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -308,6 +346,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00770">770</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  770</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acb663e375d2d36dc5c55021ee5a2119b" name="acb663e375d2d36dc5c55021ee5a2119b"></a>
@@ -342,6 +383,19 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01599">1599</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1600</span>{</div>
+<div class="line"><span class="lineno"> 1601</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a> &amp;&amp; <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a75571bc5b2167e83def132fc993091b3">notAntialiasedElements</a>().testFlag(overrideElement))</div>
+<div class="line"><span class="lineno"> 1602</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#aaba1deb9188244d9ea65b035112b4d05">setAntialiasing</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 1603</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a> &amp;&amp; <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a631762eb183aceecee73d30e108641ee">antialiasedElements</a>().testFlag(overrideElement))</div>
+<div class="line"><span class="lineno"> 1604</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#aaba1deb9188244d9ea65b035112b4d05">setAntialiasing</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1605</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1606</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#aaba1deb9188244d9ea65b035112b4d05">setAntialiasing</a>(localAntialiased);</div>
+<div class="line"><span class="lineno"> 1607</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html_aaba1deb9188244d9ea65b035112b4d05"><div class="ttname"><a href="class_q_c_p_painter.html#aaba1deb9188244d9ea65b035112b4d05">QCPPainter::setAntialiasing</a></div><div class="ttdeci">void setAntialiasing(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00386">qcustomplot.cpp:386</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a631762eb183aceecee73d30e108641ee"><div class="ttname"><a href="class_q_custom_plot.html#a631762eb183aceecee73d30e108641ee">QCustomPlot::antialiasedElements</a></div><div class="ttdeci">QCP::AntialiasedElements antialiasedElements() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03838">qcustomplot.h:3838</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a75571bc5b2167e83def132fc993091b3"><div class="ttname"><a href="class_q_custom_plot.html#a75571bc5b2167e83def132fc993091b3">QCustomPlot::notAntialiasedElements</a></div><div class="ttdeci">QCP::AntialiasedElements notAntialiasedElements() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03839">qcustomplot.h:3839</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1168944abbf9fa6731b0f4a2d0d67e8b" name="a1168944abbf9fa6731b0f4a2d0d67e8b"></a>
@@ -396,6 +450,15 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_item.html#a6ad60000f29afe11035e1f791dcbd45a">QCPAbstractItem</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#a806fa4d0104bdfc141aa8a36fcc9d51c">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_abstract_plottable.html#a635cee3effc07ad421414c76fd83548c">QCPAbstractPlottable</a>, and <a class="el" href="class_q_c_p_polar_graph.html#a9a7713734980adecbe53421795977806">QCPPolarGraph</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01655">1655</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1656</span>{</div>
+<div class="line"><span class="lineno"> 1657</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1658</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>();</div>
+<div class="line"><span class="lineno"> 1659</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1660</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno"> 1661</span>}</div>
+<div class="ttc" id="aclass_q_custom_plot_html_a19842409b18f556b256d05e97fffc670"><div class="ttname"><a href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">QCustomPlot::viewport</a></div><div class="ttdeci">QRect viewport() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03832">qcustomplot.h:3832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae546370644a5551c76af739afc008bee" name="ae546370644a5551c76af739afc008bee"></a>
@@ -423,6 +486,11 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_item.html#af9093798cb07a861dcc73f93ca16c0c1">QCPAbstractItem</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#aa1c0620558cc8e2a2e6fb7ab558f6097">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_abstract_plottable.html#a9b104d9da4f38f934363945c313bf82e">QCPAbstractPlottable</a>, <a class="el" href="class_q_c_p_axis.html#a5bc1f8a8d0fbc7658eba70c80279ed31">QCPAxis</a>, <a class="el" href="class_q_c_p_legend.html#ac2066837f7ebc32a5b15434cdca5b176">QCPLegend</a>, <a class="el" href="class_q_c_p_polar_axis_radial.html#a6f9315951fdf416b15ed0dd62d3ecd34">QCPPolarAxisRadial</a>, <a class="el" href="class_q_c_p_polar_graph.html#a3372c079d5859f513d18384890945072">QCPPolarGraph</a>, and <a class="el" href="class_q_c_p_text_element.html#a9a631a9deb9d82089a9d52de1744accf">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01711">1711</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1712</span>{</div>
+<div class="line"><span class="lineno"> 1713</span>  Q_UNUSED(selectionStateChanged)</div>
+<div class="line"><span class="lineno"> 1714</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adf62b4bac3ca934db80290792fc897e1" name="adf62b4bac3ca934db80290792fc897e1"></a>
@@ -475,6 +543,23 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01529">1529</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1530</span>{</div>
+<div class="line"><span class="lineno"> 1531</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1532</span>  {</div>
+<div class="line"><span class="lineno"> 1533</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;called with mParentPlot already initialized&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1534</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1535</span>  }</div>
+<div class="line"><span class="lineno"> 1536</span>  </div>
+<div class="line"><span class="lineno"> 1537</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1538</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;called with parentPlot zero&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1539</span>  </div>
+<div class="line"><span class="lineno"> 1540</span>  <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a> = <a class="code hl_function" href="#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>;</div>
+<div class="line"><span class="lineno"> 1541</span>  <a class="code hl_function" href="#ab20b7dbd8e0249ed61adb9622c427382">parentPlotInitialized</a>(<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>);</div>
+<div class="line"><span class="lineno"> 1542</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_ab20b7dbd8e0249ed61adb9622c427382"><div class="ttname"><a href="#ab20b7dbd8e0249ed61adb9622c427382">QCPLayerable::parentPlotInitialized</a></div><div class="ttdeci">virtual void parentPlotInitialized(QCustomPlot *parentPlot)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01625">qcustomplot.cpp:1625</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9d4e121a7f1d2314f906fe698209cac9" name="a9d4e121a7f1d2314f906fe698209cac9"></a>
@@ -500,6 +585,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00769">769</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  769</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abbf8657cedea73ac1c3499b521c90eba" name="abbf8657cedea73ac1c3499b521c90eba"></a>
@@ -564,6 +652,12 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_text_element.html#a2272ff775ab385f612e9fd39773de7c0">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01809">1809</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1810</span>{</div>
+<div class="line"><span class="lineno"> 1811</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno"> 1812</span>  <span class="keyword">event</span>-&gt;ignore();</div>
+<div class="line"><span class="lineno"> 1813</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9eee1ba47fd69be111059ca3881933e4" name="a9eee1ba47fd69be111059ca3881933e4"></a>
@@ -599,6 +693,12 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis.html#ac5a269609e6177737faabdc46434d8c7">QCPAxis</a>, <a class="el" href="class_q_c_p_axis_rect.html#a9cd27ad8c5cfb49aefd9dbb30def4beb">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale.html#a3b2bd79725aefaf2630fc76e90939442">QCPColorScale</a>, <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#a9cd27ad8c5cfb49aefd9dbb30def4beb">QCPColorScaleAxisRectPrivate</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#a5e2b49c56b57abc2ac2005e330ef1ee7">QCPPolarAxisAngular</a>, and <a class="el" href="class_q_c_p_polar_axis_radial.html#acaaca448f4599cc4d8b4d6a35f61e1e6">QCPPolarAxisRadial</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01759">1759</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1760</span>{</div>
+<div class="line"><span class="lineno"> 1761</span>  Q_UNUSED(startPos)</div>
+<div class="line"><span class="lineno"> 1762</span>  <span class="keyword">event</span>-&gt;ignore();</div>
+<div class="line"><span class="lineno"> 1763</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af6567604818db90f4fd52822f8bc8376" name="af6567604818db90f4fd52822f8bc8376"></a>
@@ -636,6 +736,12 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis.html#a61bc07cda6193a3fa6b5aa198fc4e4fa">QCPAxis</a>, <a class="el" href="class_q_c_p_axis_rect.html#aa9a7c807eaa4666870ac94aa6abc4dde">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale.html#a91f633b97ffcd57fdf8cd814974c20e6">QCPColorScale</a>, <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#aa9a7c807eaa4666870ac94aa6abc4dde">QCPColorScaleAxisRectPrivate</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#a58b246497deae08694cfb40e0b4273eb">QCPPolarAxisAngular</a>, <a class="el" href="class_q_c_p_polar_axis_radial.html#a0fa3d3c617a57b4115b9bec55b739f88">QCPPolarAxisRadial</a>, and <a class="el" href="class_q_c_p_text_element.html#ad7b2c98355e3d2f912574b74fcee0574">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01741">1741</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1742</span>{</div>
+<div class="line"><span class="lineno"> 1743</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno"> 1744</span>  <span class="keyword">event</span>-&gt;ignore();</div>
+<div class="line"><span class="lineno"> 1745</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa0d79b005686f668622bbe66ac03ba2c" name="aa0d79b005686f668622bbe66ac03ba2c"></a>
@@ -671,6 +777,12 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis.html#a780bee321fc6476e5fc49c4980291a01">QCPAxis</a>, <a class="el" href="class_q_c_p_axis_rect.html#a6c89b988d3a0b93c0878f0ebdb5037f4">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale.html#a6a35dd39ab4e5cb2d7b29ebb4d5b61b0">QCPColorScale</a>, <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#a6c89b988d3a0b93c0878f0ebdb5037f4">QCPColorScaleAxisRectPrivate</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#af1514482693091c40fbe802fce3c1db4">QCPPolarAxisAngular</a>, <a class="el" href="class_q_c_p_polar_axis_radial.html#a4fbf24f4373f8a4a740ab83b53a22c85">QCPPolarAxisRadial</a>, and <a class="el" href="class_q_c_p_text_element.html#acfcbaf9b1da18745e72726aafb39c855">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01777">1777</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1778</span>{</div>
+<div class="line"><span class="lineno"> 1779</span>  Q_UNUSED(startPos)</div>
+<div class="line"><span class="lineno"> 1780</span>  <span class="keyword">event</span>-&gt;ignore();</div>
+<div class="line"><span class="lineno"> 1781</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af94484cfb7cbbddb7de522e9be71d9a4" name="af94484cfb7cbbddb7de522e9be71d9a4"></a>
@@ -700,6 +812,36 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01568">1568</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1569</span>{</div>
+<div class="line"><span class="lineno"> 1570</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a> &amp;&amp; !<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1571</span>  {</div>
+<div class="line"><span class="lineno"> 1572</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;no parent QCustomPlot set&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1573</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1574</span>  }</div>
+<div class="line"><span class="lineno"> 1575</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a> &amp;&amp; <a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a>-&gt;<a class="code hl_function" href="class_q_c_p_layer.html#a923cb87bb467eeb17d649ba2b2fe4f5f">parentPlot</a>() != <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1576</span>  {</div>
+<div class="line"><span class="lineno"> 1577</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;layer&quot;</span> &lt;&lt; <a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a>-&gt;<a class="code hl_function" href="class_q_c_p_layer.html#a37806f662b50b588fb1029a14fc5ef50">name</a>() &lt;&lt; <span class="stringliteral">&quot;is not in same QCustomPlot as this layerable&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1578</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1579</span>  }</div>
+<div class="line"><span class="lineno"> 1580</span>  </div>
+<div class="line"><span class="lineno"> 1581</span>  <a class="code hl_class" href="class_q_c_p_layer.html">QCPLayer</a> *oldLayer = <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>;</div>
+<div class="line"><span class="lineno"> 1582</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>)</div>
+<div class="line"><span class="lineno"> 1583</span>    <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>-&gt;<a class="code hl_function" href="class_q_c_p_layer.html#ac2f64ac7761650582d968d86670ef362">removeChild</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 1584</span>  <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a> = <a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a>;</div>
+<div class="line"><span class="lineno"> 1585</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>)</div>
+<div class="line"><span class="lineno"> 1586</span>    <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>-&gt;<a class="code hl_function" href="class_q_c_p_layer.html#a57ce5e49364aa9122276d5df3b4a0ddc">addChild</a>(<span class="keyword">this</span>, prepend);</div>
+<div class="line"><span class="lineno"> 1587</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a> != oldLayer)</div>
+<div class="line"><span class="lineno"> 1588</span>    emit <a class="code hl_signal" href="#abbf8657cedea73ac1c3499b521c90eba">layerChanged</a>(<a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>);</div>
+<div class="line"><span class="lineno"> 1589</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1590</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html"><div class="ttname"><a href="class_q_c_p_layer.html">QCPLayer</a></div><div class="ttdoc">A layer that may contain objects, to control the rendering order.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00682">qcustomplot.h:683</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a37806f662b50b588fb1029a14fc5ef50"><div class="ttname"><a href="class_q_c_p_layer.html#a37806f662b50b588fb1029a14fc5ef50">QCPLayer::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00712">qcustomplot.h:712</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a57ce5e49364aa9122276d5df3b4a0ddc"><div class="ttname"><a href="class_q_c_p_layer.html#a57ce5e49364aa9122276d5df3b4a0ddc">QCPLayer::addChild</a></div><div class="ttdeci">void addChild(QCPLayerable *layerable, bool prepend)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01225">qcustomplot.cpp:1225</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a923cb87bb467eeb17d649ba2b2fe4f5f"><div class="ttname"><a href="class_q_c_p_layer.html#a923cb87bb467eeb17d649ba2b2fe4f5f">QCPLayer::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00711">qcustomplot.h:711</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a9d4e121a7f1d2314f906fe698209cac9"><div class="ttname"><a href="#a9d4e121a7f1d2314f906fe698209cac9">QCPLayerable::layer</a></div><div class="ttdeci">QCPLayer * layer() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00769">qcustomplot.h:769</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_abbf8657cedea73ac1c3499b521c90eba"><div class="ttname"><a href="#abbf8657cedea73ac1c3499b521c90eba">QCPLayerable::layerChanged</a></div><div class="ttdeci">void layerChanged(QCPLayer *newLayer)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa78b7e644d2c519e1a9a6f2ac5fcd858" name="aa78b7e644d2c519e1a9a6f2ac5fcd858"></a>
@@ -728,6 +870,9 @@ Friends</h2></td></tr>
 <p>Note that a parent layerable is not necessarily also the QObject parent for memory management. Further, a layerable doesn't always have a parent layerable, so this function may return <code>nullptr</code>.</p>
 <p>A parent layerable is set implicitly when placed inside layout elements and doesn't need to be set manually by the user. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00768">768</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  768</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3291445a980053e2d17a21d15957624e">mParentLayerable</a>.data(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a36ed5b292b90934b524a4e5866a3526c" name="a36ed5b292b90934b524a4e5866a3526c"></a>
@@ -753,6 +898,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00767">767</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  767</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab20b7dbd8e0249ed61adb9622c427382" name="ab20b7dbd8e0249ed61adb9622c427382"></a>
@@ -780,6 +928,11 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_layout_element.html#ab4bb5c5a958451f5f153fdce350f13cf">QCPLayoutElement</a>, and <a class="el" href="class_q_c_p_legend.html#a2b225cefb5eb267771e2c7c44fd2b408">QCPLegend</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01625">1625</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1626</span>{</div>
+<div class="line"><span class="lineno"> 1627</span>   Q_UNUSED(<a class="code hl_function" href="#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1628</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab054e88f15d485defcb95e7376f119e7" name="ab054e88f15d485defcb95e7376f119e7"></a>
@@ -799,6 +952,12 @@ Friends</h2></td></tr>
 <p>Returns whether this layerable is visible, taking the visibility of the layerable parent and the visibility of this layerable's layer into account. This is the method that is consulted to decide whether a layerable shall be drawn or not.</p>
 <p>If this layerable has a direct layerable parent (usually set via hierarchies implemented in subclasses, like in the case of <a class="el" href="class_q_c_p_layout_element.html">QCPLayoutElement</a>), this function returns true only if this layerable has its visibility set to true and the parent layerable's <a class="el" href="#ab054e88f15d485defcb95e7376f119e7">realVisibility</a> returns true. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01460">1460</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1461</span>{</div>
+<div class="line"><span class="lineno"> 1462</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a62e3aed8427d6ce3ccf716f285106cb3">mVisible</a> &amp;&amp; (!<a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a> || <a class="code hl_variable" href="#aa38ec5891aff0f50b36fd63e9372a0cd">mLayer</a>-&gt;<a class="code hl_function" href="class_q_c_p_layer.html#ad1cc2d6b32d2abb33c7f449b964e068c">visible</a>()) &amp;&amp; (!<a class="code hl_variable" href="#a3291445a980053e2d17a21d15957624e">mParentLayerable</a> || <a class="code hl_variable" href="#a3291445a980053e2d17a21d15957624e">mParentLayerable</a>.data()-&gt;realVisibility());</div>
+<div class="line"><span class="lineno"> 1463</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_ad1cc2d6b32d2abb33c7f449b964e068c"><div class="ttname"><a href="class_q_c_p_layer.html#ad1cc2d6b32d2abb33c7f449b964e068c">QCPLayer::visible</a></div><div class="ttdeci">bool visible() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00715">qcustomplot.h:715</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7498c2d0d081cf7cad0fb3bb93aa0e91" name="a7498c2d0d081cf7cad0fb3bb93aa0e91"></a>
@@ -840,6 +999,14 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_item.html#aa4b969c58797f39c9c0b6c07c7869d17">QCPAbstractItem</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#a0081acfd8c4bb8ac4e9dcfe0f6c49b74">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_abstract_plottable.html#a2d488568cf16600dd81fa23d7d439829">QCPAbstractPlottable</a>, <a class="el" href="class_q_c_p_axis.html#a50c3ed18e189d48421ec2978f88e4f87">QCPAxis</a>, <a class="el" href="class_q_c_p_legend.html#a71f54a05c3e5b1a1ade1864422cd642e">QCPLegend</a>, <a class="el" href="class_q_c_p_polar_axis_radial.html#a2e034f1262cb3a094e28dbd2df12dcf9">QCPPolarAxisRadial</a>, <a class="el" href="class_q_c_p_polar_graph.html#a1bc6a4af76e45ce13cd4f544062ff8b3">QCPPolarGraph</a>, and <a class="el" href="class_q_c_p_text_element.html#a8d696ea82fa7bf743e01858039c03525">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01691">1691</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1692</span>{</div>
+<div class="line"><span class="lineno"> 1693</span>  Q_UNUSED(event)</div>
+<div class="line"><span class="lineno"> 1694</span>  Q_UNUSED(additive)</div>
+<div class="line"><span class="lineno"> 1695</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno"> 1696</span>  Q_UNUSED(selectionStateChanged)</div>
+<div class="line"><span class="lineno"> 1697</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a908c9edda761886f33893be326dab77d" name="a908c9edda761886f33893be326dab77d"></a>
@@ -867,6 +1034,12 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_item.html#aceb5f99c361cf023c7cbe7339ea29571">QCPAbstractItem</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#af8eb0fda0e11b0a23e1051b0102c8c6a">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_abstract_plottable.html#af80ad8531642e786b6f4fad551c203c4">QCPAbstractPlottable</a>, <a class="el" href="class_q_c_p_axis.html#ab751e3e96495716a2f6742ca7d7b3d49">QCPAxis</a>, <a class="el" href="class_q_c_p_legend.html#a1a2075e462984f9ff51d9c75bda3581b">QCPLegend</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#a2fdb74ce12d5c5dfe45ba3a231d31e6f">QCPPolarAxisAngular</a>, <a class="el" href="class_q_c_p_polar_axis_radial.html#a571f8fb8443c8296be9af378bd72ed14">QCPPolarAxisRadial</a>, and <a class="el" href="class_q_c_p_polar_graph.html#aad2e0f0209b63f2ba79ef95121b80fab">QCPPolarGraph</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01641">1641</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1642</span>{</div>
+<div class="line"><span class="lineno"> 1643</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037af67a50bc26147a13b551b3a625374949">QCP::iSelectOther</a>;</div>
+<div class="line"><span class="lineno"> 1644</span>}</div>
+<div class="ttc" id="anamespace_q_c_p_html_a2ad6bb6281c7c2d593d4277b44c2b037af67a50bc26147a13b551b3a625374949"><div class="ttname"><a href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037af67a50bc26147a13b551b3a625374949">QCP::iSelectOther</a></div><div class="ttdeci">@ iSelectOther</div><div class="ttdoc">0x080 All other objects are selectable (e.g. your own derived layerables, other layout elements,...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00290">qcustomplot.h:289</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a272989087fc8c4357b4ba614f9922336" name="a272989087fc8c4357b4ba614f9922336"></a>
@@ -912,6 +1085,14 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_item.html#ac75a4bdcba0ce51ae22eacebb16a9dcd">QCPAbstractItem</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#a206879d493749c3fb1494850bff40e7e">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#a2f169c3c2989e5d08ec7a9e3eb56a261">QCPAbstractPlottable1D&lt; DataType &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#a2f169c3c2989e5d08ec7a9e3eb56a261">QCPAbstractPlottable1D&lt; QCPBarsData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#a2f169c3c2989e5d08ec7a9e3eb56a261">QCPAbstractPlottable1D&lt; QCPCurveData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#a2f169c3c2989e5d08ec7a9e3eb56a261">QCPAbstractPlottable1D&lt; QCPFinancialData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#a2f169c3c2989e5d08ec7a9e3eb56a261">QCPAbstractPlottable1D&lt; QCPGraphData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable1_d.html#a2f169c3c2989e5d08ec7a9e3eb56a261">QCPAbstractPlottable1D&lt; QCPStatisticalBoxData &gt;</a>, <a class="el" href="class_q_c_p_abstract_plottable.html#a8e4964b629802ce50e1427c7fb21d35b">QCPAbstractPlottable</a>, <a class="el" href="class_q_c_p_axis.html#ad7db27e407c6ffdfca32ed3c53519584">QCPAxis</a>, <a class="el" href="class_q_c_p_bars.html#ae490d8589b7e5f5d7e2e5ee88ce3e6c2">QCPBars</a>, <a class="el" href="class_q_c_p_color_map.html#af0a8ef6c421bd387bbbc8e5f5cb2a602">QCPColorMap</a>, <a class="el" href="class_q_c_p_curve.html#a6717367381d420607fae5c98b4eba022">QCPCurve</a>, <a class="el" href="class_q_c_p_error_bars.html#a35d48d6b283898e725cc9f3fb38c2769">QCPErrorBars</a>, <a class="el" href="class_q_c_p_financial.html#a8114a6d3ab6bea0a93d4b85401f29b52">QCPFinancial</a>, <a class="el" href="class_q_c_p_graph.html#af524307eacb919827b88233ef7449ce3">QCPGraph</a>, <a class="el" href="class_q_c_p_item_bracket.html#a8c3bc895c9db93e97a291a1199f6f8c6">QCPItemBracket</a>, <a class="el" href="class_q_c_p_item_curve.html#ae5b09ad4ea7ec2d9f08190c73c39e9b9">QCPItemCurve</a>, <a class="el" href="class_q_c_p_item_ellipse.html#a1037a6c39ad70aabcb1b552a8b4eff97">QCPItemEllipse</a>, <a class="el" href="class_q_c_p_item_line.html#aae15b3ca3fdad76e6aed9c4e01fd5e94">QCPItemLine</a>, <a class="el" href="class_q_c_p_item_pixmap.html#a35f4da350e37f4d7ac8c837ad160967f">QCPItemPixmap</a>, <a class="el" href="class_q_c_p_item_rect.html#a40786d237a1f8f22a90627068940ec08">QCPItemRect</a>, <a class="el" href="class_q_c_p_item_straight_line.html#a0b10bec4746760cc99d210ba040cb8f7">QCPItemStraightLine</a>, <a class="el" href="class_q_c_p_item_text.html#a9345ae04cb0e06b77c76381ca45c9717">QCPItemText</a>, <a class="el" href="class_q_c_p_item_tracer.html#a01d8814404e3f0910b84029016ef73b2">QCPItemTracer</a>, <a class="el" href="class_q_c_p_layout_element.html#a62d60f1b0ee9bb23e38811d71586d79c">QCPLayoutElement</a>, <a class="el" href="class_q_c_p_layout_inset.html#a1569969c3e7e92f64ea13d46616e5a8a">QCPLayoutInset</a>, <a class="el" href="class_q_c_p_legend.html#ae11e1229abeec1abdbd22a57f2b26a84">QCPLegend</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#abb390ae7656b7241acfe4ed9ea56f1ae">QCPPolarAxisAngular</a>, <a class="el" href="class_q_c_p_polar_axis_radial.html#afc641137eaf389f6a8490a3cf8131cb4">QCPPolarAxisRadial</a>, <a class="el" href="class_q_c_p_polar_graph.html#a4033ca80db907352e4188162f861d69a">QCPPolarGraph</a>, <a class="el" href="class_q_c_p_statistical_box.html#abefd8d3e0adf21c198cfc9615ddc8df1">QCPStatisticalBox</a>, and <a class="el" href="class_q_c_p_text_element.html#a29e95d6cfd9e28772ce6a8890a2c8889">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01504">1504</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1505</span>{</div>
+<div class="line"><span class="lineno"> 1506</span>  Q_UNUSED(pos)</div>
+<div class="line"><span class="lineno"> 1507</span>  Q_UNUSED(onlySelectable)</div>
+<div class="line"><span class="lineno"> 1508</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno"> 1509</span>  <span class="keywordflow">return</span> -1.0;</div>
+<div class="line"><span class="lineno"> 1510</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4fd43e89be4a553ead41652565ff0581" name="a4fd43e89be4a553ead41652565ff0581"></a>
@@ -931,6 +1112,11 @@ Friends</h2></td></tr>
 <p>Sets whether this object will be drawn antialiased or not.</p>
 <p>Note that antialiasing settings may be overridden by <a class="el" href="class_q_custom_plot.html#af6f91e5eab1be85f67c556e98c3745e8">QCustomPlot::setAntialiasedElements</a> and <a class="el" href="class_q_custom_plot.html#ae10d685b5eabea2999fb8775ca173c24">QCustomPlot::setNotAntialiasedElements</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01445">1445</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1446</span>{</div>
+<div class="line"><span class="lineno"> 1447</span>  <a class="code hl_variable" href="#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a> = enabled;</div>
+<div class="line"><span class="lineno"> 1448</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab25a0e7b897993b44447caee0f142083" name="ab25a0e7b897993b44447caee0f142083"></a>
@@ -950,6 +1136,24 @@ Friends</h2></td></tr>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the layer of this layerable object by name</p>
 <p>Returns true on success, i.e. if <em>layerName</em> is a valid layer name. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01422">1422</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1423</span>{</div>
+<div class="line"><span class="lineno"> 1424</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 1425</span>  {</div>
+<div class="line"><span class="lineno"> 1426</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;no parent QCustomPlot set&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1427</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1428</span>  }</div>
+<div class="line"><span class="lineno"> 1429</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_layer.html">QCPLayer</a> *<a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a> = <a class="code hl_variable" href="#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a0a96244e7773b242ef23c32b7bdfb159">layer</a>(layerName))</div>
+<div class="line"><span class="lineno"> 1430</span>  {</div>
+<div class="line"><span class="lineno"> 1431</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ab0d0da6d2de45a118886d2c8e16d5a54">setLayer</a>(<a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a>);</div>
+<div class="line"><span class="lineno"> 1432</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1433</span>  {</div>
+<div class="line"><span class="lineno"> 1434</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;there is no layer with name&quot;</span> &lt;&lt; layerName;</div>
+<div class="line"><span class="lineno"> 1435</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1436</span>  }</div>
+<div class="line"><span class="lineno"> 1437</span>}</div>
+<div class="ttc" id="aclass_q_custom_plot_html_a0a96244e7773b242ef23c32b7bdfb159"><div class="ttname"><a href="class_q_custom_plot.html#a0a96244e7773b242ef23c32b7bdfb159">QCustomPlot::layer</a></div><div class="ttdeci">QCPLayer * layer(const QString &amp;name) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l14664">qcustomplot.cpp:14664</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab0d0da6d2de45a118886d2c8e16d5a54" name="ab0d0da6d2de45a118886d2c8e16d5a54"></a>
@@ -970,6 +1174,12 @@ Friends</h2></td></tr>
 <p>If <em>layer</em> is 0, this layerable will not be on any layer and thus not appear in the plot (or interact/receive events).</p>
 <p>Returns true if the layer of this layerable was successfully changed to <em>layer</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01412">1412</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1413</span>{</div>
+<div class="line"><span class="lineno"> 1414</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#af94484cfb7cbbddb7de522e9be71d9a4">moveToLayer</a>(<a class="code hl_function" href="#a9d4e121a7f1d2314f906fe698209cac9">layer</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 1415</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_af94484cfb7cbbddb7de522e9be71d9a4"><div class="ttname"><a href="#af94484cfb7cbbddb7de522e9be71d9a4">QCPLayerable::moveToLayer</a></div><div class="ttdeci">bool moveToLayer(QCPLayer *layer, bool prepend)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01568">qcustomplot.cpp:1568</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa23c893671f1f6744ac235cf2204cf3a" name="aa23c893671f1f6744ac235cf2204cf3a"></a>
@@ -995,6 +1205,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01555">1555</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1556</span>{</div>
+<div class="line"><span class="lineno"> 1557</span>  <a class="code hl_variable" href="#a3291445a980053e2d17a21d15957624e">mParentLayerable</a> = <a class="code hl_function" href="#aa78b7e644d2c519e1a9a6f2ac5fcd858">parentLayerable</a>;</div>
+<div class="line"><span class="lineno"> 1558</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3bed99ddc396b48ce3ebfdc0418744f8" name="a3bed99ddc396b48ce3ebfdc0418744f8"></a>
@@ -1013,6 +1228,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the visibility of this layerable object. If an object is not visible, it will not be drawn on the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> surface, and user interaction with it (e.g. click and selection) is not possible. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01398">1398</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1399</span>{</div>
+<div class="line"><span class="lineno"> 1400</span>  <a class="code hl_variable" href="#a62e3aed8427d6ce3ccf716f285106cb3">mVisible</a> = on;</div>
+<div class="line"><span class="lineno"> 1401</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0297b944b6192b6d67d00bff41b6b70" name="af0297b944b6192b6d67d00bff41b6b70"></a>
@@ -1038,6 +1258,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00766">766</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  766</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a62e3aed8427d6ce3ccf716f285106cb3">mVisible</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47dfd7b8fd99c08ca54e09c362b6f022" name="a47dfd7b8fd99c08ca54e09c362b6f022"></a>
@@ -1070,6 +1293,11 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis.html#aa850f195d7cc470c53809d0fff5e444d">QCPAxis</a>, <a class="el" href="class_q_c_p_axis_rect.html#a93eeaa0c127d6d6fe8171b2455080262">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale.html#a63cf19be184f6670c9495ad3a9a1baeb">QCPColorScale</a>, <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#a93eeaa0c127d6d6fe8171b2455080262">QCPColorScaleAxisRectPrivate</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#a78f5d8c2c942fa1c47dcef5d96616e8d">QCPPolarAxisAngular</a>, and <a class="el" href="class_q_c_p_polar_axis_radial.html#ab495743f9f7412a109af0b0065a7b9ae">QCPPolarAxisRadial</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01832">1832</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1833</span>{</div>
+<div class="line"><span class="lineno"> 1834</span>  <span class="keyword">event</span>-&gt;ignore();</div>
+<div class="line"><span class="lineno"> 1835</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -1093,6 +1321,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00822">822</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a5dbf96bf7664c1b6fce49063eeea6eef" name="a5dbf96bf7664c1b6fce49063eeea6eef"></a>
@@ -1115,6 +1345,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00821">821</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdf9df76adcfae45261690aa0ca2198" name="a1cdf9df76adcfae45261690aa0ca2198"></a>
@@ -1136,6 +1368,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00820">820</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1160,6 +1394,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00793">793</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aa38ec5891aff0f50b36fd63e9372a0cd" name="aa38ec5891aff0f50b36fd63e9372a0cd"></a>
@@ -1181,6 +1417,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00792">792</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1204,6 +1442,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00791">791</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aa2a528433e44db02b8aef23c1f9f90ed" name="aa2a528433e44db02b8aef23c1f9f90ed"></a>
@@ -1225,6 +1465,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00790">790</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1248,11 +1490,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00789">789</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

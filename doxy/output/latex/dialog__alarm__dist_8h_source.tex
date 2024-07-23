@@ -1,0 +1,39 @@
+\doxysection{dialog\+\_\+alarm\+\_\+dist.\+h}
+\hypertarget{dialog__alarm__dist_8h_source}{}\label{dialog__alarm__dist_8h_source}\index{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_alarm\_dist.h@{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_alarm\_dist.h}}
+\mbox{\hyperlink{dialog__alarm__dist_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ DIALOG\_ALARM\_DIST\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DIALOG\_ALARM\_DIST\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__alarm__dist}{Dialog\_alarm\_dist}};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__alarm__dist}{Dialog\_alarm\_dist}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_dialog__alarm__dist_abf5f43c109964729a31717d7f8b35ae8}{Dialog\_alarm\_dist}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_dialog__alarm__dist_ac791398033fb7c4fad235cbb9730f837}{\string~Dialog\_alarm\_dist}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__alarm__dist_a2a551157de96c5ce950b95617b0fb7c6}{load\_data\_alarm}}(QList<float>);}
+\DoxyCodeLine{00044\ \ \ \ \ QList<float>\ \mbox{\hyperlink{class_dialog__alarm__dist_a3b8eb31cdfa8bb1f77271eb829ec1ceb}{alarm\_data}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__dist_a2b0d3c16915a9cf495960b0f5b7781b2}{alarm\_on}}=0;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__alarm__dist_aefe734d632138f6d1d3a44f30c5d70db}{alarm\_activation}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_doubleSpinBox\_2\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ Ui::Dialog\_alarm\_dist\ *ui;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIALOG\_ALARM\_DIST\_H}}
+
+\end{DoxyCode}

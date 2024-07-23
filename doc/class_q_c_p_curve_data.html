@@ -152,6 +152,8 @@ Public Attributes</h2></td></tr>
 </ul>
 <p>The container for storing multiple data points is <a class="el" href="qcustomplot_8h.html#a4372fd32dfa2feaf26a0c4944ae43bcf">QCPCurveDataContainer</a>. It is a typedef for <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a> with <a class="el" href="class_q_c_p_curve_data.html">QCPCurveData</a> as the DataType template parameter. See the documentation there for an explanation regarding the data type's generic methods.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="qcustomplot_8h.html#a4372fd32dfa2feaf26a0c4944ae43bcf">QCPCurveDataContainer</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05602">5602</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a48252779b5198a509d99c69ae223fbf8" name="a48252779b5198a509d99c69ae223fbf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48252779b5198a509d99c69ae223fbf8">&#9670;&#160;</a></span>QCPCurveData() <span class="overload">[1/2]</span></h2>
@@ -169,6 +171,17 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs a curve data point with t, key and value set to zero. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l22575">22575</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">22575</span>                           :</div>
+<div class="line"><span class="lineno">22576</span>  <a class="code hl_variable" href="#aecc395525be28e9178a088793beb3ff3">t</a>(0),</div>
+<div class="line"><span class="lineno">22577</span>  <a class="code hl_variable" href="#a8a4ec5f2b9a396149fd842e309701bd4">key</a>(0),</div>
+<div class="line"><span class="lineno">22578</span>  <a class="code hl_variable" href="#a72b39b8e1dbf7b45382ebd48419b6828">value</a>(0)</div>
+<div class="line"><span class="lineno">22579</span>{</div>
+<div class="line"><span class="lineno">22580</span>}</div>
+<div class="ttc" id="aclass_q_c_p_curve_data_html_a72b39b8e1dbf7b45382ebd48419b6828"><div class="ttname"><a href="#a72b39b8e1dbf7b45382ebd48419b6828">QCPCurveData::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05617">qcustomplot.h:5617</a></div></div>
+<div class="ttc" id="aclass_q_c_p_curve_data_html_a8a4ec5f2b9a396149fd842e309701bd4"><div class="ttname"><a href="#a8a4ec5f2b9a396149fd842e309701bd4">QCPCurveData::key</a></div><div class="ttdeci">double key</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05617">qcustomplot.h:5617</a></div></div>
+<div class="ttc" id="aclass_q_c_p_curve_data_html_aecc395525be28e9178a088793beb3ff3"><div class="ttname"><a href="#aecc395525be28e9178a088793beb3ff3">QCPCurveData::t</a></div><div class="ttdeci">double t</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05617">qcustomplot.h:5617</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3586be0cc6f8db15bcdd0c0d03b0c173" name="a3586be0cc6f8db15bcdd0c0d03b0c173"></a>
@@ -196,6 +209,14 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs a curve data point with the specified <em>t</em>, <em>key</em> and <em>value</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l22585">22585</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">22585</span>                                                             :</div>
+<div class="line"><span class="lineno">22586</span>  <a class="code hl_variable" href="#aecc395525be28e9178a088793beb3ff3">t</a>(<a class="code hl_variable" href="#aecc395525be28e9178a088793beb3ff3">t</a>),</div>
+<div class="line"><span class="lineno">22587</span>  <a class="code hl_variable" href="#a8a4ec5f2b9a396149fd842e309701bd4">key</a>(<a class="code hl_variable" href="#a8a4ec5f2b9a396149fd842e309701bd4">key</a>),</div>
+<div class="line"><span class="lineno">22588</span>  <a class="code hl_variable" href="#a72b39b8e1dbf7b45382ebd48419b6828">value</a>(<a class="code hl_variable" href="#a72b39b8e1dbf7b45382ebd48419b6828">value</a>)</div>
+<div class="line"><span class="lineno">22589</span>{</div>
+<div class="line"><span class="lineno">22590</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -224,6 +245,11 @@ Public Attributes</h2></td></tr>
 <p>Returns a data point with the specified <em>sortKey</em> (assigned to the data point's <em>t</em> member). All other members are set to zero.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05609">5609</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5609</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a48252779b5198a509d99c69ae223fbf8">QCPCurveData</a>(<a class="code hl_function" href="#a583174f2b68e01b4d545f04571f58bd0">sortKey</a>, 0, 0); }</div>
+<div class="ttc" id="aclass_q_c_p_curve_data_html_a48252779b5198a509d99c69ae223fbf8"><div class="ttname"><a href="#a48252779b5198a509d99c69ae223fbf8">QCPCurveData::QCPCurveData</a></div><div class="ttdeci">QCPCurveData()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l22575">qcustomplot.cpp:22575</a></div></div>
+<div class="ttc" id="aclass_q_c_p_curve_data_html_a583174f2b68e01b4d545f04571f58bd0"><div class="ttname"><a href="#a583174f2b68e01b4d545f04571f58bd0">QCPCurveData::sortKey</a></div><div class="ttdeci">double sortKey() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05608">qcustomplot.h:5608</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac805ffc8b4207652efb9fcc6a2cdd3e8" name="ac805ffc8b4207652efb9fcc6a2cdd3e8"></a>
@@ -251,6 +277,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the <em>key</em> member of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05612">5612</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5612</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8a4ec5f2b9a396149fd842e309701bd4">key</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a39a94131e5f62f16b256bcf8c47a3205" name="a39a94131e5f62f16b256bcf8c47a3205"></a>
@@ -278,6 +307,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the <em>value</em> member of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05613">5613</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5613</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a72b39b8e1dbf7b45382ebd48419b6828">value</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a583174f2b68e01b4d545f04571f58bd0" name="a583174f2b68e01b4d545f04571f58bd0"></a>
@@ -305,6 +337,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the <em>t</em> member of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05608">5608</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5608</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aecc395525be28e9178a088793beb3ff3">t</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a22bb516e31f7e4b28e314a1da20f2526" name="a22bb516e31f7e4b28e314a1da20f2526"></a>
@@ -332,6 +367,9 @@ Public Attributes</h2></td></tr>
 <p>Since the member <em>key</em> is the data point key coordinate and the member <em>t</em> is the data ordering parameter, this method returns false.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05610">5610</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5610</span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acf15deffd18d400651f8384a95dad9f8" name="acf15deffd18d400651f8384a95dad9f8"></a>
@@ -359,6 +397,10 @@ Public Attributes</h2></td></tr>
 <p>Returns a <a class="el" href="class_q_c_p_range.html" title="Represents the range an axis is encompassing.">QCPRange</a> with both lower and upper boundary set to <em>value</em> of this data point.</p>
 <p>For a general explanation of what this method is good for in the context of the data container, see the documentation of <a class="el" href="class_q_c_p_data_container.html">QCPDataContainer</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05615">5615</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5615</span>{ <span class="keywordflow">return</span> <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(<a class="code hl_variable" href="#a72b39b8e1dbf7b45382ebd48419b6828">value</a>, <a class="code hl_variable" href="#a72b39b8e1dbf7b45382ebd48419b6828">value</a>); }</div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -374,6 +416,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05617">5617</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aecc395525be28e9178a088793beb3ff3" name="aecc395525be28e9178a088793beb3ff3"></a>
@@ -387,6 +431,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05617">5617</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -402,11 +448,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05617">5617</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

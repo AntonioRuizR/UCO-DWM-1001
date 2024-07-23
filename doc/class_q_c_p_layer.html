@@ -204,6 +204,8 @@ Controlling the rendering order via layers</h1>
 <h1><a class="anchor" id="qcplayer-buffering"></a>
 Replotting only a specific layer</h1>
 <p>If the layer mode (<a class="el" href="#a938d57b04f4e4c23cedf1711f983919b">setMode</a>) is set to <a class="el" href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">lmBuffered</a>, you can replot only this specific layer by calling <a class="el" href="#adefd53b6db02f470151c416f42e37180">replot</a>. In certain situations this can provide better replot performance, compared with a full replot of all layers. Upon creation of a new layer, the layer mode is initialized to <a class="el" href="#a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce">lmLogical</a>. The only layer that is set to <a class="el" href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">lmBuffered</a> in a new <a class="el" href="class_q_custom_plot.html">QCustomPlot</a> instance is the "overlay" layer, containing the selection rect. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00682">682</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a67dcfc1590be2a1f2227c5a39bb59c7c" name="a67dcfc1590be2a1f2227c5a39bb59c7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67dcfc1590be2a1f2227c5a39bb59c7c">&#9670;&#160;</a></span>LayerMode</h2>
@@ -225,6 +227,13 @@ Replotting only a specific layer</h1>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00702">702</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  702</span>                 { <a class="code hl_enumvalue" href="#a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce">lmLogical</a>   </div>
+<div class="line"><span class="lineno">  703</span>                   ,<a class="code hl_enumvalue" href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">lmBuffered</a> </div>
+<div class="line"><span class="lineno">  704</span>                 };</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce"><div class="ttname"><a href="#a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce">QCPLayer::lmLogical</a></div><div class="ttdeci">@ lmLogical</div><div class="ttdoc">Layer is used only for rendering order, and shares paint buffer with all other adjacent logical layer...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00703">qcustomplot.h:702</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538"><div class="ttname"><a href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">QCPLayer::lmBuffered</a></div><div class="ttdeci">@ lmBuffered</div><div class="ttdoc">Layer has its own paint buffer and may be replotted individually (see replot).</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00704">qcustomplot.h:703</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -250,6 +259,25 @@ Replotting only a specific layer</h1>
 <p>Normally you shouldn't directly instantiate layers, use <a class="el" href="class_q_custom_plot.html#a8f33108881c2e3c2fec50aa321e169af">QCustomPlot::addLayer</a> instead.</p>
 <dl class="section warning"><dt>Warning</dt><dd>It is not checked that <em>layerName</em> is actually a unique layer name in <em>parentPlot</em>. This check is only performed by <a class="el" href="class_q_custom_plot.html#a8f33108881c2e3c2fec50aa321e169af">QCustomPlot::addLayer</a>. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01068">1068</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1068</span>                                                                    :</div>
+<div class="line"><span class="lineno"> 1069</span>  QObject(<a class="code hl_function" href="#a923cb87bb467eeb17d649ba2b2fe4f5f">parentPlot</a>),</div>
+<div class="line"><span class="lineno"> 1070</span>  <a class="code hl_variable" href="#a2f3374a7884bf403720cd1cf6f7ad1bb">mParentPlot</a>(<a class="code hl_function" href="#a923cb87bb467eeb17d649ba2b2fe4f5f">parentPlot</a>),</div>
+<div class="line"><span class="lineno"> 1071</span>  <a class="code hl_variable" href="#a91e6298183cb4b9dfd4efdfaf1ecc220">mName</a>(layerName),</div>
+<div class="line"><span class="lineno"> 1072</span>  <a class="code hl_variable" href="#a122088bcab6cec76a52b75ce8606605b">mIndex</a>(-1), <span class="comment">// will be set to a proper value by the QCustomPlot layer creation function</span></div>
+<div class="line"><span class="lineno"> 1073</span>  <a class="code hl_variable" href="#a264950deb08e589460c126c895a1e2b5">mVisible</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno"> 1074</span>  <a class="code hl_variable" href="#a11bd0aa190d8fa21c8c7673d070737c8">mMode</a>(<a class="code hl_enumvalue" href="#a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce">lmLogical</a>)</div>
+<div class="line"><span class="lineno"> 1075</span>{</div>
+<div class="line"><span class="lineno"> 1076</span>  <span class="comment">// Note: no need to make sure layerName is unique, because layer</span></div>
+<div class="line"><span class="lineno"> 1077</span>  <span class="comment">// management is done with QCustomPlot functions.</span></div>
+<div class="line"><span class="lineno"> 1078</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a11bd0aa190d8fa21c8c7673d070737c8"><div class="ttname"><a href="#a11bd0aa190d8fa21c8c7673d070737c8">QCPLayer::mMode</a></div><div class="ttdeci">LayerMode mMode</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00732">qcustomplot.h:732</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a122088bcab6cec76a52b75ce8606605b"><div class="ttname"><a href="#a122088bcab6cec76a52b75ce8606605b">QCPLayer::mIndex</a></div><div class="ttdeci">int mIndex</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00729">qcustomplot.h:729</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a264950deb08e589460c126c895a1e2b5"><div class="ttname"><a href="#a264950deb08e589460c126c895a1e2b5">QCPLayer::mVisible</a></div><div class="ttdeci">bool mVisible</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00731">qcustomplot.h:731</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a2f3374a7884bf403720cd1cf6f7ad1bb"><div class="ttname"><a href="#a2f3374a7884bf403720cd1cf6f7ad1bb">QCPLayer::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00727">qcustomplot.h:727</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a91e6298183cb4b9dfd4efdfaf1ecc220"><div class="ttname"><a href="#a91e6298183cb4b9dfd4efdfaf1ecc220">QCPLayer::mName</a></div><div class="ttdeci">QString mName</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00728">qcustomplot.h:728</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a923cb87bb467eeb17d649ba2b2fe4f5f"><div class="ttname"><a href="#a923cb87bb467eeb17d649ba2b2fe4f5f">QCPLayer::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00711">qcustomplot.h:711</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afc1a8940f8e34c9f25ead9dfd4828cae" name="afc1a8940f8e34c9f25ead9dfd4828cae"></a>
@@ -275,6 +303,22 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01080">1080</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1081</span>{</div>
+<div class="line"><span class="lineno"> 1082</span>  <span class="comment">// If child layerables are still on this layer, detach them, so they don&#39;t try to reach back to this</span></div>
+<div class="line"><span class="lineno"> 1083</span>  <span class="comment">// then invalid layer once they get deleted/moved themselves. This only happens when layers are deleted</span></div>
+<div class="line"><span class="lineno"> 1084</span>  <span class="comment">// directly, like in the QCustomPlot destructor. (The regular layer removal procedure for the user is to</span></div>
+<div class="line"><span class="lineno"> 1085</span>  <span class="comment">// call QCustomPlot::removeLayer, which moves all layerables off this layer before deleting it.)</span></div>
+<div class="line"><span class="lineno"> 1086</span>  </div>
+<div class="line"><span class="lineno"> 1087</span>  <span class="keywordflow">while</span> (!<a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>.isEmpty())</div>
+<div class="line"><span class="lineno"> 1088</span>    <a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>.last()-&gt;setLayer(<span class="keyword">nullptr</span>); <span class="comment">// removes itself from mChildren via removeChild()</span></div>
+<div class="line"><span class="lineno"> 1089</span>  </div>
+<div class="line"><span class="lineno"> 1090</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2f3374a7884bf403720cd1cf6f7ad1bb">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5">currentLayer</a>() == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno"> 1091</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;The parent plot&#39;s mCurrentLayer will be a dangling pointer. Should have been set to a valid layer or nullptr beforehand.&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1092</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a704aa71bba469383c3a3c598c1ec0d28"><div class="ttname"><a href="#a704aa71bba469383c3a3c598c1ec0d28">QCPLayer::mChildren</a></div><div class="ttdeci">QList&lt; QCPLayerable * &gt; mChildren</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00730">qcustomplot.h:730</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a0421d647f420b0b4c57aec1708857af5"><div class="ttname"><a href="class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5">QCustomPlot::currentLayer</a></div><div class="ttdeci">QCPLayer * currentLayer() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l14695">qcustomplot.cpp:14695</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -305,6 +349,21 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01225">1225</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1226</span>{</div>
+<div class="line"><span class="lineno"> 1227</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>.contains(layerable))</div>
+<div class="line"><span class="lineno"> 1228</span>  {</div>
+<div class="line"><span class="lineno"> 1229</span>    <span class="keywordflow">if</span> (prepend)</div>
+<div class="line"><span class="lineno"> 1230</span>      <a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>.prepend(layerable);</div>
+<div class="line"><span class="lineno"> 1231</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1232</span>      <a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>.append(layerable);</div>
+<div class="line"><span class="lineno"> 1233</span>    <span class="keywordflow">if</span> (QSharedPointer&lt;QCPAbstractPaintBuffer&gt; pb = <a class="code hl_variable" href="#aa0bdbc75e4350a0669ff515b3476a3d3">mPaintBuffer</a>.toStrongRef())</div>
+<div class="line"><span class="lineno"> 1234</span>      pb-&gt;setInvalidated();</div>
+<div class="line"><span class="lineno"> 1235</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1236</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;layerable is already child of this layer&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(layerable);</div>
+<div class="line"><span class="lineno"> 1237</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_aa0bdbc75e4350a0669ff515b3476a3d3"><div class="ttname"><a href="#aa0bdbc75e4350a0669ff515b3476a3d3">QCPLayer::mPaintBuffer</a></div><div class="ttdeci">QWeakPointer&lt; QCPAbstractPaintBuffer &gt; mPaintBuffer</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00735">qcustomplot.h:735</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a183b90941fc78f0b136edd77c5fb6966" name="a183b90941fc78f0b136edd77c5fb6966"></a>
@@ -331,6 +390,9 @@ Replotting only a specific layer</h1>
 </div><div class="memdoc">
 <p>Returns a list of all layerables on this layer. The order corresponds to the rendering order: layerables with higher indices are drawn above layerables with lower indices. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00714">714</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  714</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab831a99c8d30b15ec4533ca341e8813b" name="ab831a99c8d30b15ec4533ca341e8813b"></a>
@@ -356,6 +418,28 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01144">1144</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1145</span>{</div>
+<div class="line"><span class="lineno"> 1146</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_layerable.html">QCPLayerable</a> *child, <a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>)</div>
+<div class="line"><span class="lineno"> 1147</span>  {</div>
+<div class="line"><span class="lineno"> 1148</span>    <span class="keywordflow">if</span> (child-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#ab054e88f15d485defcb95e7376f119e7">realVisibility</a>())</div>
+<div class="line"><span class="lineno"> 1149</span>    {</div>
+<div class="line"><span class="lineno"> 1150</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a8fd6821ee6fecbfa04444c9062912abd">save</a>();</div>
+<div class="line"><span class="lineno"> 1151</span>      painter-&gt;setClipRect(child-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#acbcfc9ecc75433747b1978a77b1864b3">clipRect</a>().translated(0, -1));</div>
+<div class="line"><span class="lineno"> 1152</span>      child-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a1168944abbf9fa6731b0f4a2d0d67e8b">applyDefaultAntialiasingHint</a>(painter);</div>
+<div class="line"><span class="lineno"> 1153</span>      child-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#adf62b4bac3ca934db80290792fc897e1">draw</a>(painter);</div>
+<div class="line"><span class="lineno"> 1154</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a64908e6298d5bbd83457dc987cc3a022">restore</a>();</div>
+<div class="line"><span class="lineno"> 1155</span>    }</div>
+<div class="line"><span class="lineno"> 1156</span>  }</div>
+<div class="line"><span class="lineno"> 1157</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html"><div class="ttname"><a href="class_q_c_p_layerable.html">QCPLayerable</a></div><div class="ttdoc">Base class for all drawable objects.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00751">qcustomplot.h:752</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a1168944abbf9fa6731b0f4a2d0d67e8b"><div class="ttname"><a href="class_q_c_p_layerable.html#a1168944abbf9fa6731b0f4a2d0d67e8b">QCPLayerable::applyDefaultAntialiasingHint</a></div><div class="ttdeci">virtual void applyDefaultAntialiasingHint(QCPPainter *painter) const =0</div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_ab054e88f15d485defcb95e7376f119e7"><div class="ttname"><a href="class_q_c_p_layerable.html#ab054e88f15d485defcb95e7376f119e7">QCPLayerable::realVisibility</a></div><div class="ttdeci">bool realVisibility() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01460">qcustomplot.cpp:1460</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acbcfc9ecc75433747b1978a77b1864b3"><div class="ttname"><a href="class_q_c_p_layerable.html#acbcfc9ecc75433747b1978a77b1864b3">QCPLayerable::clipRect</a></div><div class="ttdeci">virtual QRect clipRect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01655">qcustomplot.cpp:1655</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_adf62b4bac3ca934db80290792fc897e1"><div class="ttname"><a href="class_q_c_p_layerable.html#adf62b4bac3ca934db80290792fc897e1">QCPLayerable::draw</a></div><div class="ttdeci">virtual void draw(QCPPainter *painter)=0</div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a64908e6298d5bbd83457dc987cc3a022"><div class="ttname"><a href="class_q_c_p_painter.html#a64908e6298d5bbd83457dc987cc3a022">QCPPainter::restore</a></div><div class="ttdeci">void restore()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00467">qcustomplot.cpp:467</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a8fd6821ee6fecbfa04444c9062912abd"><div class="ttname"><a href="class_q_c_p_painter.html#a8fd6821ee6fecbfa04444c9062912abd">QCPPainter::save</a></div><div class="ttdeci">void save()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00453">qcustomplot.cpp:453</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4a8e0a86f31462299e7fc8e8158dd2c6" name="a4a8e0a86f31462299e7fc8e8158dd2c6"></a>
@@ -381,6 +465,26 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01167">1167</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1168</span>{</div>
+<div class="line"><span class="lineno"> 1169</span>  <span class="keywordflow">if</span> (QSharedPointer&lt;QCPAbstractPaintBuffer&gt; pb = <a class="code hl_variable" href="#aa0bdbc75e4350a0669ff515b3476a3d3">mPaintBuffer</a>.toStrongRef())</div>
+<div class="line"><span class="lineno"> 1170</span>  {</div>
+<div class="line"><span class="lineno"> 1171</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_painter.html">QCPPainter</a> *painter = pb-&gt;startPainting())</div>
+<div class="line"><span class="lineno"> 1172</span>    {</div>
+<div class="line"><span class="lineno"> 1173</span>      <span class="keywordflow">if</span> (painter-&gt;isActive())</div>
+<div class="line"><span class="lineno"> 1174</span>        <a class="code hl_function" href="#ab831a99c8d30b15ec4533ca341e8813b">draw</a>(painter);</div>
+<div class="line"><span class="lineno"> 1175</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1176</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;paint buffer returned inactive painter&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1177</span>      <span class="keyword">delete</span> painter;</div>
+<div class="line"><span class="lineno"> 1178</span>      pb-&gt;donePainting();</div>
+<div class="line"><span class="lineno"> 1179</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1180</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;paint buffer returned nullptr painter&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1181</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1182</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;no valid paint buffer associated with this layer&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1183</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_ab831a99c8d30b15ec4533ca341e8813b"><div class="ttname"><a href="#ab831a99c8d30b15ec4533ca341e8813b">QCPLayer::draw</a></div><div class="ttdeci">void draw(QCPPainter *painter)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01144">qcustomplot.cpp:1144</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html"><div class="ttname"><a href="class_q_c_p_painter.html">QCPPainter</a></div><div class="ttdoc">QPainter subclass used internally.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00515">qcustomplot.h:516</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad322905c4700dcc7ceba63e011c730d2" name="ad322905c4700dcc7ceba63e011c730d2"></a>
@@ -408,6 +512,9 @@ Replotting only a specific layer</h1>
 <p>Returns the index this layer has in the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a>. The index is the integer number by which this layer can be accessed via <a class="el" href="class_q_custom_plot.html#a0a96244e7773b242ef23c32b7bdfb159">QCustomPlot::layer</a>.</p>
 <p>Layers with higher indices will be drawn above layers with lower indices. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00713">713</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  713</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a122088bcab6cec76a52b75ce8606605b">mIndex</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a44ae50b011b19f3dd46a38d8e2e2c1b6" name="a44ae50b011b19f3dd46a38d8e2e2c1b6"></a>
@@ -433,6 +540,9 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00716">716</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  716</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a11bd0aa190d8fa21c8c7673d070737c8">mMode</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a37806f662b50b588fb1029a14fc5ef50" name="a37806f662b50b588fb1029a14fc5ef50"></a>
@@ -458,6 +568,9 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00712">712</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  712</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a91e6298183cb4b9dfd4efdfaf1ecc220">mName</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a923cb87bb467eeb17d649ba2b2fe4f5f" name="a923cb87bb467eeb17d649ba2b2fe4f5f"></a>
@@ -483,6 +596,9 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00711">711</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  711</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2f3374a7884bf403720cd1cf6f7ad1bb">mParentPlot</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2f64ac7761650582d968d86670ef362" name="ac2f64ac7761650582d968d86670ef362"></a>
@@ -508,6 +624,16 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01248">1248</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1249</span>{</div>
+<div class="line"><span class="lineno"> 1250</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a704aa71bba469383c3a3c598c1ec0d28">mChildren</a>.removeOne(layerable))</div>
+<div class="line"><span class="lineno"> 1251</span>  {</div>
+<div class="line"><span class="lineno"> 1252</span>    <span class="keywordflow">if</span> (QSharedPointer&lt;QCPAbstractPaintBuffer&gt; pb = <a class="code hl_variable" href="#aa0bdbc75e4350a0669ff515b3476a3d3">mPaintBuffer</a>.toStrongRef())</div>
+<div class="line"><span class="lineno"> 1253</span>      pb-&gt;setInvalidated();</div>
+<div class="line"><span class="lineno"> 1254</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1255</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;layerable is not child of this layer&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(layerable);</div>
+<div class="line"><span class="lineno"> 1256</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adefd53b6db02f470151c416f42e37180" name="adefd53b6db02f470151c416f42e37180"></a>
@@ -529,6 +655,25 @@ Replotting only a specific layer</h1>
 <p>If the layer mode is <a class="el" href="#a67dcfc1590be2a1f2227c5a39bb59c7ca02eb5e9a4cb7f1baf1e2b6b99e3b87ce">lmLogical</a> however, this method simply calls <a class="el" href="class_q_custom_plot.html#aa4bfe7d70dbe67e81d877819b75ab9af">QCustomPlot::replot</a> on the parent <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> instance.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab831a99c8d30b15ec4533ca341e8813b">draw</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01199">1199</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1200</span>{</div>
+<div class="line"><span class="lineno"> 1201</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a11bd0aa190d8fa21c8c7673d070737c8">mMode</a> == <a class="code hl_enumvalue" href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">lmBuffered</a> &amp;&amp; !<a class="code hl_variable" href="#a2f3374a7884bf403720cd1cf6f7ad1bb">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#ad452b582348c8e99462d83fe1cd0279b">hasInvalidatedPaintBuffers</a>())</div>
+<div class="line"><span class="lineno"> 1202</span>  {</div>
+<div class="line"><span class="lineno"> 1203</span>    <span class="keywordflow">if</span> (QSharedPointer&lt;QCPAbstractPaintBuffer&gt; pb = <a class="code hl_variable" href="#aa0bdbc75e4350a0669ff515b3476a3d3">mPaintBuffer</a>.toStrongRef())</div>
+<div class="line"><span class="lineno"> 1204</span>    {</div>
+<div class="line"><span class="lineno"> 1205</span>      pb-&gt;clear(Qt::transparent);</div>
+<div class="line"><span class="lineno"> 1206</span>      <a class="code hl_function" href="#a4a8e0a86f31462299e7fc8e8158dd2c6">drawToPaintBuffer</a>();</div>
+<div class="line"><span class="lineno"> 1207</span>      pb-&gt;setInvalidated(<span class="keyword">false</span>); <span class="comment">// since layer is lmBuffered, we know only this layer is on buffer and we can reset invalidated flag</span></div>
+<div class="line"><span class="lineno"> 1208</span>      <a class="code hl_variable" href="#a2f3374a7884bf403720cd1cf6f7ad1bb">mParentPlot</a>-&gt;update();</div>
+<div class="line"><span class="lineno"> 1209</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1210</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;no valid paint buffer associated with this layer&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1211</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1212</span>    <a class="code hl_variable" href="#a2f3374a7884bf403720cd1cf6f7ad1bb">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aa4bfe7d70dbe67e81d877819b75ab9af">replot</a>();</div>
+<div class="line"><span class="lineno"> 1213</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a4a8e0a86f31462299e7fc8e8158dd2c6"><div class="ttname"><a href="#a4a8e0a86f31462299e7fc8e8158dd2c6">QCPLayer::drawToPaintBuffer</a></div><div class="ttdeci">void drawToPaintBuffer()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01167">qcustomplot.cpp:1167</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_aa4bfe7d70dbe67e81d877819b75ab9af"><div class="ttname"><a href="class_q_custom_plot.html#aa4bfe7d70dbe67e81d877819b75ab9af">QCustomPlot::replot</a></div><div class="ttdeci">Q_SLOT void replot(QCustomPlot::RefreshPriority refreshPriority=QCustomPlot::rpRefreshHint)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l15119">qcustomplot.cpp:15119</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_ad452b582348c8e99462d83fe1cd0279b"><div class="ttname"><a href="class_q_custom_plot.html#ad452b582348c8e99462d83fe1cd0279b">QCustomPlot::hasInvalidatedPaintBuffers</a></div><div class="ttdeci">bool hasInvalidatedPaintBuffers()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l15913">qcustomplot.cpp:15913</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a938d57b04f4e4c23cedf1711f983919b" name="a938d57b04f4e4c23cedf1711f983919b"></a>
@@ -551,6 +696,17 @@ Replotting only a specific layer</h1>
 <p>Note that each layer which is set to <a class="el" href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">lmBuffered</a> requires additional paint buffers for the layers below, above and for the layer itself. This increases the memory consumption and (slightly) decreases the repainting speed because multiple paint buffers need to be joined. So you should carefully choose which layers benefit from having their own paint buffer. A typical example would be a layer which contains certain layerables (e.g. items) that need to be changed and thus replotted regularly, while all other layerables on other layers stay static. By default, only the topmost layer called "overlay" is in mode <a class="el" href="#a67dcfc1590be2a1f2227c5a39bb59c7cab581b9fab3007c4c65f057f4185d7538">lmBuffered</a>, and contains the selection rect.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#adefd53b6db02f470151c416f42e37180">replot</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01128">1128</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1129</span>{</div>
+<div class="line"><span class="lineno"> 1130</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a11bd0aa190d8fa21c8c7673d070737c8">mMode</a> != <a class="code hl_function" href="#a44ae50b011b19f3dd46a38d8e2e2c1b6">mode</a>)</div>
+<div class="line"><span class="lineno"> 1131</span>  {</div>
+<div class="line"><span class="lineno"> 1132</span>    <a class="code hl_variable" href="#a11bd0aa190d8fa21c8c7673d070737c8">mMode</a> = <a class="code hl_function" href="#a44ae50b011b19f3dd46a38d8e2e2c1b6">mode</a>;</div>
+<div class="line"><span class="lineno"> 1133</span>    <span class="keywordflow">if</span> (QSharedPointer&lt;QCPAbstractPaintBuffer&gt; pb = <a class="code hl_variable" href="#aa0bdbc75e4350a0669ff515b3476a3d3">mPaintBuffer</a>.toStrongRef())</div>
+<div class="line"><span class="lineno"> 1134</span>      pb-&gt;setInvalidated();</div>
+<div class="line"><span class="lineno"> 1135</span>  }</div>
+<div class="line"><span class="lineno"> 1136</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_a44ae50b011b19f3dd46a38d8e2e2c1b6"><div class="ttname"><a href="#a44ae50b011b19f3dd46a38d8e2e2c1b6">QCPLayer::mode</a></div><div class="ttdeci">LayerMode mode() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00716">qcustomplot.h:716</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac07671f74edf6884b51a82afb2c19516" name="ac07671f74edf6884b51a82afb2c19516"></a>
@@ -570,6 +726,12 @@ Replotting only a specific layer</h1>
 <p>Sets whether this layer is visible or not. If <em>visible</em> is set to false, all layerables on this layer will be invisible.</p>
 <p>This function doesn't change the visibility property of the layerables (<a class="el" href="class_q_c_p_layerable.html#a3bed99ddc396b48ce3ebfdc0418744f8">QCPLayerable::setVisible</a>), but the <a class="el" href="class_q_c_p_layerable.html#ab054e88f15d485defcb95e7376f119e7">QCPLayerable::realVisibility</a> of each layerable takes the visibility of the parent layer into account. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l01102">1102</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1103</span>{</div>
+<div class="line"><span class="lineno"> 1104</span>  <a class="code hl_variable" href="#a264950deb08e589460c126c895a1e2b5">mVisible</a> = <a class="code hl_function" href="#ad1cc2d6b32d2abb33c7f449b964e068c">visible</a>;</div>
+<div class="line"><span class="lineno"> 1105</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layer_html_ad1cc2d6b32d2abb33c7f449b964e068c"><div class="ttname"><a href="#ad1cc2d6b32d2abb33c7f449b964e068c">QCPLayer::visible</a></div><div class="ttdeci">bool visible() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00715">qcustomplot.h:715</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1cc2d6b32d2abb33c7f449b964e068c" name="ad1cc2d6b32d2abb33c7f449b964e068c"></a>
@@ -595,6 +757,9 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00715">715</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  715</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a264950deb08e589460c126c895a1e2b5">mVisible</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -618,6 +783,8 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00747">747</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdf9df76adcfae45261690aa0ca2198" name="a1cdf9df76adcfae45261690aa0ca2198"></a>
@@ -639,6 +806,8 @@ Replotting only a specific layer</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00746">746</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -663,6 +832,8 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00730">730</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a122088bcab6cec76a52b75ce8606605b" name="a122088bcab6cec76a52b75ce8606605b"></a>
@@ -684,6 +855,8 @@ Replotting only a specific layer</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00729">729</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -707,6 +880,8 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00732">732</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a91e6298183cb4b9dfd4efdfaf1ecc220" name="a91e6298183cb4b9dfd4efdfaf1ecc220"></a>
@@ -728,6 +903,8 @@ Replotting only a specific layer</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00728">728</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -751,6 +928,8 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00735">735</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a2f3374a7884bf403720cd1cf6f7ad1bb" name="a2f3374a7884bf403720cd1cf6f7ad1bb"></a>
@@ -772,6 +951,8 @@ Replotting only a specific layer</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00727">727</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -795,11 +976,13 @@ Replotting only a specific layer</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00731">731</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

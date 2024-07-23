@@ -13,5 +13,13 @@ var class_dialog__stats =
     [ "load_data_statistics_pos_x", "class_dialog__stats.html#afea2ab5dc86dd97370c5d8d748f0c732", null ],
     [ "load_data_statistics_pos_y", "class_dialog__stats.html#ad3e719efeb6a017a081508510f772a62", null ],
     [ "load_data_statistics_pos_z", "class_dialog__stats.html#a4e335416b3c5069716ed7fb941265003", null ],
-    [ "reset_variables", "class_dialog__stats.html#a67c722fb5dcce2a56bb96c14b5b172df", null ]
+    [ "on_pushButton_2_clicked", "class_dialog__stats.html#ae3fc8299948a7ffbb3c19a349e0b6aa7", null ],
+    [ "on_pushButton_clicked", "class_dialog__stats.html#a5a492be8d592fbb6f71ba6cde190c144", null ],
+    [ "reset_variables", "class_dialog__stats.html#a67c722fb5dcce2a56bb96c14b5b172df", null ],
+    [ "complete_dir", "class_dialog__stats.html#aedf7e43a7d06dcd1edb4eb77776b9f4a", null ],
+    [ "file_name", "class_dialog__stats.html#a7fa9a27c8a71864faae86958023cbadd", null ],
+    [ "reset_values", "class_dialog__stats.html#abaa10bcafb35cba7e978539a463d9b15", null ],
+    [ "save_folder", "class_dialog__stats.html#a3a05ae94ab0c4cab3c9edf74be5572c8", null ],
+    [ "save_statistics", "class_dialog__stats.html#ad8bcf79526a0f5d40d4d88db5b37b8b4", null ],
+    [ "ui", "class_dialog__stats.html#a498dd6a43c927b019df3007f262e4a44", null ]
 ];

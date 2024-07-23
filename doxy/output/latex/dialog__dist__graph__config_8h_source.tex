@@ -1,0 +1,39 @@
+\doxysection{dialog\+\_\+dist\+\_\+graph\+\_\+config.\+h}
+\hypertarget{dialog__dist__graph__config_8h_source}{}\label{dialog__dist__graph__config_8h_source}\index{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_dist\_graph\_config.h@{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_dist\_graph\_config.h}}
+\mbox{\hyperlink{dialog__dist__graph__config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ DIALOG\_DIST\_GRAPH\_CONFIG\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DIALOG\_DIST\_GRAPH\_CONFIG\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__dist__graph__config}{Dialog\_dist\_graph\_config}};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__dist__graph__config}{Dialog\_dist\_graph\_config}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_dialog__dist__graph__config_ad87e091f8832d0ade4b29a2fe0439466}{Dialog\_dist\_graph\_config}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_dialog__dist__graph__config_a665d3d391c9a852d730c3d8b3dbf79c6}{\string~Dialog\_dist\_graph\_config}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__dist__graph__config_a8ef08470341903d9d44e8ef11b05c0ef}{autorange\_var}}=0;}
+\DoxyCodeLine{00044\ \ \ \ \ QList<float>\ \mbox{\hyperlink{class_dialog__dist__graph__config_a56298a64b55a19f11cf465255699cacf}{graph\_data}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__dist__graph__config_aa776ccbb6cc9fbfa31f2d77054b16044}{load\_data}}(QList<float>);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__dist__graph__config_a324d42436fbe3c2f2c0953bcf4f4ebeb}{autorange}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_uppervalue\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_lowervalue\_valueChanged(\textcolor{keywordtype}{double}\ arg1);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ Ui::Dialog\_dist\_graph\_config\ *ui;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIALOG\_DIST\_GRAPH\_CONFIG\_H}}
+
+\end{DoxyCode}

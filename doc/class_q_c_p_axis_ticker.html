@@ -234,6 +234,8 @@ Creating own axis tickers</h1>
 <p>If you wish to have complete control, you can generate the tick vectors and tick label vectors yourself by reimplementing <a class="el" href="#af4645a824c7bd2ca8fc7e86ebf9055bd">createTickVector</a> and <a class="el" href="#a804050e408f37a0b9770c6654ebe6aa7">createLabelVector</a>. The default implementations use the previously mentioned virtual methods <a class="el" href="#a910d69bcec2de37e92d8d4e1ecf201e2">getTickStep</a> and <a class="el" href="#a8201eb4aa8be192bf786b126eb5ee089">getTickLabel</a>, but your reimplementations don't necessarily need to do so. For example in the case of unequal tick steps, the method <a class="el" href="#a910d69bcec2de37e92d8d4e1ecf201e2">getTickStep</a> loses its usefulness and can be ignored.</p>
 <p>The sub tick count between major ticks can be controlled with <a class="el" href="#a4ccc403ced7a1457ce6ba293509933c8">getSubTickCount</a>. Full sub tick placement control is obtained by reimplementing <a class="el" href="#a9a6435723fa0bd366d1ea4c2cff7c33f">createSubTickVector</a>.</p>
 <p>See the documentation of all these virtual methods in <a class="el" href="class_q_c_p_axis_ticker.html" title="The base class tick generator used by QCPAxis to create tick positions and tick labels.">QCPAxisTicker</a> for detailed information about the parameters and expected return values. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01732">1732</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab6d2f9d9477821623ac9bc4b21ddf49a" name="ab6d2f9d9477821623ac9bc4b21ddf49a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6d2f9d9477821623ac9bc4b21ddf49a">&#9670;&#160;</a></span>TickStepStrategy</h2>
@@ -255,6 +257,14 @@ Creating own axis tickers</h1>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01741">1741</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1742</span>  {</div>
+<div class="line"><span class="lineno"> 1743</span>    <a class="code hl_enumvalue" href="#ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8">tssReadability</a>    </div>
+<div class="line"><span class="lineno"> 1744</span>    ,<a class="code hl_enumvalue" href="#ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2">tssMeetTickCount</a> </div>
+<div class="line"><span class="lineno"> 1745</span>  };</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2"><div class="ttname"><a href="#ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2">QCPAxisTicker::tssMeetTickCount</a></div><div class="ttdeci">@ tssMeetTickCount</div><div class="ttdoc">Less readable tick steps are allowed which in turn facilitates getting closer to the requested tick c...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01745">qcustomplot.h:1744</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8"><div class="ttname"><a href="#ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8">QCPAxisTicker::tssReadability</a></div><div class="ttdeci">@ tssReadability</div><div class="ttdoc">A nicely readable tick step is prioritized over matching the requested number of ticks (see setTickCo...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01744">qcustomplot.h:1743</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -274,6 +284,17 @@ Creating own axis tickers</h1>
 </div><div class="memdoc">
 <p>Constructs the ticker and sets reasonable default values. Axis tickers are commonly created managed by a QSharedPointer, which then can be passed to <a class="el" href="class_q_c_p_axis.html#a4ee03fcd2c74d05cd1a419b9af5cfbdc">QCPAxis::setTicker</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06124">6124</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6124</span>                             :</div>
+<div class="line"><span class="lineno"> 6125</span>  <a class="code hl_variable" href="#ac059d6d670b2f6132c593fb4de156701">mTickStepStrategy</a>(<a class="code hl_enumvalue" href="#ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8">tssReadability</a>),</div>
+<div class="line"><span class="lineno"> 6126</span>  <a class="code hl_variable" href="#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>(5),</div>
+<div class="line"><span class="lineno"> 6127</span>  <a class="code hl_variable" href="#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a>(0)</div>
+<div class="line"><span class="lineno"> 6128</span>{</div>
+<div class="line"><span class="lineno"> 6129</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a14a35b47d1aad11b08d18ea0e25937b8"><div class="ttname"><a href="#a14a35b47d1aad11b08d18ea0e25937b8">QCPAxisTicker::mTickCount</a></div><div class="ttdeci">int mTickCount</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01767">qcustomplot.h:1767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a560ef9347b1aa599a9bf0e2f29d3ec16"><div class="ttname"><a href="#a560ef9347b1aa599a9bf0e2f29d3ec16">QCPAxisTicker::mTickOrigin</a></div><div class="ttdeci">double mTickOrigin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01768">qcustomplot.h:1768</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ac059d6d670b2f6132c593fb4de156701"><div class="ttname"><a href="#ac059d6d670b2f6132c593fb4de156701">QCPAxisTicker::mTickStepStrategy</a></div><div class="ttdeci">TickStepStrategy mTickStepStrategy</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01766">qcustomplot.h:1766</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1119d6f09ad720f9c5dfdd2559047161" name="a1119d6f09ad720f9c5dfdd2559047161"></a>
@@ -299,6 +320,11 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06131">6131</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6132</span>{</div>
+<div class="line"><span class="lineno"> 6133</span>  </div>
+<div class="line"><span class="lineno"> 6134</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -325,6 +351,30 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06457">6457</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6458</span>{</div>
+<div class="line"><span class="lineno"> 6459</span>  <span class="keywordtype">double</span> magnitude;</div>
+<div class="line"><span class="lineno"> 6460</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> mantissa = <a class="code hl_function" href="#abe99aaaf6c512812869b0a19937c76ff">getMantissa</a>(input, &amp;magnitude);</div>
+<div class="line"><span class="lineno"> 6461</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#ac059d6d670b2f6132c593fb4de156701">mTickStepStrategy</a>)</div>
+<div class="line"><span class="lineno"> 6462</span>  {</div>
+<div class="line"><span class="lineno"> 6463</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8">tssReadability</a>:</div>
+<div class="line"><span class="lineno"> 6464</span>    {</div>
+<div class="line"><span class="lineno"> 6465</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a4ea0a7c4ca1c610f92b9bd5944ab4260">pickClosest</a>(mantissa, QVector&lt;double&gt;() &lt;&lt; 1.0 &lt;&lt; 2.0 &lt;&lt; 2.5 &lt;&lt; 5.0 &lt;&lt; 10.0)*magnitude;</div>
+<div class="line"><span class="lineno"> 6466</span>    }</div>
+<div class="line"><span class="lineno"> 6467</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2">tssMeetTickCount</a>:</div>
+<div class="line"><span class="lineno"> 6468</span>    {</div>
+<div class="line"><span class="lineno"> 6469</span>      <span class="comment">// this gives effectively a mantissa of 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 6.0, 8.0, 10.0</span></div>
+<div class="line"><span class="lineno"> 6470</span>      <span class="keywordflow">if</span> (mantissa &lt;= 5.0)</div>
+<div class="line"><span class="lineno"> 6471</span>        <span class="keywordflow">return</span> int(mantissa*2)/2.0*magnitude; <span class="comment">// round digit after decimal point to 0.5</span></div>
+<div class="line"><span class="lineno"> 6472</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6473</span>        <span class="keywordflow">return</span> int(mantissa/2.0)*2.0*magnitude; <span class="comment">// round to first digit in multiples of 2</span></div>
+<div class="line"><span class="lineno"> 6474</span>    }</div>
+<div class="line"><span class="lineno"> 6475</span>  }</div>
+<div class="line"><span class="lineno"> 6476</span>  <span class="keywordflow">return</span> input;</div>
+<div class="line"><span class="lineno"> 6477</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a4ea0a7c4ca1c610f92b9bd5944ab4260"><div class="ttname"><a href="#a4ea0a7c4ca1c610f92b9bd5944ab4260">QCPAxisTicker::pickClosest</a></div><div class="ttdeci">double pickClosest(double target, const QVector&lt; double &gt; &amp;candidates) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06424">qcustomplot.cpp:6424</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_abe99aaaf6c512812869b0a19937c76ff"><div class="ttname"><a href="#abe99aaaf6c512812869b0a19937c76ff">QCPAxisTicker::getMantissa</a></div><div class="ttdeci">double getMantissa(double input, double *magnitude=nullptr) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06444">qcustomplot.cpp:6444</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a804050e408f37a0b9770c6654ebe6aa7" name="a804050e408f37a0b9770c6654ebe6aa7"></a>
@@ -364,6 +414,16 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06366">6366</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6367</span>{</div>
+<div class="line"><span class="lineno"> 6368</span>  QVector&lt;QString&gt; result;</div>
+<div class="line"><span class="lineno"> 6369</span>  result.reserve(ticks.size());</div>
+<div class="line"><span class="lineno"> 6370</span>  <span class="keywordflow">foreach</span> (<span class="keywordtype">double</span> tickCoord, ticks)</div>
+<div class="line"><span class="lineno"> 6371</span>    result.append(<a class="code hl_function" href="#a8201eb4aa8be192bf786b126eb5ee089">getTickLabel</a>(tickCoord, locale, formatChar, precision));</div>
+<div class="line"><span class="lineno"> 6372</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6373</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a8201eb4aa8be192bf786b126eb5ee089"><div class="ttname"><a href="#a8201eb4aa8be192bf786b126eb5ee089">QCPAxisTicker::getTickLabel</a></div><div class="ttdeci">virtual QString getTickLabel(double tick, const QLocale &amp;locale, QChar formatChar, int precision)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06298">qcustomplot.cpp:6298</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9a6435723fa0bd366d1ea4c2cff7c33f" name="a9a6435723fa0bd366d1ea4c2cff7c33f"></a>
@@ -393,6 +453,22 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06312">6312</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6313</span>{</div>
+<div class="line"><span class="lineno"> 6314</span>  QVector&lt;double&gt; result;</div>
+<div class="line"><span class="lineno"> 6315</span>  <span class="keywordflow">if</span> (subTickCount &lt;= 0 || ticks.size() &lt; 2)</div>
+<div class="line"><span class="lineno"> 6316</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6317</span>  </div>
+<div class="line"><span class="lineno"> 6318</span>  result.reserve((ticks.size()-1)*subTickCount);</div>
+<div class="line"><span class="lineno"> 6319</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;ticks.size(); ++i)</div>
+<div class="line"><span class="lineno"> 6320</span>  {</div>
+<div class="line"><span class="lineno"> 6321</span>    <span class="keywordtype">double</span> subTickStep = (ticks.at(i)-ticks.at(i-1))/<span class="keywordtype">double</span>(subTickCount+1);</div>
+<div class="line"><span class="lineno"> 6322</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=1; k&lt;=subTickCount; ++k)</div>
+<div class="line"><span class="lineno"> 6323</span>      result.append(ticks.at(i-1) + k*subTickStep);</div>
+<div class="line"><span class="lineno"> 6324</span>  }</div>
+<div class="line"><span class="lineno"> 6325</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6326</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af4645a824c7bd2ca8fc7e86ebf9055bd" name="af4645a824c7bd2ca8fc7e86ebf9055bd"></a>
@@ -424,6 +500,22 @@ Creating own axis tickers</h1>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_ticker_date_time.html#a44c2c09a303d281801b69226e243047d">QCPAxisTickerDateTime</a>, <a class="el" href="class_q_c_p_axis_ticker_log.html#af8873a8d1d2b9392d8f7a73218c889ab">QCPAxisTickerLog</a>, and <a class="el" href="class_q_c_p_axis_ticker_text.html#aa195c4fd0364d0393f1798fb495d6a60">QCPAxisTickerText</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06343">6343</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6344</span>{</div>
+<div class="line"><span class="lineno"> 6345</span>  QVector&lt;double&gt; result;</div>
+<div class="line"><span class="lineno"> 6346</span>  <span class="comment">// Generate tick positions according to tickStep:</span></div>
+<div class="line"><span class="lineno"> 6347</span>  qint64 firstStep = qint64(floor((range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>-<a class="code hl_variable" href="#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a>)/tickStep)); <span class="comment">// do not use qFloor here, or we&#39;ll lose 64 bit precision</span></div>
+<div class="line"><span class="lineno"> 6348</span>  qint64 lastStep = qint64(ceil((range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a>)/tickStep)); <span class="comment">// do not use qCeil here, or we&#39;ll lose 64 bit precision</span></div>
+<div class="line"><span class="lineno"> 6349</span>  <span class="keywordtype">int</span> tickcount = int(lastStep-firstStep+1);</div>
+<div class="line"><span class="lineno"> 6350</span>  <span class="keywordflow">if</span> (tickcount &lt; 0) tickcount = 0;</div>
+<div class="line"><span class="lineno"> 6351</span>  result.resize(tickcount);</div>
+<div class="line"><span class="lineno"> 6352</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;tickcount; ++i)</div>
+<div class="line"><span class="lineno"> 6353</span>    result[i] = <a class="code hl_variable" href="#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a> + (firstStep+i)*tickStep;</div>
+<div class="line"><span class="lineno"> 6354</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6355</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefbd11725678ca824add8cf926cbc856" name="aefbd11725678ca824add8cf926cbc856"></a>
@@ -481,6 +573,37 @@ Creating own axis tickers</h1>
 <p>The ticks are generated for the specified <em>range</em>. The generated labels typically follow the specified <em>locale</em>, <em>formatChar</em> and number <em>precision</em>, however this might be different (or even irrelevant) for certain <a class="el" href="class_q_c_p_axis_ticker.html" title="The base class tick generator used by QCPAxis to create tick positions and tick labels.">QCPAxisTicker</a> subclasses.</p>
 <p>The output parameter <em>ticks</em> is filled with the generated tick positions in axis coordinates. The output parameters <em>subTicks</em> and <em>tickLabels</em> are optional (set them to <code>nullptr</code> if not needed) and are respectively filled with sub tick coordinates, and tick label strings belonging to <em>ticks</em> by index. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06187">6187</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6188</span>{</div>
+<div class="line"><span class="lineno"> 6189</span>  <span class="comment">// generate (major) ticks:</span></div>
+<div class="line"><span class="lineno"> 6190</span>  <span class="keywordtype">double</span> tickStep = <a class="code hl_function" href="#a910d69bcec2de37e92d8d4e1ecf201e2">getTickStep</a>(range);</div>
+<div class="line"><span class="lineno"> 6191</span>  ticks = <a class="code hl_function" href="#af4645a824c7bd2ca8fc7e86ebf9055bd">createTickVector</a>(tickStep, range);</div>
+<div class="line"><span class="lineno"> 6192</span>  <a class="code hl_function" href="#ab28cc1ab549489be7975f5ce7e717916">trimTicks</a>(range, ticks, <span class="keyword">true</span>); <span class="comment">// trim ticks to visible range plus one outer tick on each side (incase a subclass createTickVector creates more)</span></div>
+<div class="line"><span class="lineno"> 6193</span>  </div>
+<div class="line"><span class="lineno"> 6194</span>  <span class="comment">// generate sub ticks between major ticks:</span></div>
+<div class="line"><span class="lineno"> 6195</span>  <span class="keywordflow">if</span> (subTicks)</div>
+<div class="line"><span class="lineno"> 6196</span>  {</div>
+<div class="line"><span class="lineno"> 6197</span>    <span class="keywordflow">if</span> (!ticks.isEmpty())</div>
+<div class="line"><span class="lineno"> 6198</span>    {</div>
+<div class="line"><span class="lineno"> 6199</span>      *subTicks = <a class="code hl_function" href="#a9a6435723fa0bd366d1ea4c2cff7c33f">createSubTickVector</a>(<a class="code hl_function" href="#a4ccc403ced7a1457ce6ba293509933c8">getSubTickCount</a>(tickStep), ticks);</div>
+<div class="line"><span class="lineno"> 6200</span>      <a class="code hl_function" href="#ab28cc1ab549489be7975f5ce7e717916">trimTicks</a>(range, *subTicks, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 6201</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6202</span>      *subTicks = QVector&lt;double&gt;();</div>
+<div class="line"><span class="lineno"> 6203</span>  }</div>
+<div class="line"><span class="lineno"> 6204</span>  </div>
+<div class="line"><span class="lineno"> 6205</span>  <span class="comment">// finally trim also outliers (no further clipping happens in axis drawing):</span></div>
+<div class="line"><span class="lineno"> 6206</span>  <a class="code hl_function" href="#ab28cc1ab549489be7975f5ce7e717916">trimTicks</a>(range, ticks, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 6207</span>  <span class="comment">// generate labels for visible ticks if requested:</span></div>
+<div class="line"><span class="lineno"> 6208</span>  <span class="keywordflow">if</span> (tickLabels)</div>
+<div class="line"><span class="lineno"> 6209</span>    *tickLabels = <a class="code hl_function" href="#a804050e408f37a0b9770c6654ebe6aa7">createLabelVector</a>(ticks, locale, formatChar, precision);</div>
+<div class="line"><span class="lineno"> 6210</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a4ccc403ced7a1457ce6ba293509933c8"><div class="ttname"><a href="#a4ccc403ced7a1457ce6ba293509933c8">QCPAxisTicker::getSubTickCount</a></div><div class="ttdeci">virtual int getSubTickCount(double tickStep)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06235">qcustomplot.cpp:6235</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a804050e408f37a0b9770c6654ebe6aa7"><div class="ttname"><a href="#a804050e408f37a0b9770c6654ebe6aa7">QCPAxisTicker::createLabelVector</a></div><div class="ttdeci">virtual QVector&lt; QString &gt; createLabelVector(const QVector&lt; double &gt; &amp;ticks, const QLocale &amp;locale, QChar formatChar, int precision)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06366">qcustomplot.cpp:6366</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a910d69bcec2de37e92d8d4e1ecf201e2"><div class="ttname"><a href="#a910d69bcec2de37e92d8d4e1ecf201e2">QCPAxisTicker::getTickStep</a></div><div class="ttdeci">virtual double getTickStep(const QCPRange &amp;range)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06222">qcustomplot.cpp:6222</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_a9a6435723fa0bd366d1ea4c2cff7c33f"><div class="ttname"><a href="#a9a6435723fa0bd366d1ea4c2cff7c33f">QCPAxisTicker::createSubTickVector</a></div><div class="ttdeci">virtual QVector&lt; double &gt; createSubTickVector(int subTickCount, const QVector&lt; double &gt; &amp;ticks)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06312">qcustomplot.cpp:6312</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ab28cc1ab549489be7975f5ce7e717916"><div class="ttname"><a href="#ab28cc1ab549489be7975f5ce7e717916">QCPAxisTicker::trimTicks</a></div><div class="ttdeci">void trimTicks(const QCPRange &amp;range, QVector&lt; double &gt; &amp;ticks, bool keepOneOutlier) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06382">qcustomplot.cpp:6382</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_af4645a824c7bd2ca8fc7e86ebf9055bd"><div class="ttname"><a href="#af4645a824c7bd2ca8fc7e86ebf9055bd">QCPAxisTicker::createTickVector</a></div><div class="ttdeci">virtual QVector&lt; double &gt; createTickVector(double tickStep, const QCPRange &amp;range)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06343">qcustomplot.cpp:6343</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abe99aaaf6c512812869b0a19937c76ff" name="abe99aaaf6c512812869b0a19937c76ff"></a>
@@ -510,6 +633,13 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06444">6444</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6445</span>{</div>
+<div class="line"><span class="lineno"> 6446</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> mag = std::pow(10.0, std::floor(std::log10(input)));</div>
+<div class="line"><span class="lineno"> 6447</span>  <span class="keywordflow">if</span> (magnitude) *magnitude = mag;</div>
+<div class="line"><span class="lineno"> 6448</span>  <span class="keywordflow">return</span> input/mag;</div>
+<div class="line"><span class="lineno"> 6449</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4ccc403ced7a1457ce6ba293509933c8" name="a4ccc403ced7a1457ce6ba293509933c8"></a>
@@ -537,6 +667,58 @@ Creating own axis tickers</h1>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_ticker_date_time.html#a78dece0d51426a3c310528d413e09193">QCPAxisTickerDateTime</a>, <a class="el" href="class_q_c_p_axis_ticker_log.html#a352fef7ae68837acd26e35188aa86167">QCPAxisTickerLog</a>, <a class="el" href="class_q_c_p_axis_ticker_pi.html#a56c90f870da97c8670cfae4d04ff3ac7">QCPAxisTickerPi</a>, <a class="el" href="class_q_c_p_axis_ticker_text.html#a9c2488b877776870239abda4c8106052">QCPAxisTickerText</a>, and <a class="el" href="class_q_c_p_axis_ticker_time.html#acace84c46598176aa53837e147595471">QCPAxisTickerTime</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06235">6235</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6236</span>{</div>
+<div class="line"><span class="lineno"> 6237</span>  <span class="keywordtype">int</span> result = 1; <span class="comment">// default to 1, if no proper value can be found</span></div>
+<div class="line"><span class="lineno"> 6238</span>  </div>
+<div class="line"><span class="lineno"> 6239</span>  <span class="comment">// separate integer and fractional part of mantissa:</span></div>
+<div class="line"><span class="lineno"> 6240</span>  <span class="keywordtype">double</span> epsilon = 0.01;</div>
+<div class="line"><span class="lineno"> 6241</span>  <span class="keywordtype">double</span> intPartf;</div>
+<div class="line"><span class="lineno"> 6242</span>  <span class="keywordtype">int</span> intPart;</div>
+<div class="line"><span class="lineno"> 6243</span>  <span class="keywordtype">double</span> fracPart = modf(<a class="code hl_function" href="#abe99aaaf6c512812869b0a19937c76ff">getMantissa</a>(tickStep), &amp;intPartf);</div>
+<div class="line"><span class="lineno"> 6244</span>  intPart = int(intPartf);</div>
+<div class="line"><span class="lineno"> 6245</span>  </div>
+<div class="line"><span class="lineno"> 6246</span>  <span class="comment">// handle cases with (almost) integer mantissa:</span></div>
+<div class="line"><span class="lineno"> 6247</span>  <span class="keywordflow">if</span> (fracPart &lt; epsilon || 1.0-fracPart &lt; epsilon)</div>
+<div class="line"><span class="lineno"> 6248</span>  {</div>
+<div class="line"><span class="lineno"> 6249</span>    <span class="keywordflow">if</span> (1.0-fracPart &lt; epsilon)</div>
+<div class="line"><span class="lineno"> 6250</span>      ++intPart;</div>
+<div class="line"><span class="lineno"> 6251</span>    <span class="keywordflow">switch</span> (intPart)</div>
+<div class="line"><span class="lineno"> 6252</span>    {</div>
+<div class="line"><span class="lineno"> 6253</span>      <span class="keywordflow">case</span> 1: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 1.0 -&gt; 0.2 substep</span></div>
+<div class="line"><span class="lineno"> 6254</span>      <span class="keywordflow">case</span> 2: result = 3; <span class="keywordflow">break</span>; <span class="comment">// 2.0 -&gt; 0.5 substep</span></div>
+<div class="line"><span class="lineno"> 6255</span>      <span class="keywordflow">case</span> 3: result = 2; <span class="keywordflow">break</span>; <span class="comment">// 3.0 -&gt; 1.0 substep</span></div>
+<div class="line"><span class="lineno"> 6256</span>      <span class="keywordflow">case</span> 4: result = 3; <span class="keywordflow">break</span>; <span class="comment">// 4.0 -&gt; 1.0 substep</span></div>
+<div class="line"><span class="lineno"> 6257</span>      <span class="keywordflow">case</span> 5: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 5.0 -&gt; 1.0 substep</span></div>
+<div class="line"><span class="lineno"> 6258</span>      <span class="keywordflow">case</span> 6: result = 2; <span class="keywordflow">break</span>; <span class="comment">// 6.0 -&gt; 2.0 substep</span></div>
+<div class="line"><span class="lineno"> 6259</span>      <span class="keywordflow">case</span> 7: result = 6; <span class="keywordflow">break</span>; <span class="comment">// 7.0 -&gt; 1.0 substep</span></div>
+<div class="line"><span class="lineno"> 6260</span>      <span class="keywordflow">case</span> 8: result = 3; <span class="keywordflow">break</span>; <span class="comment">// 8.0 -&gt; 2.0 substep</span></div>
+<div class="line"><span class="lineno"> 6261</span>      <span class="keywordflow">case</span> 9: result = 2; <span class="keywordflow">break</span>; <span class="comment">// 9.0 -&gt; 3.0 substep</span></div>
+<div class="line"><span class="lineno"> 6262</span>    }</div>
+<div class="line"><span class="lineno"> 6263</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6264</span>  {</div>
+<div class="line"><span class="lineno"> 6265</span>    <span class="comment">// handle cases with significantly fractional mantissa:</span></div>
+<div class="line"><span class="lineno"> 6266</span>    <span class="keywordflow">if</span> (qAbs(fracPart-0.5) &lt; epsilon) <span class="comment">// *.5 mantissa</span></div>
+<div class="line"><span class="lineno"> 6267</span>    {</div>
+<div class="line"><span class="lineno"> 6268</span>      <span class="keywordflow">switch</span> (intPart)</div>
+<div class="line"><span class="lineno"> 6269</span>      {</div>
+<div class="line"><span class="lineno"> 6270</span>        <span class="keywordflow">case</span> 1: result = 2; <span class="keywordflow">break</span>; <span class="comment">// 1.5 -&gt; 0.5 substep</span></div>
+<div class="line"><span class="lineno"> 6271</span>        <span class="keywordflow">case</span> 2: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 2.5 -&gt; 0.5 substep</span></div>
+<div class="line"><span class="lineno"> 6272</span>        <span class="keywordflow">case</span> 3: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 3.5 -&gt; 0.7 substep</span></div>
+<div class="line"><span class="lineno"> 6273</span>        <span class="keywordflow">case</span> 4: result = 2; <span class="keywordflow">break</span>; <span class="comment">// 4.5 -&gt; 1.5 substep</span></div>
+<div class="line"><span class="lineno"> 6274</span>        <span class="keywordflow">case</span> 5: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 5.5 -&gt; 1.1 substep (won&#39;t occur with default getTickStep from here on)</span></div>
+<div class="line"><span class="lineno"> 6275</span>        <span class="keywordflow">case</span> 6: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 6.5 -&gt; 1.3 substep</span></div>
+<div class="line"><span class="lineno"> 6276</span>        <span class="keywordflow">case</span> 7: result = 2; <span class="keywordflow">break</span>; <span class="comment">// 7.5 -&gt; 2.5 substep</span></div>
+<div class="line"><span class="lineno"> 6277</span>        <span class="keywordflow">case</span> 8: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 8.5 -&gt; 1.7 substep</span></div>
+<div class="line"><span class="lineno"> 6278</span>        <span class="keywordflow">case</span> 9: result = 4; <span class="keywordflow">break</span>; <span class="comment">// 9.5 -&gt; 1.9 substep</span></div>
+<div class="line"><span class="lineno"> 6279</span>      }</div>
+<div class="line"><span class="lineno"> 6280</span>    }</div>
+<div class="line"><span class="lineno"> 6281</span>    <span class="comment">// if mantissa fraction isn&#39;t 0.0 or 0.5, don&#39;t bother finding good sub tick marks, leave default</span></div>
+<div class="line"><span class="lineno"> 6282</span>  }</div>
+<div class="line"><span class="lineno"> 6283</span>  </div>
+<div class="line"><span class="lineno"> 6284</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 6285</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8201eb4aa8be192bf786b126eb5ee089" name="a8201eb4aa8be192bf786b126eb5ee089"></a>
@@ -578,6 +760,11 @@ Creating own axis tickers</h1>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_ticker_date_time.html#a4dc6a03f7ea5c619477528a683ed5c18">QCPAxisTickerDateTime</a>, <a class="el" href="class_q_c_p_axis_ticker_pi.html#a9a087d931d4344b8a91d5cecceff7109">QCPAxisTickerPi</a>, <a class="el" href="class_q_c_p_axis_ticker_text.html#a99247779a9c20bea1f50911117540a71">QCPAxisTickerText</a>, and <a class="el" href="class_q_c_p_axis_ticker_time.html#a046eb771bdf2a959f570db542b3a0be6">QCPAxisTickerTime</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06298">6298</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6299</span>{</div>
+<div class="line"><span class="lineno"> 6300</span>  <span class="keywordflow">return</span> locale.toString(tick, formatChar.toLatin1(), precision);</div>
+<div class="line"><span class="lineno"> 6301</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a910d69bcec2de37e92d8d4e1ecf201e2" name="a910d69bcec2de37e92d8d4e1ecf201e2"></a>
@@ -605,6 +792,14 @@ Creating own axis tickers</h1>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_ticker_date_time.html#a0560c14a3f87bb99ab136aca8321b32a">QCPAxisTickerDateTime</a>, <a class="el" href="class_q_c_p_axis_ticker_fixed.html#a9e99da01ab92a86aed415eef32fed13a">QCPAxisTickerFixed</a>, <a class="el" href="class_q_c_p_axis_ticker_pi.html#a55301f0072983bd2d7c131a24e1779e7">QCPAxisTickerPi</a>, <a class="el" href="class_q_c_p_axis_ticker_text.html#a628f16c41905e8c95c6622d6757a38c4">QCPAxisTickerText</a>, and <a class="el" href="class_q_c_p_axis_ticker_time.html#a5615064642090fe193797caea8b98cb4">QCPAxisTickerTime</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06222">6222</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6223</span>{</div>
+<div class="line"><span class="lineno"> 6224</span>  <span class="keywordtype">double</span> exactStep = range.<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()/double(<a class="code hl_variable" href="#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>+1e-10); <span class="comment">// mTickCount ticks on average, the small addition is to prevent jitter on exact integers</span></div>
+<div class="line"><span class="lineno"> 6225</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#ac7df6c72876b7abd67c932663a0b0f6a">cleanMantissa</a>(exactStep);</div>
+<div class="line"><span class="lineno"> 6226</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_ticker_html_ac7df6c72876b7abd67c932663a0b0f6a"><div class="ttname"><a href="#ac7df6c72876b7abd67c932663a0b0f6a">QCPAxisTicker::cleanMantissa</a></div><div class="ttdeci">double cleanMantissa(double input) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l06457">qcustomplot.cpp:6457</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a62326e7cc4316b96df6a60813230e63f"><div class="ttname"><a href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">QCPRange::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00853">qcustomplot.h:853</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4ea0a7c4ca1c610f92b9bd5944ab4260" name="a4ea0a7c4ca1c610f92b9bd5944ab4260"></a>
@@ -634,6 +829,19 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06424">6424</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6425</span>{</div>
+<div class="line"><span class="lineno"> 6426</span>  <span class="keywordflow">if</span> (candidates.size() == 1)</div>
+<div class="line"><span class="lineno"> 6427</span>    <span class="keywordflow">return</span> candidates.first();</div>
+<div class="line"><span class="lineno"> 6428</span>  QVector&lt;double&gt;::const_iterator it = std::lower_bound(candidates.constBegin(), candidates.constEnd(), target);</div>
+<div class="line"><span class="lineno"> 6429</span>  <span class="keywordflow">if</span> (it == candidates.constEnd())</div>
+<div class="line"><span class="lineno"> 6430</span>    <span class="keywordflow">return</span> *(it-1);</div>
+<div class="line"><span class="lineno"> 6431</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (it == candidates.constBegin())</div>
+<div class="line"><span class="lineno"> 6432</span>    <span class="keywordflow">return</span> *it;</div>
+<div class="line"><span class="lineno"> 6433</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6434</span>    <span class="keywordflow">return</span> target-*(it-1) &lt; *it-target ? *(it-1) : *it;</div>
+<div class="line"><span class="lineno"> 6435</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47752abba8293e6dc18491501ae34008" name="a47752abba8293e6dc18491501ae34008"></a>
@@ -653,6 +861,14 @@ Creating own axis tickers</h1>
 <p>Sets how many ticks this ticker shall aim to generate across the axis range. Note that <em>count</em> is not guaranteed to be matched exactly, as generating readable tick intervals may conflict with the requested number of ticks.</p>
 <p>Whether the readability has priority over meeting the requested <em>count</em> can be specified with <a class="el" href="#a73b1d847c1a12159af6bfda4ebebe7d5">setTickStepStrategy</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06153">6153</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6154</span>{</div>
+<div class="line"><span class="lineno"> 6155</span>  <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><span class="lineno"> 6156</span>    <a class="code hl_variable" href="#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a> = count;</div>
+<div class="line"><span class="lineno"> 6157</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6158</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;tick count must be greater than zero:&quot;</span> &lt;&lt; count;</div>
+<div class="line"><span class="lineno"> 6159</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab509c7e500293bf66a8409f0d7c23943" name="ab509c7e500293bf66a8409f0d7c23943"></a>
@@ -672,6 +888,11 @@ Creating own axis tickers</h1>
 <p>Sets the mathematical coordinate (or "offset") of the zeroth tick. This tick coordinate is just a concept and doesn't need to be inside the currently visible axis range.</p>
 <p>By default <em>origin</em> is zero, which for example yields ticks {-5, 0, 5, 10, 15,...} when the tick step is five. If <em>origin</em> is now set to 1 instead, the correspondingly generated ticks would be {-4, 1, 6, 11, 16,...}. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06169">6169</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6170</span>{</div>
+<div class="line"><span class="lineno"> 6171</span>  <a class="code hl_variable" href="#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a> = origin;</div>
+<div class="line"><span class="lineno"> 6172</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a73b1d847c1a12159af6bfda4ebebe7d5" name="a73b1d847c1a12159af6bfda4ebebe7d5"></a>
@@ -690,6 +911,11 @@ Creating own axis tickers</h1>
 </div><div class="memdoc">
 <p>Sets which strategy the axis ticker follows when choosing the size of the tick step. For the available strategies, see <a class="el" href="#ab6d2f9d9477821623ac9bc4b21ddf49a">TickStepStrategy</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06140">6140</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6141</span>{</div>
+<div class="line"><span class="lineno"> 6142</span>  <a class="code hl_variable" href="#ac059d6d670b2f6132c593fb4de156701">mTickStepStrategy</a> = strategy;</div>
+<div class="line"><span class="lineno"> 6143</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf9edbe4169ce55e216fd067cc139452" name="aaf9edbe4169ce55e216fd067cc139452"></a>
@@ -715,6 +941,9 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01753">1753</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1753</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a14a35b47d1aad11b08d18ea0e25937b8">mTickCount</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac0c6e9587c36fdeefb5518c00fe7ab15" name="ac0c6e9587c36fdeefb5518c00fe7ab15"></a>
@@ -740,6 +969,9 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01754">1754</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1754</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a560ef9347b1aa599a9bf0e2f29d3ec16">mTickOrigin</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a58df76f2ec3eb48401bdd314b0e14ba1" name="a58df76f2ec3eb48401bdd314b0e14ba1"></a>
@@ -765,6 +997,9 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01752">1752</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1752</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac059d6d670b2f6132c593fb4de156701">mTickStepStrategy</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab28cc1ab549489be7975f5ce7e717916" name="ab28cc1ab549489be7975f5ce7e717916"></a>
@@ -799,6 +1034,42 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l06382">6382</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6383</span>{</div>
+<div class="line"><span class="lineno"> 6384</span>  <span class="keywordtype">bool</span> lowFound = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6385</span>  <span class="keywordtype">bool</span> highFound = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6386</span>  <span class="keywordtype">int</span> lowIndex = 0;</div>
+<div class="line"><span class="lineno"> 6387</span>  <span class="keywordtype">int</span> highIndex = -1;</div>
+<div class="line"><span class="lineno"> 6388</span>  </div>
+<div class="line"><span class="lineno"> 6389</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; ticks.size(); ++i)</div>
+<div class="line"><span class="lineno"> 6390</span>  {</div>
+<div class="line"><span class="lineno"> 6391</span>    <span class="keywordflow">if</span> (ticks.at(i) &gt;= range.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)</div>
+<div class="line"><span class="lineno"> 6392</span>    {</div>
+<div class="line"><span class="lineno"> 6393</span>      lowFound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6394</span>      lowIndex = i;</div>
+<div class="line"><span class="lineno"> 6395</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6396</span>    }</div>
+<div class="line"><span class="lineno"> 6397</span>  }</div>
+<div class="line"><span class="lineno"> 6398</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=ticks.size()-1; i &gt;= 0; --i)</div>
+<div class="line"><span class="lineno"> 6399</span>  {</div>
+<div class="line"><span class="lineno"> 6400</span>    <span class="keywordflow">if</span> (ticks.at(i) &lt;= range.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)</div>
+<div class="line"><span class="lineno"> 6401</span>    {</div>
+<div class="line"><span class="lineno"> 6402</span>      highFound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6403</span>      highIndex = i;</div>
+<div class="line"><span class="lineno"> 6404</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6405</span>    }</div>
+<div class="line"><span class="lineno"> 6406</span>  }</div>
+<div class="line"><span class="lineno"> 6407</span>  </div>
+<div class="line"><span class="lineno"> 6408</span>  <span class="keywordflow">if</span> (highFound &amp;&amp; lowFound)</div>
+<div class="line"><span class="lineno"> 6409</span>  {</div>
+<div class="line"><span class="lineno"> 6410</span>    <span class="keywordtype">int</span> trimFront = qMax(0, lowIndex-(keepOneOutlier ? 1 : 0));</div>
+<div class="line"><span class="lineno"> 6411</span>    <span class="keywordtype">int</span> trimBack = qMax(0, ticks.size()-(keepOneOutlier ? 2 : 1)-highIndex);</div>
+<div class="line"><span class="lineno"> 6412</span>    <span class="keywordflow">if</span> (trimFront &gt; 0 || trimBack &gt; 0)</div>
+<div class="line"><span class="lineno"> 6413</span>      ticks = ticks.mid(trimFront, ticks.size()-trimFront-trimBack);</div>
+<div class="line"><span class="lineno"> 6414</span>  } <span class="keywordflow">else</span> <span class="comment">// all ticks are either all below or all above the range</span></div>
+<div class="line"><span class="lineno"> 6415</span>    ticks.clear();</div>
+<div class="line"><span class="lineno"> 6416</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -822,6 +1093,8 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01767">1767</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a560ef9347b1aa599a9bf0e2f29d3ec16" name="a560ef9347b1aa599a9bf0e2f29d3ec16"></a>
@@ -843,6 +1116,8 @@ Creating own axis tickers</h1>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01768">1768</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -866,11 +1141,13 @@ Creating own axis tickers</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01766">1766</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

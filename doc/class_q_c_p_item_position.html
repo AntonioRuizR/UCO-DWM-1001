@@ -248,6 +248,8 @@ Protected Attributes</h2></td></tr>
 <p>A <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a> may have a parent <a class="el" href="class_q_c_p_item_anchor.html" title="An anchor of an item to which positions can be attached to.">QCPItemAnchor</a>, see <a class="el" href="#ac094d67a95d2dceafa0d50b9db3a7e51">setParentAnchor</a>. This way you can tie multiple items together. If the <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a> has a parent, its coordinates (<a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>) are considered to be absolute pixels in the reference frame of the parent anchor, where (0, 0) means directly ontop of the parent anchor. For example, You could attach the <em>start</em> position of a <a class="el" href="class_q_c_p_item_line.html" title="A line from one point to another.">QCPItemLine</a> to the <em>bottom</em> anchor of a <a class="el" href="class_q_c_p_item_text.html" title="A text label.">QCPItemText</a> to make the starting point of the line always be centered under the text label, no matter where the text is moved to. For more advanced plots, it is possible to assign different parent anchors per X/Y coordinate of the position, see <a class="el" href="#add71461a973927c74e42179480916d9c">setParentAnchorX</a>, <a class="el" href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">setParentAnchorY</a>. This way an item could follow another item in the X direction but stay at a fixed position in the Y direction. Or even follow item A in X, and item B in Y.</p>
 <p>Note that every <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a> inherits from <a class="el" href="class_q_c_p_item_anchor.html" title="An anchor of an item to which positions can be attached to.">QCPItemAnchor</a> and thus can itself be used as parent anchor for other positions.</p>
 <p>To set the apparent pixel position on the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> surface directly, use <a class="el" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a>. This works no matter what type this <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a> is or what parent-child situation it is in, as <a class="el" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a> transforms the coordinates appropriately, to make the position appear at the specified pixel values. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03643">3643</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aad9936c22bf43e3d358552f6e86dbdc8" name="aad9936c22bf43e3d358552f6e86dbdc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad9936c22bf43e3d358552f6e86dbdc8">&#9670;&#160;</a></span>PositionType</h2>
@@ -273,6 +275,17 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03653">3653</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3653</span>                    { <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>        </div>
+<div class="line"><span class="lineno"> 3654</span>                      ,<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a">ptViewportRatio</a>  </div>
+<div class="line"><span class="lineno"> 3657</span>                      ,<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>  </div>
+<div class="line"><span class="lineno"> 3660</span>                      ,<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>     </div>
+<div class="line"><span class="lineno"> 3661</span>                    };</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75"><div class="ttname"><a href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">QCPItemPosition::ptAxisRectRatio</a></div><div class="ttdeci">@ ptAxisRectRatio</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03660">qcustomplot.h:3657</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0"><div class="ttname"><a href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">QCPItemPosition::ptAbsolute</a></div><div class="ttdeci">@ ptAbsolute</div><div class="ttdoc">Static positioning in pixels, starting from the top left corner of the viewport/widget.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03654">qcustomplot.h:3653</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a"><div class="ttname"><a href="#aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a">QCPItemPosition::ptViewportRatio</a></div><div class="ttdeci">@ ptViewportRatio</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03657">qcustomplot.h:3654</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c"><div class="ttname"><a href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">QCPItemPosition::ptPlotCoords</a></div><div class="ttdeci">@ ptPlotCoords</div><div class="ttdoc">Dynamic positioning at a plot coordinate defined by two axes (see setAxes).</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03661">qcustomplot.h:3660</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -301,6 +314,26 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a new <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a>. You shouldn't create <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a> instances directly, even if you want to make a new item subclass. Use <a class="el" href="class_q_c_p_abstract_item.html#a75036d39c4d4e2e1a7dd145fff915d32">QCPAbstractItem::createPosition</a> instead, as explained in the subclassing section of the <a class="el" href="class_q_c_p_abstract_item.html" title="The abstract base class for all items in a plot.">QCPAbstractItem</a> documentation. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12217">12217</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12217</span>                                                                                                          :</div>
+<div class="line"><span class="lineno">12218</span>  <a class="code hl_function" href="class_q_c_p_item_anchor.html#a32573023c6fa65b4496f1f995e5bfa5f">QCPItemAnchor</a>(parentPlot, parentItem, <a class="code hl_function" href="class_q_c_p_item_anchor.html#aad37cdf5a3f63428f61be739014e212e">name</a>),</div>
+<div class="line"><span class="lineno">12219</span>  <a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a>(<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>),</div>
+<div class="line"><span class="lineno">12220</span>  <a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a>(<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>),</div>
+<div class="line"><span class="lineno">12221</span>  <a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>(0),</div>
+<div class="line"><span class="lineno">12222</span>  <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>(0),</div>
+<div class="line"><span class="lineno">12223</span>  <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">12224</span>  <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>(<span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">12225</span>{</div>
+<div class="line"><span class="lineno">12226</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a32573023c6fa65b4496f1f995e5bfa5f"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a32573023c6fa65b4496f1f995e5bfa5f">QCPItemAnchor::QCPItemAnchor</a></div><div class="ttdeci">QCPItemAnchor(QCustomPlot *parentPlot, QCPAbstractItem *parentItem, const QString &amp;name, int anchorId=-1)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12043">qcustomplot.cpp:12043</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_aad37cdf5a3f63428f61be739014e212e"><div class="ttname"><a href="class_q_c_p_item_anchor.html#aad37cdf5a3f63428f61be739014e212e">QCPItemAnchor::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03613">qcustomplot.h:3613</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a41b4641d18c90997b9c01bf304181bf0"><div class="ttname"><a href="#a41b4641d18c90997b9c01bf304181bf0">QCPItemPosition::mParentAnchorX</a></div><div class="ttdeci">QCPItemAnchor * mParentAnchorX</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03701">qcustomplot.h:3701</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a47c96c0ef4380e1af4aaa7c2265c260b"><div class="ttname"><a href="#a47c96c0ef4380e1af4aaa7c2265c260b">QCPItemPosition::mPositionTypeY</a></div><div class="ttdeci">PositionType mPositionTypeY</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03697">qcustomplot.h:3697</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a4ff3931ad115603dfb4c7000b24bb415"><div class="ttname"><a href="#a4ff3931ad115603dfb4c7000b24bb415">QCPItemPosition::mKey</a></div><div class="ttdeci">double mKey</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03700">qcustomplot.h:3700</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a67bf5df69f587d53731724a7d61c6c3f"><div class="ttname"><a href="#a67bf5df69f587d53731724a7d61c6c3f">QCPItemPosition::mValue</a></div><div class="ttdeci">double mValue</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03700">qcustomplot.h:3700</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_ae2a617dce057c5f3ec6878c1823aa291"><div class="ttname"><a href="#ae2a617dce057c5f3ec6878c1823aa291">QCPItemPosition::mPositionTypeX</a></div><div class="ttdeci">PositionType mPositionTypeX</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03697">qcustomplot.h:3697</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_afc6142a6a09c8fa41c44d3d54fadd737"><div class="ttname"><a href="#afc6142a6a09c8fa41c44d3d54fadd737">QCPItemPosition::mParentAnchorY</a></div><div class="ttdeci">QCPItemAnchor * mParentAnchorY</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03701">qcustomplot.h:3701</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a21f585ffa8d8e3a6ba0cc450701bca5a" name="a21f585ffa8d8e3a6ba0cc450701bca5a"></a>
@@ -326,6 +359,37 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12228">12228</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12229</span>{</div>
+<div class="line"><span class="lineno">12230</span>  <span class="comment">// unregister as parent at children:</span></div>
+<div class="line"><span class="lineno">12231</span>  <span class="comment">// Note: this is done in ~QCPItemAnchor again, but it&#39;s important QCPItemPosition does it itself, because only then</span></div>
+<div class="line"><span class="lineno">12232</span>  <span class="comment">//       the setParentAnchor(0) call the correct QCPItemPosition::pixelPosition function instead of QCPItemAnchor::pixelPosition</span></div>
+<div class="line"><span class="lineno">12233</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_item_position.html">QCPItemPosition</a> *child, <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a3c0bfd6e50f3b48e2a9b3824695b20f7">mChildrenX</a>.values())</div>
+<div class="line"><span class="lineno">12234</span>  {</div>
+<div class="line"><span class="lineno">12235</span>    <span class="keywordflow">if</span> (child-&gt;<a class="code hl_function" href="#afd6993258e88255a6b5e82e98df40d6a">parentAnchorX</a>() == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">12236</span>      child-&gt;<a class="code hl_function" href="#add71461a973927c74e42179480916d9c">setParentAnchorX</a>(<span class="keyword">nullptr</span>); <span class="comment">// this acts back on this anchor and child removes itself from mChildrenX</span></div>
+<div class="line"><span class="lineno">12237</span>  }</div>
+<div class="line"><span class="lineno">12238</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_item_position.html">QCPItemPosition</a> *child, <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a3abe4eebd0683454d81c8341df6f7115">mChildrenY</a>.values())</div>
+<div class="line"><span class="lineno">12239</span>  {</div>
+<div class="line"><span class="lineno">12240</span>    <span class="keywordflow">if</span> (child-&gt;<a class="code hl_function" href="#a5151572d157fd475c9b2bc9b9df6595b">parentAnchorY</a>() == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">12241</span>      child-&gt;<a class="code hl_function" href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">setParentAnchorY</a>(<span class="keyword">nullptr</span>); <span class="comment">// this acts back on this anchor and child removes itself from mChildrenY</span></div>
+<div class="line"><span class="lineno">12242</span>  }</div>
+<div class="line"><span class="lineno">12243</span>  <span class="comment">// unregister as child in parent:</span></div>
+<div class="line"><span class="lineno">12244</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12245</span>    <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a230b1d494cda63458e289bbe1b642599">removeChildX</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">12246</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12247</span>    <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#aa2394911d8fff3bd958b9f4f1994b64d">removeChildY</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">12248</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a230b1d494cda63458e289bbe1b642599"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a230b1d494cda63458e289bbe1b642599">QCPItemAnchor::removeChildX</a></div><div class="ttdeci">void removeChildX(QCPItemPosition *pos)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12113">qcustomplot.cpp:12113</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a3abe4eebd0683454d81c8341df6f7115"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a3abe4eebd0683454d81c8341df6f7115">QCPItemAnchor::mChildrenY</a></div><div class="ttdeci">QSet&lt; QCPItemPosition * &gt; mChildrenY</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03624">qcustomplot.h:3624</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a3c0bfd6e50f3b48e2a9b3824695b20f7"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a3c0bfd6e50f3b48e2a9b3824695b20f7">QCPItemAnchor::mChildrenX</a></div><div class="ttdeci">QSet&lt; QCPItemPosition * &gt; mChildrenX</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03624">qcustomplot.h:3624</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_aa2394911d8fff3bd958b9f4f1994b64d"><div class="ttname"><a href="class_q_c_p_item_anchor.html#aa2394911d8fff3bd958b9f4f1994b64d">QCPItemAnchor::removeChildY</a></div><div class="ttdeci">void removeChildY(QCPItemPosition *pos)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12141">qcustomplot.cpp:12141</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html"><div class="ttname"><a href="class_q_c_p_item_position.html">QCPItemPosition</a></div><div class="ttdoc">Manages the position of an item.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03643">qcustomplot.h:3644</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a5151572d157fd475c9b2bc9b9df6595b"><div class="ttname"><a href="#a5151572d157fd475c9b2bc9b9df6595b">QCPItemPosition::parentAnchorY</a></div><div class="ttdeci">QCPItemAnchor * parentAnchorY() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03673">qcustomplot.h:3673</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_add5ec1db9d19cec58a3b5c9e0a0c3f9d"><div class="ttname"><a href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">QCPItemPosition::setParentAnchorY</a></div><div class="ttdeci">bool setParentAnchorY(QCPItemAnchor *parentAnchor, bool keepPixelPosition=false)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12444">qcustomplot.cpp:12444</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_add71461a973927c74e42179480916d9c"><div class="ttname"><a href="#add71461a973927c74e42179480916d9c">QCPItemPosition::setParentAnchorX</a></div><div class="ttdeci">bool setParentAnchorX(QCPItemAnchor *parentAnchor, bool keepPixelPosition=false)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12379">qcustomplot.cpp:12379</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_afd6993258e88255a6b5e82e98df40d6a"><div class="ttname"><a href="#afd6993258e88255a6b5e82e98df40d6a">QCPItemPosition::parentAnchorX</a></div><div class="ttdeci">QCPItemAnchor * parentAnchorX() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03672">qcustomplot.h:3672</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -344,6 +408,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12251">12251</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12252</span>{</div>
+<div class="line"><span class="lineno">12253</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data();</div>
+<div class="line"><span class="lineno">12254</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_add40fcb8994c247d85f42a126286b740"><div class="ttname"><a href="#add40fcb8994c247d85f42a126286b740">QCPItemPosition::mAxisRect</a></div><div class="ttdeci">QPointer&lt; QCPAxisRect &gt; mAxisRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03699">qcustomplot.h:3699</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa4ecf5b04c67049c05d37619e090820b" name="aa4ecf5b04c67049c05d37619e090820b"></a>
@@ -369,6 +439,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03676">3676</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3676</span>{ <span class="keywordflow">return</span> QPointF(<a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>, <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6fc519f1b73722a8d0cff7d4d647407e" name="a6fc519f1b73722a8d0cff7d4d647407e"></a>
@@ -394,6 +467,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03674">3674</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3674</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab6c3afb95511842eee29745480cc8a53" name="ab6c3afb95511842eee29745480cc8a53"></a>
@@ -419,6 +495,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03677">3677</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3677</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data(); }</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a63967a33933231e92f68c8ce06bfc37e"><div class="ttname"><a href="#a63967a33933231e92f68c8ce06bfc37e">QCPItemPosition::mKeyAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mKeyAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03698">qcustomplot.h:3698</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0a87f9dce1af6cc9b510785991bcf1c6" name="a0a87f9dce1af6cc9b510785991bcf1c6"></a>
@@ -447,6 +527,9 @@ Protected Attributes</h2></td></tr>
 <p>If different parent anchors were set for X and Y (<a class="el" href="#add71461a973927c74e42179480916d9c">setParentAnchorX</a>, <a class="el" href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">setParentAnchorY</a>), this method returns the parent anchor of the Y coordinate. In that case rather use <em><a class="el" href="#afd6993258e88255a6b5e82e98df40d6a">parentAnchorX()</a></em> and <em><a class="el" href="#a5151572d157fd475c9b2bc9b9df6595b">parentAnchorY()</a></em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac094d67a95d2dceafa0d50b9db3a7e51">setParentAnchor</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03671">3671</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3671</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#afd6993258e88255a6b5e82e98df40d6a">parentAnchorX</a>(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afd6993258e88255a6b5e82e98df40d6a" name="afd6993258e88255a6b5e82e98df40d6a"></a>
@@ -472,6 +555,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03672">3672</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3672</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5151572d157fd475c9b2bc9b9df6595b" name="a5151572d157fd475c9b2bc9b9df6595b"></a>
@@ -497,6 +583,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03673">3673</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3673</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8be9a4787635433edecc75164beb748d" name="a8be9a4787635433edecc75164beb748d"></a>
@@ -526,6 +615,105 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">QCPItemAnchor</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12541">12541</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12542</span>{</div>
+<div class="line"><span class="lineno">12543</span>  QPointF result;</div>
+<div class="line"><span class="lineno">12544</span>  </div>
+<div class="line"><span class="lineno">12545</span>  <span class="comment">// determine X:</span></div>
+<div class="line"><span class="lineno">12546</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a>)</div>
+<div class="line"><span class="lineno">12547</span>  {</div>
+<div class="line"><span class="lineno">12548</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>:</div>
+<div class="line"><span class="lineno">12549</span>    {</div>
+<div class="line"><span class="lineno">12550</span>      result.rx() = <a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>;</div>
+<div class="line"><span class="lineno">12551</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12552</span>        result.rx() += <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().x();</div>
+<div class="line"><span class="lineno">12553</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12554</span>    }</div>
+<div class="line"><span class="lineno">12555</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a">ptViewportRatio</a>:</div>
+<div class="line"><span class="lineno">12556</span>    {</div>
+<div class="line"><span class="lineno">12557</span>      result.rx() = <a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>*<a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().width();</div>
+<div class="line"><span class="lineno">12558</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12559</span>        result.rx() += <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().x();</div>
+<div class="line"><span class="lineno">12560</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12561</span>        result.rx() += <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().left();</div>
+<div class="line"><span class="lineno">12562</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12563</span>    }</div>
+<div class="line"><span class="lineno">12564</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>:</div>
+<div class="line"><span class="lineno">12565</span>    {</div>
+<div class="line"><span class="lineno">12566</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>)</div>
+<div class="line"><span class="lineno">12567</span>      {</div>
+<div class="line"><span class="lineno">12568</span>        result.rx() = <a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>*<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;width();</div>
+<div class="line"><span class="lineno">12569</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12570</span>          result.rx() += <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().x();</div>
+<div class="line"><span class="lineno">12571</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12572</span>          result.rx() += <a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;left();</div>
+<div class="line"><span class="lineno">12573</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12574</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type x is ptAxisRectRatio, but no axis rect was defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12575</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12576</span>    }</div>
+<div class="line"><span class="lineno">12577</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>:</div>
+<div class="line"><span class="lineno">12578</span>    {</div>
+<div class="line"><span class="lineno">12579</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> &amp;&amp; <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;orientation() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">12580</span>        result.rx() = <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;coordToPixel(<a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>);</div>
+<div class="line"><span class="lineno">12581</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a> &amp;&amp; <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;orientation() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">12582</span>        result.rx() = <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;coordToPixel(<a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>);</div>
+<div class="line"><span class="lineno">12583</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12584</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type x is ptPlotCoords, but no axes were defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12585</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12586</span>    }</div>
+<div class="line"><span class="lineno">12587</span>  }</div>
+<div class="line"><span class="lineno">12588</span>  </div>
+<div class="line"><span class="lineno">12589</span>  <span class="comment">// determine Y:</span></div>
+<div class="line"><span class="lineno">12590</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a>)</div>
+<div class="line"><span class="lineno">12591</span>  {</div>
+<div class="line"><span class="lineno">12592</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>:</div>
+<div class="line"><span class="lineno">12593</span>    {</div>
+<div class="line"><span class="lineno">12594</span>      result.ry() = <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>;</div>
+<div class="line"><span class="lineno">12595</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12596</span>        result.ry() += <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().y();</div>
+<div class="line"><span class="lineno">12597</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12598</span>    }</div>
+<div class="line"><span class="lineno">12599</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a">ptViewportRatio</a>:</div>
+<div class="line"><span class="lineno">12600</span>    {</div>
+<div class="line"><span class="lineno">12601</span>      result.ry() = <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>*<a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().height();</div>
+<div class="line"><span class="lineno">12602</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12603</span>        result.ry() += <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().y();</div>
+<div class="line"><span class="lineno">12604</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12605</span>        result.ry() += <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().top();</div>
+<div class="line"><span class="lineno">12606</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12607</span>    }</div>
+<div class="line"><span class="lineno">12608</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>:</div>
+<div class="line"><span class="lineno">12609</span>    {</div>
+<div class="line"><span class="lineno">12610</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>)</div>
+<div class="line"><span class="lineno">12611</span>      {</div>
+<div class="line"><span class="lineno">12612</span>        result.ry() = <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>*<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;height();</div>
+<div class="line"><span class="lineno">12613</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12614</span>          result.ry() += <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().y();</div>
+<div class="line"><span class="lineno">12615</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12616</span>          result.ry() += <a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;top();</div>
+<div class="line"><span class="lineno">12617</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12618</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type y is ptAxisRectRatio, but no axis rect was defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12619</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12620</span>    }</div>
+<div class="line"><span class="lineno">12621</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>:</div>
+<div class="line"><span class="lineno">12622</span>    {</div>
+<div class="line"><span class="lineno">12623</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> &amp;&amp; <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;orientation() == Qt::Vertical)</div>
+<div class="line"><span class="lineno">12624</span>        result.ry() = <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;coordToPixel(<a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a>);</div>
+<div class="line"><span class="lineno">12625</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a> &amp;&amp; <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;orientation() == Qt::Vertical)</div>
+<div class="line"><span class="lineno">12626</span>        result.ry() = <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;coordToPixel(<a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>);</div>
+<div class="line"><span class="lineno">12627</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12628</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type y is ptPlotCoords, but no axes were defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12629</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12630</span>    }</div>
+<div class="line"><span class="lineno">12631</span>  }</div>
+<div class="line"><span class="lineno">12632</span>  </div>
+<div class="line"><span class="lineno">12633</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">12634</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a06dcfb7220d26eee93eef56ae66582cb"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">QCPItemAnchor::pixelPosition</a></div><div class="ttdeci">virtual QPointF pixelPosition() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12072">qcustomplot.cpp:12072</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a59b968410831ba91a25cc75a77dde6f5"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">QCPItemAnchor::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03621">qcustomplot.h:3621</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a505dc2da24ba274452c1c817fcaba011"><div class="ttname"><a href="#a505dc2da24ba274452c1c817fcaba011">QCPItemPosition::mValueAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mValueAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03698">qcustomplot.h:3698</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a19842409b18f556b256d05e97fffc670"><div class="ttname"><a href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">QCustomPlot::viewport</a></div><div class="ttdeci">QRect viewport() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03832">qcustomplot.h:3832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2185f45c75ac8cb9be89daeaaad50e37" name="a2185f45c75ac8cb9be89daeaaad50e37"></a>
@@ -548,6 +736,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>When <a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a> is <a class="el" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>, this function may be used to specify the axes the coordinates set with <a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a> relate to. By default they are set to the initial xAxis and yAxis of the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12641">12641</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12642</span>{</div>
+<div class="line"><span class="lineno">12643</span>  <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> = <a class="code hl_function" href="#ab6c3afb95511842eee29745480cc8a53">keyAxis</a>;</div>
+<div class="line"><span class="lineno">12644</span>  <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a> = <a class="code hl_function" href="#aaa4dc49c9f142ff00b491272febc1de6">valueAxis</a>;</div>
+<div class="line"><span class="lineno">12645</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aaa4dc49c9f142ff00b491272febc1de6"><div class="ttname"><a href="#aaa4dc49c9f142ff00b491272febc1de6">QCPItemPosition::valueAxis</a></div><div class="ttdeci">QCPAxis * valueAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03678">qcustomplot.h:3678</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_ab6c3afb95511842eee29745480cc8a53"><div class="ttname"><a href="#ab6c3afb95511842eee29745480cc8a53">QCPItemPosition::keyAxis</a></div><div class="ttdeci">QCPAxis * keyAxis() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03677">qcustomplot.h:3677</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0cd9b326fb324710169e92e8ca0041c2" name="a0cd9b326fb324710169e92e8ca0041c2"></a>
@@ -566,6 +762,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>When <a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a> is <a class="el" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>, this function may be used to specify the axis rect the coordinates set with <a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a> relate to. By default this is set to the main axis rect of the <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12652">12652</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12653</span>{</div>
+<div class="line"><span class="lineno">12654</span>  <a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a> = <a class="code hl_function" href="#ae4081cfe7575f922f403c6e3a2ce7891">axisRect</a>;</div>
+<div class="line"><span class="lineno">12655</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_ae4081cfe7575f922f403c6e3a2ce7891"><div class="ttname"><a href="#ae4081cfe7575f922f403c6e3a2ce7891">QCPItemPosition::axisRect</a></div><div class="ttdeci">QCPAxisRect * axisRect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12251">qcustomplot.cpp:12251</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae2756567f063cd4be41697e105babc49" name="ae2756567f063cd4be41697e105babc49"></a>
@@ -585,6 +787,12 @@ Protected Attributes</h2></td></tr>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Sets the coordinates as a QPointF <em>pos</em> where pos.x has the meaning of <em>key</em> and pos.y the meaning of <em>value</em> of the <a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords(double key, double value)</a> method. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12530">12530</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12531</span>{</div>
+<div class="line"><span class="lineno">12532</span>  <a class="code hl_function" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(pos.x(), pos.y());</div>
+<div class="line"><span class="lineno">12533</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aa988ba4e87ab684c9021017dcaba945f"><div class="ttname"><a href="#aa988ba4e87ab684c9021017dcaba945f">QCPItemPosition::setCoords</a></div><div class="ttdeci">void setCoords(double key, double value)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12519">qcustomplot.cpp:12519</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa988ba4e87ab684c9021017dcaba945f" name="aa988ba4e87ab684c9021017dcaba945f"></a>
@@ -610,6 +818,14 @@ Protected Attributes</h2></td></tr>
 <p>If different types were configured for X and Y (<a class="el" href="#a2113b2351d6d00457fb3559a4e20c3ea">setTypeX</a>, <a class="el" href="#ac2a454aa5a54c1615c50686601ec4510">setTypeY</a>), <em>key</em> and <em>value</em> must also be provided in the different coordinate systems. Here, the X type refers to <em>key</em>, and the Y type refers to <em>value</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12519">12519</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12520</span>{</div>
+<div class="line"><span class="lineno">12521</span>  <a class="code hl_variable" href="#a4ff3931ad115603dfb4c7000b24bb415">mKey</a> = <a class="code hl_function" href="#a6fc519f1b73722a8d0cff7d4d647407e">key</a>;</div>
+<div class="line"><span class="lineno">12522</span>  <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a> = <a class="code hl_function" href="#acfcf86f840a7366a4299bff593d5d636">value</a>;</div>
+<div class="line"><span class="lineno">12523</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a6fc519f1b73722a8d0cff7d4d647407e"><div class="ttname"><a href="#a6fc519f1b73722a8d0cff7d4d647407e">QCPItemPosition::key</a></div><div class="ttdeci">double key() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03674">qcustomplot.h:3674</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_acfcf86f840a7366a4299bff593d5d636"><div class="ttname"><a href="#acfcf86f840a7366a4299bff593d5d636">QCPItemPosition::value</a></div><div class="ttdeci">double value() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03675">qcustomplot.h:3675</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac094d67a95d2dceafa0d50b9db3a7e51" name="ac094d67a95d2dceafa0d50b9db3a7e51"></a>
@@ -636,6 +852,14 @@ Protected Attributes</h2></td></tr>
 <p>If the <a class="el" href="class_q_c_p_item_position.html" title="Manages the position of an item.">QCPItemPosition</a> previously had no parent and the type is <a class="el" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>, the type is set to <a class="el" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>, to keep the position in a valid state.</p>
 <p>This method sets the parent anchor for both X and Y directions. It is also possible to set different parents for X and Y, see <a class="el" href="#add71461a973927c74e42179480916d9c">setParentAnchorX</a>, <a class="el" href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">setParentAnchorY</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12365">12365</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12366</span>{</div>
+<div class="line"><span class="lineno">12367</span>  <span class="keywordtype">bool</span> successX = <a class="code hl_function" href="#add71461a973927c74e42179480916d9c">setParentAnchorX</a>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>, keepPixelPosition);</div>
+<div class="line"><span class="lineno">12368</span>  <span class="keywordtype">bool</span> successY = <a class="code hl_function" href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">setParentAnchorY</a>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>, keepPixelPosition);</div>
+<div class="line"><span class="lineno">12369</span>  <span class="keywordflow">return</span> successX &amp;&amp; successY;</div>
+<div class="line"><span class="lineno">12370</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a0a87f9dce1af6cc9b510785991bcf1c6"><div class="ttname"><a href="#a0a87f9dce1af6cc9b510785991bcf1c6">QCPItemPosition::parentAnchor</a></div><div class="ttdeci">QCPItemAnchor * parentAnchor() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03671">qcustomplot.h:3671</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="add71461a973927c74e42179480916d9c" name="add71461a973927c74e42179480916d9c"></a>
@@ -660,6 +884,72 @@ Protected Attributes</h2></td></tr>
 <p>For a detailed description of what a parent anchor is, see the documentation of <a class="el" href="#ac094d67a95d2dceafa0d50b9db3a7e51">setParentAnchor</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac094d67a95d2dceafa0d50b9db3a7e51">setParentAnchor</a>, <a class="el" href="#add5ec1db9d19cec58a3b5c9e0a0c3f9d">setParentAnchorY</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12379">12379</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12380</span>{</div>
+<div class="line"><span class="lineno">12381</span>  <span class="comment">// make sure self is not assigned as parent:</span></div>
+<div class="line"><span class="lineno">12382</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a> == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">12383</span>  {</div>
+<div class="line"><span class="lineno">12384</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;can&#39;t set self as parent anchor&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>);</div>
+<div class="line"><span class="lineno">12385</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12386</span>  }</div>
+<div class="line"><span class="lineno">12387</span>  <span class="comment">// make sure no recursive parent-child-relationships are created:</span></div>
+<div class="line"><span class="lineno">12388</span>  <a class="code hl_class" href="class_q_c_p_item_anchor.html">QCPItemAnchor</a> *currentParent = <a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>;</div>
+<div class="line"><span class="lineno">12389</span>  <span class="keywordflow">while</span> (currentParent)</div>
+<div class="line"><span class="lineno">12390</span>  {</div>
+<div class="line"><span class="lineno">12391</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_item_position.html">QCPItemPosition</a> *currentParentPos = currentParent-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#ab04819cd5bc6dc607a68413828313675">toQCPItemPosition</a>())</div>
+<div class="line"><span class="lineno">12392</span>    {</div>
+<div class="line"><span class="lineno">12393</span>      <span class="comment">// is a QCPItemPosition, might have further parent, so keep iterating</span></div>
+<div class="line"><span class="lineno">12394</span>      <span class="keywordflow">if</span> (currentParentPos == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">12395</span>      {</div>
+<div class="line"><span class="lineno">12396</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;can&#39;t create recursive parent-child-relationship&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>);</div>
+<div class="line"><span class="lineno">12397</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12398</span>      }</div>
+<div class="line"><span class="lineno">12399</span>      currentParent = currentParentPos-&gt;parentAnchorX();</div>
+<div class="line"><span class="lineno">12400</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12401</span>    {</div>
+<div class="line"><span class="lineno">12402</span>      <span class="comment">// is a QCPItemAnchor, can&#39;t have further parent. Now make sure the parent items aren&#39;t the</span></div>
+<div class="line"><span class="lineno">12403</span>      <span class="comment">// same, to prevent a position being child of an anchor which itself depends on the position,</span></div>
+<div class="line"><span class="lineno">12404</span>      <span class="comment">// because they&#39;re both on the same item:</span></div>
+<div class="line"><span class="lineno">12405</span>      <span class="keywordflow">if</span> (currentParent-&gt;<a class="code hl_variable" href="class_q_c_p_item_anchor.html#a80fad480ad3bb980446ed6ebc00818ae">mParentItem</a> == <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a80fad480ad3bb980446ed6ebc00818ae">mParentItem</a>)</div>
+<div class="line"><span class="lineno">12406</span>      {</div>
+<div class="line"><span class="lineno">12407</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;can&#39;t set parent to be an anchor which itself depends on this position&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>);</div>
+<div class="line"><span class="lineno">12408</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12409</span>      }</div>
+<div class="line"><span class="lineno">12410</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12411</span>    }</div>
+<div class="line"><span class="lineno">12412</span>  }</div>
+<div class="line"><span class="lineno">12413</span>  </div>
+<div class="line"><span class="lineno">12414</span>  <span class="comment">// if previously no parent set and PosType is still ptPlotCoords, set to ptAbsolute:</span></div>
+<div class="line"><span class="lineno">12415</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a> &amp;&amp; <a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>)</div>
+<div class="line"><span class="lineno">12416</span>    <a class="code hl_function" href="#a2113b2351d6d00457fb3559a4e20c3ea">setTypeX</a>(<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>);</div>
+<div class="line"><span class="lineno">12417</span>  </div>
+<div class="line"><span class="lineno">12418</span>  <span class="comment">// save pixel position:</span></div>
+<div class="line"><span class="lineno">12419</span>  QPointF pixelP;</div>
+<div class="line"><span class="lineno">12420</span>  <span class="keywordflow">if</span> (keepPixelPosition)</div>
+<div class="line"><span class="lineno">12421</span>    pixelP = <a class="code hl_function" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>();</div>
+<div class="line"><span class="lineno">12422</span>  <span class="comment">// unregister at current parent anchor:</span></div>
+<div class="line"><span class="lineno">12423</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12424</span>    <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a230b1d494cda63458e289bbe1b642599">removeChildX</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">12425</span>  <span class="comment">// register at new parent anchor:</span></div>
+<div class="line"><span class="lineno">12426</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>)</div>
+<div class="line"><span class="lineno">12427</span>    <a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#aef15daa640debfb11b0aeaa2116c6fbc">addChildX</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">12428</span>  <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a> = <a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>;</div>
+<div class="line"><span class="lineno">12429</span>  <span class="comment">// restore pixel position under new parent:</span></div>
+<div class="line"><span class="lineno">12430</span>  <span class="keywordflow">if</span> (keepPixelPosition)</div>
+<div class="line"><span class="lineno">12431</span>    <a class="code hl_function" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a>(pixelP);</div>
+<div class="line"><span class="lineno">12432</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12433</span>    <a class="code hl_function" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(0, <a class="code hl_function" href="#aa4ecf5b04c67049c05d37619e090820b">coords</a>().y());</div>
+<div class="line"><span class="lineno">12434</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12435</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html"><div class="ttname"><a href="class_q_c_p_item_anchor.html">QCPItemAnchor</a></div><div class="ttdoc">An anchor of an item to which positions can be attached to.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03605">qcustomplot.h:3606</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_a80fad480ad3bb980446ed6ebc00818ae"><div class="ttname"><a href="class_q_c_p_item_anchor.html#a80fad480ad3bb980446ed6ebc00818ae">QCPItemAnchor::mParentItem</a></div><div class="ttdeci">QCPAbstractItem * mParentItem</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03622">qcustomplot.h:3622</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_ab04819cd5bc6dc607a68413828313675"><div class="ttname"><a href="class_q_c_p_item_anchor.html#ab04819cd5bc6dc607a68413828313675">QCPItemAnchor::toQCPItemPosition</a></div><div class="ttdeci">virtual QCPItemPosition * toQCPItemPosition()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03627">qcustomplot.h:3627</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_aef15daa640debfb11b0aeaa2116c6fbc"><div class="ttname"><a href="class_q_c_p_item_anchor.html#aef15daa640debfb11b0aeaa2116c6fbc">QCPItemAnchor::addChildX</a></div><div class="ttdeci">void addChildX(QCPItemPosition *pos)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12099">qcustomplot.cpp:12099</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a2113b2351d6d00457fb3559a4e20c3ea"><div class="ttname"><a href="#a2113b2351d6d00457fb3559a4e20c3ea">QCPItemPosition::setTypeX</a></div><div class="ttdeci">void setTypeX(PositionType type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12294">qcustomplot.cpp:12294</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a8be9a4787635433edecc75164beb748d"><div class="ttname"><a href="#a8be9a4787635433edecc75164beb748d">QCPItemPosition::pixelPosition</a></div><div class="ttdeci">virtual QPointF pixelPosition() const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12541">qcustomplot.cpp:12541</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a8d4f858f2089973967cf9cb81970ef0a"><div class="ttname"><a href="#a8d4f858f2089973967cf9cb81970ef0a">QCPItemPosition::setPixelPosition</a></div><div class="ttdeci">void setPixelPosition(const QPointF &amp;pixelPosition)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12667">qcustomplot.cpp:12667</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_aa4ecf5b04c67049c05d37619e090820b"><div class="ttname"><a href="#aa4ecf5b04c67049c05d37619e090820b">QCPItemPosition::coords</a></div><div class="ttdeci">QPointF coords() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03676">qcustomplot.h:3676</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="add5ec1db9d19cec58a3b5c9e0a0c3f9d" name="add5ec1db9d19cec58a3b5c9e0a0c3f9d"></a>
@@ -684,6 +974,66 @@ Protected Attributes</h2></td></tr>
 <p>For a detailed description of what a parent anchor is, see the documentation of <a class="el" href="#ac094d67a95d2dceafa0d50b9db3a7e51">setParentAnchor</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac094d67a95d2dceafa0d50b9db3a7e51">setParentAnchor</a>, <a class="el" href="#add71461a973927c74e42179480916d9c">setParentAnchorX</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12444">12444</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12445</span>{</div>
+<div class="line"><span class="lineno">12446</span>  <span class="comment">// make sure self is not assigned as parent:</span></div>
+<div class="line"><span class="lineno">12447</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a> == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">12448</span>  {</div>
+<div class="line"><span class="lineno">12449</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;can&#39;t set self as parent anchor&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>);</div>
+<div class="line"><span class="lineno">12450</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12451</span>  }</div>
+<div class="line"><span class="lineno">12452</span>  <span class="comment">// make sure no recursive parent-child-relationships are created:</span></div>
+<div class="line"><span class="lineno">12453</span>  <a class="code hl_class" href="class_q_c_p_item_anchor.html">QCPItemAnchor</a> *currentParent = <a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>;</div>
+<div class="line"><span class="lineno">12454</span>  <span class="keywordflow">while</span> (currentParent)</div>
+<div class="line"><span class="lineno">12455</span>  {</div>
+<div class="line"><span class="lineno">12456</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_item_position.html">QCPItemPosition</a> *currentParentPos = currentParent-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#ab04819cd5bc6dc607a68413828313675">toQCPItemPosition</a>())</div>
+<div class="line"><span class="lineno">12457</span>    {</div>
+<div class="line"><span class="lineno">12458</span>      <span class="comment">// is a QCPItemPosition, might have further parent, so keep iterating</span></div>
+<div class="line"><span class="lineno">12459</span>      <span class="keywordflow">if</span> (currentParentPos == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">12460</span>      {</div>
+<div class="line"><span class="lineno">12461</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;can&#39;t create recursive parent-child-relationship&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>);</div>
+<div class="line"><span class="lineno">12462</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12463</span>      }</div>
+<div class="line"><span class="lineno">12464</span>      currentParent = currentParentPos-&gt;parentAnchorY();</div>
+<div class="line"><span class="lineno">12465</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12466</span>    {</div>
+<div class="line"><span class="lineno">12467</span>      <span class="comment">// is a QCPItemAnchor, can&#39;t have further parent. Now make sure the parent items aren&#39;t the</span></div>
+<div class="line"><span class="lineno">12468</span>      <span class="comment">// same, to prevent a position being child of an anchor which itself depends on the position,</span></div>
+<div class="line"><span class="lineno">12469</span>      <span class="comment">// because they&#39;re both on the same item:</span></div>
+<div class="line"><span class="lineno">12470</span>      <span class="keywordflow">if</span> (currentParent-&gt;<a class="code hl_variable" href="class_q_c_p_item_anchor.html#a80fad480ad3bb980446ed6ebc00818ae">mParentItem</a> == <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a80fad480ad3bb980446ed6ebc00818ae">mParentItem</a>)</div>
+<div class="line"><span class="lineno">12471</span>      {</div>
+<div class="line"><span class="lineno">12472</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;can&#39;t set parent to be an anchor which itself depends on this position&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span>quintptr<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>);</div>
+<div class="line"><span class="lineno">12473</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12474</span>      }</div>
+<div class="line"><span class="lineno">12475</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12476</span>    }</div>
+<div class="line"><span class="lineno">12477</span>  }</div>
+<div class="line"><span class="lineno">12478</span>  </div>
+<div class="line"><span class="lineno">12479</span>  <span class="comment">// if previously no parent set and PosType is still ptPlotCoords, set to ptAbsolute:</span></div>
+<div class="line"><span class="lineno">12480</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a> &amp;&amp; <a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>)</div>
+<div class="line"><span class="lineno">12481</span>    <a class="code hl_function" href="#ac2a454aa5a54c1615c50686601ec4510">setTypeY</a>(<a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>);</div>
+<div class="line"><span class="lineno">12482</span>  </div>
+<div class="line"><span class="lineno">12483</span>  <span class="comment">// save pixel position:</span></div>
+<div class="line"><span class="lineno">12484</span>  QPointF pixelP;</div>
+<div class="line"><span class="lineno">12485</span>  <span class="keywordflow">if</span> (keepPixelPosition)</div>
+<div class="line"><span class="lineno">12486</span>    pixelP = <a class="code hl_function" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>();</div>
+<div class="line"><span class="lineno">12487</span>  <span class="comment">// unregister at current parent anchor:</span></div>
+<div class="line"><span class="lineno">12488</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12489</span>    <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#aa2394911d8fff3bd958b9f4f1994b64d">removeChildY</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">12490</span>  <span class="comment">// register at new parent anchor:</span></div>
+<div class="line"><span class="lineno">12491</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>)</div>
+<div class="line"><span class="lineno">12492</span>    <a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#af05dc56f24536f0c7a9a0f57b58cea67">addChildY</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">12493</span>  <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a> = <a class="code hl_function" href="#a0a87f9dce1af6cc9b510785991bcf1c6">parentAnchor</a>;</div>
+<div class="line"><span class="lineno">12494</span>  <span class="comment">// restore pixel position under new parent:</span></div>
+<div class="line"><span class="lineno">12495</span>  <span class="keywordflow">if</span> (keepPixelPosition)</div>
+<div class="line"><span class="lineno">12496</span>    <a class="code hl_function" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a>(pixelP);</div>
+<div class="line"><span class="lineno">12497</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12498</span>    <a class="code hl_function" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(<a class="code hl_function" href="#aa4ecf5b04c67049c05d37619e090820b">coords</a>().x(), 0);</div>
+<div class="line"><span class="lineno">12499</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12500</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_anchor_html_af05dc56f24536f0c7a9a0f57b58cea67"><div class="ttname"><a href="class_q_c_p_item_anchor.html#af05dc56f24536f0c7a9a0f57b58cea67">QCPItemAnchor::addChildY</a></div><div class="ttdeci">void addChildY(QCPItemPosition *pos)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12127">qcustomplot.cpp:12127</a></div></div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_ac2a454aa5a54c1615c50686601ec4510"><div class="ttname"><a href="#ac2a454aa5a54c1615c50686601ec4510">QCPItemPosition::setTypeY</a></div><div class="ttdeci">void setTypeY(PositionType type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l12324">qcustomplot.cpp:12324</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d4f858f2089973967cf9cb81970ef0a" name="a8d4f858f2089973967cf9cb81970ef0a"></a>
@@ -704,6 +1054,98 @@ Protected Attributes</h2></td></tr>
 <p>Only if the type is <a class="el" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a> and no parent anchor is set, this function's effect is identical to that of <a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>, <a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12667">12667</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12668</span>{</div>
+<div class="line"><span class="lineno">12669</span>  <span class="keywordtype">double</span> x = <a class="code hl_function" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>.x();</div>
+<div class="line"><span class="lineno">12670</span>  <span class="keywordtype">double</span> y = <a class="code hl_function" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>.y();</div>
+<div class="line"><span class="lineno">12671</span>  </div>
+<div class="line"><span class="lineno">12672</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a>)</div>
+<div class="line"><span class="lineno">12673</span>  {</div>
+<div class="line"><span class="lineno">12674</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>:</div>
+<div class="line"><span class="lineno">12675</span>    {</div>
+<div class="line"><span class="lineno">12676</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12677</span>        x -= <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().x();</div>
+<div class="line"><span class="lineno">12678</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12679</span>    }</div>
+<div class="line"><span class="lineno">12680</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a">ptViewportRatio</a>:</div>
+<div class="line"><span class="lineno">12681</span>    {</div>
+<div class="line"><span class="lineno">12682</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12683</span>        x -= <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().x();</div>
+<div class="line"><span class="lineno">12684</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12685</span>        x -= <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().left();</div>
+<div class="line"><span class="lineno">12686</span>      x /= double(<a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().width());</div>
+<div class="line"><span class="lineno">12687</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12688</span>    }</div>
+<div class="line"><span class="lineno">12689</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>:</div>
+<div class="line"><span class="lineno">12690</span>    {</div>
+<div class="line"><span class="lineno">12691</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>)</div>
+<div class="line"><span class="lineno">12692</span>      {</div>
+<div class="line"><span class="lineno">12693</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>)</div>
+<div class="line"><span class="lineno">12694</span>          x -= <a class="code hl_variable" href="#a41b4641d18c90997b9c01bf304181bf0">mParentAnchorX</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().x();</div>
+<div class="line"><span class="lineno">12695</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12696</span>          x -= <a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;left();</div>
+<div class="line"><span class="lineno">12697</span>        x /= double(<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;width());</div>
+<div class="line"><span class="lineno">12698</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12699</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type x is ptAxisRectRatio, but no axis rect was defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12700</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12701</span>    }</div>
+<div class="line"><span class="lineno">12702</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>:</div>
+<div class="line"><span class="lineno">12703</span>    {</div>
+<div class="line"><span class="lineno">12704</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> &amp;&amp; <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;orientation() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">12705</span>        x = <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;pixelToCoord(x);</div>
+<div class="line"><span class="lineno">12706</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a> &amp;&amp; <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;orientation() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno">12707</span>        y = <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;pixelToCoord(x);</div>
+<div class="line"><span class="lineno">12708</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12709</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type x is ptPlotCoords, but no axes were defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12710</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12711</span>    }</div>
+<div class="line"><span class="lineno">12712</span>  }</div>
+<div class="line"><span class="lineno">12713</span>  </div>
+<div class="line"><span class="lineno">12714</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a>)</div>
+<div class="line"><span class="lineno">12715</span>  {</div>
+<div class="line"><span class="lineno">12716</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0">ptAbsolute</a>:</div>
+<div class="line"><span class="lineno">12717</span>    {</div>
+<div class="line"><span class="lineno">12718</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12719</span>        y -= <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().y();</div>
+<div class="line"><span class="lineno">12720</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12721</span>    }</div>
+<div class="line"><span class="lineno">12722</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a">ptViewportRatio</a>:</div>
+<div class="line"><span class="lineno">12723</span>    {</div>
+<div class="line"><span class="lineno">12724</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12725</span>        y -= <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().y();</div>
+<div class="line"><span class="lineno">12726</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12727</span>        y -= <a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().top();</div>
+<div class="line"><span class="lineno">12728</span>      y /= double(<a class="code hl_variable" href="class_q_c_p_item_anchor.html#a59b968410831ba91a25cc75a77dde6f5">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a19842409b18f556b256d05e97fffc670">viewport</a>().height());</div>
+<div class="line"><span class="lineno">12729</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12730</span>    }</div>
+<div class="line"><span class="lineno">12731</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>:</div>
+<div class="line"><span class="lineno">12732</span>    {</div>
+<div class="line"><span class="lineno">12733</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>)</div>
+<div class="line"><span class="lineno">12734</span>      {</div>
+<div class="line"><span class="lineno">12735</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>)</div>
+<div class="line"><span class="lineno">12736</span>          y -= <a class="code hl_variable" href="#afc6142a6a09c8fa41c44d3d54fadd737">mParentAnchorY</a>-&gt;<a class="code hl_function" href="class_q_c_p_item_anchor.html#a06dcfb7220d26eee93eef56ae66582cb">pixelPosition</a>().y();</div>
+<div class="line"><span class="lineno">12737</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12738</span>          y -= <a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;top();</div>
+<div class="line"><span class="lineno">12739</span>        y /= double(<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>.data()-&gt;height());</div>
+<div class="line"><span class="lineno">12740</span>      } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12741</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type y is ptAxisRectRatio, but no axis rect was defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12742</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12743</span>    }</div>
+<div class="line"><span class="lineno">12744</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>:</div>
+<div class="line"><span class="lineno">12745</span>    {</div>
+<div class="line"><span class="lineno">12746</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> &amp;&amp; <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;orientation() == Qt::Vertical)</div>
+<div class="line"><span class="lineno">12747</span>        x = <a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a>.data()-&gt;pixelToCoord(y);</div>
+<div class="line"><span class="lineno">12748</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a> &amp;&amp; <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;orientation() == Qt::Vertical)</div>
+<div class="line"><span class="lineno">12749</span>        y = <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data()-&gt;pixelToCoord(y);</div>
+<div class="line"><span class="lineno">12750</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">12751</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Item position type y is ptPlotCoords, but no axes were defined&quot;</span>;</div>
+<div class="line"><span class="lineno">12752</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12753</span>    }</div>
+<div class="line"><span class="lineno">12754</span>  }</div>
+<div class="line"><span class="lineno">12755</span>  </div>
+<div class="line"><span class="lineno">12756</span>  <a class="code hl_function" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a>(x, y);</div>
+<div class="line"><span class="lineno">12757</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa476abf71ed8fa4c537457ebb1a754ad" name="aa476abf71ed8fa4c537457ebb1a754ad"></a>
@@ -732,6 +1174,13 @@ Protected Attributes</h2></td></tr>
 <p>If the type is changed, the apparent pixel position on the plot is preserved. This means the coordinates as retrieved with <a class="el" href="#aa4ecf5b04c67049c05d37619e090820b">coords()</a> and set with <a class="el" href="#aa988ba4e87ab684c9021017dcaba945f">setCoords</a> may change in the process.</p>
 <p>This method sets the type for both X and Y directions. It is also possible to set different types for X and Y, see <a class="el" href="#a2113b2351d6d00457fb3559a4e20c3ea">setTypeX</a>, <a class="el" href="#ac2a454aa5a54c1615c50686601ec4510">setTypeY</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12281">12281</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12282</span>{</div>
+<div class="line"><span class="lineno">12283</span>  <a class="code hl_function" href="#a2113b2351d6d00457fb3559a4e20c3ea">setTypeX</a>(<a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a>);</div>
+<div class="line"><span class="lineno">12284</span>  <a class="code hl_function" href="#ac2a454aa5a54c1615c50686601ec4510">setTypeY</a>(<a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a>);</div>
+<div class="line"><span class="lineno">12285</span>}</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_abc1276e2ef603e459a9e48e75966bf8f"><div class="ttname"><a href="#abc1276e2ef603e459a9e48e75966bf8f">QCPItemPosition::type</a></div><div class="ttdeci">PositionType type() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03668">qcustomplot.h:3668</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2113b2351d6d00457fb3559a4e20c3ea" name="a2113b2351d6d00457fb3559a4e20c3ea"></a>
@@ -752,6 +1201,29 @@ Protected Attributes</h2></td></tr>
 <p>For a detailed description of what a position type is, see the documentation of <a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a>, <a class="el" href="#ac2a454aa5a54c1615c50686601ec4510">setTypeY</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12294">12294</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12295</span>{</div>
+<div class="line"><span class="lineno">12296</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a> != <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a>)</div>
+<div class="line"><span class="lineno">12297</span>  {</div>
+<div class="line"><span class="lineno">12298</span>    <span class="comment">// if switching from or to coordinate type that isn&#39;t valid (e.g. because axes or axis rect</span></div>
+<div class="line"><span class="lineno">12299</span>    <span class="comment">// were deleted), don&#39;t try to recover the pixelPosition() because it would output a qDebug warning.</span></div>
+<div class="line"><span class="lineno">12300</span>    <span class="keywordtype">bool</span> retainPixelPosition = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12301</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a> || <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>) &amp;&amp; (!<a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> || !<a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>))</div>
+<div class="line"><span class="lineno">12302</span>      retainPixelPosition = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12303</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a> || <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>) &amp;&amp; (!<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>))</div>
+<div class="line"><span class="lineno">12304</span>      retainPixelPosition = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12305</span>    </div>
+<div class="line"><span class="lineno">12306</span>    QPointF pixel;</div>
+<div class="line"><span class="lineno">12307</span>    <span class="keywordflow">if</span> (retainPixelPosition)</div>
+<div class="line"><span class="lineno">12308</span>      pixel = <a class="code hl_function" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>();</div>
+<div class="line"><span class="lineno">12309</span>    </div>
+<div class="line"><span class="lineno">12310</span>    <a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a> = <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a>;</div>
+<div class="line"><span class="lineno">12311</span>    </div>
+<div class="line"><span class="lineno">12312</span>    <span class="keywordflow">if</span> (retainPixelPosition)</div>
+<div class="line"><span class="lineno">12313</span>      <a class="code hl_function" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a>(pixel);</div>
+<div class="line"><span class="lineno">12314</span>  }</div>
+<div class="line"><span class="lineno">12315</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2a454aa5a54c1615c50686601ec4510" name="ac2a454aa5a54c1615c50686601ec4510"></a>
@@ -772,6 +1244,29 @@ Protected Attributes</h2></td></tr>
 <p>For a detailed description of what a position type is, see the documentation of <a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a>, <a class="el" href="#a2113b2351d6d00457fb3559a4e20c3ea">setTypeX</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l12324">12324</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">12325</span>{</div>
+<div class="line"><span class="lineno">12326</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a> != <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a>)</div>
+<div class="line"><span class="lineno">12327</span>  {</div>
+<div class="line"><span class="lineno">12328</span>    <span class="comment">// if switching from or to coordinate type that isn&#39;t valid (e.g. because axes or axis rect</span></div>
+<div class="line"><span class="lineno">12329</span>    <span class="comment">// were deleted), don&#39;t try to recover the pixelPosition() because it would output a qDebug warning.</span></div>
+<div class="line"><span class="lineno">12330</span>    <span class="keywordtype">bool</span> retainPixelPosition = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12331</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a> || <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c">ptPlotCoords</a>) &amp;&amp; (!<a class="code hl_variable" href="#a63967a33933231e92f68c8ce06bfc37e">mKeyAxis</a> || !<a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>))</div>
+<div class="line"><span class="lineno">12332</span>      retainPixelPosition = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12333</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a> || <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a> == <a class="code hl_enumvalue" href="#aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75">ptAxisRectRatio</a>) &amp;&amp; (!<a class="code hl_variable" href="#add40fcb8994c247d85f42a126286b740">mAxisRect</a>))</div>
+<div class="line"><span class="lineno">12334</span>      retainPixelPosition = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">12335</span>    </div>
+<div class="line"><span class="lineno">12336</span>    QPointF pixel;</div>
+<div class="line"><span class="lineno">12337</span>    <span class="keywordflow">if</span> (retainPixelPosition)</div>
+<div class="line"><span class="lineno">12338</span>      pixel = <a class="code hl_function" href="#a8be9a4787635433edecc75164beb748d">pixelPosition</a>();</div>
+<div class="line"><span class="lineno">12339</span>    </div>
+<div class="line"><span class="lineno">12340</span>    <a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a> = <a class="code hl_function" href="#abc1276e2ef603e459a9e48e75966bf8f">type</a>;</div>
+<div class="line"><span class="lineno">12341</span>    </div>
+<div class="line"><span class="lineno">12342</span>    <span class="keywordflow">if</span> (retainPixelPosition)</div>
+<div class="line"><span class="lineno">12343</span>      <a class="code hl_function" href="#a8d4f858f2089973967cf9cb81970ef0a">setPixelPosition</a>(pixel);</div>
+<div class="line"><span class="lineno">12344</span>  }</div>
+<div class="line"><span class="lineno">12345</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d2c5b823c99207eda710a37a4bb1dbf" name="a0d2c5b823c99207eda710a37a4bb1dbf"></a>
@@ -801,6 +1296,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_item_anchor.html#ab04819cd5bc6dc607a68413828313675">QCPItemAnchor</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03704">3704</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3704</span>{ <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abc1276e2ef603e459a9e48e75966bf8f" name="abc1276e2ef603e459a9e48e75966bf8f"></a>
@@ -829,6 +1327,10 @@ Protected Attributes</h2></td></tr>
 <p>If different types were set for X and Y (<a class="el" href="#a2113b2351d6d00457fb3559a4e20c3ea">setTypeX</a>, <a class="el" href="#ac2a454aa5a54c1615c50686601ec4510">setTypeY</a>), this method returns the type of the X coordinate. In that case rather use <em><a class="el" href="#a1415911868835701c04250566bfc681d">typeX()</a></em> and <em><a class="el" href="#ae47bac6f679c58f9e1c78dc63d56f331">typeY()</a></em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa476abf71ed8fa4c537457ebb1a754ad">setType</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03668">3668</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3668</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a1415911868835701c04250566bfc681d">typeX</a>(); }</div>
+<div class="ttc" id="aclass_q_c_p_item_position_html_a1415911868835701c04250566bfc681d"><div class="ttname"><a href="#a1415911868835701c04250566bfc681d">QCPItemPosition::typeX</a></div><div class="ttdeci">PositionType typeX() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03669">qcustomplot.h:3669</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1415911868835701c04250566bfc681d" name="a1415911868835701c04250566bfc681d"></a>
@@ -854,6 +1356,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03669">3669</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3669</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae2a617dce057c5f3ec6878c1823aa291">mPositionTypeX</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae47bac6f679c58f9e1c78dc63d56f331" name="ae47bac6f679c58f9e1c78dc63d56f331"></a>
@@ -879,6 +1384,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03670">3670</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3670</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a47c96c0ef4380e1af4aaa7c2265c260b">mPositionTypeY</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfcf86f840a7366a4299bff593d5d636" name="acfcf86f840a7366a4299bff593d5d636"></a>
@@ -904,6 +1412,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03675">3675</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3675</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a67bf5df69f587d53731724a7d61c6c3f">mValue</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaa4dc49c9f142ff00b491272febc1de6" name="aaa4dc49c9f142ff00b491272febc1de6"></a>
@@ -929,6 +1440,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03678">3678</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3678</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a505dc2da24ba274452c1c817fcaba011">mValueAxis</a>.data(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -952,6 +1466,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03699">3699</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a4ff3931ad115603dfb4c7000b24bb415" name="a4ff3931ad115603dfb4c7000b24bb415"></a>
@@ -973,6 +1489,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03700">3700</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -996,6 +1514,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03698">3698</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a41b4641d18c90997b9c01bf304181bf0" name="a41b4641d18c90997b9c01bf304181bf0"></a>
@@ -1017,6 +1537,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03701">3701</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1040,6 +1562,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03701">3701</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ae2a617dce057c5f3ec6878c1823aa291" name="ae2a617dce057c5f3ec6878c1823aa291"></a>
@@ -1061,6 +1585,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03697">3697</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1084,6 +1610,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03697">3697</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a67bf5df69f587d53731724a7d61c6c3f" name="a67bf5df69f587d53731724a7d61c6c3f"></a>
@@ -1105,6 +1633,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03700">3700</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1128,11 +1658,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l03698">3698</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

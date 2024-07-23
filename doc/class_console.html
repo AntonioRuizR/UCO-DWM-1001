@@ -102,6 +102,7 @@ $(function(){initNavTree('class_console.html',''); initResizable(true); });
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_console-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Console Class Reference</div></div>
 </div><!--header-->
@@ -139,9 +140,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a54965d40e072dce88f9fe4fbb9d6eef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf4fa367aadd34a06cd68a5eebb1dbab" id="r_abf4fa367aadd34a06cd68a5eebb1dbab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf4fa367aadd34a06cd68a5eebb1dbab">contextMenuEvent</a> (QContextMenuEvent *e) override</td></tr>
 <tr class="separator:abf4fa367aadd34a06cd68a5eebb1dbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8fc0c4b4d86e3acb076a690dd2bd9d54" id="r_a8fc0c4b4d86e3acb076a690dd2bd9d54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc0c4b4d86e3acb076a690dd2bd9d54">m_localEchoEnabled</a> = false</td></tr>
+<tr class="separator:a8fc0c4b4d86e3acb076a690dd2bd9d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class defined for the terminal emulator tool </p>
+
+<p class="definition">Definition at line <a class="el" href="console_8h_source.html#l00010">10</a> of file <a class="el" href="console_8h_source.html">console.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9d5194461869abb51f855fe78df8f83b" name="a9d5194461869abb51f855fe78df8f83b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d5194461869abb51f855fe78df8f83b">&#9670;&#160;</a></span>Console()</h2>
@@ -168,6 +176,17 @@ Protected Member Functions</h2></td></tr>
 <p>** UCO DWM-GUI, a software for the control of the DWM1001-DEV board ** Copyright (C) 2024 Antonio Ruiz Ruiz ** ** This program is free software: you can redistribute it and/or modify ** it under the terms of the GNU General Public License as published by ** the Free Software Foundation, either version 3 of the License, or any ** later version. ** ** This program is distributed in the hope that it will be useful, ** but WITHOUT ANY WARRANTY; without even the implied warranty of ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ** GNU General Public License for more details. ** ** You should have received a copy of the GNU General Public License ** along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. ** **</p>
 <p>Author: Antonio Ruiz Ruiz ** Contact: <a href="#" onclick="location.href='mai'+'lto:'+'ant'+'on'+'ior'+'ui'+'zrr'+'ui'+'z@g'+'ma'+'il.'+'co'+'m'; return false;">anton<span class="obfuscator">.nosp@m.</span>ioru<span class="obfuscator">.nosp@m.</span>izrru<span class="obfuscator">.nosp@m.</span>iz@g<span class="obfuscator">.nosp@m.</span>mail.<span class="obfuscator">.nosp@m.</span>com</a> ** Date: 29.04.24 ** Version: 1.0.0 ** </p>
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00032">32</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                :</div>
+<div class="line"><span class="lineno">   33</span>    QPlainTextEdit(parent)</div>
+<div class="line"><span class="lineno">   34</span>{</div>
+<div class="line"><span class="lineno">   35</span>    document()-&gt;setMaximumBlockCount(100);</div>
+<div class="line"><span class="lineno">   36</span>    QPalette p = palette();</div>
+<div class="line"><span class="lineno">   37</span>    p.setColor(QPalette::Base, Qt::black);</div>
+<div class="line"><span class="lineno">   38</span>    p.setColor(QPalette::Text, Qt::white);</div>
+<div class="line"><span class="lineno">   39</span>    setPalette(p);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -194,6 +213,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00082">82</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>    Q_UNUSED(e)</div>
+<div class="line"><span class="lineno">   85</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1976aad46ce1a77be730bc628275038f" name="a1976aad46ce1a77be730bc628275038f"></a>
@@ -244,6 +268,24 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00055">55</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">switch</span> (e-&gt;key()) {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">case</span> Qt::Key_Backspace:</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">case</span> Qt::Key_Left:</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">case</span> Qt::Key_Right:</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">case</span> Qt::Key_Up:</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">case</span> Qt::Key_Down:</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8fc0c4b4d86e3acb076a690dd2bd9d54">m_localEchoEnabled</a>)</div>
+<div class="line"><span class="lineno">   66</span>            QPlainTextEdit::keyPressEvent(e);</div>
+<div class="line"><span class="lineno">   67</span>        emit <a class="code hl_signal" href="#a1976aad46ce1a77be730bc628275038f">getData</a>(e-&gt;text().toLocal8Bit());</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>}</div>
+<div class="ttc" id="aclass_console_html_a1976aad46ce1a77be730bc628275038f"><div class="ttname"><a href="#a1976aad46ce1a77be730bc628275038f">Console::getData</a></div><div class="ttdeci">void getData(const QByteArray &amp;data)</div></div>
+<div class="ttc" id="aclass_console_html_a8fc0c4b4d86e3acb076a690dd2bd9d54"><div class="ttname"><a href="#a8fc0c4b4d86e3acb076a690dd2bd9d54">Console::m_localEchoEnabled</a></div><div class="ttdeci">bool m_localEchoEnabled</div><div class="ttdef"><b>Definition</b> <a href="console_8h_source.html#l00030">console.h:30</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a54965d40e072dce88f9fe4fbb9d6eef7" name="a54965d40e072dce88f9fe4fbb9d6eef7"></a>
@@ -269,6 +311,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00077">77</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{</div>
+<div class="line"><span class="lineno">   79</span>    Q_UNUSED(e)</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c7451bc62ecf61badcd49a36bfb639e" name="a9c7451bc62ecf61badcd49a36bfb639e"></a>
@@ -294,6 +341,12 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00071">71</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>{</div>
+<div class="line"><span class="lineno">   73</span>    Q_UNUSED(e)</div>
+<div class="line"><span class="lineno">   74</span>    setFocus();</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa744a0868e01a13a502710f895f01525" name="aa744a0868e01a13a502710f895f01525"></a>
@@ -311,6 +364,14 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00042">42</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>    insertPlainText(data);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    QScrollBar *bar = verticalScrollBar();</div>
+<div class="line"><span class="lineno">   47</span>    bar-&gt;setValue(bar-&gt;maximum());</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a17c5b6bc6719a26f73a5d0ac3d7de1" name="a5a17c5b6bc6719a26f73a5d0ac3d7de1"></a>
@@ -328,11 +389,41 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="console_8cpp_source.html#l00050">50</a> of file <a class="el" href="console_8cpp_source.html">console.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="#a8fc0c4b4d86e3acb076a690dd2bd9d54">m_localEchoEnabled</a> = set;</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8fc0c4b4d86e3acb076a690dd2bd9d54" name="a8fc0c4b4d86e3acb076a690dd2bd9d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc0c4b4d86e3acb076a690dd2bd9d54">&#9670;&#160;</a></span>m_localEchoEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Console::m_localEchoEnabled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="console_8h_source.html#l00030">30</a> of file <a class="el" href="console_8h_source.html">console.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="console_8h_source.html">console.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="console_8cpp.html">console.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="console_8cpp_source.html">console.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

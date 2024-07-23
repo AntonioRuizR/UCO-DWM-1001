@@ -100,6 +100,8 @@ $(function(){initNavTree('class_q_c_p_data_selection.html',''); initResizable(tr
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="#related">Related Symbols</a> &#124;
 <a href="class_q_c_p_data_selection-members.html">List of all members</a>  </div>
@@ -159,6 +161,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8097f4e4ffee7b1b5df27c93eb365db" id="r_ae8097f4e4ffee7b1b5df27c93eb365db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8097f4e4ffee7b1b5df27c93eb365db">inverse</a> (const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;outerRange) const</td></tr>
 <tr class="separator:ae8097f4e4ffee7b1b5df27c93eb365db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a6f171526f5441482568ff5e22e6af2c6" id="r_a6f171526f5441482568ff5e22e6af2c6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f171526f5441482568ff5e22e6af2c6">lessThanDataRangeBegin</a> (const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;a, const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;b)</td></tr>
+<tr class="separator:a6f171526f5441482568ff5e22e6af2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa1070e7c700f15d9018fad78b4732004" id="r_aa1070e7c700f15d9018fad78b4732004"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a></td></tr>
+<tr class="separator:aa1070e7c700f15d9018fad78b4732004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a49c0217af248959d59abfdd29401b678" id="r_a49c0217af248959d59abfdd29401b678"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49c0217af248959d59abfdd29401b678">operator+</a> (const <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> &amp;a, const <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> &amp;b)</td></tr>
@@ -195,7 +207,9 @@ Related Symbols</h2></td></tr>
 <h1><a class="anchor" id="qcpdataselection-iterating"></a>
 Iterating over a data selection</h1>
 <p>As an example, the following code snippet calculates the average value of a graph's data <a class="el" href="class_q_c_p_abstract_plottable.html#a040bf09f41d456284cfd39cc37aa068f">selection</a>:</p>
-<div class="fragment"></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="fragment"></div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00986">986</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0e0b7faaec7df1a7c77dd6f4883cdf0d" name="a0e0b7faaec7df1a7c77dd6f4883cdf0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e0b7faaec7df1a7c77dd6f4883cdf0d">&#9670;&#160;</a></span>QCPDataSelection() <span class="overload">[1/2]</span></h2>
 
@@ -220,6 +234,10 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Creates an empty <a class="el" href="class_q_c_p_data_selection.html" title="Describes a data set by holding multiple QCPDataRange instances.">QCPDataSelection</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02416">2416</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2417</span>{</div>
+<div class="line"><span class="lineno"> 2418</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a738dfb4f5718c5df5ed35ea33ac37818" name="a738dfb4f5718c5df5ed35ea33ac37818"></a>
@@ -246,6 +264,12 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Creates a <a class="el" href="class_q_c_p_data_selection.html" title="Describes a data set by holding multiple QCPDataRange instances.">QCPDataSelection</a> containing the provided <em>range</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02423">2423</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2424</span>{</div>
+<div class="line"><span class="lineno"> 2425</span>  <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.append(range);</div>
+<div class="line"><span class="lineno"> 2426</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_aa1070e7c700f15d9018fad78b4732004"><div class="ttname"><a href="#aa1070e7c700f15d9018fad78b4732004">QCPDataSelection::mDataRanges</a></div><div class="ttdeci">QList&lt; QCPDataRange &gt; mDataRanges</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01027">qcustomplot.h:1027</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -269,6 +293,15 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Adds the given <em>dataRange</em> to this data selection. This is equivalent to the += operator but allows disabling immediate simplification by setting <em>simplify</em> to false. This can improve performance if adding a very large amount of data ranges successively. In this case, make sure to call <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a> manually, after the operation. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02575">2575</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2576</span>{</div>
+<div class="line"><span class="lineno"> 2577</span>  <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.append(<a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>);</div>
+<div class="line"><span class="lineno"> 2578</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>)</div>
+<div class="line"><span class="lineno"> 2579</span>    this-&gt;<a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2580</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a4a2fbad1a6e4d1dd26fdfdf88956f2a4"><div class="ttname"><a href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">QCPDataSelection::simplify</a></div><div class="ttdeci">void simplify()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02601">qcustomplot.cpp:2601</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a6956acf6a9a49a353b4f9b58608978ad"><div class="ttname"><a href="#a6956acf6a9a49a353b4f9b58608978ad">QCPDataSelection::dataRange</a></div><div class="ttdeci">QCPDataRange dataRange(int index=0) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02545">qcustomplot.cpp:2545</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a385dd665e6690d39afb8bbd727b1e00b" name="a385dd665e6690d39afb8bbd727b1e00b"></a>
@@ -288,6 +321,11 @@ Iterating over a data selection</h1>
 <p>Removes all data ranges. The data selection then contains no data points.</p>
 <p><a class="el" href="#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a> </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02587">2587</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2588</span>{</div>
+<div class="line"><span class="lineno"> 2589</span>  <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.clear();</div>
+<div class="line"><span class="lineno"> 2590</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab1ad3d5bbb55749c3f7ab1e45429c932" name="ab1ad3d5bbb55749c3f7ab1e45429c932"></a>
@@ -307,6 +345,23 @@ Iterating over a data selection</h1>
 <p>Returns true if the data selection <em>other</em> is contained entirely in this data selection, i.e. all data point indices that are in <em>other</em> are also in this data selection.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_data_range.html#a13ca398776374a3160aa85433718b812">QCPDataRange::contains</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02685">2685</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2686</span>{</div>
+<div class="line"><span class="lineno"> 2687</span>  <span class="keywordflow">if</span> (other.<a class="code hl_function" href="#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2688</span>  </div>
+<div class="line"><span class="lineno"> 2689</span>  <span class="keywordtype">int</span> otherIndex = 0;</div>
+<div class="line"><span class="lineno"> 2690</span>  <span class="keywordtype">int</span> thisIndex = 0;</div>
+<div class="line"><span class="lineno"> 2691</span>  <span class="keywordflow">while</span> (thisIndex &lt; <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size() &amp;&amp; otherIndex &lt; other.<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size())</div>
+<div class="line"><span class="lineno"> 2692</span>  {</div>
+<div class="line"><span class="lineno"> 2693</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(thisIndex).contains(other.<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(otherIndex)))</div>
+<div class="line"><span class="lineno"> 2694</span>      ++otherIndex;</div>
+<div class="line"><span class="lineno"> 2695</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2696</span>      ++thisIndex;</div>
+<div class="line"><span class="lineno"> 2697</span>  }</div>
+<div class="line"><span class="lineno"> 2698</span>  <span class="keywordflow">return</span> thisIndex &lt; <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size(); <span class="comment">// if thisIndex ran all the way to the end to find a containing range for the current otherIndex, other is not contained in this</span></div>
+<div class="line"><span class="lineno"> 2699</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a7f7526b475998dc0c3d6c376b24736c9"><div class="ttname"><a href="#a7f7526b475998dc0c3d6c376b24736c9">QCPDataSelection::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01017">qcustomplot.h:1017</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac9e74dd294778aa799216c3435c9c4f0" name="ac9e74dd294778aa799216c3435c9c4f0"></a>
@@ -325,6 +380,16 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Returns the total number of data points contained in all data ranges that make up this data selection. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02529">2529</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2530</span>{</div>
+<div class="line"><span class="lineno"> 2531</span>  <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><span class="lineno"> 2532</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a> <a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>, <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>)</div>
+<div class="line"><span class="lineno"> 2533</span>    result += <a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>.<a class="code hl_function" href="class_q_c_p_data_range.html#a1e7836058f755c6ab9f11996477b7150">length</a>();</div>
+<div class="line"><span class="lineno"> 2534</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2535</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_range_html"><div class="ttname"><a href="class_q_c_p_data_range.html">QCPDataRange</a></div><div class="ttdoc">Describes a data range given by begin and end index.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00949">qcustomplot.h:950</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_a1e7836058f755c6ab9f11996477b7150"><div class="ttname"><a href="class_q_c_p_data_range.html#a1e7836058f755c6ab9f11996477b7150">QCPDataRange::length</a></div><div class="ttdeci">int length() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00962">qcustomplot.h:962</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6956acf6a9a49a353b4f9b58608978ad" name="a6956acf6a9a49a353b4f9b58608978ad"></a>
@@ -345,6 +410,18 @@ Iterating over a data selection</h1>
 <p>If the data selection is simplified (the usual state of the selection, see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>), the ranges are sorted by ascending data point index.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#abd8869ccb231ab991e8576de931f647d">dataRangeCount</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02545">2545</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2546</span>{</div>
+<div class="line"><span class="lineno"> 2547</span>  <span class="keywordflow">if</span> (index &gt;= 0 &amp;&amp; index &lt; <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size())</div>
+<div class="line"><span class="lineno"> 2548</span>  {</div>
+<div class="line"><span class="lineno"> 2549</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(index);</div>
+<div class="line"><span class="lineno"> 2550</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2551</span>  {</div>
+<div class="line"><span class="lineno"> 2552</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;index out of range:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 2553</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno"> 2554</span>  }</div>
+<div class="line"><span class="lineno"> 2555</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abd8869ccb231ab991e8576de931f647d" name="abd8869ccb231ab991e8576de931f647d"></a>
@@ -372,6 +449,9 @@ Iterating over a data selection</h1>
 <p>Returns the number of ranges that make up the data selection. The ranges can be accessed by <a class="el" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a> via their index.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>, <a class="el" href="#ac9e74dd294778aa799216c3435c9c4f0">dataPointCount</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01008">1008</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1008</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac3b1c5e7713d380cd9e447f4556b94da" name="ac3b1c5e7713d380cd9e447f4556b94da"></a>
@@ -399,6 +479,9 @@ Iterating over a data selection</h1>
 <p>Returns all data ranges that make up the data selection. If the data selection is simplified (the usual state of the selection, see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>), the ranges are sorted by ascending data point index.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01011">1011</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1011</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17b84d852911531d229f4a76aa239a75" name="a17b84d852911531d229f4a76aa239a75"></a>
@@ -419,6 +502,53 @@ Iterating over a data selection</h1>
 <p>Depending on <em>type</em>, enforcing means adding new data points that were previously not part of the selection, or removing data points from the selection. If the current selection already conforms to <em>type</em>, the data selection is not changed.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038">QCP::SelectionType</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02638">2638</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2639</span>{</div>
+<div class="line"><span class="lineno"> 2640</span>  <a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2641</span>  <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno"> 2642</span>  {</div>
+<div class="line"><span class="lineno"> 2643</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a>:</div>
+<div class="line"><span class="lineno"> 2644</span>    {</div>
+<div class="line"><span class="lineno"> 2645</span>      <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.clear();</div>
+<div class="line"><span class="lineno"> 2646</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2647</span>    }</div>
+<div class="line"><span class="lineno"> 2648</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d">QCP::stWhole</a>:</div>
+<div class="line"><span class="lineno"> 2649</span>    {</div>
+<div class="line"><span class="lineno"> 2650</span>      <span class="comment">// whole selection isn&#39;t defined by data range, so don&#39;t change anything (is handled in plottable methods)</span></div>
+<div class="line"><span class="lineno"> 2651</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2652</span>    }</div>
+<div class="line"><span class="lineno"> 2653</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038ae5b11259c42962db355e7448f4a8633a">QCP::stSingleData</a>:</div>
+<div class="line"><span class="lineno"> 2654</span>    {</div>
+<div class="line"><span class="lineno"> 2655</span>      <span class="comment">// reduce all data ranges to the single first data point:</span></div>
+<div class="line"><span class="lineno"> 2656</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.isEmpty())</div>
+<div class="line"><span class="lineno"> 2657</span>      {</div>
+<div class="line"><span class="lineno"> 2658</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size() &gt; 1)</div>
+<div class="line"><span class="lineno"> 2659</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a> = QList&lt;QCPDataRange&gt;() &lt;&lt; <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first();</div>
+<div class="line"><span class="lineno"> 2660</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first().length() &gt; 1)</div>
+<div class="line"><span class="lineno"> 2661</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first().setEnd(<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first().begin()+1);</div>
+<div class="line"><span class="lineno"> 2662</span>      }</div>
+<div class="line"><span class="lineno"> 2663</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2664</span>    }</div>
+<div class="line"><span class="lineno"> 2665</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa05d2cba99c724df004d9c48971e4371">QCP::stDataRange</a>:</div>
+<div class="line"><span class="lineno"> 2666</span>    {</div>
+<div class="line"><span class="lineno"> 2667</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>())</div>
+<div class="line"><span class="lineno"> 2668</span>        <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a> = QList&lt;QCPDataRange&gt;() &lt;&lt; <a class="code hl_function" href="#a890f9291e0b7f065747040de5d68ff7d">span</a>();</div>
+<div class="line"><span class="lineno"> 2669</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2670</span>    }</div>
+<div class="line"><span class="lineno"> 2671</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038a7cf82676966ebf79cc371f65278e0e16">QCP::stMultipleDataRanges</a>:</div>
+<div class="line"><span class="lineno"> 2672</span>    {</div>
+<div class="line"><span class="lineno"> 2673</span>      <span class="comment">// this is the selection type that allows all concievable combinations of ranges, so do nothing</span></div>
+<div class="line"><span class="lineno"> 2674</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2675</span>    }</div>
+<div class="line"><span class="lineno"> 2676</span>  }</div>
+<div class="line"><span class="lineno"> 2677</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a890f9291e0b7f065747040de5d68ff7d"><div class="ttname"><a href="#a890f9291e0b7f065747040de5d68ff7d">QCPDataSelection::span</a></div><div class="ttdeci">QCPDataRange span() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02561">qcustomplot.cpp:2561</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038a7cf82676966ebf79cc371f65278e0e16"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038a7cf82676966ebf79cc371f65278e0e16">QCP::stMultipleDataRanges</a></div><div class="ttdeci">@ stMultipleDataRanges</div><div class="ttdoc">Any combination of data points/ranges can be selected.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00328">qcustomplot.h:327</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038aa05d2cba99c724df004d9c48971e4371"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa05d2cba99c724df004d9c48971e4371">QCP::stDataRange</a></div><div class="ttdeci">@ stDataRange</div><div class="ttdoc">Multiple contiguous data points (a data range) can be selected.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00327">qcustomplot.h:326</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe">QCP::stNone</a></div><div class="ttdeci">@ stNone</div><div class="ttdoc">The plottable is not selectable.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00324">qcustomplot.h:323</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038ae5b11259c42962db355e7448f4a8633a"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038ae5b11259c42962db355e7448f4a8633a">QCP::stSingleData</a></div><div class="ttdeci">@ stSingleData</div><div class="ttdoc">One individual data point can be selected at a time.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00326">qcustomplot.h:325</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d"><div class="ttname"><a href="namespace_q_c_p.html#ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d">QCP::stWhole</a></div><div class="ttdeci">@ stWhole</div><div class="ttdoc">Selection behaves like stMultipleDataRanges, but if there are any data points selected,...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00325">qcustomplot.h:324</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af5267ced53687561367105ee77b874ab" name="af5267ced53687561367105ee77b874ab"></a>
@@ -438,6 +568,18 @@ Iterating over a data selection</h1>
 <p>Returns a data selection containing the points which are both in this data selection and in the data range <em>other</em>.</p>
 <p>A common use case is to limit an unknown data selection to the valid range of a data container, using <a class="el" href="class_q_c_p_data_container.html#aece90eeb2ba8d3c46d3d94023630fbc7">QCPDataContainer::dataRange</a> as <em>other</em>. One can then safely iterate over the returned data selection without exceeding the data container's bounds. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02709">2709</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2710</span>{</div>
+<div class="line"><span class="lineno"> 2711</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result;</div>
+<div class="line"><span class="lineno"> 2712</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a> <a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>, <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>)</div>
+<div class="line"><span class="lineno"> 2713</span>    result.<a class="code hl_function" href="#a46740c5aa7b80ae9b2abf6985d61b74f">addDataRange</a>(<a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>.<a class="code hl_function" href="class_q_c_p_data_range.html#a84e1e03129dd52528efb4bac18d30183">intersection</a>(other), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2714</span>  result.<a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2715</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2716</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_a84e1e03129dd52528efb4bac18d30183"><div class="ttname"><a href="class_q_c_p_data_range.html#a84e1e03129dd52528efb4bac18d30183">QCPDataRange::intersection</a></div><div class="ttdeci">QCPDataRange intersection(const QCPDataRange &amp;other) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02315">qcustomplot.cpp:2315</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html"><div class="ttname"><a href="class_q_c_p_data_selection.html">QCPDataSelection</a></div><div class="ttdoc">Describes a data set by holding multiple QCPDataRange instances.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00986">qcustomplot.h:987</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a46740c5aa7b80ae9b2abf6985d61b74f"><div class="ttname"><a href="#a46740c5aa7b80ae9b2abf6985d61b74f">QCPDataSelection::addDataRange</a></div><div class="ttdeci">void addDataRange(const QCPDataRange &amp;dataRange, bool simplify=true)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02575">qcustomplot.cpp:2575</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af296ec5a948656c1d1ecb7b2970d2a24" name="af296ec5a948656c1d1ecb7b2970d2a24"></a>
@@ -456,6 +598,17 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Returns a data selection containing the points which are both in this data selection and in the data selection <em>other</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02722">2722</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2723</span>{</div>
+<div class="line"><span class="lineno"> 2724</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result;</div>
+<div class="line"><span class="lineno"> 2725</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;other.<a class="code hl_function" href="#abd8869ccb231ab991e8576de931f647d">dataRangeCount</a>(); ++i)</div>
+<div class="line"><span class="lineno"> 2726</span>    result += <a class="code hl_function" href="#af5267ced53687561367105ee77b874ab">intersection</a>(other.<a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>(i));</div>
+<div class="line"><span class="lineno"> 2727</span>  result.<a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2728</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2729</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_abd8869ccb231ab991e8576de931f647d"><div class="ttname"><a href="#abd8869ccb231ab991e8576de931f647d">QCPDataSelection::dataRangeCount</a></div><div class="ttdeci">int dataRangeCount() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01008">qcustomplot.h:1008</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_af5267ced53687561367105ee77b874ab"><div class="ttname"><a href="#af5267ced53687561367105ee77b874ab">QCPDataSelection::intersection</a></div><div class="ttdeci">QCPDataSelection intersection(const QCPDataRange &amp;other) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02709">qcustomplot.cpp:2709</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae8097f4e4ffee7b1b5df27c93eb365db" name="ae8097f4e4ffee7b1b5df27c93eb365db"></a>
@@ -475,6 +628,30 @@ Iterating over a data selection</h1>
 <p>Returns a data selection which is the exact inverse of this data selection, with <em>outerRange</em> defining the base range on which to invert. If <em>outerRange</em> is smaller than the <a class="el" href="#a890f9291e0b7f065747040de5d68ff7d">span</a> of this data selection, it is expanded accordingly.</p>
 <p>For example, this method can be used to retrieve all unselected segments by setting <em>outerRange</em> to the full data range of the plottable, and calling this method on a data selection holding the selected segments. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02740">2740</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2741</span>{</div>
+<div class="line"><span class="lineno"> 2742</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>())</div>
+<div class="line"><span class="lineno"> 2743</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a0e0b7faaec7df1a7c77dd6f4883cdf0d">QCPDataSelection</a>(outerRange);</div>
+<div class="line"><span class="lineno"> 2744</span>  <a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a> fullRange = outerRange.<a class="code hl_function" href="class_q_c_p_data_range.html#a36c8ad8acf177ffeb0a72c8d73030844">expanded</a>(<a class="code hl_function" href="#a890f9291e0b7f065747040de5d68ff7d">span</a>());</div>
+<div class="line"><span class="lineno"> 2745</span>  </div>
+<div class="line"><span class="lineno"> 2746</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result;</div>
+<div class="line"><span class="lineno"> 2747</span>  <span class="comment">// first unselected segment:</span></div>
+<div class="line"><span class="lineno"> 2748</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first().begin() != fullRange.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>())</div>
+<div class="line"><span class="lineno"> 2749</span>    result.<a class="code hl_function" href="#a46740c5aa7b80ae9b2abf6985d61b74f">addDataRange</a>(<a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a>(fullRange.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>(), <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first().begin()), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2750</span>  <span class="comment">// intermediate unselected segments:</span></div>
+<div class="line"><span class="lineno"> 2751</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size(); ++i)</div>
+<div class="line"><span class="lineno"> 2752</span>    result.<a class="code hl_function" href="#a46740c5aa7b80ae9b2abf6985d61b74f">addDataRange</a>(<a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a>(<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i-1).end(), <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i).begin()), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2753</span>  <span class="comment">// last unselected segment:</span></div>
+<div class="line"><span class="lineno"> 2754</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.last().end() != fullRange.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>())</div>
+<div class="line"><span class="lineno"> 2755</span>    result.<a class="code hl_function" href="#a46740c5aa7b80ae9b2abf6985d61b74f">addDataRange</a>(<a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a>(<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.last().end(), fullRange.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>()), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2756</span>  result.<a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2757</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2758</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_a36c8ad8acf177ffeb0a72c8d73030844"><div class="ttname"><a href="class_q_c_p_data_range.html#a36c8ad8acf177ffeb0a72c8d73030844">QCPDataRange::expanded</a></div><div class="ttdeci">QCPDataRange expanded(const QCPDataRange &amp;other) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02300">qcustomplot.cpp:2300</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_ae76d7eba9defdfafcd0fc41096793129"><div class="ttname"><a href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">QCPDataRange::begin</a></div><div class="ttdeci">int begin() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00959">qcustomplot.h:959</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_aee1b20fb045929c3753ee2ce14af7630"><div class="ttname"><a href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">QCPDataRange::end</a></div><div class="ttdeci">int end() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00960">qcustomplot.h:960</a></div></div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a0e0b7faaec7df1a7c77dd6f4883cdf0d"><div class="ttname"><a href="#a0e0b7faaec7df1a7c77dd6f4883cdf0d">QCPDataSelection::QCPDataSelection</a></div><div class="ttdeci">QCPDataSelection()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l02416">qcustomplot.cpp:2416</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7f7526b475998dc0c3d6c376b24736c9" name="a7f7526b475998dc0c3d6c376b24736c9"></a>
@@ -502,6 +679,41 @@ Iterating over a data selection</h1>
 <p>Returns true if there are no data ranges, and thus no data points, in this <a class="el" href="class_q_c_p_data_selection.html" title="Describes a data set by holding multiple QCPDataRange instances.">QCPDataSelection</a> instance.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#abd8869ccb231ab991e8576de931f647d">dataRangeCount</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01017">1017</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1017</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.isEmpty(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6f171526f5441482568ff5e22e6af2c6" name="a6f171526f5441482568ff5e22e6af2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f171526f5441482568ff5e22e6af2c6">&#9670;&#160;</a></span>lessThanDataRangeBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool QCPDataSelection::lessThanDataRangeBegin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01029">1029</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1029</span>{ <span class="keywordflow">return</span> a.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>() &lt; b.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8324733cc88660ee4792ee60d6a4520c" name="a8324733cc88660ee4792ee60d6a4520c"></a>
@@ -527,6 +739,9 @@ Iterating over a data selection</h1>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00993">993</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  993</span>{ <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17058640d4e6f49984a0e7e42043df1b" name="a17058640d4e6f49984a0e7e42043df1b"></a>
@@ -545,6 +760,12 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Adds the data range <em>other</em> to this data selection, and then simplifies this data selection (see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02462">2462</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2463</span>{</div>
+<div class="line"><span class="lineno"> 2464</span>  <a class="code hl_function" href="#a46740c5aa7b80ae9b2abf6985d61b74f">addDataRange</a>(other);</div>
+<div class="line"><span class="lineno"> 2465</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2466</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4584d4b0ea5c4f095bd7b70f88eb5d9d" name="a4584d4b0ea5c4f095bd7b70f88eb5d9d"></a>
@@ -563,6 +784,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Adds the data selection of <em>other</em> to this data selection, and then simplifies this data selection (see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02451">2451</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2452</span>{</div>
+<div class="line"><span class="lineno"> 2453</span>  <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a> &lt;&lt; other.<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>;</div>
+<div class="line"><span class="lineno"> 2454</span>  <a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2455</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2456</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d18b20d20dde737eefc10967e31cf73" name="a8d18b20d20dde737eefc10967e31cf73"></a>
@@ -581,6 +809,50 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Removes all data point indices that are described by <em>other</em> from this data selection. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02482">2482</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2483</span>{</div>
+<div class="line"><span class="lineno"> 2484</span>  <span class="keywordflow">if</span> (other.<a class="code hl_function" href="class_q_c_p_data_range.html#ac32e53fc05d6cd2eac96b96a7265d3b8">isEmpty</a>() || <a class="code hl_function" href="#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>())</div>
+<div class="line"><span class="lineno"> 2485</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2486</span>  </div>
+<div class="line"><span class="lineno"> 2487</span>  <a class="code hl_function" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>();</div>
+<div class="line"><span class="lineno"> 2488</span>  <span class="keywordtype">int</span> i=0;</div>
+<div class="line"><span class="lineno"> 2489</span>  <span class="keywordflow">while</span> (i &lt; <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size())</div>
+<div class="line"><span class="lineno"> 2490</span>  {</div>
+<div class="line"><span class="lineno"> 2491</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> thisBegin = <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i).begin();</div>
+<div class="line"><span class="lineno"> 2492</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> thisEnd = <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i).end();</div>
+<div class="line"><span class="lineno"> 2493</span>    <span class="keywordflow">if</span> (thisBegin &gt;= other.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>())</div>
+<div class="line"><span class="lineno"> 2494</span>      <span class="keywordflow">break</span>; <span class="comment">// since data ranges are sorted after the simplify() call, no ranges which contain other will come after this</span></div>
+<div class="line"><span class="lineno"> 2495</span>    </div>
+<div class="line"><span class="lineno"> 2496</span>    <span class="keywordflow">if</span> (thisEnd &gt; other.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>()) <span class="comment">// ranges which don&#39;t fulfill this are entirely before other and can be ignored</span></div>
+<div class="line"><span class="lineno"> 2497</span>    {</div>
+<div class="line"><span class="lineno"> 2498</span>      <span class="keywordflow">if</span> (thisBegin &gt;= other.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>()) <span class="comment">// range leading segment is encompassed</span></div>
+<div class="line"><span class="lineno"> 2499</span>      {</div>
+<div class="line"><span class="lineno"> 2500</span>        <span class="keywordflow">if</span> (thisEnd &lt;= other.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>()) <span class="comment">// range fully encompassed, remove completely</span></div>
+<div class="line"><span class="lineno"> 2501</span>        {</div>
+<div class="line"><span class="lineno"> 2502</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.removeAt(i);</div>
+<div class="line"><span class="lineno"> 2503</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2504</span>        } <span class="keywordflow">else</span> <span class="comment">// only leading segment is encompassed, trim accordingly</span></div>
+<div class="line"><span class="lineno"> 2505</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>[i].setBegin(other.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>());</div>
+<div class="line"><span class="lineno"> 2506</span>      } <span class="keywordflow">else</span> <span class="comment">// leading segment is not encompassed</span></div>
+<div class="line"><span class="lineno"> 2507</span>      {</div>
+<div class="line"><span class="lineno"> 2508</span>        <span class="keywordflow">if</span> (thisEnd &lt;= other.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>()) <span class="comment">// only trailing segment is encompassed, trim accordingly</span></div>
+<div class="line"><span class="lineno"> 2509</span>        {</div>
+<div class="line"><span class="lineno"> 2510</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>[i].setEnd(other.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>());</div>
+<div class="line"><span class="lineno"> 2511</span>        } <span class="keywordflow">else</span> <span class="comment">// other lies inside this range, so split range</span></div>
+<div class="line"><span class="lineno"> 2512</span>        {</div>
+<div class="line"><span class="lineno"> 2513</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>[i].setEnd(other.<a class="code hl_function" href="class_q_c_p_data_range.html#ae76d7eba9defdfafcd0fc41096793129">begin</a>());</div>
+<div class="line"><span class="lineno"> 2514</span>          <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.insert(i+1, <a class="code hl_class" href="class_q_c_p_data_range.html">QCPDataRange</a>(other.<a class="code hl_function" href="class_q_c_p_data_range.html#aee1b20fb045929c3753ee2ce14af7630">end</a>(), thisEnd));</div>
+<div class="line"><span class="lineno"> 2515</span>          <span class="keywordflow">break</span>; <span class="comment">// since data ranges are sorted (and don&#39;t overlap) after simplify() call, we&#39;re done here</span></div>
+<div class="line"><span class="lineno"> 2516</span>        }</div>
+<div class="line"><span class="lineno"> 2517</span>      }</div>
+<div class="line"><span class="lineno"> 2518</span>    }</div>
+<div class="line"><span class="lineno"> 2519</span>    ++i;</div>
+<div class="line"><span class="lineno"> 2520</span>  }</div>
+<div class="line"><span class="lineno"> 2521</span>  </div>
+<div class="line"><span class="lineno"> 2522</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2523</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_range_html_ac32e53fc05d6cd2eac96b96a7265d3b8"><div class="ttname"><a href="class_q_c_p_data_range.html#ac32e53fc05d6cd2eac96b96a7265d3b8">QCPDataRange::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00970">qcustomplot.h:970</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a66f9fab70b026baa64bf8e52fe5de07e" name="a66f9fab70b026baa64bf8e52fe5de07e"></a>
@@ -599,6 +871,14 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Removes all data point indices that are described by <em>other</em> from this data selection. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02471">2471</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2472</span>{</div>
+<div class="line"><span class="lineno"> 2473</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;other.<a class="code hl_function" href="#abd8869ccb231ab991e8576de931f647d">dataRangeCount</a>(); ++i)</div>
+<div class="line"><span class="lineno"> 2474</span>    *<span class="keyword">this</span> -= other.<a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>(i);</div>
+<div class="line"><span class="lineno"> 2475</span>  </div>
+<div class="line"><span class="lineno"> 2476</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 2477</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a664fa566569b17148abafd6b1dbbf347" name="a664fa566569b17148abafd6b1dbbf347"></a>
@@ -618,6 +898,18 @@ Iterating over a data selection</h1>
 <p>Returns true if this selection is identical (contains the same data ranges with the same begin and end indices) to <em>other</em>.</p>
 <p>Note that both data selections must be in simplified state (the usual state of the selection, see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a>) for this operator to return correct results. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02435">2435</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2436</span>{</div>
+<div class="line"><span class="lineno"> 2437</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size() != other.<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size())</div>
+<div class="line"><span class="lineno"> 2438</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2439</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size(); ++i)</div>
+<div class="line"><span class="lineno"> 2440</span>  {</div>
+<div class="line"><span class="lineno"> 2441</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i) != other.<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i))</div>
+<div class="line"><span class="lineno"> 2442</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2443</span>  }</div>
+<div class="line"><span class="lineno"> 2444</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2445</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4a2fbad1a6e4d1dd26fdfdf88956f2a4" name="a4a2fbad1a6e4d1dd26fdfdf88956f2a4"></a>
@@ -637,6 +929,34 @@ Iterating over a data selection</h1>
 <p>Sorts all data ranges by range begin index in ascending order, and then joins directly adjacent or overlapping ranges. This can reduce the number of individual data ranges in the selection, and prevents possible double-counting when iterating over the data points held by the data ranges.</p>
 <p>This method is automatically called when using the addition/subtraction operators. The only case when <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">simplify</a> is left to the user, is when calling <a class="el" href="#a46740c5aa7b80ae9b2abf6985d61b74f">addDataRange</a>, with the parameter <em>simplify</em> explicitly set to false. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02601">2601</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2602</span>{</div>
+<div class="line"><span class="lineno"> 2603</span>  <span class="comment">// remove any empty ranges:</span></div>
+<div class="line"><span class="lineno"> 2604</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size()-1; i&gt;=0; --i)</div>
+<div class="line"><span class="lineno"> 2605</span>  {</div>
+<div class="line"><span class="lineno"> 2606</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i).isEmpty())</div>
+<div class="line"><span class="lineno"> 2607</span>      <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.removeAt(i);</div>
+<div class="line"><span class="lineno"> 2608</span>  }</div>
+<div class="line"><span class="lineno"> 2609</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.isEmpty())</div>
+<div class="line"><span class="lineno"> 2610</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2611</span>  </div>
+<div class="line"><span class="lineno"> 2612</span>  <span class="comment">// sort ranges by starting value, ascending:</span></div>
+<div class="line"><span class="lineno"> 2613</span>  std::sort(<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.begin(), <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.end(), <a class="code hl_function" href="#a6f171526f5441482568ff5e22e6af2c6">lessThanDataRangeBegin</a>);</div>
+<div class="line"><span class="lineno"> 2614</span>  </div>
+<div class="line"><span class="lineno"> 2615</span>  <span class="comment">// join overlapping/contiguous ranges:</span></div>
+<div class="line"><span class="lineno"> 2616</span>  <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><span class="lineno"> 2617</span>  <span class="keywordflow">while</span> (i &lt; <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.size())</div>
+<div class="line"><span class="lineno"> 2618</span>  {</div>
+<div class="line"><span class="lineno"> 2619</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i-1).end() &gt;= <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i).begin()) <span class="comment">// range i overlaps/joins with i-1, so expand range i-1 appropriately and remove range i from list</span></div>
+<div class="line"><span class="lineno"> 2620</span>    {</div>
+<div class="line"><span class="lineno"> 2621</span>      <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>[i-1].setEnd(qMax(<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i-1).end(), <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.at(i).end()));</div>
+<div class="line"><span class="lineno"> 2622</span>      <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.removeAt(i);</div>
+<div class="line"><span class="lineno"> 2623</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2624</span>      ++i;</div>
+<div class="line"><span class="lineno"> 2625</span>  }</div>
+<div class="line"><span class="lineno"> 2626</span>}</div>
+<div class="ttc" id="aclass_q_c_p_data_selection_html_a6f171526f5441482568ff5e22e6af2c6"><div class="ttname"><a href="#a6f171526f5441482568ff5e22e6af2c6">QCPDataSelection::lessThanDataRangeBegin</a></div><div class="ttdeci">static bool lessThanDataRangeBegin(const QCPDataRange &amp;a, const QCPDataRange &amp;b)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01029">qcustomplot.h:1029</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a890f9291e0b7f065747040de5d68ff7d" name="a890f9291e0b7f065747040de5d68ff7d"></a>
@@ -655,6 +975,14 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Returns a <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> which spans the entire data selection, including possible intermediate segments which are not part of the original data selection. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l02561">2561</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2562</span>{</div>
+<div class="line"><span class="lineno"> 2563</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a7f7526b475998dc0c3d6c376b24736c9">isEmpty</a>())</div>
+<div class="line"><span class="lineno"> 2564</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno"> 2565</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2566</span>    <span class="keywordflow">return</span> {<a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.first().begin(), <a class="code hl_variable" href="#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a>.last().end()};</div>
+<div class="line"><span class="lineno"> 2567</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -686,6 +1014,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points in <em>a</em> joined with the data points in <em>b</em>. The resulting data selection is already simplified (see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">QCPDataSelection::simplify</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01071">1071</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1072</span>{</div>
+<div class="line"><span class="lineno"> 1073</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1074</span>  result += b;</div>
+<div class="line"><span class="lineno"> 1075</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1076</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5feed9419bd3df5cb4d4a761580545cc" name="a5feed9419bd3df5cb4d4a761580545cc"></a>
@@ -716,6 +1051,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points in <em>a</em> joined with the data points in <em>b</em>. The resulting data selection is already simplified (see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">QCPDataSelection::simplify</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01049">1049</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1050</span>{</div>
+<div class="line"><span class="lineno"> 1051</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1052</span>  result += b;</div>
+<div class="line"><span class="lineno"> 1053</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1054</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa574f51a74d6998e9be95e252e6be287" name="aa574f51a74d6998e9be95e252e6be287"></a>
@@ -746,6 +1088,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points in <em>a</em> joined with the data points in <em>b</em>. The resulting data selection is already simplified (see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">QCPDataSelection::simplify</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01060">1060</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1061</span>{</div>
+<div class="line"><span class="lineno"> 1062</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1063</span>  result += b;</div>
+<div class="line"><span class="lineno"> 1064</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1065</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a49c0217af248959d59abfdd29401b678" name="a49c0217af248959d59abfdd29401b678"></a>
@@ -776,6 +1125,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points in <em>a</em> joined with the data points in <em>b</em>. The resulting data selection is already simplified (see <a class="el" href="#a4a2fbad1a6e4d1dd26fdfdf88956f2a4">QCPDataSelection::simplify</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01038">1038</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1039</span>{</div>
+<div class="line"><span class="lineno"> 1040</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1041</span>  result += b;</div>
+<div class="line"><span class="lineno"> 1042</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1043</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad62dd67b505c1fa9c02d1aafabcb9acf" name="ad62dd67b505c1fa9c02d1aafabcb9acf"></a>
@@ -806,6 +1162,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points which are in <em>a</em> but not in <em>b</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01111">1111</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1112</span>{</div>
+<div class="line"><span class="lineno"> 1113</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1114</span>  result -= b;</div>
+<div class="line"><span class="lineno"> 1115</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1116</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a726652cb9ed840e3025435cc2c266468" name="a726652cb9ed840e3025435cc2c266468"></a>
@@ -836,6 +1199,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points which are in <em>a</em> but not in <em>b</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01091">1091</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1092</span>{</div>
+<div class="line"><span class="lineno"> 1093</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1094</span>  result -= b;</div>
+<div class="line"><span class="lineno"> 1095</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1096</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a32c5784ac70946f09a09b2dd19816b78" name="a32c5784ac70946f09a09b2dd19816b78"></a>
@@ -866,6 +1236,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points which are in <em>a</em> but not in <em>b</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01101">1101</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1102</span>{</div>
+<div class="line"><span class="lineno"> 1103</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1104</span>  result -= b;</div>
+<div class="line"><span class="lineno"> 1105</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1106</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41147ef7d6303c746e398278b7b624d1" name="a41147ef7d6303c746e398278b7b624d1"></a>
@@ -896,6 +1273,13 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Return a <a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a> with the data points which are in <em>a</em> but not in <em>b</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01081">1081</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1082</span>{</div>
+<div class="line"><span class="lineno"> 1083</span>  <a class="code hl_class" href="class_q_c_p_data_selection.html">QCPDataSelection</a> result(a);</div>
+<div class="line"><span class="lineno"> 1084</span>  result -= b;</div>
+<div class="line"><span class="lineno"> 1085</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1086</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aed65b8988afe6b03adeadf5edf663670" name="aed65b8988afe6b03adeadf5edf663670"></a>
@@ -926,11 +1310,49 @@ Iterating over a data selection</h1>
 </div><div class="memdoc">
 <p>Prints <em>selection</em> in a human readable format to the qDebug output. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01132">1132</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1133</span>{</div>
+<div class="line"><span class="lineno"> 1134</span>    d.nospace() &lt;&lt; <span class="stringliteral">&quot;QCPDataSelection(&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1135</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;selection.<a class="code hl_function" href="#abd8869ccb231ab991e8576de931f647d">dataRangeCount</a>(); ++i)</div>
+<div class="line"><span class="lineno"> 1136</span>    {</div>
+<div class="line"><span class="lineno"> 1137</span>      <span class="keywordflow">if</span> (i != 0)</div>
+<div class="line"><span class="lineno"> 1138</span>        d &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno"> 1139</span>      d &lt;&lt; selection.<a class="code hl_function" href="#a6956acf6a9a49a353b4f9b58608978ad">dataRange</a>(i);</div>
+<div class="line"><span class="lineno"> 1140</span>    }</div>
+<div class="line"><span class="lineno"> 1141</span>    d &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1142</span>    <span class="keywordflow">return</span> d;</div>
+<div class="line"><span class="lineno"> 1143</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa1070e7c700f15d9018fad78b4732004" name="aa1070e7c700f15d9018fad78b4732004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1070e7c700f15d9018fad78b4732004">&#9670;&#160;</a></span>mDataRanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a>&gt; QCPDataSelection::mDataRanges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01027">1027</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

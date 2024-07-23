@@ -212,6 +212,8 @@ Friends</h2></td></tr>
 <p>The data cells can be accessed in two ways: They can be directly addressed by an integer index with <a class="el" href="#a8e75eaf8746596319032a93f3d2d0683">setCell</a>. This is the fastest method. Alternatively, they can be addressed by their plot coordinate with <a class="el" href="#afd2083ccfd6987ec94aa7ef8e91ca39a">setData</a>. plot coordinate to cell index transformations and vice versa are provided by the functions <a class="el" href="#aca5b29e0ca2f299c9060fc6e1f74d0c8">coordToCell</a> and <a class="el" href="#af1a36385c78ab624cd617065602408b6">cellToCoord</a>.</p>
 <p>A <a class="el" href="class_q_c_p_color_map_data.html">QCPColorMapData</a> also holds an on-demand two-dimensional array of alpha values which (if allocated) has the same size as the data map. It can be accessed via <a class="el" href="#aaf7de5b34c58f38d8f4c1ceb064a876c">setAlpha</a>, <a class="el" href="#a93e2a549d7702bc849cd48a585294657">fillAlpha</a> and <a class="el" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a>. The memory for the alpha map is only allocated if needed, i.e. on the first call of <a class="el" href="#aaf7de5b34c58f38d8f4c1ceb064a876c">setAlpha</a>. <a class="el" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a> restores full opacity and frees the alpha map.</p>
 <p>This class also buffers the minimum and maximum values that are in the data set, to provide <a class="el" href="class_q_c_p_color_map.html#a856608fa3dd1cc290bcd5f29a5575774">QCPColorMap::rescaleDataRange</a> with the necessary information quickly. Setting a cell to a value that is greater than the current maximum increases this maximum to the new value. However, setting the cell that currently holds the maximum value to a smaller value doesn't decrease the maximum again, because finding the true new maximum would require going through the entire data array, which might be time consuming. The same holds for the data minimum. This functionality is given by <a class="el" href="#ab235ade8a4d64bd3adb26a99b3dd57ee">recalculateDataBounds</a>, such that you can decide when it is sensible to find the true current minimum and maximum. The method <a class="el" href="class_q_c_p_color_map.html#a856608fa3dd1cc290bcd5f29a5575774">QCPColorMap::rescaleDataRange</a> offers a convenience parameter <em>recalculateDataBounds</em> which may be set to true to automatically call <a class="el" href="#ab235ade8a4d64bd3adb26a99b3dd57ee">recalculateDataBounds</a> internally. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06022">6022</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aac9d8eb81e18e240d89d56c01933fd23" name="aac9d8eb81e18e240d89d56c01933fd23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac9d8eb81e18e240d89d56c01933fd23">&#9670;&#160;</a></span>QCPColorMapData() <span class="overload">[1/2]</span></h2>
@@ -244,6 +246,35 @@ Friends</h2></td></tr>
 <p>Constructs a new <a class="el" href="class_q_c_p_color_map_data.html" title="Holds the two-dimensional data of a QCPColorMap plottable.">QCPColorMapData</a> instance. The instance has <em>keySize</em> cells in the key direction and <em>valueSize</em> cells in the value direction. These cells will be displayed by the <a class="el" href="class_q_c_p_color_map.html">QCPColorMap</a> at the coordinates <em>keyRange</em> and <em>valueRange</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>, <a class="el" href="#ac7ef70e383aface34b44dbde49234b6b">setKeySize</a>, <a class="el" href="#a0893c9e3914513048b45e3429ffd16f2">setValueSize</a>, <a class="el" href="#aad9c1c7c703c1339489fc730517c83d4">setRange</a>, <a class="el" href="#a0738c485f3c9df9ea1241b7a8bb6a86e">setKeyRange</a>, <a class="el" href="#ada1b2680ba96a5f4175b6d341cf75d23">setValueRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25849">25849</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25849</span>                                                                                                                 :</div>
+<div class="line"><span class="lineno">25850</span>  <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>(0),</div>
+<div class="line"><span class="lineno">25851</span>  <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>(0),</div>
+<div class="line"><span class="lineno">25852</span>  <a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>(<a class="code hl_function" href="#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>),</div>
+<div class="line"><span class="lineno">25853</span>  <a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>(<a class="code hl_function" href="#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>),</div>
+<div class="line"><span class="lineno">25854</span>  <a class="code hl_variable" href="#a10e91aa89ed05bd177b1f81e07b465b8">mIsEmpty</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">25855</span>  <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">25856</span>  <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">25857</span>  <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">25858</span>{</div>
+<div class="line"><span class="lineno">25859</span>  <a class="code hl_function" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>(<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>, <a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>);</div>
+<div class="line"><span class="lineno">25860</span>  <a class="code hl_function" href="#a350f783260eb9b5de5c7b5e0d5d3e3c2">fill</a>(0);</div>
+<div class="line"><span class="lineno">25861</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a0d9ff35c299d0478b682bfbcdd9c097e"><div class="ttname"><a href="#a0d9ff35c299d0478b682bfbcdd9c097e">QCPColorMapData::setSize</a></div><div class="ttdeci">void setSize(int keySize, int valueSize)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l25959">qcustomplot.cpp:25959</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a10e91aa89ed05bd177b1f81e07b465b8"><div class="ttname"><a href="#a10e91aa89ed05bd177b1f81e07b465b8">QCPColorMapData::mIsEmpty</a></div><div class="ttdeci">bool mIsEmpty</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06065">qcustomplot.h:6065</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a1e43abd20a77b922b7cecfc69bf4dad7"><div class="ttname"><a href="#a1e43abd20a77b922b7cecfc69bf4dad7">QCPColorMapData::keyRange</a></div><div class="ttdeci">QCPRange keyRange() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06033">qcustomplot.h:6033</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a2146560b3a61a41186f9aa5ed9ec37a6"><div class="ttname"><a href="#a2146560b3a61a41186f9aa5ed9ec37a6">QCPColorMapData::mAlpha</a></div><div class="ttdeci">unsigned char * mAlpha</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06069">qcustomplot.h:6069</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a225bb96f10c1a27b51ae59249477dbef"><div class="ttname"><a href="#a225bb96f10c1a27b51ae59249477dbef">QCPColorMapData::mValueRange</a></div><div class="ttdeci">QCPRange mValueRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06064">qcustomplot.h:6064</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a350f783260eb9b5de5c7b5e0d5d3e3c2"><div class="ttname"><a href="#a350f783260eb9b5de5c7b5e0d5d3e3c2">QCPColorMapData::fill</a></div><div class="ttdeci">void fill(double z)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26204">qcustomplot.cpp:26204</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a354e06462023340fbc03894b22499f6d"><div class="ttname"><a href="#a354e06462023340fbc03894b22499f6d">QCPColorMapData::mKeySize</a></div><div class="ttdeci">int mKeySize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06063">qcustomplot.h:6063</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a818e4e384aa4e5fad69ac603924394d3"><div class="ttname"><a href="#a818e4e384aa4e5fad69ac603924394d3">QCPColorMapData::valueRange</a></div><div class="ttdeci">QCPRange valueRange() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06034">qcustomplot.h:6034</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a8510cafea24645bbb62b5e0bfc43209f"><div class="ttname"><a href="#a8510cafea24645bbb62b5e0bfc43209f">QCPColorMapData::valueSize</a></div><div class="ttdeci">int valueSize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06032">qcustomplot.h:6032</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_aaaafd0d7d0f153dbd152f3daf34254ee"><div class="ttname"><a href="#aaaafd0d7d0f153dbd152f3daf34254ee">QCPColorMapData::mKeyRange</a></div><div class="ttdeci">QCPRange mKeyRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06064">qcustomplot.h:6064</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_abbda4d28de97aedce1e6e6f008a0a1f7"><div class="ttname"><a href="#abbda4d28de97aedce1e6e6f008a0a1f7">QCPColorMapData::keySize</a></div><div class="ttdeci">int keySize() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06031">qcustomplot.h:6031</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ac1682862022f575191351c9825187d39"><div class="ttname"><a href="#ac1682862022f575191351c9825187d39">QCPColorMapData::mData</a></div><div class="ttdeci">double * mData</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06068">qcustomplot.h:6068</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ad3cc682da2ac14e5acdbc05cf4d3d93b"><div class="ttname"><a href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">QCPColorMapData::mDataModified</a></div><div class="ttdeci">bool mDataModified</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06071">qcustomplot.h:6071</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ae8ee9093632a59f55eb4fc06579ed256"><div class="ttname"><a href="#ae8ee9093632a59f55eb4fc06579ed256">QCPColorMapData::mValueSize</a></div><div class="ttdeci">int mValueSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06063">qcustomplot.h:6063</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ac252031d0921520d5bccb6bfa23a8b" name="a7ac252031d0921520d5bccb6bfa23a8b"></a>
@@ -261,6 +292,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25863">25863</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25864</span>{</div>
+<div class="line"><span class="lineno">25865</span>  <span class="keyword">delete</span>[] <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>;</div>
+<div class="line"><span class="lineno">25866</span>  <span class="keyword">delete</span>[] <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>;</div>
+<div class="line"><span class="lineno">25867</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7f2145d86473263494abb9bf1de20436" name="a7f2145d86473263494abb9bf1de20436"></a>
@@ -279,6 +316,18 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructs a new <a class="el" href="class_q_c_p_color_map_data.html" title="Holds the two-dimensional data of a QCPColorMap plottable.">QCPColorMapData</a> instance copying the data and range of <em>other</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25872">25872</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25872</span>                                                             :</div>
+<div class="line"><span class="lineno">25873</span>  <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>(0),</div>
+<div class="line"><span class="lineno">25874</span>  <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>(0),</div>
+<div class="line"><span class="lineno">25875</span>  <a class="code hl_variable" href="#a10e91aa89ed05bd177b1f81e07b465b8">mIsEmpty</a>(<span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">25876</span>  <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">25877</span>  <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">25878</span>  <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">25879</span>{</div>
+<div class="line"><span class="lineno">25880</span>  *<span class="keyword">this</span> = other;</div>
+<div class="line"><span class="lineno">25881</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -304,6 +353,14 @@ Friends</h2></td></tr>
 <p>If this color map data doesn't have an alpha map (because <a class="el" href="#aaf7de5b34c58f38d8f4c1ceb064a876c">setAlpha</a> was never called after creation or after a call to <a class="el" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a>), returns 255, which corresponds to full opacity.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aaf7de5b34c58f38d8f4c1ceb064a876c">setAlpha</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25939">25939</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25940</span>{</div>
+<div class="line"><span class="lineno">25941</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> &amp;&amp; keyIndex &gt;= 0 &amp;&amp; keyIndex &lt; mKeySize &amp;&amp; valueIndex &gt;= 0 &amp;&amp; valueIndex &lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">25942</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>[valueIndex*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> + keyIndex];</div>
+<div class="line"><span class="lineno">25943</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">25944</span>    <span class="keywordflow">return</span> 255;</div>
+<div class="line"><span class="lineno">25945</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af51ecd21f347adbf87b4cce4e1f5cbd6" name="af51ecd21f347adbf87b4cce4e1f5cbd6"></a>
@@ -325,6 +382,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25923">25923</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25924</span>{</div>
+<div class="line"><span class="lineno">25925</span>  <span class="keywordflow">if</span> (keyIndex &gt;= 0 &amp;&amp; keyIndex &lt; mKeySize &amp;&amp; valueIndex &gt;= 0 &amp;&amp; valueIndex &lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">25926</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[valueIndex*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> + keyIndex];</div>
+<div class="line"><span class="lineno">25927</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">25928</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">25929</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af1a36385c78ab624cd617065602408b6" name="af1a36385c78ab624cd617065602408b6"></a>
@@ -360,6 +425,16 @@ Friends</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> always displays the data at equal key/value intervals, even if the key or value axis is set to a logarithmic scaling. If you want to use <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> with logarithmic axes, you shouldn't use the <a class="el" href="#af1a36385c78ab624cd617065602408b6">QCPColorMapData::cellToCoord</a> method as it uses a linear transformation to determine the cell index.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aca5b29e0ca2f299c9060fc6e1f74d0c8">coordToCell</a>, <a class="el" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">QCPAxis::pixelToCoord</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26271">26271</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26272</span>{</div>
+<div class="line"><span class="lineno">26273</span>  <span class="keywordflow">if</span> (key)</div>
+<div class="line"><span class="lineno">26274</span>    *key = keyIndex/double(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>-1)*(<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)+<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>;</div>
+<div class="line"><span class="lineno">26275</span>  <span class="keywordflow">if</span> (value)</div>
+<div class="line"><span class="lineno">26276</span>    *value = valueIndex/double(<a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>-1)*(<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)+<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>;</div>
+<div class="line"><span class="lineno">26277</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9910ba830e96955bd5c8e5bef1e77ef3" name="a9910ba830e96955bd5c8e5bef1e77ef3"></a>
@@ -379,6 +454,11 @@ Friends</h2></td></tr>
 <p>Frees the internal data memory.</p>
 <p>This is equivalent to calling <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize(0, 0)</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26183">26183</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26184</span>{</div>
+<div class="line"><span class="lineno">26185</span>  <a class="code hl_function" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>(0, 0);</div>
+<div class="line"><span class="lineno">26186</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a14d08b9c3720cd719400079b86d3906b" name="a14d08b9c3720cd719400079b86d3906b"></a>
@@ -397,6 +477,16 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Frees the internal alpha map. The color map will have full opacity again. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26191">26191</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26192</span>{</div>
+<div class="line"><span class="lineno">26193</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>)</div>
+<div class="line"><span class="lineno">26194</span>  {</div>
+<div class="line"><span class="lineno">26195</span>    <span class="keyword">delete</span>[] <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>;</div>
+<div class="line"><span class="lineno">26196</span>    <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">26197</span>    <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26198</span>  }</div>
+<div class="line"><span class="lineno">26199</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aca5b29e0ca2f299c9060fc6e1f74d0c8" name="aca5b29e0ca2f299c9060fc6e1f74d0c8"></a>
@@ -433,6 +523,14 @@ Friends</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> always displays the data at equal key/value intervals, even if the key or value axis is set to a logarithmic scaling. If you want to use <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> with logarithmic axes, you shouldn't use the <a class="el" href="#aca5b29e0ca2f299c9060fc6e1f74d0c8">QCPColorMapData::coordToCell</a> method as it uses a linear transformation to determine the cell index.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#af1a36385c78ab624cd617065602408b6">cellToCoord</a>, <a class="el" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">QCPAxis::coordToPixel</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26248">26248</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26249</span>{</div>
+<div class="line"><span class="lineno">26250</span>  <span class="keywordflow">if</span> (keyIndex)</div>
+<div class="line"><span class="lineno">26251</span>    *keyIndex = int( (key-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/(<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>-1)+0.5 );</div>
+<div class="line"><span class="lineno">26252</span>  <span class="keywordflow">if</span> (valueIndex)</div>
+<div class="line"><span class="lineno">26253</span>    *valueIndex = int( (value-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/(<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*(<a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>-1)+0.5 );</div>
+<div class="line"><span class="lineno">26254</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a42c2b1c303683515fa4de4c551f54441" name="a42c2b1c303683515fa4de4c551f54441"></a>
@@ -458,6 +556,34 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26292">26292</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26293</span>{</div>
+<div class="line"><span class="lineno">26294</span>  <a class="code hl_function" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a>();</div>
+<div class="line"><span class="lineno">26295</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a>())</div>
+<div class="line"><span class="lineno">26296</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26297</span>  </div>
+<div class="line"><span class="lineno">26298</span><span class="preprocessor">#ifdef __EXCEPTIONS</span></div>
+<div class="line"><span class="lineno">26299</span>  <span class="keywordflow">try</span> { <span class="comment">// 2D arrays get memory intensive fast. So if the allocation fails, at least output debug message</span></div>
+<div class="line"><span class="lineno">26300</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">26301</span>    <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>[size_t(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>*<a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)];</div>
+<div class="line"><span class="lineno">26302</span><span class="preprocessor">#ifdef __EXCEPTIONS</span></div>
+<div class="line"><span class="lineno">26303</span>  } <span class="keywordflow">catch</span> (...) { <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><span class="lineno">26304</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">26305</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>)</div>
+<div class="line"><span class="lineno">26306</span>  {</div>
+<div class="line"><span class="lineno">26307</span>    <span class="keywordflow">if</span> (initializeOpaque)</div>
+<div class="line"><span class="lineno">26308</span>      <a class="code hl_function" href="#a93e2a549d7702bc849cd48a585294657">fillAlpha</a>(255);</div>
+<div class="line"><span class="lineno">26309</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26310</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26311</span>  {</div>
+<div class="line"><span class="lineno">26312</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;out of memory for data dimensions &quot;</span>&lt;&lt; <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> &lt;&lt; <span class="stringliteral">&quot;*&quot;</span> &lt;&lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>;</div>
+<div class="line"><span class="lineno">26313</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26314</span>  }</div>
+<div class="line"><span class="lineno">26315</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a14d08b9c3720cd719400079b86d3906b"><div class="ttname"><a href="#a14d08b9c3720cd719400079b86d3906b">QCPColorMapData::clearAlpha</a></div><div class="ttdeci">void clearAlpha()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26191">qcustomplot.cpp:26191</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a93e2a549d7702bc849cd48a585294657"><div class="ttname"><a href="#a93e2a549d7702bc849cd48a585294657">QCPColorMapData::fillAlpha</a></div><div class="ttdeci">void fillAlpha(unsigned char alpha)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26221">qcustomplot.cpp:26221</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_aea88cc75a76ca571acf29b2ba8ac970d"><div class="ttname"><a href="#aea88cc75a76ca571acf29b2ba8ac970d">QCPColorMapData::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06057">qcustomplot.h:6057</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2c33807b008cdb9e1394245c294c0eaf" name="a2c33807b008cdb9e1394245c294c0eaf"></a>
@@ -479,6 +605,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25912">25912</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25913</span>{</div>
+<div class="line"><span class="lineno">25914</span>  <span class="keywordtype">int</span> keyCell = int( (key-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/(<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>-1)+0.5 );</div>
+<div class="line"><span class="lineno">25915</span>  <span class="keywordtype">int</span> valueCell = int( (value-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/(<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*(<a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>-1)+0.5 );</div>
+<div class="line"><span class="lineno">25916</span>  <span class="keywordflow">if</span> (keyCell &gt;= 0 &amp;&amp; keyCell &lt; mKeySize &amp;&amp; valueCell &gt;= 0 &amp;&amp; valueCell &lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">25917</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[valueCell*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> + keyCell];</div>
+<div class="line"><span class="lineno">25918</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">25919</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">25920</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab7620248272c5ddd9a3f877f07179f6d" name="ab7620248272c5ddd9a3f877f07179f6d"></a>
@@ -504,6 +640,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06035">6035</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6035</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a1798b3dcc0a27091d196bfd156dcb3f2"><div class="ttname"><a href="#a1798b3dcc0a27091d196bfd156dcb3f2">QCPColorMapData::mDataBounds</a></div><div class="ttdeci">QCPRange mDataBounds</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l06070">qcustomplot.h:6070</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a350f783260eb9b5de5c7b5e0d5d3e3c2" name="a350f783260eb9b5de5c7b5e0d5d3e3c2"></a>
@@ -522,6 +662,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets all cells to the value <em>z</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26204">26204</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26205</span>{</div>
+<div class="line"><span class="lineno">26206</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> dataCount = <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>;</div>
+<div class="line"><span class="lineno">26207</span>  memset(<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>, z, dataCount*<span class="keyword">sizeof</span>(*<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>));</div>
+<div class="line"><span class="lineno">26208</span>  <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a> = <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(z, z);</div>
+<div class="line"><span class="lineno">26209</span>  <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26210</span>}</div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a93e2a549d7702bc849cd48a585294657" name="a93e2a549d7702bc849cd48a585294657"></a>
@@ -542,6 +691,18 @@ Friends</h2></td></tr>
 <p>If you wish to restore opacity to 100% and free any used memory for the alpha map, rather use <a class="el" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aaf7de5b34c58f38d8f4c1ceb064a876c">setAlpha</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26221">26221</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26222</span>{</div>
+<div class="line"><span class="lineno">26223</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> || <a class="code hl_function" href="#a42c2b1c303683515fa4de4c551f54441">createAlpha</a>(<span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">26224</span>  {</div>
+<div class="line"><span class="lineno">26225</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> dataCount = <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>;</div>
+<div class="line"><span class="lineno">26226</span>    memset(<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>, <a class="code hl_function" href="#a4f7e6b7a97017400cbbd46f0660e68ea">alpha</a>, dataCount*<span class="keyword">sizeof</span>(*<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>));</div>
+<div class="line"><span class="lineno">26227</span>    <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26228</span>  }</div>
+<div class="line"><span class="lineno">26229</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a42c2b1c303683515fa4de4c551f54441"><div class="ttname"><a href="#a42c2b1c303683515fa4de4c551f54441">QCPColorMapData::createAlpha</a></div><div class="ttdeci">bool createAlpha(bool initializeOpaque=true)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26292">qcustomplot.cpp:26292</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a4f7e6b7a97017400cbbd46f0660e68ea"><div class="ttname"><a href="#a4f7e6b7a97017400cbbd46f0660e68ea">QCPColorMapData::alpha</a></div><div class="ttdeci">unsigned char alpha(int keyIndex, int valueIndex)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l25939">qcustomplot.cpp:25939</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aea88cc75a76ca571acf29b2ba8ac970d" name="aea88cc75a76ca571acf29b2ba8ac970d"></a>
@@ -568,6 +729,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns whether this instance carries no data. This is equivalent to having a size where at least one of the dimensions is 0 (see <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06057">6057</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6057</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a10e91aa89ed05bd177b1f81e07b465b8">mIsEmpty</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1e43abd20a77b922b7cecfc69bf4dad7" name="a1e43abd20a77b922b7cecfc69bf4dad7"></a>
@@ -593,6 +757,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06033">6033</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6033</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abbda4d28de97aedce1e6e6f008a0a1f7" name="abbda4d28de97aedce1e6e6f008a0a1f7"></a>
@@ -618,6 +785,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06031">6031</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6031</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afdf4dd1b2f5714234fe84709b85c2a8d" name="afdf4dd1b2f5714234fe84709b85c2a8d"></a>
@@ -636,6 +806,31 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Overwrites this color map data instance with the data stored in <em>other</em>. The alpha map state is transferred, too. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25887">25887</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25888</span>{</div>
+<div class="line"><span class="lineno">25889</span>  <span class="keywordflow">if</span> (&amp;other != <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">25890</span>  {</div>
+<div class="line"><span class="lineno">25891</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a> = other.<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>();</div>
+<div class="line"><span class="lineno">25892</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a> = other.<a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>();</div>
+<div class="line"><span class="lineno">25893</span>    <span class="keywordflow">if</span> (!other.<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> &amp;&amp; <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>)</div>
+<div class="line"><span class="lineno">25894</span>      <a class="code hl_function" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a>();</div>
+<div class="line"><span class="lineno">25895</span>    <a class="code hl_function" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>(<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>, <a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>);</div>
+<div class="line"><span class="lineno">25896</span>    <span class="keywordflow">if</span> (other.<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> &amp;&amp; !<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>)</div>
+<div class="line"><span class="lineno">25897</span>      <a class="code hl_function" href="#a42c2b1c303683515fa4de4c551f54441">createAlpha</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">25898</span>    <a class="code hl_function" href="#aad9c1c7c703c1339489fc730517c83d4">setRange</a>(other.<a class="code hl_function" href="#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>(), other.<a class="code hl_function" href="#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>());</div>
+<div class="line"><span class="lineno">25899</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a>())</div>
+<div class="line"><span class="lineno">25900</span>    {</div>
+<div class="line"><span class="lineno">25901</span>      memcpy(<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>, other.<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>, <span class="keyword">sizeof</span>(<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[0])*<span class="keywordtype">size_t</span>(<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>*<a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>));</div>
+<div class="line"><span class="lineno">25902</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>)</div>
+<div class="line"><span class="lineno">25903</span>        memcpy(<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>, other.<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>, <span class="keyword">sizeof</span>(<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>[0])*<span class="keywordtype">size_t</span>(<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>*<a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>));</div>
+<div class="line"><span class="lineno">25904</span>    }</div>
+<div class="line"><span class="lineno">25905</span>    <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a> = other.<a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>;</div>
+<div class="line"><span class="lineno">25906</span>    <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">25907</span>  }</div>
+<div class="line"><span class="lineno">25908</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">25909</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_aad9c1c7c703c1339489fc730517c83d4"><div class="ttname"><a href="#aad9c1c7c703c1339489fc730517c83d4">QCPColorMapData::setRange</a></div><div class="ttdeci">void setRange(const QCPRange &amp;keyRange, const QCPRange &amp;valueRange)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26030">qcustomplot.cpp:26030</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab235ade8a4d64bd3adb26a99b3dd57ee" name="ab235ade8a4d64bd3adb26a99b3dd57ee"></a>
@@ -656,6 +851,25 @@ Friends</h2></td></tr>
 <p>Calling this method is only advised if you are about to call <a class="el" href="class_q_c_p_color_map.html#a856608fa3dd1cc290bcd5f29a5575774">QCPColorMap::rescaleDataRange</a> and can not guarantee that the cells holding the maximum or minimum data haven't been overwritten with a smaller or larger value respectively, since the buffered maximum/minimum values have been updated the last time. Why this is the case is explained in the class description (<a class="el" href="class_q_c_p_color_map_data.html">QCPColorMapData</a>).</p>
 <p>Note that the method <a class="el" href="class_q_c_p_color_map.html#a856608fa3dd1cc290bcd5f29a5575774">QCPColorMap::rescaleDataRange</a> provides a parameter <em>recalculateDataBounds</em> for convenience. Setting this to true will call this method for you, before doing the rescale. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26159">26159</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26160</span>{</div>
+<div class="line"><span class="lineno">26161</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a> &gt; 0)</div>
+<div class="line"><span class="lineno">26162</span>  {</div>
+<div class="line"><span class="lineno">26163</span>    <span class="keywordtype">double</span> minHeight = std::numeric_limits&lt;double&gt;::max();</div>
+<div class="line"><span class="lineno">26164</span>    <span class="keywordtype">double</span> maxHeight = -std::numeric_limits&lt;double&gt;::max();</div>
+<div class="line"><span class="lineno">26165</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> dataCount = <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>;</div>
+<div class="line"><span class="lineno">26166</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;dataCount; ++i)</div>
+<div class="line"><span class="lineno">26167</span>    {</div>
+<div class="line"><span class="lineno">26168</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[i] &gt; maxHeight)</div>
+<div class="line"><span class="lineno">26169</span>        maxHeight = <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[i];</div>
+<div class="line"><span class="lineno">26170</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[i] &lt; minHeight)</div>
+<div class="line"><span class="lineno">26171</span>        minHeight = <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[i];</div>
+<div class="line"><span class="lineno">26172</span>    }</div>
+<div class="line"><span class="lineno">26173</span>    <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = minHeight;</div>
+<div class="line"><span class="lineno">26174</span>    <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = maxHeight;</div>
+<div class="line"><span class="lineno">26175</span>  }</div>
+<div class="line"><span class="lineno">26176</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf7de5b34c58f38d8f4c1ceb064a876c" name="aaf7de5b34c58f38d8f4c1ceb064a876c"></a>
@@ -686,6 +900,19 @@ Friends</h2></td></tr>
 <p>Note that the cell-wise alpha which can be configured here is independent of any alpha configured in the color map's gradient (<a class="el" href="class_q_c_p_color_gradient.html">QCPColorGradient</a>). If a cell is affected both by the cell-wise and gradient alpha, the alpha values will be blended accordingly during rendering of the color map.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a93e2a549d7702bc849cd48a585294657">fillAlpha</a>, <a class="el" href="#a14d08b9c3720cd719400079b86d3906b">clearAlpha</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26133">26133</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26134</span>{</div>
+<div class="line"><span class="lineno">26135</span>  <span class="keywordflow">if</span> (keyIndex &gt;= 0 &amp;&amp; keyIndex &lt; mKeySize &amp;&amp; valueIndex &gt;= 0 &amp;&amp; valueIndex &lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">26136</span>  {</div>
+<div class="line"><span class="lineno">26137</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a> || <a class="code hl_function" href="#a42c2b1c303683515fa4de4c551f54441">createAlpha</a>())</div>
+<div class="line"><span class="lineno">26138</span>    {</div>
+<div class="line"><span class="lineno">26139</span>      <a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>[valueIndex*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> + keyIndex] = <a class="code hl_function" href="#a4f7e6b7a97017400cbbd46f0660e68ea">alpha</a>;</div>
+<div class="line"><span class="lineno">26140</span>      <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26141</span>    }</div>
+<div class="line"><span class="lineno">26142</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26143</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;index out of bounds:&quot;</span> &lt;&lt; keyIndex &lt;&lt; valueIndex;</div>
+<div class="line"><span class="lineno">26144</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8e75eaf8746596319032a93f3d2d0683" name="a8e75eaf8746596319032a93f3d2d0683"></a>
@@ -715,6 +942,20 @@ Friends</h2></td></tr>
 <p>In the standard plot configuration (horizontal key axis and vertical value axis, both not range-reversed), the cell with indices (0, 0) is in the bottom left corner and the cell with indices (keySize-1, valueSize-1) is in the top right corner of the color map.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#afd2083ccfd6987ec94aa7ef8e91ca39a">setData</a>, <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26104">26104</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26105</span>{</div>
+<div class="line"><span class="lineno">26106</span>  <span class="keywordflow">if</span> (keyIndex &gt;= 0 &amp;&amp; keyIndex &lt; mKeySize &amp;&amp; valueIndex &gt;= 0 &amp;&amp; valueIndex &lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">26107</span>  {</div>
+<div class="line"><span class="lineno">26108</span>    <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[valueIndex*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> + keyIndex] = z;</div>
+<div class="line"><span class="lineno">26109</span>    <span class="keywordflow">if</span> (z &lt; <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)</div>
+<div class="line"><span class="lineno">26110</span>      <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = z;</div>
+<div class="line"><span class="lineno">26111</span>    <span class="keywordflow">if</span> (z &gt; <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)</div>
+<div class="line"><span class="lineno">26112</span>      <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = z;</div>
+<div class="line"><span class="lineno">26113</span>     <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26114</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">26115</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;index out of bounds:&quot;</span> &lt;&lt; keyIndex &lt;&lt; valueIndex;</div>
+<div class="line"><span class="lineno">26116</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afd2083ccfd6987ec94aa7ef8e91ca39a" name="afd2083ccfd6987ec94aa7ef8e91ca39a"></a>
@@ -744,6 +985,21 @@ Friends</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> always displays the data at equal key/value intervals, even if the key or value axis is set to a logarithmic scaling. If you want to use <a class="el" href="class_q_c_p_color_map.html" title="A plottable representing a two-dimensional color map in a plot.">QCPColorMap</a> with logarithmic axes, you shouldn't use the <a class="el" href="#afd2083ccfd6987ec94aa7ef8e91ca39a">QCPColorMapData::setData</a> method as it uses a linear transformation to determine the cell index. Rather directly access the cell index with <a class="el" href="#a8e75eaf8746596319032a93f3d2d0683">QCPColorMapData::setCell</a>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8e75eaf8746596319032a93f3d2d0683">setCell</a>, <a class="el" href="#aad9c1c7c703c1339489fc730517c83d4">setRange</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26078">26078</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26079</span>{</div>
+<div class="line"><span class="lineno">26080</span>  <span class="keywordtype">int</span> keyCell = int( (key-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/(<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>-1)+0.5 );</div>
+<div class="line"><span class="lineno">26081</span>  <span class="keywordtype">int</span> valueCell = int( (value-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)/(<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>-<a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)*(<a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>-1)+0.5 );</div>
+<div class="line"><span class="lineno">26082</span>  <span class="keywordflow">if</span> (keyCell &gt;= 0 &amp;&amp; keyCell &lt; mKeySize &amp;&amp; valueCell &gt;= 0 &amp;&amp; valueCell &lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">26083</span>  {</div>
+<div class="line"><span class="lineno">26084</span>    <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>[valueCell*<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> + keyCell] = z;</div>
+<div class="line"><span class="lineno">26085</span>    <span class="keywordflow">if</span> (z &lt; <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a>)</div>
+<div class="line"><span class="lineno">26086</span>      <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> = z;</div>
+<div class="line"><span class="lineno">26087</span>    <span class="keywordflow">if</span> (z &gt; <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a>)</div>
+<div class="line"><span class="lineno">26088</span>      <a class="code hl_variable" href="#a1798b3dcc0a27091d196bfd156dcb3f2">mDataBounds</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> = z;</div>
+<div class="line"><span class="lineno">26089</span>     <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26090</span>  }</div>
+<div class="line"><span class="lineno">26091</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0738c485f3c9df9ea1241b7a8bb6a86e" name="a0738c485f3c9df9ea1241b7a8bb6a86e"></a>
@@ -764,6 +1020,11 @@ Friends</h2></td></tr>
 <p>The outer cells will be centered on the range boundaries given to this function. For example, if the key size (<a class="el" href="#ac7ef70e383aface34b44dbde49234b6b">setKeySize</a>) is 3 and <em>keyRange</em> is set to <code><a class="el" href="class_q_c_p_range.html" title="Represents the range an axis is encompassing.">QCPRange(2, 3)</a></code> there will be cells centered on the key coordinates 2, 2.5 and 3.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aad9c1c7c703c1339489fc730517c83d4">setRange</a>, <a class="el" href="#ada1b2680ba96a5f4175b6d341cf75d23">setValueRange</a>, <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26046">26046</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26047</span>{</div>
+<div class="line"><span class="lineno">26048</span>  <a class="code hl_variable" href="#aaaafd0d7d0f153dbd152f3daf34254ee">mKeyRange</a> = <a class="code hl_function" href="#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>;</div>
+<div class="line"><span class="lineno">26049</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7ef70e383aface34b44dbde49234b6b" name="ac7ef70e383aface34b44dbde49234b6b"></a>
@@ -785,6 +1046,11 @@ Friends</h2></td></tr>
 <p>Setting <em>keySize</em> to zero frees the internal data array and <a class="el" href="#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a> returns true.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0738c485f3c9df9ea1241b7a8bb6a86e">setKeyRange</a>, <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>, <a class="el" href="#a0893c9e3914513048b45e3429ffd16f2">setValueSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26000">26000</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26001</span>{</div>
+<div class="line"><span class="lineno">26002</span>  <a class="code hl_function" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>(<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>, <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>);</div>
+<div class="line"><span class="lineno">26003</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad9c1c7c703c1339489fc730517c83d4" name="aad9c1c7c703c1339489fc730517c83d4"></a>
@@ -809,6 +1075,14 @@ Friends</h2></td></tr>
 <p>The outer cells will be centered on the range boundaries given to this function. For example, if the key size (<a class="el" href="#ac7ef70e383aface34b44dbde49234b6b">setKeySize</a>) is 3 and <em>keyRange</em> is set to <code><a class="el" href="class_q_c_p_range.html" title="Represents the range an axis is encompassing.">QCPRange(2, 3)</a></code> there will be cells centered on the key coordinates 2, 2.5 and 3.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26030">26030</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26031</span>{</div>
+<div class="line"><span class="lineno">26032</span>  <a class="code hl_function" href="#a0738c485f3c9df9ea1241b7a8bb6a86e">setKeyRange</a>(<a class="code hl_function" href="#a1e43abd20a77b922b7cecfc69bf4dad7">keyRange</a>);</div>
+<div class="line"><span class="lineno">26033</span>  <a class="code hl_function" href="#ada1b2680ba96a5f4175b6d341cf75d23">setValueRange</a>(<a class="code hl_function" href="#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>);</div>
+<div class="line"><span class="lineno">26034</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_a0738c485f3c9df9ea1241b7a8bb6a86e"><div class="ttname"><a href="#a0738c485f3c9df9ea1241b7a8bb6a86e">QCPColorMapData::setKeyRange</a></div><div class="ttdeci">void setKeyRange(const QCPRange &amp;keyRange)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26046">qcustomplot.cpp:26046</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_map_data_html_ada1b2680ba96a5f4175b6d341cf75d23"><div class="ttname"><a href="#ada1b2680ba96a5f4175b6d341cf75d23">QCPColorMapData::setValueRange</a></div><div class="ttdeci">void setValueRange(const QCPRange &amp;valueRange)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l26061">qcustomplot.cpp:26061</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d9ff35c299d0478b682bfbcdd9c097e" name="a0d9ff35c299d0478b682bfbcdd9c097e"></a>
@@ -834,6 +1108,37 @@ Friends</h2></td></tr>
 <p>Setting at least one of <em>keySize</em> or <em>valueSize</em> to zero frees the internal data array and <a class="el" href="#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a> returns true.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aad9c1c7c703c1339489fc730517c83d4">setRange</a>, <a class="el" href="#ac7ef70e383aface34b44dbde49234b6b">setKeySize</a>, <a class="el" href="#a0893c9e3914513048b45e3429ffd16f2">setValueSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l25959">25959</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">25960</span>{</div>
+<div class="line"><span class="lineno">25961</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a> != <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> || <a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a> != <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)</div>
+<div class="line"><span class="lineno">25962</span>  {</div>
+<div class="line"><span class="lineno">25963</span>    <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> = <a class="code hl_function" href="#abbda4d28de97aedce1e6e6f008a0a1f7">keySize</a>;</div>
+<div class="line"><span class="lineno">25964</span>    <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a> = <a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>;</div>
+<div class="line"><span class="lineno">25965</span>    <span class="keyword">delete</span>[] <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>;</div>
+<div class="line"><span class="lineno">25966</span>    <a class="code hl_variable" href="#a10e91aa89ed05bd177b1f81e07b465b8">mIsEmpty</a> = <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> == 0 || <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a> == 0;</div>
+<div class="line"><span class="lineno">25967</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a10e91aa89ed05bd177b1f81e07b465b8">mIsEmpty</a>)</div>
+<div class="line"><span class="lineno">25968</span>    {</div>
+<div class="line"><span class="lineno">25969</span><span class="preprocessor">#ifdef __EXCEPTIONS</span></div>
+<div class="line"><span class="lineno">25970</span>      <span class="keywordflow">try</span> { <span class="comment">// 2D arrays get memory intensive fast. So if the allocation fails, at least output debug message</span></div>
+<div class="line"><span class="lineno">25971</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">25972</span>      <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a> = <span class="keyword">new</span> <span class="keywordtype">double</span>[size_t(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>*<a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>)];</div>
+<div class="line"><span class="lineno">25973</span><span class="preprocessor">#ifdef __EXCEPTIONS</span></div>
+<div class="line"><span class="lineno">25974</span>      } <span class="keywordflow">catch</span> (...) { <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a> = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><span class="lineno">25975</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">25976</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a>)</div>
+<div class="line"><span class="lineno">25977</span>        <a class="code hl_function" href="#a350f783260eb9b5de5c7b5e0d5d3e3c2">fill</a>(0);</div>
+<div class="line"><span class="lineno">25978</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">25979</span>        qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;out of memory for data dimensions &quot;</span>&lt;&lt; <a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a> &lt;&lt; <span class="stringliteral">&quot;*&quot;</span> &lt;&lt; <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>;</div>
+<div class="line"><span class="lineno">25980</span>    } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">25981</span>      <a class="code hl_variable" href="#ac1682862022f575191351c9825187d39">mData</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">25982</span>    </div>
+<div class="line"><span class="lineno">25983</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2146560b3a61a41186f9aa5ed9ec37a6">mAlpha</a>) <span class="comment">// if we had an alpha map, recreate it with new size</span></div>
+<div class="line"><span class="lineno">25984</span>      <a class="code hl_function" href="#a42c2b1c303683515fa4de4c551f54441">createAlpha</a>();</div>
+<div class="line"><span class="lineno">25985</span>    </div>
+<div class="line"><span class="lineno">25986</span>    <a class="code hl_variable" href="#ad3cc682da2ac14e5acdbc05cf4d3d93b">mDataModified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">25987</span>  }</div>
+<div class="line"><span class="lineno">25988</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ada1b2680ba96a5f4175b6d341cf75d23" name="ada1b2680ba96a5f4175b6d341cf75d23"></a>
@@ -854,6 +1159,11 @@ Friends</h2></td></tr>
 <p>The outer cells will be centered on the range boundaries given to this function. For example, if the value size (<a class="el" href="#a0893c9e3914513048b45e3429ffd16f2">setValueSize</a>) is 3 and <em>valueRange</em> is set to <code><a class="el" href="class_q_c_p_range.html" title="Represents the range an axis is encompassing.">QCPRange(2, 3)</a></code> there will be cells centered on the value coordinates 2, 2.5 and 3.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aad9c1c7c703c1339489fc730517c83d4">setRange</a>, <a class="el" href="#a0738c485f3c9df9ea1241b7a8bb6a86e">setKeyRange</a>, <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26061">26061</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26062</span>{</div>
+<div class="line"><span class="lineno">26063</span>  <a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a> = <a class="code hl_function" href="#a818e4e384aa4e5fad69ac603924394d3">valueRange</a>;</div>
+<div class="line"><span class="lineno">26064</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0893c9e3914513048b45e3429ffd16f2" name="a0893c9e3914513048b45e3429ffd16f2"></a>
@@ -875,6 +1185,11 @@ Friends</h2></td></tr>
 <p>Setting <em>valueSize</em> to zero frees the internal data array and <a class="el" href="#aea88cc75a76ca571acf29b2ba8ac970d">isEmpty</a> returns true.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ada1b2680ba96a5f4175b6d341cf75d23">setValueRange</a>, <a class="el" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>, <a class="el" href="#ac7ef70e383aface34b44dbde49234b6b">setKeySize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l26015">26015</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">26016</span>{</div>
+<div class="line"><span class="lineno">26017</span>  <a class="code hl_function" href="#a0d9ff35c299d0478b682bfbcdd9c097e">setSize</a>(<a class="code hl_variable" href="#a354e06462023340fbc03894b22499f6d">mKeySize</a>, <a class="code hl_function" href="#a8510cafea24645bbb62b5e0bfc43209f">valueSize</a>);</div>
+<div class="line"><span class="lineno">26018</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a818e4e384aa4e5fad69ac603924394d3" name="a818e4e384aa4e5fad69ac603924394d3"></a>
@@ -900,6 +1215,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06034">6034</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6034</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a225bb96f10c1a27b51ae59249477dbef">mValueRange</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8510cafea24645bbb62b5e0bfc43209f" name="a8510cafea24645bbb62b5e0bfc43209f"></a>
@@ -925,6 +1243,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06032">6032</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6032</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae8ee9093632a59f55eb4fc06579ed256">mValueSize</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -947,6 +1268,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06075">6075</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -971,6 +1294,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06069">6069</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ac1682862022f575191351c9825187d39" name="ac1682862022f575191351c9825187d39"></a>
@@ -992,6 +1317,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06068">6068</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1015,6 +1342,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06070">6070</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ad3cc682da2ac14e5acdbc05cf4d3d93b" name="ad3cc682da2ac14e5acdbc05cf4d3d93b"></a>
@@ -1036,6 +1365,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06071">6071</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1059,6 +1390,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06065">6065</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aaaafd0d7d0f153dbd152f3daf34254ee" name="aaaafd0d7d0f153dbd152f3daf34254ee"></a>
@@ -1080,6 +1413,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06064">6064</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1103,6 +1438,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06063">6063</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a225bb96f10c1a27b51ae59249477dbef" name="a225bb96f10c1a27b51ae59249477dbef"></a>
@@ -1124,6 +1461,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06064">6064</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1147,11 +1486,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l06063">6063</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

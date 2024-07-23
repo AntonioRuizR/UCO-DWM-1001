@@ -7,5 +7,6 @@ var class_console =
     [ "mouseDoubleClickEvent", "class_console.html#a54965d40e072dce88f9fe4fbb9d6eef7", null ],
     [ "mousePressEvent", "class_console.html#a9c7451bc62ecf61badcd49a36bfb639e", null ],
     [ "putData", "class_console.html#aa744a0868e01a13a502710f895f01525", null ],
-    [ "setLocalEchoEnabled", "class_console.html#a5a17c5b6bc6719a26f73a5d0ac3d7de1", null ]
+    [ "setLocalEchoEnabled", "class_console.html#a5a17c5b6bc6719a26f73a5d0ac3d7de1", null ],
+    [ "m_localEchoEnabled", "class_console.html#a8fc0c4b4d86e3acb076a690dd2bd9d54", null ]
 ];

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['yaxis_0',['yAxis',['../class_q_custom_plot.html#af6fea5679725b152c14facd920b19367',1,'QCustomPlot']]],
-  ['yaxis2_1',['yAxis2',['../class_q_custom_plot.html#af13fdc5bce7d0fabd640f13ba805c0b7',1,'QCustomPlot']]]
+  ['ui_0',['ui',['../class_dialog__about.html#a9ae52b56245b3b50e04fb09790c5562a',1,'Dialog_about::ui'],['../class_dialog__alarm__dist.html#a4ad24f6074dcfd9c37d540e624ccbd12',1,'Dialog_alarm_dist::ui'],['../class_dialog__alarm__pos.html#a42ef91dcde3a60b7ad3cbf6312ed50ab',1,'Dialog_alarm_pos::ui'],['../class_dialog__csv.html#a484618052b4c98010f82139dfcc2a3f9',1,'Dialog_csv::ui'],['../class_dialog__deviceconfig.html#ac12311c0aaa07e7593d5cba6d71191de',1,'Dialog_deviceconfig::ui'],['../class_dialog__dist__graph__config.html#ae6c3ad894d2b9363c7ac7c9d4a80fb6c',1,'Dialog_dist_graph_config::ui'],['../class_dialog__graph__history.html#adedb3acfad11a05a0c357d99827576d6',1,'Dialog_graph_history::ui'],['../class_dialog__mediafilter.html#a68205024628445cc8faaef55ae090c58',1,'Dialog_mediafilter::ui'],['../class_dialog__pos__graph__config.html#af93799fc865add6bcbc6461d6c2893d3',1,'Dialog_pos_graph_config::ui'],['../class_dialog__stats.html#a498dd6a43c927b019df3007f262e4a44',1,'Dialog_stats::ui'],['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow::ui']]],
+  ['upper_1',['upper',['../class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f',1,'QCPRange']]],
+  ['upperending_2',['upperEnding',['../class_q_c_p_axis_painter_private.html#af764be913be5f924700ac9bbb8c01139',1,'QCPAxisPainterPrivate']]],
+  ['upperquartile_3',['upperQuartile',['../class_q_c_p_statistical_box_data.html#a5604dfe04b103e5ac73ce7895b46303b',1,'QCPStatisticalBoxData']]]
 ];

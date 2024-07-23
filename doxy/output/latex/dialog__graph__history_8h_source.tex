@@ -1,0 +1,96 @@
+\doxysection{dialog\+\_\+graph\+\_\+history.\+h}
+\hypertarget{dialog__graph__history_8h_source}{}\label{dialog__graph__history_8h_source}\index{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_graph\_history.h@{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_graph\_history.h}}
+\mbox{\hyperlink{dialog__graph__history_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ DIALOG\_GRAPH\_HISTORY\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DIALOG\_GRAPH\_HISTORY\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{qcustomplot_8h}{qcustomplot.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__graph__history}{Dialog\_graph\_history}};}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__graph__history}{Dialog\_graph\_history}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_dialog__graph__history_a1e543746ae9c02bfac2ad2f0b94ee107}{Dialog\_graph\_history}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_dialog__graph__history_a5b91d35148dc9142e8adb43aef3fa809}{\string~Dialog\_graph\_history}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_a792ae50a6846f69b6cf33050000c77e1}{setupRealtimeDataDemo}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_a37da982c0dc07065f9dfb7e852a2870b}{setupRealtimeDataDemo3}}(\textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_abdd13379021d65b29aca6d94ada90a60}{load\_distances\_1}}(QList<double>,\ \textcolor{keywordtype}{double},\ QString,\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_af358d18dfb22289c8fbe2c8a7eaa9958}{load\_distances\_2}}(QList<double>,\ \textcolor{keywordtype}{double},\ QString,\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_a520a7cae90507531659dcc9054da3f5f}{load\_distances\_3}}(QList<double>,\ \textcolor{keywordtype}{double},\ QString,\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_acab69c0cd09b29b5f0e268bf52f0a5d3}{load\_distances\_4}}(QList<double>,\ \textcolor{keywordtype}{double},\ QString,\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_a29b3554693c2b05261f598bf4cfdee1f}{load\_coordinates}}(QList<double>,\ QList<double>,\ QList<double>);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_ada9ad9a9a5ab291e1d0b1dda2a8f5e64}{load\_anchors}}(\textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__graph__history_a3c572e740a2b6eb45bb62ae3f7db1605}{max\_range\_graph}}(\textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__graph__history_a3f356fcdeae14e56747d7a8b75ec0638}{reset\_variables}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//void\ mousePress();}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_clicked();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_2\_clicked();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_1\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_2\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_3\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_checkBox\_4\_toggled(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ graph\_interaction();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_4\_clicked();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_3\_clicked();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ Ui::Dialog\_graph\_history\ *ui;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ QPen\ graphPen\_1;}
+\DoxyCodeLine{00078\ \ \ \ \ QPen\ graphPen\_2;}
+\DoxyCodeLine{00079\ \ \ \ \ QPen\ graphPen\_3;}
+\DoxyCodeLine{00080\ \ \ \ \ QPen\ graphPen\_4;}
+\DoxyCodeLine{00081\ \ \ \ \ QPen\ graphPen\_selected;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ QVector<double>\ data\_list\_d1;}
+\DoxyCodeLine{00084\ \ \ \ \ QList<double>\ data\_list\_d2;}
+\DoxyCodeLine{00085\ \ \ \ \ QList<double>\ data\_list\_d3;}
+\DoxyCodeLine{00086\ \ \ \ \ QList<double>\ data\_list\_d4;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ QList<double>\ data\_pos\_x;}
+\DoxyCodeLine{00089\ \ \ \ \ QList<double>\ data\_pos\_y;}
+\DoxyCodeLine{00090\ \ \ \ \ QList<double>\ data\_pos\_z;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_dist1=0;}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_dist2=0;}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_dist3=0;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_dist4=0;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ QString\ id\_label\_1;}
+\DoxyCodeLine{00098\ \ \ \ \ QString\ id\_label\_2;}
+\DoxyCodeLine{00099\ \ \ \ \ QString\ id\_label\_3;}
+\DoxyCodeLine{00100\ \ \ \ \ QString\ id\_label\_4;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{double}\ maximum\_y\_range;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{double}\ maximum\_x\_range;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_y\_min\_c;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_y\_max\_c;}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_x\_min\_c;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{double}\ range\_pos\_x\_max\_c;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ reset\_values\ =\ 0;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIALOG\_GRAPH\_HISTORY\_H}}
+
+\end{DoxyCode}

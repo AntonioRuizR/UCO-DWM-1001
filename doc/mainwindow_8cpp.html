@@ -124,7 +124,9 @@ $(function(){initNavTree('mainwindow_8cpp.html',''); initResizable(true); });
 <code>#include &lt;QTimer&gt;</code><br />
 <code>#include &lt;QElapsedTimer&gt;</code><br />
 <code>#include &lt;QColor&gt;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="mainwindow_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afc81ad9bbdd28d8264c88749ef88b2ae" id="r_afc81ad9bbdd28d8264c88749ef88b2ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc81ad9bbdd28d8264c88749ef88b2ae">switchTranslator</a> (QTranslator &amp;translator, const QString &amp;filename)</td></tr>
@@ -150,6 +152,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l03895">3895</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3895</span>                                                                        {</div>
+<div class="line"><span class="lineno"> 3896</span>    <span class="comment">// remove the old translator</span></div>
+<div class="line"><span class="lineno"> 3897</span>    qApp-&gt;removeTranslator(&amp;translator);</div>
+<div class="line"><span class="lineno"> 3898</span> </div>
+<div class="line"><span class="lineno"> 3899</span>    <span class="comment">// load the new translator</span></div>
+<div class="line"><span class="lineno"> 3900</span>    QString path = QApplication::applicationDirPath();</div>
+<div class="line"><span class="lineno"> 3901</span>    path.append(<span class="stringliteral">&quot;/languages/&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3902</span>    <span class="keywordflow">if</span>(translator.load(path + filename)) <span class="comment">//Here Path and Filename has to be entered because the system didn&#39;t find the QM Files else</span></div>
+<div class="line"><span class="lineno"> 3903</span>        qApp-&gt;installTranslator(&amp;translator);</div>
+<div class="line"><span class="lineno"> 3904</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

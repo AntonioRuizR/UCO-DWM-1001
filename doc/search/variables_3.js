@@ -1,10 +1,25 @@
 var searchData=
 [
-  ['end_0',['end',['../class_q_c_p_item_line.html#a15598864c1c22a2497a1979c4980c4e1',1,'QCPItemLine::end'],['../class_q_c_p_item_curve.html#a24ecbb195b32a08b42b61c2cf08a1b4d',1,'QCPItemCurve::end']]],
-  ['enddir_1',['endDir',['../class_q_c_p_item_curve.html#a28181a9dee9cc3c3da83a883221bd2d0',1,'QCPItemCurve']]],
-  ['errorminus_2',['errorMinus',['../class_q_c_p_error_bars_data.html#af8aaea160e52c14c57836224ee78020b',1,'QCPErrorBarsData']]],
-  ['errorplus_3',['errorPlus',['../class_q_c_p_error_bars_data.html#ad1283c99fbfccf37a0226b1df52f0776',1,'QCPErrorBarsData']]],
-  ['expbounds_4',['expBounds',['../struct_q_c_p_label_painter_private_1_1_label_data.html#a366bda1befa2ca0993b70d6d83300220',1,'QCPLabelPainterPrivate::LabelData::expBounds'],['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html#a6722d2bcefb93011e9dc42301b966846',1,'QCPAxisPainterPrivate::TickLabelData::expBounds']]],
-  ['expfont_5',['expFont',['../struct_q_c_p_label_painter_private_1_1_label_data.html#a1a164c8a6640f06fb9cf72365a24f9ab',1,'QCPLabelPainterPrivate::LabelData::expFont'],['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html#adc10767ebcb719d6927c012a38b9d933',1,'QCPAxisPainterPrivate::TickLabelData::expFont']]],
-  ['exppart_6',['expPart',['../struct_q_c_p_label_painter_private_1_1_label_data.html#a822f5054fed414d70c444d612c8ebfa4',1,'QCPLabelPainterPrivate::LabelData::expPart'],['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html#a09692e4ea092137278b4ac051d5fdf2b',1,'QCPAxisPainterPrivate::TickLabelData::expPart']]]
+  ['data_5flist_5fd1_0',['data_list_d1',['../class_dialog__graph__history.html#a6c625630a2a1ae6e20142dd6deb566ba',1,'Dialog_graph_history']]],
+  ['data_5flist_5fd2_1',['data_list_d2',['../class_dialog__graph__history.html#a290e549a95dba3a5154892e9ebede644',1,'Dialog_graph_history']]],
+  ['data_5flist_5fd3_2',['data_list_d3',['../class_dialog__graph__history.html#a366914faf88920989510b680d9d85706',1,'Dialog_graph_history']]],
+  ['data_5flist_5fd4_3',['data_list_d4',['../class_dialog__graph__history.html#a99db4db2184d6005e341d30349367305',1,'Dialog_graph_history']]],
+  ['data_5fpos_5fx_4',['data_pos_x',['../class_dialog__graph__history.html#a7f87faa4fef3c22fab964667afc20de3',1,'Dialog_graph_history']]],
+  ['data_5fpos_5fy_5',['data_pos_y',['../class_dialog__graph__history.html#a2543d9a3f84f0fa45ce45cd7e170372a',1,'Dialog_graph_history']]],
+  ['data_5fpos_5fz_6',['data_pos_z',['../class_dialog__graph__history.html#a036f0a3c4577c840ca1ddef594f9740d',1,'Dialog_graph_history']]],
+  ['datareception_5fenabled_7',['datareception_enabled',['../class_main_window.html#abb6771b39ea9f5c16d773d84d31eae38',1,'MainWindow']]],
+  ['datatimer_8',['dataTimer',['../class_main_window.html#a2c87ed89832cc91aba5eaaae189101d3',1,'MainWindow']]],
+  ['deactivate_5fgpio_9',['deactivate_GPIO',['../class_main_window.html#ad23dd291cdb4a62e22792ac681740688',1,'MainWindow']]],
+  ['desac_5fgpio_10',['desac_gpio',['../class_main_window.html#a6dce2efbe0e396c80bbdae89d3e11f35',1,'MainWindow']]],
+  ['detected_5fdevices_11',['detected_devices',['../class_main_window.html#a343c09115e4097175e9789e25995d23f',1,'MainWindow']]],
+  ['distance_5falarm_5fplot_12',['distance_alarm_plot',['../class_main_window.html#a045817247539f7ce08cb4bccd5449a79',1,'MainWindow']]],
+  ['distance_5flist_5f1_13',['distance_list_1',['../class_main_window.html#a0cd31258bc4d0238f0900a78fb53e04d',1,'MainWindow']]],
+  ['distance_5flist_5f2_14',['distance_list_2',['../class_main_window.html#a3aaa6f11439ea2e1a33430d6a65ffe5e',1,'MainWindow']]],
+  ['distance_5flist_5f3_15',['distance_list_3',['../class_main_window.html#a24818c8e7b18fde027f1c315cd6eaa34',1,'MainWindow']]],
+  ['distance_5flist_5f4_16',['distance_list_4',['../class_main_window.html#a98c500125aff0fbcb76ee699787f7ea6',1,'MainWindow']]],
+  ['distance_5fsamples_5fid4_17',['distance_samples_ID4',['../class_main_window.html#ada34607b07ae6fd3caeda640151fea01',1,'MainWindow']]],
+  ['distance_5fvalue_5f1_18',['distance_value_1',['../class_main_window.html#a019788831749fbcdcdf8522d5f180ea3',1,'MainWindow']]],
+  ['distance_5fvalue_5f2_19',['distance_value_2',['../class_main_window.html#a17ab87b058dd79507bb558786fd504d7',1,'MainWindow']]],
+  ['distance_5fvalue_5f3_20',['distance_value_3',['../class_main_window.html#adc4557c480d8dbda50b8fb9e8655c508',1,'MainWindow']]],
+  ['distance_5fvalue_5f4_21',['distance_value_4',['../class_main_window.html#a415e2a728054a663a01604848e9c3cda',1,'MainWindow']]]
 ];

@@ -261,6 +261,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Responsible for drawing the grid of a <a class="el" href="class_q_c_p_axis.html" title="Manages a single axis inside a QCustomPlot.">QCPAxis</a>. </p>
 <p>This class is tightly bound to <a class="el" href="class_q_c_p_axis.html" title="Manages a single axis inside a QCustomPlot.">QCPAxis</a>. Every axis owns a grid instance and uses it to draw the grid lines, sub grid lines and zero-line. You can interact with the grid of an axis via <a class="el" href="class_q_c_p_axis.html#a63f1dd2df663680d2a8d06c19592dd63">QCPAxis::grid</a>. Normally, you don't need to create an instance of <a class="el" href="class_q_c_p_grid.html" title="Responsible for drawing the grid of a QCPAxis.">QCPGrid</a> yourself.</p>
 <p>The axis and grid drawing was split into two classes to allow them to be placed on different layers (both <a class="el" href="class_q_c_p_axis.html" title="Manages a single axis inside a QCustomPlot.">QCPAxis</a> and <a class="el" href="class_q_c_p_grid.html" title="Responsible for drawing the grid of a QCPAxis.">QCPGrid</a> inherit from <a class="el" href="class_q_c_p_layerable.html" title="Base class for all drawable objects.">QCPLayerable</a>). Thus it is possible to have the grid in the background and the axes in the foreground, and any plottables/items in between. This described situation is the default setup, see the <a class="el" href="class_q_c_p_layer.html" title="A layer that may contain objects, to control the rendering order.">QCPLayer</a> documentation. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02069">2069</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acd1cdd2909625388a13048b698494a17" name="acd1cdd2909625388a13048b698494a17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd1cdd2909625388a13048b698494a17">&#9670;&#160;</a></span>QCPGrid()</h2>
@@ -287,6 +289,38 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a <a class="el" href="class_q_c_p_grid.html" title="Responsible for drawing the grid of a QCPAxis.">QCPGrid</a> instance and sets default values.</p>
 <p>You shouldn't instantiate grids on their own, since every <a class="el" href="class_q_c_p_axis.html" title="Manages a single axis inside a QCustomPlot.">QCPAxis</a> brings its own <a class="el" href="class_q_c_p_grid.html" title="Responsible for drawing the grid of a QCPAxis.">QCPGrid</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07860">7860</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7860</span>                                    :</div>
+<div class="line"><span class="lineno"> 7861</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable</a>(parentAxis-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>(), QString(), parentAxis),</div>
+<div class="line"><span class="lineno"> 7862</span>  <a class="code hl_variable" href="#a4e4a0400d6319bb44c06341f6298c87b">mSubGridVisible</a>{},</div>
+<div class="line"><span class="lineno"> 7863</span>  <a class="code hl_variable" href="#a71b7051f833f0c5de3094998d6afdd87">mAntialiasedSubGrid</a>{},</div>
+<div class="line"><span class="lineno"> 7864</span>  <a class="code hl_variable" href="#a8c0df56ae86440408c050895dcdb922b">mAntialiasedZeroLine</a>{},</div>
+<div class="line"><span class="lineno"> 7865</span>  <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>(parentAxis)</div>
+<div class="line"><span class="lineno"> 7866</span>{</div>
+<div class="line"><span class="lineno"> 7867</span>  <span class="comment">// warning: this is called in QCPAxis constructor, so parentAxis members should not be accessed/called</span></div>
+<div class="line"><span class="lineno"> 7868</span>  setParent(parentAxis);</div>
+<div class="line"><span class="lineno"> 7869</span>  <a class="code hl_function" href="#aa05ab9816ffb440908171e45e833b593">setPen</a>(QPen(QColor(200,200,200), 0, Qt::DotLine));</div>
+<div class="line"><span class="lineno"> 7870</span>  <a class="code hl_function" href="#a9edd3593f384d1f0b0202a39cef4453d">setSubGridPen</a>(QPen(QColor(220,220,220), 0, Qt::DotLine));</div>
+<div class="line"><span class="lineno"> 7871</span>  <a class="code hl_function" href="#a209f40fdb252397b418b82d3494d8ea0">setZeroLinePen</a>(QPen(QColor(200,200,200), 0, Qt::SolidLine));</div>
+<div class="line"><span class="lineno"> 7872</span>  <a class="code hl_function" href="#ad4ad6bf714ec45e08845456355a1b700">setSubGridVisible</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 7873</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">setAntialiased</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 7874</span>  <a class="code hl_function" href="#a5692310ba183721a413d60951407d114">setAntialiasedSubGrid</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 7875</span>  <a class="code hl_function" href="#a3cc6d54647393ee71afb6da56af07aa4">setAntialiasedZeroLine</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 7876</span>}</div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a209f40fdb252397b418b82d3494d8ea0"><div class="ttname"><a href="#a209f40fdb252397b418b82d3494d8ea0">QCPGrid::setZeroLinePen</a></div><div class="ttdeci">void setZeroLinePen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07926">qcustomplot.cpp:7926</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a3cc6d54647393ee71afb6da56af07aa4"><div class="ttname"><a href="#a3cc6d54647393ee71afb6da56af07aa4">QCPGrid::setAntialiasedZeroLine</a></div><div class="ttdeci">void setAntialiasedZeroLine(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07899">qcustomplot.cpp:7899</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a4e4a0400d6319bb44c06341f6298c87b"><div class="ttname"><a href="#a4e4a0400d6319bb44c06341f6298c87b">QCPGrid::mSubGridVisible</a></div><div class="ttdeci">bool mSubGridVisible</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02101">qcustomplot.h:2101</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a5692310ba183721a413d60951407d114"><div class="ttname"><a href="#a5692310ba183721a413d60951407d114">QCPGrid::setAntialiasedSubGrid</a></div><div class="ttdeci">void setAntialiasedSubGrid(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07891">qcustomplot.cpp:7891</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a71b7051f833f0c5de3094998d6afdd87"><div class="ttname"><a href="#a71b7051f833f0c5de3094998d6afdd87">QCPGrid::mAntialiasedSubGrid</a></div><div class="ttdeci">bool mAntialiasedSubGrid</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02102">qcustomplot.h:2102</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a8c0df56ae86440408c050895dcdb922b"><div class="ttname"><a href="#a8c0df56ae86440408c050895dcdb922b">QCPGrid::mAntialiasedZeroLine</a></div><div class="ttdeci">bool mAntialiasedZeroLine</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02102">qcustomplot.h:2102</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a9a8a76731e6e737b65b929fd1995cc88"><div class="ttname"><a href="#a9a8a76731e6e737b65b929fd1995cc88">QCPGrid::mParentAxis</a></div><div class="ttdeci">QCPAxis * mParentAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02106">qcustomplot.h:2106</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a9edd3593f384d1f0b0202a39cef4453d"><div class="ttname"><a href="#a9edd3593f384d1f0b0202a39cef4453d">QCPGrid::setSubGridPen</a></div><div class="ttdeci">void setSubGridPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07915">qcustomplot.cpp:7915</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_aa05ab9816ffb440908171e45e833b593"><div class="ttname"><a href="#aa05ab9816ffb440908171e45e833b593">QCPGrid::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07907">qcustomplot.cpp:7907</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_ad4ad6bf714ec45e08845456355a1b700"><div class="ttname"><a href="#ad4ad6bf714ec45e08845456355a1b700">QCPGrid::setSubGridVisible</a></div><div class="ttdeci">void setSubGridVisible(bool visible)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07883">qcustomplot.cpp:7883</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4f87f420cb2597e2b393aab934d2f099"><div class="ttname"><a href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable::QCPLayerable</a></div><div class="ttdeci">QCPLayerable(QCustomPlot *plot, QString targetLayer=QString(), QCPLayerable *parentLayerable=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01367">qcustomplot.cpp:1367</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4fd43e89be4a553ead41652565ff0581"><div class="ttname"><a href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">QCPLayerable::setAntialiased</a></div><div class="ttdeci">void setAntialiased(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01445">qcustomplot.cpp:1445</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -313,6 +347,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02085">2085</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2085</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a71b7051f833f0c5de3094998d6afdd87">mAntialiasedSubGrid</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a578d0bd4d2e5000a2ca69b9a034d59aa" name="a578d0bd4d2e5000a2ca69b9a034d59aa"></a>
@@ -338,6 +375,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02086">2086</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2086</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8c0df56ae86440408c050895dcdb922b">mAntialiasedZeroLine</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64fa48e16b4629f5df2a5029ab6e761c" name="a64fa48e16b4629f5df2a5029ab6e761c"></a>
@@ -365,6 +405,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layerable.html#a1168944abbf9fa6731b0f4a2d0d67e8b">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07944">7944</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7945</span>{</div>
+<div class="line"><span class="lineno"> 7946</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f">QCP::aeGrid</a>);</div>
+<div class="line"><span class="lineno"> 7947</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3ab45a4c76a3333ce42eb217a81733ec"><div class="ttname"><a href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">QCPLayerable::mAntialiased</a></div><div class="ttdeci">bool mAntialiased</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00793">qcustomplot.h:793</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acb663e375d2d36dc5c55021ee5a2119b"><div class="ttname"><a href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">QCPLayerable::applyAntialiasingHint</a></div><div class="ttdeci">void applyAntialiasingHint(QCPPainter *painter, bool localAntialiased, QCP::AntialiasedElement overrideElement) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01599">qcustomplot.cpp:1599</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f">QCP::aeGrid</a></div><div class="ttdeci">@ aeGrid</div><div class="ttdoc">0x0002 Grid lines</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00246">qcustomplot.h:245</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad9a312d998e2d170956334d4cb80be2" name="aad9a312d998e2d170956334d4cb80be2"></a>
@@ -392,6 +440,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layerable.html#adf62b4bac3ca934db80290792fc897e1">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07954">7954</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7955</span>{</div>
+<div class="line"><span class="lineno"> 7956</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid parent axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno"> 7957</span>  </div>
+<div class="line"><span class="lineno"> 7958</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ad74153c38fd83b54c509cff249370beb">subTicks</a>() &amp;&amp; <a class="code hl_variable" href="#a4e4a0400d6319bb44c06341f6298c87b">mSubGridVisible</a>)</div>
+<div class="line"><span class="lineno"> 7959</span>    <a class="code hl_function" href="#a751ce8aef815bcc9193432a30c8b6b6e">drawSubGridLines</a>(painter);</div>
+<div class="line"><span class="lineno"> 7960</span>  <a class="code hl_function" href="#aee4e95d54acabbe298d6dda0dd86c0a4">drawGridLines</a>(painter);</div>
+<div class="line"><span class="lineno"> 7961</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ad74153c38fd83b54c509cff249370beb"><div class="ttname"><a href="class_q_c_p_axis.html#ad74153c38fd83b54c509cff249370beb">QCPAxis::subTicks</a></div><div class="ttdeci">bool subTicks() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02234">qcustomplot.h:2234</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a751ce8aef815bcc9193432a30c8b6b6e"><div class="ttname"><a href="#a751ce8aef815bcc9193432a30c8b6b6e">QCPGrid::drawSubGridLines</a></div><div class="ttdeci">void drawSubGridLines(QCPPainter *painter) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l08042">qcustomplot.cpp:8042</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_aee4e95d54acabbe298d6dda0dd86c0a4"><div class="ttname"><a href="#aee4e95d54acabbe298d6dda0dd86c0a4">QCPGrid::drawGridLines</a></div><div class="ttdeci">void drawGridLines(QCPPainter *painter) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07969">qcustomplot.cpp:7969</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aee4e95d54acabbe298d6dda0dd86c0a4" name="aee4e95d54acabbe298d6dda0dd86c0a4"></a>
@@ -417,6 +477,92 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07969">7969</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7970</span>{</div>
+<div class="line"><span class="lineno"> 7971</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid parent axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno"> 7972</span>  </div>
+<div class="line"><span class="lineno"> 7973</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> tickCount = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.size();</div>
+<div class="line"><span class="lineno"> 7974</span>  <span class="keywordtype">double</span> t; <span class="comment">// helper variable, result of coordinate-to-pixel transforms</span></div>
+<div class="line"><span class="lineno"> 7975</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno"> 7976</span>  {</div>
+<div class="line"><span class="lineno"> 7977</span>    <span class="comment">// draw zeroline:</span></div>
+<div class="line"><span class="lineno"> 7978</span>    <span class="keywordtype">int</span> zeroLineIndex = -1;</div>
+<div class="line"><span class="lineno"> 7979</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a379481871f17655c27eda30af233554f">mZeroLinePen</a>.style() != Qt::NoPen &amp;&amp; <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a1ee36773c49062d751560e11f90845f7">mRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt; 0 &amp;&amp; <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a1ee36773c49062d751560e11f90845f7">mRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt; 0)</div>
+<div class="line"><span class="lineno"> 7980</span>    {</div>
+<div class="line"><span class="lineno"> 7981</span>      <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#a8c0df56ae86440408c050895dcdb922b">mAntialiasedZeroLine</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12">QCP::aeZeroLine</a>);</div>
+<div class="line"><span class="lineno"> 7982</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#a379481871f17655c27eda30af233554f">mZeroLinePen</a>);</div>
+<div class="line"><span class="lineno"> 7983</span>      <span class="keywordtype">double</span> epsilon = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">range</a>().<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()*1E-6; <span class="comment">// for comparing double to zero</span></div>
+<div class="line"><span class="lineno"> 7984</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;tickCount; ++i)</div>
+<div class="line"><span class="lineno"> 7985</span>      {</div>
+<div class="line"><span class="lineno"> 7986</span>        <span class="keywordflow">if</span> (qAbs(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.at(i)) &lt; epsilon)</div>
+<div class="line"><span class="lineno"> 7987</span>        {</div>
+<div class="line"><span class="lineno"> 7988</span>          zeroLineIndex = i;</div>
+<div class="line"><span class="lineno"> 7989</span>          t = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.at(i)); <span class="comment">// x</span></div>
+<div class="line"><span class="lineno"> 7990</span>          painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#acefdf1abaa8a8ab681e906cc2be9581e">bottom</a>(), t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#a45dbad181cbb9f09d068dbb76c817c95">top</a>()));</div>
+<div class="line"><span class="lineno"> 7991</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7992</span>        }</div>
+<div class="line"><span class="lineno"> 7993</span>      }</div>
+<div class="line"><span class="lineno"> 7994</span>    }</div>
+<div class="line"><span class="lineno"> 7995</span>    <span class="comment">// draw grid lines:</span></div>
+<div class="line"><span class="lineno"> 7996</span>    <a class="code hl_function" href="#a64fa48e16b4629f5df2a5029ab6e761c">applyDefaultAntialiasingHint</a>(painter);</div>
+<div class="line"><span class="lineno"> 7997</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#a1cdc4a3bccf6a40c2d4360def9fefa40">mPen</a>);</div>
+<div class="line"><span class="lineno"> 7998</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;tickCount; ++i)</div>
+<div class="line"><span class="lineno"> 7999</span>    {</div>
+<div class="line"><span class="lineno"> 8000</span>      <span class="keywordflow">if</span> (i == zeroLineIndex) <span class="keywordflow">continue</span>; <span class="comment">// don&#39;t draw a gridline on top of the zeroline</span></div>
+<div class="line"><span class="lineno"> 8001</span>      t = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.at(i)); <span class="comment">// x</span></div>
+<div class="line"><span class="lineno"> 8002</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#acefdf1abaa8a8ab681e906cc2be9581e">bottom</a>(), t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#a45dbad181cbb9f09d068dbb76c817c95">top</a>()));</div>
+<div class="line"><span class="lineno"> 8003</span>    }</div>
+<div class="line"><span class="lineno"> 8004</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 8005</span>  {</div>
+<div class="line"><span class="lineno"> 8006</span>    <span class="comment">// draw zeroline:</span></div>
+<div class="line"><span class="lineno"> 8007</span>    <span class="keywordtype">int</span> zeroLineIndex = -1;</div>
+<div class="line"><span class="lineno"> 8008</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a379481871f17655c27eda30af233554f">mZeroLinePen</a>.style() != Qt::NoPen &amp;&amp; <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a1ee36773c49062d751560e11f90845f7">mRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">lower</a> &lt; 0 &amp;&amp; <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a1ee36773c49062d751560e11f90845f7">mRange</a>.<a class="code hl_variable" href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">upper</a> &gt; 0)</div>
+<div class="line"><span class="lineno"> 8009</span>    {</div>
+<div class="line"><span class="lineno"> 8010</span>      <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#a8c0df56ae86440408c050895dcdb922b">mAntialiasedZeroLine</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12">QCP::aeZeroLine</a>);</div>
+<div class="line"><span class="lineno"> 8011</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#a379481871f17655c27eda30af233554f">mZeroLinePen</a>);</div>
+<div class="line"><span class="lineno"> 8012</span>      <span class="keywordtype">double</span> epsilon = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a1ee36773c49062d751560e11f90845f7">mRange</a>.<a class="code hl_function" href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">size</a>()*1E-6; <span class="comment">// for comparing double to zero</span></div>
+<div class="line"><span class="lineno"> 8013</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;tickCount; ++i)</div>
+<div class="line"><span class="lineno"> 8014</span>      {</div>
+<div class="line"><span class="lineno"> 8015</span>        <span class="keywordflow">if</span> (qAbs(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.at(i)) &lt; epsilon)</div>
+<div class="line"><span class="lineno"> 8016</span>        {</div>
+<div class="line"><span class="lineno"> 8017</span>          zeroLineIndex = i;</div>
+<div class="line"><span class="lineno"> 8018</span>          t = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.at(i)); <span class="comment">// y</span></div>
+<div class="line"><span class="lineno"> 8019</span>          painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#afb4a3de02046b20b9310bdb8fca781c3">left</a>(), t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#a3f819d4a1b2193723d1fdafc573eea10">right</a>(), t));</div>
+<div class="line"><span class="lineno"> 8020</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 8021</span>        }</div>
+<div class="line"><span class="lineno"> 8022</span>      }</div>
+<div class="line"><span class="lineno"> 8023</span>    }</div>
+<div class="line"><span class="lineno"> 8024</span>    <span class="comment">// draw grid lines:</span></div>
+<div class="line"><span class="lineno"> 8025</span>    <a class="code hl_function" href="#a64fa48e16b4629f5df2a5029ab6e761c">applyDefaultAntialiasingHint</a>(painter);</div>
+<div class="line"><span class="lineno"> 8026</span>    painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#a1cdc4a3bccf6a40c2d4360def9fefa40">mPen</a>);</div>
+<div class="line"><span class="lineno"> 8027</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;tickCount; ++i)</div>
+<div class="line"><span class="lineno"> 8028</span>    {</div>
+<div class="line"><span class="lineno"> 8029</span>      <span class="keywordflow">if</span> (i == zeroLineIndex) <span class="keywordflow">continue</span>; <span class="comment">// don&#39;t draw a gridline on top of the zeroline</span></div>
+<div class="line"><span class="lineno"> 8030</span>      t = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">mTickVector</a>.at(i)); <span class="comment">// y</span></div>
+<div class="line"><span class="lineno"> 8031</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#afb4a3de02046b20b9310bdb8fca781c3">left</a>(), t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#a3f819d4a1b2193723d1fdafc573eea10">right</a>(), t));</div>
+<div class="line"><span class="lineno"> 8032</span>    }</div>
+<div class="line"><span class="lineno"> 8033</span>  }</div>
+<div class="line"><span class="lineno"> 8034</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a1ee36773c49062d751560e11f90845f7"><div class="ttname"><a href="class_q_c_p_axis.html#a1ee36773c49062d751560e11f90845f7">QCPAxis::mRange</a></div><div class="ttdeci">QCPRange mRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02367">qcustomplot.h:2367</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a6f150b65a202f32936997960e331dfcb"><div class="ttname"><a href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">QCPAxis::mAxisRect</a></div><div class="ttdeci">QCPAxisRect * mAxisRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02338">qcustomplot.h:2338</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_aae0f9b9973b85be601200f00f5825087"><div class="ttname"><a href="class_q_c_p_axis.html#aae0f9b9973b85be601200f00f5825087">QCPAxis::mTickVector</a></div><div class="ttdeci">QVector&lt; double &gt; mTickVector</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02375">qcustomplot.h:2375</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ab988ef4538e2655bb77bd138189cd42e"><div class="ttname"><a href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">QCPAxis::orientation</a></div><div class="ttdeci">Qt::Orientation orientation() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02309">qcustomplot.h:2309</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ac4058855a81f1a883cf2e754f6a6acb1"><div class="ttname"><a href="class_q_c_p_axis.html#ac4058855a81f1a883cf2e754f6a6acb1">QCPAxis::range</a></div><div class="ttdeci">const QCPRange range() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02218">qcustomplot.h:2218</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_af15d1b3a7f7e9b53d759d3ccff1fe4b4"><div class="ttname"><a href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">QCPAxis::coordToPixel</a></div><div class="ttdeci">double coordToPixel(double value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09304">qcustomplot.cpp:9304</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a3f819d4a1b2193723d1fdafc573eea10"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a3f819d4a1b2193723d1fdafc573eea10">QCPAxisRect::right</a></div><div class="ttdeci">int right() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04987">qcustomplot.h:4987</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a45dbad181cbb9f09d068dbb76c817c95"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a45dbad181cbb9f09d068dbb76c817c95">QCPAxisRect::top</a></div><div class="ttdeci">int top() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04988">qcustomplot.h:4988</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_acefdf1abaa8a8ab681e906cc2be9581e"><div class="ttname"><a href="class_q_c_p_axis_rect.html#acefdf1abaa8a8ab681e906cc2be9581e">QCPAxisRect::bottom</a></div><div class="ttdeci">int bottom() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04989">qcustomplot.h:4989</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_afb4a3de02046b20b9310bdb8fca781c3"><div class="ttname"><a href="class_q_c_p_axis_rect.html#afb4a3de02046b20b9310bdb8fca781c3">QCPAxisRect::left</a></div><div class="ttdeci">int left() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04986">qcustomplot.h:4986</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a1cdc4a3bccf6a40c2d4360def9fefa40"><div class="ttname"><a href="#a1cdc4a3bccf6a40c2d4360def9fefa40">QCPGrid::mPen</a></div><div class="ttdeci">QPen mPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02103">qcustomplot.h:2103</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a379481871f17655c27eda30af233554f"><div class="ttname"><a href="#a379481871f17655c27eda30af233554f">QCPGrid::mZeroLinePen</a></div><div class="ttdeci">QPen mZeroLinePen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02103">qcustomplot.h:2103</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a64fa48e16b4629f5df2a5029ab6e761c"><div class="ttname"><a href="#a64fa48e16b4629f5df2a5029ab6e761c">QCPGrid::applyDefaultAntialiasingHint</a></div><div class="ttdeci">virtual void applyDefaultAntialiasingHint(QCPPainter *painter) const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l07944">qcustomplot.cpp:7944</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_a0b4b1b9bd495e182c731774dc800e6e0"><div class="ttname"><a href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">QCPPainter::drawLine</a></div><div class="ttdeci">void drawLine(const QLineF &amp;line)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00372">qcustomplot.cpp:372</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_a62326e7cc4316b96df6a60813230e63f"><div class="ttname"><a href="class_q_c_p_range.html#a62326e7cc4316b96df6a60813230e63f">QCPRange::size</a></div><div class="ttdeci">double size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00853">qcustomplot.h:853</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_aa3aca3edb14f7ca0c85d912647b91745"><div class="ttname"><a href="class_q_c_p_range.html#aa3aca3edb14f7ca0c85d912647b91745">QCPRange::lower</a></div><div class="ttdeci">double lower</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html_ae44eb3aafe1d0e2ed34b499b6d2e074f"><div class="ttname"><a href="class_q_c_p_range.html#ae44eb3aafe1d0e2ed34b499b6d2e074f">QCPRange::upper</a></div><div class="ttdeci">double upper</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00834">qcustomplot.h:834</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12">QCP::aeZeroLine</a></div><div class="ttdeci">@ aeZeroLine</div><div class="ttdoc">0x0200 Zero-lines, see QCPGrid::setZeroLinePen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00254">qcustomplot.h:253</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a751ce8aef815bcc9193432a30c8b6b6e" name="a751ce8aef815bcc9193432a30c8b6b6e"></a>
@@ -442,6 +588,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l08042">8042</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 8043</span>{</div>
+<div class="line"><span class="lineno"> 8044</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>) { qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid parent axis&quot;</span>; <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno"> 8045</span>  </div>
+<div class="line"><span class="lineno"> 8046</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="#a71b7051f833f0c5de3094998d6afdd87">mAntialiasedSubGrid</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0caaedf83369188a15a69f92bb1d85ca97b">QCP::aeSubGrid</a>);</div>
+<div class="line"><span class="lineno"> 8047</span>  <span class="keywordtype">double</span> t; <span class="comment">// helper variable, result of coordinate-to-pixel transforms</span></div>
+<div class="line"><span class="lineno"> 8048</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_variable" href="#aa9004bc139ad3ea92629f0aaae81d83f">mSubGridPen</a>);</div>
+<div class="line"><span class="lineno"> 8049</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e">orientation</a>() == Qt::Horizontal)</div>
+<div class="line"><span class="lineno"> 8050</span>  {</div>
+<div class="line"><span class="lineno"> 8051</span>    <span class="keywordflow">foreach</span> (<span class="keywordtype">double</span> tickCoord, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a28353081e0ff35c3fe5ced923a287faa">mSubTickVector</a>)</div>
+<div class="line"><span class="lineno"> 8052</span>    {</div>
+<div class="line"><span class="lineno"> 8053</span>      t = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(tickCoord); <span class="comment">// x</span></div>
+<div class="line"><span class="lineno"> 8054</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#acefdf1abaa8a8ab681e906cc2be9581e">bottom</a>(), t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#a45dbad181cbb9f09d068dbb76c817c95">top</a>()));</div>
+<div class="line"><span class="lineno"> 8055</span>    }</div>
+<div class="line"><span class="lineno"> 8056</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 8057</span>  {</div>
+<div class="line"><span class="lineno"> 8058</span>    <span class="keywordflow">foreach</span> (<span class="keywordtype">double</span> tickCoord, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a28353081e0ff35c3fe5ced923a287faa">mSubTickVector</a>)</div>
+<div class="line"><span class="lineno"> 8059</span>    {</div>
+<div class="line"><span class="lineno"> 8060</span>      t = <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#af15d1b3a7f7e9b53d759d3ccff1fe4b4">coordToPixel</a>(tickCoord); <span class="comment">// y</span></div>
+<div class="line"><span class="lineno"> 8061</span>      painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#a0b4b1b9bd495e182c731774dc800e6e0">drawLine</a>(QLineF(<a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#afb4a3de02046b20b9310bdb8fca781c3">left</a>(), t, <a class="code hl_variable" href="#a9a8a76731e6e737b65b929fd1995cc88">mParentAxis</a>-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#a6f150b65a202f32936997960e331dfcb">mAxisRect</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis_rect.html#a3f819d4a1b2193723d1fdafc573eea10">right</a>(), t));</div>
+<div class="line"><span class="lineno"> 8062</span>    }</div>
+<div class="line"><span class="lineno"> 8063</span>  }</div>
+<div class="line"><span class="lineno"> 8064</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a28353081e0ff35c3fe5ced923a287faa"><div class="ttname"><a href="class_q_c_p_axis.html#a28353081e0ff35c3fe5ced923a287faa">QCPAxis::mSubTickVector</a></div><div class="ttdeci">QVector&lt; double &gt; mSubTickVector</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02377">qcustomplot.h:2377</a></div></div>
+<div class="ttc" id="aclass_q_c_p_grid_html_aa9004bc139ad3ea92629f0aaae81d83f"><div class="ttname"><a href="#aa9004bc139ad3ea92629f0aaae81d83f">QCPGrid::mSubGridPen</a></div><div class="ttdeci">QPen mSubGridPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02103">qcustomplot.h:2103</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0caaedf83369188a15a69f92bb1d85ca97b"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0caaedf83369188a15a69f92bb1d85ca97b">QCP::aeSubGrid</a></div><div class="ttdeci">@ aeSubGrid</div><div class="ttdoc">0x0004 Sub grid lines</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00247">qcustomplot.h:246</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d68418766b3408c0b7b29ef40b04c2a" name="a1d68418766b3408c0b7b29ef40b04c2a"></a>
@@ -467,6 +640,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02087">2087</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2087</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1cdc4a3bccf6a40c2d4360def9fefa40">mPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5692310ba183721a413d60951407d114" name="a5692310ba183721a413d60951407d114"></a>
@@ -485,6 +661,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets whether sub grid lines are drawn antialiased. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07891">7891</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7892</span>{</div>
+<div class="line"><span class="lineno"> 7893</span>  <a class="code hl_variable" href="#a71b7051f833f0c5de3094998d6afdd87">mAntialiasedSubGrid</a> = enabled;</div>
+<div class="line"><span class="lineno"> 7894</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3cc6d54647393ee71afb6da56af07aa4" name="a3cc6d54647393ee71afb6da56af07aa4"></a>
@@ -503,6 +684,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets whether zero lines are drawn antialiased. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07899">7899</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7900</span>{</div>
+<div class="line"><span class="lineno"> 7901</span>  <a class="code hl_variable" href="#a8c0df56ae86440408c050895dcdb922b">mAntialiasedZeroLine</a> = enabled;</div>
+<div class="line"><span class="lineno"> 7902</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa05ab9816ffb440908171e45e833b593" name="aa05ab9816ffb440908171e45e833b593"></a>
@@ -521,6 +707,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the pen with which (major) grid lines are drawn. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07907">7907</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7908</span>{</div>
+<div class="line"><span class="lineno"> 7909</span>  <a class="code hl_variable" href="#a1cdc4a3bccf6a40c2d4360def9fefa40">mPen</a> = <a class="code hl_function" href="#a1d68418766b3408c0b7b29ef40b04c2a">pen</a>;</div>
+<div class="line"><span class="lineno"> 7910</span>}</div>
+<div class="ttc" id="aclass_q_c_p_grid_html_a1d68418766b3408c0b7b29ef40b04c2a"><div class="ttname"><a href="#a1d68418766b3408c0b7b29ef40b04c2a">QCPGrid::pen</a></div><div class="ttdeci">QPen pen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02087">qcustomplot.h:2087</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9edd3593f384d1f0b0202a39cef4453d" name="a9edd3593f384d1f0b0202a39cef4453d"></a>
@@ -539,6 +731,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the pen with which sub grid lines are drawn. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07915">7915</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7916</span>{</div>
+<div class="line"><span class="lineno"> 7917</span>  <a class="code hl_variable" href="#aa9004bc139ad3ea92629f0aaae81d83f">mSubGridPen</a> = <a class="code hl_function" href="#a1d68418766b3408c0b7b29ef40b04c2a">pen</a>;</div>
+<div class="line"><span class="lineno"> 7918</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad4ad6bf714ec45e08845456355a1b700" name="ad4ad6bf714ec45e08845456355a1b700"></a>
@@ -558,6 +755,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets whether grid lines at sub tick marks are drawn.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a9edd3593f384d1f0b0202a39cef4453d">setSubGridPen</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07883">7883</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7884</span>{</div>
+<div class="line"><span class="lineno"> 7885</span>  <a class="code hl_variable" href="#a4e4a0400d6319bb44c06341f6298c87b">mSubGridVisible</a> = <a class="code hl_function" href="class_q_c_p_layerable.html#af0297b944b6192b6d67d00bff41b6b70">visible</a>;</div>
+<div class="line"><span class="lineno"> 7886</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_af0297b944b6192b6d67d00bff41b6b70"><div class="ttname"><a href="class_q_c_p_layerable.html#af0297b944b6192b6d67d00bff41b6b70">QCPLayerable::visible</a></div><div class="ttdeci">bool visible() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00766">qcustomplot.h:766</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a209f40fdb252397b418b82d3494d8ea0" name="a209f40fdb252397b418b82d3494d8ea0"></a>
@@ -577,6 +780,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the pen with which zero lines are drawn.</p>
 <p>Zero lines are lines at value coordinate 0 which may be drawn with a different pen than other grid lines. To disable zero lines and just draw normal grid lines at zero, set <em>pen</em> to Qt::NoPen. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l07926">7926</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 7927</span>{</div>
+<div class="line"><span class="lineno"> 7928</span>  <a class="code hl_variable" href="#a379481871f17655c27eda30af233554f">mZeroLinePen</a> = <a class="code hl_function" href="#a1d68418766b3408c0b7b29ef40b04c2a">pen</a>;</div>
+<div class="line"><span class="lineno"> 7929</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae231e5b87e68689a666f90531a15552f" name="ae231e5b87e68689a666f90531a15552f"></a>
@@ -602,6 +810,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02088">2088</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2088</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa9004bc139ad3ea92629f0aaae81d83f">mSubGridPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afface6d8cb6df3cbdc0b5c7c2658f96a" name="afface6d8cb6df3cbdc0b5c7c2658f96a"></a>
@@ -627,6 +838,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02084">2084</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2084</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4e4a0400d6319bb44c06341f6298c87b">mSubGridVisible</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a85f248487110c4043be696aef5f2f6e1" name="a85f248487110c4043be696aef5f2f6e1"></a>
@@ -652,6 +866,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02089">2089</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2089</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a379481871f17655c27eda30af233554f">mZeroLinePen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -674,6 +891,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02116">2116</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -698,6 +917,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02102">2102</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a8c0df56ae86440408c050895dcdb922b" name="a8c0df56ae86440408c050895dcdb922b"></a>
@@ -719,6 +940,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02102">2102</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -742,6 +965,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02106">2106</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdc4a3bccf6a40c2d4360def9fefa40" name="a1cdc4a3bccf6a40c2d4360def9fefa40"></a>
@@ -763,6 +988,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02103">2103</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -786,6 +1013,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02103">2103</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a4e4a0400d6319bb44c06341f6298c87b" name="a4e4a0400d6319bb44c06341f6298c87b"></a>
@@ -807,6 +1036,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02101">2101</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -830,11 +1061,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l02103">2103</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -173,6 +173,8 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A paint buffer based on QPixmap, using software raster rendering. </p>
 <p>This paint buffer is the default and fall-back paint buffer which uses software rendering and QPixmap as internal buffer. It is used if <a class="el" href="class_q_custom_plot.html#a7db1adc09016329f3aef7c60da935789">QCustomPlot::setOpenGl</a> is false. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00609">609</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aef0224e03b9285509391fcd61a8e6844" name="aef0224e03b9285509391fcd61a8e6844"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef0224e03b9285509391fcd61a8e6844">&#9670;&#160;</a></span>QCPPaintBufferPixmap()</h2>
@@ -202,6 +204,17 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a pixmap paint buffer instancen with the specified <em>size</em> and <em>devicePixelRatio</em>, if applicable. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00668">668</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  668</span>                                                                                     :</div>
+<div class="line"><span class="lineno">  669</span>  <a class="code hl_function" href="class_q_c_p_abstract_paint_buffer.html#a3ce532c12f10b81697108835755641e2">QCPAbstractPaintBuffer</a>(<a class="code hl_function" href="class_q_c_p_abstract_paint_buffer.html#a3ea8284e547985c5d263f26a6adfa11f">size</a>, <a class="code hl_function" href="class_q_c_p_abstract_paint_buffer.html#aac1b981f8c1744036610ff1a6b9461f9">devicePixelRatio</a>)</div>
+<div class="line"><span class="lineno">  670</span>{</div>
+<div class="line"><span class="lineno">  671</span>  <a class="code hl_function" href="#ad49f3205ba3463b1c44f8db3cfcc90f0">QCPPaintBufferPixmap::reallocateBuffer</a>();</div>
+<div class="line"><span class="lineno">  672</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_paint_buffer_html_a3ce532c12f10b81697108835755641e2"><div class="ttname"><a href="class_q_c_p_abstract_paint_buffer.html#a3ce532c12f10b81697108835755641e2">QCPAbstractPaintBuffer::QCPAbstractPaintBuffer</a></div><div class="ttdeci">QCPAbstractPaintBuffer(const QSize &amp;size, double devicePixelRatio)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00582">qcustomplot.cpp:582</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_paint_buffer_html_a3ea8284e547985c5d263f26a6adfa11f"><div class="ttname"><a href="class_q_c_p_abstract_paint_buffer.html#a3ea8284e547985c5d263f26a6adfa11f">QCPAbstractPaintBuffer::size</a></div><div class="ttdeci">QSize size() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00581">qcustomplot.h:581</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_paint_buffer_html_aac1b981f8c1744036610ff1a6b9461f9"><div class="ttname"><a href="class_q_c_p_abstract_paint_buffer.html#aac1b981f8c1744036610ff1a6b9461f9">QCPAbstractPaintBuffer::devicePixelRatio</a></div><div class="ttdeci">double devicePixelRatio() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00583">qcustomplot.h:583</a></div></div>
+<div class="ttc" id="aclass_q_c_p_paint_buffer_pixmap_html_ad49f3205ba3463b1c44f8db3cfcc90f0"><div class="ttname"><a href="#ad49f3205ba3463b1c44f8db3cfcc90f0">QCPPaintBufferPixmap::reallocateBuffer</a></div><div class="ttdeci">virtual void reallocateBuffer() Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00704">qcustomplot.cpp:704</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4237edf96e3710e994768124c8722e76" name="a4237edf96e3710e994768124c8722e76"></a>
@@ -227,6 +240,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00674">674</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  675</span>{</div>
+<div class="line"><span class="lineno">  676</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -257,6 +274,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_paint_buffer.html#a7fc69e37c2a8232e8b2eb8b5853aae4c">QCPAbstractPaintBuffer</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00698">698</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  699</span>{</div>
+<div class="line"><span class="lineno">  700</span>  <a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a>.fill(color);</div>
+<div class="line"><span class="lineno">  701</span>}</div>
+<div class="ttc" id="aclass_q_c_p_paint_buffer_pixmap_html_a6d7009f45f03e305f2dc00e52a9225f8"><div class="ttname"><a href="#a6d7009f45f03e305f2dc00e52a9225f8">QCPPaintBufferPixmap::mBuffer</a></div><div class="ttdeci">QPixmap mBuffer</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00622">qcustomplot.h:622</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7bfc685e56a0a9329e57cd9a265eb74" name="af7bfc685e56a0a9329e57cd9a265eb74"></a>
@@ -285,6 +308,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_paint_buffer.html#a1f92e533105b575951eba5f01d8d129d">QCPAbstractPaintBuffer</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00689">689</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  690</span>{</div>
+<div class="line"><span class="lineno">  691</span>  <span class="keywordflow">if</span> (painter &amp;&amp; painter-&gt;isActive())</div>
+<div class="line"><span class="lineno">  692</span>    painter-&gt;drawPixmap(0, 0, <a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a>);</div>
+<div class="line"><span class="lineno">  693</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  694</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;invalid or inactive painter passed&quot;</span>;</div>
+<div class="line"><span class="lineno">  695</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad49f3205ba3463b1c44f8db3cfcc90f0" name="ad49f3205ba3463b1c44f8db3cfcc90f0"></a>
@@ -314,6 +345,28 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_paint_buffer.html#a9bbd9f7520ccfa3e13fc737813f706e4">QCPAbstractPaintBuffer</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00704">704</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  705</span>{</div>
+<div class="line"><span class="lineno">  706</span>  <a class="code hl_function" href="class_q_c_p_abstract_paint_buffer.html#ae4c7dc70dfc66be2879ce297b2b3d67f">setInvalidated</a>();</div>
+<div class="line"><span class="lineno">  707</span>  <span class="keywordflow">if</span> (!qFuzzyCompare(1.0, <a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#a33c1fd784478441fcff9ebf3d69af5b2">mDevicePixelRatio</a>))</div>
+<div class="line"><span class="lineno">  708</span>  {</div>
+<div class="line"><span class="lineno">  709</span><span class="preprocessor">#ifdef QCP_DEVICEPIXELRATIO_SUPPORTED</span></div>
+<div class="line"><span class="lineno">  710</span>    <a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a> = QPixmap(<a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#ae246c426222bfa18d5e8797fab73e3ce">mSize</a>*<a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#a33c1fd784478441fcff9ebf3d69af5b2">mDevicePixelRatio</a>);</div>
+<div class="line"><span class="lineno">  711</span>    <a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a>.setDevicePixelRatio(<a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#a33c1fd784478441fcff9ebf3d69af5b2">mDevicePixelRatio</a>);</div>
+<div class="line"><span class="lineno">  712</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  713</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Device pixel ratios not supported for Qt versions before 5.4&quot;</span>;</div>
+<div class="line"><span class="lineno">  714</span>    <a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#a33c1fd784478441fcff9ebf3d69af5b2">mDevicePixelRatio</a> = 1.0;</div>
+<div class="line"><span class="lineno">  715</span>    <a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a> = QPixmap(<a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#ae246c426222bfa18d5e8797fab73e3ce">mSize</a>);</div>
+<div class="line"><span class="lineno">  716</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  717</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  718</span>  {</div>
+<div class="line"><span class="lineno">  719</span>    <a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a> = QPixmap(<a class="code hl_variable" href="class_q_c_p_abstract_paint_buffer.html#ae246c426222bfa18d5e8797fab73e3ce">mSize</a>);</div>
+<div class="line"><span class="lineno">  720</span>  }</div>
+<div class="line"><span class="lineno">  721</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_paint_buffer_html_a33c1fd784478441fcff9ebf3d69af5b2"><div class="ttname"><a href="class_q_c_p_abstract_paint_buffer.html#a33c1fd784478441fcff9ebf3d69af5b2">QCPAbstractPaintBuffer::mDevicePixelRatio</a></div><div class="ttdeci">double mDevicePixelRatio</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00599">qcustomplot.h:599</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_paint_buffer_html_ae246c426222bfa18d5e8797fab73e3ce"><div class="ttname"><a href="class_q_c_p_abstract_paint_buffer.html#ae246c426222bfa18d5e8797fab73e3ce">QCPAbstractPaintBuffer::mSize</a></div><div class="ttdeci">QSize mSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00598">qcustomplot.h:598</a></div></div>
+<div class="ttc" id="aclass_q_c_p_abstract_paint_buffer_html_ae4c7dc70dfc66be2879ce297b2b3d67f"><div class="ttname"><a href="class_q_c_p_abstract_paint_buffer.html#ae4c7dc70dfc66be2879ce297b2b3d67f">QCPAbstractPaintBuffer::setInvalidated</a></div><div class="ttdeci">void setInvalidated(bool invalidated=true)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00625">qcustomplot.cpp:625</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a357964ef7d28cfa530338be4e5c93234" name="a357964ef7d28cfa530338be4e5c93234"></a>
@@ -345,6 +398,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_abstract_paint_buffer.html#ab1329e5e2cfc44a7cef1b5e9b6fab20d">QCPAbstractPaintBuffer</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l00679">679</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  680</span>{</div>
+<div class="line"><span class="lineno">  681</span>  <a class="code hl_class" href="class_q_c_p_painter.html">QCPPainter</a> *result = <span class="keyword">new</span> <a class="code hl_class" href="class_q_c_p_painter.html">QCPPainter</a>(&amp;<a class="code hl_variable" href="#a6d7009f45f03e305f2dc00e52a9225f8">mBuffer</a>);</div>
+<div class="line"><span class="lineno">  682</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(6, 0, 0)</span></div>
+<div class="line"><span class="lineno">  683</span>  result-&gt;setRenderHint(QPainter::HighQualityAntialiasing);</div>
+<div class="line"><span class="lineno">  684</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  685</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  686</span>}</div>
+<div class="ttc" id="aclass_q_c_p_painter_html"><div class="ttname"><a href="class_q_c_p_painter.html">QCPPainter</a></div><div class="ttdoc">QPainter subclass used internally.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00515">qcustomplot.h:516</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -368,11 +431,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00622">622</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -326,6 +326,8 @@ Additional Inherited Members</h2></td></tr>
 <p>A Layout element is a rectangular object which can be placed in layouts. It has an outer rect (<a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">QCPLayoutElement::outerRect</a>) and an inner rect (<a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">QCPLayoutElement::rect</a>). The difference between outer and inner rect is called its margin. The margin can either be set to automatic or manual (<a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a>) on a per-side basis. If a side is set to manual, that margin can be set explicitly with <a class="el" href="#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a> and will stay fixed at that value. If it's set to automatic, the layout element subclass will control the value itself (via <a class="el" href="#a005c9f0fe84bc1591a2cf2c46fd477b4">calculateAutoMargin</a>).</p>
 <p>Layout elements can be placed in layouts (base class <a class="el" href="class_q_c_p_layout.html" title="The abstract base class for layouts.">QCPLayout</a>) like <a class="el" href="class_q_c_p_layout_grid.html" title="A layout that arranges child elements in a grid.">QCPLayoutGrid</a>. The top level layout is reachable via <a class="el" href="class_q_custom_plot.html#af1a1f1f571237deb7c2bd34a5e9f018f">QCustomPlot::plotLayout</a>, and is a <a class="el" href="class_q_c_p_layout_grid.html">QCPLayoutGrid</a>. Since <a class="el" href="class_q_c_p_layout.html">QCPLayout</a> itself derives from <a class="el" href="class_q_c_p_layout_element.html">QCPLayoutElement</a>, layouts can be nested.</p>
 <p>Thus in <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> one can divide layout elements into two categories: The ones that are invisible by themselves, because they don't draw anything. Their only purpose is to manage the position and size of other layout elements. This category of layout elements usually use <a class="el" href="class_q_c_p_layout.html" title="The abstract base class for layouts.">QCPLayout</a> as base class. Then there is the category of layout elements which actually draw something. For example, <a class="el" href="class_q_c_p_axis_rect.html" title="Holds multiple axes and arranges them in a rectangular shape.">QCPAxisRect</a>, <a class="el" href="class_q_c_p_legend.html" title="Manages a legend inside a QCustomPlot.">QCPLegend</a> and <a class="el" href="class_q_c_p_text_element.html" title="A layout element displaying a text.">QCPTextElement</a> are of this category. This does not necessarily mean that the latter category can't have child layout elements. <a class="el" href="class_q_c_p_legend.html" title="Manages a legend inside a QCustomPlot.">QCPLegend</a> for instance, actually derives from <a class="el" href="class_q_c_p_layout_grid.html" title="A layout that arranges child elements in a grid.">QCPLayoutGrid</a> and the individual legend items are child layout elements in the grid layout. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01238">1238</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a0afb3e5773529e4bd20e448f81be4d2a" name="a0afb3e5773529e4bd20e448f81be4d2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0afb3e5773529e4bd20e448f81be4d2a">&#9670;&#160;</a></span>SizeConstraintRect</h2>
@@ -347,6 +349,13 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01270">1270</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1270</span>                          { <a class="code hl_enumvalue" href="#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">scrInnerRect</a> </div>
+<div class="line"><span class="lineno"> 1271</span>                            , <a class="code hl_enumvalue" href="#a0afb3e5773529e4bd20e448f81be4d2aabe2745b41a6131ed194e13591b08e04d">scrOuterRect</a> </div>
+<div class="line"><span class="lineno"> 1272</span>                          };</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c"><div class="ttname"><a href="#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">QCPLayoutElement::scrInnerRect</a></div><div class="ttdeci">@ scrInnerRect</div><div class="ttdoc">Minimum/Maximum size constraints apply to inner rect.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01271">qcustomplot.h:1270</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0afb3e5773529e4bd20e448f81be4d2aabe2745b41a6131ed194e13591b08e04d"><div class="ttname"><a href="#a0afb3e5773529e4bd20e448f81be4d2aabe2745b41a6131ed194e13591b08e04d">QCPLayoutElement::scrOuterRect</a></div><div class="ttdeci">@ scrOuterRect</div><div class="ttdoc">Minimum/Maximum size constraints apply to outer rect, thus include layout element margins.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01272">qcustomplot.h:1271</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d83360e05735735aaf6d7983c56374d" name="a0d83360e05735735aaf6d7983c56374d"></a>
@@ -370,6 +379,15 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01256">1256</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1256</span>                   { <a class="code hl_enumvalue" href="#a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3">upPreparation</a> </div>
+<div class="line"><span class="lineno"> 1257</span>                     ,<a class="code hl_enumvalue" href="#a0d83360e05735735aaf6d7983c56374da288cb59a92280e47261a341f2813e676">upMargins</a>    </div>
+<div class="line"><span class="lineno"> 1258</span>                     ,<a class="code hl_enumvalue" href="#a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045">upLayout</a>     </div>
+<div class="line"><span class="lineno"> 1259</span>                   };</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0d83360e05735735aaf6d7983c56374da288cb59a92280e47261a341f2813e676"><div class="ttname"><a href="#a0d83360e05735735aaf6d7983c56374da288cb59a92280e47261a341f2813e676">QCPLayoutElement::upMargins</a></div><div class="ttdeci">@ upMargins</div><div class="ttdoc">Phase in which the margins are calculated and set.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01258">qcustomplot.h:1257</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045"><div class="ttname"><a href="#a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045">QCPLayoutElement::upLayout</a></div><div class="ttdeci">@ upLayout</div><div class="ttdoc">Final phase in which the layout system places the rects of the elements.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01259">qcustomplot.h:1258</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3"><div class="ttname"><a href="#a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3">QCPLayoutElement::upPreparation</a></div><div class="ttdeci">@ upPreparation</div><div class="ttdoc">Phase used for any type of preparation that needs to be done before margin calculation and layout.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01257">qcustomplot.h:1256</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -397,6 +415,33 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates an instance of <a class="el" href="class_q_c_p_layout_element.html" title="The abstract base class for all objects that form the layout system.">QCPLayoutElement</a> and sets default values. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03208">3208</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3208</span>                                                          :</div>
+<div class="line"><span class="lineno"> 3209</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>), <span class="comment">// parenthood is changed as soon as layout element gets inserted into a layout (except for top level layout)</span></div>
+<div class="line"><span class="lineno"> 3210</span>  <a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno"> 3211</span>  <a class="code hl_variable" href="#affef747c81632de33f08483b7fd10d01">mMinimumSize</a>(),</div>
+<div class="line"><span class="lineno"> 3212</span>  <a class="code hl_variable" href="#a64a387973fd4addac842028c89088998">mMaximumSize</a>(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX),</div>
+<div class="line"><span class="lineno"> 3213</span>  <a class="code hl_variable" href="#acc012635b1ae178ff3c4da8a3af303a2">mSizeConstraintRect</a>(<a class="code hl_enumvalue" href="#a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c">scrInnerRect</a>),</div>
+<div class="line"><span class="lineno"> 3214</span>  <a class="code hl_variable" href="#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a>(0, 0, 0, 0),</div>
+<div class="line"><span class="lineno"> 3215</span>  <a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>(0, 0, 0, 0),</div>
+<div class="line"><span class="lineno"> 3216</span>  <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>(0, 0, 0, 0),</div>
+<div class="line"><span class="lineno"> 3217</span>  <a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a>(0, 0, 0, 0),</div>
+<div class="line"><span class="lineno"> 3218</span>  <a class="code hl_variable" href="#af61c70354d1275778d68206b2a1b2d36">mAutoMargins</a>(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a43d7361cb0c5244eabdc962021bffebc">QCP::msAll</a>)</div>
+<div class="line"><span class="lineno"> 3219</span>{</div>
+<div class="line"><span class="lineno"> 3220</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4f87f420cb2597e2b393aab934d2f099"><div class="ttname"><a href="class_q_c_p_layerable.html#a4f87f420cb2597e2b393aab934d2f099">QCPLayerable::QCPLayerable</a></div><div class="ttdeci">QCPLayerable(QCustomPlot *plot, QString targetLayer=QString(), QCPLayerable *parentLayerable=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01367">qcustomplot.cpp:1367</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a07bb4973379e75cb0fa5b032c1d24afd"><div class="ttname"><a href="#a07bb4973379e75cb0fa5b032c1d24afd">QCPLayoutElement::mOuterRect</a></div><div class="ttdeci">QRect mOuterRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01317">qcustomplot.h:1317</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a5ba71f25d1af4bb092b28df618538e63"><div class="ttname"><a href="#a5ba71f25d1af4bb092b28df618538e63">QCPLayoutElement::mMinimumMargins</a></div><div class="ttdeci">QMargins mMinimumMargins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01318">qcustomplot.h:1318</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a64a387973fd4addac842028c89088998"><div class="ttname"><a href="#a64a387973fd4addac842028c89088998">QCPLayoutElement::mMaximumSize</a></div><div class="ttdeci">QSize mMaximumSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01315">qcustomplot.h:1315</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ac2a32b99ee527ca5dfff9da03628fe94"><div class="ttname"><a href="#ac2a32b99ee527ca5dfff9da03628fe94">QCPLayoutElement::mMargins</a></div><div class="ttdeci">QMargins mMargins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01318">qcustomplot.h:1318</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_acc012635b1ae178ff3c4da8a3af303a2"><div class="ttname"><a href="#acc012635b1ae178ff3c4da8a3af303a2">QCPLayoutElement::mSizeConstraintRect</a></div><div class="ttdeci">SizeConstraintRect mSizeConstraintRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01316">qcustomplot.h:1316</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ad8896f05550389f7b9e92c9e6cdf6e01"><div class="ttname"><a href="#ad8896f05550389f7b9e92c9e6cdf6e01">QCPLayoutElement::mRect</a></div><div class="ttdeci">QRect mRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01317">qcustomplot.h:1317</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_ae7c75c25549608bd688bdb65d4c38066"><div class="ttname"><a href="#ae7c75c25549608bd688bdb65d4c38066">QCPLayoutElement::mParentLayout</a></div><div class="ttdeci">QCPLayout * mParentLayout</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01314">qcustomplot.h:1314</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_af61c70354d1275778d68206b2a1b2d36"><div class="ttname"><a href="#af61c70354d1275778d68206b2a1b2d36">QCPLayoutElement::mAutoMargins</a></div><div class="ttdeci">QCP::MarginSides mAutoMargins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01319">qcustomplot.h:1319</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_affef747c81632de33f08483b7fd10d01"><div class="ttname"><a href="#affef747c81632de33f08483b7fd10d01">QCPLayoutElement::mMinimumSize</a></div><div class="ttdeci">QSize mMinimumSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01315">qcustomplot.h:1315</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a43d7361cb0c5244eabdc962021bffebc"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a43d7361cb0c5244eabdc962021bffebc">QCP::msAll</a></div><div class="ttdeci">@ msAll</div><div class="ttdoc">0xFF all margins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00231">qcustomplot.h:230</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2fa26d3d22a2854c4da1d80f188db961" name="a2fa26d3d22a2854c4da1d80f188db961"></a>
@@ -422,6 +467,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03222">3222</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3223</span>{</div>
+<div class="line"><span class="lineno"> 3224</span>  <a class="code hl_function" href="#a516e56f76b6bc100e8e71d329866847d">setMarginGroup</a>(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a43d7361cb0c5244eabdc962021bffebc">QCP::msAll</a>, <span class="keyword">nullptr</span>); <span class="comment">// unregister at margin groups, if there are any</span></div>
+<div class="line"><span class="lineno"> 3225</span>  <span class="comment">// unregister at layout:</span></div>
+<div class="line"><span class="lineno"> 3226</span>  <span class="keywordflow">if</span> (qobject_cast&lt;QCPLayout*&gt;(<a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>)) <span class="comment">// the qobject_cast is just a safeguard in case the layout forgets to call clear() in its dtor and this dtor is called by QObject dtor</span></div>
+<div class="line"><span class="lineno"> 3227</span>    <a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#ad110be0de976cd8a817513a4a53d53db">take</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 3228</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a516e56f76b6bc100e8e71d329866847d"><div class="ttname"><a href="#a516e56f76b6bc100e8e71d329866847d">QCPLayoutElement::setMarginGroup</a></div><div class="ttdeci">void setMarginGroup(QCP::MarginSides sides, QCPMarginGroup *group)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03397">qcustomplot.cpp:3397</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_ad110be0de976cd8a817513a4a53d53db"><div class="ttname"><a href="class_q_c_p_layout.html#ad110be0de976cd8a817513a4a53d53db">QCPLayout::take</a></div><div class="ttdeci">virtual bool take(QCPLayoutElement *element)=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -452,6 +507,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_legend_item.html#a6bfbcb9ace779f4f6fe22241c32a67c9">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_axis_rect.html#a4a318008e2b7f881a14c3d97186b31f9">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale.html#af1b24d24a70f25b65d29f09e413390a8">QCPColorScale</a>, <a class="el" href="class_q_c_p_legend.html#a817f75c234f82a2e26643dc0de742095">QCPLegend</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#ae29231b68e311a3004a310b65b14ba5a">QCPPolarAxisAngular</a>, and <a class="el" href="class_q_c_p_text_element.html#a91f2e4b4a639d9079e89a0030c7ed352">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01327">1327</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1327</span>{ Q_UNUSED(painter) }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2585bc8c5cc70ee712909751a2fc8909" name="a2585bc8c5cc70ee712909751a2fc8909"></a>
@@ -477,6 +535,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01284">1284</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1284</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af61c70354d1275778d68206b2a1b2d36">mAutoMargins</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a005c9f0fe84bc1591a2cf2c46fd477b4" name="a005c9f0fe84bc1591a2cf2c46fd477b4"></a>
@@ -504,6 +565,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_rect.html#ac51055d83f5f414b6d013d3a24b0a941">QCPAxisRect</a>, and <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#ac51055d83f5f414b6d013d3a24b0a941">QCPColorScaleAxisRectPrivate</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03569">3569</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3570</span>{</div>
+<div class="line"><span class="lineno"> 3571</span>  <span class="keywordflow">return</span> qMax(<a class="code hl_function" href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a>(<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>, side), <a class="code hl_function" href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a>(<a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a>, side));</div>
+<div class="line"><span class="lineno"> 3572</span>}</div>
+<div class="ttc" id="anamespace_q_c_p_html_a23a2679d3495c444acc26acc61e35b5b"><div class="ttname"><a href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a></div><div class="ttdeci">int getMarginValue(const QMargins &amp;margins, QCP::MarginSide side)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00377">qcustomplot.h:377</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1c597b1d608cfdd86e7b76819a94cfb" name="ad1c597b1d608cfdd86e7b76819a94cfb"></a>
@@ -533,6 +600,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_legend_item.html#a14ce0b09f5b814c765a0d790bd838909">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_axis_rect.html#af710c50530e370539a4439d6c4db9090">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#a52a21c7cbe086cd587c955cfe6e25e3b">QCPColorScaleAxisRectPrivate</a>, <a class="el" href="class_q_c_p_legend.html#a74f93358d2b4a76ec95c3a5d825582a3">QCPLegend</a>, <a class="el" href="class_q_c_p_plottable_legend_item.html#a5838366619200e99680afa6d355d13fa">QCPPlottableLegendItem</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#abc33754f6575a0ac2cdc597bbd11c6c7">QCPPolarAxisAngular</a>, <a class="el" href="class_q_c_p_polar_legend_item.html#abf9639f11bfc64779f243cca920aadef">QCPPolarLegendItem</a>, and <a class="el" href="class_q_c_p_text_element.html#ad1dae61ea77ae74841f3c2fb765fc88e">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01328">1328</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1328</span>{ Q_UNUSED(painter) }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a76dec8cb31e498994a944d7647a43309" name="a76dec8cb31e498994a944d7647a43309"></a>
@@ -562,6 +632,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_rect.html#a3aee067fd105f2fa8de9eb8024435ac5">QCPAxisRect</a>, <a class="el" href="class_q_c_p_layout.html#aca129722c019f91d3367046f80abfa77">QCPLayout</a>, <a class="el" href="class_q_c_p_layout_grid.html#a7d5b968b4cf57393e9e387976d91f8f7">QCPLayoutGrid</a>, and <a class="el" href="class_q_c_p_polar_axis_angular.html#a95fa9af1bcb033be5c394ec2767b000e">QCPPolarAxisAngular</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03509">3509</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3510</span>{</div>
+<div class="line"><span class="lineno"> 3511</span>  Q_UNUSED(recursive)</div>
+<div class="line"><span class="lineno"> 3512</span>  <span class="keywordflow">return</span> QList&lt;QCPLayoutElement*&gt;();</div>
+<div class="line"><span class="lineno"> 3513</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4efdcbde9d28f410e5ef166c9d691deb" name="a4efdcbde9d28f410e5ef166c9d691deb"></a>
@@ -588,6 +664,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the parent layout of this layout element. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01279">1279</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1279</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a765f041a73af0c2de41b41a5a03e31a4" name="a765f041a73af0c2de41b41a5a03e31a4"></a>
@@ -615,6 +694,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_rect.html#a575e38ac71a21906dc2d7b3364db2d62">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03585">3585</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3586</span>{</div>
+<div class="line"><span class="lineno"> 3587</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa5513622910f31d9309f87886bee597a" name="aa5513622910f31d9309f87886bee597a"></a>
@@ -640,6 +723,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01288">1288</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1288</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aeafbbc1130e02eee663c5326761fc963">mMarginGroups</a>.value(side, <span class="keyword">nullptr</span>); }</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_aeafbbc1130e02eee663c5326761fc963"><div class="ttname"><a href="#aeafbbc1130e02eee663c5326761fc963">QCPLayoutElement::mMarginGroups</a></div><div class="ttdeci">QHash&lt; QCP::MarginSide, QCPMarginGroup * &gt; mMarginGroups</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01320">qcustomplot.h:1320</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acdd2c6b2ffb1c712e3bb3014fdec2e1b" name="acdd2c6b2ffb1c712e3bb3014fdec2e1b"></a>
@@ -665,6 +752,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01289">1289</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1289</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aeafbbc1130e02eee663c5326761fc963">mMarginGroups</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af4ac9450aa2d60863bf3a8ea0c940c9d" name="af4ac9450aa2d60863bf3a8ea0c940c9d"></a>
@@ -690,6 +780,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01282">1282</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1282</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad96efb977a26e360e8a64a4c1e56456d" name="ad96efb977a26e360e8a64a4c1e56456d"></a>
@@ -721,6 +814,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_layout_grid.html#a41ce0014c220d77b909e2ca937f0e599">QCPLayoutGrid</a>, and <a class="el" href="class_q_c_p_text_element.html#ae82475b50c10a5b3314d996d50ae536b">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03497">3497</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3498</span>{</div>
+<div class="line"><span class="lineno"> 3499</span>  <span class="keywordflow">return</span> {QWIDGETSIZE_MAX, QWIDGETSIZE_MAX};</div>
+<div class="line"><span class="lineno"> 3500</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afb9503858d4aa0f3b9f1794b084fb40a" name="afb9503858d4aa0f3b9f1794b084fb40a"></a>
@@ -746,6 +844,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01286">1286</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1286</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a64a387973fd4addac842028c89088998">mMaximumSize</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5eae30e28f28d73fd1c56409c011393e" name="a5eae30e28f28d73fd1c56409c011393e"></a>
@@ -771,6 +872,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01283">1283</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1283</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a46789036c4fcb190fa374f91321d7c09" name="a46789036c4fcb190fa374f91321d7c09"></a>
@@ -802,6 +906,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_layout_grid.html#a0438bc58b4d3894d01db95b08d4268df">QCPLayoutGrid</a>, <a class="el" href="class_q_c_p_plottable_legend_item.html#a8b543f3ac32b2fe59326e01c1101b3b8">QCPPlottableLegendItem</a>, <a class="el" href="class_q_c_p_polar_legend_item.html#a17e2c0da8308a014b1d4339131215217">QCPPolarLegendItem</a>, and <a class="el" href="class_q_c_p_text_element.html#a47b8541f55ff520c557e0f27461f109e">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03478">3478</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3479</span>{</div>
+<div class="line"><span class="lineno"> 3480</span>  <span class="keywordflow">return</span> {<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.left()+<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.right(), <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.top()+<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.bottom()};</div>
+<div class="line"><span class="lineno"> 3481</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a60d4295468a2b57fe91f6f68e20c3993" name="a60d4295468a2b57fe91f6f68e20c3993"></a>
@@ -827,6 +936,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01285">1285</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1285</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#affef747c81632de33f08483b7fd10d01">mMinimumSize</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2a32a12a6161c9dffbadeb9cc585510c" name="a2a32a12a6161c9dffbadeb9cc585510c"></a>
@@ -854,6 +966,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the outer rect of this layout element. The outer rect is the inner rect expanded by the margins (<a class="el" href="#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>, <a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a>). The outer rect is used (and set via <a class="el" href="#a38975ea13e36de8e53391ce41d94bc0f">setOuterRect</a>) by the parent <a class="el" href="class_q_c_p_layout.html">QCPLayout</a> to control the size of this layout element.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01281">1281</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1281</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab4bb5c5a958451f5f153fdce350f13cf" name="ab4bb5c5a958451f5f153fdce350f13cf"></a>
@@ -883,6 +998,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_legend.html#a2b225cefb5eb267771e2c7c44fd2b408">QCPLegend</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03551">3551</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3552</span>{</div>
+<div class="line"><span class="lineno"> 3553</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el, <a class="code hl_function" href="#a76dec8cb31e498994a944d7647a43309">elements</a>(<span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno"> 3554</span>  {</div>
+<div class="line"><span class="lineno"> 3555</span>    <span class="keywordflow">if</span> (!el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>())</div>
+<div class="line"><span class="lineno"> 3556</span>      el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a8cbe5a0c9a5674249982f5ca5f8e02bc">initializeParentPlot</a>(<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>);</div>
+<div class="line"><span class="lineno"> 3557</span>  }</div>
+<div class="line"><span class="lineno"> 3558</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a8cbe5a0c9a5674249982f5ca5f8e02bc"><div class="ttname"><a href="class_q_c_p_layerable.html#a8cbe5a0c9a5674249982f5ca5f8e02bc">QCPLayerable::initializeParentPlot</a></div><div class="ttdeci">void initializeParentPlot(QCustomPlot *parentPlot)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01529">qcustomplot.cpp:1529</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html"><div class="ttname"><a href="class_q_c_p_layout_element.html">QCPLayoutElement</a></div><div class="ttdoc">The abstract base class for all objects that form the layout system.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01238">qcustomplot.h:1239</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a76dec8cb31e498994a944d7647a43309"><div class="ttname"><a href="#a76dec8cb31e498994a944d7647a43309">QCPLayoutElement::elements</a></div><div class="ttdeci">virtual QList&lt; QCPLayoutElement * &gt; elements(bool recursive) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03509">qcustomplot.cpp:3509</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a208effccfe2cca4a0eaf9393e60f2dd4" name="a208effccfe2cca4a0eaf9393e60f2dd4"></a>
@@ -911,6 +1038,9 @@ Additional Inherited Members</h2></td></tr>
 <p>In some cases, the area between outer and inner rect is left blank. In other cases the margin area is used to display peripheral graphics while the main content is in the inner rect. This is where automatic margin calculation becomes interesting because it allows the layout element to adapt the margins to the peripheral graphics it wants to draw. For example, <a class="el" href="class_q_c_p_axis_rect.html">QCPAxisRect</a> draws the axis labels and tick labels in the margin area, thus needs to adjust the margins (if <a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a> is enabled) according to the space required by the labels of the axes.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">outerRect</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01280">1280</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1280</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62d60f1b0ee9bb23e38811d71586d79c" name="a62d60f1b0ee9bb23e38811d71586d79c"></a>
@@ -952,6 +1082,28 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_abstract_legend_item.html#a206879d493749c3fb1494850bff40e7e">QCPAbstractLegendItem</a>, <a class="el" href="class_q_c_p_layout_inset.html#a1569969c3e7e92f64ea13d46616e5a8a">QCPLayoutInset</a>, <a class="el" href="class_q_c_p_legend.html#ae11e1229abeec1abdbd22a57f2b26a84">QCPLegend</a>, <a class="el" href="class_q_c_p_polar_axis_angular.html#abb390ae7656b7241acfe4ed9ea56f1ae">QCPPolarAxisAngular</a>, and <a class="el" href="class_q_c_p_text_element.html#a29e95d6cfd9e28772ce6a8890a2c8889">QCPTextElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03526">3526</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3527</span>{</div>
+<div class="line"><span class="lineno"> 3528</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno"> 3529</span>  </div>
+<div class="line"><span class="lineno"> 3530</span>  <span class="keywordflow">if</span> (onlySelectable)</div>
+<div class="line"><span class="lineno"> 3531</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 3532</span>  </div>
+<div class="line"><span class="lineno"> 3533</span>  <span class="keywordflow">if</span> (QRectF(<a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>).contains(pos))</div>
+<div class="line"><span class="lineno"> 3534</span>  {</div>
+<div class="line"><span class="lineno"> 3535</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)</div>
+<div class="line"><span class="lineno"> 3536</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99;</div>
+<div class="line"><span class="lineno"> 3537</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3538</span>    {</div>
+<div class="line"><span class="lineno"> 3539</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;parent plot not defined&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3540</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 3541</span>    }</div>
+<div class="line"><span class="lineno"> 3542</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3543</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 3544</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a5441d11013afeaf4b8f2ea06e8624a25"><div class="ttname"><a href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">QCustomPlot::selectionTolerance</a></div><div class="ttdeci">int selectionTolerance() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03842">qcustomplot.h:3842</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="accfda49994e3e6d51ed14504abf9d27d" name="accfda49994e3e6d51ed14504abf9d27d"></a>
@@ -972,6 +1124,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Margin sides that are under automatic control may participate in a <a class="el" href="class_q_c_p_margin_group.html">QCPMarginGroup</a> (see <a class="el" href="#a516e56f76b6bc100e8e71d329866847d">setMarginGroup</a>), to synchronize (align) it with other layout elements in the plot.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0a8a17abc16b7923159fcc7608f94673">setMinimumMargins</a>, <a class="el" href="#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>, <a class="el" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54">QCP::MarginSide</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03297">3297</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3298</span>{</div>
+<div class="line"><span class="lineno"> 3299</span>  <a class="code hl_variable" href="#af61c70354d1275778d68206b2a1b2d36">mAutoMargins</a> = sides;</div>
+<div class="line"><span class="lineno"> 3300</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a516e56f76b6bc100e8e71d329866847d" name="a516e56f76b6bc100e8e71d329866847d"></a>
@@ -998,6 +1155,43 @@ Additional Inherited Members</h2></td></tr>
 <p>Note that margin groups only work for margin sides that are set to automatic (<a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a>).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54">QCP::MarginSide</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03397">3397</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3398</span>{</div>
+<div class="line"><span class="lineno"> 3399</span>  QVector&lt;QCP::MarginSide&gt; sideVector;</div>
+<div class="line"><span class="lineno"> 3400</span>  <span class="keywordflow">if</span> (sides.testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07">QCP::msLeft</a>)) sideVector.append(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07">QCP::msLeft</a>);</div>
+<div class="line"><span class="lineno"> 3401</span>  <span class="keywordflow">if</span> (sides.testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65">QCP::msRight</a>)) sideVector.append(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65">QCP::msRight</a>);</div>
+<div class="line"><span class="lineno"> 3402</span>  <span class="keywordflow">if</span> (sides.testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0">QCP::msTop</a>)) sideVector.append(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0">QCP::msTop</a>);</div>
+<div class="line"><span class="lineno"> 3403</span>  <span class="keywordflow">if</span> (sides.testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc">QCP::msBottom</a>)) sideVector.append(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc">QCP::msBottom</a>);</div>
+<div class="line"><span class="lineno"> 3404</span>  </div>
+<div class="line"><span class="lineno"> 3405</span>  <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54">QCP::MarginSide</a> side, sideVector)</div>
+<div class="line"><span class="lineno"> 3406</span>  {</div>
+<div class="line"><span class="lineno"> 3407</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa5513622910f31d9309f87886bee597a">marginGroup</a>(side) != group)</div>
+<div class="line"><span class="lineno"> 3408</span>    {</div>
+<div class="line"><span class="lineno"> 3409</span>      <a class="code hl_class" href="class_q_c_p_margin_group.html">QCPMarginGroup</a> *oldGroup = <a class="code hl_function" href="#aa5513622910f31d9309f87886bee597a">marginGroup</a>(side);</div>
+<div class="line"><span class="lineno"> 3410</span>      <span class="keywordflow">if</span> (oldGroup) <span class="comment">// unregister at old group</span></div>
+<div class="line"><span class="lineno"> 3411</span>        oldGroup-&gt;<a class="code hl_function" href="class_q_c_p_margin_group.html#a20ab3286062957d99b58db683fe725b0">removeChild</a>(side, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 3412</span>      </div>
+<div class="line"><span class="lineno"> 3413</span>      <span class="keywordflow">if</span> (!group) <span class="comment">// if setting to 0, remove hash entry. Else set hash entry to new group and register there</span></div>
+<div class="line"><span class="lineno"> 3414</span>      {</div>
+<div class="line"><span class="lineno"> 3415</span>        <a class="code hl_variable" href="#aeafbbc1130e02eee663c5326761fc963">mMarginGroups</a>.remove(side);</div>
+<div class="line"><span class="lineno"> 3416</span>      } <span class="keywordflow">else</span> <span class="comment">// setting to a new group</span></div>
+<div class="line"><span class="lineno"> 3417</span>      {</div>
+<div class="line"><span class="lineno"> 3418</span>        <a class="code hl_variable" href="#aeafbbc1130e02eee663c5326761fc963">mMarginGroups</a>[side] = group;</div>
+<div class="line"><span class="lineno"> 3419</span>        group-&gt;<a class="code hl_function" href="class_q_c_p_margin_group.html#acb9c3a35acec655c2895b7eb95ee0524">addChild</a>(side, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 3420</span>      }</div>
+<div class="line"><span class="lineno"> 3421</span>    }</div>
+<div class="line"><span class="lineno"> 3422</span>  }</div>
+<div class="line"><span class="lineno"> 3423</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_aa5513622910f31d9309f87886bee597a"><div class="ttname"><a href="#aa5513622910f31d9309f87886bee597a">QCPLayoutElement::marginGroup</a></div><div class="ttdeci">QCPMarginGroup * marginGroup(QCP::MarginSide side) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01288">qcustomplot.h:1288</a></div></div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html"><div class="ttname"><a href="class_q_c_p_margin_group.html">QCPMarginGroup</a></div><div class="ttdoc">A margin group allows synchronization of margin sides if working with multiple layout elements.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01207">qcustomplot.h:1208</a></div></div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html_a20ab3286062957d99b58db683fe725b0"><div class="ttname"><a href="class_q_c_p_margin_group.html#a20ab3286062957d99b58db683fe725b0">QCPMarginGroup::removeChild</a></div><div class="ttdeci">void removeChild(QCP::MarginSide side, QCPLayoutElement *element)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03135">qcustomplot.cpp:3135</a></div></div>
+<div class="ttc" id="aclass_q_c_p_margin_group_html_acb9c3a35acec655c2895b7eb95ee0524"><div class="ttname"><a href="class_q_c_p_margin_group.html#acb9c3a35acec655c2895b7eb95ee0524">QCPMarginGroup::addChild</a></div><div class="ttdeci">void addChild(QCP::MarginSide side, QCPLayoutElement *element)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03121">qcustomplot.cpp:3121</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54">QCP::MarginSide</a></div><div class="ttdeci">MarginSide</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00226">qcustomplot.h:226</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc">QCP::msBottom</a></div><div class="ttdeci">@ msBottom</div><div class="ttdoc">0x08 bottom margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00230">qcustomplot.h:229</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0">QCP::msTop</a></div><div class="ttdeci">@ msTop</div><div class="ttdoc">0x04 top margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00229">qcustomplot.h:228</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65">QCP::msRight</a></div><div class="ttdeci">@ msRight</div><div class="ttdoc">0x02 right margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00228">qcustomplot.h:227</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07">QCP::msLeft</a></div><div class="ttdeci">@ msLeft</div><div class="ttdoc">0x01 left margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00227">qcustomplot.h:226</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8f450b1f3f992ad576fce2c63d8b79cf" name="a8f450b1f3f992ad576fce2c63d8b79cf"></a>
@@ -1018,6 +1212,16 @@ Additional Inherited Members</h2></td></tr>
 <p>The margin is the distance between the outer rect (controlled by the parent layout via <a class="el" href="#a38975ea13e36de8e53391ce41d94bc0f">setOuterRect</a>) and the inner <a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> (which usually contains the main content of this layout element).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03261">3261</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3262</span>{</div>
+<div class="line"><span class="lineno"> 3263</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a> != <a class="code hl_function" href="#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>)</div>
+<div class="line"><span class="lineno"> 3264</span>  {</div>
+<div class="line"><span class="lineno"> 3265</span>    <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a> = <a class="code hl_function" href="#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>;</div>
+<div class="line"><span class="lineno"> 3266</span>    <a class="code hl_variable" href="#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a> = <a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>.adjusted(<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.left(), <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.top(), -<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.right(), -<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.bottom());</div>
+<div class="line"><span class="lineno"> 3267</span>  }</div>
+<div class="line"><span class="lineno"> 3268</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_af4ac9450aa2d60863bf3a8ea0c940c9d"><div class="ttname"><a href="#af4ac9450aa2d60863bf3a8ea0c940c9d">QCPLayoutElement::margins</a></div><div class="ttdeci">QMargins margins() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01282">qcustomplot.h:1282</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a74eb5280a737ab44833d506db65efd95" name="a74eb5280a737ab44833d506db65efd95"></a>
@@ -1037,6 +1241,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the maximum size of this layout element. A parent layout tries to respect the <em>size</em> here by changing row/column sizes in the layout accordingly.</p>
 <p>Whether this constraint applies to the inner or the outer rect can be specified with <a class="el" href="#a361666cdcc6fbfd37344cc44be746b0f">setSizeConstraintRect</a> (see <a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> and <a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">outerRect</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03343">3343</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3344</span>{</div>
+<div class="line"><span class="lineno"> 3345</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a64a387973fd4addac842028c89088998">mMaximumSize</a> != size)</div>
+<div class="line"><span class="lineno"> 3346</span>  {</div>
+<div class="line"><span class="lineno"> 3347</span>    <a class="code hl_variable" href="#a64a387973fd4addac842028c89088998">mMaximumSize</a> = size;</div>
+<div class="line"><span class="lineno"> 3348</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>)</div>
+<div class="line"><span class="lineno"> 3349</span>      <a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#aeac66a292f65cf7f8adf94eb92345b3e">sizeConstraintsChanged</a>();</div>
+<div class="line"><span class="lineno"> 3350</span>  }</div>
+<div class="line"><span class="lineno"> 3351</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html_aeac66a292f65cf7f8adf94eb92345b3e"><div class="ttname"><a href="class_q_c_p_layout.html#aeac66a292f65cf7f8adf94eb92345b3e">QCPLayout::sizeConstraintsChanged</a></div><div class="ttdeci">void sizeConstraintsChanged() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03795">qcustomplot.cpp:3795</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a03e0e9c48f230217c529b0819f832d84" name="a03e0e9c48f230217c529b0819f832d84"></a>
@@ -1061,6 +1276,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the maximum size of this layout element.</p>
 <p>Whether this constraint applies to the inner or the outer rect can be specified with <a class="el" href="#a361666cdcc6fbfd37344cc44be746b0f">setSizeConstraintRect</a> (see <a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> and <a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">outerRect</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03360">3360</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3361</span>{</div>
+<div class="line"><span class="lineno"> 3362</span>  <a class="code hl_function" href="#a74eb5280a737ab44833d506db65efd95">setMaximumSize</a>(QSize(width, height));</div>
+<div class="line"><span class="lineno"> 3363</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a74eb5280a737ab44833d506db65efd95"><div class="ttname"><a href="#a74eb5280a737ab44833d506db65efd95">QCPLayoutElement::setMaximumSize</a></div><div class="ttdeci">void setMaximumSize(const QSize &amp;size)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03343">qcustomplot.cpp:3343</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0a8a17abc16b7923159fcc7608f94673" name="a0a8a17abc16b7923159fcc7608f94673"></a>
@@ -1081,6 +1302,14 @@ Additional Inherited Members</h2></td></tr>
 <p>The minimum values are not enforced on margin sides that were set to be under manual control via <a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#accfda49994e3e6d51ed14504abf9d27d">setAutoMargins</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03279">3279</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3280</span>{</div>
+<div class="line"><span class="lineno"> 3281</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a> != <a class="code hl_function" href="#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>)</div>
+<div class="line"><span class="lineno"> 3282</span>  {</div>
+<div class="line"><span class="lineno"> 3283</span>    <a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a> = <a class="code hl_function" href="#af4ac9450aa2d60863bf3a8ea0c940c9d">margins</a>;</div>
+<div class="line"><span class="lineno"> 3284</span>  }</div>
+<div class="line"><span class="lineno"> 3285</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5dd29a3c8bc88440c97c06b67be7886b" name="a5dd29a3c8bc88440c97c06b67be7886b"></a>
@@ -1101,6 +1330,16 @@ Additional Inherited Members</h2></td></tr>
 <p>If the parent layout size is not sufficient to satisfy all minimum size constraints of its child layout elements, the layout may set a size that is actually smaller than <em>size</em>. <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> propagates the layout's size constraints to the outside by setting its own minimum QWidget size accordingly, so violations of <em>size</em> should be exceptions.</p>
 <p>Whether this constraint applies to the inner or the outer rect can be specified with <a class="el" href="#a361666cdcc6fbfd37344cc44be746b0f">setSizeConstraintRect</a> (see <a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> and <a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">outerRect</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03314">3314</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3315</span>{</div>
+<div class="line"><span class="lineno"> 3316</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#affef747c81632de33f08483b7fd10d01">mMinimumSize</a> != size)</div>
+<div class="line"><span class="lineno"> 3317</span>  {</div>
+<div class="line"><span class="lineno"> 3318</span>    <a class="code hl_variable" href="#affef747c81632de33f08483b7fd10d01">mMinimumSize</a> = size;</div>
+<div class="line"><span class="lineno"> 3319</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>)</div>
+<div class="line"><span class="lineno"> 3320</span>      <a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#aeac66a292f65cf7f8adf94eb92345b3e">sizeConstraintsChanged</a>();</div>
+<div class="line"><span class="lineno"> 3321</span>  }</div>
+<div class="line"><span class="lineno"> 3322</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8e0447614a0bf92de9a7304588c6b96e" name="a8e0447614a0bf92de9a7304588c6b96e"></a>
@@ -1125,6 +1364,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the minimum size of this layout element.</p>
 <p>Whether this constraint applies to the inner or the outer rect can be specified with <a class="el" href="#a361666cdcc6fbfd37344cc44be746b0f">setSizeConstraintRect</a> (see <a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> and <a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">outerRect</a>). </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03331">3331</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3332</span>{</div>
+<div class="line"><span class="lineno"> 3333</span>  <a class="code hl_function" href="#a5dd29a3c8bc88440c97c06b67be7886b">setMinimumSize</a>(QSize(width, height));</div>
+<div class="line"><span class="lineno"> 3334</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a5dd29a3c8bc88440c97c06b67be7886b"><div class="ttname"><a href="#a5dd29a3c8bc88440c97c06b67be7886b">QCPLayoutElement::setMinimumSize</a></div><div class="ttdeci">void setMinimumSize(const QSize &amp;size)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03314">qcustomplot.cpp:3314</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a38975ea13e36de8e53391ce41d94bc0f" name="a38975ea13e36de8e53391ce41d94bc0f"></a>
@@ -1146,6 +1391,16 @@ Additional Inherited Members</h2></td></tr>
 <p>The layout element will adapt its inner <a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> by applying the margins inward to the outer rect.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03241">3241</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3242</span>{</div>
+<div class="line"><span class="lineno"> 3243</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a> != <a class="code hl_function" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>)</div>
+<div class="line"><span class="lineno"> 3244</span>  {</div>
+<div class="line"><span class="lineno"> 3245</span>    <a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a> = <a class="code hl_function" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>;</div>
+<div class="line"><span class="lineno"> 3246</span>    <a class="code hl_variable" href="#ad8896f05550389f7b9e92c9e6cdf6e01">mRect</a> = <a class="code hl_variable" href="#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>.adjusted(<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.left(), <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.top(), -<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.right(), -<a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>.bottom());</div>
+<div class="line"><span class="lineno"> 3247</span>  }</div>
+<div class="line"><span class="lineno"> 3248</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a208effccfe2cca4a0eaf9393e60f2dd4"><div class="ttname"><a href="#a208effccfe2cca4a0eaf9393e60f2dd4">QCPLayoutElement::rect</a></div><div class="ttdeci">QRect rect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01280">qcustomplot.h:1280</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a361666cdcc6fbfd37344cc44be746b0f" name="a361666cdcc6fbfd37344cc44be746b0f"></a>
@@ -1166,6 +1421,16 @@ Additional Inherited Members</h2></td></tr>
 <p>The outer rect (<a class="el" href="#a2a32a12a6161c9dffbadeb9cc585510c">outerRect</a>) includes the margins (e.g. in the case of a <a class="el" href="class_q_c_p_axis_rect.html" title="Holds multiple axes and arranges them in a rectangular shape.">QCPAxisRect</a> the axis labels), whereas the inner rect (<a class="el" href="#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>) does not.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a5dd29a3c8bc88440c97c06b67be7886b">setMinimumSize</a>, <a class="el" href="#a74eb5280a737ab44833d506db65efd95">setMaximumSize</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03374">3374</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3375</span>{</div>
+<div class="line"><span class="lineno"> 3376</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acc012635b1ae178ff3c4da8a3af303a2">mSizeConstraintRect</a> != constraintRect)</div>
+<div class="line"><span class="lineno"> 3377</span>  {</div>
+<div class="line"><span class="lineno"> 3378</span>    <a class="code hl_variable" href="#acc012635b1ae178ff3c4da8a3af303a2">mSizeConstraintRect</a> = constraintRect;</div>
+<div class="line"><span class="lineno"> 3379</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>)</div>
+<div class="line"><span class="lineno"> 3380</span>      <a class="code hl_variable" href="#ae7c75c25549608bd688bdb65d4c38066">mParentLayout</a>-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#aeac66a292f65cf7f8adf94eb92345b3e">sizeConstraintsChanged</a>();</div>
+<div class="line"><span class="lineno"> 3381</span>  }</div>
+<div class="line"><span class="lineno"> 3382</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a66136f121ee3e1c933b748761203cab4" name="a66136f121ee3e1c933b748761203cab4"></a>
@@ -1191,6 +1456,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01287">1287</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1287</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#acc012635b1ae178ff3c4da8a3af303a2">mSizeConstraintRect</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a929c2ec62e0e0e1d8418eaa802e2af9b" name="a929c2ec62e0e0e1d8418eaa802e2af9b"></a>
@@ -1221,6 +1489,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_q_c_p_axis_rect.html#add049d464b9ef2ccdc638adc4ccb4aca">QCPAxisRect</a>, <a class="el" href="class_q_c_p_color_scale.html#a259dcb6d3053a2cc3c197e9b1191ddbe">QCPColorScale</a>, <a class="el" href="class_q_c_p_color_scale_axis_rect_private.html#add049d464b9ef2ccdc638adc4ccb4aca">QCPColorScaleAxisRectPrivate</a>, <a class="el" href="class_q_c_p_layout.html#a48ecc9c98ea90b547c3e27a931a8f7bd">QCPLayout</a>, and <a class="el" href="class_q_c_p_polar_axis_angular.html#a9f2dfb377cdf3ce22a451fa9d3ab47e6">QCPPolarAxisAngular</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l03437">3437</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3438</span>{</div>
+<div class="line"><span class="lineno"> 3439</span>  <span class="keywordflow">if</span> (phase == <a class="code hl_enumvalue" href="#a0d83360e05735735aaf6d7983c56374da288cb59a92280e47261a341f2813e676">upMargins</a>)</div>
+<div class="line"><span class="lineno"> 3440</span>  {</div>
+<div class="line"><span class="lineno"> 3441</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af61c70354d1275778d68206b2a1b2d36">mAutoMargins</a> != <a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a80aa4149f16dabd538f8b2e3d42c42d5">QCP::msNone</a>)</div>
+<div class="line"><span class="lineno"> 3442</span>    {</div>
+<div class="line"><span class="lineno"> 3443</span>      <span class="comment">// set the margins of this layout element according to automatic margin calculation, either directly or via a margin group:</span></div>
+<div class="line"><span class="lineno"> 3444</span>      QMargins newMargins = <a class="code hl_variable" href="#ac2a32b99ee527ca5dfff9da03628fe94">mMargins</a>;</div>
+<div class="line"><span class="lineno"> 3445</span>      <span class="keyword">const</span> QList&lt;QCP::MarginSide&gt; allMarginSides = QList&lt;QCP::MarginSide&gt;() &lt;&lt; <a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07">QCP::msLeft</a> &lt;&lt; <a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65">QCP::msRight</a> &lt;&lt; <a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0">QCP::msTop</a> &lt;&lt; <a class="code hl_enumvalue" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5241d8eac2bab9524a38889f576179cc">QCP::msBottom</a>;</div>
+<div class="line"><span class="lineno"> 3446</span>      <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54">QCP::MarginSide</a> side, allMarginSides)</div>
+<div class="line"><span class="lineno"> 3447</span>      {</div>
+<div class="line"><span class="lineno"> 3448</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af61c70354d1275778d68206b2a1b2d36">mAutoMargins</a>.testFlag(side)) <span class="comment">// this side&#39;s margin shall be calculated automatically</span></div>
+<div class="line"><span class="lineno"> 3449</span>        {</div>
+<div class="line"><span class="lineno"> 3450</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aeafbbc1130e02eee663c5326761fc963">mMarginGroups</a>.contains(side))</div>
+<div class="line"><span class="lineno"> 3451</span>            <a class="code hl_function" href="namespace_q_c_p.html#afbf6e3084c108f2bb4372107945ee82f">QCP::setMarginValue</a>(newMargins, side, <a class="code hl_variable" href="#aeafbbc1130e02eee663c5326761fc963">mMarginGroups</a>[side]-&gt;commonMargin(side)); <span class="comment">// this side is part of a margin group, so get the margin value from that group</span></div>
+<div class="line"><span class="lineno"> 3452</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3453</span>            <a class="code hl_function" href="namespace_q_c_p.html#afbf6e3084c108f2bb4372107945ee82f">QCP::setMarginValue</a>(newMargins, side, <a class="code hl_function" href="#a005c9f0fe84bc1591a2cf2c46fd477b4">calculateAutoMargin</a>(side)); <span class="comment">// this side is not part of a group, so calculate the value directly</span></div>
+<div class="line"><span class="lineno"> 3454</span>          <span class="comment">// apply minimum margin restrictions:</span></div>
+<div class="line"><span class="lineno"> 3455</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a>(newMargins, side) &lt; <a class="code hl_function" href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a>(<a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a>, side))</div>
+<div class="line"><span class="lineno"> 3456</span>            <a class="code hl_function" href="namespace_q_c_p.html#afbf6e3084c108f2bb4372107945ee82f">QCP::setMarginValue</a>(newMargins, side, <a class="code hl_function" href="namespace_q_c_p.html#a23a2679d3495c444acc26acc61e35b5b">QCP::getMarginValue</a>(<a class="code hl_variable" href="#a5ba71f25d1af4bb092b28df618538e63">mMinimumMargins</a>, side));</div>
+<div class="line"><span class="lineno"> 3457</span>        }</div>
+<div class="line"><span class="lineno"> 3458</span>      }</div>
+<div class="line"><span class="lineno"> 3459</span>      <a class="code hl_function" href="#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(newMargins);</div>
+<div class="line"><span class="lineno"> 3460</span>    }</div>
+<div class="line"><span class="lineno"> 3461</span>  }</div>
+<div class="line"><span class="lineno"> 3462</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a005c9f0fe84bc1591a2cf2c46fd477b4"><div class="ttname"><a href="#a005c9f0fe84bc1591a2cf2c46fd477b4">QCPLayoutElement::calculateAutoMargin</a></div><div class="ttdeci">virtual int calculateAutoMargin(QCP::MarginSide side)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03569">qcustomplot.cpp:3569</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a8f450b1f3f992ad576fce2c63d8b79cf"><div class="ttname"><a href="#a8f450b1f3f992ad576fce2c63d8b79cf">QCPLayoutElement::setMargins</a></div><div class="ttdeci">void setMargins(const QMargins &amp;margins)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03261">qcustomplot.cpp:3261</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a7e487e3e2ccb62ab7771065bab7cae54a80aa4149f16dabd538f8b2e3d42c42d5"><div class="ttname"><a href="namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a80aa4149f16dabd538f8b2e3d42c42d5">QCP::msNone</a></div><div class="ttdeci">@ msNone</div><div class="ttdoc">0x00 no margin</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00232">qcustomplot.h:231</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_afbf6e3084c108f2bb4372107945ee82f"><div class="ttname"><a href="namespace_q_c_p.html#afbf6e3084c108f2bb4372107945ee82f">QCP::setMarginValue</a></div><div class="ttdeci">void setMarginValue(QMargins &amp;margins, QCP::MarginSide side, int value)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00357">qcustomplot.h:357</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -1244,6 +1543,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01335">1335</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ad077a686e85ab6fa03dcb2fd37fc499a" name="ad077a686e85ab6fa03dcb2fd37fc499a"></a>
@@ -1266,6 +1567,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01336">1336</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdf9df76adcfae45261690aa0ca2198" name="a1cdf9df76adcfae45261690aa0ca2198"></a>
@@ -1287,6 +1590,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01334">1334</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1311,6 +1616,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01319">1319</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aeafbbc1130e02eee663c5326761fc963" name="aeafbbc1130e02eee663c5326761fc963"></a>
@@ -1332,6 +1639,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01320">1320</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1355,6 +1664,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01318">1318</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a64a387973fd4addac842028c89088998" name="a64a387973fd4addac842028c89088998"></a>
@@ -1376,6 +1687,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01315">1315</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1399,6 +1712,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01318">1318</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="affef747c81632de33f08483b7fd10d01" name="affef747c81632de33f08483b7fd10d01"></a>
@@ -1420,6 +1735,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01315">1315</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1443,6 +1760,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01317">1317</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="ae7c75c25549608bd688bdb65d4c38066" name="ae7c75c25549608bd688bdb65d4c38066"></a>
@@ -1464,6 +1783,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01314">1314</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1487,6 +1808,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01317">1317</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="acc012635b1ae178ff3c4da8a3af303a2" name="acc012635b1ae178ff3c4da8a3af303a2"></a>
@@ -1509,11 +1832,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01316">1316</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

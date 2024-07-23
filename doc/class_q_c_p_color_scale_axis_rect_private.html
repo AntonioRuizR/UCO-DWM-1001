@@ -472,7 +472,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:abbf8657cedea73ac1c3499b521c90eba inherit signals_class_q_c_p_layerable" id="r_abbf8657cedea73ac1c3499b521c90eba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_c_p_layerable.html#abbf8657cedea73ac1c3499b521c90eba">layerChanged</a> (<a class="el" href="class_q_c_p_layer.html">QCPLayer</a> *newLayer)</td></tr>
 <tr class="separator:abbf8657cedea73ac1c3499b521c90eba inherit signals_class_q_c_p_layerable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05356">5356</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad3b242f75dd2b33581364a4e668a80db" name="ad3b242f75dd2b33581364a4e668a80db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3b242f75dd2b33581364a4e668a80db">&#9670;&#160;</a></span>QCPColorScaleAxisRectPrivate()</h2>
 
@@ -497,6 +500,62 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a new instance, as a child of <em>parentColorScale</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20570">20570</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20570</span>                                                                                          :</div>
+<div class="line"><span class="lineno">20571</span>  <a class="code hl_friend" href="class_q_c_p_layerable.html#acbf20ecb140f66c5fd1bc64ae0762990">QCPAxisRect</a>(parentColorScale-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>(), <span class="keyword">true</span>),</div>
+<div class="line"><span class="lineno">20572</span>  <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>(parentColorScale),</div>
+<div class="line"><span class="lineno">20573</span>  <a class="code hl_variable" href="#a2c0b15b071e1f93006b48b5be022a631">mGradientImageInvalidated</a>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">20574</span>{</div>
+<div class="line"><span class="lineno">20575</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#aa23c893671f1f6744ac235cf2204cf3a">setParentLayerable</a>(parentColorScale);</div>
+<div class="line"><span class="lineno">20576</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a0a8a17abc16b7923159fcc7608f94673">setMinimumMargins</a>(QMargins(0, 0, 0, 0));</div>
+<div class="line"><span class="lineno">20577</span>  <span class="keyword">const</span> QList&lt;QCPAxis::AxisType&gt; allAxisTypes = QList&lt;QCPAxis::AxisType&gt;() &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>;</div>
+<div class="line"><span class="lineno">20578</span>  <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18a">QCPAxis::AxisType</a> type, allAxisTypes)</div>
+<div class="line"><span class="lineno">20579</span>  {</div>
+<div class="line"><span class="lineno">20580</span>    <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a3bed99ddc396b48ce3ebfdc0418744f8">setVisible</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">20581</span>    <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a63f1dd2df663680d2a8d06c19592dd63">grid</a>()-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#a3bed99ddc396b48ce3ebfdc0418744f8">setVisible</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">20582</span>    <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a5691441cb3de9e9844855d339c0db279">setPadding</a>(0);</div>
+<div class="line"><span class="lineno">20583</span>    connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type), SIGNAL(selectionChanged(QCPAxis::SelectableParts)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a6112ad4291ac1695d37659cb049d598d">axisSelectionChanged</a>(QCPAxis::SelectableParts)));</div>
+<div class="line"><span class="lineno">20584</span>    connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type), SIGNAL(selectableChanged(QCPAxis::SelectableParts)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="#a66d2baed86966bb03a6d7c32dc7d59f7">axisSelectableChanged</a>(QCPAxis::SelectableParts)));</div>
+<div class="line"><span class="lineno">20585</span>  }</div>
+<div class="line"><span class="lineno">20586</span> </div>
+<div class="line"><span class="lineno">20587</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a>), SIGNAL(rangeChanged(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>), SLOT(setRange(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">20588</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>), SIGNAL(rangeChanged(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a>), SLOT(setRange(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">20589</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a>), SIGNAL(rangeChanged(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a>), SLOT(setRange(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">20590</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a>), SIGNAL(rangeChanged(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a>), SLOT(setRange(<a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>)));</div>
+<div class="line"><span class="lineno">20591</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a>), SIGNAL(scaleTypeChanged(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>), SLOT(setScaleType(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">20592</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>), SIGNAL(scaleTypeChanged(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a>), SLOT(setScaleType(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">20593</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a>), SIGNAL(scaleTypeChanged(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a>), SLOT(setScaleType(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">20594</span>  connect(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a>), SIGNAL(scaleTypeChanged(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a>), SLOT(setScaleType(<a class="code hl_enumeration" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a>)));</div>
+<div class="line"><span class="lineno">20595</span>  </div>
+<div class="line"><span class="lineno">20596</span>  <span class="comment">// make layer transfers of color scale transfer to axis rect and axes</span></div>
+<div class="line"><span class="lineno">20597</span>  <span class="comment">// the axes must be set after axis rect, such that they appear above color gradient drawn by axis rect:</span></div>
+<div class="line"><span class="lineno">20598</span>  connect(parentColorScale, SIGNAL(<a class="code hl_signal" href="class_q_c_p_layerable.html#abbf8657cedea73ac1c3499b521c90eba">layerChanged</a>(<a class="code hl_class" href="class_q_c_p_layer.html">QCPLayer</a>*)), <span class="keyword">this</span>, SLOT(<a class="code hl_function" href="class_q_c_p_layerable.html#ab0d0da6d2de45a118886d2c8e16d5a54">setLayer</a>(<a class="code hl_class" href="class_q_c_p_layer.html">QCPLayer</a>*)));</div>
+<div class="line"><span class="lineno">20599</span>  <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18a">QCPAxis::AxisType</a> type, allAxisTypes)</div>
+<div class="line"><span class="lineno">20600</span>    connect(parentColorScale, SIGNAL(<a class="code hl_signal" href="class_q_c_p_layerable.html#abbf8657cedea73ac1c3499b521c90eba">layerChanged</a>(<a class="code hl_class" href="class_q_c_p_layer.html">QCPLayer</a>*)), <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type), SLOT(<a class="code hl_function" href="class_q_c_p_layerable.html#ab0d0da6d2de45a118886d2c8e16d5a54">setLayer</a>(<a class="code hl_class" href="class_q_c_p_layer.html">QCPLayer</a>*)));</div>
+<div class="line"><span class="lineno">20601</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0">QCPAxis::ScaleType</a></div><div class="ttdeci">ScaleType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02194">qcustomplot.h:2194</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a5691441cb3de9e9844855d339c0db279"><div class="ttname"><a href="class_q_c_p_axis.html#a5691441cb3de9e9844855d339c0db279">QCPAxis::setPadding</a></div><div class="ttdeci">void setPadding(int padding)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l08979">qcustomplot.cpp:8979</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a63f1dd2df663680d2a8d06c19592dd63"><div class="ttname"><a href="class_q_c_p_axis.html#a63f1dd2df663680d2a8d06c19592dd63">QCPAxis::grid</a></div><div class="ttdeci">QCPGrid * grid() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02257">qcustomplot.h:2257</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ae2bcc1728b382f10f064612b368bc18a"><div class="ttname"><a href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18a">QCPAxis::AxisType</a></div><div class="ttdeci">AxisType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02173">qcustomplot.h:2173</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f"><div class="ttname"><a href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a></div><div class="ttdeci">@ atBottom</div><div class="ttdoc">0x08 Axis is horizontal and on the bottom side of the axis rect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02177">qcustomplot.h:2176</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977"><div class="ttname"><a href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a></div><div class="ttdeci">@ atTop</div><div class="ttdoc">0x04 Axis is horizontal and on the top side of the axis rect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02176">qcustomplot.h:2175</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345"><div class="ttname"><a href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a></div><div class="ttdeci">@ atRight</div><div class="ttdoc">0x02 Axis is vertical and on the right side of the axis rect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02175">qcustomplot.h:2174</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730"><div class="ttname"><a href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a></div><div class="ttdeci">@ atLeft</div><div class="ttdoc">0x01 Axis is vertical and on the left side of the axis rect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02174">qcustomplot.h:2173</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a583ae4f6d78b601b732183f6cabecbe1"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">QCPAxisRect::axis</a></div><div class="ttdeci">QCPAxis * axis(QCPAxis::AxisType type, int index=0) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l17624">qcustomplot.cpp:17624</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_axis_rect_private_html_a2c0b15b071e1f93006b48b5be022a631"><div class="ttname"><a href="#a2c0b15b071e1f93006b48b5be022a631">QCPColorScaleAxisRectPrivate::mGradientImageInvalidated</a></div><div class="ttdeci">bool mGradientImageInvalidated</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05364">qcustomplot.h:5364</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_axis_rect_private_html_a311c73f51a4cb0b556388197833cf099"><div class="ttname"><a href="#a311c73f51a4cb0b556388197833cf099">QCPColorScaleAxisRectPrivate::mParentColorScale</a></div><div class="ttdeci">QCPColorScale * mParentColorScale</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05362">qcustomplot.h:5362</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_axis_rect_private_html_a6112ad4291ac1695d37659cb049d598d"><div class="ttname"><a href="#a6112ad4291ac1695d37659cb049d598d">QCPColorScaleAxisRectPrivate::axisSelectionChanged</a></div><div class="ttdeci">Q_SLOT void axisSelectionChanged(QCPAxis::SelectableParts selectedParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l20675">qcustomplot.cpp:20675</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_axis_rect_private_html_a66d2baed86966bb03a6d7c32dc7d59f7"><div class="ttname"><a href="#a66d2baed86966bb03a6d7c32dc7d59f7">QCPColorScaleAxisRectPrivate::axisSelectableChanged</a></div><div class="ttdeci">Q_SLOT void axisSelectableChanged(QCPAxis::SelectableParts selectableParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l20700">qcustomplot.cpp:20700</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layer_html"><div class="ttname"><a href="class_q_c_p_layer.html">QCPLayer</a></div><div class="ttdoc">A layer that may contain objects, to control the rendering order.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00682">qcustomplot.h:683</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3bed99ddc396b48ce3ebfdc0418744f8"><div class="ttname"><a href="class_q_c_p_layerable.html#a3bed99ddc396b48ce3ebfdc0418744f8">QCPLayerable::setVisible</a></div><div class="ttdeci">void setVisible(bool on)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01398">qcustomplot.cpp:1398</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa23c893671f1f6744ac235cf2204cf3a"><div class="ttname"><a href="class_q_c_p_layerable.html#aa23c893671f1f6744ac235cf2204cf3a">QCPLayerable::setParentLayerable</a></div><div class="ttdeci">void setParentLayerable(QCPLayerable *parentLayerable)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01555">qcustomplot.cpp:1555</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_ab0d0da6d2de45a118886d2c8e16d5a54"><div class="ttname"><a href="class_q_c_p_layerable.html#ab0d0da6d2de45a118886d2c8e16d5a54">QCPLayerable::setLayer</a></div><div class="ttdeci">Q_SLOT bool setLayer(QCPLayer *layer)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01412">qcustomplot.cpp:1412</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_abbf8657cedea73ac1c3499b521c90eba"><div class="ttname"><a href="class_q_c_p_layerable.html#abbf8657cedea73ac1c3499b521c90eba">QCPLayerable::layerChanged</a></div><div class="ttdeci">void layerChanged(QCPLayer *newLayer)</div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acbf20ecb140f66c5fd1bc64ae0762990"><div class="ttname"><a href="class_q_c_p_layerable.html#acbf20ecb140f66c5fd1bc64ae0762990">QCPLayerable::QCPAxisRect</a></div><div class="ttdeci">friend class QCPAxisRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00822">qcustomplot.h:822</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0a8a17abc16b7923159fcc7608f94673"><div class="ttname"><a href="class_q_c_p_layout_element.html#a0a8a17abc16b7923159fcc7608f94673">QCPLayoutElement::setMinimumMargins</a></div><div class="ttdeci">void setMinimumMargins(const QMargins &amp;margins)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03279">qcustomplot.cpp:3279</a></div></div>
+<div class="ttc" id="aclass_q_c_p_range_html"><div class="ttname"><a href="class_q_c_p_range.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00831">qcustomplot.h:832</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -523,6 +582,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20700">20700</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20701</span>{</div>
+<div class="line"><span class="lineno">20702</span>  <span class="comment">// synchronize axis base selectability:</span></div>
+<div class="line"><span class="lineno">20703</span>  <span class="keyword">const</span> QList&lt;QCPAxis::AxisType&gt; allAxisTypes = QList&lt;QCPAxis::AxisType&gt;() &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>;</div>
+<div class="line"><span class="lineno">20704</span>  <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18a">QCPAxis::AxisType</a> type, allAxisTypes)</div>
+<div class="line"><span class="lineno">20705</span>  {</div>
+<div class="line"><span class="lineno">20706</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *senderAxis = qobject_cast&lt;QCPAxis*&gt;(sender()))</div>
+<div class="line"><span class="lineno">20707</span>      <span class="keywordflow">if</span> (senderAxis-&gt;axisType() == type)</div>
+<div class="line"><span class="lineno">20708</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">20709</span>    </div>
+<div class="line"><span class="lineno">20710</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;selectableParts().testFlag(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>))</div>
+<div class="line"><span class="lineno">20711</span>    {</div>
+<div class="line"><span class="lineno">20712</span>      <span class="keywordflow">if</span> (selectableParts.testFlag(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>))</div>
+<div class="line"><span class="lineno">20713</span>        <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a513f9b9e326c505d9bec54880031b085">setSelectableParts</a>(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;selectableParts() | <a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>);</div>
+<div class="line"><span class="lineno">20714</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">20715</span>        <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a513f9b9e326c505d9bec54880031b085">setSelectableParts</a>(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;selectableParts() &amp; ~<a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>);</div>
+<div class="line"><span class="lineno">20716</span>    }</div>
+<div class="line"><span class="lineno">20717</span>  }</div>
+<div class="line"><span class="lineno">20718</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html"><div class="ttname"><a href="class_q_c_p_axis.html">QCPAxis</a></div><div class="ttdoc">Manages a single axis inside a QCustomPlot.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02120">qcustomplot.h:2121</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a513f9b9e326c505d9bec54880031b085"><div class="ttname"><a href="class_q_c_p_axis.html#a513f9b9e326c505d9bec54880031b085">QCPAxis::setSelectableParts</a></div><div class="ttdeci">Q_SLOT void setSelectableParts(const QCPAxis::SelectableParts &amp;selectableParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l08418">qcustomplot.cpp:8418</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38"><div class="ttname"><a href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a></div><div class="ttdeci">@ spAxis</div><div class="ttdoc">The axis backbone and tick marks.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02204">qcustomplot.h:2203</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6112ad4291ac1695d37659cb049d598d" name="a6112ad4291ac1695d37659cb049d598d"></a>
@@ -548,6 +630,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20675">20675</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20676</span>{</div>
+<div class="line"><span class="lineno">20677</span>  <span class="comment">// axis bases of four axes shall always (de-)selected synchronously:</span></div>
+<div class="line"><span class="lineno">20678</span>  <span class="keyword">const</span> QList&lt;QCPAxis::AxisType&gt; allAxisTypes = QList&lt;QCPAxis::AxisType&gt;() &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a> &lt;&lt; <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>;</div>
+<div class="line"><span class="lineno">20679</span>  <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18a">QCPAxis::AxisType</a> type, allAxisTypes)</div>
+<div class="line"><span class="lineno">20680</span>  {</div>
+<div class="line"><span class="lineno">20681</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *senderAxis = qobject_cast&lt;QCPAxis*&gt;(sender()))</div>
+<div class="line"><span class="lineno">20682</span>      <span class="keywordflow">if</span> (senderAxis-&gt;axisType() == type)</div>
+<div class="line"><span class="lineno">20683</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">20684</span>    </div>
+<div class="line"><span class="lineno">20685</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;selectableParts().testFlag(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>))</div>
+<div class="line"><span class="lineno">20686</span>    {</div>
+<div class="line"><span class="lineno">20687</span>      <span class="keywordflow">if</span> (selectedParts.testFlag(<a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>))</div>
+<div class="line"><span class="lineno">20688</span>        <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab9d7a69277dcbed9119b3c1f25ca19c3">setSelectedParts</a>(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;selectedParts() | <a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>);</div>
+<div class="line"><span class="lineno">20689</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">20690</span>        <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#ab9d7a69277dcbed9119b3c1f25ca19c3">setSelectedParts</a>(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>(type)-&gt;selectedParts() &amp; ~<a class="code hl_enumvalue" href="class_q_c_p_axis.html#abee4c7a54c468b1385dfce2c898b115fa8949d2c1a31eccae9be7ed32e7a1ae38">QCPAxis::spAxis</a>);</div>
+<div class="line"><span class="lineno">20691</span>    }</div>
+<div class="line"><span class="lineno">20692</span>  }</div>
+<div class="line"><span class="lineno">20693</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ab9d7a69277dcbed9119b3c1f25ca19c3"><div class="ttname"><a href="class_q_c_p_axis.html#ab9d7a69277dcbed9119b3c1f25ca19c3">QCPAxis::setSelectedParts</a></div><div class="ttdeci">Q_SLOT void setSelectedParts(const QCPAxis::SelectableParts &amp;selectedParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l08442">qcustomplot.cpp:8442</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac51055d83f5f414b6d013d3a24b0a941" name="ac51055d83f5f414b6d013d3a24b0a941"></a>
@@ -575,6 +678,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#ac51055d83f5f414b6d013d3a24b0a941">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05025">5025</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">18494</span>{</div>
+<div class="line"><span class="lineno">18495</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_layout_element.html#af61c70354d1275778d68206b2a1b2d36">mAutoMargins</a>.testFlag(side))</div>
+<div class="line"><span class="lineno">18496</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Called with side that isn&#39;t specified as auto margin&quot;</span>;</div>
+<div class="line"><span class="lineno">18497</span>  </div>
+<div class="line"><span class="lineno">18498</span>  <a class="code hl_function" href="class_q_c_p_axis_rect.html#a6024ccdc74f5dc0e8a0fe482e5b28a20">updateAxesOffset</a>(<a class="code hl_function" href="class_q_c_p_axis.html#ac0a6b77bd52bec6c81cd62d167cfeba6">QCPAxis::marginSideToAxisType</a>(side));</div>
+<div class="line"><span class="lineno">18499</span>  </div>
+<div class="line"><span class="lineno">18500</span>  <span class="comment">// note: only need to look at the last (outer most) axis to determine the total margin, due to updateAxisOffset call</span></div>
+<div class="line"><span class="lineno">18501</span>  <span class="keyword">const</span> QList&lt;QCPAxis*&gt; axesList = <a class="code hl_variable" href="class_q_c_p_axis_rect.html#afe7a24d2a2bea98fc552fa826350ba81">mAxes</a>.value(<a class="code hl_function" href="class_q_c_p_axis.html#ac0a6b77bd52bec6c81cd62d167cfeba6">QCPAxis::marginSideToAxisType</a>(side));</div>
+<div class="line"><span class="lineno">18502</span>  <span class="keywordflow">if</span> (!axesList.isEmpty())</div>
+<div class="line"><span class="lineno">18503</span>    <span class="keywordflow">return</span> axesList.last()-&gt;offset() + axesList.last()-&gt;calculateMargin();</div>
+<div class="line"><span class="lineno">18504</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">18505</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">18506</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ac0a6b77bd52bec6c81cd62d167cfeba6"><div class="ttname"><a href="class_q_c_p_axis.html#ac0a6b77bd52bec6c81cd62d167cfeba6">QCPAxis::marginSideToAxisType</a></div><div class="ttdeci">static AxisType marginSideToAxisType(QCP::MarginSide side)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09457">qcustomplot.cpp:9457</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a6024ccdc74f5dc0e8a0fe482e5b28a20"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a6024ccdc74f5dc0e8a0fe482e5b28a20">QCPAxisRect::updateAxesOffset</a></div><div class="ttdeci">void updateAxesOffset(QCPAxis::AxisType type)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18472">qcustomplot.cpp:18472</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_afe7a24d2a2bea98fc552fa826350ba81"><div class="ttname"><a href="class_q_c_p_axis_rect.html#afe7a24d2a2bea98fc552fa826350ba81">QCPAxisRect::mAxes</a></div><div class="ttdeci">QHash&lt; QCPAxis::AxisType, QList&lt; QCPAxis * &gt; &gt; mAxes</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05020">qcustomplot.h:5020</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_af61c70354d1275778d68206b2a1b2d36"><div class="ttname"><a href="class_q_c_p_layout_element.html#af61c70354d1275778d68206b2a1b2d36">QCPLayoutElement::mAutoMargins</a></div><div class="ttdeci">QCP::MarginSides mAutoMargins</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01319">qcustomplot.h:1319</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a52a21c7cbe086cd587c955cfe6e25e3b" name="a52a21c7cbe086cd587c955cfe6e25e3b"></a>
@@ -602,6 +724,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#af710c50530e370539a4439d6c4db9090">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20610">20610</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20611</span>{</div>
+<div class="line"><span class="lineno">20612</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2c0b15b071e1f93006b48b5be022a631">mGradientImageInvalidated</a>)</div>
+<div class="line"><span class="lineno">20613</span>    <a class="code hl_function" href="#a73754cab312aeaddea1bfcc67cc079ac">updateGradientImage</a>();</div>
+<div class="line"><span class="lineno">20614</span>  </div>
+<div class="line"><span class="lineno">20615</span>  <span class="keywordtype">bool</span> mirrorHorz = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">20616</span>  <span class="keywordtype">bool</span> mirrorVert = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">20617</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#a2efbc90fd31898fe05d2b74a8422b1d5">mColorAxis</a>)</div>
+<div class="line"><span class="lineno">20618</span>  {</div>
+<div class="line"><span class="lineno">20619</span>    mirrorHorz = <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#a2efbc90fd31898fe05d2b74a8422b1d5">mColorAxis</a>.data()-&gt;rangeReversed() &amp;&amp; (<a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_scale.html#a85d7e286fbfc0c04c4b480aff3cb66fb">type</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a> || <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_scale.html#a85d7e286fbfc0c04c4b480aff3cb66fb">type</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a>);</div>
+<div class="line"><span class="lineno">20620</span>    mirrorVert = <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#a2efbc90fd31898fe05d2b74a8422b1d5">mColorAxis</a>.data()-&gt;rangeReversed() &amp;&amp; (<a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_scale.html#a85d7e286fbfc0c04c4b480aff3cb66fb">type</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aaf84aa6cac6fb6099f54a2cbf7546b730">QCPAxis::atLeft</a> || <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_function" href="class_q_c_p_color_scale.html#a85d7e286fbfc0c04c4b480aff3cb66fb">type</a>() == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aadf5509f7d29199ef2f263b1dd224b345">QCPAxis::atRight</a>);</div>
+<div class="line"><span class="lineno">20621</span>  }</div>
+<div class="line"><span class="lineno">20622</span>  </div>
+<div class="line"><span class="lineno">20623</span>  painter-&gt;drawImage(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().adjusted(0, -1, 0, -1), <a class="code hl_variable" href="#ad4f7c8ee1c6012d9950870811773119c">mGradientImage</a>.mirrored(mirrorHorz, mirrorVert));</div>
+<div class="line"><span class="lineno">20624</span>  <a class="code hl_function" href="class_q_c_p_axis_rect.html#af710c50530e370539a4439d6c4db9090">QCPAxisRect::draw</a>(painter);</div>
+<div class="line"><span class="lineno">20625</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_af710c50530e370539a4439d6c4db9090"><div class="ttname"><a href="class_q_c_p_axis_rect.html#af710c50530e370539a4439d6c4db9090">QCPAxisRect::draw</a></div><div class="ttdeci">virtual void draw(QCPPainter *painter) Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18036">qcustomplot.cpp:18036</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_axis_rect_private_html_a73754cab312aeaddea1bfcc67cc079ac"><div class="ttname"><a href="#a73754cab312aeaddea1bfcc67cc079ac">QCPColorScaleAxisRectPrivate::updateGradientImage</a></div><div class="ttdeci">void updateGradientImage()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l20632">qcustomplot.cpp:20632</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_axis_rect_private_html_ad4f7c8ee1c6012d9950870811773119c"><div class="ttname"><a href="#ad4f7c8ee1c6012d9950870811773119c">QCPColorScaleAxisRectPrivate::mGradientImage</a></div><div class="ttdeci">QImage mGradientImage</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05363">qcustomplot.h:5363</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_html_a2efbc90fd31898fe05d2b74a8422b1d5"><div class="ttname"><a href="class_q_c_p_color_scale.html#a2efbc90fd31898fe05d2b74a8422b1d5">QCPColorScale::mColorAxis</a></div><div class="ttdeci">QPointer&lt; QCPAxis &gt; mColorAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05440">qcustomplot.h:5440</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_html_a85d7e286fbfc0c04c4b480aff3cb66fb"><div class="ttname"><a href="class_q_c_p_color_scale.html#a85d7e286fbfc0c04c4b480aff3cb66fb">QCPColorScale::type</a></div><div class="ttdeci">QCPAxis::AxisType type() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05399">qcustomplot.h:5399</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a208effccfe2cca4a0eaf9393e60f2dd4"><div class="ttname"><a href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">QCPLayoutElement::rect</a></div><div class="ttdeci">QRect rect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01280">qcustomplot.h:1280</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9cd27ad8c5cfb49aefd9dbb30def4beb" name="a9cd27ad8c5cfb49aefd9dbb30def4beb"></a>
@@ -637,6 +782,84 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#a9cd27ad8c5cfb49aefd9dbb30def4beb">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05029">5029</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">18577</span>{</div>
+<div class="line"><span class="lineno">18578</span>  Q_UNUSED(startPos)</div>
+<div class="line"><span class="lineno">18579</span>  <span class="comment">// Mouse range dragging interaction:</span></div>
+<div class="line"><span class="lineno">18580</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab49a6698194cf0e9e38a1d734c0888a8">mDragging</a> &amp;&amp; <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a2c78c5fd2943c148ab76652801d3f2dc">interactions</a>().testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a2c4432b9aceafb94000be8d1b589ef18">QCP::iRangeDrag</a>))</div>
+<div class="line"><span class="lineno">18581</span>  {</div>
+<div class="line"><span class="lineno">18582</span>    </div>
+<div class="line"><span class="lineno">18583</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#aa9f107f66ca3469ad50ee6cea7c9e237">mRangeDrag</a>.testFlag(Qt::Horizontal))</div>
+<div class="line"><span class="lineno">18584</span>    {</div>
+<div class="line"><span class="lineno">18585</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_q_c_p_axis_rect.html#abd4f1d854b41a9c6730f3a3d605c42af">mRangeDragHorzAxis</a>.size(); ++i)</div>
+<div class="line"><span class="lineno">18586</span>      {</div>
+<div class="line"><span class="lineno">18587</span>        <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *ax = <a class="code hl_variable" href="class_q_c_p_axis_rect.html#abd4f1d854b41a9c6730f3a3d605c42af">mRangeDragHorzAxis</a>.at(i).data();</div>
+<div class="line"><span class="lineno">18588</span>        <span class="keywordflow">if</span> (!ax)</div>
+<div class="line"><span class="lineno">18589</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">18590</span>        <span class="keywordflow">if</span> (i &gt;= <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.size())</div>
+<div class="line"><span class="lineno">18591</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18592</span>        <span class="keywordflow">if</span> (ax-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#ad706039549cbbbec5fcb2baf7894e04d">mScaleType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a>)</div>
+<div class="line"><span class="lineno">18593</span>        {</div>
+<div class="line"><span class="lineno">18594</span>          <span class="keywordtype">double</span> diff = ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(startPos.x()) - ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(event-&gt;pos().x());</div>
+<div class="line"><span class="lineno">18595</span>          ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">setRange</a>(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.at(i).lower+diff, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.at(i).upper+diff);</div>
+<div class="line"><span class="lineno">18596</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ax-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#ad706039549cbbbec5fcb2baf7894e04d">mScaleType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>)</div>
+<div class="line"><span class="lineno">18597</span>        {</div>
+<div class="line"><span class="lineno">18598</span>          <span class="keywordtype">double</span> diff = ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(startPos.x()) / ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(event-&gt;pos().x());</div>
+<div class="line"><span class="lineno">18599</span>          ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">setRange</a>(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.at(i).lower*diff, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.at(i).upper*diff);</div>
+<div class="line"><span class="lineno">18600</span>        }</div>
+<div class="line"><span class="lineno">18601</span>      }</div>
+<div class="line"><span class="lineno">18602</span>    }</div>
+<div class="line"><span class="lineno">18603</span>    </div>
+<div class="line"><span class="lineno">18604</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#aa9f107f66ca3469ad50ee6cea7c9e237">mRangeDrag</a>.testFlag(Qt::Vertical))</div>
+<div class="line"><span class="lineno">18605</span>    {</div>
+<div class="line"><span class="lineno">18606</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a3b0a86e5bb136a458d7bc20773e45853">mRangeDragVertAxis</a>.size(); ++i)</div>
+<div class="line"><span class="lineno">18607</span>      {</div>
+<div class="line"><span class="lineno">18608</span>        <a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *ax = <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a3b0a86e5bb136a458d7bc20773e45853">mRangeDragVertAxis</a>.at(i).data();</div>
+<div class="line"><span class="lineno">18609</span>        <span class="keywordflow">if</span> (!ax)</div>
+<div class="line"><span class="lineno">18610</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">18611</span>        <span class="keywordflow">if</span> (i &gt;= <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.size())</div>
+<div class="line"><span class="lineno">18612</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18613</span>        <span class="keywordflow">if</span> (ax-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#ad706039549cbbbec5fcb2baf7894e04d">mScaleType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a>)</div>
+<div class="line"><span class="lineno">18614</span>        {</div>
+<div class="line"><span class="lineno">18615</span>          <span class="keywordtype">double</span> diff = ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(startPos.y()) - ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(event-&gt;pos().y());</div>
+<div class="line"><span class="lineno">18616</span>          ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">setRange</a>(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.at(i).lower+diff, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.at(i).upper+diff);</div>
+<div class="line"><span class="lineno">18617</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ax-&gt;<a class="code hl_variable" href="class_q_c_p_axis.html#ad706039549cbbbec5fcb2baf7894e04d">mScaleType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a>)</div>
+<div class="line"><span class="lineno">18618</span>        {</div>
+<div class="line"><span class="lineno">18619</span>          <span class="keywordtype">double</span> diff = ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(startPos.y()) / ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(event-&gt;pos().y());</div>
+<div class="line"><span class="lineno">18620</span>          ax-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">setRange</a>(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.at(i).lower*diff, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.at(i).upper*diff);</div>
+<div class="line"><span class="lineno">18621</span>        }</div>
+<div class="line"><span class="lineno">18622</span>      }</div>
+<div class="line"><span class="lineno">18623</span>    }</div>
+<div class="line"><span class="lineno">18624</span>    </div>
+<div class="line"><span class="lineno">18625</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#aa9f107f66ca3469ad50ee6cea7c9e237">mRangeDrag</a> != 0) <span class="comment">// if either vertical or horizontal drag was enabled, do a replot</span></div>
+<div class="line"><span class="lineno">18626</span>    {</div>
+<div class="line"><span class="lineno">18627</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aca3f01f903fb250a3dd27104d92830be">noAntialiasingOnDrag</a>())</div>
+<div class="line"><span class="lineno">18628</span>        <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#ae10d685b5eabea2999fb8775ca173c24">setNotAntialiasedElements</a>(<a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0caa897c232a0ffc8368e7c100ffc59ef31">QCP::aeAll</a>);</div>
+<div class="line"><span class="lineno">18629</span>      <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aa4bfe7d70dbe67e81d877819b75ab9af">replot</a>(<a class="code hl_enumvalue" href="class_q_custom_plot.html#a45d61392d13042e712a956d27762aa39a019650c6ddf308f97e811fbfff207a8f">QCustomPlot::rpQueuedReplot</a>);</div>
+<div class="line"><span class="lineno">18630</span>    }</div>
+<div class="line"><span class="lineno">18631</span>    </div>
+<div class="line"><span class="lineno">18632</span>  }</div>
+<div class="line"><span class="lineno">18633</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0abf5b785ad976618816dc6f79b73216d4">QCPAxis::stLogarithmic</a></div><div class="ttdeci">@ stLogarithmic</div><div class="ttdoc">Logarithmic scaling with correspondingly transformed axis coordinates (possibly also setTicker to a Q...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02196">qcustomplot.h:2195</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6"><div class="ttname"><a href="class_q_c_p_axis.html#a36d8e8658dbaa179bf2aeb973db2d6f0aff6e30a11a828bc850caffab0ff994f6">QCPAxis::stLinear</a></div><div class="ttdeci">@ stLinear</div><div class="ttdoc">Linear scaling.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02195">qcustomplot.h:2194</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a536ef8f624cac59b6b6fdcb495723c57"><div class="ttname"><a href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">QCPAxis::pixelToCoord</a></div><div class="ttdeci">double pixelToCoord(double value) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09266">qcustomplot.cpp:9266</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_ad706039549cbbbec5fcb2baf7894e04d"><div class="ttname"><a href="class_q_c_p_axis.html#ad706039549cbbbec5fcb2baf7894e04d">QCPAxis::mScaleType</a></div><div class="ttdeci">ScaleType mScaleType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l02369">qcustomplot.h:2369</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_html_aebdfea5d44c3a0ad2b4700cd4d25b641"><div class="ttname"><a href="class_q_c_p_axis.html#aebdfea5d44c3a0ad2b4700cd4d25b641">QCPAxis::setRange</a></div><div class="ttdeci">Q_SLOT void setRange(const QCPRange &amp;range)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l08390">qcustomplot.cpp:8390</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a274aef08c4de084a3f26c3e92fac3a79"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">QCPAxisRect::mDragStartHorzRange</a></div><div class="ttdeci">QList&lt; QCPRange &gt; mDragStartHorzRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05017">qcustomplot.h:5017</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a3b0a86e5bb136a458d7bc20773e45853"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a3b0a86e5bb136a458d7bc20773e45853">QCPAxisRect::mRangeDragVertAxis</a></div><div class="ttdeci">QList&lt; QPointer&lt; QCPAxis &gt; &gt; mRangeDragVertAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05012">qcustomplot.h:5012</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_aa9f107f66ca3469ad50ee6cea7c9e237"><div class="ttname"><a href="class_q_c_p_axis_rect.html#aa9f107f66ca3469ad50ee6cea7c9e237">QCPAxisRect::mRangeDrag</a></div><div class="ttdeci">Qt::Orientations mRangeDrag</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05011">qcustomplot.h:5011</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_ab362ee8f71a156d812a1ea793a1e42cb"><div class="ttname"><a href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">QCPAxisRect::mDragStartVertRange</a></div><div class="ttdeci">QList&lt; QCPRange &gt; mDragStartVertRange</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05017">qcustomplot.h:5017</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_ab49a6698194cf0e9e38a1d734c0888a8"><div class="ttname"><a href="class_q_c_p_axis_rect.html#ab49a6698194cf0e9e38a1d734c0888a8">QCPAxisRect::mDragging</a></div><div class="ttdeci">bool mDragging</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05019">qcustomplot.h:5019</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_abd4f1d854b41a9c6730f3a3d605c42af"><div class="ttname"><a href="class_q_c_p_axis_rect.html#abd4f1d854b41a9c6730f3a3d605c42af">QCPAxisRect::mRangeDragHorzAxis</a></div><div class="ttdeci">QList&lt; QPointer&lt; QCPAxis &gt; &gt; mRangeDragHorzAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05012">qcustomplot.h:5012</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a2c78c5fd2943c148ab76652801d3f2dc"><div class="ttname"><a href="class_q_custom_plot.html#a2c78c5fd2943c148ab76652801d3f2dc">QCustomPlot::interactions</a></div><div class="ttdeci">const QCP::Interactions interactions() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03841">qcustomplot.h:3841</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a45d61392d13042e712a956d27762aa39a019650c6ddf308f97e811fbfff207a8f"><div class="ttname"><a href="class_q_custom_plot.html#a45d61392d13042e712a956d27762aa39a019650c6ddf308f97e811fbfff207a8f">QCustomPlot::rpQueuedReplot</a></div><div class="ttdeci">@ rpQueuedReplot</div><div class="ttdoc">Queues the entire replot for the next event loop iteration. This way multiple redundant replots can b...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03825">qcustomplot.h:3824</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_aa4bfe7d70dbe67e81d877819b75ab9af"><div class="ttname"><a href="class_q_custom_plot.html#aa4bfe7d70dbe67e81d877819b75ab9af">QCustomPlot::replot</a></div><div class="ttdeci">Q_SLOT void replot(QCustomPlot::RefreshPriority refreshPriority=QCustomPlot::rpRefreshHint)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l15119">qcustomplot.cpp:15119</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_aca3f01f903fb250a3dd27104d92830be"><div class="ttname"><a href="class_q_custom_plot.html#aca3f01f903fb250a3dd27104d92830be">QCustomPlot::noAntialiasingOnDrag</a></div><div class="ttdeci">bool noAntialiasingOnDrag() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03843">qcustomplot.h:3843</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_ae10d685b5eabea2999fb8775ca173c24"><div class="ttname"><a href="class_q_custom_plot.html#ae10d685b5eabea2999fb8775ca173c24">QCustomPlot::setNotAntialiasedElements</a></div><div class="ttdeci">void setNotAntialiasedElements(const QCP::AntialiasedElements &amp;notAntialiasedElements)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l13775">qcustomplot.cpp:13775</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a2ad6bb6281c7c2d593d4277b44c2b037a2c4432b9aceafb94000be8d1b589ef18"><div class="ttname"><a href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a2c4432b9aceafb94000be8d1b589ef18">QCP::iRangeDrag</a></div><div class="ttdeci">@ iRangeDrag</div><div class="ttdoc">0x001 Axis ranges are draggable (see QCPAxisRect::setRangeDrag, QCPAxisRect::setRangeDragAxes)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00283">qcustomplot.h:282</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0caa897c232a0ffc8368e7c100ffc59ef31"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0caa897c232a0ffc8368e7c100ffc59ef31">QCP::aeAll</a></div><div class="ttdeci">@ aeAll</div><div class="ttdoc">0xFFFF All elements</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00256">qcustomplot.h:255</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa9a7c807eaa4666870ac94aa6abc4dde" name="aa9a7c807eaa4666870ac94aa6abc4dde"></a>
@@ -674,6 +897,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#aa9a7c807eaa4666870ac94aa6abc4dde">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05028">5028</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">18545</span>{</div>
+<div class="line"><span class="lineno">18546</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno">18547</span>  <span class="keywordflow">if</span> (event-&gt;buttons() &amp; Qt::LeftButton)</div>
+<div class="line"><span class="lineno">18548</span>  {</div>
+<div class="line"><span class="lineno">18549</span>    <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab49a6698194cf0e9e38a1d734c0888a8">mDragging</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">18550</span>    <span class="comment">// initialize antialiasing backup in case we start dragging:</span></div>
+<div class="line"><span class="lineno">18551</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aca3f01f903fb250a3dd27104d92830be">noAntialiasingOnDrag</a>())</div>
+<div class="line"><span class="lineno">18552</span>    {</div>
+<div class="line"><span class="lineno">18553</span>      <a class="code hl_variable" href="class_q_c_p_axis_rect.html#aa4a24f76360cfebe1bcf17a77fa7521b">mAADragBackup</a> = <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a631762eb183aceecee73d30e108641ee">antialiasedElements</a>();</div>
+<div class="line"><span class="lineno">18554</span>      <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a6fcb12e052e276d57efbb128be31d6f5">mNotAADragBackup</a> = <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a75571bc5b2167e83def132fc993091b3">notAntialiasedElements</a>();</div>
+<div class="line"><span class="lineno">18555</span>    }</div>
+<div class="line"><span class="lineno">18556</span>    <span class="comment">// Mouse range dragging interaction:</span></div>
+<div class="line"><span class="lineno">18557</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a2c78c5fd2943c148ab76652801d3f2dc">interactions</a>().testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a2c4432b9aceafb94000be8d1b589ef18">QCP::iRangeDrag</a>))</div>
+<div class="line"><span class="lineno">18558</span>    {</div>
+<div class="line"><span class="lineno">18559</span>      <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.clear();</div>
+<div class="line"><span class="lineno">18560</span>      <span class="keywordflow">foreach</span> (QPointer&lt;QCPAxis&gt; <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#abd4f1d854b41a9c6730f3a3d605c42af">mRangeDragHorzAxis</a>)</div>
+<div class="line"><span class="lineno">18561</span>        <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a274aef08c4de084a3f26c3e92fac3a79">mDragStartHorzRange</a>.append(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>.isNull() ? <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>() : <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;range());</div>
+<div class="line"><span class="lineno">18562</span>      <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.clear();</div>
+<div class="line"><span class="lineno">18563</span>      <span class="keywordflow">foreach</span> (QPointer&lt;QCPAxis&gt; <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a3b0a86e5bb136a458d7bc20773e45853">mRangeDragVertAxis</a>)</div>
+<div class="line"><span class="lineno">18564</span>        <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab362ee8f71a156d812a1ea793a1e42cb">mDragStartVertRange</a>.append(<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>.isNull() ? <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>() : <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;range());</div>
+<div class="line"><span class="lineno">18565</span>    }</div>
+<div class="line"><span class="lineno">18566</span>  }</div>
+<div class="line"><span class="lineno">18567</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a6fcb12e052e276d57efbb128be31d6f5"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a6fcb12e052e276d57efbb128be31d6f5">QCPAxisRect::mNotAADragBackup</a></div><div class="ttdeci">QCP::AntialiasedElements mNotAADragBackup</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05018">qcustomplot.h:5018</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_aa4a24f76360cfebe1bcf17a77fa7521b"><div class="ttname"><a href="class_q_c_p_axis_rect.html#aa4a24f76360cfebe1bcf17a77fa7521b">QCPAxisRect::mAADragBackup</a></div><div class="ttdeci">QCP::AntialiasedElements mAADragBackup</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05018">qcustomplot.h:5018</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a631762eb183aceecee73d30e108641ee"><div class="ttname"><a href="class_q_custom_plot.html#a631762eb183aceecee73d30e108641ee">QCustomPlot::antialiasedElements</a></div><div class="ttdeci">QCP::AntialiasedElements antialiasedElements() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03838">qcustomplot.h:3838</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a75571bc5b2167e83def132fc993091b3"><div class="ttname"><a href="class_q_custom_plot.html#a75571bc5b2167e83def132fc993091b3">QCustomPlot::notAntialiasedElements</a></div><div class="ttdeci">QCP::AntialiasedElements notAntialiasedElements() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03839">qcustomplot.h:3839</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6c89b988d3a0b93c0878f0ebdb5037f4" name="a6c89b988d3a0b93c0878f0ebdb5037f4"></a>
@@ -709,6 +961,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#a6c89b988d3a0b93c0878f0ebdb5037f4">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05030">5030</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">18637</span>{</div>
+<div class="line"><span class="lineno">18638</span>  Q_UNUSED(event)</div>
+<div class="line"><span class="lineno">18639</span>  Q_UNUSED(startPos)</div>
+<div class="line"><span class="lineno">18640</span>  <a class="code hl_variable" href="class_q_c_p_axis_rect.html#ab49a6698194cf0e9e38a1d734c0888a8">mDragging</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">18641</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aca3f01f903fb250a3dd27104d92830be">noAntialiasingOnDrag</a>())</div>
+<div class="line"><span class="lineno">18642</span>  {</div>
+<div class="line"><span class="lineno">18643</span>    <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#af6f91e5eab1be85f67c556e98c3745e8">setAntialiasedElements</a>(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#aa4a24f76360cfebe1bcf17a77fa7521b">mAADragBackup</a>);</div>
+<div class="line"><span class="lineno">18644</span>    <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#ae10d685b5eabea2999fb8775ca173c24">setNotAntialiasedElements</a>(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a6fcb12e052e276d57efbb128be31d6f5">mNotAADragBackup</a>);</div>
+<div class="line"><span class="lineno">18645</span>  }</div>
+<div class="line"><span class="lineno">18646</span>}</div>
+<div class="ttc" id="aclass_q_custom_plot_html_af6f91e5eab1be85f67c556e98c3745e8"><div class="ttname"><a href="class_q_custom_plot.html#af6f91e5eab1be85f67c556e98c3745e8">QCustomPlot::setAntialiasedElements</a></div><div class="ttdeci">void setAntialiasedElements(const QCP::AntialiasedElements &amp;antialiasedElements)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l13729">qcustomplot.cpp:13729</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="add049d464b9ef2ccdc638adc4ccb4aca" name="add049d464b9ef2ccdc638adc4ccb4aca"></a>
@@ -739,6 +1004,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#add049d464b9ef2ccdc638adc4ccb4aca">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05000">5000</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">17993</span>{</div>
+<div class="line"><span class="lineno">17994</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a929c2ec62e0e0e1d8418eaa802e2af9b">QCPLayoutElement::update</a>(phase);</div>
+<div class="line"><span class="lineno">17995</span>  </div>
+<div class="line"><span class="lineno">17996</span>  <span class="keywordflow">switch</span> (phase)</div>
+<div class="line"><span class="lineno">17997</span>  {</div>
+<div class="line"><span class="lineno">17998</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3">upPreparation</a>:</div>
+<div class="line"><span class="lineno">17999</span>    {</div>
+<div class="line"><span class="lineno">18000</span>      <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_axis.html">QCPAxis</a> *<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>, <a class="code hl_function" href="class_q_c_p_axis_rect.html#a11657b8faebe9677180860e8057ede26">axes</a>())</div>
+<div class="line"><span class="lineno">18001</span>        <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a57d9e961bae7d62f5b4e1f143e660c78">setupTickVectors</a>();</div>
+<div class="line"><span class="lineno">18002</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18003</span>    }</div>
+<div class="line"><span class="lineno">18004</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_q_c_p_layout_element.html#a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045">upLayout</a>:</div>
+<div class="line"><span class="lineno">18005</span>    {</div>
+<div class="line"><span class="lineno">18006</span>      <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a255240399e0fd24baad80cbbe46f698a">mInsetLayout</a>-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a38975ea13e36de8e53391ce41d94bc0f">setOuterRect</a>(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>());</div>
+<div class="line"><span class="lineno">18007</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18008</span>    }</div>
+<div class="line"><span class="lineno">18009</span>    <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18010</span>  }</div>
+<div class="line"><span class="lineno">18011</span>  </div>
+<div class="line"><span class="lineno">18012</span>  <span class="comment">// pass update call on to inset layout (doesn&#39;t happen automatically, because QCPAxisRect doesn&#39;t derive from QCPLayout):</span></div>
+<div class="line"><span class="lineno">18013</span>  <a class="code hl_variable" href="class_q_c_p_axis_rect.html#a255240399e0fd24baad80cbbe46f698a">mInsetLayout</a>-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#a48ecc9c98ea90b547c3e27a931a8f7bd">update</a>(phase);</div>
+<div class="line"><span class="lineno">18014</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a57d9e961bae7d62f5b4e1f143e660c78"><div class="ttname"><a href="class_q_c_p_axis.html#a57d9e961bae7d62f5b4e1f143e660c78">QCPAxis::setupTickVectors</a></div><div class="ttdeci">void setupTickVectors()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09735">qcustomplot.cpp:9735</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a11657b8faebe9677180860e8057ede26"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a11657b8faebe9677180860e8057ede26">QCPAxisRect::axes</a></div><div class="ttdeci">QList&lt; QCPAxis * &gt; axes() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l17663">qcustomplot.cpp:17663</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a255240399e0fd24baad80cbbe46f698a"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a255240399e0fd24baad80cbbe46f698a">QCPAxisRect::mInsetLayout</a></div><div class="ttdeci">QCPLayoutInset * mInsetLayout</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05010">qcustomplot.h:5010</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045"><div class="ttname"><a href="class_q_c_p_layout_element.html#a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045">QCPLayoutElement::upLayout</a></div><div class="ttdeci">@ upLayout</div><div class="ttdoc">Final phase in which the layout system places the rects of the elements.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01259">qcustomplot.h:1258</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3"><div class="ttname"><a href="class_q_c_p_layout_element.html#a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3">QCPLayoutElement::upPreparation</a></div><div class="ttdeci">@ upPreparation</div><div class="ttdoc">Phase used for any type of preparation that needs to be done before margin calculation and layout.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01257">qcustomplot.h:1256</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a38975ea13e36de8e53391ce41d94bc0f"><div class="ttname"><a href="class_q_c_p_layout_element.html#a38975ea13e36de8e53391ce41d94bc0f">QCPLayoutElement::setOuterRect</a></div><div class="ttdeci">void setOuterRect(const QRect &amp;rect)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03241">qcustomplot.cpp:3241</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a929c2ec62e0e0e1d8418eaa802e2af9b"><div class="ttname"><a href="class_q_c_p_layout_element.html#a929c2ec62e0e0e1d8418eaa802e2af9b">QCPLayoutElement::update</a></div><div class="ttdeci">virtual void update(UpdatePhase phase)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03437">qcustomplot.cpp:3437</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a48ecc9c98ea90b547c3e27a931a8f7bd"><div class="ttname"><a href="class_q_c_p_layout.html#a48ecc9c98ea90b547c3e27a931a8f7bd">QCPLayout::update</a></div><div class="ttdeci">virtual void update(UpdatePhase phase) Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03680">qcustomplot.cpp:3680</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a73754cab312aeaddea1bfcc67cc079ac" name="a73754cab312aeaddea1bfcc67cc079ac"></a>
@@ -764,6 +1061,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l20632">20632</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">20633</span>{</div>
+<div class="line"><span class="lineno">20634</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().isEmpty())</div>
+<div class="line"><span class="lineno">20635</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">20636</span>  </div>
+<div class="line"><span class="lineno">20637</span>  <span class="keyword">const</span> QImage::Format format = QImage::Format_ARGB32_Premultiplied;</div>
+<div class="line"><span class="lineno">20638</span>  <span class="keywordtype">int</span> n = <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#ae195a385032066b5c46cc3301af58922">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#ac4b9d7034fc3b6c76318b05075367090">levelCount</a>();</div>
+<div class="line"><span class="lineno">20639</span>  <span class="keywordtype">int</span> w, h;</div>
+<div class="line"><span class="lineno">20640</span>  QVector&lt;double&gt; data(n);</div>
+<div class="line"><span class="lineno">20641</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;n; ++i)</div>
+<div class="line"><span class="lineno">20642</span>    data[i] = i;</div>
+<div class="line"><span class="lineno">20643</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#a7d47ed4ab76f38e50164e9d77fe33789">mType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aa220d68888516b6c3b493d144f1ba438f">QCPAxis::atBottom</a> || <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#a7d47ed4ab76f38e50164e9d77fe33789">mType</a> == <a class="code hl_enumvalue" href="class_q_c_p_axis.html#ae2bcc1728b382f10f064612b368bc18aac0ece2b680d3f545e701f75af1655977">QCPAxis::atTop</a>)</div>
+<div class="line"><span class="lineno">20644</span>  {</div>
+<div class="line"><span class="lineno">20645</span>    w = n;</div>
+<div class="line"><span class="lineno">20646</span>    h = <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().height();</div>
+<div class="line"><span class="lineno">20647</span>    <a class="code hl_variable" href="#ad4f7c8ee1c6012d9950870811773119c">mGradientImage</a> = QImage(w, h, format);</div>
+<div class="line"><span class="lineno">20648</span>    QVector&lt;QRgb*&gt; pixels;</div>
+<div class="line"><span class="lineno">20649</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y=0; y&lt;h; ++y)</div>
+<div class="line"><span class="lineno">20650</span>      pixels.append(<span class="keyword">reinterpret_cast&lt;</span>QRgb*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad4f7c8ee1c6012d9950870811773119c">mGradientImage</a>.scanLine(y)));</div>
+<div class="line"><span class="lineno">20651</span>    <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#ae195a385032066b5c46cc3301af58922">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">colorize</a>(data.constData(), <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(0, n-1), pixels.first(), n);</div>
+<div class="line"><span class="lineno">20652</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y=1; y&lt;h; ++y)</div>
+<div class="line"><span class="lineno">20653</span>      memcpy(pixels.at(y), pixels.first(), <span class="keywordtype">size_t</span>(n)*<span class="keyword">sizeof</span>(QRgb));</div>
+<div class="line"><span class="lineno">20654</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">20655</span>  {</div>
+<div class="line"><span class="lineno">20656</span>    w = <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().width();</div>
+<div class="line"><span class="lineno">20657</span>    h = n;</div>
+<div class="line"><span class="lineno">20658</span>    <a class="code hl_variable" href="#ad4f7c8ee1c6012d9950870811773119c">mGradientImage</a> = QImage(w, h, format);</div>
+<div class="line"><span class="lineno">20659</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y=0; y&lt;h; ++y)</div>
+<div class="line"><span class="lineno">20660</span>    {</div>
+<div class="line"><span class="lineno">20661</span>      QRgb *pixels = <span class="keyword">reinterpret_cast&lt;</span>QRgb*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad4f7c8ee1c6012d9950870811773119c">mGradientImage</a>.scanLine(y));</div>
+<div class="line"><span class="lineno">20662</span>      <span class="keyword">const</span> QRgb lineColor = <a class="code hl_variable" href="#a311c73f51a4cb0b556388197833cf099">mParentColorScale</a>-&gt;<a class="code hl_variable" href="class_q_c_p_color_scale.html#ae195a385032066b5c46cc3301af58922">mGradient</a>.<a class="code hl_function" href="class_q_c_p_color_gradient.html#a0599545c859268b025d2060dea741cea">color</a>(data[h-1-y], <a class="code hl_class" href="class_q_c_p_range.html">QCPRange</a>(0, n-1));</div>
+<div class="line"><span class="lineno">20663</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x=0; x&lt;w; ++x)</div>
+<div class="line"><span class="lineno">20664</span>        pixels[x] = lineColor;</div>
+<div class="line"><span class="lineno">20665</span>    }</div>
+<div class="line"><span class="lineno">20666</span>  }</div>
+<div class="line"><span class="lineno">20667</span>  <a class="code hl_variable" href="#a2c0b15b071e1f93006b48b5be022a631">mGradientImageInvalidated</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">20668</span>}</div>
+<div class="ttc" id="aclass_q_c_p_color_gradient_html_a0599545c859268b025d2060dea741cea"><div class="ttname"><a href="class_q_c_p_color_gradient.html#a0599545c859268b025d2060dea741cea">QCPColorGradient::color</a></div><div class="ttdeci">QRgb color(double position, const QCPRange &amp;range, bool logarithmic=false)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l16839">qcustomplot.cpp:16839</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_gradient_html_aaf423ceb943e177b0ed2c48c811d83dc"><div class="ttname"><a href="class_q_c_p_color_gradient.html#aaf423ceb943e177b0ed2c48c811d83dc">QCPColorGradient::colorize</a></div><div class="ttdeci">void colorize(const double *data, const QCPRange &amp;range, QRgb *scanLine, int n, int dataIndexFactor=1, bool logarithmic=false)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l16710">qcustomplot.cpp:16710</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_gradient_html_ac4b9d7034fc3b6c76318b05075367090"><div class="ttname"><a href="class_q_c_p_color_gradient.html#ac4b9d7034fc3b6c76318b05075367090">QCPColorGradient::levelCount</a></div><div class="ttdeci">int levelCount() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l04804">qcustomplot.h:4804</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_html_a7d47ed4ab76f38e50164e9d77fe33789"><div class="ttname"><a href="class_q_c_p_color_scale.html#a7d47ed4ab76f38e50164e9d77fe33789">QCPColorScale::mType</a></div><div class="ttdeci">QCPAxis::AxisType mType</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05432">qcustomplot.h:5432</a></div></div>
+<div class="ttc" id="aclass_q_c_p_color_scale_html_ae195a385032066b5c46cc3301af58922"><div class="ttname"><a href="class_q_c_p_color_scale.html#ae195a385032066b5c46cc3301af58922">QCPColorScale::mGradient</a></div><div class="ttdeci">QCPColorGradient mGradient</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05435">qcustomplot.h:5435</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a93eeaa0c127d6d6fe8171b2455080262" name="a93eeaa0c127d6d6fe8171b2455080262"></a>
@@ -796,6 +1136,57 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_axis_rect.html#a93eeaa0c127d6d6fe8171b2455080262">QCPAxisRect</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05031">5031</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">18663</span>{</div>
+<div class="line"><span class="lineno">18664</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5, 0, 0)</span></div>
+<div class="line"><span class="lineno">18665</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> delta = <span class="keyword">event</span>-&gt;delta();</div>
+<div class="line"><span class="lineno">18666</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">18667</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> delta = <span class="keyword">event</span>-&gt;angleDelta().y();</div>
+<div class="line"><span class="lineno">18668</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">18669</span>  </div>
+<div class="line"><span class="lineno">18670</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5, 14, 0)</span></div>
+<div class="line"><span class="lineno">18671</span>  <span class="keyword">const</span> QPointF pos = <span class="keyword">event</span>-&gt;pos();</div>
+<div class="line"><span class="lineno">18672</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">18673</span>  <span class="keyword">const</span> QPointF pos = <span class="keyword">event</span>-&gt;position();</div>
+<div class="line"><span class="lineno">18674</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">18675</span>  </div>
+<div class="line"><span class="lineno">18676</span>  <span class="comment">// Mouse range zooming interaction:</span></div>
+<div class="line"><span class="lineno">18677</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a2c78c5fd2943c148ab76652801d3f2dc">interactions</a>().testFlag(<a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037abee1e94353525a636aeaf0ba32b72e14">QCP::iRangeZoom</a>))</div>
+<div class="line"><span class="lineno">18678</span>  {</div>
+<div class="line"><span class="lineno">18679</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a215eff671d48df2edccc36e7f976f28c">mRangeZoom</a> != 0)</div>
+<div class="line"><span class="lineno">18680</span>    {</div>
+<div class="line"><span class="lineno">18681</span>      <span class="keywordtype">double</span> factor;</div>
+<div class="line"><span class="lineno">18682</span>      <span class="keywordtype">double</span> wheelSteps = delta/120.0; <span class="comment">// a single step delta is +/-120 usually</span></div>
+<div class="line"><span class="lineno">18683</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a215eff671d48df2edccc36e7f976f28c">mRangeZoom</a>.testFlag(Qt::Horizontal))</div>
+<div class="line"><span class="lineno">18684</span>      {</div>
+<div class="line"><span class="lineno">18685</span>        factor = qPow(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#ad08d0250ed7b99de387d0ea6c7fd4dc1">mRangeZoomFactorHorz</a>, wheelSteps);</div>
+<div class="line"><span class="lineno">18686</span>        <span class="keywordflow">foreach</span> (QPointer&lt;QCPAxis&gt; <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#aa35eeb02f68b63f2069fcc80c9334b91">mRangeZoomHorzAxis</a>)</div>
+<div class="line"><span class="lineno">18687</span>        {</div>
+<div class="line"><span class="lineno">18688</span>          <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>.isNull())</div>
+<div class="line"><span class="lineno">18689</span>            <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a31d18ddf3a4f21ceb077db8ae5b69856">scaleRange</a>(factor, <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(pos.x()));</div>
+<div class="line"><span class="lineno">18690</span>        }</div>
+<div class="line"><span class="lineno">18691</span>      }</div>
+<div class="line"><span class="lineno">18692</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a215eff671d48df2edccc36e7f976f28c">mRangeZoom</a>.testFlag(Qt::Vertical))</div>
+<div class="line"><span class="lineno">18693</span>      {</div>
+<div class="line"><span class="lineno">18694</span>        factor = qPow(<a class="code hl_variable" href="class_q_c_p_axis_rect.html#a32f063629581d5bf82b12769940b34ad">mRangeZoomFactorVert</a>, wheelSteps);</div>
+<div class="line"><span class="lineno">18695</span>        <span class="keywordflow">foreach</span> (QPointer&lt;QCPAxis&gt; <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>, <a class="code hl_variable" href="class_q_c_p_axis_rect.html#aafb0e243294c158668499fd62cee057c">mRangeZoomVertAxis</a>)</div>
+<div class="line"><span class="lineno">18696</span>        {</div>
+<div class="line"><span class="lineno">18697</span>          <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>.isNull())</div>
+<div class="line"><span class="lineno">18698</span>            <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a31d18ddf3a4f21ceb077db8ae5b69856">scaleRange</a>(factor, <a class="code hl_function" href="class_q_c_p_axis_rect.html#a583ae4f6d78b601b732183f6cabecbe1">axis</a>-&gt;<a class="code hl_function" href="class_q_c_p_axis.html#a536ef8f624cac59b6b6fdcb495723c57">pixelToCoord</a>(pos.y()));</div>
+<div class="line"><span class="lineno">18699</span>        }</div>
+<div class="line"><span class="lineno">18700</span>      }</div>
+<div class="line"><span class="lineno">18701</span>      <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#aa4bfe7d70dbe67e81d877819b75ab9af">replot</a>();</div>
+<div class="line"><span class="lineno">18702</span>    }</div>
+<div class="line"><span class="lineno">18703</span>  }</div>
+<div class="line"><span class="lineno">18704</span>}</div>
+<div class="ttc" id="aclass_q_c_p_axis_html_a31d18ddf3a4f21ceb077db8ae5b69856"><div class="ttname"><a href="class_q_c_p_axis.html#a31d18ddf3a4f21ceb077db8ae5b69856">QCPAxis::scaleRange</a></div><div class="ttdeci">void scaleRange(double factor)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l09141">qcustomplot.cpp:9141</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a215eff671d48df2edccc36e7f976f28c"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a215eff671d48df2edccc36e7f976f28c">QCPAxisRect::mRangeZoom</a></div><div class="ttdeci">Qt::Orientations mRangeZoom</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05011">qcustomplot.h:5011</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_a32f063629581d5bf82b12769940b34ad"><div class="ttname"><a href="class_q_c_p_axis_rect.html#a32f063629581d5bf82b12769940b34ad">QCPAxisRect::mRangeZoomFactorVert</a></div><div class="ttdeci">double mRangeZoomFactorVert</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05014">qcustomplot.h:5014</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_aa35eeb02f68b63f2069fcc80c9334b91"><div class="ttname"><a href="class_q_c_p_axis_rect.html#aa35eeb02f68b63f2069fcc80c9334b91">QCPAxisRect::mRangeZoomHorzAxis</a></div><div class="ttdeci">QList&lt; QPointer&lt; QCPAxis &gt; &gt; mRangeZoomHorzAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05013">qcustomplot.h:5013</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_aafb0e243294c158668499fd62cee057c"><div class="ttname"><a href="class_q_c_p_axis_rect.html#aafb0e243294c158668499fd62cee057c">QCPAxisRect::mRangeZoomVertAxis</a></div><div class="ttdeci">QList&lt; QPointer&lt; QCPAxis &gt; &gt; mRangeZoomVertAxis</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05013">qcustomplot.h:5013</a></div></div>
+<div class="ttc" id="aclass_q_c_p_axis_rect_html_ad08d0250ed7b99de387d0ea6c7fd4dc1"><div class="ttname"><a href="class_q_c_p_axis_rect.html#ad08d0250ed7b99de387d0ea6c7fd4dc1">QCPAxisRect::mRangeZoomFactorHorz</a></div><div class="ttdeci">double mRangeZoomFactorHorz</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05014">qcustomplot.h:5014</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_a2ad6bb6281c7c2d593d4277b44c2b037abee1e94353525a636aeaf0ba32b72e14"><div class="ttname"><a href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037abee1e94353525a636aeaf0ba32b72e14">QCP::iRangeZoom</a></div><div class="ttdeci">@ iRangeZoom</div><div class="ttdoc">0x002 Axis ranges are zoomable with the mouse wheel (see QCPAxisRect::setRangeZoom,...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00284">qcustomplot.h:283</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -818,6 +1209,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05376">5376</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -842,6 +1235,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05363">5363</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a2c0b15b071e1f93006b48b5be022a631" name="a2c0b15b071e1f93006b48b5be022a631"></a>
@@ -863,6 +1258,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05364">5364</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -886,11 +1283,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05362">5362</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

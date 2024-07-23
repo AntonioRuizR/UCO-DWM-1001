@@ -373,6 +373,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Elements are added via <a class="el" href="#ad61529eb576af7f04dff94abb10c745a">addElement(QCPLayoutElement *element, Qt::Alignment alignment)</a> or <a class="el" href="#a8ff61fbee4a1f0ff45c398009d9f1e56">addElement(QCPLayoutElement *element, const QRectF &amp;rect)</a>. If the first method is used, the inset placement will default to <a class="el" href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">ipBorderAligned</a> and the element will be aligned according to the <em>alignment</em> parameter. The second method defaults to <a class="el" href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">ipFree</a> and allows placing elements at arbitrary position and size, defined by <em>rect</em>.</p>
 <p>The alignment or rect can be set via <a class="el" href="#a62882a4f9ad58bb0f53da12fde022abe">setInsetAlignment</a> or <a class="el" href="#aa487c8378a6f9533567a2e6430099dc3">setInsetRect</a>, respectively.</p>
 <p>This is the layout that every <a class="el" href="class_q_c_p_axis_rect.html" title="Holds multiple axes and arranges them in a rectangular shape.">QCPAxisRect</a> has as <a class="el" href="class_q_c_p_axis_rect.html#a949f803466619924c7018df4b511ae10">QCPAxisRect::insetLayout</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01472">1472</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a8b9e17d9a2768293d2a7d72f5e298192" name="a8b9e17d9a2768293d2a7d72f5e298192"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b9e17d9a2768293d2a7d72f5e298192">&#9670;&#160;</a></span>InsetPlacement</h2>
@@ -393,6 +395,13 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01479">1479</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1479</span>                      { <a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">ipFree</a>            </div>
+<div class="line"><span class="lineno"> 1480</span>                        ,<a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">ipBorderAligned</a>  </div>
+<div class="line"><span class="lineno"> 1481</span>                      };</div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e"><div class="ttname"><a href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">QCPLayoutInset::ipFree</a></div><div class="ttdeci">@ ipFree</div><div class="ttdoc">The element may be positioned/sized arbitrarily, see setInsetRect.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01480">qcustomplot.h:1479</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817"><div class="ttname"><a href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">QCPLayoutInset::ipBorderAligned</a></div><div class="ttdeci">@ ipBorderAligned</div><div class="ttdoc">The element is aligned to one of the layout sides, see setInsetAlignment.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01481">qcustomplot.h:1480</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -420,6 +429,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates an instance of <a class="el" href="class_q_c_p_layout_inset.html" title="A layout that places child elements aligned to the border or arbitrarily positioned.">QCPLayoutInset</a> and sets default values. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04888">4888</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4889</span>{</div>
+<div class="line"><span class="lineno"> 4890</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3726b9068ad31556ab60b714b5d0f9d3" name="a3726b9068ad31556ab60b714b5d0f9d3"></a>
@@ -445,6 +458,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04892">4892</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4893</span>{</div>
+<div class="line"><span class="lineno"> 4894</span>  <span class="comment">// clear all child layout elements. This is important because only the specific layouts know how</span></div>
+<div class="line"><span class="lineno"> 4895</span>  <span class="comment">// to handle removing elements (clear calls virtual removeAt method to do that).</span></div>
+<div class="line"><span class="lineno"> 4896</span>  <a class="code hl_function" href="class_q_c_p_layout.html#a02883bdf2769b5b227f0232dba1ac4ee">clear</a>();</div>
+<div class="line"><span class="lineno"> 4897</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a02883bdf2769b5b227f0232dba1ac4ee"><div class="ttname"><a href="class_q_c_p_layout.html#a02883bdf2769b5b227f0232dba1ac4ee">QCPLayout::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03777">qcustomplot.cpp:3777</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -470,6 +491,29 @@ Additional Inherited Members</h2></td></tr>
 <p><em>rect</em> is given in fractions of the whole inset layout rect. So an inset with rect (0, 0, 1, 1) will span the entire layout. An inset with rect (0.6, 0.1, 0.35, 0.35) will be in the top right corner of the layout, with 35% width and height of the parent layout.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad61529eb576af7f04dff94abb10c745a">addElement(QCPLayoutElement *element, Qt::Alignment alignment)</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05147">5147</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5148</span>{</div>
+<div class="line"><span class="lineno"> 5149</span>  <span class="keywordflow">if</span> (element)</div>
+<div class="line"><span class="lineno"> 5150</span>  {</div>
+<div class="line"><span class="lineno"> 5151</span>    <span class="keywordflow">if</span> (element-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a4efdcbde9d28f410e5ef166c9d691deb">layout</a>()) <span class="comment">// remove from old layout first</span></div>
+<div class="line"><span class="lineno"> 5152</span>      element-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a4efdcbde9d28f410e5ef166c9d691deb">layout</a>()-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#ad110be0de976cd8a817513a4a53d53db">take</a>(element);</div>
+<div class="line"><span class="lineno"> 5153</span>    <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.append(element);</div>
+<div class="line"><span class="lineno"> 5154</span>    <a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>.append(<a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">ipFree</a>);</div>
+<div class="line"><span class="lineno"> 5155</span>    <a class="code hl_variable" href="#a55e9b84c310136ff985a6544184ab64a">mInsetAlignment</a>.append(Qt::AlignRight|Qt::AlignTop);</div>
+<div class="line"><span class="lineno"> 5156</span>    <a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.append(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>);</div>
+<div class="line"><span class="lineno"> 5157</span>    <a class="code hl_function" href="class_q_c_p_layout.html#af6dbbc24156a808da29cd1ec031729a3">adoptElement</a>(element);</div>
+<div class="line"><span class="lineno"> 5158</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5159</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Can&#39;t add nullptr element&quot;</span>;</div>
+<div class="line"><span class="lineno"> 5160</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a208effccfe2cca4a0eaf9393e60f2dd4"><div class="ttname"><a href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">QCPLayoutElement::rect</a></div><div class="ttdeci">QRect rect() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01280">qcustomplot.h:1280</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a4efdcbde9d28f410e5ef166c9d691deb"><div class="ttname"><a href="class_q_c_p_layout_element.html#a4efdcbde9d28f410e5ef166c9d691deb">QCPLayoutElement::layout</a></div><div class="ttdeci">QCPLayout * layout() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01279">qcustomplot.h:1279</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_ad110be0de976cd8a817513a4a53d53db"><div class="ttname"><a href="class_q_c_p_layout.html#ad110be0de976cd8a817513a4a53d53db">QCPLayout::take</a></div><div class="ttdeci">virtual bool take(QCPLayoutElement *element)=0</div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_af6dbbc24156a808da29cd1ec031729a3"><div class="ttname"><a href="class_q_c_p_layout.html#af6dbbc24156a808da29cd1ec031729a3">QCPLayout::adoptElement</a></div><div class="ttdeci">void adoptElement(QCPLayoutElement *el)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03832">qcustomplot.cpp:3832</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a55e9b84c310136ff985a6544184ab64a"><div class="ttname"><a href="#a55e9b84c310136ff985a6544184ab64a">QCPLayoutInset::mInsetAlignment</a></div><div class="ttdeci">QList&lt; Qt::Alignment &gt; mInsetAlignment</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01514">qcustomplot.h:1514</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a57a0a4e445cc78eada29765ecf092abe"><div class="ttname"><a href="#a57a0a4e445cc78eada29765ecf092abe">QCPLayoutInset::mInsetPlacement</a></div><div class="ttdeci">QList&lt; InsetPlacement &gt; mInsetPlacement</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01513">qcustomplot.h:1513</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a8fff7eae9a1be9a5c1e544fb379f682f"><div class="ttname"><a href="#a8fff7eae9a1be9a5c1e544fb379f682f">QCPLayoutInset::mElements</a></div><div class="ttdeci">QList&lt; QCPLayoutElement * &gt; mElements</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01512">qcustomplot.h:1512</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_aaa8f6b5029458f3d97a65239524a2b33"><div class="ttname"><a href="#aaa8f6b5029458f3d97a65239524a2b33">QCPLayoutInset::mInsetRect</a></div><div class="ttdeci">QList&lt; QRectF &gt; mInsetRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01515">qcustomplot.h:1515</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad61529eb576af7f04dff94abb10c745a" name="ad61529eb576af7f04dff94abb10c745a"></a>
@@ -494,6 +538,21 @@ Additional Inherited Members</h2></td></tr>
 <p><em>alignment</em> is an or combination of the following alignment flags: Qt::AlignLeft, Qt::AlignHCenter, Qt::AlighRight, Qt::AlignTop, Qt::AlignVCenter, Qt::AlignBottom. Any other alignment flags will be ignored.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8ff61fbee4a1f0ff45c398009d9f1e56">addElement(QCPLayoutElement *element, const QRectF &amp;rect)</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05121">5121</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5122</span>{</div>
+<div class="line"><span class="lineno"> 5123</span>  <span class="keywordflow">if</span> (element)</div>
+<div class="line"><span class="lineno"> 5124</span>  {</div>
+<div class="line"><span class="lineno"> 5125</span>    <span class="keywordflow">if</span> (element-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a4efdcbde9d28f410e5ef166c9d691deb">layout</a>()) <span class="comment">// remove from old layout first</span></div>
+<div class="line"><span class="lineno"> 5126</span>      element-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a4efdcbde9d28f410e5ef166c9d691deb">layout</a>()-&gt;<a class="code hl_function" href="class_q_c_p_layout.html#ad110be0de976cd8a817513a4a53d53db">take</a>(element);</div>
+<div class="line"><span class="lineno"> 5127</span>    <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.append(element);</div>
+<div class="line"><span class="lineno"> 5128</span>    <a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>.append(<a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">ipBorderAligned</a>);</div>
+<div class="line"><span class="lineno"> 5129</span>    <a class="code hl_variable" href="#a55e9b84c310136ff985a6544184ab64a">mInsetAlignment</a>.append(alignment);</div>
+<div class="line"><span class="lineno"> 5130</span>    <a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.append(QRectF(0.6, 0.6, 0.4, 0.4));</div>
+<div class="line"><span class="lineno"> 5131</span>    <a class="code hl_function" href="class_q_c_p_layout.html#af6dbbc24156a808da29cd1ec031729a3">adoptElement</a>(element);</div>
+<div class="line"><span class="lineno"> 5132</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5133</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Can&#39;t add nullptr element&quot;</span>;</div>
+<div class="line"><span class="lineno"> 5134</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a881ca205605bae9c034733b808f93a02" name="a881ca205605bae9c034733b808f93a02"></a>
@@ -524,6 +583,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layout.html#ab22bd9153d855a35ab4010267ae36a69">QCPLayout</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05040">5040</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5041</span>{</div>
+<div class="line"><span class="lineno"> 5042</span>  <span class="keywordflow">if</span> (index &gt;= 0 &amp;&amp; index &lt; <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.size())</div>
+<div class="line"><span class="lineno"> 5043</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.at(index);</div>
+<div class="line"><span class="lineno"> 5044</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5045</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 5046</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7f5aa4d48a2e844cfe6dd7ed8f0861df" name="a7f5aa4d48a2e844cfe6dd7ed8f0861df"></a>
@@ -553,6 +620,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layout.html#acc6012e7dacc55c4282942c31c45b8d9">QCPLayout</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05034">5034</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5035</span>{</div>
+<div class="line"><span class="lineno"> 5036</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.size();</div>
+<div class="line"><span class="lineno"> 5037</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b33b66f0abbb4a7cc2f8aa6c94cf7f8" name="a5b33b66f0abbb4a7cc2f8aa6c94cf7f8"></a>
@@ -571,6 +643,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the alignment of the element with the specified <em>index</em>. The alignment only has a meaning, if the inset placement (<a class="el" href="#a63298830744d5d8c5345511c00fd2144">setInsetPlacement</a>) is <a class="el" href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">ipBorderAligned</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04917">4917</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4918</span>{</div>
+<div class="line"><span class="lineno"> 4919</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 4920</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a55e9b84c310136ff985a6544184ab64a">mInsetAlignment</a>.at(index);</div>
+<div class="line"><span class="lineno"> 4921</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4922</span>  {</div>
+<div class="line"><span class="lineno"> 4923</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid element index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 4924</span><span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5, 2, 0)</span></div>
+<div class="line"><span class="lineno"> 4925</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 4926</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno"> 4927</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno"> 4928</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 4929</span>  }</div>
+<div class="line"><span class="lineno"> 4930</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a881ca205605bae9c034733b808f93a02"><div class="ttname"><a href="#a881ca205605bae9c034733b808f93a02">QCPLayoutInset::elementAt</a></div><div class="ttdeci">virtual QCPLayoutElement * elementAt(int index) const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l05040">qcustomplot.cpp:5040</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6fcbd74ebbc45bfe64c604b2791aa57f" name="a6fcbd74ebbc45bfe64c604b2791aa57f"></a>
@@ -589,6 +677,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the placement type of the element with the specified <em>index</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04902">4902</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4903</span>{</div>
+<div class="line"><span class="lineno"> 4904</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 4905</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>.at(index);</div>
+<div class="line"><span class="lineno"> 4906</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4907</span>  {</div>
+<div class="line"><span class="lineno"> 4908</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid element index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 4909</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">ipFree</a>;</div>
+<div class="line"><span class="lineno"> 4910</span>  }</div>
+<div class="line"><span class="lineno"> 4911</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab23099a46af17c31f4c40668f13c9de1" name="ab23099a46af17c31f4c40668f13c9de1"></a>
@@ -607,6 +706,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the rect of the element with the specified <em>index</em>. The rect only has a meaning, if the inset placement (<a class="el" href="#a63298830744d5d8c5345511c00fd2144">setInsetPlacement</a>) is <a class="el" href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">ipFree</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04936">4936</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4937</span>{</div>
+<div class="line"><span class="lineno"> 4938</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 4939</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.at(index);</div>
+<div class="line"><span class="lineno"> 4940</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4941</span>  {</div>
+<div class="line"><span class="lineno"> 4942</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid element index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 4943</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno"> 4944</span>  }</div>
+<div class="line"><span class="lineno"> 4945</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1569969c3e7e92f64ea13d46616e5a8a" name="a1569969c3e7e92f64ea13d46616e5a8a"></a>
@@ -645,6 +755,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a62d60f1b0ee9bb23e38811d71586d79c">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05094">5094</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5095</span>{</div>
+<div class="line"><span class="lineno"> 5096</span>  Q_UNUSED(details)</div>
+<div class="line"><span class="lineno"> 5097</span>  <span class="keywordflow">if</span> (onlySelectable)</div>
+<div class="line"><span class="lineno"> 5098</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 5099</span>  </div>
+<div class="line"><span class="lineno"> 5100</span>  <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el, <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>)</div>
+<div class="line"><span class="lineno"> 5101</span>  {</div>
+<div class="line"><span class="lineno"> 5102</span>    <span class="comment">// inset layout shall only return positive selectTest, if actually an inset object is at pos</span></div>
+<div class="line"><span class="lineno"> 5103</span>    <span class="comment">// else it would block the entire underlying QCPAxisRect with its surface.</span></div>
+<div class="line"><span class="lineno"> 5104</span>    <span class="keywordflow">if</span> (el-&gt;<a class="code hl_function" href="class_q_c_p_layerable.html#ab054e88f15d485defcb95e7376f119e7">realVisibility</a>() &amp;&amp; el-&gt;<a class="code hl_function" href="class_q_c_p_layout_element.html#a62d60f1b0ee9bb23e38811d71586d79c">selectTest</a>(pos, onlySelectable) &gt;= 0)</div>
+<div class="line"><span class="lineno"> 5105</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99;</div>
+<div class="line"><span class="lineno"> 5106</span>  }</div>
+<div class="line"><span class="lineno"> 5107</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 5108</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_ab054e88f15d485defcb95e7376f119e7"><div class="ttname"><a href="class_q_c_p_layerable.html#ab054e88f15d485defcb95e7376f119e7">QCPLayerable::realVisibility</a></div><div class="ttdeci">bool realVisibility() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01460">qcustomplot.cpp:1460</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html"><div class="ttname"><a href="class_q_c_p_layout_element.html">QCPLayoutElement</a></div><div class="ttdoc">The abstract base class for all objects that form the layout system.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01238">qcustomplot.h:1239</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a62d60f1b0ee9bb23e38811d71586d79c"><div class="ttname"><a href="class_q_c_p_layout_element.html#a62d60f1b0ee9bb23e38811d71586d79c">QCPLayoutElement::selectTest</a></div><div class="ttdeci">virtual double selectTest(const QPointF &amp;pos, bool onlySelectable, QVariant *details=nullptr) const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03526">qcustomplot.cpp:3526</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a5441d11013afeaf4b8f2ea06e8624a25"><div class="ttname"><a href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">QCustomPlot::selectionTolerance</a></div><div class="ttdeci">int selectionTolerance() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03842">qcustomplot.h:3842</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62882a4f9ad58bb0f53da12fde022abe" name="a62882a4f9ad58bb0f53da12fde022abe"></a>
@@ -668,6 +799,14 @@ Additional Inherited Members</h2></td></tr>
 <p>If the inset placement (<a class="el" href="#a63298830744d5d8c5345511c00fd2144">setInsetPlacement</a>) is <a class="el" href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">ipBorderAligned</a>, this function is used to set the alignment of the element with the specified <em>index</em> to <em>alignment</em>.</p>
 <p><em>alignment</em> is an or combination of the following alignment flags: Qt::AlignLeft, Qt::AlignHCenter, Qt::AlighRight, Qt::AlignTop, Qt::AlignVCenter, Qt::AlignBottom. Any other alignment flags will be ignored. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04968">4968</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4969</span>{</div>
+<div class="line"><span class="lineno"> 4970</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 4971</span>    <a class="code hl_variable" href="#a55e9b84c310136ff985a6544184ab64a">mInsetAlignment</a>[index] = alignment;</div>
+<div class="line"><span class="lineno"> 4972</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4973</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid element index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 4974</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a63298830744d5d8c5345511c00fd2144" name="a63298830744d5d8c5345511c00fd2144"></a>
@@ -691,6 +830,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the inset placement type of the element with the specified <em>index</em> to <em>placement</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8b9e17d9a2768293d2a7d72f5e298192">InsetPlacement</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04952">4952</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4953</span>{</div>
+<div class="line"><span class="lineno"> 4954</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 4955</span>    <a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>[index] = placement;</div>
+<div class="line"><span class="lineno"> 4956</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4957</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid element index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 4958</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa487c8378a6f9533567a2e6430099dc3" name="aa487c8378a6f9533567a2e6430099dc3"></a>
@@ -715,6 +862,14 @@ Additional Inherited Members</h2></td></tr>
 <p><em>rect</em> is given in fractions of the whole inset layout rect. So an inset with rect (0, 0, 1, 1) will span the entire layout. An inset with rect (0.6, 0.1, 0.35, 0.35) will be in the top right corner of the layout, with 35% width and height of the parent layout.</p>
 <p>Note that the minimum and maximum sizes of the embedded element (<a class="el" href="class_q_c_p_layout_element.html#a5dd29a3c8bc88440c97c06b67be7886b">QCPLayoutElement::setMinimumSize</a>, <a class="el" href="class_q_c_p_layout_element.html#a74eb5280a737ab44833d506db65efd95">QCPLayoutElement::setMaximumSize</a>) are enforced. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04987">4987</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4988</span>{</div>
+<div class="line"><span class="lineno"> 4989</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 4990</span>    <a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>[index] = <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>;</div>
+<div class="line"><span class="lineno"> 4991</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4992</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Invalid element index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 4993</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abdac9a04752751ea68c320016086a2e8" name="abdac9a04752751ea68c320016086a2e8"></a>
@@ -743,6 +898,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout.html#a41e6ac049143866e8f8b4964efab01b2">QCPLayout</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01503">1503</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1503</span>{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7f13cc369f8190b5e7e17d5f39dfe1c" name="af7f13cc369f8190b5e7e17d5f39dfe1c"></a>
@@ -774,6 +932,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layout.html#ad110be0de976cd8a817513a4a53d53db">QCPLayout</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05067">5067</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5068</span>{</div>
+<div class="line"><span class="lineno"> 5069</span>  <span class="keywordflow">if</span> (element)</div>
+<div class="line"><span class="lineno"> 5070</span>  {</div>
+<div class="line"><span class="lineno"> 5071</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a7f5aa4d48a2e844cfe6dd7ed8f0861df">elementCount</a>(); ++i)</div>
+<div class="line"><span class="lineno"> 5072</span>    {</div>
+<div class="line"><span class="lineno"> 5073</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(i) == element)</div>
+<div class="line"><span class="lineno"> 5074</span>      {</div>
+<div class="line"><span class="lineno"> 5075</span>        <a class="code hl_function" href="#abf2e8233f5b7051220907e62ded490a2">takeAt</a>(i);</div>
+<div class="line"><span class="lineno"> 5076</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5077</span>      }</div>
+<div class="line"><span class="lineno"> 5078</span>    }</div>
+<div class="line"><span class="lineno"> 5079</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Element not in this layout, couldn&#39;t take&quot;</span>;</div>
+<div class="line"><span class="lineno"> 5080</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5081</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Can&#39;t take nullptr element&quot;</span>;</div>
+<div class="line"><span class="lineno"> 5082</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5083</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_a7f5aa4d48a2e844cfe6dd7ed8f0861df"><div class="ttname"><a href="#a7f5aa4d48a2e844cfe6dd7ed8f0861df">QCPLayoutInset::elementCount</a></div><div class="ttdeci">virtual int elementCount() const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l05034">qcustomplot.cpp:5034</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_abf2e8233f5b7051220907e62ded490a2"><div class="ttname"><a href="#abf2e8233f5b7051220907e62ded490a2">QCPLayoutInset::takeAt</a></div><div class="ttdeci">virtual QCPLayoutElement * takeAt(int index) Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l05049">qcustomplot.cpp:5049</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abf2e8233f5b7051220907e62ded490a2" name="abf2e8233f5b7051220907e62ded490a2"></a>
@@ -805,6 +983,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_q_c_p_layout.html#aae3fc1bd5656aa737f18f0779789fd79">QCPLayout</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l05049">5049</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5050</span>{</div>
+<div class="line"><span class="lineno"> 5051</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el = <a class="code hl_function" href="#a881ca205605bae9c034733b808f93a02">elementAt</a>(index))</div>
+<div class="line"><span class="lineno"> 5052</span>  {</div>
+<div class="line"><span class="lineno"> 5053</span>    <a class="code hl_function" href="class_q_c_p_layout.html#a4afbb4bef0071f72f91afdac4433a18e">releaseElement</a>(el);</div>
+<div class="line"><span class="lineno"> 5054</span>    <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.removeAt(index);</div>
+<div class="line"><span class="lineno"> 5055</span>    <a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>.removeAt(index);</div>
+<div class="line"><span class="lineno"> 5056</span>    <a class="code hl_variable" href="#a55e9b84c310136ff985a6544184ab64a">mInsetAlignment</a>.removeAt(index);</div>
+<div class="line"><span class="lineno"> 5057</span>    <a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.removeAt(index);</div>
+<div class="line"><span class="lineno"> 5058</span>    <span class="keywordflow">return</span> el;</div>
+<div class="line"><span class="lineno"> 5059</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5060</span>  {</div>
+<div class="line"><span class="lineno"> 5061</span>    qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;Attempt to take invalid index:&quot;</span> &lt;&lt; index;</div>
+<div class="line"><span class="lineno"> 5062</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 5063</span>  }</div>
+<div class="line"><span class="lineno"> 5064</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a4afbb4bef0071f72f91afdac4433a18e"><div class="ttname"><a href="class_q_c_p_layout.html#a4afbb4bef0071f72f91afdac4433a18e">QCPLayout::releaseElement</a></div><div class="ttdeci">void releaseElement(QCPLayoutElement *el)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03856">qcustomplot.cpp:3856</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a493526b922ea66a75c45ef1842446988" name="a493526b922ea66a75c45ef1842446988"></a>
@@ -832,6 +1028,46 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout.html#a165c77f6287ac92e8d03017ad913378b">QCPLayout</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l04996">4996</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4997</span>{</div>
+<div class="line"><span class="lineno"> 4998</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.size(); ++i)</div>
+<div class="line"><span class="lineno"> 4999</span>  {</div>
+<div class="line"><span class="lineno"> 5000</span>    <a class="code hl_class" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> *el = <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.at(i);</div>
+<div class="line"><span class="lineno"> 5001</span>    QRect <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>;</div>
+<div class="line"><span class="lineno"> 5002</span>    QSize finalMinSize = <a class="code hl_function" href="class_q_c_p_layout.html#a864fddc84721f186663faf3683f1fa70">getFinalMinimumOuterSize</a>(el);</div>
+<div class="line"><span class="lineno"> 5003</span>    QSize finalMaxSize = <a class="code hl_function" href="class_q_c_p_layout.html#add49fd6843821a6126914b837ed52e22">getFinalMaximumOuterSize</a>(el);</div>
+<div class="line"><span class="lineno"> 5004</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>.at(i) == <a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa4802986ea2cea457f932b115acba59e">ipFree</a>)</div>
+<div class="line"><span class="lineno"> 5005</span>    {</div>
+<div class="line"><span class="lineno"> 5006</span>      <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a> = QRect(<span class="keywordtype">int</span>( <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().x()+<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().width()*<a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.at(i).x() ),</div>
+<div class="line"><span class="lineno"> 5007</span>                        <span class="keywordtype">int</span>( <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().y()+<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().height()*<a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.at(i).y() ),</div>
+<div class="line"><span class="lineno"> 5008</span>                        <span class="keywordtype">int</span>( <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().width()*<a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.at(i).width() ),</div>
+<div class="line"><span class="lineno"> 5009</span>                        <span class="keywordtype">int</span>( <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().height()*<a class="code hl_variable" href="#aaa8f6b5029458f3d97a65239524a2b33">mInsetRect</a>.at(i).height() ));</div>
+<div class="line"><span class="lineno"> 5010</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.size().width() &lt; finalMinSize.width())</div>
+<div class="line"><span class="lineno"> 5011</span>        <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.setWidth(finalMinSize.width());</div>
+<div class="line"><span class="lineno"> 5012</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.size().height() &lt; finalMinSize.height())</div>
+<div class="line"><span class="lineno"> 5013</span>        <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.setHeight(finalMinSize.height());</div>
+<div class="line"><span class="lineno"> 5014</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.size().width() &gt; finalMaxSize.width())</div>
+<div class="line"><span class="lineno"> 5015</span>        <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.setWidth(finalMaxSize.width());</div>
+<div class="line"><span class="lineno"> 5016</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.size().height() &gt; finalMaxSize.height())</div>
+<div class="line"><span class="lineno"> 5017</span>        <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.setHeight(finalMaxSize.height());</div>
+<div class="line"><span class="lineno"> 5018</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a57a0a4e445cc78eada29765ecf092abe">mInsetPlacement</a>.at(i) == <a class="code hl_enumvalue" href="#a8b9e17d9a2768293d2a7d72f5e298192aa81e7df4a785ddee2229a8f47c46e817">ipBorderAligned</a>)</div>
+<div class="line"><span class="lineno"> 5019</span>    {</div>
+<div class="line"><span class="lineno"> 5020</span>      <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.setSize(finalMinSize);</div>
+<div class="line"><span class="lineno"> 5021</span>      Qt::Alignment al = <a class="code hl_variable" href="#a55e9b84c310136ff985a6544184ab64a">mInsetAlignment</a>.at(i);</div>
+<div class="line"><span class="lineno"> 5022</span>      <span class="keywordflow">if</span> (al.testFlag(Qt::AlignLeft)) <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.moveLeft(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().x());</div>
+<div class="line"><span class="lineno"> 5023</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (al.testFlag(Qt::AlignRight)) <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.moveRight(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().x()+<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().width());</div>
+<div class="line"><span class="lineno"> 5024</span>      <span class="keywordflow">else</span> <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.moveLeft(<span class="keywordtype">int</span>( <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().x()+<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().width()*0.5-finalMinSize.width()*0.5 )); <span class="comment">// default to Qt::AlignHCenter</span></div>
+<div class="line"><span class="lineno"> 5025</span>      <span class="keywordflow">if</span> (al.testFlag(Qt::AlignTop)) <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.moveTop(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().y());</div>
+<div class="line"><span class="lineno"> 5026</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (al.testFlag(Qt::AlignBottom)) <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.moveBottom(<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().y()+<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().height());</div>
+<div class="line"><span class="lineno"> 5027</span>      <span class="keywordflow">else</span> <a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>.moveTop(<span class="keywordtype">int</span>( <a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().y()+<a class="code hl_function" href="class_q_c_p_layout_element.html#a208effccfe2cca4a0eaf9393e60f2dd4">rect</a>().height()*0.5-finalMinSize.height()*0.5 )); <span class="comment">// default to Qt::AlignVCenter</span></div>
+<div class="line"><span class="lineno"> 5028</span>    }</div>
+<div class="line"><span class="lineno"> 5029</span>    <a class="code hl_variable" href="#a8fff7eae9a1be9a5c1e544fb379f682f">mElements</a>.at(i)-&gt;setOuterRect(<a class="code hl_function" href="#ab23099a46af17c31f4c40668f13c9de1">insetRect</a>);</div>
+<div class="line"><span class="lineno"> 5030</span>  }</div>
+<div class="line"><span class="lineno"> 5031</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a864fddc84721f186663faf3683f1fa70"><div class="ttname"><a href="class_q_c_p_layout.html#a864fddc84721f186663faf3683f1fa70">QCPLayout::getFinalMinimumOuterSize</a></div><div class="ttdeci">static QSize getFinalMinimumOuterSize(const QCPLayoutElement *el)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04021">qcustomplot.cpp:4021</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_add49fd6843821a6126914b837ed52e22"><div class="ttname"><a href="class_q_c_p_layout.html#add49fd6843821a6126914b837ed52e22">QCPLayout::getFinalMaximumOuterSize</a></div><div class="ttdeci">static QSize getFinalMaximumOuterSize(const QCPLayoutElement *el)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04046">qcustomplot.cpp:4046</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_inset_html_ab23099a46af17c31f4c40668f13c9de1"><div class="ttname"><a href="#ab23099a46af17c31f4c40668f13c9de1">QCPLayoutInset::insetRect</a></div><div class="ttdeci">QRectF insetRect(int index) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04936">qcustomplot.cpp:4936</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -855,6 +1091,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01512">1512</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a55e9b84c310136ff985a6544184ab64a" name="a55e9b84c310136ff985a6544184ab64a"></a>
@@ -876,6 +1114,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01514">1514</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -899,6 +1139,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01513">1513</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="aaa8f6b5029458f3d97a65239524a2b33" name="aaa8f6b5029458f3d97a65239524a2b33"></a>
@@ -921,11 +1163,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01515">1515</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

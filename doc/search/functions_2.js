@@ -59,10 +59,11 @@ var searchData=
   ['createanchor_56',['createAnchor',['../class_q_c_p_abstract_item.html#af3fc92527802078ca395138748b629a7',1,'QCPAbstractItem']]],
   ['createcachedlabel_57',['createCachedLabel',['../class_q_c_p_label_painter_private.html#a9e27774565f186f0c4abbbd3f2e6c766',1,'QCPLabelPainterPrivate']]],
   ['createlabelvector_58',['createLabelVector',['../class_q_c_p_axis_ticker.html#a804050e408f37a0b9770c6654ebe6aa7',1,'QCPAxisTicker']]],
-  ['createpaintbuffer_59',['createPaintBuffer',['../class_q_custom_plot.html#a943b57596a1adf7f0e75c3b50e407ae6',1,'QCustomPlot']]],
-  ['createposition_60',['createPosition',['../class_q_c_p_abstract_item.html#a75036d39c4d4e2e1a7dd145fff915d32',1,'QCPAbstractItem']]],
-  ['createsubtickvector_61',['createSubTickVector',['../class_q_c_p_axis_ticker.html#a9a6435723fa0bd366d1ea4c2cff7c33f',1,'QCPAxisTicker']]],
-  ['createtickvector_62',['createTickVector',['../class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd',1,'QCPAxisTicker::createTickVector()'],['../class_q_c_p_axis_ticker_date_time.html#a44c2c09a303d281801b69226e243047d',1,'QCPAxisTickerDateTime::createTickVector()'],['../class_q_c_p_axis_ticker_text.html#aa195c4fd0364d0393f1798fb495d6a60',1,'QCPAxisTickerText::createTickVector()'],['../class_q_c_p_axis_ticker_log.html#af8873a8d1d2b9392d8f7a73218c889ab',1,'QCPAxisTickerLog::createTickVector()']]],
-  ['currentlayer_63',['currentLayer',['../class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5',1,'QCustomPlot']]],
-  ['custompath_64',['customPath',['../class_q_c_p_scatter_style.html#aef1fac84c9830fd97f2a8568e605e372',1,'QCPScatterStyle']]]
+  ['createlanguagemenu_59',['createLanguageMenu',['../class_main_window.html#abc96e1c106386748444324e2606fc29c',1,'MainWindow']]],
+  ['createpaintbuffer_60',['createPaintBuffer',['../class_q_custom_plot.html#a943b57596a1adf7f0e75c3b50e407ae6',1,'QCustomPlot']]],
+  ['createposition_61',['createPosition',['../class_q_c_p_abstract_item.html#a75036d39c4d4e2e1a7dd145fff915d32',1,'QCPAbstractItem']]],
+  ['createsubtickvector_62',['createSubTickVector',['../class_q_c_p_axis_ticker.html#a9a6435723fa0bd366d1ea4c2cff7c33f',1,'QCPAxisTicker']]],
+  ['createtickvector_63',['createTickVector',['../class_q_c_p_axis_ticker.html#af4645a824c7bd2ca8fc7e86ebf9055bd',1,'QCPAxisTicker::createTickVector()'],['../class_q_c_p_axis_ticker_date_time.html#a44c2c09a303d281801b69226e243047d',1,'QCPAxisTickerDateTime::createTickVector()'],['../class_q_c_p_axis_ticker_text.html#aa195c4fd0364d0393f1798fb495d6a60',1,'QCPAxisTickerText::createTickVector()'],['../class_q_c_p_axis_ticker_log.html#af8873a8d1d2b9392d8f7a73218c889ab',1,'QCPAxisTickerLog::createTickVector()']]],
+  ['currentlayer_64',['currentLayer',['../class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5',1,'QCustomPlot']]],
+  ['custompath_65',['customPath',['../class_q_c_p_scatter_style.html#aef1fac84c9830fd97f2a8568e605e372',1,'QCPScatterStyle']]]
 ];

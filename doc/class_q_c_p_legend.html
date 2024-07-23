@@ -562,6 +562,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Since <a class="el" href="class_q_c_p_legend.html">QCPLegend</a> derives from <a class="el" href="class_q_c_p_layout_grid.html">QCPLayoutGrid</a>, it can be placed in any position a <a class="el" href="class_q_c_p_layout_element.html">QCPLayoutElement</a> may be positioned. The legend items are themselves <a class="el" href="class_q_c_p_layout_element.html">QCPLayoutElements</a> which are placed in the grid layout of the legend. <a class="el" href="class_q_c_p_legend.html">QCPLegend</a> only adds an interface specialized for handling child elements of type <a class="el" href="class_q_c_p_abstract_legend_item.html">QCPAbstractLegendItem</a>, as mentioned above. In principle, any other layout elements may also be added to a legend via the normal <a class="el" href="class_q_c_p_layout_grid.html">QCPLayoutGrid</a> interface. See the special page about <a class="el" href="">The Layout System</a> for examples on how to add other elements to the legend and move it outside the axis rect.</p>
 <p>Use the methods <a class="el" href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">setFillOrder</a> and <a class="el" href="class_q_c_p_layout_grid.html#ab36af18d77e4428386d02970382ee598">setWrap</a> inherited from <a class="el" href="class_q_c_p_layout_grid.html">QCPLayoutGrid</a> to control in which order (column first or row first) the legend is filled up when calling <a class="el" href="#a3ab274de52d2951faea45a6d975e6b3f">addItem</a>, and at which column or row wrapping occurs. The default fill order for legends is <a class="el" href="class_q_c_p_layout_grid.html#a7d49ee08773de6b2fd246edfed353ccaa0202730954e26c474cc820164aedce3e">foRowsFirst</a>.</p>
 <p>By default, every <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> has one legend (<a class="el" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">QCustomPlot::legend</a>) which is placed in the inset layout of the main axis rect (<a class="el" href="class_q_c_p_axis_rect.html#a949f803466619924c7018df4b511ae10">QCPAxisRect::insetLayout</a>). To move the legend to another position inside the axis rect, use the methods of the <a class="el" href="class_q_c_p_layout_inset.html">QCPLayoutInset</a>. To move the legend outside of the axis rect, place it anywhere else with the QCPLayout/ <a class="el" href="class_q_c_p_layout_element.html" title="The abstract base class for all objects that form the layout system.">QCPLayoutElement</a> interface. </p>
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05138">5138</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5404de8bc1e4a994ca4ae69e2c7072f1" name="a5404de8bc1e4a994ca4ae69e2c7072f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5404de8bc1e4a994ca4ae69e2c7072f1">&#9670;&#160;</a></span>SelectablePart</h2>
@@ -585,6 +587,15 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05163">5163</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5163</span>                      { <a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7">spNone</a>        = 0x000 </div>
+<div class="line"><span class="lineno"> 5164</span>                        ,<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>  = 0x001 </div>
+<div class="line"><span class="lineno"> 5165</span>                        ,<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>      = 0x002 </div>
+<div class="line"><span class="lineno"> 5166</span>                      };</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4"><div class="ttname"><a href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">QCPLegend::spLegendBox</a></div><div class="ttdeci">@ spLegendBox</div><div class="ttdoc">0x001 The legend box (frame)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05165">qcustomplot.h:5164</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7"><div class="ttname"><a href="#a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7">QCPLegend::spNone</a></div><div class="ttdeci">@ spNone</div><div class="ttdoc">0x000 None</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05164">qcustomplot.h:5163</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7"><div class="ttname"><a href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">QCPLegend::spItems</a></div><div class="ttdeci">@ spItems</div><div class="ttdoc">0x002 Legend items individually (see selectedItems)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05166">qcustomplot.h:5165</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -613,6 +624,54 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a new <a class="el" href="class_q_c_p_legend.html" title="Manages a legend inside a QCustomPlot.">QCPLegend</a> instance with default values.</p>
 <p>Note that by default, <a class="el" href="class_q_custom_plot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ...">QCustomPlot</a> already contains a legend ready to be used as <a class="el" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">QCustomPlot::legend</a> </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19074">19074</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19074</span>                     :</div>
+<div class="line"><span class="lineno">19075</span>  <a class="code hl_variable" href="#a8abf8843864ee9afc3f54f906c062240">mIconTextPadding</a>{}</div>
+<div class="line"><span class="lineno">19076</span>{</div>
+<div class="line"><span class="lineno">19077</span>  <a class="code hl_function" href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">setFillOrder</a>(<a class="code hl_enumvalue" href="class_q_c_p_layout_grid.html#a7d49ee08773de6b2fd246edfed353ccaa0202730954e26c474cc820164aedce3e">QCPLayoutGrid::foRowsFirst</a>);</div>
+<div class="line"><span class="lineno">19078</span>  <a class="code hl_function" href="class_q_c_p_layout_grid.html#ab36af18d77e4428386d02970382ee598">setWrap</a>(0);</div>
+<div class="line"><span class="lineno">19079</span>  </div>
+<div class="line"><span class="lineno">19080</span>  <a class="code hl_function" href="class_q_c_p_layout_grid.html#aaef2cd2d456197ee06a208793678e436">setRowSpacing</a>(3);</div>
+<div class="line"><span class="lineno">19081</span>  <a class="code hl_function" href="class_q_c_p_layout_grid.html#a3a49272aba32bb0fddc3bb2a45a3dba0">setColumnSpacing</a>(8);</div>
+<div class="line"><span class="lineno">19082</span>  <a class="code hl_function" href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">setMargins</a>(QMargins(7, 5, 7, 4));</div>
+<div class="line"><span class="lineno">19083</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">setAntialiased</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">19084</span>  <a class="code hl_function" href="#a8b0740cce488bf7010da6beda6898984">setIconSize</a>(32, 18);</div>
+<div class="line"><span class="lineno">19085</span>  </div>
+<div class="line"><span class="lineno">19086</span>  <a class="code hl_function" href="#a62973bd69d5155e8ea3141366e8968f6">setIconTextPadding</a>(7);</div>
+<div class="line"><span class="lineno">19087</span>  </div>
+<div class="line"><span class="lineno">19088</span>  <a class="code hl_function" href="#a9ce60aa8bbd89f62ae4fa83ac6c60110">setSelectableParts</a>(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a> | <a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>);</div>
+<div class="line"><span class="lineno">19089</span>  <a class="code hl_function" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a>(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7">spNone</a>);</div>
+<div class="line"><span class="lineno">19090</span>  </div>
+<div class="line"><span class="lineno">19091</span>  <a class="code hl_function" href="#a866a9e3f5267de7430a6c7f26a61db9f">setBorderPen</a>(QPen(Qt::black, 0));</div>
+<div class="line"><span class="lineno">19092</span>  <a class="code hl_function" href="#a2c35d262953a25d96b6112653fbefc88">setSelectedBorderPen</a>(QPen(Qt::blue, 2));</div>
+<div class="line"><span class="lineno">19093</span>  <a class="code hl_function" href="#a2f2c93d18a651f4ff294bb3f026f49b8">setIconBorderPen</a>(Qt::NoPen);</div>
+<div class="line"><span class="lineno">19094</span>  <a class="code hl_function" href="#ade93aabe9bcccaf9cf46cec22c658027">setSelectedIconBorderPen</a>(QPen(Qt::blue, 2));</div>
+<div class="line"><span class="lineno">19095</span>  <a class="code hl_function" href="#a497bbcd38baa3598c08e2b3f48103f23">setBrush</a>(Qt::white);</div>
+<div class="line"><span class="lineno">19096</span>  <a class="code hl_function" href="#a875227f3219c9799464631dec5e8f1bd">setSelectedBrush</a>(Qt::white);</div>
+<div class="line"><span class="lineno">19097</span>  <a class="code hl_function" href="#ae1eb239ff4a4632fe1b6c3e668d845c6">setTextColor</a>(Qt::black);</div>
+<div class="line"><span class="lineno">19098</span>  <a class="code hl_function" href="#a7674dfc7a1f30e1abd1018c0ed45e0bc">setSelectedTextColor</a>(Qt::blue);</div>
+<div class="line"><span class="lineno">19099</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a4fd43e89be4a553ead41652565ff0581"><div class="ttname"><a href="class_q_c_p_layerable.html#a4fd43e89be4a553ead41652565ff0581">QCPLayerable::setAntialiased</a></div><div class="ttdeci">void setAntialiased(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01445">qcustomplot.cpp:1445</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a8f450b1f3f992ad576fce2c63d8b79cf"><div class="ttname"><a href="class_q_c_p_layout_element.html#a8f450b1f3f992ad576fce2c63d8b79cf">QCPLayoutElement::setMargins</a></div><div class="ttdeci">void setMargins(const QMargins &amp;margins)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03261">qcustomplot.cpp:3261</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_a3a49272aba32bb0fddc3bb2a45a3dba0"><div class="ttname"><a href="class_q_c_p_layout_grid.html#a3a49272aba32bb0fddc3bb2a45a3dba0">QCPLayoutGrid::setColumnSpacing</a></div><div class="ttdeci">void setColumnSpacing(int pixels)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04341">qcustomplot.cpp:4341</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_a7d49ee08773de6b2fd246edfed353ccaa0202730954e26c474cc820164aedce3e"><div class="ttname"><a href="class_q_c_p_layout_grid.html#a7d49ee08773de6b2fd246edfed353ccaa0202730954e26c474cc820164aedce3e">QCPLayoutGrid::foRowsFirst</a></div><div class="ttdeci">@ foRowsFirst</div><div class="ttdoc">Rows are filled first, and a new element is wrapped to the next column if the row count would exceed ...</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01404">qcustomplot.h:1403</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_aaef2cd2d456197ee06a208793678e436"><div class="ttname"><a href="class_q_c_p_layout_grid.html#aaef2cd2d456197ee06a208793678e436">QCPLayoutGrid::setRowSpacing</a></div><div class="ttdeci">void setRowSpacing(int pixels)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04351">qcustomplot.cpp:4351</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_ab36af18d77e4428386d02970382ee598"><div class="ttname"><a href="class_q_c_p_layout_grid.html#ab36af18d77e4428386d02970382ee598">QCPLayoutGrid::setWrap</a></div><div class="ttdeci">void setWrap(int count)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04373">qcustomplot.cpp:4373</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_affc2f3cfd22f28698c5b29b960d2a391"><div class="ttname"><a href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">QCPLayoutGrid::setFillOrder</a></div><div class="ttdeci">void setFillOrder(FillOrder order, bool rearrange=true)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04403">qcustomplot.cpp:4403</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a2aee309bb5c2a794b1987f3fc97f8ad8"><div class="ttname"><a href="#a2aee309bb5c2a794b1987f3fc97f8ad8">QCPLegend::setSelectedParts</a></div><div class="ttdeci">Q_SLOT void setSelectedParts(const SelectableParts &amp;selectedParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19259">qcustomplot.cpp:19259</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a2c35d262953a25d96b6112653fbefc88"><div class="ttname"><a href="#a2c35d262953a25d96b6112653fbefc88">QCPLegend::setSelectedBorderPen</a></div><div class="ttdeci">void setSelectedBorderPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19290">qcustomplot.cpp:19290</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a2f2c93d18a651f4ff294bb3f026f49b8"><div class="ttname"><a href="#a2f2c93d18a651f4ff294bb3f026f49b8">QCPLegend::setIconBorderPen</a></div><div class="ttdeci">void setIconBorderPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19214">qcustomplot.cpp:19214</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a497bbcd38baa3598c08e2b3f48103f23"><div class="ttname"><a href="#a497bbcd38baa3598c08e2b3f48103f23">QCPLegend::setBrush</a></div><div class="ttdeci">void setBrush(const QBrush &amp;brush)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19138">qcustomplot.cpp:19138</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a62973bd69d5155e8ea3141366e8968f6"><div class="ttname"><a href="#a62973bd69d5155e8ea3141366e8968f6">QCPLegend::setIconTextPadding</a></div><div class="ttdeci">void setIconTextPadding(int padding)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19203">qcustomplot.cpp:19203</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a7674dfc7a1f30e1abd1018c0ed45e0bc"><div class="ttname"><a href="#a7674dfc7a1f30e1abd1018c0ed45e0bc">QCPLegend::setSelectedTextColor</a></div><div class="ttdeci">void setSelectedTextColor(const QColor &amp;color)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19340">qcustomplot.cpp:19340</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a866a9e3f5267de7430a6c7f26a61db9f"><div class="ttname"><a href="#a866a9e3f5267de7430a6c7f26a61db9f">QCPLegend::setBorderPen</a></div><div class="ttdeci">void setBorderPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19130">qcustomplot.cpp:19130</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a875227f3219c9799464631dec5e8f1bd"><div class="ttname"><a href="#a875227f3219c9799464631dec5e8f1bd">QCPLegend::setSelectedBrush</a></div><div class="ttdeci">void setSelectedBrush(const QBrush &amp;brush)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19311">qcustomplot.cpp:19311</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a8abf8843864ee9afc3f54f906c062240"><div class="ttname"><a href="#a8abf8843864ee9afc3f54f906c062240">QCPLegend::mIconTextPadding</a></div><div class="ttdeci">int mIconTextPadding</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05233">qcustomplot.h:5233</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a8b0740cce488bf7010da6beda6898984"><div class="ttname"><a href="#a8b0740cce488bf7010da6beda6898984">QCPLegend::setIconSize</a></div><div class="ttdeci">void setIconSize(const QSize &amp;size)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19185">qcustomplot.cpp:19185</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a9ce60aa8bbd89f62ae4fa83ac6c60110"><div class="ttname"><a href="#a9ce60aa8bbd89f62ae4fa83ac6c60110">QCPLegend::setSelectableParts</a></div><div class="ttdeci">Q_SLOT void setSelectableParts(const SelectableParts &amp;selectableParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19229">qcustomplot.cpp:19229</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ade93aabe9bcccaf9cf46cec22c658027"><div class="ttname"><a href="#ade93aabe9bcccaf9cf46cec22c658027">QCPLegend::setSelectedIconBorderPen</a></div><div class="ttdeci">void setSelectedIconBorderPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19300">qcustomplot.cpp:19300</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ae1eb239ff4a4632fe1b6c3e668d845c6"><div class="ttname"><a href="#ae1eb239ff4a4632fe1b6c3e668d845c6">QCPLegend::setTextColor</a></div><div class="ttdeci">void setTextColor(const QColor &amp;color)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19171">qcustomplot.cpp:19171</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a11391e486a959a42eeba4edf1bd8b46b" name="a11391e486a959a42eeba4edf1bd8b46b"></a>
@@ -638,6 +697,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19101">19101</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19102</span>{</div>
+<div class="line"><span class="lineno">19103</span>  <a class="code hl_function" href="#a24795c7250eb5214fcea16b7217b4dfb">clearItems</a>();</div>
+<div class="line"><span class="lineno">19104</span>  <span class="keywordflow">if</span> (qobject_cast&lt;QCustomPlot*&gt;(<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>)) <span class="comment">// make sure this isn&#39;t called from QObject dtor when QCustomPlot is already destructed (happens when the legend is not in any layout and thus QObject-child of QCustomPlot)</span></div>
+<div class="line"><span class="lineno">19105</span>    <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a9d173454555021c9ffd4f675c4d9037a">legendRemoved</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">19106</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_aa2a528433e44db02b8aef23c1f9f90ed"><div class="ttname"><a href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">QCPLayerable::mParentPlot</a></div><div class="ttdeci">QCustomPlot * mParentPlot</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00790">qcustomplot.h:790</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a24795c7250eb5214fcea16b7217b4dfb"><div class="ttname"><a href="#a24795c7250eb5214fcea16b7217b4dfb">QCPLegend::clearItems</a></div><div class="ttdeci">void clearItems()</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19486">qcustomplot.cpp:19486</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a9d173454555021c9ffd4f675c4d9037a"><div class="ttname"><a href="class_q_custom_plot.html#a9d173454555021c9ffd4f675c4d9037a">QCustomPlot::legendRemoved</a></div><div class="ttdeci">virtual void legendRemoved(QCPLegend *legend)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l16027">qcustomplot.cpp:16027</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -660,6 +729,13 @@ Additional Inherited Members</h2></td></tr>
 <p>The legend takes ownership of the item.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac91595c3eaa746fe6321d2eb952c63bb">removeItem</a>, <a class="el" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>, <a class="el" href="#ad0f698e33db454a6c103b5206740e599">hasItem</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19433">19433</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19434</span>{</div>
+<div class="line"><span class="lineno">19435</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_layout_grid.html#adff1a2ca691ed83d2d24a4cd1fe17012">addElement</a>(<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>);</div>
+<div class="line"><span class="lineno">19436</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_adff1a2ca691ed83d2d24a4cd1fe17012"><div class="ttname"><a href="class_q_c_p_layout_grid.html#adff1a2ca691ed83d2d24a4cd1fe17012">QCPLayoutGrid::addElement</a></div><div class="ttdeci">bool addElement(int row, int column, QCPLayoutElement *element)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04160">qcustomplot.cpp:4160</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_acfe9694c45104a3359d3806ed366fcf7"><div class="ttname"><a href="#acfe9694c45104a3359d3806ed366fcf7">QCPLegend::item</a></div><div class="ttdeci">QCPAbstractLegendItem * item(int index) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19358">qcustomplot.cpp:19358</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a817f75c234f82a2e26643dc0de742095" name="a817f75c234f82a2e26643dc0de742095"></a>
@@ -687,6 +763,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a0a8f18141bcf46cf40ad4c13324ff346">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19531">19531</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19532</span>{</div>
+<div class="line"><span class="lineno">19533</span>  <a class="code hl_function" href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">applyAntialiasingHint</a>(painter, <a class="code hl_variable" href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">mAntialiased</a>, <a class="code hl_enumvalue" href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca9e0127a6361b5d0596b031a482c5cf97">QCP::aeLegend</a>);</div>
+<div class="line"><span class="lineno">19534</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a3ab45a4c76a3333ce42eb217a81733ec"><div class="ttname"><a href="class_q_c_p_layerable.html#a3ab45a4c76a3333ce42eb217a81733ec">QCPLayerable::mAntialiased</a></div><div class="ttdeci">bool mAntialiased</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00793">qcustomplot.h:793</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_acb663e375d2d36dc5c55021ee5a2119b"><div class="ttname"><a href="class_q_c_p_layerable.html#acb663e375d2d36dc5c55021ee5a2119b">QCPLayerable::applyAntialiasingHint</a></div><div class="ttdeci">void applyAntialiasingHint(QCPPainter *painter, bool localAntialiased, QCP::AntialiasedElement overrideElement) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l01599">qcustomplot.cpp:1599</a></div></div>
+<div class="ttc" id="anamespace_q_c_p_html_ae55dbe315d41fe80f29ba88100843a0ca9e0127a6361b5d0596b031a482c5cf97"><div class="ttname"><a href="namespace_q_c_p.html#ae55dbe315d41fe80f29ba88100843a0ca9e0127a6361b5d0596b031a482c5cf97">QCP::aeLegend</a></div><div class="ttdeci">@ aeLegend</div><div class="ttdoc">0x0008 Legend box</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00248">qcustomplot.h:247</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a844b709a5632313416655f931c8e5631" name="a844b709a5632313416655f931c8e5631"></a>
@@ -712,6 +796,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05175">5175</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5175</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a52ab8342a382456131d567f962d7f9d0">mBorderPen</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a52ab8342a382456131d567f962d7f9d0"><div class="ttname"><a href="#a52ab8342a382456131d567f962d7f9d0">QCPLegend::mBorderPen</a></div><div class="ttdeci">QPen mBorderPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05228">qcustomplot.h:5228</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaddafd5cbe9175512311350bb3b563e6" name="aaddafd5cbe9175512311350bb3b563e6"></a>
@@ -737,6 +825,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05176">5176</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5176</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9bd7cd05a9a485e06eda513a348baf80">mBrush</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a9bd7cd05a9a485e06eda513a348baf80"><div class="ttname"><a href="#a9bd7cd05a9a485e06eda513a348baf80">QCPLegend::mBrush</a></div><div class="ttdeci">QBrush mBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05229">qcustomplot.h:5229</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a24795c7250eb5214fcea16b7217b4dfb" name="a24795c7250eb5214fcea16b7217b4dfb"></a>
@@ -755,6 +847,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Removes all items from the legend. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19486">19486</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19487</span>{</div>
+<div class="line"><span class="lineno">19488</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code hl_function" href="class_q_c_p_layout_grid.html#a9a8942aface780a02445ebcf14c48513">elementCount</a>()-1; i&gt;=0; --i)</div>
+<div class="line"><span class="lineno">19489</span>  {</div>
+<div class="line"><span class="lineno">19490</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19491</span>      <a class="code hl_function" href="class_q_c_p_layout.html#a2403f684fee3ce47132faaeed00bb066">removeAt</a>(i); <span class="comment">// don&#39;t use removeItem() because it would unnecessarily reorder the whole legend for each item</span></div>
+<div class="line"><span class="lineno">19492</span>  }</div>
+<div class="line"><span class="lineno">19493</span>  <a class="code hl_function" href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">setFillOrder</a>(<a class="code hl_function" href="class_q_c_p_layout_grid.html#a6cb6563a13759222ad92ae397bd6c27e">fillOrder</a>(), <span class="keyword">true</span>); <span class="comment">// get rid of empty cells by reordering once after all items are removed</span></div>
+<div class="line"><span class="lineno">19494</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_a6cb6563a13759222ad92ae397bd6c27e"><div class="ttname"><a href="class_q_c_p_layout_grid.html#a6cb6563a13759222ad92ae397bd6c27e">QCPLayoutGrid::fillOrder</a></div><div class="ttdeci">FillOrder fillOrder() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01419">qcustomplot.h:1419</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_a9a8942aface780a02445ebcf14c48513"><div class="ttname"><a href="class_q_c_p_layout_grid.html#a9a8942aface780a02445ebcf14c48513">QCPLayoutGrid::elementCount</a></div><div class="ttdeci">virtual int elementCount() const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01433">qcustomplot.h:1433</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a2403f684fee3ce47132faaeed00bb066"><div class="ttname"><a href="class_q_c_p_layout.html#a2403f684fee3ce47132faaeed00bb066">QCPLayout::removeAt</a></div><div class="ttdeci">bool removeAt(int index)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03740">qcustomplot.cpp:3740</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2066837f7ebc32a5b15434cdca5b176" name="ac2066837f7ebc32a5b15434cdca5b176"></a>
@@ -782,6 +887,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#ae546370644a5551c76af739afc008bee">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19599">19599</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19600</span>{</div>
+<div class="line"><span class="lineno">19601</span>  <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> = <a class="code hl_function" href="#a3efbf879f6936ec337690985e567dc6f">selectedParts</a>(); <span class="comment">// in case item selection has changed</span></div>
+<div class="line"><span class="lineno">19602</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>))</div>
+<div class="line"><span class="lineno">19603</span>  {</div>
+<div class="line"><span class="lineno">19604</span>    SelectableParts selBefore = <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>;</div>
+<div class="line"><span class="lineno">19605</span>    <a class="code hl_function" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a>(<a class="code hl_function" href="#a3efbf879f6936ec337690985e567dc6f">selectedParts</a>() &amp; ~<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>);</div>
+<div class="line"><span class="lineno">19606</span>    <span class="keywordflow">if</span> (selectionStateChanged)</div>
+<div class="line"><span class="lineno">19607</span>      *selectionStateChanged = <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> != selBefore;</div>
+<div class="line"><span class="lineno">19608</span>  }</div>
+<div class="line"><span class="lineno">19609</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a179b4d5c1bea723b76e402ff48f0d7fb"><div class="ttname"><a href="#a179b4d5c1bea723b76e402ff48f0d7fb">QCPLegend::mSelectableParts</a></div><div class="ttdeci">SelectableParts mSelectableParts</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05234">qcustomplot.h:5234</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a3efbf879f6936ec337690985e567dc6f"><div class="ttname"><a href="#a3efbf879f6936ec337690985e567dc6f">QCPLegend::selectedParts</a></div><div class="ttdeci">SelectableParts selectedParts() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19109">qcustomplot.cpp:19109</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a917a34dd2856baafd8d56852d94d00e2"><div class="ttname"><a href="#a917a34dd2856baafd8d56852d94d00e2">QCPLegend::mSelectedParts</a></div><div class="ttdeci">SelectableParts mSelectedParts</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05234">qcustomplot.h:5234</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a74f93358d2b4a76ec95c3a5d825582a3" name="a74f93358d2b4a76ec95c3a5d825582a3"></a>
@@ -809,6 +929,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#ad1c597b1d608cfdd86e7b76819a94cfb">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19561">19561</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19562</span>{</div>
+<div class="line"><span class="lineno">19563</span>  <span class="comment">// draw background rect:</span></div>
+<div class="line"><span class="lineno">19564</span>  painter-&gt;setBrush(<a class="code hl_function" href="#ab1438d5d67304cdda3b9339da580d6bc">getBrush</a>());</div>
+<div class="line"><span class="lineno">19565</span>  painter-&gt;<a class="code hl_function" href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">setPen</a>(<a class="code hl_function" href="#a1cf9df6f2130c5ad842dc92188ab6bd7">getBorderPen</a>());</div>
+<div class="line"><span class="lineno">19566</span>  painter-&gt;drawRect(<a class="code hl_variable" href="class_q_c_p_layout_element.html#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>);</div>
+<div class="line"><span class="lineno">19567</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_element_html_a07bb4973379e75cb0fa5b032c1d24afd"><div class="ttname"><a href="class_q_c_p_layout_element.html#a07bb4973379e75cb0fa5b032c1d24afd">QCPLayoutElement::mOuterRect</a></div><div class="ttdeci">QRect mOuterRect</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l01317">qcustomplot.h:1317</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a1cf9df6f2130c5ad842dc92188ab6bd7"><div class="ttname"><a href="#a1cf9df6f2130c5ad842dc92188ab6bd7">QCPLegend::getBorderPen</a></div><div class="ttdeci">QPen getBorderPen() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19541">qcustomplot.cpp:19541</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ab1438d5d67304cdda3b9339da580d6bc"><div class="ttname"><a href="#ab1438d5d67304cdda3b9339da580d6bc">QCPLegend::getBrush</a></div><div class="ttdeci">QBrush getBrush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19551">qcustomplot.cpp:19551</a></div></div>
+<div class="ttc" id="aclass_q_c_p_painter_html_af9c7a4cd1791403901f8c5b82a150195"><div class="ttname"><a href="class_q_c_p_painter.html#af9c7a4cd1791403901f8c5b82a150195">QCPPainter::setPen</a></div><div class="ttdeci">void setPen(const QPen &amp;pen)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l00329">qcustomplot.cpp:329</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae240104de3c3a4cfc0834dbaffa07ac9" name="ae240104de3c3a4cfc0834dbaffa07ac9"></a>
@@ -834,6 +966,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05177">5177</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5177</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a56ffacb184a99eefe09a0c7181d0713d">mFont</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a56ffacb184a99eefe09a0c7181d0713d"><div class="ttname"><a href="#a56ffacb184a99eefe09a0c7181d0713d">QCPLegend::mFont</a></div><div class="ttdeci">QFont mFont</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05230">qcustomplot.h:5230</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1cf9df6f2130c5ad842dc92188ab6bd7" name="a1cf9df6f2130c5ad842dc92188ab6bd7"></a>
@@ -859,6 +995,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19541">19541</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19542</span>{</div>
+<div class="line"><span class="lineno">19543</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>) ? <a class="code hl_variable" href="#a62906c996906ae23e9f724b6ac1f7334">mSelectedBorderPen</a> : <a class="code hl_variable" href="#a52ab8342a382456131d567f962d7f9d0">mBorderPen</a>;</div>
+<div class="line"><span class="lineno">19544</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a62906c996906ae23e9f724b6ac1f7334"><div class="ttname"><a href="#a62906c996906ae23e9f724b6ac1f7334">QCPLegend::mSelectedBorderPen</a></div><div class="ttdeci">QPen mSelectedBorderPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05235">qcustomplot.h:5235</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab1438d5d67304cdda3b9339da580d6bc" name="ab1438d5d67304cdda3b9339da580d6bc"></a>
@@ -884,6 +1026,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19551">19551</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19552</span>{</div>
+<div class="line"><span class="lineno">19553</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>) ? <a class="code hl_variable" href="#ab3c7567c86d4784b1e48f76a84b3a1e2">mSelectedBrush</a> : <a class="code hl_variable" href="#a9bd7cd05a9a485e06eda513a348baf80">mBrush</a>;</div>
+<div class="line"><span class="lineno">19554</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ab3c7567c86d4784b1e48f76a84b3a1e2"><div class="ttname"><a href="#ab3c7567c86d4784b1e48f76a84b3a1e2">QCPLegend::mSelectedBrush</a></div><div class="ttdeci">QBrush mSelectedBrush</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05236">qcustomplot.h:5236</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad0f698e33db454a6c103b5206740e599" name="ad0f698e33db454a6c103b5206740e599"></a>
@@ -903,6 +1051,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns whether the legend contains <em>item</em>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4b90a442af871582df85c2bc13f91e88">hasItemWithPlottable</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19402">19402</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19403</span>{</div>
+<div class="line"><span class="lineno">19404</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19405</span>  {</div>
+<div class="line"><span class="lineno">19406</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a> == this-&gt;<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19407</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">19408</span>  }</div>
+<div class="line"><span class="lineno">19409</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">19410</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a57ab86ab8b2a3762d4c1455eb5452c88"><div class="ttname"><a href="#a57ab86ab8b2a3762d4c1455eb5452c88">QCPLegend::itemCount</a></div><div class="ttdeci">int itemCount() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19392">qcustomplot.cpp:19392</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4b90a442af871582df85c2bc13f91e88" name="a4b90a442af871582df85c2bc13f91e88"></a>
@@ -922,6 +1081,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns whether the legend contains a <a class="el" href="class_q_c_p_plottable_legend_item.html" title="A legend item representing a plottable with an icon and the plottable name.">QCPPlottableLegendItem</a> which is associated with <em>plottable</em> (e.g. a <a class="el" href="class_q_c_p_graph.html">QCPGraph</a>*). If such an item isn't in the legend, returns false.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a91e790002d8bf15a20628a8e8841e397">itemWithPlottable</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19418">19418</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19419</span>{</div>
+<div class="line"><span class="lineno">19420</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#a91e790002d8bf15a20628a8e8841e397">itemWithPlottable</a>(plottable);</div>
+<div class="line"><span class="lineno">19421</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a91e790002d8bf15a20628a8e8841e397"><div class="ttname"><a href="#a91e790002d8bf15a20628a8e8841e397">QCPLegend::itemWithPlottable</a></div><div class="ttdeci">QCPPlottableLegendItem * itemWithPlottable(const QCPAbstractPlottable *plottable) const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l19369">qcustomplot.cpp:19369</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b91d2ea68a4dd20238f660b80cd9945" name="a5b91d2ea68a4dd20238f660b80cd9945"></a>
@@ -947,6 +1112,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05181">5181</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5181</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a773ae518c3149fcabff4a2906fdacbc4">mIconBorderPen</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a773ae518c3149fcabff4a2906fdacbc4"><div class="ttname"><a href="#a773ae518c3149fcabff4a2906fdacbc4">QCPLegend::mIconBorderPen</a></div><div class="ttdeci">QPen mIconBorderPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05228">qcustomplot.h:5228</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae4f17a186558c82d2ba269f6e7164dda" name="ae4f17a186558c82d2ba269f6e7164dda"></a>
@@ -972,6 +1141,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05179">5179</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5179</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a39b972aae6c6a3fa5aa73313ab7a5765">mIconSize</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a39b972aae6c6a3fa5aa73313ab7a5765"><div class="ttname"><a href="#a39b972aae6c6a3fa5aa73313ab7a5765">QCPLegend::mIconSize</a></div><div class="ttdeci">QSize mIconSize</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05232">qcustomplot.h:5232</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a19668bb7f8fafe20d367cebf96269eaf" name="a19668bb7f8fafe20d367cebf96269eaf"></a>
@@ -997,6 +1170,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05180">5180</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5180</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8abf8843864ee9afc3f54f906c062240">mIconTextPadding</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfe9694c45104a3359d3806ed366fcf7" name="acfe9694c45104a3359d3806ed366fcf7"></a>
@@ -1017,6 +1193,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Note that the linear index depends on the current fill order (<a class="el" href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">setFillOrder</a>).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>, <a class="el" href="#a3ab274de52d2951faea45a6d975e6b3f">addItem</a>, <a class="el" href="#a91e790002d8bf15a20628a8e8841e397">itemWithPlottable</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19358">19358</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19359</span>{</div>
+<div class="line"><span class="lineno">19360</span>  <span class="keywordflow">return</span> qobject_cast&lt;QCPAbstractLegendItem*&gt;(<a class="code hl_function" href="class_q_c_p_layout_grid.html#a4288f174082555f6bd92021bdedb75dc">elementAt</a>(index));</div>
+<div class="line"><span class="lineno">19361</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layout_grid_html_a4288f174082555f6bd92021bdedb75dc"><div class="ttname"><a href="class_q_c_p_layout_grid.html#a4288f174082555f6bd92021bdedb75dc">QCPLayoutGrid::elementAt</a></div><div class="ttdeci">virtual QCPLayoutElement * elementAt(int index) const Q_DECL_OVERRIDE</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l04626">qcustomplot.cpp:4626</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a57ab86ab8b2a3762d4c1455eb5452c88" name="a57ab86ab8b2a3762d4c1455eb5452c88"></a>
@@ -1037,6 +1219,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Note that if empty cells are in the legend (e.g. by calling methods of the <a class="el" href="class_q_c_p_layout_grid.html">QCPLayoutGrid</a> base class which allows creating empty cells), they are included in the returned count.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#acfe9694c45104a3359d3806ed366fcf7">item</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19392">19392</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19393</span>{</div>
+<div class="line"><span class="lineno">19394</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="class_q_c_p_layout_grid.html#a9a8942aface780a02445ebcf14c48513">elementCount</a>();</div>
+<div class="line"><span class="lineno">19395</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a91e790002d8bf15a20628a8e8841e397" name="a91e790002d8bf15a20628a8e8841e397"></a>
@@ -1056,6 +1243,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the <a class="el" href="class_q_c_p_plottable_legend_item.html" title="A legend item representing a plottable with an icon and the plottable name.">QCPPlottableLegendItem</a> which is associated with <em>plottable</em> (e.g. a <a class="el" href="class_q_c_p_graph.html">QCPGraph</a>*). If such an item isn't in the legend, returns <code>nullptr</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4b90a442af871582df85c2bc13f91e88">hasItemWithPlottable</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19369">19369</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19370</span>{</div>
+<div class="line"><span class="lineno">19371</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19372</span>  {</div>
+<div class="line"><span class="lineno">19373</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_plottable_legend_item.html">QCPPlottableLegendItem</a> *pli = qobject_cast&lt;QCPPlottableLegendItem*&gt;(<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)))</div>
+<div class="line"><span class="lineno">19374</span>    {</div>
+<div class="line"><span class="lineno">19375</span>      <span class="keywordflow">if</span> (pli-&gt;plottable() == plottable)</div>
+<div class="line"><span class="lineno">19376</span>        <span class="keywordflow">return</span> pli;</div>
+<div class="line"><span class="lineno">19377</span>    }</div>
+<div class="line"><span class="lineno">19378</span>  }</div>
+<div class="line"><span class="lineno">19379</span>  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">19380</span>}</div>
+<div class="ttc" id="aclass_q_c_p_plottable_legend_item_html"><div class="ttname"><a href="class_q_c_p_plottable_legend_item.html">QCPPlottableLegendItem</a></div><div class="ttdoc">A legend item representing a plottable with an icon and the plottable name.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05114">qcustomplot.h:5115</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2b225cefb5eb267771e2c7c44fd2b408" name="a2b225cefb5eb267771e2c7c44fd2b408"></a>
@@ -1083,6 +1284,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#ab4bb5c5a958451f5f153fdce350f13cf">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19624">19624</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19625</span>{</div>
+<div class="line"><span class="lineno">19626</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a> &amp;&amp; !<a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;<a class="code hl_variable" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">legend</a>)</div>
+<div class="line"><span class="lineno">19627</span>    <a class="code hl_function" href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">parentPlot</a>-&gt;<a class="code hl_variable" href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">legend</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">19628</span>}</div>
+<div class="ttc" id="aclass_q_c_p_layerable_html_a36ed5b292b90934b524a4e5866a3526c"><div class="ttname"><a href="class_q_c_p_layerable.html#a36ed5b292b90934b524a4e5866a3526c">QCPLayerable::parentPlot</a></div><div class="ttdeci">QCustomPlot * parentPlot() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00767">qcustomplot.h:767</a></div></div>
+<div class="ttc" id="aclass_q_custom_plot_html_a73da53368aa4c2db3d874cf0db50d140"><div class="ttname"><a href="class_q_custom_plot.html#a73da53368aa4c2db3d874cf0db50d140">QCustomPlot::legend</a></div><div class="ttdeci">QCPLegend * legend</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03945">qcustomplot.h:3945</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac91595c3eaa746fe6321d2eb952c63bb" name="ac91595c3eaa746fe6321d2eb952c63bb"></a>
@@ -1105,6 +1314,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns true, if successful. Unlike <a class="el" href="class_q_c_p_layout.html#a2403f684fee3ce47132faaeed00bb066">QCPLayoutGrid::removeAt</a>, this method only removes elements derived from <a class="el" href="class_q_c_p_abstract_legend_item.html">QCPAbstractLegendItem</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>, <a class="el" href="#a24795c7250eb5214fcea16b7217b4dfb">clearItems</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19451">19451</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19452</span>{</div>
+<div class="line"><span class="lineno">19453</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_abstract_legend_item.html">QCPAbstractLegendItem</a> *ali = <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(index))</div>
+<div class="line"><span class="lineno">19454</span>  {</div>
+<div class="line"><span class="lineno">19455</span>    <span class="keywordtype">bool</span> success = <a class="code hl_function" href="class_q_c_p_layout.html#a6c58f537d8086f352576ab7c5b15d0bc">remove</a>(ali);</div>
+<div class="line"><span class="lineno">19456</span>    <span class="keywordflow">if</span> (success)</div>
+<div class="line"><span class="lineno">19457</span>      <a class="code hl_function" href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">setFillOrder</a>(<a class="code hl_function" href="class_q_c_p_layout_grid.html#a6cb6563a13759222ad92ae397bd6c27e">fillOrder</a>(), <span class="keyword">true</span>); <span class="comment">// gets rid of empty cell by reordering</span></div>
+<div class="line"><span class="lineno">19458</span>    <span class="keywordflow">return</span> success;</div>
+<div class="line"><span class="lineno">19459</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">19460</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">19461</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html">QCPAbstractLegendItem</a></div><div class="ttdoc">The abstract base class for all entries in a QCPLegend.</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05050">qcustomplot.h:5051</a></div></div>
+<div class="ttc" id="aclass_q_c_p_layout_html_a6c58f537d8086f352576ab7c5b15d0bc"><div class="ttname"><a href="class_q_c_p_layout.html#a6c58f537d8086f352576ab7c5b15d0bc">QCPLayout::remove</a></div><div class="ttdeci">bool remove(QCPLayoutElement *element)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l03761">qcustomplot.cpp:3761</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2aea4ec6da2d454dd0b241a254d65082" name="a2aea4ec6da2d454dd0b241a254d65082"></a>
@@ -1127,6 +1350,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns true, if successful.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a24795c7250eb5214fcea16b7217b4dfb">clearItems</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19475">19475</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19476</span>{</div>
+<div class="line"><span class="lineno">19477</span>  <span class="keywordtype">bool</span> success = <a class="code hl_function" href="class_q_c_p_layout.html#a6c58f537d8086f352576ab7c5b15d0bc">remove</a>(<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>);</div>
+<div class="line"><span class="lineno">19478</span>  <span class="keywordflow">if</span> (success)</div>
+<div class="line"><span class="lineno">19479</span>    <a class="code hl_function" href="class_q_c_p_layout_grid.html#affc2f3cfd22f28698c5b29b960d2a391">setFillOrder</a>(<a class="code hl_function" href="class_q_c_p_layout_grid.html#a6cb6563a13759222ad92ae397bd6c27e">fillOrder</a>(), <span class="keyword">true</span>); <span class="comment">// gets rid of empty cell by reordering</span></div>
+<div class="line"><span class="lineno">19480</span>  <span class="keywordflow">return</span> success;</div>
+<div class="line"><span class="lineno">19481</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8a77300fd0976d6bdd8000f4e8d114b8" name="a8a77300fd0976d6bdd8000f4e8d114b8"></a>
@@ -1177,6 +1408,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05182">5182</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5182</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="add8204bf083c82cc5def29093501a017" name="add8204bf083c82cc5def29093501a017"></a>
@@ -1202,6 +1436,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05184">5184</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5184</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a62906c996906ae23e9f724b6ac1f7334">mSelectedBorderPen</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a77dfa9340f68ca195f1817a93db09757" name="a77dfa9340f68ca195f1817a93db09757"></a>
@@ -1227,6 +1464,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05186">5186</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5186</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab3c7567c86d4784b1e48f76a84b3a1e2">mSelectedBrush</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a483ffd35d64710a165da87b9d9f11110" name="a483ffd35d64710a165da87b9d9f11110"></a>
@@ -1252,6 +1492,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05187">5187</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5187</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a86ce8f6c20a2f51a48eaf3c24ce16805">mSelectedFont</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a86ce8f6c20a2f51a48eaf3c24ce16805"><div class="ttname"><a href="#a86ce8f6c20a2f51a48eaf3c24ce16805">QCPLegend::mSelectedFont</a></div><div class="ttdeci">QFont mSelectedFont</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05237">qcustomplot.h:5237</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad8eb320ca3a25928982a65163e8f883b" name="ad8eb320ca3a25928982a65163e8f883b"></a>
@@ -1277,6 +1521,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05185">5185</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5185</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7429ac0e64c7b90b649b4d8f4cc5fa55">mSelectedIconBorderPen</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a7429ac0e64c7b90b649b4d8f4cc5fa55"><div class="ttname"><a href="#a7429ac0e64c7b90b649b4d8f4cc5fa55">QCPLegend::mSelectedIconBorderPen</a></div><div class="ttdeci">QPen mSelectedIconBorderPen</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05235">qcustomplot.h:5235</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7d9e567d5c551e09cd9bcc4306c5532" name="ac7d9e567d5c551e09cd9bcc4306c5532"></a>
@@ -1296,6 +1544,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the legend items that are currently selected. If no items are selected, the list is empty.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_abstract_legend_item.html#a6eed93b0ab99cb3eabb043fb08179c2b">QCPAbstractLegendItem::setSelected</a>, setSelectable </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19502">19502</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19503</span>{</div>
+<div class="line"><span class="lineno">19504</span>  QList&lt;QCPAbstractLegendItem*&gt; result;</div>
+<div class="line"><span class="lineno">19505</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19506</span>  {</div>
+<div class="line"><span class="lineno">19507</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_q_c_p_abstract_legend_item.html">QCPAbstractLegendItem</a> *ali = <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19508</span>    {</div>
+<div class="line"><span class="lineno">19509</span>      <span class="keywordflow">if</span> (ali-&gt;selected())</div>
+<div class="line"><span class="lineno">19510</span>        result.append(ali);</div>
+<div class="line"><span class="lineno">19511</span>    }</div>
+<div class="line"><span class="lineno">19512</span>  }</div>
+<div class="line"><span class="lineno">19513</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">19514</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3efbf879f6936ec337690985e567dc6f" name="a3efbf879f6936ec337690985e567dc6f"></a>
@@ -1313,6 +1575,25 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19109">19109</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19110</span>{</div>
+<div class="line"><span class="lineno">19111</span>  <span class="comment">// check whether any legend elements selected, if yes, add spItems to return value</span></div>
+<div class="line"><span class="lineno">19112</span>  <span class="keywordtype">bool</span> hasSelectedItems = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">19113</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19114</span>  {</div>
+<div class="line"><span class="lineno">19115</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i) &amp;&amp; <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)-&gt;<a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#adf427dbb05d5f1a8e84c6abcb05becdf">selected</a>())</div>
+<div class="line"><span class="lineno">19116</span>    {</div>
+<div class="line"><span class="lineno">19117</span>      hasSelectedItems = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">19118</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">19119</span>    }</div>
+<div class="line"><span class="lineno">19120</span>  }</div>
+<div class="line"><span class="lineno">19121</span>  <span class="keywordflow">if</span> (hasSelectedItems)</div>
+<div class="line"><span class="lineno">19122</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> | <a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>;</div>
+<div class="line"><span class="lineno">19123</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">19124</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> &amp; ~spItems;</div>
+<div class="line"><span class="lineno">19125</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_adf427dbb05d5f1a8e84c6abcb05becdf"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#adf427dbb05d5f1a8e84c6abcb05becdf">QCPAbstractLegendItem::selected</a></div><div class="ttdeci">bool selected() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05072">qcustomplot.h:5072</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab9b469b27787bfb2ce6c8978a31821af" name="ab9b469b27787bfb2ce6c8978a31821af"></a>
@@ -1338,6 +1619,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05188">5188</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5188</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a6c25c8796c6e73e983aae6024965f2be">mSelectedTextColor</a>; }</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a6c25c8796c6e73e983aae6024965f2be"><div class="ttname"><a href="#a6c25c8796c6e73e983aae6024965f2be">QCPLegend::mSelectedTextColor</a></div><div class="ttdeci">QColor mSelectedTextColor</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05238">qcustomplot.h:5238</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a71f54a05c3e5b1a1ade1864422cd642e" name="a71f54a05c3e5b1a1ade1864422cd642e"></a>
@@ -1379,6 +1664,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#a7498c2d0d081cf7cad0fb3bb93aa0e91">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19585">19585</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19586</span>{</div>
+<div class="line"><span class="lineno">19587</span>  Q_UNUSED(event)</div>
+<div class="line"><span class="lineno">19588</span>  <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> = <a class="code hl_function" href="#a3efbf879f6936ec337690985e567dc6f">selectedParts</a>(); <span class="comment">// in case item selection has changed</span></div>
+<div class="line"><span class="lineno">19589</span>  <span class="keywordflow">if</span> (details.value&lt;<a class="code hl_enumeration" href="#a5404de8bc1e4a994ca4ae69e2c7072f1">SelectablePart</a>&gt;() == <a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a> &amp;&amp; <a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>))</div>
+<div class="line"><span class="lineno">19590</span>  {</div>
+<div class="line"><span class="lineno">19591</span>    SelectableParts selBefore = <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>;</div>
+<div class="line"><span class="lineno">19592</span>    <a class="code hl_function" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a>(additive ? <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>^<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a> : <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>|<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>); <span class="comment">// no need to unset spItems in !additive case, because they will be deselected by QCustomPlot (they&#39;re normal QCPLayerables with own deselectEvent)</span></div>
+<div class="line"><span class="lineno">19593</span>    <span class="keywordflow">if</span> (selectionStateChanged)</div>
+<div class="line"><span class="lineno">19594</span>      *selectionStateChanged = <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> != selBefore;</div>
+<div class="line"><span class="lineno">19595</span>  }</div>
+<div class="line"><span class="lineno">19596</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a5404de8bc1e4a994ca4ae69e2c7072f1"><div class="ttname"><a href="#a5404de8bc1e4a994ca4ae69e2c7072f1">QCPLegend::SelectablePart</a></div><div class="ttdeci">SelectablePart</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05163">qcustomplot.h:5163</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1a2075e462984f9ff51d9c75bda3581b" name="a1a2075e462984f9ff51d9c75bda3581b"></a>
@@ -1406,6 +1705,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layerable.html#a908c9edda761886f33893be326dab77d">QCPLayerable</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19612">19612</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19613</span>{</div>
+<div class="line"><span class="lineno">19614</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a269c9af298e257d1108edec0432b5513">QCP::iSelectLegend</a>;</div>
+<div class="line"><span class="lineno">19615</span>}</div>
+<div class="ttc" id="anamespace_q_c_p_html_a2ad6bb6281c7c2d593d4277b44c2b037a269c9af298e257d1108edec0432b5513"><div class="ttname"><a href="namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037a269c9af298e257d1108edec0432b5513">QCP::iSelectLegend</a></div><div class="ttdeci">@ iSelectLegend</div><div class="ttdoc">0x020 Legends are selectable (or their child items, see QCPLegend::setSelectableParts)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l00288">qcustomplot.h:287</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a82c88464edac07a9eefaf3906268df3b" name="a82c88464edac07a9eefaf3906268df3b"></a>
@@ -1472,6 +1777,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_q_c_p_layout_element.html#a62d60f1b0ee9bb23e38811d71586d79c">QCPLayoutElement</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19570">19570</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19571</span>{</div>
+<div class="line"><span class="lineno">19572</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">19573</span>  <span class="keywordflow">if</span> (onlySelectable &amp;&amp; !<a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>))</div>
+<div class="line"><span class="lineno">19574</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">19575</span>  </div>
+<div class="line"><span class="lineno">19576</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_q_c_p_layout_element.html#a07bb4973379e75cb0fa5b032c1d24afd">mOuterRect</a>.contains(pos.toPoint()))</div>
+<div class="line"><span class="lineno">19577</span>  {</div>
+<div class="line"><span class="lineno">19578</span>    <span class="keywordflow">if</span> (details) details-&gt;setValue(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4">spLegendBox</a>);</div>
+<div class="line"><span class="lineno">19579</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_q_c_p_layerable.html#aa2a528433e44db02b8aef23c1f9f90ed">mParentPlot</a>-&gt;<a class="code hl_function" href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">selectionTolerance</a>()*0.99;</div>
+<div class="line"><span class="lineno">19580</span>  }</div>
+<div class="line"><span class="lineno">19581</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">19582</span>}</div>
+<div class="ttc" id="aclass_q_custom_plot_html_a5441d11013afeaf4b8f2ea06e8624a25"><div class="ttname"><a href="class_q_custom_plot.html#a5441d11013afeaf4b8f2ea06e8624a25">QCustomPlot::selectionTolerance</a></div><div class="ttdeci">int selectionTolerance() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l03842">qcustomplot.h:3842</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a866a9e3f5267de7430a6c7f26a61db9f" name="a866a9e3f5267de7430a6c7f26a61db9f"></a>
@@ -1490,6 +1810,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the pen, the border of the entire legend is drawn with. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19130">19130</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19131</span>{</div>
+<div class="line"><span class="lineno">19132</span>  <a class="code hl_variable" href="#a52ab8342a382456131d567f962d7f9d0">mBorderPen</a> = pen;</div>
+<div class="line"><span class="lineno">19133</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a497bbcd38baa3598c08e2b3f48103f23" name="a497bbcd38baa3598c08e2b3f48103f23"></a>
@@ -1508,6 +1833,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the brush of the legend background. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19138">19138</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19139</span>{</div>
+<div class="line"><span class="lineno">19140</span>  <a class="code hl_variable" href="#a9bd7cd05a9a485e06eda513a348baf80">mBrush</a> = <a class="code hl_function" href="#aaddafd5cbe9175512311350bb3b563e6">brush</a>;</div>
+<div class="line"><span class="lineno">19141</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_aaddafd5cbe9175512311350bb3b563e6"><div class="ttname"><a href="#aaddafd5cbe9175512311350bb3b563e6">QCPLegend::brush</a></div><div class="ttdeci">QBrush brush() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05176">qcustomplot.h:5176</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa4cda8499e3cb0f3be415edc02984c73" name="aa4cda8499e3cb0f3be415edc02984c73"></a>
@@ -1528,6 +1859,18 @@ Additional Inherited Members</h2></td></tr>
 <p>This function will also set <em>font</em> on all already existing legend items.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_abstract_legend_item.html#a409c53455d8112f71d70c0c43eb10265">QCPAbstractLegendItem::setFont</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19152">19152</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19153</span>{</div>
+<div class="line"><span class="lineno">19154</span>  <a class="code hl_variable" href="#a56ffacb184a99eefe09a0c7181d0713d">mFont</a> = <a class="code hl_function" href="#ae240104de3c3a4cfc0834dbaffa07ac9">font</a>;</div>
+<div class="line"><span class="lineno">19155</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19156</span>  {</div>
+<div class="line"><span class="lineno">19157</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19158</span>      <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)-&gt;<a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#a409c53455d8112f71d70c0c43eb10265">setFont</a>(<a class="code hl_variable" href="#a56ffacb184a99eefe09a0c7181d0713d">mFont</a>);</div>
+<div class="line"><span class="lineno">19159</span>  }</div>
+<div class="line"><span class="lineno">19160</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a409c53455d8112f71d70c0c43eb10265"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a409c53455d8112f71d70c0c43eb10265">QCPAbstractLegendItem::setFont</a></div><div class="ttdeci">void setFont(const QFont &amp;font)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18772">qcustomplot.cpp:18772</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_ae240104de3c3a4cfc0834dbaffa07ac9"><div class="ttname"><a href="#ae240104de3c3a4cfc0834dbaffa07ac9">QCPLegend::font</a></div><div class="ttdeci">QFont font() const</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05177">qcustomplot.h:5177</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2f2c93d18a651f4ff294bb3f026f49b8" name="a2f2c93d18a651f4ff294bb3f026f49b8"></a>
@@ -1547,6 +1890,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the pen used to draw a border around each legend icon. Legend items that draw an icon (e.g. a visual representation of the graph) will use this pen by default.</p>
 <p>If no border is wanted, set this to <em>Qt::NoPen</em>. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19214">19214</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19215</span>{</div>
+<div class="line"><span class="lineno">19216</span>  <a class="code hl_variable" href="#a773ae518c3149fcabff4a2906fdacbc4">mIconBorderPen</a> = pen;</div>
+<div class="line"><span class="lineno">19217</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8b0740cce488bf7010da6beda6898984" name="a8b0740cce488bf7010da6beda6898984"></a>
@@ -1565,6 +1913,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the size of legend icons. Legend items that draw an icon (e.g. a visual representation of the graph) will use this size by default. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19185">19185</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19186</span>{</div>
+<div class="line"><span class="lineno">19187</span>  <a class="code hl_variable" href="#a39b972aae6c6a3fa5aa73313ab7a5765">mIconSize</a> = size;</div>
+<div class="line"><span class="lineno">19188</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96b1a37fd4ee6a9778e6e54fe56ab6c2" name="a96b1a37fd4ee6a9778e6e54fe56ab6c2"></a>
@@ -1587,6 +1940,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19192">19192</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19193</span>{</div>
+<div class="line"><span class="lineno">19194</span>  <a class="code hl_variable" href="#a39b972aae6c6a3fa5aa73313ab7a5765">mIconSize</a>.setWidth(width);</div>
+<div class="line"><span class="lineno">19195</span>  <a class="code hl_variable" href="#a39b972aae6c6a3fa5aa73313ab7a5765">mIconSize</a>.setHeight(height);</div>
+<div class="line"><span class="lineno">19196</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62973bd69d5155e8ea3141366e8968f6" name="a62973bd69d5155e8ea3141366e8968f6"></a>
@@ -1605,6 +1964,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the horizontal space in pixels between the legend icon and the text next to it. Legend items that draw an icon (e.g. a visual representation of the graph) and text (e.g. the name of the graph) will use this space by default. </p>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19203">19203</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19204</span>{</div>
+<div class="line"><span class="lineno">19205</span>  <a class="code hl_variable" href="#a8abf8843864ee9afc3f54f906c062240">mIconTextPadding</a> = padding;</div>
+<div class="line"><span class="lineno">19206</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ce60aa8bbd89f62ae4fa83ac6c60110" name="a9ce60aa8bbd89f62ae4fa83ac6c60110"></a>
@@ -1625,6 +1989,16 @@ Additional Inherited Members</h2></td></tr>
 <p>However, even when <em>selectable</em> is set to a value not allowing the selection of a specific part, it is still possible to set the selection of this part manually, by calling <a class="el" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a> directly.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a5404de8bc1e4a994ca4ae69e2c7072f1">SelectablePart</a>, <a class="el" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19229">19229</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19230</span>{</div>
+<div class="line"><span class="lineno">19231</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a> != selectable)</div>
+<div class="line"><span class="lineno">19232</span>  {</div>
+<div class="line"><span class="lineno">19233</span>    <a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a> = selectable;</div>
+<div class="line"><span class="lineno">19234</span>    emit <a class="code hl_signal" href="#a8a77300fd0976d6bdd8000f4e8d114b8">selectableChanged</a>(<a class="code hl_variable" href="#a179b4d5c1bea723b76e402ff48f0d7fb">mSelectableParts</a>);</div>
+<div class="line"><span class="lineno">19235</span>  }</div>
+<div class="line"><span class="lineno">19236</span>}</div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a8a77300fd0976d6bdd8000f4e8d114b8"><div class="ttname"><a href="#a8a77300fd0976d6bdd8000f4e8d114b8">QCPLegend::selectableChanged</a></div><div class="ttdeci">void selectableChanged(QCPLegend::SelectableParts parts)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2c35d262953a25d96b6112653fbefc88" name="a2c35d262953a25d96b6112653fbefc88"></a>
@@ -1644,6 +2018,11 @@ Additional Inherited Members</h2></td></tr>
 <p>When the legend box is selected, this pen is used to draw the border instead of the normal pen set via <a class="el" href="#a866a9e3f5267de7430a6c7f26a61db9f">setBorderPen</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a>, <a class="el" href="#a9ce60aa8bbd89f62ae4fa83ac6c60110">setSelectableParts</a>, <a class="el" href="#a875227f3219c9799464631dec5e8f1bd">setSelectedBrush</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19290">19290</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19291</span>{</div>
+<div class="line"><span class="lineno">19292</span>  <a class="code hl_variable" href="#a62906c996906ae23e9f724b6ac1f7334">mSelectedBorderPen</a> = pen;</div>
+<div class="line"><span class="lineno">19293</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a875227f3219c9799464631dec5e8f1bd" name="a875227f3219c9799464631dec5e8f1bd"></a>
@@ -1663,6 +2042,11 @@ Additional Inherited Members</h2></td></tr>
 <p>When the legend box is selected, this brush is used to draw the legend background instead of the normal brush set via <a class="el" href="#a497bbcd38baa3598c08e2b3f48103f23">setBrush</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a>, <a class="el" href="#a9ce60aa8bbd89f62ae4fa83ac6c60110">setSelectableParts</a>, <a class="el" href="#a2c35d262953a25d96b6112653fbefc88">setSelectedBorderPen</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19311">19311</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19312</span>{</div>
+<div class="line"><span class="lineno">19313</span>  <a class="code hl_variable" href="#ab3c7567c86d4784b1e48f76a84b3a1e2">mSelectedBrush</a> = <a class="code hl_function" href="#aaddafd5cbe9175512311350bb3b563e6">brush</a>;</div>
+<div class="line"><span class="lineno">19314</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab580a01c3c0a239374ed66c29edf5ad2" name="ab580a01c3c0a239374ed66c29edf5ad2"></a>
@@ -1683,6 +2067,17 @@ Additional Inherited Members</h2></td></tr>
 <p>This function will also set <em>font</em> on all already existing legend items.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa4cda8499e3cb0f3be415edc02984c73">setFont</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#a91db5aee48617a9d3206e61376807365">QCPAbstractLegendItem::setSelectedFont</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19323">19323</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19324</span>{</div>
+<div class="line"><span class="lineno">19325</span>  <a class="code hl_variable" href="#a86ce8f6c20a2f51a48eaf3c24ce16805">mSelectedFont</a> = <a class="code hl_function" href="#ae240104de3c3a4cfc0834dbaffa07ac9">font</a>;</div>
+<div class="line"><span class="lineno">19326</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19327</span>  {</div>
+<div class="line"><span class="lineno">19328</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19329</span>      <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)-&gt;<a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#a91db5aee48617a9d3206e61376807365">setSelectedFont</a>(<a class="code hl_function" href="#ae240104de3c3a4cfc0834dbaffa07ac9">font</a>);</div>
+<div class="line"><span class="lineno">19330</span>  }</div>
+<div class="line"><span class="lineno">19331</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a91db5aee48617a9d3206e61376807365"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a91db5aee48617a9d3206e61376807365">QCPAbstractLegendItem::setSelectedFont</a></div><div class="ttdeci">void setSelectedFont(const QFont &amp;font)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18793">qcustomplot.cpp:18793</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ade93aabe9bcccaf9cf46cec22c658027" name="ade93aabe9bcccaf9cf46cec22c658027"></a>
@@ -1702,6 +2097,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the pen legend items will use to draw their icon borders, when they are selected.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2aee309bb5c2a794b1987f3fc97f8ad8">setSelectedParts</a>, <a class="el" href="#a9ce60aa8bbd89f62ae4fa83ac6c60110">setSelectableParts</a>, <a class="el" href="#ab580a01c3c0a239374ed66c29edf5ad2">setSelectedFont</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19300">19300</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19301</span>{</div>
+<div class="line"><span class="lineno">19302</span>  <a class="code hl_variable" href="#a7429ac0e64c7b90b649b4d8f4cc5fa55">mSelectedIconBorderPen</a> = pen;</div>
+<div class="line"><span class="lineno">19303</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2aee309bb5c2a794b1987f3fc97f8ad8" name="a2aee309bb5c2a794b1987f3fc97f8ad8"></a>
@@ -1725,6 +2125,33 @@ Additional Inherited Members</h2></td></tr>
 <p>Note that it doesn't make sense to set the selected state <a class="el" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a> here when it wasn't set before, because there's no way to specify which exact items to newly select. Do this by calling <a class="el" href="class_q_c_p_abstract_legend_item.html#a6eed93b0ab99cb3eabb043fb08179c2b">QCPAbstractLegendItem::setSelected</a> directly on the legend item you wish to select.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a5404de8bc1e4a994ca4ae69e2c7072f1">SelectablePart</a>, <a class="el" href="#a9ce60aa8bbd89f62ae4fa83ac6c60110">setSelectableParts</a>, <a class="el" href="#ae11e1229abeec1abdbd22a57f2b26a84">selectTest</a>, <a class="el" href="#a2c35d262953a25d96b6112653fbefc88">setSelectedBorderPen</a>, <a class="el" href="#ade93aabe9bcccaf9cf46cec22c658027">setSelectedIconBorderPen</a>, <a class="el" href="#a875227f3219c9799464631dec5e8f1bd">setSelectedBrush</a>, <a class="el" href="#ab580a01c3c0a239374ed66c29edf5ad2">setSelectedFont</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19259">19259</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19260</span>{</div>
+<div class="line"><span class="lineno">19261</span>  SelectableParts newSelected = selected;</div>
+<div class="line"><span class="lineno">19262</span>  <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> = this-&gt;<a class="code hl_function" href="#a3efbf879f6936ec337690985e567dc6f">selectedParts</a>(); <span class="comment">// update mSelectedParts in case item selection changed</span></div>
+<div class="line"><span class="lineno">19263</span> </div>
+<div class="line"><span class="lineno">19264</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> != newSelected)</div>
+<div class="line"><span class="lineno">19265</span>  {</div>
+<div class="line"><span class="lineno">19266</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>) &amp;&amp; newSelected.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>)) <span class="comment">// attempt to set spItems flag (can&#39;t do that)</span></div>
+<div class="line"><span class="lineno">19267</span>    {</div>
+<div class="line"><span class="lineno">19268</span>      qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; <span class="stringliteral">&quot;spItems flag can not be set, it can only be unset with this function&quot;</span>;</div>
+<div class="line"><span class="lineno">19269</span>      newSelected &amp;= ~spItems;</div>
+<div class="line"><span class="lineno">19270</span>    }</div>
+<div class="line"><span class="lineno">19271</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>) &amp;&amp; !newSelected.testFlag(<a class="code hl_enumvalue" href="#a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7">spItems</a>)) <span class="comment">// spItems flag was unset, so clear item selection</span></div>
+<div class="line"><span class="lineno">19272</span>    {</div>
+<div class="line"><span class="lineno">19273</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19274</span>      {</div>
+<div class="line"><span class="lineno">19275</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19276</span>          <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)-&gt;<a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#a6eed93b0ab99cb3eabb043fb08179c2b">setSelected</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">19277</span>      }</div>
+<div class="line"><span class="lineno">19278</span>    }</div>
+<div class="line"><span class="lineno">19279</span>    <a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a> = newSelected;</div>
+<div class="line"><span class="lineno">19280</span>    emit <a class="code hl_signal" href="#a82c88464edac07a9eefaf3906268df3b">selectionChanged</a>(<a class="code hl_variable" href="#a917a34dd2856baafd8d56852d94d00e2">mSelectedParts</a>);</div>
+<div class="line"><span class="lineno">19281</span>  }</div>
+<div class="line"><span class="lineno">19282</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a6eed93b0ab99cb3eabb043fb08179c2b"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a6eed93b0ab99cb3eabb043fb08179c2b">QCPAbstractLegendItem::setSelected</a></div><div class="ttdeci">Q_SLOT void setSelected(bool selected)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18831">qcustomplot.cpp:18831</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a82c88464edac07a9eefaf3906268df3b"><div class="ttname"><a href="#a82c88464edac07a9eefaf3906268df3b">QCPLegend::selectionChanged</a></div><div class="ttdeci">void selectionChanged(QCPLegend::SelectableParts parts)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7674dfc7a1f30e1abd1018c0ed45e0bc" name="a7674dfc7a1f30e1abd1018c0ed45e0bc"></a>
@@ -1745,6 +2172,17 @@ Additional Inherited Members</h2></td></tr>
 <p>This function will also set <em>color</em> on all already existing legend items.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae1eb239ff4a4632fe1b6c3e668d845c6">setTextColor</a>, <a class="el" href="class_q_c_p_abstract_legend_item.html#a4d01d008ee1a5bfe9905b0397a421936">QCPAbstractLegendItem::setSelectedTextColor</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19340">19340</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19341</span>{</div>
+<div class="line"><span class="lineno">19342</span>  <a class="code hl_variable" href="#a6c25c8796c6e73e983aae6024965f2be">mSelectedTextColor</a> = color;</div>
+<div class="line"><span class="lineno">19343</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19344</span>  {</div>
+<div class="line"><span class="lineno">19345</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19346</span>      <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)-&gt;<a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#a4d01d008ee1a5bfe9905b0397a421936">setSelectedTextColor</a>(color);</div>
+<div class="line"><span class="lineno">19347</span>  }</div>
+<div class="line"><span class="lineno">19348</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a4d01d008ee1a5bfe9905b0397a421936"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a4d01d008ee1a5bfe9905b0397a421936">QCPAbstractLegendItem::setSelectedTextColor</a></div><div class="ttdeci">void setSelectedTextColor(const QColor &amp;color)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18804">qcustomplot.cpp:18804</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae1eb239ff4a4632fe1b6c3e668d845c6" name="ae1eb239ff4a4632fe1b6c3e668d845c6"></a>
@@ -1765,6 +2203,18 @@ Additional Inherited Members</h2></td></tr>
 <p>This function will also set <em>color</em> on all already existing legend items.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_abstract_legend_item.html#a6ebace6aaffaedcdab2d74e88acc2d1e">QCPAbstractLegendItem::setTextColor</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8cpp_source.html#l19171">19171</a> of file <a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">19172</span>{</div>
+<div class="line"><span class="lineno">19173</span>  <a class="code hl_variable" href="#a478b2d809a7390e9ff8f8bb70d6bd9fe">mTextColor</a> = color;</div>
+<div class="line"><span class="lineno">19174</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_function" href="#a57ab86ab8b2a3762d4c1455eb5452c88">itemCount</a>(); ++i)</div>
+<div class="line"><span class="lineno">19175</span>  {</div>
+<div class="line"><span class="lineno">19176</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i))</div>
+<div class="line"><span class="lineno">19177</span>      <a class="code hl_function" href="#acfe9694c45104a3359d3806ed366fcf7">item</a>(i)-&gt;<a class="code hl_function" href="class_q_c_p_abstract_legend_item.html#a6ebace6aaffaedcdab2d74e88acc2d1e">setTextColor</a>(color);</div>
+<div class="line"><span class="lineno">19178</span>  }</div>
+<div class="line"><span class="lineno">19179</span>}</div>
+<div class="ttc" id="aclass_q_c_p_abstract_legend_item_html_a6ebace6aaffaedcdab2d74e88acc2d1e"><div class="ttname"><a href="class_q_c_p_abstract_legend_item.html#a6ebace6aaffaedcdab2d74e88acc2d1e">QCPAbstractLegendItem::setTextColor</a></div><div class="ttdeci">void setTextColor(const QColor &amp;color)</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8cpp_source.html#l18782">qcustomplot.cpp:18782</a></div></div>
+<div class="ttc" id="aclass_q_c_p_legend_html_a478b2d809a7390e9ff8f8bb70d6bd9fe"><div class="ttname"><a href="#a478b2d809a7390e9ff8f8bb70d6bd9fe">QCPLegend::mTextColor</a></div><div class="ttdeci">QColor mTextColor</div><div class="ttdef"><b>Definition</b> <a href="qcustomplot_8h_source.html#l05231">qcustomplot.h:5231</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa96d8f1a183ec2be8c0461c0abebd6db" name="aa96d8f1a183ec2be8c0461c0abebd6db"></a>
@@ -1790,6 +2240,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05178">5178</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5178</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a478b2d809a7390e9ff8f8bb70d6bd9fe">mTextColor</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -1813,6 +2266,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05257">5257</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a1cdf9df76adcfae45261690aa0ca2198" name="a1cdf9df76adcfae45261690aa0ca2198"></a>
@@ -1834,6 +2289,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05256">5256</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1858,6 +2315,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05228">5228</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a9bd7cd05a9a485e06eda513a348baf80" name="a9bd7cd05a9a485e06eda513a348baf80"></a>
@@ -1879,6 +2338,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05229">5229</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1902,6 +2363,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05230">5230</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a773ae518c3149fcabff4a2906fdacbc4" name="a773ae518c3149fcabff4a2906fdacbc4"></a>
@@ -1923,6 +2386,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05228">5228</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1946,6 +2411,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05232">5232</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a8abf8843864ee9afc3f54f906c062240" name="a8abf8843864ee9afc3f54f906c062240"></a>
@@ -1967,6 +2434,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05233">5233</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1990,6 +2459,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05234">5234</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a62906c996906ae23e9f724b6ac1f7334" name="a62906c996906ae23e9f724b6ac1f7334"></a>
@@ -2011,6 +2482,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05235">5235</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -2034,6 +2507,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05236">5236</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a86ce8f6c20a2f51a48eaf3c24ce16805" name="a86ce8f6c20a2f51a48eaf3c24ce16805"></a>
@@ -2055,6 +2530,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05237">5237</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -2078,6 +2555,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05235">5235</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a917a34dd2856baafd8d56852d94d00e2" name="a917a34dd2856baafd8d56852d94d00e2"></a>
@@ -2099,6 +2578,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05234">5234</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -2122,6 +2603,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05238">5238</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <a id="a478b2d809a7390e9ff8f8bb70d6bd9fe" name="a478b2d809a7390e9ff8f8bb70d6bd9fe"></a>
@@ -2144,11 +2627,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l05231">5231</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a></li>
-<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp.html">qcustomplot.cpp</a></li>
+<li>C:/Users/anton/Documents/QtProjects/GithubPublic/UCO-DWM1001-DEV/src/<a class="el" href="qcustomplot_8cpp_source.html">qcustomplot.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,2760 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+QCPPolarAxisRadial Class Reference\par \pard\plain 
+{\tc\tcl2 \v QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial}
+{\bkmkstart AAAAAAADVO}
+{\bkmkend AAAAAAADVO}
+\par
+{
+{\f2 #include <qcustomplot.h>}}\par
+Inheritance diagram for QCPPolarAxisRadial:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_q_c_p_polar_axis_radial.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Types\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b AngleReference} \{ {\b arAbsolute}
+, {\b arAngularAxis}
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b ScaleType} \{ {\b stLinear}
+, {\b stLogarithmic}
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b SelectablePart} \{ {\b spNone} = 0
+, {\b spAxis} = 0x001
+, {\b spTickLabels} = 0x002
+, {\b spAxisLabel} = 0x004
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b LabelMode} \{ {\b lmUpright}
+, {\b lmRotated}
+ \}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Signals\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b rangeChanged} (const {\b QCPRange} &newRange)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b rangeChanged} (const {\b QCPRange} &newRange, const {\b QCPRange} &oldRange)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b scaleTypeChanged} ({\b QCPPolarAxisRadial::ScaleType} {\b scaleType})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b selectionChanged} (const QCPPolarAxisRadial::SelectableParts &parts)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b selectableChanged} (const QCPPolarAxisRadial::SelectableParts &parts)\par
+}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Signals inherited from {\b QCPLayerable}\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b layerChanged} ({\b QCPLayer} *newLayer)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPPolarAxisRadial} ({\b QCPPolarAxisAngular} *parent)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b ~QCPPolarAxisRadial} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b rangeDrag} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b rangeZoom} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b rangeZoomFactor} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPPolarAxisAngular} * {\b angularAxis} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ScaleType} {\b scaleType} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const {\b QCPRange} {\b range} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b rangeReversed} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b angle} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b AngleReference} {\b angleReference} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QSharedPointer< {\b QCPAxisTicker} > {\b ticker} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b ticks} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b tickLabels} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b tickLabelPadding} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b tickLabelFont} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b tickLabelColor} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b tickLabelRotation} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b LabelMode} {\b tickLabelMode} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QString {\b numberFormat} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b numberPrecision} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QVector< double > {\b tickVector} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QVector< double > {\b subTickVector} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QVector< QString > {\b tickVectorLabels} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b tickLengthIn} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b tickLengthOut} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b subTicks} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b subTickLengthIn} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b subTickLengthOut} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b basePen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b tickPen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b subTickPen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b labelFont} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b labelColor} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QString {\b label} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b labelPadding} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+SelectableParts {\b selectedParts} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+SelectableParts {\b selectableParts} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b selectedTickLabelFont} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b selectedLabelFont} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b selectedTickLabelColor} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b selectedLabelColor} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b selectedBasePen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b selectedTickPen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b selectedSubTickPen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRangeDrag} (bool enabled)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRangeZoom} (bool enabled)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRangeZoomFactor} (double factor)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Q_SLOT void {\b setScaleType} ({\b QCPPolarAxisRadial::ScaleType} type)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Q_SLOT void {\b setRange} (const {\b QCPRange} &{\b range})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRange} (double lower, double upper)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRange} (double position, double size, Qt::AlignmentFlag alignment)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRangeLower} (double lower)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRangeUpper} (double upper)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setRangeReversed} (bool reversed)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setAngle} (double degrees)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setAngleReference} ({\b AngleReference} reference)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTicker} (QSharedPointer< {\b QCPAxisTicker} > {\b ticker})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTicks} (bool show)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLabels} (bool show)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLabelPadding} (int padding)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLabelFont} (const QFont &font)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLabelColor} (const QColor &color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLabelRotation} (double degrees)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLabelMode} ({\b LabelMode} mode)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setNumberFormat} (const QString &formatCode)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setNumberPrecision} (int precision)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLength} (int inside, int outside=0)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLengthIn} (int inside)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickLengthOut} (int outside)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSubTicks} (bool show)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSubTickLength} (int inside, int outside=0)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSubTickLengthIn} (int inside)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSubTickLengthOut} (int outside)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setBasePen} (const QPen &pen)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setTickPen} (const QPen &pen)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSubTickPen} (const QPen &pen)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLabelFont} (const QFont &font)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLabelColor} (const QColor &color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLabel} (const QString &str)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setLabelPadding} (int padding)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedTickLabelFont} (const QFont &font)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedLabelFont} (const QFont &font)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedTickLabelColor} (const QColor &color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedLabelColor} (const QColor &color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedBasePen} (const QPen &pen)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedTickPen} (const QPen &pen)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSelectedSubTickPen} (const QPen &pen)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Q_SLOT void {\b setSelectableParts} (const QCPPolarAxisRadial::SelectableParts &{\b selectableParts})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Q_SLOT void {\b setSelectedParts} (const QCPPolarAxisRadial::SelectableParts &{\b selectedParts})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual double {\b selectTest} (const QPointF &pos, bool onlySelectable, QVariant *details=0) const {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b moveRange} (double diff)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b scaleRange} (double factor)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b scaleRange} (double factor, double center)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b rescale} (bool onlyVisiblePlottables=false)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b pixelToCoord} (QPointF pixelPos, double &angleCoord, double &radiusCoord) const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPointF {\b coordToPixel} (double angleCoord, double radiusCoord) const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b coordToRadius} (double coord) const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b radiusToCoord} (double radius) const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b SelectablePart} {\b getPartAt} (const QPointF &pos) const\par
+}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Public Member Functions inherited from {\b QCPLayerable}\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPLayerable} ({\b QCustomPlot} *plot, QString targetLayer=QString(), {\b QCPLayerable} *{\b parentLayerable}=nullptr)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b ~QCPLayerable} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b visible} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCustomPlot} * {\b parentPlot} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPLayerable} * {\b parentLayerable} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPLayer} * {\b layer} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b antialiased} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setVisible} (bool on)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Q_SLOT bool {\b setLayer} ({\b QCPLayer} *{\b layer})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b setLayer} (const QString &layerName)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setAntialiased} (bool enabled)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b realVisibility} () const\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b applyDefaultAntialiasingHint} ({\b QCPPainter} *painter) const {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b draw} ({\b QCPPainter} *painter) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b QCP::Interaction} {\b selectionCategory} () const {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b selectEvent} (QMouseEvent *event, bool additive, const QVariant &details, bool *selectionStateChanged) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b deselectEvent} (bool *selectionStateChanged) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b mousePressEvent} (QMouseEvent *event, const QVariant &details) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b mouseMoveEvent} (QMouseEvent *event, const QPointF &startPos) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b mouseReleaseEvent} (QMouseEvent *event, const QPointF &startPos) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b wheelEvent} (QWheelEvent *event) {\b Q_DECL_OVERRIDE}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b updateGeometry} (const QPointF &center, double radius)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setupTickVectors} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b getBasePen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b getTickPen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b getSubTickPen} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b getTickLabelFont} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b getLabelFont} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b getTickLabelColor} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b getLabelColor} () const\par
+}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Protected Member Functions inherited from {\b QCPLayerable}\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b parentPlotInitialized} ({\b QCustomPlot} *{\b parentPlot})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual QRect {\b clipRect} () const\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b mouseDoubleClickEvent} (QMouseEvent *event, const QVariant &details)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b initializeParentPlot} ({\b QCustomPlot} *{\b parentPlot})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setParentLayerable} ({\b QCPLayerable} *{\b parentLayerable})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b moveToLayer} ({\b QCPLayer} *{\b layer}, bool prepend)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b applyAntialiasingHint} ({\b QCPPainter} *painter, bool localAntialiased, {\b QCP::AntialiasedElement} overrideElement) const\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mRangeDrag}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mRangeZoom}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b mRangeZoomFactor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPPolarAxisAngular} * {\b mAngularAxis}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b mAngle}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b AngleReference} {\b mAngleReference}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+SelectableParts {\b mSelectableParts}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+SelectableParts {\b mSelectedParts}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b mBasePen}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b mSelectedBasePen}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b mLabelPadding}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QString {\b mLabel}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b mLabelFont}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b mSelectedLabelFont}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b mLabelColor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b mSelectedLabelColor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mTickLabels}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b mTickLabelFont}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QFont {\b mSelectedTickLabelFont}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b mTickLabelColor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QColor {\b mSelectedTickLabelColor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b mNumberPrecision}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QLatin1Char {\b mNumberFormatChar}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mNumberBeautifulPowers}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mNumberMultiplyCross}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mTicks}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mSubTicks}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b mTickLengthIn}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b mTickLengthOut}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b mSubTickLengthIn}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b mSubTickLengthOut}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b mTickPen}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b mSelectedTickPen}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b mSubTickPen}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPen {\b mSelectedSubTickPen}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPRange} {\b mRange}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mRangeReversed}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ScaleType} {\b mScaleType}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPointF {\b mCenter}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b mRadius}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QSharedPointer< {\b QCPAxisTicker} > {\b mTicker}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QVector< double > {\b mTickVector}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QVector< QString > {\b mTickVectorLabels}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QVector< double > {\b mSubTickVector}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mDragging}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPRange} {\b mDragStartRange}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QCP::AntialiasedElements {\b mAADragBackup}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QCP::AntialiasedElements {\b mNotAADragBackup}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPLabelPainterPrivate} {\b mLabelPainter}\par
+}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Protected Attributes inherited from {\b QCPLayerable}\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mVisible}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCustomPlot} * {\b mParentPlot}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+QPointer< {\b QCPLayerable} > {\b mParentLayerable}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QCPLayer} * {\b mLayer}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b mAntialiased}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Friends\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b QCustomPlot}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b QCPPolarAxisAngular}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Enumeration Documentation\par
+\pard\plain 
+{\xe \v AngleReference\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:AngleReference}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b QCPPolarAxisRadial::AngleReference}}}
+\par
+{\bkmkstart AAAAAAADVP}
+{\bkmkend AAAAAAADVP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Defines the reference of the angle at which a radial axis is tilted ({\b setAngle}). \par
+}{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v arAbsolute\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:arAbsolute}
+{\qr arAbsolute{\bkmkstart AAAAAAADVQ}
+{\bkmkend AAAAAAADVQ}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+The axis tilt is given in absolute degrees. The zero is to the right and positive angles are measured counter-clockwise. \par
+}\cell }{\row }
+{\xe \v arAngularAxis\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:arAngularAxis}
+{\qr arAngularAxis{\bkmkstart AAAAAAADVR}
+{\bkmkend AAAAAAADVR}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+The axis tilt is measured in the angular coordinate system given by the parent angular axis. \par
+}\cell }{\row }
+}
+}
+{\xe \v LabelMode\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:LabelMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b QCPPolarAxisRadial::LabelMode}}}
+\par
+{\bkmkstart AAAAAAADVS}
+{\bkmkend AAAAAAADVS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v lmUpright\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:lmUpright}
+{\qr lmUpright{\bkmkstart AAAAAAADVT}
+{\bkmkend AAAAAAADVT}
+\cell }{\cell }{\row }
+{\xe \v lmRotated\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:lmRotated}
+{\qr lmRotated{\bkmkstart AAAAAAADVU}
+{\bkmkend AAAAAAADVU}
+\cell }{\cell }{\row }
+}
+}
+{\xe \v ScaleType\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:ScaleType}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b QCPPolarAxisRadial::ScaleType}}}
+\par
+{\bkmkstart AAAAAAADVV}
+{\bkmkend AAAAAAADVV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Defines the scale of an axis. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+See also\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b setScaleType} \par
+}}}{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v stLinear\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:stLinear}
+{\qr stLinear{\bkmkstart AAAAAAADVW}
+{\bkmkend AAAAAAADVW}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Linear scaling. \par
+}\cell }{\row }
+{\xe \v stLogarithmic\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:stLogarithmic}
+{\qr stLogarithmic{\bkmkstart AAAAAAADVX}
+{\bkmkend AAAAAAADVX}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Logarithmic scaling with correspondingly transformed axis coordinates (possibly also {\b setTicker} to a {\b QCPAxisTickerLog} instance). \par
+}\cell }{\row }
+}
+}
+{\xe \v SelectablePart\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:SelectablePart}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b QCPPolarAxisRadial::SelectablePart}}}
+\par
+{\bkmkstart AAAAAAADVY}
+{\bkmkend AAAAAAADVY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Defines the selectable parts of an axis. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+See also\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b setSelectableParts}, {\b setSelectedParts} \par
+}}}{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v spNone\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:spNone}
+{\qr spNone{\bkmkstart AAAAAAADVZ}
+{\bkmkend AAAAAAADVZ}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+None of the selectable parts. \par
+}\cell }{\row }
+{\xe \v spAxis\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:spAxis}
+{\qr spAxis{\bkmkstart AAAAAAADWA}
+{\bkmkend AAAAAAADWA}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+The axis backbone and tick marks. \par
+}\cell }{\row }
+{\xe \v spTickLabels\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:spTickLabels}
+{\qr spTickLabels{\bkmkstart AAAAAAADWB}
+{\bkmkend AAAAAAADWB}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Tick labels (numbers) of this axis (as a whole, not individually) \par
+}\cell }{\row }
+{\xe \v spAxisLabel\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:spAxisLabel}
+{\qr spAxisLabel{\bkmkstart AAAAAAADWC}
+{\bkmkend AAAAAAADWC}
+\cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+The axis label. \par
+}\cell }{\row }
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v QCPPolarAxisRadial\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:QCPPolarAxisRadial}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QCPPolarAxisRadial::QCPPolarAxisRadial ({\b QCPPolarAxisAngular} * parent){\f2 [explicit]}}}
+\par
+{\bkmkstart AAAAAAADWD}
+{\bkmkend AAAAAAADWD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ~QCPPolarAxisRadial\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:~QCPPolarAxisRadial}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual QCPPolarAxisRadial::~QCPPolarAxisRadial (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADWE}
+{\bkmkend AAAAAAADWE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v angle\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:angle}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::angle () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWF}
+{\bkmkend AAAAAAADWF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v angleReference\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:angleReference}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b AngleReference} QCPPolarAxisRadial::angleReference () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWG}
+{\bkmkend AAAAAAADWG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v angularAxis\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:angularAxis}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b QCPPolarAxisAngular} * QCPPolarAxisRadial::angularAxis () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWH}
+{\bkmkend AAAAAAADWH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v applyDefaultAntialiasingHint\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:applyDefaultAntialiasingHint}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::applyDefaultAntialiasingHint ({\b QCPPainter} * painter) const{\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAACZS}
+{\bkmkend AAAAAAACZS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Implements {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHF \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v basePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:basePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::basePen () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWI}
+{\bkmkend AAAAAAADWI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v coordToPixel\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:coordToPixel}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPointF QCPPolarAxisRadial::coordToPixel (double angleCoord, double radiusCoord) const}}
+\par
+{\bkmkstart AAAAAAADWJ}
+{\bkmkend AAAAAAADWJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v coordToRadius\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:coordToRadius}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::coordToRadius (double coord) const}}
+\par
+{\bkmkstart AAAAAAADWK}
+{\bkmkend AAAAAAADWK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v deselectEvent\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:deselectEvent}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::deselectEvent (bool * selectionStateChanged){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAACZZ}
+{\bkmkend AAAAAAACZZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHN \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v draw\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:draw}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::draw ({\b QCPPainter} * painter){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADAE}
+{\bkmkend AAAAAAADAE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Implements {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHP \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v getBasePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getBasePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::getBasePen () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWL}
+{\bkmkend AAAAAAADWL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::getLabelColor () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWM}
+{\bkmkend AAAAAAADWM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::getLabelFont () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWN}
+{\bkmkend AAAAAAADWN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getPartAt\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getPartAt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b SelectablePart} QCPPolarAxisRadial::getPartAt (const QPointF & pos) const}}
+\par
+{\bkmkstart AAAAAAADWO}
+{\bkmkend AAAAAAADWO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getSubTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getSubTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::getSubTickPen () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWP}
+{\bkmkend AAAAAAADWP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getTickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getTickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::getTickLabelColor () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWQ}
+{\bkmkend AAAAAAADWQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getTickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getTickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::getTickLabelFont () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWR}
+{\bkmkend AAAAAAADWR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:getTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::getTickPen () const{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADWS}
+{\bkmkend AAAAAAADWS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v label\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:label}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QString QCPPolarAxisRadial::label () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWT}
+{\bkmkend AAAAAAADWT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v labelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:labelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::labelColor () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWU}
+{\bkmkend AAAAAAADWU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v labelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:labelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::labelFont () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWV}
+{\bkmkend AAAAAAADWV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v labelPadding\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:labelPadding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::labelPadding () const}}
+\par
+{\bkmkstart AAAAAAADWW}
+{\bkmkend AAAAAAADWW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mouseMoveEvent\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mouseMoveEvent}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::mouseMoveEvent (QMouseEvent * event, const QPointF & startPos){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADAP}
+{\bkmkend AAAAAAADAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAASJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v mousePressEvent\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mousePressEvent}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::mousePressEvent (QMouseEvent * event, const QVariant & details){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADAR}
+{\bkmkend AAAAAAADAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAASL \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v mouseReleaseEvent\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mouseReleaseEvent}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::mouseReleaseEvent (QMouseEvent * event, const QPointF & startPos){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADAU}
+{\bkmkend AAAAAAADAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAASN \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v moveRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:moveRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::moveRange (double diff)}}
+\par
+{\bkmkstart AAAAAAADWX}
+{\bkmkend AAAAAAADWX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v numberFormat\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:numberFormat}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QString QCPPolarAxisRadial::numberFormat () const}}
+\par
+{\bkmkstart AAAAAAADWY}
+{\bkmkend AAAAAAADWY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v numberPrecision\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:numberPrecision}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::numberPrecision () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADWZ}
+{\bkmkend AAAAAAADWZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v pixelToCoord\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:pixelToCoord}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::pixelToCoord (QPointF pixelPos, double & angleCoord, double & radiusCoord) const}}
+\par
+{\bkmkstart AAAAAAADXA}
+{\bkmkend AAAAAAADXA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v radiusToCoord\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:radiusToCoord}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::radiusToCoord (double radius) const}}
+\par
+{\bkmkstart AAAAAAADXB}
+{\bkmkend AAAAAAADXB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v range\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:range}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const {\b QCPRange} QCPPolarAxisRadial::range () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXC}
+{\bkmkend AAAAAAADXC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rangeChanged\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rangeChanged}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::rangeChanged (const {\b QCPRange} & newRange){\f2 [signal]}}}
+\par
+{\bkmkstart AAAAAAADXD}
+{\bkmkend AAAAAAADXD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rangeChanged\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rangeChanged}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::rangeChanged (const {\b QCPRange} & newRange, const {\b QCPRange} & oldRange){\f2 [signal]}}}
+\par
+{\bkmkstart AAAAAAADXE}
+{\bkmkend AAAAAAADXE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rangeDrag\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rangeDrag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::rangeDrag () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXF}
+{\bkmkend AAAAAAADXF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rangeReversed\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rangeReversed}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::rangeReversed () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXG}
+{\bkmkend AAAAAAADXG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rangeZoom\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rangeZoom}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::rangeZoom () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXH}
+{\bkmkend AAAAAAADXH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rangeZoomFactor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rangeZoomFactor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::rangeZoomFactor () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXI}
+{\bkmkend AAAAAAADXI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v rescale\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:rescale}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::rescale (bool onlyVisiblePlottables = {\f2 false})}}
+\par
+{\bkmkstart AAAAAAADXJ}
+{\bkmkend AAAAAAADXJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v scaleRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:scaleRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::scaleRange (double factor)}}
+\par
+{\bkmkstart AAAAAAADXK}
+{\bkmkend AAAAAAADXK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v scaleRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:scaleRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::scaleRange (double factor, double center)}}
+\par
+{\bkmkstart AAAAAAADXL}
+{\bkmkend AAAAAAADXL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v scaleType\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:scaleType}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ScaleType} QCPPolarAxisRadial::scaleType () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXM}
+{\bkmkend AAAAAAADXM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v scaleTypeChanged\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:scaleTypeChanged}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::scaleTypeChanged ({\b QCPPolarAxisRadial::ScaleType} scaleType){\f2 [signal]}}}
+\par
+{\bkmkstart AAAAAAADXN}
+{\bkmkend AAAAAAADXN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectableChanged\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectableChanged}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::selectableChanged (const QCPPolarAxisRadial::SelectableParts & parts){\f2 [signal]}}}
+\par
+{\bkmkstart AAAAAAADXO}
+{\bkmkend AAAAAAADXO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectableParts\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectableParts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+SelectableParts QCPPolarAxisRadial::selectableParts () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXP}
+{\bkmkend AAAAAAADXP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedBasePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedBasePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::selectedBasePen () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXQ}
+{\bkmkend AAAAAAADXQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::selectedLabelColor () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXR}
+{\bkmkend AAAAAAADXR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::selectedLabelFont () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXS}
+{\bkmkend AAAAAAADXS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedParts\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedParts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+SelectableParts QCPPolarAxisRadial::selectedParts () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXT}
+{\bkmkend AAAAAAADXT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedSubTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedSubTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::selectedSubTickPen () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXU}
+{\bkmkend AAAAAAADXU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedTickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedTickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::selectedTickLabelColor () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXV}
+{\bkmkend AAAAAAADXV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedTickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedTickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::selectedTickLabelFont () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXW}
+{\bkmkend AAAAAAADXW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectedTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectedTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::selectedTickPen () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADXX}
+{\bkmkend AAAAAAADXX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectEvent\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectEvent}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::selectEvent (QMouseEvent * event, bool additive, const QVariant & details, bool * selectionStateChanged){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADBE}
+{\bkmkend AAAAAAADBE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIH \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v selectionCategory\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectionCategory}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual {\b QCP::Interaction} QCPPolarAxisRadial::selectionCategory () const{\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADBJ}
+{\bkmkend AAAAAAADBJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v selectionChanged\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectionChanged}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::selectionChanged (const QCPPolarAxisRadial::SelectableParts & parts){\f2 [signal]}}}
+\par
+{\bkmkstart AAAAAAADXY}
+{\bkmkend AAAAAAADXY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v selectTest\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:selectTest}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual double QCPPolarAxisRadial::selectTest (const QPointF & pos, bool onlySelectable, QVariant * details = {\f2 0}) const{\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADBO}
+{\bkmkend AAAAAAADBO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIM \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v setAngle\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setAngle}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setAngle (double degrees)}}
+\par
+{\bkmkstart AAAAAAADXZ}
+{\bkmkend AAAAAAADXZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setAngleReference\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setAngleReference}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setAngleReference ({\b AngleReference} reference)}}
+\par
+{\bkmkstart AAAAAAADYA}
+{\bkmkend AAAAAAADYA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setBasePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setBasePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setBasePen (const QPen & pen)}}
+\par
+{\bkmkstart AAAAAAADYB}
+{\bkmkend AAAAAAADYB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setLabel\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setLabel}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setLabel (const QString & str)}}
+\par
+{\bkmkstart AAAAAAADYC}
+{\bkmkend AAAAAAADYC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setLabelColor (const QColor & color)}}
+\par
+{\bkmkstart AAAAAAADYD}
+{\bkmkend AAAAAAADYD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setLabelFont (const QFont & font)}}
+\par
+{\bkmkstart AAAAAAADYE}
+{\bkmkend AAAAAAADYE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setLabelPadding\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setLabelPadding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setLabelPadding (int padding)}}
+\par
+{\bkmkstart AAAAAAADYF}
+{\bkmkend AAAAAAADYF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setNumberFormat\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setNumberFormat}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setNumberFormat (const QString & formatCode)}}
+\par
+{\bkmkstart AAAAAAADYG}
+{\bkmkend AAAAAAADYG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setNumberPrecision\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setNumberPrecision}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setNumberPrecision (int precision)}}
+\par
+{\bkmkstart AAAAAAADYH}
+{\bkmkend AAAAAAADYH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Q_SLOT void QCPPolarAxisRadial::setRange (const {\b QCPRange} & range)}}
+\par
+{\bkmkstart AAAAAAADYI}
+{\bkmkend AAAAAAADYI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRange (double lower, double upper)}}
+\par
+{\bkmkstart AAAAAAADYJ}
+{\bkmkend AAAAAAADYJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRange (double position, double size, Qt::AlignmentFlag alignment)}}
+\par
+{\bkmkstart AAAAAAADYK}
+{\bkmkend AAAAAAADYK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRangeDrag\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRangeDrag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRangeDrag (bool enabled)}}
+\par
+{\bkmkstart AAAAAAADYL}
+{\bkmkend AAAAAAADYL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRangeLower\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRangeLower}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRangeLower (double lower)}}
+\par
+{\bkmkstart AAAAAAADYM}
+{\bkmkend AAAAAAADYM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRangeReversed\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRangeReversed}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRangeReversed (bool reversed)}}
+\par
+{\bkmkstart AAAAAAADYN}
+{\bkmkend AAAAAAADYN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRangeUpper\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRangeUpper}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRangeUpper (double upper)}}
+\par
+{\bkmkstart AAAAAAADYO}
+{\bkmkend AAAAAAADYO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRangeZoom\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRangeZoom}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRangeZoom (bool enabled)}}
+\par
+{\bkmkstart AAAAAAADYP}
+{\bkmkend AAAAAAADYP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setRangeZoomFactor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setRangeZoomFactor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setRangeZoomFactor (double factor)}}
+\par
+{\bkmkstart AAAAAAADYQ}
+{\bkmkend AAAAAAADYQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setScaleType\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setScaleType}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Q_SLOT void QCPPolarAxisRadial::setScaleType ({\b QCPPolarAxisRadial::ScaleType} type)}}
+\par
+{\bkmkstart AAAAAAADYR}
+{\bkmkend AAAAAAADYR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectableParts\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectableParts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Q_SLOT void QCPPolarAxisRadial::setSelectableParts (const QCPPolarAxisRadial::SelectableParts & selectableParts)}}
+\par
+{\bkmkstart AAAAAAADYS}
+{\bkmkend AAAAAAADYS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedBasePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedBasePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedBasePen (const QPen & pen)}}
+\par
+{\bkmkstart AAAAAAADYT}
+{\bkmkend AAAAAAADYT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedLabelColor (const QColor & color)}}
+\par
+{\bkmkstart AAAAAAADYU}
+{\bkmkend AAAAAAADYU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedLabelFont (const QFont & font)}}
+\par
+{\bkmkstart AAAAAAADYV}
+{\bkmkend AAAAAAADYV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedParts\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedParts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Q_SLOT void QCPPolarAxisRadial::setSelectedParts (const QCPPolarAxisRadial::SelectableParts & selectedParts)}}
+\par
+{\bkmkstart AAAAAAADYW}
+{\bkmkend AAAAAAADYW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedSubTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedSubTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedSubTickPen (const QPen & pen)}}
+\par
+{\bkmkstart AAAAAAADYX}
+{\bkmkend AAAAAAADYX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedTickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedTickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedTickLabelColor (const QColor & color)}}
+\par
+{\bkmkstart AAAAAAADYY}
+{\bkmkend AAAAAAADYY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedTickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedTickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedTickLabelFont (const QFont & font)}}
+\par
+{\bkmkstart AAAAAAADYZ}
+{\bkmkend AAAAAAADYZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSelectedTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSelectedTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSelectedTickPen (const QPen & pen)}}
+\par
+{\bkmkstart AAAAAAADZA}
+{\bkmkend AAAAAAADZA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSubTickLength\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSubTickLength}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSubTickLength (int inside, int outside = {\f2 0})}}
+\par
+{\bkmkstart AAAAAAADZB}
+{\bkmkend AAAAAAADZB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSubTickLengthIn\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSubTickLengthIn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSubTickLengthIn (int inside)}}
+\par
+{\bkmkstart AAAAAAADZC}
+{\bkmkend AAAAAAADZC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSubTickLengthOut\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSubTickLengthOut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSubTickLengthOut (int outside)}}
+\par
+{\bkmkstart AAAAAAADZD}
+{\bkmkend AAAAAAADZD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSubTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSubTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSubTickPen (const QPen & pen)}}
+\par
+{\bkmkstart AAAAAAADZE}
+{\bkmkend AAAAAAADZE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setSubTicks\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setSubTicks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setSubTicks (bool show)}}
+\par
+{\bkmkstart AAAAAAADZF}
+{\bkmkend AAAAAAADZF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTicker\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTicker}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTicker (QSharedPointer< {\b QCPAxisTicker} > ticker)}}
+\par
+{\bkmkstart AAAAAAADZG}
+{\bkmkend AAAAAAADZG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLabelColor (const QColor & color)}}
+\par
+{\bkmkstart AAAAAAADZH}
+{\bkmkend AAAAAAADZH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLabelFont (const QFont & font)}}
+\par
+{\bkmkstart AAAAAAADZI}
+{\bkmkend AAAAAAADZI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLabelMode\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLabelMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLabelMode ({\b LabelMode} mode)}}
+\par
+{\bkmkstart AAAAAAADZJ}
+{\bkmkend AAAAAAADZJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLabelPadding\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLabelPadding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLabelPadding (int padding)}}
+\par
+{\bkmkstart AAAAAAADZK}
+{\bkmkend AAAAAAADZK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLabelRotation\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLabelRotation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLabelRotation (double degrees)}}
+\par
+{\bkmkstart AAAAAAADZL}
+{\bkmkend AAAAAAADZL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLabels\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLabels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLabels (bool show)}}
+\par
+{\bkmkstart AAAAAAADZM}
+{\bkmkend AAAAAAADZM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLength\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLength}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLength (int inside, int outside = {\f2 0})}}
+\par
+{\bkmkstart AAAAAAADZN}
+{\bkmkend AAAAAAADZN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLengthIn\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLengthIn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLengthIn (int inside)}}
+\par
+{\bkmkstart AAAAAAADZO}
+{\bkmkend AAAAAAADZO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickLengthOut\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickLengthOut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickLengthOut (int outside)}}
+\par
+{\bkmkstart AAAAAAADZP}
+{\bkmkend AAAAAAADZP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTickPen (const QPen & pen)}}
+\par
+{\bkmkstart AAAAAAADZQ}
+{\bkmkend AAAAAAADZQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setTicks\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setTicks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setTicks (bool show)}}
+\par
+{\bkmkstart AAAAAAADZR}
+{\bkmkend AAAAAAADZR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setupTickVectors\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:setupTickVectors}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::setupTickVectors (){\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAADZS}
+{\bkmkend AAAAAAADZS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v subTickLengthIn\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:subTickLengthIn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::subTickLengthIn () const}}
+\par
+{\bkmkstart AAAAAAADZT}
+{\bkmkend AAAAAAADZT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v subTickLengthOut\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:subTickLengthOut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::subTickLengthOut () const}}
+\par
+{\bkmkstart AAAAAAADZU}
+{\bkmkend AAAAAAADZU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v subTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:subTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::subTickPen () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADZV}
+{\bkmkend AAAAAAADZV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v subTicks\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:subTicks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::subTicks () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADZW}
+{\bkmkend AAAAAAADZW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v subTickVector\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:subTickVector}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QVector< double > QCPPolarAxisRadial::subTickVector () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADZX}
+{\bkmkend AAAAAAADZX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ticker\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:ticker}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QSharedPointer< {\b QCPAxisTicker} > QCPPolarAxisRadial::ticker () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADZY}
+{\bkmkend AAAAAAADZY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::tickLabelColor () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAADZZ}
+{\bkmkend AAAAAAADZZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::tickLabelFont () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAA}
+{\bkmkend AAAAAAAEAA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLabelMode\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLabelMode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b LabelMode} QCPPolarAxisRadial::tickLabelMode () const}}
+\par
+{\bkmkstart AAAAAAAEAB}
+{\bkmkend AAAAAAAEAB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLabelPadding\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLabelPadding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::tickLabelPadding () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAC}
+{\bkmkend AAAAAAAEAC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLabelRotation\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLabelRotation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::tickLabelRotation () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAD}
+{\bkmkend AAAAAAAEAD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLabels\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLabels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::tickLabels () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAE}
+{\bkmkend AAAAAAAEAE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLengthIn\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLengthIn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::tickLengthIn () const}}
+\par
+{\bkmkstart AAAAAAAEAF}
+{\bkmkend AAAAAAAEAF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickLengthOut\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickLengthOut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::tickLengthOut () const}}
+\par
+{\bkmkstart AAAAAAAEAG}
+{\bkmkend AAAAAAAEAG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::tickPen () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAH}
+{\bkmkend AAAAAAAEAH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ticks\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:ticks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::ticks () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAI}
+{\bkmkend AAAAAAAEAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickVector\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickVector}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QVector< double > QCPPolarAxisRadial::tickVector () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAJ}
+{\bkmkend AAAAAAAEAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v tickVectorLabels\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:tickVectorLabels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QVector< QString > QCPPolarAxisRadial::tickVectorLabels () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAEAK}
+{\bkmkend AAAAAAAEAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v updateGeometry\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:updateGeometry}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void QCPPolarAxisRadial::updateGeometry (const QPointF & center, double radius){\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAL}
+{\bkmkend AAAAAAAEAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v wheelEvent\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:wheelEvent}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual void QCPPolarAxisRadial::wheelEvent (QWheelEvent * event){\f2 [protected]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAADBY}
+{\bkmkend AAAAAAADBY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b QCPLayerable} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAWJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Friends And Related Symbol Documentation\par
+\pard\plain 
+{\xe \v QCPPolarAxisAngular\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:QCPPolarAxisAngular}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+friend class {\b QCPPolarAxisAngular}{\f2 [friend]}}}
+\par
+{\bkmkstart AAAAAAAEAM}
+{\bkmkend AAAAAAAEAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v QCustomPlot\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:QCustomPlot}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+friend class {\b QCustomPlot}{\f2 [friend]}}}
+\par
+{\bkmkstart AAAAAAAEAN}
+{\bkmkend AAAAAAAEAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v mAADragBackup\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mAADragBackup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QCP::AntialiasedElements QCPPolarAxisRadial::mAADragBackup{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAO}
+{\bkmkend AAAAAAAEAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mAngle\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mAngle}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::mAngle{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAP}
+{\bkmkend AAAAAAAEAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mAngleReference\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mAngleReference}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b AngleReference} QCPPolarAxisRadial::mAngleReference{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAQ}
+{\bkmkend AAAAAAAEAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mAngularAxis\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mAngularAxis}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b QCPPolarAxisAngular}* QCPPolarAxisRadial::mAngularAxis{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAR}
+{\bkmkend AAAAAAAEAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mBasePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mBasePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::mBasePen{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAS}
+{\bkmkend AAAAAAAEAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mCenter\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mCenter}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPointF QCPPolarAxisRadial::mCenter{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAT}
+{\bkmkend AAAAAAAEAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mDragging\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mDragging}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mDragging{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAU}
+{\bkmkend AAAAAAAEAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mDragStartRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mDragStartRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b QCPRange} QCPPolarAxisRadial::mDragStartRange{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAV}
+{\bkmkend AAAAAAAEAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mLabel\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mLabel}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QString QCPPolarAxisRadial::mLabel{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAW}
+{\bkmkend AAAAAAAEAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::mLabelColor{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAX}
+{\bkmkend AAAAAAAEAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::mLabelFont{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAY}
+{\bkmkend AAAAAAAEAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mLabelPadding\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mLabelPadding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::mLabelPadding{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEAZ}
+{\bkmkend AAAAAAAEAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mLabelPainter\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mLabelPainter}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b QCPLabelPainterPrivate} QCPPolarAxisRadial::mLabelPainter{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBA}
+{\bkmkend AAAAAAAEBA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mNotAADragBackup\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mNotAADragBackup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QCP::AntialiasedElements QCPPolarAxisRadial::mNotAADragBackup{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBB}
+{\bkmkend AAAAAAAEBB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mNumberBeautifulPowers\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mNumberBeautifulPowers}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mNumberBeautifulPowers{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBC}
+{\bkmkend AAAAAAAEBC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mNumberFormatChar\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mNumberFormatChar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QLatin1Char QCPPolarAxisRadial::mNumberFormatChar{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBD}
+{\bkmkend AAAAAAAEBD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mNumberMultiplyCross\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mNumberMultiplyCross}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mNumberMultiplyCross{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBE}
+{\bkmkend AAAAAAAEBE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mNumberPrecision\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mNumberPrecision}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::mNumberPrecision{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBF}
+{\bkmkend AAAAAAAEBF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mRadius\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mRadius}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::mRadius{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBG}
+{\bkmkend AAAAAAAEBG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mRange\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mRange}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b QCPRange} QCPPolarAxisRadial::mRange{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBH}
+{\bkmkend AAAAAAAEBH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mRangeDrag\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mRangeDrag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mRangeDrag{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBI}
+{\bkmkend AAAAAAAEBI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mRangeReversed\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mRangeReversed}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mRangeReversed{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBJ}
+{\bkmkend AAAAAAAEBJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mRangeZoom\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mRangeZoom}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mRangeZoom{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBK}
+{\bkmkend AAAAAAAEBK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mRangeZoomFactor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mRangeZoomFactor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double QCPPolarAxisRadial::mRangeZoomFactor{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBL}
+{\bkmkend AAAAAAAEBL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mScaleType\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mScaleType}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ScaleType} QCPPolarAxisRadial::mScaleType{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBM}
+{\bkmkend AAAAAAAEBM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectableParts\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectableParts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+SelectableParts QCPPolarAxisRadial::mSelectableParts{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBN}
+{\bkmkend AAAAAAAEBN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedBasePen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedBasePen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::mSelectedBasePen{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBO}
+{\bkmkend AAAAAAAEBO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::mSelectedLabelColor{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBP}
+{\bkmkend AAAAAAAEBP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::mSelectedLabelFont{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBQ}
+{\bkmkend AAAAAAAEBQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedParts\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedParts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+SelectableParts QCPPolarAxisRadial::mSelectedParts{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBR}
+{\bkmkend AAAAAAAEBR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedSubTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedSubTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::mSelectedSubTickPen{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBS}
+{\bkmkend AAAAAAAEBS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedTickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedTickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::mSelectedTickLabelColor{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBT}
+{\bkmkend AAAAAAAEBT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedTickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedTickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::mSelectedTickLabelFont{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBU}
+{\bkmkend AAAAAAAEBU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSelectedTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSelectedTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::mSelectedTickPen{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBV}
+{\bkmkend AAAAAAAEBV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSubTickLengthIn\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSubTickLengthIn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::mSubTickLengthIn{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBW}
+{\bkmkend AAAAAAAEBW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSubTickLengthOut\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSubTickLengthOut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::mSubTickLengthOut{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBX}
+{\bkmkend AAAAAAAEBX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSubTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSubTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::mSubTickPen{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBY}
+{\bkmkend AAAAAAAEBY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSubTicks\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSubTicks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mSubTicks{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAEBZ}
+{\bkmkend AAAAAAAEBZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mSubTickVector\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mSubTickVector}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QVector<double> QCPPolarAxisRadial::mSubTickVector{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECA}
+{\bkmkend AAAAAAAECA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTicker\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTicker}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QSharedPointer<{\b QCPAxisTicker}> QCPPolarAxisRadial::mTicker{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECB}
+{\bkmkend AAAAAAAECB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickLabelColor\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickLabelColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QColor QCPPolarAxisRadial::mTickLabelColor{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECC}
+{\bkmkend AAAAAAAECC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickLabelFont\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickLabelFont}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QFont QCPPolarAxisRadial::mTickLabelFont{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECD}
+{\bkmkend AAAAAAAECD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickLabels\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickLabels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mTickLabels{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECE}
+{\bkmkend AAAAAAAECE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickLengthIn\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickLengthIn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::mTickLengthIn{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECF}
+{\bkmkend AAAAAAAECF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickLengthOut\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickLengthOut}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int QCPPolarAxisRadial::mTickLengthOut{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECG}
+{\bkmkend AAAAAAAECG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickPen\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickPen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QPen QCPPolarAxisRadial::mTickPen{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECH}
+{\bkmkend AAAAAAAECH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTicks\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTicks}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool QCPPolarAxisRadial::mTicks{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECI}
+{\bkmkend AAAAAAAECI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickVector\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickVector}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QVector<double> QCPPolarAxisRadial::mTickVector{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECJ}
+{\bkmkend AAAAAAAECJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v mTickVectorLabels\:QCPPolarAxisRadial}
+{\xe \v QCPPolarAxisRadial\:mTickVectorLabels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+QVector<QString> QCPPolarAxisRadial::mTickVectorLabels{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAECK}
+{\bkmkend AAAAAAAECK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+C:/Users/anton/OneDrive - Universidad de Córdoba/Doctorado_ARR/Qt/Versiones/DWM1001DEV_APP/Github/UCO-DWM1001-DEV/src/{\b qcustomplot.h}\par
+}}

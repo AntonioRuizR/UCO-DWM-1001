@@ -1,0 +1,57 @@
+\doxysection{dialog\+\_\+stats.\+h}
+\hypertarget{dialog__stats_8h_source}{}\label{dialog__stats_8h_source}\index{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_stats.h@{C:/Users/anton/OneDrive -\/ Universidad de Córdoba/Doctorado\_ARR/Qt/Versiones/DWM1001DEV\_APP/Github/UCO-\/DWM1001-\/DEV/src/dialog\_stats.h}}
+\mbox{\hyperlink{dialog__stats_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ DIALOG\_STATS\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DIALOG\_STATS\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <QFileDialog>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__stats}{Dialog\_stats}};}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialog__stats}{Dialog\_stats}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_dialog__stats_a4f29069e21603cb86a9f93fe00d5a5cb}{Dialog\_stats}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_dialog__stats_a48c9fcb8b5d038328dac4dd00fa8bcc7}{\string~Dialog\_stats}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_a301df3563a3f8e9db8884f8e30b9208b}{load\_data\_statistics\_d1}}(QList<double>);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_a2ad3fef13c905be74df081d109e0f6d5}{load\_data\_statistics\_d2}}(QList<double>);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_a8316e72dbb72fabc6cd3277725b92396}{load\_data\_statistics\_d3}}(QList<double>);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_ae9cf96066644b7898acaccf0d8c7afa2}{load\_data\_statistics\_d4}}(QList<double>);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_afea2ab5dc86dd97370c5d8d748f0c732}{load\_data\_statistics\_pos\_x}}(QList<double>);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_ad3e719efeb6a017a081508510f772a62}{load\_data\_statistics\_pos\_y}}(QList<double>);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_a4e335416b3c5069716ed7fb941265003}{load\_data\_statistics\_pos\_z}}(QList<double>);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_ac22699210c9af3387c5024c6ff27c76f}{load\_data\_statistics\_ids}}(QList<QString>);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialog__stats_a5622f451196cfef07e477f007695a74f}{initialise\_variables}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__stats_a67c722fb5dcce2a56bb96c14b5b172df}{reset\_variables}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dialog__stats_a276e0d9c548ad69d062d62d94d2454ac}{enable\_data\_saving}}();}
+\DoxyCodeLine{00059\ \ \ \ \ QString\ \mbox{\hyperlink{class_dialog__stats_a34c91b7af6ca1eab358d451e03254286}{directory\_folder\_stat}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_clicked();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_2\_clicked();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ Ui::Dialog\_stats\ *ui;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ reset\_values\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ QString\ save\_folder;}
+\DoxyCodeLine{00070\ \ \ \ \ QString\ file\_name;}
+\DoxyCodeLine{00071\ \ \ \ \ QString\ complete\_dir;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ save\_statistics=0;}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIALOG\_STATS\_H}}
+
+\end{DoxyCode}
