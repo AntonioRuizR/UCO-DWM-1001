@@ -25,6 +25,8 @@
 var NAVTREE =
 [
   [ "UCO-DWM1001", "index.html", [
+    [ "Introduction", "index.html#intro_sec", null ],
+    [ "Documentation", "index.html#intro_doxy", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -79,7 +81,7 @@ var NAVTREEINDEX =
 "class_q_c_p_selection_decorator.html#a467a8d5cfcab27e862a17c797ac27b8a",
 "class_q_custom_plot.html#a3c1c171f620ef0ea4ae3dbb2e6a0209a",
 "functions_func_l.html",
-"qcustomplot_8h.html#aed23afce99cb2c82db7540026f3b7af3"
+"qcustomplot_8h.html#ae55dbe315d41fe80f29ba88100843a0caefa92e89cd37f8a081fd2075aa1af73f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
